@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Obfuscated drafts folder (source only; never built into the site)
+Disallow: /_x7k9p/
+
+Sitemap: https://jonathanfrei.com/sitemap.xml
