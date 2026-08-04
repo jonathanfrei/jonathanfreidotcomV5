@@ -1,0 +1,61 @@
+# Site settings
+title: Jonathan Frei
+description: "Personal site and blog of Jonathan Frei. Short posts, long-form articles, and notes."
+url: "https://jonathanfrei.com"
+baseurl: ""
+
+# Author
+author:
+  name: Jonathan Frei
+  email: hi@jonathanfrei.com
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing (including obfuscated drafts folder)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .github
+  - README.md
+  - _x7k9p
+  - .gitignore
+
+# Collections (ready for future portfolio / gallery)
+# collections:
+#   projects:
+#     output: true
+#     permalink: /projects/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: Jonathan Frei
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+
+# SEO / social (basic)
+twitter:
+  username: jonathanfrei
+
+# Feed settings – drafts never included because excluded from build
+feed:
+  path: feed.xml
+
+# Sitemap – same
