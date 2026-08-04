@@ -6,43 +6,16 @@
 
   let index = [];
 
-  fetch("{{ '/search.json' | relative_url }}".replace(/\{\{.*?\}\}/, "/search.json"))
-    .then((r) => r.json())
-    .then((data) => {
-      index = data;
-    })
-    .catch(() => {
-      results.innerHTML = "<p>Search index unavailable.</p>";
-    });
-
-  // Note: the relative_url above is a placeholder; actual path is injected at build if needed.
-  // For pure static we hardcode the path relative to site root.
   fetch("/search.json")
-    .then((r) => r.json())
-    .then((data) => {
-      index = data;
+    .then(function (r) {
+      return r.json();
     })
-    .catch(() => {});
-
-  function render(items) {
-    if (!items.length) {
-      results.innerHTML = "<p class=\"post-meta\">No matching posts.</p>";
-      return;
-    }
-    results.innerHTML =
-      "<ul class=\"post-list\">" +
-      items
-        .map(
-          (p) =>
-            `<li>
-              <a href="${p.url}">${escapeHtml(p.title)}</a>
-              <div class="post-meta">${p.date}</div>
-              <p class="mt-2 mb-0">${escapeHtml(p.excerpt || "")}</p>
-            </li>`
-        )
-        .join("") +
-      "</ul>";
-  }
+    .then(function (data) {
+      index = data || [];
+    })
+    .catch(function () {
+      results.innerHTML = "<p class=\"post-meta\">Search index unavailable.</p>";
+    });
 
   function escapeHtml(str) {
     return String(str)
@@ -52,20 +25,47 @@
       .replace(/"/g, """);
   }
 
-  input.addEventListener("input", () => {
-    const q = input.value.trim().toLowerCase();
+  function render(items) {
+    if (!items.length) {
+      results.innerHTML = "<p class=\"post-meta\">No matching posts.</p>";
+      return;
+    }
+    var html = "<ul class=\"post-list\">";
+    for (var i = 0; i < items.length; i++) {
+      var p = items[i];
+      html +=
+        "<li>" +
+        '<a href="' +
+        escapeHtml(p.url) +
+        '">' +
+        escapeHtml(p.title) +
+        "</a>" +
+        '<div class="post-meta">' +
+        escapeHtml(p.date || "") +
+        "</div>" +
+        '<p class="mt-2 mb-0">' +
+        escapeHtml(p.excerpt || "") +
+        "</p>" +
+        "</li>";
+    }
+    html += "</ul>";
+    results.innerHTML = html;
+  }
+
+  input.addEventListener("input", function () {
+    var q = input.value.trim().toLowerCase();
     if (q.length < 2) {
       results.innerHTML = "";
       return;
     }
-    const matches = index.filter((p) => {
-      const hay =
+    var matches = index.filter(function (p) {
+      var hay =
         (p.title || "") +
         " " +
         (p.excerpt || "") +
         " " +
-        (p.tags || []).join(" ");
-      return hay.toLowerCase().includes(q);
+        (Array.isArray(p.tags) ? p.tags.join(" ") : "");
+      return hay.toLowerCase().indexOf(q) !== -1;
     });
     render(matches);
   });
