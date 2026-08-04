@@ -1,0 +1,3 @@
+# Obfuscated drafts folder.
+# Files here are excluded from the Jekyll build, site index, RSS, sitemap, and robots.txt.
+# Place draft Markdown files in this directory. Move them to _posts/ when ready to publish.
