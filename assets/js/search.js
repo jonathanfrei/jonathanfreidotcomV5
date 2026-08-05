@@ -6,8 +6,14 @@
 
   let index = [];
 
-  fetch("/search.json")
+  // Prefer baseurl injected by the page; fall back to root-relative path.
+  var base = (typeof window.siteBaseurl === "string") ? window.siteBaseurl : "";
+  if (base === "/") base = "";
+  var indexUrl = base + "/search.json";
+
+  fetch(indexUrl)
     .then(function (r) {
+      if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();
     })
     .then(function (data) {

@@ -15,4 +15,7 @@ permalink: /search/
 
 <div id="search-results" class="mt-6" aria-live="polite"></div>
 
+<script>
+  window.siteBaseurl = {{ site.baseurl | jsonify }};
+</script>
 <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>
