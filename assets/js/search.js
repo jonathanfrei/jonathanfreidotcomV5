@@ -12,7 +12,6 @@
     if (base === "/") base = "";
     if (base) return base + "/search.json";
 
-    // Fallback: derive from this script's path when baseurl was not injected
     var scripts = document.getElementsByTagName("script");
     for (var i = 0; i < scripts.length; i++) {
       var src = scripts[i].src || "";
@@ -25,33 +24,32 @@
     return "/search.json";
   }
 
+  // Avoid HTML entity literals in source (GitHub content API can strip them).
   function escapeHtml(str) {
-    return String(str)
-      .replace(/&/g, "&")
-      .replace(/</g, "<")
-      .replace(/>/g, ">")
-      .replace(/"/g, """);
+    var el = document.createElement("span");
+    el.textContent = String(str);
+    return el.innerHTML;
   }
 
   function render(items) {
     if (!items.length) {
-      results.innerHTML = "<p class=\"post-meta\">No matching posts.</p>";
+      results.innerHTML = '<p class="post-meta">No matching posts.</p>';
       return;
     }
-    var html = "<ul class=\"post-list\">";
+    var html = '<ul class="post-list">';
     for (var i = 0; i < items.length; i++) {
       var p = items[i];
       html +=
         "<li>" +
-        "<a href=\"" +
+        '<a href="' +
         escapeHtml(p.url) +
-        "\">" +
+        '">' +
         escapeHtml(p.title) +
         "</a>" +
-        "<div class=\"post-meta\">" +
+        '<div class="post-meta">' +
         escapeHtml(p.date || "") +
         "</div>" +
-        "<p class=\"mt-2 mb-0\">" +
+        '<p class="mt-2 mb-0">' +
         escapeHtml(p.excerpt || "") +
         "</p>" +
         "</li>";
@@ -90,7 +88,7 @@
       runSearch();
     })
     .catch(function () {
-      results.innerHTML = "<p class=\"post-meta\">Search index unavailable.</p>";
+      results.innerHTML = '<p class="post-meta">Search index unavailable.</p>';
     });
 
   input.addEventListener("input", runSearch);
