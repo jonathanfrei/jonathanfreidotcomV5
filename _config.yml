@@ -22,17 +22,20 @@ plugins:
   - jekyll-sitemap
   - jekyll-archives
 
-# Tag / category archive pages (directory style for GH Pages)
+# Tag / category / month archive pages (directory style for GH Pages)
 jekyll-archives:
   enabled:
     - tags
     - categories
+    - month
   layouts:
     tag: tag
     category: tag
+    month: archive
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+    month: /archive/:year/:month/
 
 # Exclude from processing (including obfuscated drafts folder)
 exclude:
