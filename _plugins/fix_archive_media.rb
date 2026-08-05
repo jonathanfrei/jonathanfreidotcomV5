@@ -6,8 +6,8 @@
 #
 # Leave media files where they are in the repo (_posts/v2-archive/media/ etc.).
 # At build time:
-#   1. Rewrite content URLs: media/… → /media/…
-#   2. Publish those files as static assets at site-root /media/…
+#   1. Rewrite content URLs: media/… → #{baseurl}/media/…
+#   2. Publish those files as static assets under /media/ (respecting baseurl)
 #
 # Also clear folder-derived categories so archive posts use the same
 # /:year/:month/:day/:title/ shape as current posts (no /v2-archive/ segment).
@@ -22,8 +22,14 @@ module Jekyll
       File.join(dest, @dest_dir, @name)
     end
 
+    # Include site.baseurl so project-pages deploys resolve correctly.
     def url
-      "/#{File.join(@dest_dir, @name).gsub(%r{/+}, '/')}"
+      path = "/#{File.join(@dest_dir, @name).gsub(%r{/+}, '/')}"
+      if @site.baseurl && !@site.baseurl.empty?
+        "#{@site.baseurl.chomp('/')}#{path}"
+      else
+        path
+      end
     end
 
     def relative_path
@@ -45,15 +51,18 @@ module Jekyll
       post.data["categories"] = []
     end
 
-    # Markdown images/links: ](media/…) → ](/media/…)
-    # HTML src/href: src="media/…" → src="/media/…"
-    # Leave absolute http(s) and already-rooted /media/ alone.
-    def rewrite_media_paths!(text)
+    # Markdown images/links: ](media/…) → ](#{prefix}/media/…)
+    # HTML src/href: src="media/…" → src="#{prefix}/media/…"
+    # Leave absolute http(s) and already-rooted paths alone.
+    def rewrite_media_paths!(text, baseurl = "")
       return text if text.nil? || text.empty?
 
+      prefix = baseurl.to_s.chomp("/")
+      media_root = "#{prefix}/media/"
+
       text
-        .gsub(%r{\]\(media/}, "](/media/")
-        .gsub(%r{(src|href)=(["'])media/}, "\\1=\\2/media/")
+        .gsub(%r{\]\(media/}, "](#{media_root}")
+        .gsub(%r{(src|href)=(["'])media/}, "\\1=\\2#{media_root}")
     end
 
     # Publish every file under the archive media source dirs as StaticFiles
@@ -95,10 +104,11 @@ end
 Jekyll::Hooks.register :posts, :pre_render do |post|
   next unless Jekyll::FixArchiveMedia.archive_post?(post.relative_path)
 
-  post.content = Jekyll::FixArchiveMedia.rewrite_media_paths!(post.content)
+  baseurl = post.site.baseurl || ""
+  post.content = Jekyll::FixArchiveMedia.rewrite_media_paths!(post.content, baseurl)
   if post.data["excerpt"] && post.data["excerpt"].respond_to?(:content)
     post.data["excerpt"].content =
-      Jekyll::FixArchiveMedia.rewrite_media_paths!(post.data["excerpt"].content)
+      Jekyll::FixArchiveMedia.rewrite_media_paths!(post.data["excerpt"].content, baseurl)
   end
 end
 
