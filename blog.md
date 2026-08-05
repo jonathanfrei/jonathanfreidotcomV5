@@ -15,7 +15,8 @@ Short posts and notes.
         {% if post.tags.size > 0 %}
           ·
           {% for tag in post.tags %}
-            <a href="{{ '/tags/' | relative_url }}{{ tag | slugify }}/" class="tag">{{ tag }}</a>
+            {% assign tag_str = tag | append: "" %}
+            <a href="{{ '/tags/' | relative_url }}{{ tag_str | slugify }}/" class="tag">{{ tag_str }}</a>
           {% endfor %}
         {% endif %}
       </div>
