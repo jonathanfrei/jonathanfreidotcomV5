@@ -11,7 +11,8 @@ author:
 
 # Build settings
 markdown: kramdown
-permalink: /:categories/:year/:month/:day/:title/
+# No trailing slash on post URLs (#32) — e.g. /2026/08/05/embed-examples
+permalink: /:categories/:year/:month/:day/:title
 
 # Plugins
 plugins:
@@ -20,7 +21,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-archives
 
-# Tag / category permalinks
+# Tag / category permalinks (no trailing slash — #32)
 jekyll-archives:
   enabled:
     - tags
@@ -29,8 +30,8 @@ jekyll-archives:
     tag: tag
     category: tag
   permalinks:
-    tag: /tags/:name/
-    category: /categories/:name/
+    tag: /tags/:name
+    category: /categories/:name
 
 # Exclude from processing (including obfuscated drafts folder)
 exclude:
