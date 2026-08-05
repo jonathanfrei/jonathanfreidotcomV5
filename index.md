@@ -10,7 +10,7 @@ You can email me at
 
 Earlier iterations of this site are still available online. I published <a href="http://v1.jonathanfrei.com">v1 on Blogger</a> from 2009 to 2010; <a href="https://v2.jonathanfrei.com">v2 on Tumblr</a> from 2010 to 2014; <a href="https://v3.jonathanfrei.com">v3 on a self-hosted Wordpress</a> from 2014 to 2022 (online version is now a static copy hosted in an S3 bucket); [v4 lives in Github](https://jonathanfrei.github.io/jonathanfrei.com) and is distributed through Cloudflare from 2022 to 2026.
 
-The [current site](/) is built with Jekyll, deployed via GitHub Actions, and served through Cloudflare.
+The [current site](https://jonathanfrei.github.io/jonathanfreidotcomV5) is built with Jekyll, deployed via GitHub Actions, and served through Cloudflare.
 
 You can reach me at [hi&#64;jonathanfrei&#46;com](mailto:hi&#64;jonathanfrei&#46;com).
 
