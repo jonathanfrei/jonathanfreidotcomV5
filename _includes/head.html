@@ -1,10 +1,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" href="/assets/img/favicon.png">
 <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 <meta name="description" content="{{ page.description | default: site.description | escape }}">
 
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+{% comment %} Favicon (#22) {% endcomment %}
+<link rel="icon" href="{{ '/assets/img/favicon.png' | relative_url }}" type="image/png">
+<link rel="apple-touch-icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
+
+{% comment %}
+  Full stylesheet is inlined in default.html from assets/css/main.css so
+  first paint has no render-blocking CSS request (#24, #25, #28).
+  assets/css/main.css still deploys as a static file for tooling and for
+  long cache TTLs via Cloudflare when referenced (#23, #26).
+{% endcomment %}
+
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
 
 {% seo %}
