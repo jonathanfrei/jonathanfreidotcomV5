@@ -2,12 +2,14 @@
 layout: page
 title: Blog
 permalink: /blog/
+pagination:
+  enabled: true
 ---
 
 Short posts and notes.
 
 <ul class="post-list">
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
     <li>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       <div class="post-meta">
@@ -27,6 +29,8 @@ Short posts and notes.
   {% endfor %}
 </ul>
 
-{% if site.posts.size == 0 %}
+{% if paginator.posts.size == 0 %}
 <p>No posts published yet.</p>
 {% endif %}
+
+{% include pagination.html %}

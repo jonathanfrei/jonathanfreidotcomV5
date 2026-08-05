@@ -1,0 +1,42 @@
+{% if paginator.total_pages > 1 %}
+<nav class="pagination" aria-label="Pagination">
+  <ul class="pagination-list">
+    {% if paginator.previous_page %}
+      <li>
+        <a href="{{ paginator.previous_page_path | relative_url }}" rel="prev">&larr; Previous</a>
+      </li>
+    {% else %}
+      <li class="pagination-disabled"><span>&larr; Previous</span></li>
+    {% endif %}
+
+    {% if paginator.page_trail %}
+      {% for trail in paginator.page_trail %}
+        <li>
+          {% if page.url == trail.path or paginator.page == trail.num %}
+            <span class="pagination-current" aria-current="page">{{ trail.num }}</span>
+          {% else %}
+            <a href="{{ trail.path | relative_url }}">{{ trail.num }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    {% else %}
+      <li>
+        <span class="pagination-current" aria-current="page">{{ paginator.page }}</span>
+        <span class="post-meta"> of {{ paginator.total_pages }}</span>
+      </li>
+    {% endif %}
+
+    {% if paginator.next_page %}
+      <li>
+        <a href="{{ paginator.next_page_path | relative_url }}" rel="next">Next &rarr;</a>
+      </li>
+    {% else %}
+      <li class="pagination-disabled"><span>Next &rarr;</span></li>
+    {% endif %}
+  </ul>
+  <p class="pagination-meta post-meta">
+    Page {{ paginator.page }} of {{ paginator.total_pages }}
+    · {{ paginator.total_posts }} posts
+  </p>
+</nav>
+{% endif %}
