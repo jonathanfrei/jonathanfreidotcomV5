@@ -42,6 +42,7 @@ exclude:
   - vendor
   - .github
   - README.md
+  - AGENTS.md
   - _x7k9p
   - .gitignore
 
