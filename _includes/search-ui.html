@@ -1,0 +1,16 @@
+<div class="search-ui">
+  <label for="search-input" class="sr-only">Search posts</label>
+  <input
+    type="search"
+    id="search-input"
+    class="search-input"
+    placeholder="Search posts…"
+    autocomplete="off"
+  >
+  <div id="search-results" class="mt-6" aria-live="polite"></div>
+</div>
+
+<script>
+  window.siteBaseurl = {{ site.baseurl | jsonify }};
+</script>
+<script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>
