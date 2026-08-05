@@ -79,6 +79,19 @@ defaults:
     values:
       layout: post
       author: Jonathan Frei
+  # Historical imports: no category segment in URL; media lives at /media/
+  - scope:
+      path: "_posts/v1-archive"
+      type: "posts"
+    values:
+      permalink: /:year/:month/:day/:title/
+      categories: []
+  - scope:
+      path: "_posts/v2-archive"
+      type: "posts"
+    values:
+      permalink: /:year/:month/:day/:title/
+      categories: []
   - scope:
       path: ""
       type: "pages"
