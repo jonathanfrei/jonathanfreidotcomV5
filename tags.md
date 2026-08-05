@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Tags
-permalink: /tags
+permalink: /tags/
 ---
 
 <ul class="tags">
@@ -10,7 +10,7 @@ permalink: /tags
     {% assign tag_name = tag[0] %}
     {% assign tag_posts = tag[1] %}
     <li>
-      <a class="tag" href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}">{{ tag_name }}</a>
+      <a class="tag" href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}/">{{ tag_name }}</a>
       <span class="post-meta">({{ tag_posts.size }})</span>
     </li>
   {% endfor %}

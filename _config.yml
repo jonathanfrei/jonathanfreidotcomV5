@@ -11,8 +11,9 @@ author:
 
 # Build settings
 markdown: kramdown
-# No trailing slash on post URLs (#32) — e.g. /2026/08/05/embed-examples
-permalink: /:categories/:year/:month/:day/:title
+# Trailing slash → directory/index.html so GitHub Pages serves HTML
+# (extensionless files download as application/octet-stream)
+permalink: /:categories/:year/:month/:day/:title/
 
 # Plugins
 plugins:
@@ -21,7 +22,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-archives
 
-# Tag / category permalinks (no trailing slash — #32)
+# Tag / category archive pages (directory style for GH Pages)
 jekyll-archives:
   enabled:
     - tags
@@ -30,8 +31,8 @@ jekyll-archives:
     tag: tag
     category: tag
   permalinks:
-    tag: /tags/:name
-    category: /categories/:name
+    tag: /tags/:name/
+    category: /categories/:name/
 
 # Exclude from processing (including obfuscated drafts folder)
 exclude:
