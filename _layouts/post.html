@@ -12,7 +12,7 @@ layout: default
         ·
         <span itemprop="keywords">
           {% for tag in page.tags %}
-            <a href="{{ '/blog/' | relative_url }}#tag-{{ tag | slugify }}" class="tag">{{ tag }}</a>
+            <a href="{{ '/tags/' | relative_url }}{{ tag | slugify }}/" class="tag">{{ tag }}</a>
           {% endfor %}
         </span>
       {% endif %}
@@ -22,6 +22,10 @@ layout: default
   <div itemprop="articleBody">
     {{ content }}
   </div>
+
+  <p class="mt-8 post-comment-link">
+    <a href="mailto:hi+comments@jonathanfrei.com?subject={{ 'Comment on: ' | append: page.title | uri_escape }}&body={{ 'Post: ' | append: page.title | append: '%0A' | append: page.url | absolute_url | uri_escape }}">Comment</a>
+  </p>
 </article>
 
 <p class="mt-8">
