@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   {% include head.html %}
-  {% comment %} Inline critical CSS so first paint is not blocked by a network CSS hop (#24, #25, #28) {% endcomment %}
+  {% comment %} Inline critical CSS so first paint is not blocked by a network CSS hop (#24, #25, #28). Source: _includes/main.css (Jekyll forbids ../ in include_relative). {% endcomment %}
   <style>
-{% include_relative ../assets/css/main.css %}
+{% include main.css %}
   </style>
 </head>
 <body>
