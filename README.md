@@ -23,6 +23,10 @@ Most work happens directly on GitHub (or via Grok-assisted edits).
 2. Push to `main` → Actions builds and deploys.
 3. Future-dated posts are picked up by the scheduled workflow (every 6 hours).
 
+### Agents
+
+AI coding agents should read **[AGENTS.md](./AGENTS.md)** first. It covers repo layout, drafts, permalinks, CSS include rules, deploy constraints, and common pitfalls for this site.
+
 ### Drafts
 
 Place unfinished Markdown files in the obfuscated folder `_x7k9p/`.
