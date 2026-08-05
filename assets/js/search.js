@@ -1,27 +1,29 @@
 /* Minimal client-side search for jonathanfrei.com */
 (function () {
-  const input = document.getElementById("search-input");
-  const results = document.getElementById("search-results");
+  var input = document.getElementById("search-input");
+  var results = document.getElementById("search-results");
   if (!input || !results) return;
 
-  let index = [];
+  var index = [];
+  var indexReady = false;
 
-  // Prefer baseurl injected by the page; fall back to root-relative path.
-  var base = (typeof window.siteBaseurl === "string") ? window.siteBaseurl : "";
-  if (base === "/") base = "";
-  var indexUrl = base + "/search.json";
+  function resolveIndexUrl() {
+    var base = typeof window.siteBaseurl === "string" ? window.siteBaseurl : "";
+    if (base === "/") base = "";
+    if (base) return base + "/search.json";
 
-  fetch(indexUrl)
-    .then(function (r) {
-      if (!r.ok) throw new Error("HTTP " + r.status);
-      return r.json();
-    })
-    .then(function (data) {
-      index = data || [];
-    })
-    .catch(function () {
-      results.innerHTML = "<p class=\"post-meta\">Search index unavailable.</p>";
-    });
+    // Fallback: derive from this script's path when baseurl was not injected
+    var scripts = document.getElementsByTagName("script");
+    for (var i = 0; i < scripts.length; i++) {
+      var src = scripts[i].src || "";
+      var marker = "/assets/js/search.js";
+      var pos = src.indexOf(marker);
+      if (pos !== -1) {
+        return src.slice(0, pos) + "/search.json";
+      }
+    }
+    return "/search.json";
+  }
 
   function escapeHtml(str) {
     return String(str)
@@ -41,15 +43,15 @@
       var p = items[i];
       html +=
         "<li>" +
-        '<a href="' +
+        "<a href=\"" +
         escapeHtml(p.url) +
-        '">' +
+        "\">" +
         escapeHtml(p.title) +
         "</a>" +
-        '<div class="post-meta">' +
+        "<div class=\"post-meta\">" +
         escapeHtml(p.date || "") +
         "</div>" +
-        '<p class="mt-2 mb-0">' +
+        "<p class=\"mt-2 mb-0\">" +
         escapeHtml(p.excerpt || "") +
         "</p>" +
         "</li>";
@@ -58,7 +60,8 @@
     results.innerHTML = html;
   }
 
-  input.addEventListener("input", function () {
+  function runSearch() {
+    if (!indexReady) return;
     var q = input.value.trim().toLowerCase();
     if (q.length < 2) {
       results.innerHTML = "";
@@ -74,5 +77,21 @@
       return hay.toLowerCase().indexOf(q) !== -1;
     });
     render(matches);
-  });
+  }
+
+  fetch(resolveIndexUrl())
+    .then(function (r) {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.json();
+    })
+    .then(function (data) {
+      index = data || [];
+      indexReady = true;
+      runSearch();
+    })
+    .catch(function () {
+      results.innerHTML = "<p class=\"post-meta\">Search index unavailable.</p>";
+    });
+
+  input.addEventListener("input", runSearch);
 })();
