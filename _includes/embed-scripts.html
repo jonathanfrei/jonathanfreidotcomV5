@@ -1,0 +1,13 @@
+{% comment %}
+  Platform widgets for X, Instagram, and TikTok.
+  Loaded once per page when those embeds are present.
+{% endcomment %}
+{% if content contains 'data-embed="twitter"' or content contains 'twitter-tweet' %}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% endif %}
+{% if content contains 'data-embed="instagram"' or content contains 'instagram-media' %}
+<script async src="https://www.instagram.com/embed.js"></script>
+{% endif %}
+{% if content contains 'data-embed="tiktok"' or content contains 'tiktok-embed' %}
+<script async src="https://www.tiktok.com/embed.js"></script>
+{% endif %}
