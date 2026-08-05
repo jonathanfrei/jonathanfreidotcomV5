@@ -11,6 +11,7 @@
 #   TikTok   – tiktok.com/@user/video/{id}
 #   Spotify  – open.spotify.com/{type}/{id}
 #   CodePen  – codepen.io/{user}/pen/{id}
+#   Imgur    – i.imgur.com/{id}.{ext}, imgur.com/{id}, imgur.com/a/{id}, imgur.com/gallery/{id}
 #
 # Usage in a post/page:
 #
@@ -56,6 +57,18 @@ module Jekyll
         spotify($1, $2)
       when %r{codepen\.io/([^/]+)/pen/([A-Za-z0-9]+)}
         codepen($1, $2)
+      # Direct CDN image: i.imgur.com/{id}.{ext}
+      when %r{i\.imgur\.com/([A-Za-z0-9]+)(\.[a-zA-Z0-9]+)?}i
+        imgur_image(url, $1, $2)
+      # Album: imgur.com/a/{id}
+      when %r{imgur\.com/a/([A-Za-z0-9]+)}i
+        imgur_album($1)
+      # Gallery: imgur.com/gallery/{id}
+      when %r{imgur\.com/gallery/([A-Za-z0-9]+)}i
+        imgur_gallery($1)
+      # Single post page: imgur.com/{id} (exclude /user, /t/, etc.)
+      when %r{imgur\.com/(?!a/|gallery/|user/|t/|r/|signin)([A-Za-z0-9]+)(?:\.[a-zA-Z0-9]+)?(?:[/?#]|$)}i
+        imgur_single($1)
       else
         nil
       end
@@ -131,6 +144,45 @@ module Jekyll
           %(loading="lazy" allowfullscreen></iframe>),
         ratio: "56.25%"
       )
+    end
+
+    # Direct image CDN links → responsive <img>
+    def imgur_image(url, id, ext)
+      src = url.split("?").first
+      # Prefer https
+      src = src.sub(%r{\Ahttp://}, "https://")
+      <<~HTML
+
+        <figure class="embed embed-imgur" data-embed="imgur">
+          <img src="#{src}" alt="Imgur image" loading="lazy" />
+        </figure>
+
+      HTML
+    end
+
+    def imgur_album(id)
+      imgur_blockquote("a/#{id}", "https://imgur.com/a/#{id}")
+    end
+
+    def imgur_gallery(id)
+      # Gallery embeds use the same data-id form as albums when applicable
+      imgur_blockquote(id, "https://imgur.com/gallery/#{id}")
+    end
+
+    def imgur_single(id)
+      imgur_blockquote(id, "https://imgur.com/#{id}")
+    end
+
+    def imgur_blockquote(data_id, href)
+      <<~HTML
+
+        <div class="embed embed-imgur" data-embed="imgur">
+          <blockquote class="imgur-embed-pub" lang="en" data-id="#{data_id}">
+            <a href="#{href}">View on Imgur</a>
+          </blockquote>
+        </div>
+
+      HTML
     end
 
     def wrap_video(iframe_html, ratio: "56.25%")

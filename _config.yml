@@ -43,8 +43,13 @@ autopages:
     layouts:
       - tag
     title: "Tag: :tag"
-    permalink: "/tags/:tag"
+    # Trailing slash → directory/index.html (GitHub Pages HTML, not download)
+    # slugify mode default matches Liquid | slugify (spaces → hyphens)
+    permalink: "/tags/:tag/"
     enabled: true
+    slugify:
+      mode: default
+      cased: true
   categories:
     enabled: false
   collections:
