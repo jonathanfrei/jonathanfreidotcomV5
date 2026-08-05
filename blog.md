@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Blog
-permalink: /blog
+permalink: /blog/
 ---
 
 Short posts and notes.
@@ -15,7 +15,7 @@ Short posts and notes.
         {% if post.tags.size > 0 %}
           ·
           {% for tag in post.tags %}
-            <a href="{{ '/tags/' | relative_url }}{{ tag | slugify }}" class="tag">{{ tag }}</a>
+            <a href="{{ '/tags/' | relative_url }}{{ tag | slugify }}/" class="tag">{{ tag }}</a>
           {% endfor %}
         {% endif %}
       </div>

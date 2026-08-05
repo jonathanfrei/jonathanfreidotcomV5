@@ -15,7 +15,7 @@ or reach me on X at [@jonathanfrei](https://x.com/jonathanfrei) although I don't
 
 <p>The [current site](https://jonathanfrei.github.io/jonathanfreidotcomV5) is built with Jekyll, deployed via GitHub Actions, and served through Cloudflare.</p>
 
-<p>Short posts live on the [blog]({{ '/blog' | relative_url }}). Longer writing will appear as articles. A portfolio / photo gallery may come later.</p>
+<p>Short posts live on the [blog]({{ '/blog/' | relative_url }}). Longer writing will appear as articles. A portfolio / photo gallery may come later.</p>
 
 </div>
 
