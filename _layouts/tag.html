@@ -1,9 +1,18 @@
 ---
 layout: default
 ---
+{% comment %}
+  jekyll-archives sets page.title to the tag/category name.
+  page.tag is set for tag archives; page.category for category archives.
+{% endcomment %}
+{% assign archive_name = page.title | default: page.tag | default: page.category %}
 <article class="prose">
   <header class="mb-6">
-    <h1 class="mt-0">Tag: {{ page.tag }}</h1>
+    {% if page.type == 'category' %}
+      <h1 class="mt-0">Category: {{ archive_name }}</h1>
+    {% else %}
+      <h1 class="mt-0">Tag: {{ archive_name }}</h1>
+    {% endif %}
   </header>
 
   <ul class="post-list">
@@ -18,6 +27,6 @@ layout: default
   </ul>
 
   <p class="mt-8">
-    <a href="{{ '/tags/' | relative_url }}">&larr; All tags</a>
+    <a href="{{ '/tags' | relative_url }}">&larr; All tags</a>
   </p>
 </article>

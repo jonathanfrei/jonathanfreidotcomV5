@@ -49,6 +49,20 @@ After the first successful Actions run:
 
 Point `jonathanfrei.com` (and `www` if desired) at GitHub Pages via Cloudflare DNS, then add the custom domain in the Pages settings. Cloudflare proxy can remain enabled for caching and protection.
 
+## Cloudflare caching (Expires / long TTL)
+
+GitHub Pages sets short default cache lifetimes on static assets (Lighthouse often reports ~10 minutes for CSS). Because the site is served behind **Cloudflare**, set edge/browser cache there — GitHub Pages itself does not accept custom `Expires` / `Cache-Control` headers from the repo.
+
+Recommended **Cache Rule** (Cloudflare dashboard → Caching → Cache Rules), matching your production hostname:
+
+| Match | Edge TTL | Browser TTL |
+| --- | --- | --- |
+| URI Path matches `*.css` OR `*.js` OR `*.png` OR `*.jpg` OR `*.webp` OR `*.svg` OR `*.ico` OR `*.woff2` | 1 month (or longer) | 1 day – 1 week |
+
+Optional: “Cache Everything” for HTML with a short Edge TTL (e.g. 2 hours) if you want faster global TTFB and accept brief staleness after deploys.
+
+Critical CSS is also **inlined** in the HTML so first paint does not depend on a render-blocking stylesheet fetch; the external `assets/css/main.css` remains available for long-lived caching once Cloudflare rules are in place.
+
 ## Structure
 
 ```
