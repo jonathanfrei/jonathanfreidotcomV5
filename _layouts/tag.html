@@ -2,21 +2,21 @@
 layout: default
 ---
 {% comment %}
-  jekyll-archives sets page.title to the tag/category name.
-  page.tag is set for tag archives; page.category for category archives.
+  Tag pages from jekyll-paginate-v2 autopages expose paginator.
+  page.title is set to the configured title (e.g. "Tag: name").
 {% endcomment %}
-{% assign archive_name = page.title | default: page.tag | default: page.category %}
+{% assign archive_name = page.tag | default: page.title | default: page.category %}
+{% if archive_name contains 'Tag: ' %}
+  {% assign archive_name = archive_name | remove_first: 'Tag: ' %}
+{% endif %}
 <article class="prose">
   <header class="mb-6">
-    {% if page.type == 'category' %}
-      <h1 class="mt-0">Category: {{ archive_name }}</h1>
-    {% else %}
-      <h1 class="mt-0">Tag: {{ archive_name }}</h1>
-    {% endif %}
+    <h1 class="mt-0">Tag: {{ archive_name }}</h1>
   </header>
 
   <ul class="post-list">
-    {% for post in page.posts %}
+    {% assign list_posts = paginator.posts | default: page.posts %}
+    {% for post in list_posts %}
       <li>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         <div class="post-meta">
@@ -25,6 +25,8 @@ layout: default
       </li>
     {% endfor %}
   </ul>
+
+  {% include pagination.html %}
 
   <p class="mt-8">
     <a href="{{ '/tags/' | relative_url }}">&larr; All tags</a>
