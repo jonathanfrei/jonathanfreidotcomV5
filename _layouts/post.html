@@ -2,9 +2,9 @@
 layout: default
 ---
 <article class="prose" itemscope itemtype="https://schema.org/BlogPosting">
-  <header class="mb-6">
+  <header class="post-header">
     <h1 class="mt-0" itemprop="headline">{{ page.title }}</h1>
-    <p class="post-meta">
+    <p class="post-meta mb-0">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {{ page.date | date: "%B %-d, %Y" }}
       </time>
@@ -24,10 +24,10 @@ layout: default
   </div>
 
   <p class="mt-8 post-comment-link">
-    <a href="mailto:hi+comments@jonathanfrei.com?subject={{ 'Comment on: ' | append: page.title | uri_escape }}&body={{ 'Post: ' | append: page.title | append: '%0A' | append: page.url | absolute_url | uri_escape }}">Comment</a>
+    <a href="mailto:hi+comments@jonathanfrei.com?subject={{ 'Comment on: ' | append: page.title | uri_escape }}&body={{ 'Post: ' | append: page.title | append: '%0A' | append: page.url | absolute_url | uri_escape }}">Comment by email</a>
   </p>
 </article>
 
-<p class="mt-8">
+<p class="mt-8 post-nav">
   <a href="{{ '/blog/' | relative_url }}">&larr; Back to blog</a>
 </p>
