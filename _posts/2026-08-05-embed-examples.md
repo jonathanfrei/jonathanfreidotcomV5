@@ -18,6 +18,14 @@ https://vimeo.com/148751763
 
 https://x.com/jack/status/20
 
+## Instagram
+
+https://www.instagram.com/p/DbmBkWoATTD/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==
+
+*AI Video*
+
+https://www.instagram.com/reel/Da8pIhYxeV9/
+
 ## Notes
 
 - The URL must sit alone on a line (blank lines above/below).
