@@ -411,15 +411,16 @@ a:focus-visible {
   padding-bottom: 0;
 }
 
-.post-list a {
+/* Title links only — do not restyle .tag chips inside .post-meta */
+.post-list > li > a {
   font-size: var(--type-lg);
   font-weight: 600;
   text-decoration: none;
   color: var(--color-fg);
 }
 
-.post-list a:hover,
-.post-list a:focus-visible {
+.post-list > li > a:hover,
+.post-list > li > a:focus-visible {
   color: var(--color-accent);
   text-decoration: underline;
 }
