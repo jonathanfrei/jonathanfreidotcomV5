@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{% comment %}
+  jekyll-archives month pages: page.type is 'month', page.date is a Date,
+  page.posts is the matching posts.
+{% endcomment %}
+<article class="prose">
+  <header class="mb-6">
+    <h1 class="mt-0">{{ page.date | date: "%B %Y" }}</h1>
+  </header>
+
+  <ul class="post-list">
+    {% for post in page.posts %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <div class="post-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="mt-8">
+    <a href="{{ '/archive/' | relative_url }}">&larr; All archives</a>
+  </p>
+</article>
