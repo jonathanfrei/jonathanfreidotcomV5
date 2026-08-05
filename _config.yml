@@ -18,6 +18,19 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-archives
+
+# Tag / category permalinks
+jekyll-archives:
+  enabled:
+    - tags
+    - categories
+  layouts:
+    tag: tag
+    category: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
 
 # Exclude from processing (including obfuscated drafts folder)
 exclude:
@@ -29,12 +42,6 @@ exclude:
   - README.md
   - _x7k9p
   - .gitignore
-
-# Collections (ready for future portfolio / gallery)
-# collections:
-#   projects:
-#     output: true
-#     permalink: /projects/:name/
 
 # Defaults
 defaults:
@@ -57,5 +64,3 @@ twitter:
 # Feed settings – drafts never included because excluded from build
 feed:
   path: feed.xml
-
-# Sitemap – same
