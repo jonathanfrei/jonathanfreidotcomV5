@@ -8,10 +8,10 @@
 <link rel="apple-touch-icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
 
 {% comment %}
-  Full stylesheet is inlined in default.html from assets/css/main.css so
-  first paint has no render-blocking CSS request (#24, #25, #28).
-  assets/css/main.css still deploys as a static file for tooling and for
-  long cache TTLs via Cloudflare when referenced (#23, #26).
+  Stylesheet is inlined from _includes/main.css in default.html so first paint
+  has no render-blocking CSS request (#24, #25, #28). The same file is also
+  exposed at /assets/css/main.css via assets/css/main.html for tooling and
+  long cache TTLs via Cloudflare (#23, #26).
 {% endcomment %}
 
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">

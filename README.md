@@ -61,7 +61,7 @@ Recommended **Cache Rule** (Cloudflare dashboard → Caching → Cache Rules), m
 
 Optional: “Cache Everything” for HTML with a short Edge TTL (e.g. 2 hours) if you want faster global TTFB and accept brief staleness after deploys.
 
-Critical CSS is also **inlined** in the HTML so first paint does not depend on a render-blocking stylesheet fetch; the external `assets/css/main.css` remains available for long-lived caching once Cloudflare rules are in place.
+Critical CSS is also **inlined** in the HTML (from `_includes/main.css`) so first paint does not depend on a render-blocking stylesheet fetch. The same stylesheet is exposed at `/assets/css/main.css` for tooling and long-lived caching once Cloudflare rules are in place.
 
 ## Structure
 
@@ -71,7 +71,7 @@ Critical CSS is also **inlined** in the HTML so first paint does not depend on a
 ├── _includes/                     # Header, footer, head
 ├── _layouts/                      # default, post, page
 ├── _posts/                        # Published short posts
-├── assets/css/main.css            # Tiny utility CSS
+├── _includes/main.css             # Design-system CSS (inlined + /assets/css/main.css)
 ├── _config.yml
 ├── Gemfile
 ├── index.md, about.md, blog.md
