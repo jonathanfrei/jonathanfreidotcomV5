@@ -4,6 +4,38 @@ title: Tags
 permalink: /tags/
 ---
 
+<style>
+.tags-sort-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-ui);
+}
+.tags-sort-btn {
+  font: inherit;
+  font-size: var(--type-sm);
+  line-height: 1.3;
+  color: var(--color-muted);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.25em 0.7em;
+  cursor: pointer;
+}
+.tags-sort-btn:hover,
+.tags-sort-btn:focus-visible {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  outline: none;
+}
+.tags-sort-btn.is-active {
+  color: var(--color-fg);
+  border-color: var(--color-fg);
+  background: var(--color-code-bg);
+}
+</style>
+
 {% if site.tags.size == 0 %}
 <p>No tags yet.</p>
 {% else %}
