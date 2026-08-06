@@ -13,6 +13,7 @@ This is a personal site and blog: **Jekyll 4.x → GitHub Actions → GitHub Pag
 | Content | Markdown posts/pages; HTML layouts/includes |
 | Design | Custom CSS design system in `_includes/main.css` (inlined at build) |
 | Deploy | Push to `main` runs `.github/workflows/deploy.yml` |
+| Archive media | Kept in `_posts/v{2,3}-archive/media/`; production serves via **jsDelivr** (not Pages artifact). See `archive_media` in `_config.yml` and issue #68. |
 
 ### Directory map
 

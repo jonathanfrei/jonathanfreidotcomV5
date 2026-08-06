@@ -41,9 +41,23 @@ jobs:
         uses: actions/configure-pages@v6
 
       - name: Build with Jekyll
+        # Archive media is served from jsDelivr (see archive_media in _config.yml
+        # and _plugins/fix_archive_media.rb). Do not bundle ~200MB of images into
+        # the Pages artifact — deploy-pages hard-caps wait at 10 minutes.
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+          ARCHIVE_MEDIA_MODE: cdn
+
+      - name: Report artifact size
+        run: |
+          du -sh _site
+          if [ -d _site/media ]; then
+            echo "::error::_site/media should not exist in CDN mode (would bloat Pages deploy)"
+            du -sh _site/media
+            exit 1
+          fi
+          echo "OK: archive media not bundled; artifact is HTML/CSS/JS only"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
@@ -57,7 +71,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     # deploy-pages hard-caps wait timeout at 10 minutes (MAX_TIMEOUT=600000).
-    # Large artifacts (archive media) can approach that limit; keep the site lean.
+    # Archive media is offloaded to jsDelivr so this stays well under the limit.
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

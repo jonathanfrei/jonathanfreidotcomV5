@@ -64,6 +64,15 @@ jekyll-archives:
   permalinks:
     month: /archive/:year/:month/
 
+# Archive media: keep files in-repo under _posts/v{2,3}-archive/media but do
+# not ship them in the GitHub Pages artifact (deploy-pages 10-minute timeout).
+# Production (JEKYLL_ENV=production) rewrites URLs to jsDelivr; local serve
+# still publishes under /media/. Override with ARCHIVE_MEDIA_MODE=cdn|local.
+# See issue #68.
+archive_media:
+  mode: auto
+  cdn_base: "https://cdn.jsdelivr.net/gh/jonathanfrei/jonathanfreidotcomV5@main"
+
 # Exclude from processing (including obfuscated drafts folder)
 exclude:
   - Gemfile
