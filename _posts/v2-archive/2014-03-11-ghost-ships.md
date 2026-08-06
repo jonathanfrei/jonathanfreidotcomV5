@@ -11,9 +11,7 @@ How long will it take for [drone cargo ships](http://www.economist.com/news/tech
 
 There are many potential benefits to drone cargo ships. Most cargo ship accidents involve human error. Removing that variable from the equation should increase maritime safety. Drone ships will also need far fewer people to run. That will let them save on labor costs and fuel. Unmanned ships will be able to travel slower on long voyages than traditional cargo ships, burning substantially less fuel.
 
-[![Monitor: Ghost ships | The Economist](http://cdn.static-economist.com/sites/default/files/imagecache/full-width/images/print-edition/20140308_TQP001_0.jpg)
-
-](http://www.economist.com/news/technology-quarterly/21598318-autonomous-cargo-vessels-could-set-sail-without-crew-under-watchful-eye)
+[![Monitor: Ghost ships | The Economist](http://cdn.static-economist.com/sites/default/files/imagecache/full-width/images/print-edition/20140308_TQP001_0.jpg)](http://www.economist.com/news/technology-quarterly/21598318-autonomous-cargo-vessels-could-set-sail-without-crew-under-watchful-eye)
 
 These unmanned ships will have to watch out for a different sort of pirates.
 
