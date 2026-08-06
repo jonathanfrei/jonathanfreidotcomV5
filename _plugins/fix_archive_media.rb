@@ -1,16 +1,18 @@
 # frozen_string_literal: true
 
-# Historical posts under _posts/v1-archive/ and _posts/v2-archive/ use relative
-# media paths like ![](media/12345.jpg). With directory-style permalinks those
-# resolve under the post URL (e.g. /2014/10/14/hug/media/…), which is wrong.
+# Historical posts under _posts/v{1,2,3}-archive/ use relative media paths like
+# ![](media/12345.jpg) or src="media/2015/09/photo.jpg". With directory-style
+# permalinks those resolve under the post URL (e.g. /photos/…/media/…), which
+# is wrong.
 #
 # Leave media files where they are in the repo (_posts/v2-archive/media/ etc.).
 # At build time:
 #   1. Rewrite content URLs: media/… → #{baseurl}/media/…
 #   2. Publish those files as static assets under /media/ (respecting baseurl)
 #
-# Also clear folder-derived categories so archive posts use the same
-# /:year/:month/:day/:title/ shape as current posts (no /v2-archive/ segment).
+# Also strip folder-derived categories (v1-archive, v2-archive, v3-archive) so
+# those segments do not appear in URLs. Explicit front-matter categories
+# (e.g. photos, blog on v3 posts) are preserved.
 module Jekyll
   class ArchiveMediaFile < StaticFile
     def initialize(site, base, dir, name, dest_dir)
@@ -38,8 +40,17 @@ module Jekyll
   end
 
   module FixArchiveMedia
-    ARCHIVE_PREFIXES = %w[_posts/v1-archive/ _posts/v2-archive/].freeze
-    MEDIA_SOURCE_DIRS = %w[_posts/v1-archive/media _posts/v2-archive/media].freeze
+    ARCHIVE_PREFIXES = %w[
+      _posts/v1-archive/
+      _posts/v2-archive/
+      _posts/v3-archive/
+    ].freeze
+    MEDIA_SOURCE_DIRS = %w[
+      _posts/v1-archive/media
+      _posts/v2-archive/media
+      _posts/v3-archive/media
+    ].freeze
+    FOLDER_CATEGORIES = %w[v1-archive v2-archive v3-archive].freeze
 
     module_function
 
@@ -47,8 +58,11 @@ module Jekyll
       ARCHIVE_PREFIXES.any? { |prefix| path.start_with?(prefix) }
     end
 
+    # Drop only the folder-name categories Jekyll derives from _posts subdirs.
+    # Keep intentional front-matter categories (photos, blog, links, …).
     def clear_folder_categories!(post)
-      post.data["categories"] = []
+      cats = Array(post.data["categories"]).map(&:to_s)
+      post.data["categories"] = cats.reject { |c| FOLDER_CATEGORIES.include?(c) }
     end
 
     # Markdown images/links: ](media/…) → ](#{prefix}/media/…)
