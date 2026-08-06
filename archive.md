@@ -4,6 +4,6 @@ title: Archive
 permalink: /archive/
 ---
 
-Posts by month.
+{% include search-ui.html %}
 
 {% include archive-list.html %}

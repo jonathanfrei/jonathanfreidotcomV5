@@ -32,6 +32,10 @@ or reach me on X at [@jonathanfrei](https://x.com/jonathanfrei) although I don't
   {% endfor %}
 </ul>
 
-{% if site.posts.size == 0 %}
+{% if site.posts.size > 5 %}
+<p class="more-posts">
+  <a href="{{ '/blog/' | relative_url }}">More posts</a>
+</p>
+{% elsif site.posts.size == 0 %}
 <p class="post-meta">No posts yet.</p>
 {% endif %}
