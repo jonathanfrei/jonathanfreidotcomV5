@@ -72,6 +72,14 @@ jekyll-archives:
 archive_media:
   mode: auto
   cdn_base: "https://cdn.jsdelivr.net/gh/jonathanfrei/jonathanfreidotcomV5@main"
+  # PageSpeed: resize + WebP via wsrv.nl (full-res stays on jsDelivr for <a href>).
+  # quality 85 is near-lossless for photos; widths cover 1x–2x of the 33em measure.
+  optimize:
+    enabled: auto
+    proxy: "https://wsrv.nl"
+    quality: 85
+    widths: [480, 768, 1100]
+    sizes: "(max-width: 40em) 92vw, 33em"
 
 # Exclude from processing (including obfuscated drafts folder)
 exclude:
