@@ -41,7 +41,7 @@ autopages:
   enabled: true
   tags:
     layouts:
-      - tag
+      - tag.html
     title: "Tag: :tag"
     # Trailing slash → directory/index.html (GitHub Pages HTML, not download)
     # slugify mode default matches Liquid | slugify (spaces → hyphens)
@@ -75,6 +75,11 @@ exclude:
   - AGENTS.md
   - _x7k9p
   - .gitignore
+  # Media under _posts must not be read as documents (date-prefixed .jpg names
+  # match the posts filename pattern and trigger UTF-8 read errors).
+  - _posts/v1-archive/media
+  - _posts/v2-archive/media
+  - _posts/v3-archive/media
 
 # Defaults
 defaults:
@@ -93,6 +98,12 @@ defaults:
       categories: []
   - scope:
       path: "_posts/v2-archive"
+      type: "posts"
+    values:
+      permalink: /:year/:month/:day/:title/
+      categories: []
+  - scope:
+      path: "_posts/v3-archive"
       type: "posts"
     values:
       permalink: /:year/:month/:day/:title/

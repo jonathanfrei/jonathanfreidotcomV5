@@ -1,9 +1,10 @@
 {% comment %}
-  Monthly archive list: Month Year (count), newest first.
+  Monthly archive list as a dense block (v3-style), newest first.
   Links to jekyll-archives month pages at /archive/:year/:month/.
 {% endcomment %}
 {% assign posts_by_month = site.posts | group_by_exp: "post", "post.date | date: '%Y-%m'" %}
-<ul class="post-list">
+{% if posts_by_month.size > 0 %}
+<ul class="archive-list">
   {% for month_group in posts_by_month %}
     {% assign sample = month_group.items | first %}
     {% assign year = sample.date | date: "%Y" %}
@@ -14,6 +15,6 @@
     </li>
   {% endfor %}
 </ul>
-{% if site.posts.size == 0 %}
+{% else %}
 <p>No posts published yet.</p>
 {% endif %}
