@@ -8,7 +8,8 @@
 # Leave media files where they are in the repo (_posts/v2-archive/media/ etc.).
 # At build time:
 #   1. Rewrite content URLs: media/… → #{baseurl}/media/…
-#   2. Publish those files as static assets under /media/ (respecting baseurl)
+#   2. Publish only *referenced* media files under /media/ (keeps the Pages
+#      artifact smaller so deploy-pages stays under its 10-minute timeout)
 #
 # Also strip folder-derived categories (v1-archive, v2-archive, v3-archive) so
 # those segments do not appear in URLs. Explicit front-matter categories
@@ -51,6 +52,7 @@ module Jekyll
       _posts/v3-archive/media
     ].freeze
     FOLDER_CATEGORIES = %w[v1-archive v2-archive v3-archive].freeze
+    MEDIA_REF = %r{(?:\]\(|(?:src|href)=(["']))media/([^)"'\s]+)}.freeze
 
     module_function
 
@@ -79,32 +81,61 @@ module Jekyll
         .gsub(%r{(src|href)=(["'])media/}, "\\1=\\2#{media_root}")
     end
 
-    # Publish every file under the archive media source dirs as StaticFiles
-    # rooted at /media/ so rewritten URLs resolve. Source tree is left untouched.
+    def referenced_media_paths(site)
+      paths = {}
+      site.posts.docs.each do |post|
+        next unless archive_post?(post.relative_path)
+
+        content = post.content.to_s
+        content.scan(MEDIA_REF) do
+          rel = Regexp.last_match(2).to_s.split("?").first.to_s
+          rel = rel.sub(%r{\A/+}, "")
+          next if rel.empty?
+
+          paths[rel] = true
+        end
+      end
+      paths
+    end
+
+    # Publish only media files actually referenced by archive posts so the
+    # GitHub Pages artifact stays smaller (deploy-pages has a hard 10-minute
+    # wait timeout that large sites can exceed).
     def register_media_static_files!(site)
+      needed = referenced_media_paths(site)
+      return if needed.empty?
+
+      registered = {}
       MEDIA_SOURCE_DIRS.each do |src_dir|
         abs = File.join(site.source, src_dir)
         next unless File.directory?(abs)
 
-        Dir.chdir(abs) do
-          Dir.glob("**/*", File::FNM_DOTMATCH).each do |rel|
-            next unless File.file?(rel)
+        needed.each_key do |rel|
+          next if registered[rel]
 
-            dir = File.dirname(rel)
-            name = File.basename(rel)
-            relative_dir = (dir == "." ? "" : dir)
-            dest_dir = relative_dir.empty? ? "media" : File.join("media", relative_dir)
+          full = File.join(abs, rel)
+          next unless File.file?(full)
 
-            site.static_files << Jekyll::ArchiveMediaFile.new(
-              site,
-              abs,
-              relative_dir,
-              name,
-              dest_dir
-            )
-          end
+          dir = File.dirname(rel)
+          name = File.basename(rel)
+          relative_dir = (dir == "." ? "" : dir)
+          dest_dir = relative_dir.empty? ? "media" : File.join("media", relative_dir)
+
+          site.static_files << Jekyll::ArchiveMediaFile.new(
+            site,
+            abs,
+            relative_dir,
+            name,
+            dest_dir
+          )
+          registered[rel] = true
         end
       end
+
+      Jekyll.logger.info(
+        "FixArchiveMedia:",
+        "publishing #{registered.size}/#{needed.size} referenced media file(s)"
+      )
     end
   end
 end
