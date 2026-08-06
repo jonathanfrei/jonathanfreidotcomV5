@@ -14,7 +14,8 @@ This current version of the site is deliberately smaller. It is less a platform 
 
 ### Get in touch / Follow for updates
 
-You can email me at hi [@] jonathanfrei.com.  
+You can email me at [hi&#64;jonathanfrei&#46;com](mailto:hi&#64;jonathanfrei&#46;com).
+
 I’m still on X as [@jonathanfrei](https://x.com/jonathanfrei), though I no longer post.
 
 In earlier versions of the site I ran an occasional newsletter and promised not to spam anyone. That same restraint applies now: if I ever start sending updates again, they will be rare and optional.
@@ -38,6 +39,4 @@ Earlier versions of the site:
 - V2 on Tumblr (2010–2014)
 - V3 on self-hosted WordPress (2014–2022; the online copy is now a static archive on S3)
 
-Content © Jonathan Frei.
-
-You can reach me at [hi&#64;jonathanfrei&#46;com](mailto:hi&#64;jonathanfrei&#46;com).
+Content & Code by Jonathan Frei + his AI assistants
