@@ -33,7 +33,7 @@ or reach me on X at [@jonathanfrei](https://x.com/jonathanfrei) although I don't
 </ul>
 
 {% if site.posts.size > 5 %}
-<p class="more-posts">
+<p class="more-posts post-nav">
   <a href="{{ '/blog/' | relative_url }}">More posts</a>
 </p>
 {% elsif site.posts.size == 0 %}
