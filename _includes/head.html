@@ -8,6 +8,18 @@
 <link rel="apple-touch-icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
 
 {% comment %}
+  Archive media loads from jsDelivr; display sizes are resized/WebP via wsrv.nl
+  (see _plugins/optimize_content_images.rb). Preconnect speeds LCP image start.
+{% endcomment %}
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://wsrv.nl" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="dns-prefetch" href="https://wsrv.nl">
+{% if page.lcp_image %}
+<link rel="preload" as="image" href="{{ page.lcp_image }}" fetchpriority="high">
+{% endif %}
+
+{% comment %}
   Stylesheet is inlined from _includes/main.css in default.html so first paint
   has no render-blocking CSS request (#24, #25, #28). The same file is also
   exposed at /assets/css/main.css via assets/css/main.html for tooling and
