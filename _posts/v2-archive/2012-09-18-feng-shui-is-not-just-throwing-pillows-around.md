@@ -1,13 +1,14 @@
 ---
 title: "Feng Shui is not just throwing pillows around"
 date: 2012-09-18 20:30:00 -0400
+category: [podcast]
 tags: [gabi, "gabi frei", "gabriela frei", podcast, "touching base"]
 tumblr_id: "31829256121"
 ---
 
 This is the first episode of [Gabi’s](http://www.facebook.com/gabriela.frei) and my new podcast. Give us a break if it’s a bit rough around the edges. It will get better. Promise.
 
-_Download:[MP3 Audio (25.8 MB, 38 minutes)](http://media.jonathanfrei.com/podcast/tb001.mp3)_
+_Download: [MP3 Audio (25.8 MB, 38 minutes)](http://media.jonathanfrei.com/podcast/tb001.mp3)_
 
 ### Topics in this episode:
 
