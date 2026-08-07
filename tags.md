@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Tags
-permalink: /tags/
+permalink: /tags
 ---
 
 <style>
@@ -64,7 +64,7 @@ permalink: /tags/
       {% assign tag_posts = tag[1] %}
       {% if tag_posts.size == count %}
       <li data-name="{{ tag_name | downcase | escape }}" data-count="{{ tag_posts.size }}">
-        <a class="tag" href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}/">{{ tag_name }}</a>
+        <a class="tag" href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}">{{ tag_name }}</a>
         <span class="post-meta">({{ tag_posts.size }})</span>
       </li>
       {% endif %}
