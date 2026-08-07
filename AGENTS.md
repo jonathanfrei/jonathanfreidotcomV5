@@ -28,7 +28,7 @@ _posts/                        # Published posts (YYYY-MM-DD-slug.md)
 _posts/v1-archive/             # Historical imported posts (treat carefully)
 _x7k9p/                        # Obfuscated drafts (excluded from build & CI paths)
 assets/                        # Images, JS; CSS served via assets/css/main.html
-editorial/                     # Handcrafted HTML pages (folder + index.html each)
+editorial/                     # Handcrafted HTML drop-ins (slug.html → /editorial/slug)
 index.md, about.md, blog.md, tags.md, search.md, typography.md
 ```
 
@@ -92,21 +92,24 @@ tags: [tag-one, tag-two]
 - Opt out per document: `url_embeds: false` in front matter.
 - Inline links inside paragraphs are **not** transformed.
 
-### Editorial HTML pages (`editorial/`)
+### Static HTML pages (`editorial/`, extensible)
 
-Handcrafted full HTML/CSS/JS pages (not Jekyll layouts). Each page is a **folder with `index.html`** so GitHub Pages serves it at the directory URL.
+Handcrafted full HTML pages (not Jekyll layouts). Drop a file at the root of a configured directory; it publishes at a **clean permalink** (no trailing slash).
 
 ```
 editorial/
-  spacex-earnings/
-    index.html          # → /editorial/spacex-earnings/
-    # optional: css/, js/, images/ with relative paths
+  spacex-earnings.html     # → /editorial/spacex-earnings
+  spacex-earnings/         # optional assets for that piece
+    chart.png
+  media/                   # optional shared assets under the root
+  assets/
 ```
 
-- **Do:** `editorial/<slug>/index.html` (and sibling assets with relative links)
-- **Do not:** put a bare `editorial/<slug>.html` if you want `/editorial/<slug>/`
-- **No YAML front matter** on these files so Jekyll copies them as static files (not Liquid-processed pages)
-- Relative asset paths resolve correctly under `/editorial/<slug>/`
+- **Do:** `editorial/<slug>.html` (and optional sibling asset folders)
+- **Do not:** put `index.html` inside an asset folder if that would steal the slug URL
+- **No YAML front matter** — HTML is not Liquid-rendered (safe to use `{{` in the page)
+- Relative image paths are absolutized and optimized via wsrv.nl in production (#88, #90)
+- Roots are listed under `static_html.roots` in `_config.yml` (add `articles`, etc. later)
 - Does not use site chrome (`_layouts`, header/footer) unless you hardcode it into the HTML
 
 ## Critical constraints (do not regress)
@@ -183,7 +186,7 @@ Do not downgrade these without checking Node deprecation warnings on GH Actions.
 | Site config | `_config.yml` |
 | Deploy / schedule / path filters | `.github/workflows/deploy.yml` |
 | Embed providers | `_plugins/url_embeds.rb` |
-| Editorial HTML page | `editorial/<slug>/index.html` → `/editorial/<slug>/` |
+| Static HTML page | `editorial/<slug>.html` → `/editorial/<slug>` (see `static_html.roots`) |
 
 ## Verification checklist
 
@@ -195,7 +198,7 @@ Before finishing a change that touches build, layouts, or CSS:
 4. [ ] Drafts stay out of `_posts/` until intentional publish
 5. [ ] If workflow changed, confirm Actions majors and `paths-ignore` still make sense
 6. [ ] Prefer a green deploy run after merge/push to `main`
-7. [ ] Editorial pages use `editorial/<slug>/index.html` (directory URL, static copy)
+7. [ ] Static HTML drop-ins use `editorial/<slug>.html` → `/editorial/<slug>` (no `index.html` in asset folders)
 
 ## What not to do
 
