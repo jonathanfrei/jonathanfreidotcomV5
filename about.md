@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /about/
+permalink: /about
 ---
 
 Hi, I’m Jonathan Frei.
@@ -22,7 +22,7 @@ In earlier versions of the site I ran an occasional newsletter and promised not 
 
 ### Where to read more
 
-The [full archive of posts—across all the earlier eras](https://jonathanfrei.com/jonathanfreidotcomV5/archive/) is still available. 
+The [full archive of posts—across all the earlier eras]({{ '/archive' | relative_url }}) is still available.
 
 ### Colophon
 

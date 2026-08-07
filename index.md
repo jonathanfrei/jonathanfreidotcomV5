@@ -17,7 +17,7 @@ or reach me on X at <a href="https://x.com/jonathanfrei">@jonathanfrei</a> altho
 
 </div>
 
-Short posts live on the [blog]({{ '/blog/' | relative_url }}). Longer writing will appear as articles. A portfolio / photo gallery may come later.
+Short posts live on the [blog]({{ '/blog' | relative_url }}). Longer writing will appear as articles. A portfolio / photo gallery may come later.
 
 
 
@@ -36,7 +36,7 @@ Short posts live on the [blog]({{ '/blog/' | relative_url }}). Longer writing wi
 
 {% if site.posts.size > 5 %}
 <p class="more-posts post-nav">
-  <a href="{{ '/blog/' | relative_url }}">More posts</a>
+  <a href="{{ '/blog' | relative_url }}">More posts</a>
 </p>
 {% elsif site.posts.size == 0 %}
 <p class="post-meta">No posts yet.</p>

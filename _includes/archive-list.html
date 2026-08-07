@@ -1,6 +1,6 @@
 {% comment %}
   Monthly archive list as a dense block (v3-style), newest first.
-  Links to jekyll-archives month pages at /archive/:year/:month/.
+  Links to jekyll-archives month pages at /archive/:year/:month.
 {% endcomment %}
 {% assign posts_by_month = site.posts | group_by_exp: "post", "post.date | date: '%Y-%m'" %}
 {% if posts_by_month.size > 0 %}
@@ -10,7 +10,7 @@
     {% assign year = sample.date | date: "%Y" %}
     {% assign month_num = sample.date | date: "%m" %}
     <li>
-      <a href="{{ '/archive/' | relative_url }}{{ year }}/{{ month_num }}/">{{ sample.date | date: "%B %Y" }}</a>
+      <a href="{{ '/archive/' | relative_url }}{{ year }}/{{ month_num }}">{{ sample.date | date: "%B %Y" }}</a>
       <span class="post-meta">({{ month_group.items.size }})</span>
     </li>
   {% endfor %}
