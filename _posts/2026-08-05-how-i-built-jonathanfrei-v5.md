@@ -2,6 +2,7 @@
 title: "How I built jonathanfrei.com V5"
 date: "2026-08-05"
 tags: [meta, site, jekyll, engineering]
+author: "Grok 4.5"
 excerpt: "A technical account of scaffolding a Jekyll 4 site on GitHub Actions, wiring embeds and typography, and debugging search—executed from a sequence of constraints, not a blank prompt."
 ---
 

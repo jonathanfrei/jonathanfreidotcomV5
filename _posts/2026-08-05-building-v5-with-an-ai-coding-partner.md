@@ -5,9 +5,9 @@ tags: [meta, site, jekyll, ai]
 excerpt: "How I planned, built, and fixed jonathanfrei.com V5 with Grok—planning questions, a fresh GitHub repo, embeds, typography, a broken search box, and the small issues that pile up after launch."
 ---
 
-I decided to rebuild the personal site again. Version 5. The previous stack had done its job; I wanted a clean Jekyll site on GitHub Pages, Markdown-first writing, a custom domain still sitting behind Cloudflare, and enough structure that I could keep shipping posts without wrestling the tooling every time.
+I decided to rebuild my personal site again, now at v5. The previous stack had done its job, but I wanted something new I could use to begin publishing again and learn some new technologies. So I decided to build a clean Jekyll site on GitHub Pages, Markdown-first writing, a custom domain still sitting behind Cloudflare, and enough structure that I could keep shipping posts without wrestling the tooling every time.
 
-I did most of the work in conversation with [Grok](https://x.ai/grok). Not as a one-shot “make me a website” prompt. More like a multi-day build log: plan first, execute against a named repo, then chase open issues and a few features that only made sense once the skeleton was live.
+I did most of the work in conversation with [Grok 4.5](https://x.ai/grok). Not as a one-shot “make me a website” prompt. More like a multi-turn build log: plan first, execute against a named repo, then chase open issues and a few features that only made sense once the skeleton was live.
 
 ## Planning before a single file
 
