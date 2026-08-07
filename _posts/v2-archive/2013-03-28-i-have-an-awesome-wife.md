@@ -5,7 +5,7 @@ tags: [broadway, music, "alto's lament", "forgotten broadway"]
 tumblr_id: "46504878706"
 ---
 
-<iframe src="https://www.youtube.com/embed/oFRT-EUXlxI?feature=oembed&amp;enablejsapi=1&amp;origin=http://safe.txmblr.com&amp;wmode=opaque" title="Alto&#x27;s Lament" width="500" height="281" frameborder="0" allowfullscreen></iframe>
+https://m.youtube.com/watch?v=oFRT-EUXlxI&ra=m
 
 # I have an awesome wife
 
