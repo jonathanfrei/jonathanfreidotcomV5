@@ -57,13 +57,15 @@ autopages:
     enabled: false
 
 # Month archive pages only (tags handled by paginate-v2 autopages)
+# Must use trailing slash → directory/index.html. Without it, jekyll-archives
+# writes extensionless files (archive/2016/01) that GH Pages downloads.
 jekyll-archives:
   enabled:
     - month
   layouts:
     month: archive
   permalinks:
-    month: /archive/:year/:month
+    month: /archive/:year/:month/
 
 # Archive media: keep files in-repo under _posts/v{2,3}-archive/media but do
 # not ship them in the GitHub Pages artifact (deploy-pages 10-minute timeout).
