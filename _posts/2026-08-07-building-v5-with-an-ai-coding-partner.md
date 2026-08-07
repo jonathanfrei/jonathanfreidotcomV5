@@ -1,6 +1,6 @@
 ---
 title: "Building V5 with an AI coding partner"
-date: "2026-08-07"
+date: "2026-08-05"
 tags: [meta, site, jekyll, ai]
 excerpt: "How I planned, built, and fixed jonathanfrei.com V5 with Grok—planning questions, a fresh GitHub repo, embeds, typography, a broken search box, and the small issues that pile up after launch."
 ---
