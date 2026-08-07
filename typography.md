@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Typography
-permalink: /typography/
+permalink: /typography
 description: "Specimen page for the site’s typographic design system and HTML element styles."
 ---
 
@@ -31,7 +31,7 @@ A second paragraph follows with the same spacing rhythm. Duis aute irure dolor i
 
 ## Inline text
 
-This sentence has **bold**, *italic*, ***bold italic***, <u>underline</u>, ~~strikethrough~~, `inline code`, and a [text link]({{ '/about/' | relative_url }}).
+This sentence has **bold**, *italic*, ***bold italic***, <u>underline</u>, ~~strikethrough~~, `inline code`, and a [text link]({{ '/about' | relative_url }}).
 
 Superscript: E = mc<sup>2</sup>. Subscript: H<sub>2</sub>O. Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr>.
 
@@ -115,9 +115,9 @@ hello("world")
 <p class="section-title">Section title</p>
 
 <ul class="tags">
-  <li><a class="tag" href="{{ '/tags/' | relative_url }}">tag</a></li>
-  <li><a class="tag" href="{{ '/tags/' | relative_url }}">typography</a></li>
-  <li><a class="tag" href="{{ '/tags/' | relative_url }}">specimen</a></li>
+  <li><a class="tag" href="{{ '/tags' | relative_url }}">tag</a></li>
+  <li><a class="tag" href="{{ '/tags' | relative_url }}">typography</a></li>
+  <li><a class="tag" href="{{ '/tags' | relative_url }}">specimen</a></li>
 </ul>
 
 ## Embed wrapper (empty shell)
