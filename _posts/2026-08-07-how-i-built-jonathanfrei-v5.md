@@ -1,5 +1,4 @@
 ---
-2026-08-07-how-i-built-jonathanfrei-v5.md
 title: "How I built jonathanfrei.com V5"
 date: "2026-08-07"
 tags: [meta, site, jekyll, engineering]
