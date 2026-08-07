@@ -3,6 +3,19 @@
 <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 <meta name="description" content="{{ page.description | default: site.description | escape }}">
 
+{% comment %} Apply stored/system theme before paint to avoid FOUC (#87) {% endcomment %}
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem("theme");
+    var theme = (stored === "light" || stored === "dark")
+      ? stored
+      : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  } catch (e) { /* private mode */ }
+})();
+</script>
+
 {% comment %} Favicon (#22) {% endcomment %}
 <link rel="icon" href="{{ '/assets/img/favicon.png' | relative_url }}" type="image/png">
 <link rel="apple-touch-icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
