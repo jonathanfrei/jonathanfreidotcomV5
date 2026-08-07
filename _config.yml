@@ -72,11 +72,15 @@ jekyll-archives:
 # Production (JEKYLL_ENV=production) rewrites URLs to jsDelivr; local serve
 # still publishes under /media/. Override with ARCHIVE_MEDIA_MODE=cdn|local.
 # See issue #68.
+#
+# Image optimization (wsrv.nl WebP + srcset) applies to ALL own site images —
+# archive media AND /assets/ — not only /media/. See issue #90.
 archive_media:
   mode: auto
   cdn_base: "https://cdn.jsdelivr.net/gh/jonathanfrei/jonathanfreidotcomV5@main"
-  # PageSpeed: resize + WebP via wsrv.nl (full-res stays on jsDelivr for <a href>).
+  # PageSpeed: resize + WebP via wsrv.nl (full-res preserved on data-full-src).
   # quality 85 is near-lossless for photos; widths cover 1x–2x of the 33em measure.
+  # Applies to archive media and /assets/ images (favicon, profile, etc.).
   optimize:
     enabled: auto
     proxy: "https://wsrv.nl"
