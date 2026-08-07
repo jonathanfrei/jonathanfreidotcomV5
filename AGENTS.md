@@ -70,7 +70,7 @@ tags: [tag-one, tag-two]
 ```
 
 - Default layout is `post` (from `_config.yml`). Do not set a custom layout unless needed.
-- Tags should be simple lowercase slugs where possible; archives live at `/tags/:name/`.
+- Tags should be simple lowercase slugs where possible; archives live at `/tags/:name`.
 
 ### Drafts (`_x7k9p/`)
 
@@ -82,8 +82,8 @@ tags: [tag-one, tag-two]
 ### Pages
 
 - Root Markdown with front matter, e.g. `about.md`, `blog.md`.
-- Use **trailing-slash permalinks** (see below).
-- Long-form specimen / design reference: `typography.md` → `/typography/`.
+- Use **no trailing slash** in permalinks (see below).
+- Long-form specimen / design reference: `typography.md` → `/typography`.
 
 ### Media embeds
 
@@ -111,13 +111,15 @@ editorial/
 
 ## Critical constraints (do not regress)
 
-### 1. Permalinks must be directory-style (trailing slash)
+### 1. Permalinks must not use a trailing slash
 
-GitHub Pages serves **extensionless files** as downloads (`application/octet-stream`).
+Desired URLs: `/about`, `/blog`, `/2026/08/05/slug`, `/tags/foo` — **not** `/about/`, etc. (issue #63).
 
-- **Do:** `permalink: /about/`, post pattern `/:categories/:year/:month/:day/:title/`, tag archives `/tags/:name/`
-- **Do not:** drop trailing slashes on HTML routes (issue #32 conflicted with GH Pages; directory style wins)
-- Keep internal links consistent (`/blog/`, `/tags/foo/`, etc.)
+- **Do:** `permalink: /about`, post pattern `/:categories/:year/:month/:day/:title`, tag archives `/tags/:name`
+- Jekyll then writes **`.html` files** (`about.html`). GitHub Pages serves those at the clean path.
+- **Do not** write extensionless files (no `.html`) — GH Pages may download them as `application/octet-stream`.
+- Keep internal links consistent (`/blog`, `/tags/foo`, etc.).
+- After deploy, Cloudflare should 301 `/path/` → `/path` so old bookmarks still work (see PR for #63).
 
 ### 2. CSS lives in `_includes/main.css`
 
@@ -155,7 +157,7 @@ Do not downgrade these without checking Node deprecation warnings on GH Actions.
 - Principles: readable measure, modular type scale, system fonts, restrained accent, light default + `prefers-color-scheme` dark
 - Prefer existing utilities/classes (`.prose`, `.post-meta`, `.tag`, `.post-list`, layout helpers) over one-off CSS
 - Accessibility: keep skip link, focus styles, semantic HTML, sensible contrast
-- Specimen page: `/typography/` (`typography.md`) — use when adding HTML patterns or checking type
+- Specimen page: `/typography` (`typography.md`) — use when adding HTML patterns or checking type
 
 ## Git & PR preferences
 
@@ -187,9 +189,9 @@ Do not downgrade these without checking Node deprecation warnings on GH Actions.
 
 Before finishing a change that touches build, layouts, or CSS:
 
-1. [ ] Permalinks still use trailing slashes for HTML pages
+1. [ ] Permalinks have **no** trailing slash for HTML pages (`/about` not `/about/`)
 2. [ ] CSS still inlines from `_includes/main.css` without `../` includes
-3. [ ] Tags on `/blog/` still look like chips (not oversized title links)
+3. [ ] Tags on `/blog` still look like chips (not oversized title links)
 4. [ ] Drafts stay out of `_posts/` until intentional publish
 5. [ ] If workflow changed, confirm Actions majors and `paths-ignore` still make sense
 6. [ ] Prefer a green deploy run after merge/push to `main`
@@ -199,7 +201,7 @@ Before finishing a change that touches build, layouts, or CSS:
 
 - Do not add heavy front-end frameworks, bundlers, or CMS layers unless requested
 - Do not put secrets or personal tokens in the repo
-- Do not “fix” downloads by inventing client-side routers; fix output paths (`index.html` under directories)
+- Do not “fix” downloads by inventing client-side routers; fix output paths (`.html` under clean URLs)
 - Do not expand scope into unrelated redesigns when asked for a small fix
 - Do not remove the AI/content footer note or contact masking patterns without being asked
 
