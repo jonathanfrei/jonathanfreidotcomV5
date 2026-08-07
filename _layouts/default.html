@@ -20,5 +20,9 @@
 
   {% include footer.html %}
   {% include embed-scripts.html %}
+  {% comment %} Code block chrome: line numbers, wrap toggle, copy (#71). {% endcomment %}
+  {% if content contains '<pre' %}
+  <script src="{{ '/assets/js/code-blocks.js' | relative_url }}" defer></script>
+  {% endif %}
 </body>
 </html>
