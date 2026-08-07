@@ -1,0 +1,87 @@
+==================================================================
+https://keybase.io/jonathanfrei
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jonathanfrei.com
+  * I am jonathanfrei (https://keybase.io/jonathanfrei) on keybase.
+  * I have a public key with fingerprint F3F4 9FD0 A0AC 41F1 BBAD  DEE2 5DDF A863 CC9B 76C6
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010109cf6f54e41ecb56b5cb3f3ccdd26aa33995e95e755324b29cd17276fda84bf30a",
+      "fingerprint": "f3f49fd0a0ac41f1bbaddee25ddfa863cc9b76c6",
+      "host": "keybase.io",
+      "key_id": "5ddfa863cc9b76c6",
+      "kid": "010109cf6f54e41ecb56b5cb3f3ccdd26aa33995e95e755324b29cd17276fda84bf30a",
+      "uid": "696d1f98a475d53c0d5a6b290a8f5b00",
+      "username": "jonathanfrei"
+    },
+    "merkle_root": {
+      "ctime": 1672842637,
+      "hash_meta": "75898f970bbefa914997a3bd764adfbf96fd8b51d01202405c1c0ef6eb79930f",
+      "seqno": 23810250
+    },
+    "revoke": {
+      "sig_ids": [
+        "88fa27eae3fec79cf1fa50d5f2c055bec6bd91b238ef9bba24e9e05981024d400f"
+      ]
+    },
+    "service": {
+      "hostname": "jonathanfrei.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1672842642,
+  "expire_in": 157680000,
+  "prev": "68d22a37701cdb45f7ffddced0efeae48758f0606a345fcb8097c353fcfd779b",
+  "seqno": 3,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMPSAnicrVNrbBRVGN2CRShaCoK0lEccIRot5c7zzjQQbBADwg8w1NDCutxnu912
+Z7u73VLKVkuJVGh5JSLysKKCECq05anyakUoFCtUQAEJGqGAAoZHsSTYeqfRmBh+
+OjPJZOaec77zne/ew0/2dMXFuC9tJifWRo7ENDeWFrrIrqqVJRK2abGUViL5WPeL
+5VEWCnt8XiqlSUAWt0W4wXWNaTIjWDewTrDKVUIoVQyEVNWydCYeqOuqomHFIlSG
+CjQ4RaaGuQqQlCJxrz+bBQNBrz8sZLnKNYtTgAAimsxljBGljCk6pRyZhtC2MDSI
+IYg5dshhCHMYhViq1xb/xIen294j8P+z78JuOcMyqMwtE2lQp7pKANWRIRgAmVzH
+ADjAEAv6UT4T6Fzbj8I5yM+DzCtFU6R8FvTlMU/QtsNOwCTsdWCyARVTUwwViiZR
+KMeTz8JIsKFuWia3IMCYcWTJmmVBpGIKDQ1RjrklDJpYlymQFaBoQCcyAYwbDEPL
+UgEXXkKswG9LaYpqykDRgbAQZBHbx5zqIW+2yC4kpc2STJMjBTLEVM4IFGnJHOmi
+Na4QoOuYEQNTS8ZChnFLjEjRmMWAbjmqGtWAqOWOOtWCES/pFneG9YgQUomdL2wF
+gnbYJnaeWM0JhwOhNCeccHHAgRcx7PlbyIO9fiq2i2BEWDDktf0iLIH8T26akiKx
+uQFvkHm8DkKHhgnE5dRhEWdoJlUUpEIIZEKxpnPIOaWEUZGWaFozRdIcGMBAqlgk
+2AQWJKqucsIphBb+N0hV2ETZQlKEJ7oqDDIp2tgw+zFXTJyrV2wP5xi54vok/HO4
+lmn9urK+bf0gcXSfy4kX+t5Jr8zadbx12smBteu+PPrRjY7otUPXi6sv9Zp0YcS2
+mxlXp74xaH9Vw/mMbHfG1qXLXkZcX1/WCo+od9LdvvmXSr87f654Irl6d9F694HH
+s6Onbi5v6VpZ3rkEDonOqWjL3DxuWE6ZrzW+OC+2f3Udjx95Y9g8crKtNHeNtbcw
+qfTX0j5vf3H7/rV9JRPO5t56Pin94aepF2snt9cP+H3jM9O3f7jq/r4pVbPU9InG
+ssQBHWMrUgrvNCX3nHq64euZnbFDX3tuxJ+3z85cPXw+a7rVNQ/HP1G2d0hcoOIb
+Y1DItbG5tfHKLyvqk1ljSjTB/TC1zjo0tub84R4/j08EsA4OHHzurTVzpiXviSlv
+VbS+q9alPSh6N2NMZmfFqWNtH+d6/tATIuvy2/jiIY2Djxds2RA7qumHRQV15ful
+rgMn6xe+um933r3dIZdW8k7/yq3fP335XG3Wpg3qlMLek9tdQ3cOnH5x9I6cGePW
+tiw83XH5ypadJyrbHxy8unhzZ1GkBp/ZpK94qW4JezYj4c3BXyVvLaup6Z96bOOC
++unvNR/c9v6i2VnlSQsaxjyVTV/smCRNPJO19/PV40b/KJcccLX0zqwe1Y8Vz57h
+PlpVNDylV3r18ou+T4YnVb2+Pe63hszrC+Pn/tQ2/t5n8+VAzytrN+ypLbh1914c
+3vHwheuBkZUxr+yZsHso+wu7CBCz
+=oKjW
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jonathanfrei
+
+==================================================================
