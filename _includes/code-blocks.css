@@ -1,0 +1,112 @@
+/* ---------- Enhanced code blocks (#71) — GitHub-inspired ---------- */
+.code-block {
+  position: relative;
+  margin-block: var(--space-6);
+  background: var(--color-code-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.code-block__toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-code-bg) 85%, var(--color-fg) 4%);
+}
+
+.code-block__btn {
+  appearance: none;
+  margin: 0;
+  padding: 0.2rem 0.55rem;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.code-block__btn:hover,
+.code-block__btn:focus-visible {
+  color: var(--color-fg);
+  background: color-mix(in srgb, var(--color-fg) 6%, transparent);
+  border-color: var(--color-border);
+  outline: none;
+}
+
+.code-block__btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+.code-block__btn[aria-pressed="true"] {
+  color: var(--color-fg);
+  background: color-mix(in srgb, var(--color-fg) 8%, transparent);
+  border-color: var(--color-border);
+}
+
+.code-block__body {
+  display: flex;
+  align-items: stretch;
+  overflow-x: auto;
+}
+
+.code-block__lines {
+  flex: 0 0 auto;
+  padding: var(--space-4) 0.65rem var(--space-4) 0.75rem;
+  margin: 0;
+  border-right: 1px solid var(--color-border);
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  line-height: 1.45;
+  text-align: right;
+  color: var(--color-muted);
+  user-select: none;
+  white-space: pre;
+  background: color-mix(in srgb, var(--color-code-bg) 92%, var(--color-fg) 3%);
+}
+
+.code-block pre {
+  flex: 1 1 auto;
+  margin: 0;
+  padding: var(--space-4);
+  overflow: visible;
+  background: transparent;
+  border-radius: 0;
+  white-space: pre;
+  tab-size: 2;
+}
+
+.code-block.is-wrap pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.code-block.is-wrap .code-block__body {
+  overflow-x: hidden;
+}
+
+.code-block pre code {
+  display: block;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Nested .prose spacing: enhanced blocks own their margin */
+.prose .code-block {
+  margin-block: var(--space-6);
+}
+
+.prose .code-block pre {
+  margin: 0;
+}
