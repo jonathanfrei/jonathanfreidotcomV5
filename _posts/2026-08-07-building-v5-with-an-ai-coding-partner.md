@@ -1,5 +1,4 @@
 ---
-2026-08-07-building-v5-with-an-ai-coding-partner.md
 title: "Building V5 with an AI coding partner"
 date: "2026-08-07"
 tags: [meta, site, jekyll, ai]
