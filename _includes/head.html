@@ -8,8 +8,9 @@
 <link rel="apple-touch-icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
 
 {% comment %}
-  Archive media loads from jsDelivr; display sizes are resized/WebP via wsrv.nl
-  (see _plugins/optimize_content_images.rb). Preconnect speeds LCP image start.
+  Archive media loads from jsDelivr; all own images (archive + /assets/) get
+  responsive WebP via wsrv.nl (see _plugins/optimize_content_images.rb, #90).
+  Preconnect speeds LCP image start.
 {% endcomment %}
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://wsrv.nl" crossorigin>

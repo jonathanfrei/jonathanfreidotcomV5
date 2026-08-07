@@ -3,16 +3,20 @@
 require "cgi"
 require "uri"
 
-# Improve PageSpeed image audits for post content without visible quality loss:
+# Improve PageSpeed image audits for post/page content without visible quality loss:
 #   - width/height from intrinsic file dimensions (fixes unsized-images / CLS)
 #   - loading=lazy for below-fold images; first image gets fetchpriority=high
 #   - decoding=async
-#   - responsive srcset via wsrv.nl (resize + WebP) while <a href> keeps full-res
+#   - responsive srcset via wsrv.nl (resize + WebP) while data-full-src keeps full-res
 #
-# Runs after Markdown → HTML (post_render). Only touches images that already
-# point at our archive media CDN or local /media/ paths.
+# Runs after Markdown → HTML (post_render). Applies to:
+#   - Archive media (jsDelivr CDN or local /media/)
+#   - Site assets under /assets/ (served via GitHub Pages + Cloudflare)
+#   - Same-origin absolute URLs for this site
 #
-# Config (under archive_media.optimize in _config.yml):
+# External third-party images (e.g. Unsplash) are left alone.
+#
+# Config (under archive_media.optimize in _config.yml — shared with archive CDN):
 #   enabled: auto|true|false   # auto → on in production
 #   proxy: "https://wsrv.nl"
 #   quality: 85                # WebP quality (high; visually near-lossless for photos)
@@ -20,15 +24,17 @@ require "uri"
 #   sizes: "(max-width: 40em) 92vw, 33em"
 module Jekyll
   module OptimizeContentImages
-    # src must be our media (jsDelivr archive path or site /media/)
+    # Own images: archive media CDN, local /media/, site /assets/, or same-origin site URL.
     OWN_MEDIA = %r{
       \A
       (?:
-        https?://cdn\.jsdelivr\.net/gh/[^"'>\s]+/_posts/v[123]-archive/media/
+        https?://cdn\.jsdelivr\.net/gh/[^"'>\\s]+/_posts/v[123]-archive/media/
         |
-        /(?:[^"'>\s]*/)?media/
+        https?://(?:www\.)?jonathanfrei\.com/(?:assets/|media/)
         |
-        media/
+        /(?:[^"'>\\s]*/)?(?:assets|media)/
+        |
+        (?:assets|media)/
       )
     }ix.freeze
 
@@ -154,7 +160,7 @@ module Jekyll
       end
     end
 
-    # Map CDN or /media/ URL back to a local source file for dimension reads.
+    # Map CDN, /media/, or /assets/ URL back to a local source file for dimension reads.
     def local_path_for_src(site, src)
       return nil if src.nil? || src.empty?
 
@@ -163,18 +169,30 @@ module Jekyll
 
       if (m = path.match(%r{/_posts/v[123]-archive/media/(.+?)(?:\?|$)}i))
         rel = m[1]
+        rel = CGI.unescape(rel).tr("\\", "/")
+        %w[
+          _posts/v1-archive/media
+          _posts/v2-archive/media
+          _posts/v3-archive/media
+        ].each do |dir|
+          full = File.join(site.source, dir, rel)
+          return full if File.file?(full)
+        end
       elsif (m = path.match(%r{(?:\A|/)media/(.+?)(?:\?|$)}i))
         rel = m[1]
-      end
-      return nil unless rel
-
-      rel = CGI.unescape(rel).tr("\\", "/")
-      %w[
-        _posts/v1-archive/media
-        _posts/v2-archive/media
-        _posts/v3-archive/media
-      ].each do |dir|
-        full = File.join(site.source, dir, rel)
+        rel = CGI.unescape(rel).tr("\\", "/")
+        %w[
+          _posts/v1-archive/media
+          _posts/v2-archive/media
+          _posts/v3-archive/media
+        ].each do |dir|
+          full = File.join(site.source, dir, rel)
+          return full if File.file?(full)
+        end
+      elsif (m = path.match(%r{(?:\A|/)assets/(.+?)(?:\?|$)}i))
+        rel = m[1]
+        rel = CGI.unescape(rel).tr("\\", "/")
+        full = File.join(site.source, "assets", rel)
         return full if File.file?(full)
       end
       nil
@@ -184,7 +202,14 @@ module Jekyll
       return false if src.nil? || src.empty?
       return false if src.start_with?("data:")
 
-      src.match?(OWN_MEDIA) || src.include?("/_posts/v1-archive/media/") ||
+      return true if src.match?(OWN_MEDIA)
+
+      # Same-origin absolute URL for this site (any path with an image extension)
+      if (m = src.match(%r{\Ahttps?://(?:www\.)?jonathanfrei\.com(/[^"'>\s]+)}i))
+        return m[1].match?(/\.(jpe?g|png|gif|webp|avif)(?:\?|$)/i)
+      end
+
+      src.include?("/_posts/v1-archive/media/") ||
         src.include?("/_posts/v2-archive/media/") ||
         src.include?("/_posts/v3-archive/media/")
     end
@@ -195,6 +220,17 @@ module Jekyll
 
     def strip_protocol(url)
       url.sub(%r{\Ahttps?://}i, "")
+    end
+
+    # Ensure origin is an absolute https URL so wsrv.nl can fetch it.
+    def absolute_origin(site, src)
+      s = src.to_s
+      return s if s.match?(%r{\Ahttps?://}i)
+
+      base = (site.config["url"] || "https://jonathanfrei.com").to_s.chomp("/")
+      path = s.start_with?("/") ? s : "/#{s}"
+      # Drop baseurl if present in path already; site.url is the public origin.
+      "#{base}#{path}"
     end
 
     def optimized_url(cfg, origin_url, width:, format: "webp")
@@ -263,13 +299,13 @@ module Jekyll
       return nil unless own_media?(src)
       return nil if tag_attrs["data-img-opt"] == "1"
 
-      # Origin URL for full-quality link / optimizer source
-      origin = src
+      # Origin URL for full-quality link / optimizer source (must be absolute for wsrv)
+      origin = absolute_origin(site, src)
 
       # Skip transform for GIF/SVG (animation / vectors)
       transform = enabled?(site) && !animated_or_svg?(src)
 
-      local = local_path_for_src(site, origin)
+      local = local_path_for_src(site, src)
       dims = local ? image_dimensions(local) : nil
       natural_w = dims && dims[0]
       natural_h = dims && dims[1]
