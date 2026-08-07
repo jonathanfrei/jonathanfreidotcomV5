@@ -15,9 +15,11 @@ or reach me on X at <a href="https://x.com/jonathanfrei">@jonathanfrei</a> altho
 
 <p>The <a href="https://jonathanfrei.com">current site</a> is built with Jekyll, deployed via GitHub Actions, and served through Cloudflare.</p>
 
-<p>Short posts live on the [blog]({{ '/blog/' | relative_url }}). Longer writing will appear as articles. A portfolio / photo gallery may come later.</p>
-
 </div>
+
+Short posts live on the [blog]({{ '/blog/' | relative_url }}). Longer writing will appear as articles. A portfolio / photo gallery may come later.
+
+
 
 <h2 class="section-title">Recent posts</h2>
 
