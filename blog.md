@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Blog
-permalink: /blog/
+permalink: /blog
 pagination:
   enabled: true
 ---
@@ -18,7 +18,7 @@ Short posts and notes.
           ·
           {% for tag in post.tags %}
             {% assign tag_str = tag | append: "" %}
-            <a href="{{ '/tags/' | relative_url }}{{ tag_str | slugify }}/" class="tag">{{ tag_str }}</a>
+            <a href="{{ '/tags/' | relative_url }}{{ tag_str | slugify }}" class="tag">{{ tag_str }}</a>
           {% endfor %}
         {% endif %}
       </div>

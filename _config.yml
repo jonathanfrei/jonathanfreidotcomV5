@@ -11,9 +11,10 @@ author:
 
 # Build settings
 markdown: kramdown
-# Trailing slash → directory/index.html so GitHub Pages serves HTML
-# (extensionless files download as application/octet-stream)
-permalink: /:categories/:year/:month/:day/:title/
+# No trailing slash: Jekyll writes .html files that GitHub Pages serves at the
+# clean path (/about, not /about/). Extensionless files would download as
+# application/octet-stream; .html does not. See issue #63.
+permalink: /:categories/:year/:month/:day/:title
 
 # Plugins
 plugins:
@@ -27,7 +28,7 @@ plugins:
 pagination:
   enabled: true
   per_page: 50
-  permalink: "/page/:num/"
+  permalink: "/page/:num"
   title: ":title – page :num of :max"
   limit: 0
   sort_field: "date"
@@ -43,9 +44,9 @@ autopages:
     layouts:
       - tag.html
     title: "Tag: :tag"
-    # Trailing slash → directory/index.html (GitHub Pages HTML, not download)
+    # No trailing slash — same rationale as site permalink (#63)
     # slugify mode default matches Liquid | slugify (spaces → hyphens)
-    permalink: "/tags/:tag/"
+    permalink: "/tags/:tag"
     enabled: true
     slugify:
       mode: default
@@ -62,7 +63,7 @@ jekyll-archives:
   layouts:
     month: archive
   permalinks:
-    month: /archive/:year/:month/
+    month: /archive/:year/:month
 
 # Archive media: keep files in-repo under _posts/v{2,3}-archive/media but do
 # not ship them in the GitHub Pages artifact (deploy-pages 10-minute timeout).
@@ -111,19 +112,19 @@ defaults:
       path: "_posts/v1-archive"
       type: "posts"
     values:
-      permalink: /:year/:month/:day/:title/
+      permalink: /:year/:month/:day/:title
       categories: []
   - scope:
       path: "_posts/v2-archive"
       type: "posts"
     values:
-      permalink: /:year/:month/:day/:title/
+      permalink: /:year/:month/:day/:title
       categories: []
   - scope:
       path: "_posts/v3-archive"
       type: "posts"
     values:
-      permalink: /:year/:month/:day/:title/
+      permalink: /:year/:month/:day/:title
       categories: []
   - scope:
       path: ""

@@ -13,7 +13,7 @@ layout: default
         <span itemprop="keywords">
           {% for tag in page.tags %}
             {% assign tag_str = tag | append: "" %}
-            <a href="{{ '/tags/' | relative_url }}{{ tag_str | slugify }}/" class="tag">{{ tag_str }}</a>
+            <a href="{{ '/tags/' | relative_url }}{{ tag_str | slugify }}" class="tag">{{ tag_str }}</a>
           {% endfor %}
         </span>
       {% endif %}
@@ -32,5 +32,5 @@ layout: default
 </article>
 
 <p class="mt-8 post-nav">
-  <a href="{{ '/blog/' | relative_url }}">&larr; Back to blog</a>
+  <a href="{{ '/blog' | relative_url }}">&larr; Back to blog</a>
 </p>
