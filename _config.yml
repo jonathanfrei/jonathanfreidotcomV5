@@ -88,6 +88,14 @@ archive_media:
     widths: [480, 768, 1100]
     sizes: "(max-width: 40em) 92vw, 33em"
 
+# Static HTML drop-ins (issue #88): top-level *.html under each root publish at
+# /{root}/{slug} (no trailing slash). Sibling folders hold assets only.
+# Example: editorial/spacex-earnings.html → /editorial/spacex-earnings
+# Future roots (articles, long-form-writing) can be added here.
+static_html:
+  roots:
+    - editorial
+
 # Exclude from processing (including obfuscated drafts folder)
 exclude:
   - Gemfile
