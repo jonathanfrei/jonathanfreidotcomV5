@@ -3,6 +3,9 @@
    Principles inspired by Practical Typography (Butterick):
    measure, leading, hierarchy, rhythm — original execution.
    Mobile-first · system dark mode · accessibility focused
+
+   This file (main-a): design tokens, reset, base type, layout utilities.
+   Components live in main-b.css. Both are inlined via main.css.
    ========================================================= */
 
 /* ---------- Design tokens ---------- */
