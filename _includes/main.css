@@ -3,10 +3,11 @@
   Split for readability only — still a single inlined payload at build:
     main-a.css  → design tokens, reset, base typography, layout utilities
     main-b.css  → components (post list, tags, search, pagination, embeds, a11y)
-    code-blocks.css, theme-toggle.css → feature-specific
+    code-blocks.css, theme-toggle.css, coderay.css → feature-specific
   Do not introduce a network stylesheet hop; keep everything under _includes/.
 {% endcomment %}
 {% include main-a.css %}
 {% include main-b.css %}
 {% include code-blocks.css %}
 {% include theme-toggle.css %}
+{% include coderay.css %}

@@ -16,10 +16,12 @@ Short posts and notes.
         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
         {% if post.tags.size > 0 %}
           ·
+          <span class="tag-row">
           {% for tag in post.tags %}
             {% assign tag_str = tag | append: "" %}
             <a href="{{ '/tags/' | relative_url }}{{ tag_str | slugify }}" class="tag">{{ tag_str }}</a>
           {% endfor %}
+          </span>
         {% endif %}
       </div>
       {% if post.excerpt %}
