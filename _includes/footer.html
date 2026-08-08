@@ -1,16 +1,30 @@
 <footer class="site-footer">
-  <div class="container flex flex-wrap items-center justify-between gap-4">
+  <div class="container footer-row flex flex-wrap items-center justify-between gap-4">
     <p class="mb-0">
       &copy; {{ 'now' | date: "%Y" }} {{ site.author.name }}.
       <span class="sr-only">Contact:</span>
       <a href="mailto:hi&#64;jonathanfrei&#46;com">hi&#64;jonathanfrei&#46;com</a>
     </p>
-    <p class="mb-0">
-      <a href="{{ '/feed.xml' | relative_url }}" target="_blank" rel="noopener noreferrer">RSS</a>
-    </p>
+    <div class="footer-end flex flex-wrap items-center gap-4">
+      <p class="mb-0 footer-links">
+        <a href="{{ '/sitemap' | relative_url }}">Sitemap</a>
+        <span class="footer-links-sep" aria-hidden="true">·</span>
+        <a href="{{ '/feed.xml' | relative_url }}" target="_blank" rel="noopener noreferrer">RSS</a>
+      </p>
+      {% comment %} Theme toggle in lower-right of footer; JS loads async (#121) {% endcomment %}
+      <button type="button" class="theme-toggle" aria-label="Toggle color theme" aria-pressed="false">
+        <svg class="theme-toggle__icon theme-toggle__icon--moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 14.3A9 9 0 1 1 9.7 3a7 7 0 0 0 11.3 11.3z"/>
+        </svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+      </button>
+    </div>
   </div>
   <div class="container mt-4">
-    <p class="mb-0 text-sm" style="color: var(--color-muted);">
+    <p class="mb-0 text-sm footer-note">
       Parts of this site’s code and content were generated or assisted by AI tools. Review and verify anything important yourself.
     </p>
   </div>

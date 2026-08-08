@@ -3,22 +3,11 @@
     <a href="{{ '/' | relative_url }}" class="site-logo">
       {{ site.title }}
     </a>
-    <div class="site-header-end">
-      <nav class="site-nav flex gap-4" aria-label="Main">
-        <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
-        <a href="{{ '/blog' | relative_url }}"{% if page.url == '/blog' or page.url == '/blog.html' or page.url contains '/blog/page/' or page.layout == 'post' %} aria-current="page"{% endif %}>Blog</a>
-        <a href="{{ '/archive' | relative_url }}"{% if page.url == '/archive' or page.url == '/archive.html' or page.url contains '/archive/' %} aria-current="page"{% endif %}>Archive</a>
-        <a href="{{ '/about' | relative_url }}"{% if page.url == '/about' or page.url == '/about.html' %} aria-current="page"{% endif %}>About</a>
-      </nav>
-      <button type="button" class="theme-toggle" aria-label="Toggle color theme" aria-pressed="false">
-        <svg class="theme-toggle__icon theme-toggle__icon--moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M21 14.3A9 9 0 1 1 9.7 3a7 7 0 0 0 11.3 11.3z"/>
-        </svg>
-        <svg class="theme-toggle__icon theme-toggle__icon--sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="4"/>
-          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
-        </svg>
-      </button>
-    </div>
+    <nav class="site-nav flex gap-4" aria-label="Main">
+      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
+      <a href="{{ '/blog' | relative_url }}"{% if page.url == '/blog' or page.url == '/blog.html' or page.url contains '/blog/page/' or page.layout == 'post' %} aria-current="page"{% endif %}>Blog</a>
+      <a href="{{ '/archive' | relative_url }}"{% if page.url == '/archive' or page.url == '/archive.html' or page.url contains '/archive/' %} aria-current="page"{% endif %}>Archive</a>
+      <a href="{{ '/about' | relative_url }}"{% if page.url == '/about' or page.url == '/about.html' %} aria-current="page"{% endif %}>About</a>
+    </nav>
   </div>
 </header>
