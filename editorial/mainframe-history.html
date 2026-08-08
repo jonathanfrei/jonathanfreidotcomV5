@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Mainframe — A Well-Researched History</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0a0a0a;
+    --paper: #f7f4ef;
+    --accent: #1a3a5c;
+    --accent-light: #2c5a8a;
+    --muted: #5a5a5a;
+    --rule: #d4cfc6;
+    --pull: #e8e2d9;
+    --callout-bg: #1a3a5c;
+    --callout-text: #f7f4ef;
+    --max-text: 40rem;   /* ~65ch readable measure */
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    font-size: 17px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'IBM Plex Serif', Georgia, serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  /* Outer shell – constrained but expands on large screens */
+  .site {
+    width: min(100% - 2.5rem, 72rem);
+    margin-inline: auto;
+    padding-block: 0 4rem;
+  }
+
+  /* ---------- Masthead ---------- */
+  header.masthead {
+    padding: 2.5rem 0 1.5rem;
+    border-bottom: 3px solid var(--ink);
+    margin-bottom: 2rem;
+  }
+
+  .kicker {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  h1 {
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 600;
+    font-size: clamp(2.4rem, 6.5vw, 4.4rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+
+  .dek {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+    font-weight: 400;
+    line-height: 1.45;
+    max-width: 38rem;
+    color: var(--muted);
+  }
+
+  .meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.75rem;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero-figure {
+    margin: 0 0 2.75rem;
+  }
+
+  .hero-figure img {
+    width: 100%;
+    max-height: 62vh;
+    object-fit: cover;
+    object-position: center;
+    background: #ddd;
+  }
+
+  .caption {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--muted);
+    margin-top: 0.6rem;
+    max-width: 42rem;
+  }
+
+  .caption strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .src {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.03em;
+  }
+
+  /* ---------- Main editorial flow ---------- */
+  /* Default: single readable column */
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75rem 0;
+  }
+
+  /* Medium screens: two columns only when space allows readable measure */
+  @media (min-width: 800px) {
+    .content {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 2.75rem;
+      row-gap: 1.75rem;
+    }
+  }
+
+  /* Large screens: still max two prose columns (never three narrow ones) */
+  @media (min-width: 1100px) {
+    .content {
+      grid-template-columns: 1.15fr 0.85fr;
+      column-gap: 3.25rem;
+    }
+  }
+
+  /* Full-bleed / spanning elements */
+  .span-all {
+    grid-column: 1 / -1;
+  }
+
+  .lead {
+    font-size: clamp(1.12rem, 2vw, 1.35rem);
+    line-height: 1.55;
+    font-weight: 400;
+    max-width: 48rem;
+  }
+
+  h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.3rem, 2.3vw, 1.65rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.85rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin: 1.4rem 0 0.55rem;
+  }
+
+  p { margin-bottom: 1.05rem; }
+
+  /* Pull quote – always full width */
+  .pull-quote {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: clamp(1.45rem, 3.2vw, 2.1rem);
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.28;
+    letter-spacing: -0.015em;
+    padding: 1.75rem 0;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    margin: 0.5rem 0 1.5rem;
+    max-width: 44rem;
+  }
+
+  .pull-quote cite {
+    display: block;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.72rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 0.9rem;
+  }
+
+  /* Callout */
+  .callout {
+    background: var(--callout-bg);
+    color: var(--callout-text);
+    padding: 1.6rem 1.4rem;
+    margin: 0.5rem 0 1.5rem;
+  }
+
+  @media (min-width: 700px) {
+    .callout { padding: 1.85rem 2rem; }
+  }
+
+  .callout h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0 0 0.7rem;
+    color: rgba(247, 244, 239, 0.7);
+  }
+
+  .callout p {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.12rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Side note */
+  .side-note {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    background: var(--pull);
+    padding: 1.15rem 1.1rem;
+    margin: 1rem 0;
+  }
+
+  .side-note strong {
+    display: block;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.35rem;
+    color: var(--accent);
+  }
+
+  /* Milestones – true adaptive multi-column with sensible min width */
+  .milestones {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+    margin: 0.75rem 0 1.5rem;
+  }
+
+  @media (min-width: 520px) {
+    .milestones {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem 1.75rem;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .milestones {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.35rem 1.5rem;
+    }
+  }
+
+  .milestone {
+    border-top: 2px solid var(--ink);
+    padding-top: 0.75rem;
+  }
+
+  .milestone .year {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 0.3rem;
+  }
+
+  .milestone h4 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 0.35rem;
+  }
+
+  .milestone p {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.45;
+  }
+
+  /* Figures */
+  .figure {
+    margin: 1.25rem 0 1.75rem;
+  }
+
+  .figure img {
+    background: #e0dbd3;
+  }
+
+  /* On wider screens, place image + caption side-by-side when desired */
+  @media (min-width: 800px) {
+    .figure.with-side {
+      display: grid;
+      grid-template-columns: 1.45fr 1fr;
+      gap: 1.5rem;
+      align-items: end;
+    }
+  }
+
+  /* Closing */
+  .closing {
+    border-top: 3px solid var(--ink);
+    padding-top: 1.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .closing p {
+    max-width: 40rem;
+    font-size: 1.08rem;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--rule);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.75rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+  <div class="site">
+    <header class="masthead">
+      <p class="kicker">Computing History · Feature</p>
+      <h1>The Mainframe</h1>
+      <p class="dek">From room-sized electromechanical calculators to quantum-safe, AI-accelerated systems that still process the majority of the world’s financial transactions.</p>
+      <div class="meta">
+        <span>Primary source: Grokipedia</span>
+        <span>Images: Wikimedia Commons</span>
+        <span>Updated 2026</span>
+      </div>
+    </header>
+
+    <figure class="hero-figure">
+      <!-- Correct Commons path for System/360 Model 30 (Carlo Nardone / CHM) -->
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/IBM_System_360_Model_30_%281964%2C_1965%29_-_Computer_History_Museum_%282007-11-10_23.06.42_by_Carlo_Nardone%29.jpg/1280px-IBM_System_360_Model_30_%281964%2C_1965%29_-_Computer_History_Museum_%282007-11-10_23.06.42_by_Carlo_Nardone%29.jpg"
+        alt="IBM System/360 Model 30 on display at the Computer History Museum"
+        width="1280"
+        height="960"
+        loading="eager">
+      <figcaption class="caption">
+        <strong>IBM System/360 Model 30</strong> — Entry-level machine from the family that redefined compatibility. Computer History Museum.
+        <span class="src">Wikimedia Commons / Carlo Nardone</span>
+      </figcaption>
+    </figure>
+
+    <article class="content">
+
+      <p class="lead span-all">A mainframe is a high-performance, centralized computing system optimized for processing vast amounts of data and transactions with exceptional reliability, security, and scalability. It remains the backbone for critical enterprise operations in banking, insurance, government, and large-scale databases.</p>
+
+      <p class="lead span-all" style="margin-top:-0.5rem;">Originating in the mid-20th century, mainframes evolved from early electromechanical devices such as the Harvard Mark I (1944) to the first commercial electronic models—UNIVAC I in 1951 and IBM’s 701 in 1953. The term “mainframe” itself emerged in the mid-1960s to distinguish these large-scale machines from the emerging minicomputers.</p>
+
+      <blockquote class="pull-quote span-all">
+        “IBM’s System/360 family, introduced in 1964, revolutionized the industry by establishing a compatible architecture that spanned decades and supported multitasking and standardized peripherals.”
+        <cite>Grokipedia — Mainframe computer</cite>
+      </blockquote>
+
+      <section>
+        <h2>Origins and Early Development</h2>
+        <p>Mainframe computers originated as large-scale centralized systems in the 1950s, designed primarily for batch processing of extensive data sets and complex scientific calculations that exceeded earlier electromechanical devices. They enabled organizations to handle high-volume tasks—payroll, inventory management, mathematical modeling—in a single powerful unit.</p>
+        <p>The foundations trace to Howard Aiken’s Harvard Mark I (IBM Automatic Sequence Controlled Calculator), completed in 1944. The room-sized machine weighed five tons, spanned 51 feet, used relays and punched paper tape, and performed calculations for scientific tables. It was limited by mechanical speed.</p>
+        <p>The transition to fully electronic systems accelerated with ENIAC in 1945, developed by John Mauchly and J. Presper Eckert. It employed approximately 18,000 vacuum tubes, occupied 1,000 square feet, and computed artillery trajectories. By the early 1950s vacuum tubes were standard; punched cards and magnetic tape provided I/O; magnetic-core memory (patented 1949 by Jay Forrester) offered faster storage.</p>
+      </section>
+
+      <section>
+        <h2>Commercial Dawn</h2>
+        <p>Commercial deployment began with the UNIVAC I in 1951—the first general-purpose electronic digital computer produced for widespread sale. Delivered to the U.S. Census Bureau, it used roughly 5,200 vacuum tubes and magnetic tape for efficient batch handling. It tabulated demographic statistics and gained public fame by accurately predicting Dwight D. Eisenhower’s 1952 election victory from early returns.</p>
+        <p>IBM entered with the 701 in 1952 (Defense Calculator), using vacuum tubes and electrostatic storage for Cold War defense simulations. These early machines played pivotal roles in military and scientific work, including hydrogen-bomb calculations at Los Alamos.</p>
+        <div class="side-note">
+          <strong>Key insight</strong>
+          The vacuum-tube era laid the groundwork for the transistor transition of the late 1950s, which dramatically improved reliability and reduced size and power consumption.
+        </div>
+      </section>
+
+      <figure class="figure span-all with-side">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Harvard_Mark_I.jpg"
+          alt="Harvard Mark I electromechanical computer"
+          width="1280"
+          height="960"
+          loading="lazy">
+        <figcaption class="caption">
+          <strong>Harvard Mark I</strong> (IBM ASCC), 1944. One of the earliest general-purpose programmable computers. Fifty-one feet long and five tons.
+          <span class="src">Wikimedia Commons</span>
+        </figcaption>
+      </figure>
+
+      <div class="callout span-all">
+        <h3>By the numbers · 2026</h3>
+        <p>Modern mainframes such as IBM’s z17 handle around <strong>70 % of global financial transactions</strong>. Over 75 % of the top 100 banks and nearly 97 % of banks worldwide rely on IBM systems. Continuous availability routinely exceeds <strong>99.999 %</strong> uptime.</p>
+      </div>
+
+      <section>
+        <h2>The System/360 Revolution</h2>
+        <p>The decisive turning point arrived in 1964 with IBM’s System/360. It was the first family of compatible computers designed for software portability across models and sizes. Businesses could scale computing resources without rewriting applications—shifting the industry from bespoke systems to standardized platforms.</p>
+        <p>System/360 incorporated Solid Logic Technology (SLT), an early hybrid integrated-circuit approach that improved reliability while reducing size and cost relative to pure transistor designs. The architecture supported multitasking and standardized peripherals, establishing a compatibility lineage that continues today in IBM Z systems.</p>
+      </section>
+
+      <section>
+        <h2>Virtualization, Clones &amp; Resilience</h2>
+        <p>In the 1970s and 1980s, IBM introduced virtualization with VM/370 (1972), allowing multiple virtual machines to run concurrently and improving resource utilization for time-sharing. Competition intensified with plug-compatible machines from Amdahl Corporation (from 1970), pressuring IBM on performance and price.</p>
+        <p>Despite the rise of minicomputers, mainframes held their ground in high-volume transaction processing. IBM’s market position was further strengthened after the U.S. government’s antitrust case was dismissed in 1982.</p>
+        <p>The 1990s brought adaptation to open systems: OS/390 (1996) added Unix System Services for POSIX compliance, easing porting of Unix applications while supporting distributed computing. Mainframes began interoperating with networked workstations rather than being displaced by them.</p>
+      </section>
+
+      <section class="span-all">
+        <h2>Linux, e-Business &amp; the 2000s</h2>
+        <p>Entering the 2000s, mainframes embraced open-source technology. Linux was ported to IBM’s S/390 and later zSeries platforms in 2000, enabling cost-effective workload consolidation and web integration. The zSeries line, launched that year, was engineered for e-business and high-availability internet transaction processing, with energy-efficient designs that reduced power per transaction.</p>
+        <p>The Y2K transition demonstrated the platform’s robustness: extensive remediation of legacy systems prevented widespread failures in finance and government, affirming mainframes’ suitability for mission-critical work.</p>
+      </section>
+
+      <div class="milestones span-all">
+        <div class="milestone">
+          <div class="year">1944</div>
+          <h4>Harvard Mark I</h4>
+          <p>Electromechanical ASCC delivered; 51 ft long, 5 tons, paper-tape programmed.</p>
+        </div>
+        <div class="milestone">
+          <div class="year">1951</div>
+          <h4>UNIVAC I</h4>
+          <p>First commercial general-purpose electronic computer; Census Bureau &amp; election prediction fame.</p>
+        </div>
+        <div class="milestone">
+          <div class="year">1964</div>
+          <h4>IBM System/360</h4>
+          <p>Compatible family architecture; software portability across the product line.</p>
+        </div>
+        <div class="milestone">
+          <div class="year">1972</div>
+          <h4>VM/370</h4>
+          <p>Virtualization becomes practical; multiple virtual machines on one physical system.</p>
+        </div>
+        <div class="milestone">
+          <div class="year">2000</div>
+          <h4>Linux on zSeries</h4>
+          <p>Open-source arrives; consolidation and e-business workloads expand.</p>
+        </div>
+        <div class="milestone">
+          <div class="year">2022</div>
+          <h4>IBM z16</h4>
+          <p>Telum processor with on-chip AI; quantum-safe cryptography introduced.</p>
+        </div>
+        <div class="milestone">
+          <div class="year">2025</div>
+          <h4>IBM z17</h4>
+          <p>Telum II, enhanced AI inferencing, hybrid-cloud and agentic workloads.</p>
+        </div>
+        <div class="milestone">
+          <div class="year">Today</div>
+          <h4>Hybrid Reality</h4>
+          <p>Mainframes remain core; cloud is complementary, not wholesale replacement.</p>
+        </div>
+      </div>
+
+      <section>
+        <h2>Key Innovations</h2>
+        <p>Foundational software advances included Edgar F. Codd’s relational model (1970) and IBM’s DB2 (1983), which brought SQL to the enterprise. CICS (1968) established robust online transaction processing. COBOL received ANSI standardization in 1968, ensuring long-term portability for business applications.</p>
+        <p>Hardware milestones included channel architecture for high-speed I/O (System/360 era), dynamic reconfiguration without downtime (System/370), and later 64-bit addressing with ESA/390. Pervasive encryption arrived with the z14 (2017); the z16 and z17 added on-chip AI acceleration and quantum-safe protections.</p>
+      </section>
+
+      <section>
+        <h2>Architecture Today</h2>
+        <p>Contemporary systems such as the IBM z17 feature multi-core Telum II processors (up to 5.5 GHz), hierarchical caches, RAIM-protected memory (tens of terabytes), high-speed FICON and PCIe I/O drawers supporting thousands of devices, liquid cooling, and N+1 redundant power. Specialty engines (IFLs, zIIPs, ICFs) allow workload isolation and efficiency. Cryptographic hardware and continuous availability engineering remain central design principles.</p>
+        <p>These machines are no longer the sole computing resource of an enterprise. Hybrid-cloud architectures integrate mainframes with distributed and public-cloud environments, preserving the platform’s strengths in transaction integrity, security, and scale while modernizing the surrounding application landscape.</p>
+      </section>
+
+      <figure class="figure span-all">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/9/9e/IBM_Z15_mainframe.jpg"
+          alt="IBM Z15 mainframe single-frame configuration"
+          width="800"
+          height="1067"
+          loading="lazy"
+          style="max-width: 28rem; margin-inline: auto;">
+        <figcaption class="caption" style="text-align: center; margin-inline: auto;">
+          <strong>IBM Z15</strong> single-frame configuration—modern mainframes are far more compact than their 1960s ancestors yet orders of magnitude more capable.
+          <span class="src">Wikimedia Commons / Agiorgio (CC BY-SA 4.0)</span>
+        </figcaption>
+      </figure>
+
+      <section class="closing span-all">
+        <h2>Enduring Role</h2>
+        <p>Predictions of the mainframe’s demise have circulated for decades. Yet as of 2026 the platform continues to evolve—absorbing AI inference, quantum-resistant cryptography, and hybrid-cloud connectivity—while still processing the majority of the world’s high-value financial transactions. Its history is not a story of obsolescence but of continuous adaptation around a core set of values: reliability, security, and the ability to do an enormous amount of work without interruption.</p>
+        <p>Primary narrative drawn from Grokipedia’s “Mainframe computer” entry (fact-checked by Grok). Supporting imagery from Wikimedia Commons under free licenses.</p>
+      </section>
+    </article>
+
+    <footer>
+      <p>Single-page editorial feature. Typography: IBM Plex Serif, IBM Plex Sans, IBM Plex Mono (Google Fonts). Layout is mobile-first; on wider viewports it uses a maximum of two readable prose columns plus adaptive multi-column milestone cards. Content synthesized from Grokipedia with historical images from Wikimedia Commons.</p>
+    </footer>
+  </div>
+</body>
+</html>
