@@ -12,7 +12,7 @@ This is a personal site and blog: **Jekyll 4.x → GitHub Actions → GitHub Pag
 | Repo | Static Jekyll site (no app server, no database) |
 | Content | Markdown posts/pages; HTML layouts/includes |
 | Design | Custom CSS design system in `_includes/main.css` (inlined at build) |
-| Deploy | Push to `main` runs full `deploy.yml` or post-only `incremental-posts.yml` (#64) |
+| Deploy | Push to `main` runs full `deploy.yml`, or `incremental-posts.yml` for post edits / full-within-posts for new posts (#64) |
 | Archive media | Kept in `_posts/v{2,3}-archive/media/`; production serves via **jsDelivr** (not Pages artifact). See `archive_media` in `_config.yml` and issue #68. |
 | Image perf | `_plugins/optimize_content_images.rb` optimizes **all own site images** (archive media + `/assets/`): dimensions, lazy/LCP hints, responsive WebP via wsrv.nl (full-res on `data-full-src`). See issue #90. |
 
@@ -52,7 +52,8 @@ bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
 
 1. Prefer a branch + PR for multi-file or behavior changes; direct `main` is fine for urgent build/content fixes when the owner asks.
 2. Push to `main` deploys (except pure draft/doc paths — see CI).
-   - **Post-only** content under `_posts/` → `incremental-posts.yml` (cached `_site`, `--incremental`).
+   - **Post edits** under `_posts/` → `incremental-posts.yml` (`--incremental` + cache).
+   - **New or deleted posts** under `_posts/` → same workflow, **full** `jekyll build`.
    - Everything else (layouts, CSS, config, plugins) → full `deploy.yml`.
 3. Future-dated posts publish on the **every-6-hours** full rebuild (or next non-post push).
 4. After deploy, confirm the Actions run is green when you changed build-related files.
