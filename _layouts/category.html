@@ -1,0 +1,34 @@
+---
+layout: default
+---
+{% comment %}
+  Category pages from jekyll-paginate-v2 autopages (#93).
+  Mirrors tag.html structure for consistency.
+{% endcomment %}
+{% assign archive_name = page.category | default: page.title %}
+{% if archive_name contains 'Category: ' %}
+  {% assign archive_name = archive_name | remove_first: 'Category: ' %}
+{% endif %}
+<article class="prose">
+  <header class="mb-6">
+    <h1 class="mt-0">Category: {{ archive_name }}</h1>
+  </header>
+
+  <ul class="post-list">
+    {% assign list_posts = paginator.posts | default: page.posts %}
+    {% for post in list_posts %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <div class="post-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% include pagination.html %}
+
+  <p class="mt-8">
+    <a href="{{ '/categories' | relative_url }}">&larr; All categories</a>
+  </p>
+</article>
