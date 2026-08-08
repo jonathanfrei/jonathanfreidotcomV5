@@ -5,9 +5,7 @@ tags: [ibm, atoms, physics, "stop motion"]
 tumblr_id: "49367506696"
 ---
 
-<iframe src="https://www.youtube.com/embed/oSCX78-8-q0?feature=oembed&amp;enablejsapi=1&amp;origin=http://safe.txmblr.com&amp;wmode=opaque" title="A Boy And His Atom: The World&#x27;s Smallest Movie" width="500" height="281" frameborder="0" allowfullscreen></iframe>
-
-# A Boy And His Atom
+https://www.youtube.com/watch?v=oSCX78-8-q0
 
 _The World’s Smallest Movie_
 
