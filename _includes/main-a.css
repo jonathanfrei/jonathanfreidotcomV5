@@ -198,18 +198,18 @@ hr {
   margin-block: var(--space-6);
 }
 
+/* Content links: accent color, no underline (#85) */
 a {
   color: var(--color-accent);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.18em;
-  text-decoration-color: color-mix(in srgb, var(--color-accent) 45%, transparent);
+  text-decoration: none;
 }
 
 a:hover,
 a:focus-visible {
   color: var(--color-accent-hover);
-  text-decoration-color: currentColor;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
 }
 
 a:focus-visible {
