@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotic Vacuum Cleaners — An Editorial Feature</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --paper: #f8f5f0;
+      --accent: #c45c26;
+      --muted: #5c5c5c;
+      --rule: #d9d2c5;
+      --callout-bg: #f0ebe3;
+      --serif: "Source Serif 4", Georgia, serif;
+      --sans: "Source Sans 3", system-ui, sans-serif;
+      --mono: "Source Code Pro", ui-monospace, monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--serif);
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Typography scale */
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    h1 { font-size: clamp(2.8rem, 6vw, 4.5rem); }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin: 2.5rem 0 1rem; }
+    h3 { font-size: clamp(1.35rem, 2.5vw, 1.7rem); margin: 2rem 0 0.75rem; }
+    h4 { font-size: 1.15rem; margin: 1.5rem 0 0.5rem; font-weight: 600; }
+
+    p { margin-bottom: 1.25rem; max-width: 68ch; }
+
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+
+    /* Layout */
+    .site {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    header.hero {
+      padding: 4rem 0 3rem;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 3rem;
+    }
+
+    .kicker {
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .deck {
+      font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+      font-weight: 400;
+      color: var(--muted);
+      max-width: 48ch;
+      margin-top: 1.25rem;
+      line-height: 1.45;
+    }
+
+    /* Multi-column editorial grid */
+    .feature-grid {
+      display: grid;
+      gap: 2.5rem 3rem;
+      margin: 3rem 0;
+    }
+
+    @media (min-width: 900px) {
+      .feature-grid {
+        grid-template-columns: 1.4fr 1fr;
+      }
+      .feature-grid.full {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 600;
+      font-style: italic;
+      line-height: 1.3;
+      color: var(--ink);
+      border-left: 4px solid var(--accent);
+      padding: 0.5rem 0 0.5rem 1.5rem;
+      margin: 2.5rem 0;
+      max-width: 36ch;
+    }
+
+    /* Callout / web component block */
+    .callout {
+      background: var(--callout-bg);
+      border: 1px solid var(--rule);
+      padding: 1.75rem 2rem;
+      margin: 2.5rem 0;
+      position: relative;
+    }
+
+    .callout::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+      background: var(--accent);
+    }
+
+    .callout h3 {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin: 0 0 0.75rem;
+      color: var(--accent);
+    }
+
+    .callout p { margin-bottom: 0.75rem; }
+    .callout p:last-child { margin-bottom: 0; }
+
+    /* Image + caption blocks */
+    figure {
+      margin: 2.5rem 0;
+    }
+
+    figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid var(--rule);
+    }
+
+    figcaption {
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.6rem;
+      line-height: 1.4;
+      max-width: 55ch;
+    }
+
+    figcaption a { color: var(--muted); }
+
+    /* Two-column text on large screens */
+    .prose-columns {
+      column-count: 1;
+      column-gap: 3rem;
+    }
+
+    @media (min-width: 1000px) {
+      .prose-columns {
+        column-count: 2;
+      }
+      .prose-columns > * {
+        break-inside: avoid;
+      }
+    }
+
+    /* Stats / data blocks */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+      font-family: var(--sans);
+    }
+
+    .stat {
+      border-top: 2px solid var(--ink);
+      padding-top: 0.75rem;
+    }
+
+    .stat .num {
+      font-size: 2rem;
+      font-weight: 700;
+      font-family: var(--serif);
+      line-height: 1;
+    }
+
+    .stat .label {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Section dividers */
+    .section {
+      margin: 4rem 0;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-num {
+      font-family: var(--mono);
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* Table styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      margin: 1.5rem 0 2.5rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    th {
+      font-weight: 600;
+      background: var(--callout-bg);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 5rem;
+      padding: 2.5rem 0;
+      border-top: 2px solid var(--ink);
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    footer a { color: var(--muted); }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      body { font-size: 1.05rem; }
+      .site { padding: 0 1.1rem 3rem; }
+      header.hero { padding: 2.5rem 0 2rem; }
+      .callout { padding: 1.25rem 1.25rem; }
+    }
+
+    /* Utility */
+    .lead {
+      font-size: 1.25rem;
+      line-height: 1.55;
+      max-width: 62ch;
+    }
+
+    .byline {
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+    <header class="hero">
+      <p class="kicker">Technology · Domestic Robotics</p>
+      <h1>Robotic Vacuum Cleaners</h1>
+      <p class="deck">From experimental prototypes in the 1950s to AI-mapped, self-emptying machines that scrub floors while you sleep — the quiet revolution in household cleaning.</p>
+      <p class="byline">Sourced from Grokipedia · Editorial feature</p>
+    </header>
+
+    <article>
+      <p class="lead">A robotic vacuum cleaner is a compact, autonomous mobile robot designed to clean hard floor surfaces by systematically vacuuming up dust, dirt, pet hair, and small debris using motorized brushes, suction mechanisms, and onboard dirt collection bins. These devices operate independently after activation, employing algorithms to cover areas efficiently while avoiding obstacles, stairs, and furniture.</p>
+
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Roomba_original.jpg" alt="First-generation iRobot Roomba" width="800" height="737" loading="lazy">
+        <figcaption>
+          First-generation Roomba (2002). The mass-market breakthrough that made robotic floor cleaning accessible.
+          <br>Image: Larry D. Moore, <a href="https://commons.wikimedia.org/wiki/File:Roomba_original.jpg">Wikimedia Commons</a> (CC BY 4.0)
+        </figcaption>
+      </figure>
+
+      <div class="callout">
+        <h3>At a Glance</h3>
+        <p>The concept emerged from research in the 1980s, with prototypes developed for domestic use by the early 1990s. The first commercially available model was the Electrolux Trilobite (2001). Widespread adoption followed the 2002 launch of iRobot’s Roomba.</p>
+        <p>Modern units use LiDAR, visual SLAM, inertial sensors and AI object recognition. Many now mop, self-empty, and map multi-floor homes via companion apps. Battery life typically supports 60–120 minutes per charge.</p>
+      </div>
+
+      <section class="section">
+        <div class="section-header">
+          <span class="section-num">01</span>
+          <h2>History</h2>
+        </div>
+
+        <h3>Early Concepts and Prototypes</h3>
+        <p>The earliest documented concept for a robotic floor cleaner appeared in a 1957 U.S. patent filed by American engineer Donald G. Moore. It described a self-propelled device equipped with sensors to detect dirt, navigate obstacles, and follow pre-laid tracks. Whirlpool demonstrated a prototype in 1959, but technological limits in batteries and computing stalled progress.</p>
+
+        <p>Practical work resumed in the 1990s with Electrolux’s Trilobite. Developed in Sweden from around 1993, the prototype was demonstrated internally in 1996 and publicly unveiled in 1997. It used ultrasonic sensors, infrared beacons and a low-profile triangular chassis inspired by the prehistoric trilobite.</p>
+
+        <figure>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Electrolux_trilobite.jpg" alt="Electrolux Trilobite robotic vacuum" width="800" loading="lazy" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Electrolux_trilobite.jpg/800px-Electrolux_trilobite.jpg'">
+          <figcaption>
+            Electrolux Trilobite 2.0 — the world’s first commercially available robotic vacuum (2001).
+            <br>Image: Patrik Tschudin, <a href="https://commons.wikimedia.org/wiki/File:Electrolux_trilobite.jpg">Wikimedia Commons</a> (CC BY 2.0)
+          </figcaption>
+        </figure>
+
+        <h3>Commercial Launch and Mass Adoption</h3>
+        <p>Released in limited quantities in 2001 at roughly €2,000, the Trilobite featured systematic path planning but remained a niche product. In September 2002 iRobot launched the Roomba at around $200. Its reactive random-bounce algorithm, bump sensors and cliff detectors prioritized reliability and affordability over precision mapping.</p>
+
+        <blockquote class="pull-quote">
+          Roomba sold more than one million units by October 2004 and over two million by May 2006, establishing the category in consumer markets.
+        </blockquote>
+
+        <h3>Key Technological Milestones</h3>
+        <div class="prose-columns">
+          <p>Around 2010 the Neato XV-11 introduced laser rangefinder (LiDAR) mapping, creating real-time 2D maps and improving efficiency 20–30 % over random methods. Self-emptying bases appeared in the early 2010s (Ecovacs Deebot D76, 2012). Hybrid vacuum-mop functions proliferated mid-decade. By 2020 global shipments exceeded 10 million units annually; the market was valued at USD 4.48 billion in 2021 and is projected to reach nearly USD 30 billion by 2030.</p>
+          <p>Recent models add AI object recognition (avoiding pet waste with high accuracy), retractable turrets, extendable mop pads, and mechanical arms capable of relocating small objects. Self-maintenance docks now empty bins, wash and dry mops with hot water, and refill tanks — reducing user intervention to once a month or less.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <span class="section-num">02</span>
+          <h2>Technical Components</h2>
+        </div>
+
+        <div class="feature-grid">
+          <div>
+            <h3>Sensors &amp; Navigation</h3>
+            <p>Bump sensors register collisions. Cliff sensors (infrared) prevent falls. Ultrasonic and infrared proximity sensors detect walls and furniture. Accelerometers and gyroscopes aid dead reckoning. Dirt-detection optics trigger intensified cleaning.</p>
+            <p>Modern systems rely on Simultaneous Localization and Mapping (SLAM). LiDAR generates precise 2D maps via time-of-flight laser scanning; visual SLAM uses cameras for richer 3D data and object differentiation. Hybrid sensor fusion is now standard on premium models.</p>
+          </div>
+          <div>
+            <h3>Cleaning &amp; Drive Systems</h3>
+            <p>A central brush roller agitates dirt while side brushes sweep edges. High-speed impeller fans generate suction measured in pascals (Pa) — premium units reach 8,000–22,000 Pa. Differential steering with two independently powered wheels and a passive caster enables tight pivots.</p>
+            <p>Many hybrids lift mop pads 5–20 mm when carpets are detected, switch suction modes automatically, and use vibrating or rotating mops for scrubbing.</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <h3>Power &amp; Battery</h3>
+          <p>Lithium-ion packs (typically 14.4–14.8 V, 2,500–6,400 mAh) deliver 60–150+ minutes of runtime. Battery management systems prevent over-discharge and thermal issues. Self-docking stations recharge in 2–5 hours. Expected lifespan is 400–500 cycles (roughly 2–5 years of regular use).</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <span class="section-num">03</span>
+          <h2>Core Features &amp; Operations</h2>
+        </div>
+
+        <h3>Cleaning Modes</h3>
+        <p>Standard modes include Auto (systematic coverage), Spot (intensive localized spirals), and Edge/Border (perimeter focus). Modern coverage path planning uses mapped floor plans and algorithms such as boustrophedon (zigzag) or A* search, reducing overlap and energy use by 20–30 % compared with random bounce.</p>
+
+        <h3>Vacuum + Mop Combos</h3>
+        <p>Simultaneous dry and wet cleaning is now common. Roller-mop systems continuously refresh the cleaning surface, reducing cross-contamination. Hot-water mop washing and heated-air drying in the dock inhibit mold and odors. Advanced models detect floor type in real time, boost suction on carpets, and lift or retract mops automatically.</p>
+
+        <div class="stat-grid">
+          <div class="stat">
+            <div class="num">65 %</div>
+            <div class="label">Top sand pickup (CNET 2026 avg.)</div>
+          </div>
+          <div class="stat">
+            <div class="num">8–22 kPa</div>
+            <div class="label">Suction range of current flagships</div>
+          </div>
+          <div class="stat">
+            <div class="num">60–150 min</div>
+            <div class="label">Typical runtime per charge</div>
+          </div>
+          <div class="stat">
+            <div class="num">≤ 60 dB</div>
+            <div class="label">Quiet-mode noise level</div>
+          </div>
+        </div>
+
+        <h3>Smart Home Integration</h3>
+        <p>Most premium models support Amazon Alexa, Google Assistant and, increasingly, Apple HomeKit / Matter. Companion apps provide multi-floor maps, virtual no-go zones, room-specific scheduling, real-time status and voice control. Some units now offer local processing for improved privacy.</p>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <span class="section-num">04</span>
+          <h2>Performance &amp; Limitations</h2>
+        </div>
+
+        <p>Robots excel at daily maintenance on hard floors (pickup rates often 72–99 % for sand and cereal). On low-pile carpet results are more variable (typically 41–65 %); high-pile and fringed rugs remain challenging. Edge and corner cleaning is a persistent weakness for round chassis designs.</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Surface</th>
+              <th>Debris Pickup (Sand/Cereal)</th>
+              <th>Key Limitations</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hardwood / Tile</td>
+              <td>72–99 %</td>
+              <td>Edge &amp; baseboard misses</td>
+            </tr>
+            <tr>
+              <td>Low-Pile Carpet</td>
+              <td>41–64 % (avg. ~60 %)</td>
+              <td>Embedded dirt, reduced agitation</td>
+            </tr>
+            <tr>
+              <td>High-Pile Carpet</td>
+              <td>41–66 % (avg. ~50 %)</td>
+              <td>Deep penetration, tangling</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Compared with traditional uprights or canisters, robots sacrifice deep-cleaning power for autonomy. They free users from 26–31 minutes of weekly labor but still require occasional manual intervention for cords, thresholds, or high-pile zones. Noise is generally 55–70 dB (quieter than most uprights), though self-empty cycles can spike to 70–80 dB.</p>
+
+        <div class="callout">
+          <h3>Common Failure Modes</h3>
+          <p>Getting stuck on cords, rugs or furniture legs; false cliff-sensor triggers on dark floors; battery degradation after 2–3 years; brush and filter clogs from pet hair; docking-station dust buildup. Advanced LiDAR + AI models significantly reduce entrapment rates.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <span class="section-num">05</span>
+          <h2>Market Landscape</h2>
+        </div>
+
+        <p>As of early 2025 Chinese manufacturers led global smart-vacuum shipments: Roborock (19.3 %), Ecovacs (13.6 %), Dreame (11.3 %). iRobot remains strong in the United States. Other notable players include SharkNinja, Samsung, LG, Xiaomi, Eufy, Philips, Neato and Dyson.</p>
+
+        <p>The market grew from USD 4.48 billion in 2021 to roughly USD 9.5 billion in 2024. Asia-Pacific accounts for the largest share and fastest growth. Entry-level models start under $300; mid-range units with mapping and self-emptying run $400–1,200; premium AI + mop systems often exceed $1,500.</p>
+
+        <blockquote class="pull-quote">
+          The $200–$499 segment accounted for 53 % of sales in 2024 — consumers favor balanced features without flagship pricing.
+        </blockquote>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <span class="section-num">06</span>
+          <h2>Broader Impacts &amp; Debates</h2>
+        </div>
+
+        <div class="feature-grid">
+          <div>
+            <h3>Efficiency Gains</h3>
+            <p>Mapped navigation reduces redundant passes and energy use. Robots typically draw 30–100 W versus 600–1,500 W for traditional vacuums. Users report reclaiming up to 110 hours of cleaning time per year. Automation researchers project robotic aids could handle 39 % of domestic chores by 2033.</p>
+          </div>
+          <div>
+            <h3>Criticisms</h3>
+            <p>Real-world performance often lags marketing claims. Robots struggle with edges, high-pile carpets and dynamic clutter. They function best as daily maintenance tools rather than full replacements for manual deep cleaning. High upfront cost and ongoing maintenance remain barriers for many households.</p>
+          </div>
+        </div>
+
+        <h3>Privacy, Security &amp; Safety</h3>
+        <p>Camera- and map-equipped robots collect detailed home layouts. Cloud storage of spatial data and occasional firmware vulnerabilities have led to documented breaches (live camera feeds, unauthorized control). Lithium-ion battery thermal runaway, while rare, has caused house fires. Best practice: isolate devices on guest networks, keep firmware current, and use manufacturer chargers.</p>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <span class="section-num">07</span>
+          <h2>Current Recommendations (2026)</h2>
+        </div>
+        <p>No single “best” model exists across all tests. Recent independent reviews highlight:</p>
+        <ul style="margin: 1rem 0 1.5rem 1.5rem; font-family: var(--sans);">
+          <li><strong>CNET</strong> — Mova V50 Ultra Complete (highest overall cleaning scores)</li>
+          <li><strong>RTINGS</strong> — Roborock Saros 10R (excellent hard-floor &amp; mopping)</li>
+          <li><strong>Wirecutter</strong> — Roborock Q7 M5+ (navigation &amp; multi-level mapping)</li>
+          <li><strong>PCMag</strong> — Ecovacs Deebot X8 Pro Omni (Editors’ Choice hybrid)</li>
+          <li><strong>Consumer Reports</strong> — Samsung Jet Bot (mopping of dried stains)</li>
+        </ul>
+        <p>Value-oriented strong performers also come from Xiaomi, Dreame, Eufy and Philips.</p>
+      </section>
+    </article>
+
+    <footer>
+      <p>Text content adapted from <a href="https://grokipedia.com/page/Robotic_vacuum_cleaner">Grokipedia — Robotic vacuum cleaner</a> (fact-checked by Grok).</p>
+      <p>Images hot-linked from Wikimedia Commons under their respective Creative Commons licenses. Attribution and source links appear with each figure.</p>
+      <p style="margin-top: 1.5rem;">Designed as a single-page editorial feature · Responsive multi-column layout · Source Serif 4 / Source Sans 3 / Source Code Pro</p>
+    </footer>
+  </div>
+</body>
+</html>
