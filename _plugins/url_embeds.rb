@@ -12,6 +12,7 @@
 #   Spotify  – open.spotify.com/{type}/{id}
 #   CodePen  – codepen.io/{user}/pen/{id}
 #   Imgur    – i.imgur.com/{id}.{ext}, imgur.com/{id}, imgur.com/a/{id}, imgur.com/gallery/{id}
+#   Flickr   – flickr.com/photos/{user}/{id}, flic.kr/p/{shortcode}
 #
 # Usage in a post/page:
 #
@@ -69,6 +70,15 @@ module Jekyll
       # Single post page: imgur.com/{id} (exclude /user, /t/, etc.)
       when %r{imgur\.com/(?!a/|gallery/|user/|t/|r/|signin)([A-Za-z0-9]+)(?:\.[a-zA-Z0-9]+)?(?:[/?#]|$)}i
         imgur_single($1)
+      # Flickr short links: flic.kr/p/{code}
+      when %r{flic\.kr/p/([A-Za-z0-9]+)}i
+        flickr_short($1)
+      # Flickr photo page: flickr.com/photos/{user}/{id}
+      when %r{(?:www\.)?flickr\.com/photos/([^/]+)/(\d+)}i
+        flickr_photo($1, $2, url)
+      # Flickr album/set: flickr.com/photos/{user}/albums|sets/{id}
+      when %r{(?:www\.)?flickr\.com/photos/([^/]+)/(?:albums|sets)/(\d+)}i
+        flickr_album($1, $2)
       else
         nil
       end
@@ -147,14 +157,19 @@ module Jekyll
     end
 
     # Direct image CDN links → responsive <img>
+    # (hotlink CDN proxy via wsrv.nl applied later by optimize_content_images)
     def imgur_image(url, id, ext)
       src = url.split("?").first
       # Prefer https
       src = src.sub(%r{\Ahttp://}, "https://")
+      ext = ext.to_s
+      ext = ".jpg" if ext.empty?
+      # Normalize bare id pages that matched as i.imgur.com/{id}
+      src = "https://i.imgur.com/#{id}#{ext}" unless src.include?("i.imgur.com")
       <<~HTML
 
         <figure class="embed embed-imgur" data-embed="imgur">
-          <img src="#{src}" alt="Imgur image" loading="lazy" />
+          <img src="#{src}" alt="Imgur image" loading="lazy" decoding="async" />
         </figure>
 
       HTML
@@ -170,7 +185,8 @@ module Jekyll
     end
 
     def imgur_single(id)
-      imgur_blockquote(id, "https://imgur.com/#{id}")
+      # Prefer direct image when possible (faster + CDN-proxyable) over blockquote widget
+      imgur_image("https://i.imgur.com/#{id}.jpg", id, ".jpg")
     end
 
     def imgur_blockquote(data_id, href)
@@ -180,6 +196,34 @@ module Jekyll
           <blockquote class="imgur-embed-pub" lang="en" data-id="#{data_id}">
             <a href="#{href}">View on Imgur</a>
           </blockquote>
+        </div>
+
+      HTML
+    end
+
+    # Flickr photo page → official embedr widget (#122)
+    # embedr.flickr.com upgrades data-flickr-embed anchors when its script loads.
+    def flickr_photo(user, photo_id, _url)
+      canonical = "https://www.flickr.com/photos/#{user}/#{photo_id}/"
+      flickr_embed_link(canonical, "View photo on Flickr")
+    end
+
+    def flickr_short(code)
+      flickr_embed_link("https://flic.kr/p/#{code}", "View photo on Flickr")
+    end
+
+    def flickr_album(user, album_id)
+      flickr_embed_link(
+        "https://www.flickr.com/photos/#{user}/albums/#{album_id}",
+        "View album on Flickr"
+      )
+    end
+
+    def flickr_embed_link(href, label)
+      <<~HTML
+
+        <div class="embed embed-flickr" data-embed="flickr">
+          <a data-flickr-embed="true" data-header="false" data-footer="true" href="#{href}" title="#{label}">#{label}</a>
         </div>
 
       HTML

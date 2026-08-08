@@ -23,11 +23,15 @@ permalink: /tags
   padding: 0.25em 0.7em;
   cursor: pointer;
 }
-.tags-sort-btn:hover,
+.tags-sort-btn:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
 .tags-sort-btn:focus-visible {
   color: var(--color-accent);
   border-color: var(--color-accent);
-  outline: none;
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
 .tags-sort-btn.is-active {
   color: var(--color-fg);

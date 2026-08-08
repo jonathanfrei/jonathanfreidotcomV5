@@ -16,15 +16,15 @@ layout: default
   </div>
 
   {% if page.tags.size > 0 %}
-  <p class="post-meta post-tags mt-6 mb-0">
+  <div class="post-tags mt-6">
     <span class="sr-only">Tags:</span>
-    <span itemprop="keywords">
+    <ul class="post-tags__list" itemprop="keywords">
       {% for tag in page.tags %}
         {% assign tag_str = tag | append: "" %}
-        <a href="{{ '/tags/' | relative_url }}{{ tag_str | slugify }}" class="tag">{{ tag_str }}</a>
+        <li><a href="{{ '/tags/' | relative_url }}{{ tag_str | slugify }}" class="tag">{{ tag_str }}</a></li>
       {% endfor %}
-    </span>
-  </p>
+    </ul>
+  </div>
   {% endif %}
 
   <p class="mt-8 post-comment-link">

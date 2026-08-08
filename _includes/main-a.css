@@ -240,6 +240,16 @@ hr {
   margin-block: var(--space-6);
 }
 
+/* Prefer visible keyboard focus everywhere (#120) */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
 /* Content links: accent color, no underline by default */
 a {
   color: var(--color-accent);
@@ -338,7 +348,11 @@ a:focus-visible {
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 0.01em;
-  padding: 0.15em 0;
+  /* Comfortable tap/click targets (#120) */
+  padding: 0.45em 0.35em;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .site-nav a:hover,
