@@ -1,6 +1,7 @@
 /**
  * Light/dark theme toggle with localStorage persistence (#87).
  * Early boot script in head.html sets data-theme before paint.
+ * Loaded on demand when the user first clicks the footer toggle (not on every page).
  */
 (function () {
   "use strict";
@@ -61,6 +62,12 @@
       if (mq.addEventListener) mq.addEventListener("change", onChange);
       else if (mq.addListener) mq.addListener(onChange);
     } catch (e) { /* ignore */ }
+
+    // First click loaded this script; honor the pending toggle from the stub.
+    if (window.__themeToggleNow) {
+      window.__themeToggleNow = false;
+      toggle();
+    }
   }
 
   if (document.readyState === "loading") {
