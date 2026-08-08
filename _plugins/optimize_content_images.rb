@@ -22,6 +22,9 @@ require "uri"
 #   quality: 85                # WebP quality (high; visually near-lossless for photos)
 #   widths: [480, 768, 1100]   # display widths for srcset (retina covered by 1100)
 #   sizes: "(max-width: 40em) 92vw, 33em"
+#
+# Performance: dimensions and path lookups are memoized per build so the same
+# archive image referenced across many posts is only opened once.
 module Jekyll
   module OptimizeContentImages
     # Own images: archive media CDN, local /media/, site /assets/, or same-origin site URL.
@@ -46,7 +49,18 @@ module Jekyll
       "sizes" => "(max-width: 40em) 92vw, 33em"
     }.freeze
 
+    # Per-build memoization: same file is referenced across many posts.
+    @dims_cache = {}
+    @path_cache = {}
+    @enabled_cache = {}
+
     module_function
+
+    def reset_caches!
+      @dims_cache = {}
+      @path_cache = {}
+      @enabled_cache = {}
+    end
 
     def config(site)
       am = site.config["archive_media"] || {}
@@ -54,22 +68,28 @@ module Jekyll
     end
 
     def enabled?(site)
+      key = site.object_id
+      return @enabled_cache[key] if @enabled_cache.key?(key)
+
       raw = ENV["IMAGE_OPTIMIZE"].to_s.strip
       raw = config(site)["enabled"].to_s.strip if raw.empty?
-      case raw.downcase
-      when "true", "1", "yes", "on" then true
-      when "false", "0", "no", "off" then false
-      else
-        Jekyll.env == "production"
-      end
+      result = case raw.downcase
+               when "true", "1", "yes", "on" then true
+               when "false", "0", "no", "off" then false
+               else
+                 Jekyll.env == "production"
+               end
+      @enabled_cache[key] = result
+      result
     end
 
     # --- Intrinsic dimensions (no gem dependency) ---
 
     def image_dimensions(path)
       return nil unless path && File.file?(path)
+      return @dims_cache[path] if @dims_cache.key?(path)
 
-      File.open(path, "rb") do |f|
+      dims = File.open(path, "rb") do |f|
         head = f.read(16)
         f.rewind
         case head
@@ -79,7 +99,10 @@ module Jekyll
         when /\ARIFF....WEBP/n then webp_dimensions(f)
         end
       end
+      @dims_cache[path] = dims
+      dims
     rescue StandardError
+      @dims_cache[path] = nil
       nil
     end
 
@@ -165,37 +188,44 @@ module Jekyll
       return nil if src.nil? || src.empty?
 
       path = src.to_s
-      rel = nil
+      cache_key = "#{site.source}\0#{path}"
+      return @path_cache[cache_key] if @path_cache.key?(cache_key)
 
+      result = nil
       if (m = path.match(%r{/_posts/v[123]-archive/media/(.+?)(?:\?|$)}i))
-        rel = m[1]
-        rel = CGI.unescape(rel).tr("\\", "/")
+        rel = CGI.unescape(m[1]).tr("\\", "/")
         %w[
           _posts/v1-archive/media
           _posts/v2-archive/media
           _posts/v3-archive/media
         ].each do |dir|
           full = File.join(site.source, dir, rel)
-          return full if File.file?(full)
+          if File.file?(full)
+            result = full
+            break
+          end
         end
       elsif (m = path.match(%r{(?:\A|/)media/(.+?)(?:\?|$)}i))
-        rel = m[1]
-        rel = CGI.unescape(rel).tr("\\", "/")
+        rel = CGI.unescape(m[1]).tr("\\", "/")
         %w[
           _posts/v1-archive/media
           _posts/v2-archive/media
           _posts/v3-archive/media
         ].each do |dir|
           full = File.join(site.source, dir, rel)
-          return full if File.file?(full)
+          if File.file?(full)
+            result = full
+            break
+          end
         end
       elsif (m = path.match(%r{(?:\A|/)assets/(.+?)(?:\?|$)}i))
-        rel = m[1]
-        rel = CGI.unescape(rel).tr("\\", "/")
+        rel = CGI.unescape(m[1]).tr("\\", "/")
         full = File.join(site.source, "assets", rel)
-        return full if File.file?(full)
+        result = full if File.file?(full)
       end
-      nil
+
+      @path_cache[cache_key] = result
+      result
     end
 
     def own_media?(src)
@@ -287,7 +317,7 @@ module Jekyll
     end
 
     def escape_attr(val)
-      val.to_s.gsub("&", "&amp;").gsub('"', "&quot;")
+      val.to_s.gsub("&", "&").gsub('"', """)
     end
 
     def build_srcset(cfg, origin, widths, format: "webp")
@@ -361,6 +391,8 @@ module Jekyll
 
     def process_html(site, html)
       return [html, nil] if html.nil? || html.empty?
+      # Fast path: skip documents with no images
+      return [html, nil] unless html.include?("<img") || html.include?("<IMG")
 
       cfg = config(site)
       index = 0
@@ -409,6 +441,10 @@ module Jekyll
       doc.output = new_html
     end
   end
+end
+
+Jekyll::Hooks.register :site, :after_init do |_site|
+  Jekyll::OptimizeContentImages.reset_caches!
 end
 
 Jekyll::Hooks.register :posts, :post_render do |post|
