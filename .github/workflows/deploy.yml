@@ -3,14 +3,12 @@ name: Deploy Jekyll site to GitHub Pages
 on:
   push:
     branches: ["main"]
-    # Commits that only touch drafts/docs should not rebuild (#29).
-    # Pure _posts content updates are handled by incremental-posts.yml (#64).
+    # Drafts/docs-only commits should not rebuild (#29).
     paths-ignore:
       - "_x7k9p/**"
       - "README.md"
       - "AGENTS.md"
       - ".gitignore"
-      - "_posts/**"
   schedule:
     # Rebuild periodically so future-dated posts get published
     - cron: "0 */6 * * *"
@@ -42,22 +40,11 @@ jobs:
         id: pages
         uses: actions/configure-pages@v6
 
-      - name: Restore Jekyll site cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            .jekyll-metadata
-            _site
-          key: jekyll-site-${{ runner.os }}-${{ hashFiles('Gemfile.lock', '_config.yml') }}-${{ github.sha }}
-          restore-keys: |
-            jekyll-site-${{ runner.os }}-${{ hashFiles('Gemfile.lock', '_config.yml') }}-
-            jekyll-site-${{ runner.os }}-
-
       - name: Build with Jekyll
         # Archive media is served from jsDelivr (see archive_media in _config.yml
         # and _plugins/fix_archive_media.rb). Do not bundle ~200MB of images into
         # the Pages artifact — deploy-pages hard-caps wait at 10 minutes.
-        # Full (non-incremental) build keeps cascade pages and plugin output coherent.
+        # Full build keeps cascade pages and plugin output coherent.
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
@@ -65,10 +52,18 @@ jobs:
 
       - name: Report artifact size
         run: |
+          set -euo pipefail
           du -sh _site
           if [ -d _site/media ]; then
             echo "::error::_site/media should not exist in CDN mode (would bloat Pages deploy)"
             du -sh _site/media
+            exit 1
+          fi
+          # Extra guard: no large binary trees under _site
+          media_hits=$(find _site -type d \( -name media -o -path '*/v1-archive/media' -o -path '*/v2-archive/media' -o -path '*/v3-archive/media' \) 2>/dev/null | head -5 || true)
+          if [ -n "$media_hits" ]; then
+            echo "::error::Unexpected media directories in artifact:"
+            echo "$media_hits"
             exit 1
           fi
           echo "OK: archive media not bundled; artifact is HTML/CSS/JS only"
@@ -81,7 +76,6 @@ jobs:
           set -euo pipefail
           missing=0
 
-          # Flat .html pages (no pagination)
           for f in index.html about.html tags.html search.html; do
             if [ ! -f "_site/$f" ]; then
               echo "::error::Missing expected HTML page: _site/$f (permalink regression?)"
@@ -91,7 +85,6 @@ jobs:
             fi
           done
 
-          # Paginated blog: jekyll-paginate-v2 writes blog/index.html (or blog.html)
           if [ -f "_site/blog.html" ]; then
             echo "OK: _site/blog.html"
           elif [ -f "_site/blog/index.html" ]; then
@@ -105,7 +98,6 @@ jobs:
             exit 1
           fi
 
-          # Spot-check one post path pattern (year/month/day/slug.html)
           post_html=$(find _site -mindepth 4 -maxdepth 4 -type f -name '*.html' | head -1 || true)
           if [ -z "$post_html" ]; then
             echo "::warning::No sample post HTML found under _site/YYYY/MM/DD/ (may be empty site)"
@@ -131,6 +123,5 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v5
         with:
-          # Default is 10; allow a few more transient status-check failures
           error_count: 20
           reporting_interval: 10000
