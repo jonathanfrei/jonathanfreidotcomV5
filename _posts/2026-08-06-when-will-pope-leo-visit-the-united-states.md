@@ -1,5 +1,5 @@
 ---
-title: "When Will the First American Pope Come Home?"
+title: "When Will the First American Pope Come Home?" 
 date: "2026-08-06"
 tags: [Pope Leo XIV, Vatican]
 excerpt: "Pope Leo XIV has spent his first fifteen months circling the globe while carefully avoiding the country of his birth. The reasons are more interesting than simple politics."
