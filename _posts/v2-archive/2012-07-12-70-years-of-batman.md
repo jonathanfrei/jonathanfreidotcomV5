@@ -5,6 +5,6 @@ tags: [batman, infographic, evolution, history]
 tumblr_id: "27043822381"
 ---
 
-[](http://i.imgur.com/ZPClF.jpg )
+![](http://i.imgur.com/ZPClF.jpg )
 
 70 Years of Batman.
