@@ -53,17 +53,30 @@ After the first successful Actions run:
 
 Point `jonathanfrei.com` (and `www` if desired) at GitHub Pages via Cloudflare DNS, then add the custom domain in the Pages settings. Cloudflare proxy can remain enabled for caching and protection.
 
-## Cloudflare caching (Expires / long TTL)
+## Cloudflare performance (gzip / Brotli + Expires)
 
-GitHub Pages sets short default cache lifetimes on static assets (Lighthouse often reports ~10 minutes for CSS). Because the site is served behind **Cloudflare**, set edge/browser cache there — GitHub Pages itself does not accept custom `Expires` / `Cache-Control` headers from the repo.
+GitHub Pages does **not** accept custom `Expires` / `Cache-Control` headers or compression settings from the repo. This site is served behind **Cloudflare**, so configure compression and long-lived cache there.
 
-Recommended **Cache Rule** (Cloudflare dashboard → Caching → Cache Rules), matching your production hostname:
+### Compress components (gzip / Brotli) — issue #117
+
+Cloudflare compresses HTML, CSS, JS, SVG, JSON, and fonts at the edge by default:
+
+1. **Speed → Optimization → Content Optimization**
+2. Confirm **Brotli** is **On** (preferred; clients that do not support Brotli still get gzip)
+3. Optional: enable **Auto Minify** for HTML/CSS/JS only if you accept the extra transform
+
+No repo change is required for gzip once the orange-cloud proxy is on the production hostname.
+
+### Expires / long TTL cache — issue #119
+
+GitHub Pages sets short default cache lifetimes (Lighthouse often reports ~10 minutes for CSS). Use a **Cache Rule** (Cloudflare dashboard → Caching → Cache Rules) matching your production hostname:
 
 | Match | Edge TTL | Browser TTL |
 | --- | --- | --- |
-| URI Path matches `*.css` OR `*.js` OR `*.png` OR `*.jpg` OR `*.webp` OR `*.svg` OR `*.ico` OR `*.woff2` | 1 month (or longer) | 1 day – 1 week |
+| URI Path matches `*.css` OR `*.js` OR `*.png` OR `*.jpg` OR `*.webp` OR `*.svg` OR `*.ico` OR `*.woff2` OR `*.woff` | 1 month (or longer) | 1 day – 1 week |
+| URI Path matches `*.xml` (feeds/sitemaps) | 2 hours | 1 hour |
 
-Optional: “Cache Everything” for HTML with a short Edge TTL (e.g. 2 hours) if you want faster global TTFB and accept brief staleness after deploys.
+Optional: “Cache Everything” for HTML with a short Edge TTL (e.g. 2 hours) if you want faster global TTFB and accept brief staleness after deploys. Purge cache after important publishes if you use that rule.
 
 Critical CSS is also **inlined** in the HTML (from `_includes/main.css`) so first paint does not depend on a render-blocking stylesheet fetch. The same stylesheet is exposed at `/assets/css/main.css` for tooling and long-lived caching once Cloudflare rules are in place.
 

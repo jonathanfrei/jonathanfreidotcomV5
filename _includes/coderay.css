@@ -1,0 +1,208 @@
+/* ---------- CodeRay syntax highlighting (#124) ---------- */
+/* Tokens emitted when kramdown.syntax_highlighter is coderay (css: class). */
+
+.CodeRay {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: var(--color-code-bg);
+  color: var(--color-fg);
+  border-radius: var(--radius);
+  overflow-x: auto;
+}
+
+.CodeRay pre {
+  margin: 0;
+  padding: var(--space-4);
+  background: transparent;
+  overflow-x: auto;
+  line-height: 1.45;
+}
+
+/* Inline code with highlighting */
+code.CodeRay {
+  padding: 0.12em 0.35em;
+  border-radius: 0.15rem;
+}
+
+/* Line tables (if line numbers ever enabled) */
+.CodeRay .line-numbers {
+  color: var(--color-muted);
+  opacity: 0.7;
+  padding-right: 1em;
+  user-select: none;
+}
+
+.CodeRay .line-numbers a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Token colors — light theme (warm paper) */
+.CodeRay .comment,
+.CodeRay .annotation,
+.CodeRay .doctype,
+.CodeRay .type {
+  color: #6b6b5e;
+  font-style: italic;
+}
+
+.CodeRay .string,
+.CodeRay .char,
+.CodeRay .symbol,
+.CodeRay .content,
+.CodeRay .attribute-value,
+.CodeRay .regexp {
+  color: #0b6e4f;
+}
+
+.CodeRay .keyword,
+.CodeRay .reserved,
+.CodeRay .directive,
+.CodeRay .tag,
+.CodeRay .key,
+.CodeRay .important,
+.CodeRay .label {
+  color: #a3482c;
+  font-weight: 600;
+}
+
+.CodeRay .function,
+.CodeRay .predefined,
+.CodeRay .builtin,
+.CodeRay .constant {
+  color: #2b5ea7;
+}
+
+.CodeRay .integer,
+.CodeRay .float,
+.CodeRay .octal,
+.CodeRay .hex,
+.CodeRay .predefined-constant {
+  color: #8a4b08;
+}
+
+.CodeRay .class,
+.CodeRay .namespace,
+.CodeRay .variable,
+.CodeRay .instance-variable,
+.CodeRay .class-variable,
+.CodeRay .global-variable,
+.CodeRay .attribute-name {
+  color: #7a3e9d;
+}
+
+.CodeRay .operator,
+.CodeRay .delimiter {
+  color: var(--color-fg);
+}
+
+.CodeRay .error,
+.CodeRay .debug {
+  color: #b00020;
+  background: color-mix(in srgb, #b00020 8%, transparent);
+}
+
+/* Dark theme tokens (explicit data-theme or system preference) */
+html[data-theme="dark"] .CodeRay .comment,
+html[data-theme="dark"] .CodeRay .annotation,
+html[data-theme="dark"] .CodeRay .doctype,
+html[data-theme="dark"] .CodeRay .type {
+  color: #9a968c;
+}
+
+html[data-theme="dark"] .CodeRay .string,
+html[data-theme="dark"] .CodeRay .char,
+html[data-theme="dark"] .CodeRay .symbol,
+html[data-theme="dark"] .CodeRay .content,
+html[data-theme="dark"] .CodeRay .attribute-value,
+html[data-theme="dark"] .CodeRay .regexp {
+  color: #7dcea0;
+}
+
+html[data-theme="dark"] .CodeRay .keyword,
+html[data-theme="dark"] .CodeRay .reserved,
+html[data-theme="dark"] .CodeRay .directive,
+html[data-theme="dark"] .CodeRay .tag,
+html[data-theme="dark"] .CodeRay .key,
+html[data-theme="dark"] .CodeRay .important,
+html[data-theme="dark"] .CodeRay .label {
+  color: #efa08a;
+}
+
+html[data-theme="dark"] .CodeRay .function,
+html[data-theme="dark"] .CodeRay .predefined,
+html[data-theme="dark"] .CodeRay .builtin,
+html[data-theme="dark"] .CodeRay .constant {
+  color: #8ab4f8;
+}
+
+html[data-theme="dark"] .CodeRay .integer,
+html[data-theme="dark"] .CodeRay .float,
+html[data-theme="dark"] .CodeRay .octal,
+html[data-theme="dark"] .CodeRay .hex,
+html[data-theme="dark"] .CodeRay .predefined-constant {
+  color: #f0c674;
+}
+
+html[data-theme="dark"] .CodeRay .class,
+html[data-theme="dark"] .CodeRay .namespace,
+html[data-theme="dark"] .CodeRay .variable,
+html[data-theme="dark"] .CodeRay .instance-variable,
+html[data-theme="dark"] .CodeRay .class-variable,
+html[data-theme="dark"] .CodeRay .global-variable,
+html[data-theme="dark"] .CodeRay .attribute-name {
+  color: #c9a0dc;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .CodeRay .comment,
+  html:not([data-theme="light"]) .CodeRay .annotation,
+  html:not([data-theme="light"]) .CodeRay .doctype,
+  html:not([data-theme="light"]) .CodeRay .type {
+    color: #9a968c;
+  }
+
+  html:not([data-theme="light"]) .CodeRay .string,
+  html:not([data-theme="light"]) .CodeRay .char,
+  html:not([data-theme="light"]) .CodeRay .symbol,
+  html:not([data-theme="light"]) .CodeRay .content,
+  html:not([data-theme="light"]) .CodeRay .attribute-value,
+  html:not([data-theme="light"]) .CodeRay .regexp {
+    color: #7dcea0;
+  }
+
+  html:not([data-theme="light"]) .CodeRay .keyword,
+  html:not([data-theme="light"]) .CodeRay .reserved,
+  html:not([data-theme="light"]) .CodeRay .directive,
+  html:not([data-theme="light"]) .CodeRay .tag,
+  html:not([data-theme="light"]) .CodeRay .key,
+  html:not([data-theme="light"]) .CodeRay .important,
+  html:not([data-theme="light"]) .CodeRay .label {
+    color: #efa08a;
+  }
+
+  html:not([data-theme="light"]) .CodeRay .function,
+  html:not([data-theme="light"]) .CodeRay .predefined,
+  html:not([data-theme="light"]) .CodeRay .builtin,
+  html:not([data-theme="light"]) .CodeRay .constant {
+    color: #8ab4f8;
+  }
+
+  html:not([data-theme="light"]) .CodeRay .integer,
+  html:not([data-theme="light"]) .CodeRay .float,
+  html:not([data-theme="light"]) .CodeRay .octal,
+  html:not([data-theme="light"]) .CodeRay .hex,
+  html:not([data-theme="light"]) .CodeRay .predefined-constant {
+    color: #f0c674;
+  }
+
+  html:not([data-theme="light"]) .CodeRay .class,
+  html:not([data-theme="light"]) .CodeRay .namespace,
+  html:not([data-theme="light"]) .CodeRay .variable,
+  html:not([data-theme="light"]) .CodeRay .instance-variable,
+  html:not([data-theme="light"]) .CodeRay .class-variable,
+  html:not([data-theme="light"]) .CodeRay .global-variable,
+  html:not([data-theme="light"]) .CodeRay .attribute-name {
+    color: #c9a0dc;
+  }
+}
