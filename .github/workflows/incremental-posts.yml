@@ -1,12 +1,10 @@
-# Incremental Jekyll build for post-only content updates (#64).
+# Post-only content updates on main (#64).
 #
-# When a push to main only touches _posts (Markdown content), rebuild with
-# --incremental using a cached _site + .jekyll-metadata from the last full or
-# incremental deploy. Unchanged post HTML is left in place; cascade pages
-# (home, feed, tags, pagination, search.json) still regenerate as needed.
+# - Edit existing post(s)  → jekyll build --incremental (warm _site cache)
+# - Add or delete post(s)  → full jekyll build (cascade pages / no stale HTML)
+# - Archive media only     → workflow does not run (jsDelivr; path filters)
 #
-# Full rebuilds remain in deploy.yml (schedule, workflow_dispatch, and any
-# push that is not purely under _posts/).
+# Full deploy.yml still covers layouts/CSS/config, schedule, and workflow_dispatch.
 name: Incremental posts deploy
 
 on:
@@ -14,8 +12,6 @@ on:
     branches: ["main"]
     paths:
       - "_posts/**"
-      # Archive media is served from jsDelivr; no Pages rebuild needed for
-      # media-only commits (and they must not bloat the artifact).
       - "!_posts/**/media/**"
       - "!_posts/v1-archive/media/**"
       - "!_posts/v2-archive/media/**"
@@ -26,7 +22,6 @@ permissions:
   pages: write
   id-token: write
 
-# Same group as deploy.yml so full and incremental never race on Pages.
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -41,26 +36,46 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
         with:
-          # Need prior commit for the pure-posts guard below
           fetch-depth: 2
 
-      - name: Skip if non-post files also changed
+      - name: Classify post changes
         id: scope
         run: |
           set -euo pipefail
-          # Only compare when we have a parent (not shallow orphan / force-push edge).
+
+          # mode: skip | incremental | full
+          mode=incremental
+
           if ! git rev-parse --verify HEAD^ >/dev/null 2>&1; then
-            echo "No parent commit — falling through to incremental (cold cache may full-build)."
-            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "No parent commit — full build."
+            mode=full
+            echo "mode=$mode" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          # List paths changed in this push (last commit on main).
+
           mapfile -t changed < <(git diff --name-only HEAD^ HEAD)
+          mapfile -t added < <(git diff --name-only --diff-filter=A HEAD^ HEAD)
+          mapfile -t deleted < <(git diff --name-only --diff-filter=D HEAD^ HEAD)
+
+          is_post_md() {
+            local f="$1"
+            case "$f" in
+              _posts/*) ;;
+              *) return 1 ;;
+            esac
+            case "$f" in
+              */media/*) return 1 ;;
+            esac
+            case "$f" in
+              *.md|*.markdown|*.html) return 0 ;;
+              *) return 1 ;;
+            esac
+          }
+
           non_post=0
           for f in "${changed[@]}"; do
             case "$f" in
               _posts/*)
-                # Ignore archive media blobs under posts
                 case "$f" in
                   */media/*) continue ;;
                 esac
@@ -71,45 +86,62 @@ jobs:
                 ;;
             esac
           done
+
           if [ "$non_post" -eq 1 ]; then
             echo "Commit touches more than _posts content — full deploy.yml handles this."
-            echo "run=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "mode=skip" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
 
+          for f in "${added[@]}"; do
+            if is_post_md "$f"; then
+              echo "New post content: $f → full build"
+              mode=full
+            fi
+          done
+
+          for f in "${deleted[@]}"; do
+            if is_post_md "$f"; then
+              echo "Deleted post content: $f → full build"
+              mode=full
+            fi
+          done
+
+          if [ "$mode" = "incremental" ]; then
+            echo "Post edit(s) only → incremental build"
+          fi
+
+          echo "mode=$mode" >> "$GITHUB_OUTPUT"
+
       - name: Setup Ruby
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode != 'skip'
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3"
           bundler-cache: true
 
       - name: Setup Pages
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode != 'skip'
         id: pages
         uses: actions/configure-pages@v6
 
       - name: Restore Jekyll site cache
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode != 'skip'
         id: cache
         uses: actions/cache@v4
         with:
           path: |
             .jekyll-metadata
             _site
-          # Shared with deploy.yml so a full build seeds the next incremental run.
           key: jekyll-site-${{ runner.os }}-${{ hashFiles('Gemfile.lock', '_config.yml') }}-${{ github.sha }}
           restore-keys: |
             jekyll-site-${{ runner.os }}-${{ hashFiles('Gemfile.lock', '_config.yml') }}-
             jekyll-site-${{ runner.os }}-
 
-      - name: Build with Jekyll (incremental)
-        if: steps.scope.outputs.run == 'true'
+      - name: Build with Jekyll (incremental — edits only)
+        if: steps.scope.outputs.mode == 'incremental'
         run: |
           set -euo pipefail
-          # --incremental uses .jekyll-metadata to skip unchanged documents.
-          # Without a restored cache this is effectively a full build (first run).
           bundle exec jekyll build \
             --incremental \
             --baseurl "${{ steps.pages.outputs.base_path }}"
@@ -117,8 +149,21 @@ jobs:
           JEKYLL_ENV: production
           ARCHIVE_MEDIA_MODE: cdn
 
+      - name: Build with Jekyll (full — new or deleted posts)
+        if: steps.scope.outputs.mode == 'full'
+        run: |
+          set -euo pipefail
+          # Drop stale site output so a full rebuild cannot leave deleted posts behind.
+          rm -rf _site
+          rm -f .jekyll-metadata
+          bundle exec jekyll build \
+            --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+          ARCHIVE_MEDIA_MODE: cdn
+
       - name: Report artifact size
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode != 'skip'
         run: |
           du -sh _site
           if [ -d _site/media ]; then
@@ -126,21 +171,21 @@ jobs:
             du -sh _site/media
             exit 1
           fi
-          echo "OK: archive media not bundled; artifact is HTML/CSS/JS only"
+          echo "OK: archive media not bundled; mode=${{ steps.scope.outputs.mode }}"
           if [ -f .jekyll-metadata ]; then
-            echo "Incremental metadata present ($(wc -c < .jekyll-metadata) bytes)"
+            echo "Jekyll metadata present ($(wc -c < .jekyll-metadata) bytes)"
           else
-            echo "No .jekyll-metadata (cold build)"
+            echo "No .jekyll-metadata"
           fi
 
       - name: Upload artifact
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode != 'skip'
         uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
       - name: Deploy to GitHub Pages
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode != 'skip'
         id: deployment
         uses: actions/deploy-pages@v5
         with:
