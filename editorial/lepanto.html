@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battle of Lepanto — 7 October 1571</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --paper: #f7f4ef;
+      --accent: #8b1a1a;
+      --accent-dark: #5c1010;
+      --muted: #5c5c5c;
+      --rule: #d4cfc5;
+      --callout-bg: #f0ebe3;
+      --quote-bg: #e8e2d8;
+      --max-width: 1400px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 18px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "IBM Plex Serif", Georgia, serif;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--ink);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Typography scale */
+    h1, h2, h3, h4 {
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      margin-bottom: 1.2rem;
+      color: var(--accent-dark);
+    }
+
+    h3 {
+      font-size: clamp(1.25rem, 2vw, 1.5rem);
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+      max-width: 68ch;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--accent-dark);
+    }
+
+    /* Layout utilities */
+    .container {
+      width: min(100% - 2.5rem, var(--max-width));
+      margin-inline: auto;
+    }
+
+    .wide {
+      width: min(100% - 1.5rem, 1600px);
+      margin-inline: auto;
+    }
+
+    /* Header / Hero */
+    .site-header {
+      padding: 1.5rem 0 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .masthead {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-bottom: 1rem;
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .hero {
+      padding: 3.5rem 0 4rem;
+    }
+
+    .hero-kicker {
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-dek {
+      font-size: clamp(1.15rem, 2vw, 1.4rem);
+      font-weight: 400;
+      line-height: 1.5;
+      max-width: 42ch;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 0.9rem;
+      color: var(--muted);
+      border-top: 1px solid var(--rule);
+      padding-top: 1.25rem;
+    }
+
+    .hero-meta strong {
+      display: block;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.15rem;
+    }
+
+    /* Hero image */
+    .hero-image {
+      margin: 0 0 4rem;
+      position: relative;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 70vh;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .caption {
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 0.8rem;
+      line-height: 1.45;
+      color: var(--muted);
+      margin-top: 0.6rem;
+      max-width: 60ch;
+    }
+
+    .caption em {
+      font-style: italic;
+    }
+
+    /* Main content grid */
+    .content {
+      display: grid;
+      gap: 3rem;
+      padding-bottom: 5rem;
+    }
+
+    @media (min-width: 900px) {
+      .content {
+        grid-template-columns: 1fr 320px;
+        gap: 4rem;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .content {
+        grid-template-columns: 1fr 1fr 300px;
+        gap: 3.5rem;
+      }
+
+      .main-col {
+        grid-column: 1 / 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem 3.5rem;
+      }
+
+      .main-col > .full-span {
+        grid-column: 1 / -1;
+      }
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+      font-weight: 500;
+      line-height: 1.35;
+      color: var(--accent-dark);
+      border-left: 4px solid var(--accent);
+      padding: 0.5rem 0 0.5rem 1.5rem;
+      margin: 2.5rem 0;
+      max-width: 28ch;
+    }
+
+    .pull-quote cite {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--muted);
+      margin-top: 0.75rem;
+      font-style: normal;
+    }
+
+    /* Callout box */
+    .callout {
+      background: var(--callout-bg);
+      border: 1px solid var(--rule);
+      padding: 1.5rem 1.75rem;
+      margin: 2rem 0;
+    }
+
+    .callout h3 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .callout p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+
+    /* Stats / key facts */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1.25rem;
+      margin: 2.5rem 0;
+      padding: 1.75rem 0;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 700;
+      color: var(--accent-dark);
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.3rem;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      font-size: 0.95rem;
+    }
+
+    .sidebar h3 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .sidebar-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid var(--rule);
+      font-size: 0.9rem;
+    }
+
+    .sidebar li:last-child {
+      border-bottom: none;
+    }
+
+    .sidebar strong {
+      font-weight: 600;
+    }
+
+    /* Image blocks */
+    .image-block {
+      margin: 2.5rem 0;
+    }
+
+    .image-block img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .image-grid {
+      display: grid;
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+    }
+
+    @media (min-width: 700px) {
+      .image-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* Section dividers */
+    .section {
+      margin-bottom: 3.5rem;
+    }
+
+    .section + .section {
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    /* Large display quote */
+    .display-quote {
+      background: var(--quote-bg);
+      padding: 2.5rem 2rem;
+      margin: 3rem 0;
+      text-align: center;
+    }
+
+    .display-quote blockquote {
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: clamp(1.3rem, 2.8vw, 1.9rem);
+      font-weight: 500;
+      line-height: 1.4;
+      max-width: 36ch;
+      margin: 0 auto 1rem;
+      color: var(--ink);
+    }
+
+    .display-quote cite {
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-style: normal;
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: 2px solid var(--ink);
+      padding: 2.5rem 0 3rem;
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .site-footer p {
+      max-width: none;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 699px) {
+      html {
+        font-size: 16px;
+      }
+
+      .hero {
+        padding: 2.5rem 0 3rem;
+      }
+
+      .pull-quote {
+        max-width: none;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="masthead">
+        <span>Naval History Feature</span>
+        <span>7 October 1571</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <p class="hero-kicker">The Last Great Galley Battle</p>
+      <h1>Battle of Lepanto</h1>
+      <p class="hero-dek">A pivotal naval engagement in the Gulf of Patras that shattered the myth of Ottoman invincibility at sea and temporarily secured Christian dominance in the Mediterranean.</p>
+      <div class="hero-meta">
+        <div>
+          <strong>Date</strong>
+          7 October 1571
+        </div>
+        <div>
+          <strong>Location</strong>
+          Gulf of Patras, Ionian Sea
+        </div>
+        <div>
+          <strong>Result</strong>
+          Decisive Holy League victory
+        </div>
+        <div>
+          <strong>Commanders</strong>
+          Don John of Austria · Müezzinzade Ali Pasha
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <figure class="hero-image wide">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/The_Battle_of_Lepanto_by_Paolo_Veronese.jpeg/1280px-The_Battle_of_Lepanto_by_Paolo_Veronese.jpeg" 
+         alt="Allegory of the Battle of Lepanto by Paolo Veronese" 
+         onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Giorgio-vasari-battle-of-lepanto.jpg/1280px-Giorgio-vasari-battle-of-lepanto.jpg'; this.onerror=null;">
+    <figcaption class="caption container">
+      <em>The Allegory of the Battle of Lepanto</em> by Paolo Veronese (c. 1572). Gallerie dell’Accademia, Venice. Public domain via Wikimedia Commons.
+    </figcaption>
+  </figure>
+
+  <main class="container content">
+    <div class="main-col">
+
+      <article class="section full-span">
+        <h2>The Clash That Changed the Mediterranean</h2>
+        <p>The Battle of Lepanto was a pivotal naval engagement fought on 7 October 1571 in the Gulf of Patras between the Holy League—a coalition of Catholic European powers principally comprising Spain, the Republic of Venice, and the Papal States—and the Ottoman Empire’s fleet. Commanded by Don John of Austria for the Holy League and Müezzinzade Ali Pasha for the Ottomans, the battle pitted roughly 212 Holy League galleys and galleasses, supported by some 40,000 combatants, against an Ottoman force of about 278 galleys and galiots with over 50,000 men.</p>
+        <p>The Holy League achieved a resounding tactical victory, capturing or destroying over 200 Ottoman vessels, killing or wounding approximately 30,000 Ottoman personnel including their commander, and freeing 12,000 to 15,000 Christian galley slaves, while sustaining around 7,500 dead and 24,000 wounded. This clash, the largest galley battle in history, represented the first major Ottoman naval defeat by united Christian forces.</p>
+      </article>
+
+      <div class="stats full-span">
+        <div class="stat">
+          <div class="stat-number">212</div>
+          <div class="stat-label">Holy League ships</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">~278</div>
+          <div class="stat-label">Ottoman vessels</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">200+</div>
+          <div class="stat-label">Ottoman ships lost</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">15,000</div>
+          <div class="stat-label">Christian slaves freed</div>
+        </div>
+      </div>
+
+      <article class="section">
+        <h2>Geopolitical and Religious Context</h2>
+        <h3>Ottoman Expansion and the Threat to Christendom</h3>
+        <p>The Ottoman Empire’s expansion into southeastern Europe and the eastern Mediterranean accelerated decisively under Mehmed II, who captured Constantinople on 29 May 1453. This conquest ended the Byzantine Empire and positioned the Ottomans to dominate the Bosphorus Strait. Subsequent sultans, including Selim I and Suleiman the Magnificent, extended this momentum through conquests of Egypt, Syria, and North African ports, while naval campaigns under Barbarossa secured Ottoman influence over the western Mediterranean.</p>
+        <p>By the mid-16th century, Ottoman forces had subdued most Balkan principalities. The ideological underpinning was the ghaza tradition of frontier jihad against non-Muslims. The immediate catalyst for concerted Christian resistance was the 1570 Ottoman invasion of Cyprus, a Venetian stronghold. Forces under Lala Mustafa Pasha besieged Nicosia, sacking it and enslaving an estimated 20,000–30,000 inhabitants. The prolonged siege of Famagusta, culminating in its fall on 1 August 1571, further inflamed Christian Europe.</p>
+      </article>
+
+      <article class="section">
+        <h3>Formation of the Holy League</h3>
+        <p>Pope Pius V initiated efforts to form a coalition of Catholic states in early 1571, spurred by the Ottoman conquest of Cyprus. Despite religious schisms and commercial rivalries—particularly between Venice and Spain—Pius V prioritized pragmatic unity against the common threat. The Holy League was solemnly agreed upon on 20 May 1571, binding the Papal States, the Spanish Empire, and the Republic of Venice as primary members, alongside contributions from Genoa, Savoy, Tuscany, the Knights of Malta, and other Italian entities.</p>
+        <p>Spain, under Philip II, pledged the largest share of galleys (approximately 90 from Spain proper, Naples, and Sicily) and over 20,000 troops. Venice provided around 100 galleys and key expertise in galley warfare. To ensure cohesive leadership, Philip II appointed his half-brother, Don John of Austria, as captain general of the League’s fleet.</p>
+      </article>
+
+      <blockquote class="pull-quote full-span">
+        “More than a military victory, Lepanto was a moral one. For decades, the Ottoman Turks had terrified Europe… The mystique of Ottoman power was tarnished significantly by this battle, and Christian Europe was heartened.”
+        <cite>— Paul K. Davis, historian</cite>
+      </blockquote>
+
+      <article class="section">
+        <h2>Preparations and Deployments</h2>
+        <h3>Holy League Forces</h3>
+        <p>The Holy League fleet assembled for the battle comprised 206 galleys and 6 large Venetian galleasses, totaling around 212 vessels. These ships carried approximately 40,000 sailors and oarsmen alongside more than 28,000 soldiers, including elite Spanish tercios renowned for their discipline and pike-and-shot tactics. The Venetian galleasses, positioned ahead of the main line, were equipped with heavy broadside artillery that provided decisive firepower advantages.</p>
+        <p>Overall command rested with Don John of Austria. The fleet divided into four squadrons: the center under Don John himself, the left wing led by Venetian Agostino Barbarigo, the right wing directed by Genoese admiral Gian Andrea Doria, and a reserve squadron headed by Spanish veteran Álvaro de Bazán, Marquis of Santa Cruz. The oarsmen powering the Holy League galleys were predominantly free Christian volunteers and mercenaries, fostering higher morale compared to coerced labor systems.</p>
+      </article>
+
+      <article class="section">
+        <h3>Ottoman Fleet Composition</h3>
+        <p>The Ottoman fleet numbered approximately 222 galleys supplemented by over 50 galliots and smaller craft, yielding a total of around 273–278 vessels. Overall command rested with Müezzinzade Ali Pasha as kapudan pasha in the central division, flanked by Mehmed Sirocco on the left wing and Uluch Ali on the right. The fleet carried more than 34,000 soldiers that included an elite contingent of Janissaries.</p>
+        <p>Ottoman galleys featured lighter artillery configurations, prioritizing dense concentrations of archers and swordsmen for close-quarters boarding actions. Propulsion relied on roughly 50,000 seamen and oarsmen, of whom about 15,000 were Christian slaves chained below decks—low cohesion that inherently compromised operational reliability.</p>
+      </article>
+
+      <div class="callout full-span">
+        <h3>Key Tactical Advantage</h3>
+        <p>While soldiers on board the ships were roughly matched in numbers, the Christians held a decisive edge in firepower: an estimated 1,815 guns versus only about 750 for the Turks, many of which had insufficient ammunition. The Spanish experience with marine infantry—adept at boarding and fighting with pikes—further tipped the balance in the brutal close-quarters combat that defined galley warfare.</p>
+      </div>
+
+      <figure class="image-block full-span">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Giorgio-vasari-battle-of-lepanto.jpg/1280px-Giorgio-vasari-battle-of-lepanto.jpg" 
+             alt="Order of battle of the two fleets by Giorgio Vasari" 
+             onerror="this.style.display='none'">
+        <figcaption class="caption">
+          Order of battle of the two fleets, with an allegory of the three powers of the Holy League in the foreground. Fresco by Giorgio Vasari (1572), Sala Regia, Vatican. The six Venetian galleasses are shown between the opposing ranks. Public domain via Wikimedia Commons.
+        </figcaption>
+      </figure>
+
+      <article class="section full-span">
+        <h2>The Battle</h2>
+        <p>On the morning of 7 October the two fleets sighted each other. The Ottoman force was sailing westward from its naval station at Lepanto (the Venetian name for ancient Naupactus) while the Holy League approached from the west after leaving Messina. The Christians formed in a classic line of battle with the heavy galleasses in the van. The Ottomans advanced in a crescent formation.</p>
+        <p>The engagement quickly became an infantry battle fought on floating platforms. The flagships of both fleets—Don John’s <em>Real</em> and Ali Pasha’s <em>Sultana</em>—rammed each other and became locked in a ferocious boarding action. After hours of intense fighting, the Ottoman center collapsed when Ali Pasha was killed and his flagship taken. The left wing under Barbarigo also prevailed after hard fighting, though Barbarigo himself was mortally wounded. On the right, Uluch Ali managed to break through and capture the flag of the Knights of Malta before withdrawing in good order with some 30–40 galleys.</p>
+        <p>By late afternoon the Holy League had achieved a crushing victory. Nearly the entire Ottoman fleet was captured, sunk, or destroyed. The psychological impact was immense: for the first time in generations, a major Ottoman armada had been annihilated by Christian forces.</p>
+      </article>
+
+      <div class="display-quote full-span">
+        <blockquote>
+          “There is no paradise for cowards.”
+        </blockquote>
+        <cite>— Don John of Austria, addressing his crews before battle</cite>
+      </div>
+
+      <article class="section">
+        <h2>Aftermath and Significance</h2>
+        <p>Although the Ottomans rapidly rebuilt their fleet, the loss of experienced crews and commanders proved lasting. Ottoman naval initiative declined sharply after 1580. Lepanto marked the last major engagement in the Western world fought almost entirely between rowing vessels—the direct descendants of ancient triremes. Over the following decades the galleon would displace the galley, ushering in the Age of Sail.</p>
+        <p>The victory held enormous symbolic weight at a moment when Europe was torn by its own wars of religion. Pope Pius V instituted the feast of Our Lady of Victory (later Our Lady of the Rosary). Philip II of Spain used the triumph to reinforce his image as the “Most Catholic King” and defender of Christendom. The battle has long been compared to the ancient Battle of Salamis for both its tactical parallels and its perceived role in defending Europe against imperial expansion from the east.</p>
+      </article>
+
+      <article class="section">
+        <h3>Legacy in Art and Memory</h3>
+        <p>Lepanto inspired a remarkable outpouring of contemporary art. Paolo Veronese, Giorgio Vasari, Titian, Tintoretto, and many others produced major works commemorating the victory. Cervantes, who fought and was wounded in the battle (losing the use of his left hand), later called it “the greatest occasion that past or present ages have seen, or future ones may hope to see.” The battle remains one of the most celebrated naval engagements in European history.</p>
+      </article>
+
+      <div class="image-grid full-span">
+        <figure>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Battle_of_Lepanto_by_Martin_Rota.jpg/800px-Battle_of_Lepanto_by_Martin_Rota.jpg" 
+               alt="Battle of Lepanto engraving by Martin Rota" 
+               onerror="this.style.display='none'">
+          <figcaption class="caption"><em>Battle of Lepanto</em> by Martin Rota, 1572 print, Venice. Public domain.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Laureys_a_Castro_-_The_Battle_of_Lepanto.jpeg/800px-Laureys_a_Castro_-_The_Battle_of_Lepanto.jpeg" 
+               alt="The Battle of Lepanto by Laureys a Castro" 
+               onerror="this.style.display='none'">
+          <figcaption class="caption"><em>The Battle of Lepanto</em> by Laureys a Castro, c. 1683. Public domain.</figcaption>
+        </figure>
+      </div>
+
+    </div><!-- /.main-col -->
+
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3>Belligerents</h3>
+        <ul>
+          <li><strong>Holy League</strong><br>Spanish Empire, Venice, Papal States, Genoa, Savoy, Tuscany, Knights of Malta, Order of Saint Stephen</li>
+          <li><strong>Ottoman Empire</strong><br>Regency of Algiers</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Commanders</h3>
+        <ul>
+          <li><strong>Holy League</strong><br>Don John of Austria<br>Álvaro de Bazán<br>Sebastiano Venier<br>Agostino Barbarigo †<br>Gianandrea Doria<br>Marcantonio Colonna</li>
+          <li><strong>Ottoman</strong><br>Müezzinzade Ali Pasha †<br>Mehmed Sirocco †<br>Uluch Ali (Occhiali)</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Strength</h3>
+        <ul>
+          <li><strong>Holy League</strong><br>~40,000–65,000 men<br>212 ships (206 galleys + 6 galleasses)</li>
+          <li><strong>Ottoman</strong><br>~50,000–88,000 men<br>~274–278 ships</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Casualties</h3>
+        <ul>
+          <li><strong>Holy League</strong><br>7,500–10,000 killed<br>13 galleys lost</li>
+          <li><strong>Ottoman</strong><br>20,000–40,000 killed or captured<br>~200 ships sunk, destroyed or taken<br>15,000 Christian slaves freed</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Key Fact</h3>
+        <p style="font-size:0.9rem; line-height:1.5;">Lepanto was the largest naval battle in Western history since classical antiquity and the last major engagement fought almost exclusively with oared warships.</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Text adapted from Grokipedia: <a href="https://grokipedia.com/page/Battle_of_Lepanto" target="_blank" rel="noopener">Battle of Lepanto</a>. Images sourced from the Wikimedia Commons / Wikipedia article on the Battle of Lepanto (public domain).</p>
+      <p>Designed as an editorial feature. All fonts from the IBM Plex family (Google Fonts).</p>
+    </div>
+  </footer>
+
+</body>
+</html>
