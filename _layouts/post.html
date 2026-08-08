@@ -8,15 +8,6 @@ layout: default
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {{ page.date | date: "%B %-d, %Y" }}
       </time>
-      {% if page.tags.size > 0 %}
-        ·
-        <span itemprop="keywords">
-          {% for tag in page.tags %}
-            {% assign tag_str = tag | append: "" %}
-            <a href="{{ '/tags/' | relative_url }}{{ tag_str | slugify }}" class="tag">{{ tag_str }}</a>
-          {% endfor %}
-        </span>
-      {% endif %}
     </p>
   </header>
 
@@ -24,13 +15,47 @@ layout: default
     {{ content }}
   </div>
 
+  {% if page.tags.size > 0 %}
+  <p class="post-meta post-tags mt-6 mb-0">
+    <span class="sr-only">Tags:</span>
+    <span itemprop="keywords">
+      {% for tag in page.tags %}
+        {% assign tag_str = tag | append: "" %}
+        <a href="{{ '/tags/' | relative_url }}{{ tag_str | slugify }}" class="tag">{{ tag_str }}</a>
+      {% endfor %}
+    </span>
+  </p>
+  {% endif %}
+
   <p class="mt-8 post-comment-link">
     <a href="mailto:hi+comments@jonathanfrei.com?subject={{ 'Comment on: ' | append: page.title | uri_escape }}&body={{ 'Post: ' | append: page.title | append: '%0A' | append: page.url | absolute_url | uri_escape }}">Comment by email</a>
     <span class="post-actions-sep" aria-hidden="true">·</span>
     <a href="https://github.com/jonathanfrei/jonathanfreidotcomV5/edit/main/{{ page.path }}" target="_blank" rel="noopener noreferrer">Submit a PR</a>
+    <span class="post-actions-sep" aria-hidden="true">·</span>
+    <a href="#" id="random-post-link" class="random-post-link">Random post</a>
   </p>
 </article>
 
 <p class="mt-8 post-nav">
   <a href="{{ '/blog' | relative_url }}">&larr; Back to blog</a>
 </p>
+
+<script>
+(function () {
+  var posts = [
+{% for post in site.posts %}
+    { url: "{{ post.url | relative_url }}", title: {{ post.title | jsonify }} }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+  ];
+  var link = document.getElementById('random-post-link');
+  if (!link || posts.length < 2) return;
+  var current = "{{ page.url | relative_url }}";
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    var candidates = posts.filter(function (p) { return p.url !== current; });
+    if (!candidates.length) return;
+    var pick = candidates[Math.floor(Math.random() * candidates.length)];
+    window.location.href = pick.url;
+  });
+})();
+</script>
