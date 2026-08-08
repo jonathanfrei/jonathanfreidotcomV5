@@ -3,12 +3,14 @@ name: Deploy Jekyll site to GitHub Pages
 on:
   push:
     branches: ["main"]
-    # Commits that only touch obfuscated drafts (or docs) should not rebuild the site (#29)
+    # Commits that only touch drafts/docs should not rebuild (#29).
+    # Pure _posts content updates are handled by incremental-posts.yml (#64).
     paths-ignore:
       - "_x7k9p/**"
       - "README.md"
       - "AGENTS.md"
       - ".gitignore"
+      - "_posts/**"
   schedule:
     # Rebuild periodically so future-dated posts get published
     - cron: "0 */6 * * *"
@@ -40,10 +42,22 @@ jobs:
         id: pages
         uses: actions/configure-pages@v6
 
+      - name: Restore Jekyll site cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            .jekyll-metadata
+            _site
+          key: jekyll-site-${{ runner.os }}-${{ hashFiles('Gemfile.lock', '_config.yml') }}-${{ github.sha }}
+          restore-keys: |
+            jekyll-site-${{ runner.os }}-${{ hashFiles('Gemfile.lock', '_config.yml') }}-
+            jekyll-site-${{ runner.os }}-
+
       - name: Build with Jekyll
         # Archive media is served from jsDelivr (see archive_media in _config.yml
         # and _plugins/fix_archive_media.rb). Do not bundle ~200MB of images into
         # the Pages artifact — deploy-pages hard-caps wait at 10 minutes.
+        # Full (non-incremental) build keeps cascade pages and plugin output coherent.
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
