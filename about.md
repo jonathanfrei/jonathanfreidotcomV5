@@ -12,7 +12,7 @@ In the early years I lived in Fort Myers, Florida with my wife Gaby and our youn
 
 This current version of the site is deliberately smaller. It is less a platform and more a personal archive and notebook. The older material is still here if you want it; the newer material is sparse on purpose.
 
-### Get in touch / Follow for updates
+## Get in touch / Follow for updates
 
 You can email me at [hi&#64;jonathanfrei&#46;com](mailto:hi&#64;jonathanfrei&#46;com).
 
@@ -20,11 +20,11 @@ I’m still on X as [@jonathanfrei](https://x.com/jonathanfrei), though I no lon
 
 In earlier versions of the site I ran an occasional newsletter and promised not to spam anyone. That same restraint applies now: if I ever start sending updates again, they will be rare and optional.
 
-### Where to read more
+## Where to read more
 
 The [full archive of posts—across all the earlier eras]({{ '/archive' | relative_url }}) is still available.
 
-### Colophon
+## Colophon
 
 This is version 5 of jonathanfrei.com.
 
