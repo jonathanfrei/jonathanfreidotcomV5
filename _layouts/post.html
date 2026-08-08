@@ -32,7 +32,11 @@ layout: default
     <span class="post-actions-sep" aria-hidden="true">·</span>
     <a href="https://github.com/jonathanfrei/jonathanfreidotcomV5/edit/main/{{ page.path }}" target="_blank" rel="noopener noreferrer">Submit a PR</a>
     <span class="post-actions-sep" aria-hidden="true">·</span>
-    <a href="#" id="random-post-link" class="random-post-link">Random post</a>
+    {% comment %}
+      Random post: no post list in HTML (would be N URLs on every post page).
+      Tiny click handler fetches shared /posts.json once, then navigates.
+    {% endcomment %}
+    <a href="{{ '/blog' | relative_url }}" id="random-post-link" class="random-post-link" data-current="{{ page.url | relative_url }}" data-posts-url="{{ '/posts.json' | relative_url }}">Random post</a>
   </p>
 </article>
 
@@ -42,20 +46,65 @@ layout: default
 
 <script>
 (function () {
-  var posts = [
-{% for post in site.posts %}
-    { url: "{{ post.url | relative_url }}", title: {{ post.title | jsonify }} }{% unless forloop.last %},{% endunless %}
-{% endfor %}
-  ];
-  var link = document.getElementById('random-post-link');
-  if (!link || posts.length < 2) return;
-  var current = "{{ page.url | relative_url }}";
-  link.addEventListener('click', function (e) {
+  var link = document.getElementById("random-post-link");
+  if (!link) return;
+
+  var current = link.getAttribute("data-current") || "";
+  var postsUrl = link.getAttribute("data-posts-url") || "/posts.json";
+  var cacheKey = "posts-json-urls";
+  var pending = null;
+
+  function pickAndGo(urls) {
+    var candidates = [];
+    for (var i = 0; i < urls.length; i++) {
+      if (urls[i] && urls[i] !== current) candidates.push(urls[i]);
+    }
+    if (!candidates.length) {
+      window.location.href = link.getAttribute("href") || "/blog";
+      return;
+    }
+    window.location.href =
+      candidates[Math.floor(Math.random() * candidates.length)];
+  }
+
+  function loadUrls() {
+    if (pending) return pending;
+    try {
+      var cached = sessionStorage.getItem(cacheKey);
+      if (cached) {
+        var parsed = JSON.parse(cached);
+        if (Array.isArray(parsed) && parsed.length) {
+          pending = Promise.resolve(parsed);
+          return pending;
+        }
+      }
+    } catch (e) { /* private mode / quota */ }
+
+    pending = fetch(postsUrl, { credentials: "same-origin" })
+      .then(function (res) {
+        if (!res.ok) throw new Error("posts.json " + res.status);
+        return res.json();
+      })
+      .then(function (urls) {
+        if (!Array.isArray(urls)) throw new Error("invalid posts.json");
+        try {
+          sessionStorage.setItem(cacheKey, JSON.stringify(urls));
+        } catch (e) { /* ignore */ }
+        return urls;
+      });
+    return pending;
+  }
+
+  link.addEventListener("click", function (e) {
     e.preventDefault();
-    var candidates = posts.filter(function (p) { return p.url !== current; });
-    if (!candidates.length) return;
-    var pick = candidates[Math.floor(Math.random() * candidates.length)];
-    window.location.href = pick.url;
+    if (link.getAttribute("aria-busy") === "true") return;
+    link.setAttribute("aria-busy", "true");
+    loadUrls()
+      .then(pickAndGo)
+      .catch(function () {
+        link.removeAttribute("aria-busy");
+        window.location.href = link.getAttribute("href") || "/blog";
+      });
   });
 })();
 </script>
