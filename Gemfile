@@ -9,6 +9,8 @@ group :jekyll_plugins do
   gem "jekyll-archives", "~> 2.2"
   gem "jekyll-paginate-v2", "~> 3.0"
   gem "jekyll-relative-links", "~> 0.7"
+  # CodeRay syntax highlighting for fenced code blocks (#124)
+  gem "kramdown-syntax-coderay", "~> 1.0"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
