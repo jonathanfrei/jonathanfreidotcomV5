@@ -54,19 +54,27 @@ jobs:
         run: |
           set -euo pipefail
           du -sh _site
+          # Only the archive media publish root (and mirrored archive paths)
+          # must stay out of the artifact. Do NOT match tag pages such as
+          # _site/tags/media — those are HTML autopages, not binary media.
+          bad=0
           if [ -d _site/media ]; then
             echo "::error::_site/media should not exist in CDN mode (would bloat Pages deploy)"
             du -sh _site/media
-            exit 1
+            bad=1
           fi
-          # Extra guard: no large binary trees under _site
-          media_hits=$(find _site -type d \( -name media -o -path '*/v1-archive/media' -o -path '*/v2-archive/media' -o -path '*/v3-archive/media' \) 2>/dev/null | head -5 || true)
-          if [ -n "$media_hits" ]; then
-            echo "::error::Unexpected media directories in artifact:"
-            echo "$media_hits"
+          for p in _site/_posts/v1-archive/media _site/_posts/v2-archive/media _site/_posts/v3-archive/media; do
+            if [ -d "$p" ]; then
+              echo "::error::Unexpected archive media tree in artifact: $p"
+              du -sh "$p"
+              bad=1
+            fi
+          done
+          if [ "$bad" -ne 0 ]; then
             exit 1
           fi
           echo "OK: archive media not bundled; artifact is HTML/CSS/JS only"
+          # Note: _site/tags/media is a tag page for the 'media' tag — expected.
 
       - name: Check permalink convention
         # Light guard for #63 / audit #103: non-paginated pages must be .html
