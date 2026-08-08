@@ -142,19 +142,19 @@ defaults:
       type: "posts"
     values:
       permalink: /:year/:month/:day/:title
-      categories: []
+      categories: [v1-archive]
   - scope:
       path: "_posts/v2-archive"
       type: "posts"
     values:
       permalink: /:year/:month/:day/:title
-      categories: []
+      categories: [v2-archive]
   - scope:
       path: "_posts/v3-archive"
       type: "posts"
     values:
       permalink: /:year/:month/:day/:title
-      categories: []
+      categories: [v3-archive]
   - scope:
       path: ""
       type: "pages"
