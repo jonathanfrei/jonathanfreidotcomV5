@@ -1,0 +1,148 @@
+# Incremental Jekyll build for post-only content updates (#64).
+#
+# When a push to main only touches _posts (Markdown content), rebuild with
+# --incremental using a cached _site + .jekyll-metadata from the last full or
+# incremental deploy. Unchanged post HTML is left in place; cascade pages
+# (home, feed, tags, pagination, search.json) still regenerate as needed.
+#
+# Full rebuilds remain in deploy.yml (schedule, workflow_dispatch, and any
+# push that is not purely under _posts/).
+name: Incremental posts deploy
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "_posts/**"
+      # Archive media is served from jsDelivr; no Pages rebuild needed for
+      # media-only commits (and they must not bloat the artifact).
+      - "!_posts/**/media/**"
+      - "!_posts/v1-archive/media/**"
+      - "!_posts/v2-archive/media/**"
+      - "!_posts/v3-archive/media/**"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Same group as deploy.yml so full and incremental never race on Pages.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          # Need prior commit for the pure-posts guard below
+          fetch-depth: 2
+
+      - name: Skip if non-post files also changed
+        id: scope
+        run: |
+          set -euo pipefail
+          # Only compare when we have a parent (not shallow orphan / force-push edge).
+          if ! git rev-parse --verify HEAD^ >/dev/null 2>&1; then
+            echo "No parent commit — falling through to incremental (cold cache may full-build)."
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # List paths changed in this push (last commit on main).
+          mapfile -t changed < <(git diff --name-only HEAD^ HEAD)
+          non_post=0
+          for f in "${changed[@]}"; do
+            case "$f" in
+              _posts/*)
+                # Ignore archive media blobs under posts
+                case "$f" in
+                  */media/*) continue ;;
+                esac
+                ;;
+              *)
+                echo "Non-post path in commit: $f"
+                non_post=1
+                ;;
+            esac
+          done
+          if [ "$non_post" -eq 1 ]; then
+            echo "Commit touches more than _posts content — full deploy.yml handles this."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Setup Ruby
+        if: steps.scope.outputs.run == 'true'
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Setup Pages
+        if: steps.scope.outputs.run == 'true'
+        id: pages
+        uses: actions/configure-pages@v6
+
+      - name: Restore Jekyll site cache
+        if: steps.scope.outputs.run == 'true'
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            .jekyll-metadata
+            _site
+          # Shared with deploy.yml so a full build seeds the next incremental run.
+          key: jekyll-site-${{ runner.os }}-${{ hashFiles('Gemfile.lock', '_config.yml') }}-${{ github.sha }}
+          restore-keys: |
+            jekyll-site-${{ runner.os }}-${{ hashFiles('Gemfile.lock', '_config.yml') }}-
+            jekyll-site-${{ runner.os }}-
+
+      - name: Build with Jekyll (incremental)
+        if: steps.scope.outputs.run == 'true'
+        run: |
+          set -euo pipefail
+          # --incremental uses .jekyll-metadata to skip unchanged documents.
+          # Without a restored cache this is effectively a full build (first run).
+          bundle exec jekyll build \
+            --incremental \
+            --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+          ARCHIVE_MEDIA_MODE: cdn
+
+      - name: Report artifact size
+        if: steps.scope.outputs.run == 'true'
+        run: |
+          du -sh _site
+          if [ -d _site/media ]; then
+            echo "::error::_site/media should not exist in CDN mode (would bloat Pages deploy)"
+            du -sh _site/media
+            exit 1
+          fi
+          echo "OK: archive media not bundled; artifact is HTML/CSS/JS only"
+          if [ -f .jekyll-metadata ]; then
+            echo "Incremental metadata present ($(wc -c < .jekyll-metadata) bytes)"
+          else
+            echo "No .jekyll-metadata (cold build)"
+          fi
+
+      - name: Upload artifact
+        if: steps.scope.outputs.run == 'true'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        if: steps.scope.outputs.run == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v5
+        with:
+          error_count: 20
+          reporting_interval: 10000
