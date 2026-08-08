@@ -6,7 +6,11 @@ require "cgi"
 #
 # Workflow (issue #88):
 #   editorial/spacex-earnings.html  →  /editorial/spacex-earnings
-#   (GitHub Pages serves the .html file at the extensionless path.)
+#
+# Critical (GH Pages + #63): the file on disk MUST keep a .html extension.
+# Jekyll::StaticFile#destination is derived from #url; writing an extensionless
+# path makes GitHub Pages serve application/octet-stream (browser downloads).
+# Output: _site/editorial/slug.html — Pages maps /editorial/slug → that file.
 #
 # Sibling asset folders stay as normal static files:
 #   editorial/spacex-earnings/*.png
@@ -32,14 +36,14 @@ module Jekyll
       @transformed_content = content
     end
 
-    def write(dest)
-      dest_path = destination(dest)
-      FileUtils.mkdir_p(File.dirname(dest_path))
-      File.write(dest_path, @transformed_content)
-      true
+    # Force .html on disk. Parent #destination uses #url, so we must not let a
+    # clean (extensionless) url become the write path.
+    def destination(dest)
+      @site.in_dest_dir(dest, @dir, @name)
     end
 
-    # Clean URL without trailing slash or .html (matches site #63 convention).
+    # Public path without trailing slash (site convention #63).
+    # Does not affect the write path — see #destination.
     def url
       slug = @name.sub(/\.html?\z/i, "")
       path = "/#{File.join(@dir, slug)}".gsub(%r{/+}, "/")
@@ -48,6 +52,13 @@ module Jekyll
       else
         path
       end
+    end
+
+    def write(dest)
+      dest_path = destination(dest)
+      FileUtils.mkdir_p(File.dirname(dest_path))
+      File.write(dest_path, @transformed_content)
+      true
     end
   end
 
@@ -110,8 +121,6 @@ module Jekyll
       Array(list).map(&:to_s).map(&:strip).reject(&:empty?)
     end
 
-    # Absolutize relative image URLs under the root, then enhance via
-    # OptimizeContentImages when available (production / IMAGE_OPTIMIZE).
     def rewrite_images(site, html, root)
       return html if html.nil? || html.empty?
 
@@ -126,7 +135,6 @@ module Jekyll
         attrs["src"] = abs if abs
         next raw unless abs
 
-        # Reuse site-wide optimizer when the module is loaded.
         if defined?(Jekyll::OptimizeContentImages)
           enhanced = try_optimize_img(site, attrs)
           next enhanced if enhanced
@@ -139,12 +147,9 @@ module Jekyll
     end
 
     def absolutize_src(site, src, root)
-      # Already absolute http(s) or protocol-relative
       return src if src.match?(%r{\A(?:https?:)?//}i)
-      # Root-absolute site path
       return src if src.start_with?("/")
 
-      # Relative to the HTML file's directory (the root folder)
       cleaned = src.sub(%r{\A\./}, "")
       path = "/#{root}/#{cleaned}".gsub(%r{/+}, "/")
       baseurl = site.baseurl.to_s.chomp("/")
