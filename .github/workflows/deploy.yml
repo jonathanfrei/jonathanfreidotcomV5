@@ -74,13 +74,15 @@ jobs:
           echo "OK: archive media not bundled; artifact is HTML/CSS/JS only"
 
       - name: Check permalink convention
-        # Light guard for #63 / audit #103: key pages must be .html files so
-        # GitHub Pages serves clean URLs instead of application/octet-stream.
-        # Month archives intentionally remain directory/index.html.
+        # Light guard for #63 / audit #103: non-paginated pages must be .html
+        # files so GitHub Pages serves clean URLs. Paginated pages (blog) and
+        # month archives intentionally use directory/index.html.
         run: |
           set -euo pipefail
           missing=0
-          for f in index.html about.html blog.html tags.html search.html; do
+
+          # Flat .html pages (no pagination)
+          for f in index.html about.html tags.html search.html; do
             if [ ! -f "_site/$f" ]; then
               echo "::error::Missing expected HTML page: _site/$f (permalink regression?)"
               missing=1
@@ -88,9 +90,21 @@ jobs:
               echo "OK: _site/$f"
             fi
           done
+
+          # Paginated blog: jekyll-paginate-v2 writes blog/index.html (or blog.html)
+          if [ -f "_site/blog.html" ]; then
+            echo "OK: _site/blog.html"
+          elif [ -f "_site/blog/index.html" ]; then
+            echo "OK: _site/blog/index.html (paginated)"
+          else
+            echo "::error::Missing blog page (expected _site/blog.html or _site/blog/index.html)"
+            missing=1
+          fi
+
           if [ "$missing" -ne 0 ]; then
             exit 1
           fi
+
           # Spot-check one post path pattern (year/month/day/slug.html)
           post_html=$(find _site -mindepth 4 -maxdepth 4 -type f -name '*.html' | head -1 || true)
           if [ -z "$post_html" ]; then
