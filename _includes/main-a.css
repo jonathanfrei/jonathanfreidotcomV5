@@ -1,57 +1,91 @@
 /* =========================================================
    jonathanfrei.com — typographic design system
-   Principles inspired by Practical Typography (Butterick):
-   measure, leading, hierarchy, rhythm — original execution.
-   Mobile-first · system dark mode · accessibility focused
+   "The Modern Editorial System" (#110)
+   Principles: Superfamily visual harmony (Source Serif 4 / Source Sans 3 /
+   Source Code Pro), warm paper palette, modular scale, accessibility.
+   Fonts served via Fontsource + jsDelivr (latin subsets, variable where useful)
+   with font-display: swap to protect Core Web Vitals (#92).
 
-   This file (main-a): design tokens, reset, base type, layout utilities.
+   This file (main-a): design tokens, @font-face, reset, base type, layout.
    Components live in main-b.css. Both are inlined via main.css.
    ========================================================= */
 
+/* ---------- Self-hosted fonts (Fontsource / jsDelivr) ---------- */
+/* Variable latin subsets keep payload small while covering design weights. */
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 900;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/source-serif-4:vf@5.2.5/latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 900;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/source-sans-3:vf@5.2.5/latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/source-code-pro@5.2.5/latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* ---------- Design tokens ---------- */
 :root {
-  /* Color — restrained, high-contrast */
-  --color-bg: #faf9f7;
-  --color-fg: #1a1a1a;
-  --color-muted: #5c5c5c;
-  --color-border: #e4e1db;
-  --color-accent: #8b3a2a;
-  --color-accent-hover: #6e2e22;
-  --color-code-bg: #f0eee9;
-  --color-header-bg: #faf9f7;
+  /* Color — Warm Paper (light) */
+  --color-bg: #FBF9F5;
+  --color-fg: #1C1B1A;
+  --color-muted: #6C6760;
+  --color-border: #E2DBD1;
+  --color-accent: #C25938;
+  --color-accent-hover: #A3482C;
+  --color-code-bg: #F3EFEA;
+  --color-header-bg: #FBF9F5;
+  --color-surface: #F3EFEA;
 
   /*
-    Type families
-    Body: transitional serif for long-form reading (system only).
-    UI: system sans for navigation and chrome.
+    Superfamily type
+    Editorial body/display: Source Serif 4
+    UI / structure: Source Sans 3
+    Metadata / code: Source Code Pro
+    System stacks remain as immediate fallbacks (FOUT-safe).
   */
-  --font-body: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
-  --font-ui: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --font-body: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --font-ui: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Source Code Pro", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 
   /*
     Modular scale (ratio ≈ 1.25)
-    Fluid base so measure stays readable across viewports.
+    Fluid base ≈ 18px at typical viewports for long-form comfort.
   */
   --type-ratio: 1.25;
-  --type-base: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
-  --type-sm: calc(var(--type-base) / var(--type-ratio));
+  --type-base: clamp(1.0625rem, 1rem + 0.35vw, 1.125rem); /* ~17–18px */
+  --type-sm: calc(var(--type-base) / var(--type-ratio));   /* ~13–14.4px metadata */
   --type-lg: calc(var(--type-base) * var(--type-ratio));
   --type-xl: calc(var(--type-base) * var(--type-ratio) * var(--type-ratio));
   --type-2xl: calc(var(--type-base) * var(--type-ratio) * var(--type-ratio) * var(--type-ratio));
   --type-3xl: calc(var(--type-base) * var(--type-ratio) * var(--type-ratio) * var(--type-ratio) * var(--type-ratio));
 
   /* Leading */
-  --leading-body: 1.55;
-  --leading-tight: 1.25;
-  --leading-heading: 1.2;
+  --leading-body: 1.65;
+  --leading-tight: 1.3;
+  --leading-heading: 1.25;
 
   /*
     Measure: ~45–75 characters for body copy.
-    ~33em at the fluid base lands near ~66 characters for serif.
+    ~36em at the fluid base lands near optimal for Source Serif.
   */
-  --measure: 33em;
-  --measure-wide: 42em;
+  --measure: 36em;
+  --measure-wide: 48em;
 
   /* Vertical rhythm unit ≈ one body line */
   --rhythm: calc(var(--type-base) * var(--leading-body));
@@ -64,7 +98,7 @@
   --space-8: calc(var(--rhythm) * 3);
   --space-10: calc(var(--rhythm) * 4);
 
-  --radius: 0.2rem;
+  --radius: 0.25rem; /* 4px */
 
   /* Legacy aliases used by existing utility classes */
   --font-sans: var(--font-ui);
@@ -79,28 +113,30 @@
   --max-width-wide: var(--measure-wide);
 }
 
-/* Dark tokens: explicit choice, or system preference when unset (#87) */
+/* Dark tokens: Obsidian Ink */
 html[data-theme="dark"] {
-  --color-bg: #141413;
-  --color-fg: #eae8e4;
-  --color-muted: #a39e96;
-  --color-border: #2c2b28;
-  --color-accent: #d4a28a;
-  --color-accent-hover: #e8bba6;
-  --color-code-bg: #1e1d1b;
-  --color-header-bg: #141413;
+  --color-bg: #121314;
+  --color-fg: #ECEAE6;
+  --color-muted: #96938E;
+  --color-border: #2A2C30;
+  --color-accent: #E07A5F;
+  --color-accent-hover: #EFA08A;
+  --color-code-bg: #1A1C1E;
+  --color-header-bg: #121314;
+  --color-surface: #1A1C1E;
 }
 
 @media (prefers-color-scheme: dark) {
   html:not([data-theme="light"]) {
-    --color-bg: #141413;
-    --color-fg: #eae8e4;
-    --color-muted: #a39e96;
-    --color-border: #2c2b28;
-    --color-accent: #d4a28a;
-    --color-accent-hover: #e8bba6;
-    --color-code-bg: #1e1d1b;
-    --color-header-bg: #141413;
+    --color-bg: #121314;
+    --color-fg: #ECEAE6;
+    --color-muted: #96938E;
+    --color-border: #2A2C30;
+    --color-accent: #E07A5F;
+    --color-accent-hover: #EFA08A;
+    --color-code-bg: #1A1C1E;
+    --color-header-bg: #121314;
+    --color-surface: #1A1C1E;
   }
 }
 
@@ -128,6 +164,7 @@ body {
   margin: 0;
   font-family: var(--font-body);
   font-size: var(--type-base);
+  font-weight: 300; /* Light for long-form warmth */
   line-height: var(--leading-body);
   color: var(--color-fg);
   background-color: var(--color-bg);
@@ -155,7 +192,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-body);
-  font-weight: 600;
+  font-weight: 400;
   line-height: var(--leading-heading);
   margin-top: var(--space-6);
   margin-bottom: var(--space-3);
@@ -164,7 +201,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: var(--type-3xl);
+  font-size: var(--type-3xl); /* ~30–34px range via fluid */
+  font-weight: 400;
   margin-top: 0;
   margin-bottom: var(--space-4);
 }
@@ -190,9 +228,10 @@ blockquote {
   margin-left: 0;
   margin-right: 0;
   padding-left: var(--space-4);
-  border-left: 3px solid var(--color-border);
+  border-left: 2px solid var(--color-accent);
   color: var(--color-muted);
   font-style: italic;
+  font-weight: 300;
 }
 
 hr {
@@ -201,7 +240,7 @@ hr {
   margin-block: var(--space-6);
 }
 
-/* Content links: accent color, no underline (#85) */
+/* Content links: accent color, no underline by default */
 a {
   color: var(--color-accent);
   text-decoration: none;
@@ -262,9 +301,13 @@ a:focus-visible {
 .site-header {
   font-family: var(--font-ui);
   font-size: var(--type-sm);
+  font-weight: 500;
   background: var(--color-header-bg);
   border-bottom: 1px solid var(--color-border);
   padding-block: var(--space-3);
+  /* Optional soft glass if supported; falls back cleanly */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .site-header .container {
@@ -272,11 +315,10 @@ a:focus-visible {
 }
 
 .site-logo {
-  font-family: var(--font-ui);
-  font-size: var(--type-sm);
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  text-transform: lowercase;
+  font-family: var(--font-body);
+  font-size: var(--type-base);
+  font-weight: 400;
+  letter-spacing: -0.01em;
   color: var(--color-fg);
   text-decoration: none;
 }
@@ -295,6 +337,7 @@ a:focus-visible {
   color: var(--color-muted);
   text-decoration: none;
   font-weight: 500;
+  letter-spacing: 0.01em;
   padding: 0.15em 0;
 }
 
@@ -359,11 +402,12 @@ a:focus-visible {
 }
 
 .prose figcaption {
-  font-family: var(--font-ui);
+  font-family: var(--font-mono);
   font-size: var(--type-sm);
   color: var(--color-muted);
   margin-top: var(--space-2);
   text-align: center;
+  letter-spacing: 0.02em;
 }
 
 .prose pre,
