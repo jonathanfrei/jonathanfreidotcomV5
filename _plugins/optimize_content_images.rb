@@ -317,7 +317,9 @@ module Jekyll
     end
 
     def escape_attr(val)
-      val.to_s.gsub("&", "&").gsub('"', """)
+      # Adjacent string literals build entities without embedding entity sequences
+      # in source (those can be decoded accidentally when transferred via HTML-aware APIs).
+      val.to_s.gsub("&", "&" "amp;").gsub('"', "&" "quot;")
     end
 
     def build_srcset(cfg, origin, widths, format: "webp")
