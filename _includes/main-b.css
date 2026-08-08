@@ -39,10 +39,12 @@
 
 /* Title links only — do not restyle .tag chips inside .post-meta */
 .post-list > li > a {
+  font-family: var(--font-body);
   font-size: var(--type-lg);
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none;
   color: var(--color-fg);
+  letter-spacing: -0.01em;
 }
 
 .post-list > li > a:hover,
@@ -52,10 +54,11 @@
 }
 
 .post-meta {
-  font-family: var(--font-ui);
+  font-family: var(--font-mono);
   font-size: var(--type-sm);
   color: var(--color-muted);
-  letter-spacing: 0.01em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .post-header {
@@ -75,7 +78,7 @@
   list-style: none;
   padding: 0;
   margin: var(--space-3) 0 0;
-  font-family: var(--font-ui);
+  font-family: var(--font-mono);
 }
 
 .tag {
@@ -85,6 +88,8 @@
   border-radius: var(--radius);
   text-decoration: none;
   color: var(--color-muted);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .tag:hover,
@@ -110,9 +115,9 @@
 }
 
 .section-title {
-  font-family: var(--font-ui);
+  font-family: var(--font-mono);
   font-size: var(--type-sm);
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-muted);

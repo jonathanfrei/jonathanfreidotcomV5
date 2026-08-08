@@ -2,10 +2,10 @@
 layout: page
 title: Typography
 permalink: /typography
-description: "Specimen page for the site’s typographic design system and HTML element styles."
+description: "Specimen page for the site’s typographic design system (Source Serif 4 / Source Sans 3 / Source Code Pro) and HTML element styles."
 ---
 
-This page samples the HTML elements and typographic styles used across the site. Use it when tuning tokens in `assets/css/main.css` or checking dark mode and measure.
+This page samples the HTML elements and typographic styles used across the site. Use it when tuning tokens in `_includes/main-a.css` or checking dark mode and measure. Design system: **The Modern Editorial System** (#110) with Fontsource + jsDelivr fonts (#92).
 
 ## Headings
 
@@ -23,7 +23,7 @@ This page samples the HTML elements and typographic styles used across the site.
 
 ## Body copy
 
-Body text uses a system serif stack sized with a fluid modular scale. The measure is constrained so lines stay near the Practical Typography range (roughly 45–75 characters). Leading is set for comfortable long-form reading.
+Body text uses **Source Serif 4** (Light) sized with a fluid modular scale. The measure is constrained so lines stay near the Practical Typography range (roughly 45–75 characters). Leading is set for comfortable long-form reading.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
@@ -79,9 +79,12 @@ hello("world")
 
 | Token | Role | Example |
 | --- | --- | --- |
+| `--font-body` | Source Serif 4 | Editorial text |
+| `--font-ui` | Source Sans 3 | Nav / UI |
+| `--font-mono` | Source Code Pro | Meta / code |
 | `--type-base` | Fluid body size | `clamp(...)` |
-| `--leading-body` | Body line-height | `1.55` |
-| `--measure` | Reading width | `~33em` |
+| `--leading-body` | Body line-height | `1.65` |
+| `--measure` | Reading width | `~36em` |
 | `--color-accent` | Links / focus | terracotta |
 
 ## Figure / image
@@ -110,7 +113,7 @@ hello("world")
 
 ## Utility samples
 
-<p class="post-meta">`.post-meta` — UI sans, muted metadata</p>
+<p class="post-meta">`.post-meta` — UI sans / mono, muted metadata</p>
 
 <p class="section-title">Section title</p>
 
