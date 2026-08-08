@@ -21,6 +21,7 @@ This is a personal site and blog: **Jekyll 4.x → GitHub Actions → GitHub Pag
 ```
 .github/workflows/deploy.yml              # Full build + deploy + 6h schedule
 .github/workflows/incremental-posts.yml  # Post-only incremental build (#64)
+.github/dependabot.yml                   # Weekly bundler + Actions updates
 _config.yml                    # Site config, plugins, permalinks, excludes
 _includes/                     # head, header, footer, search UI, **main.css**
 _layouts/                      # default, page, post, tag
@@ -127,14 +128,19 @@ Desired URLs: `/about`, `/blog`, `/2026/08/05/slug`, `/tags/foo` — **not** `/a
 - **Do not** write extensionless files (no `.html`) — GH Pages may download them as `application/octet-stream`.
 - Keep internal links consistent (`/blog`, `/tags/foo`, etc.).
 - After deploy, Cloudflare should 301 `/path/` → `/path` so old bookmarks still work (see PR for #63).
+- Month archives (`/archive/YYYY/MM/`) **must** keep the trailing slash (directory + `index.html`).
 
 ### 2. CSS lives in `_includes/main.css`
 
-- Source of truth: **`_includes/main.css`**
+- Source of truth: **`_includes/main.css`** (includes the split files)
+- Split is for readability only; still one inlined payload:
+  - `main-a.css` — design tokens, reset, base typography, layout utilities
+  - `main-b.css` — components (post list, tags, search, pagination, embeds, a11y)
+  - `code-blocks.css`, `theme-toggle.css` — feature-specific
 - Inlined in `_layouts/default.html` via `{% include main.css %}` (avoids render-blocking CSS)
 - Also exposed at `/assets/css/main.css` through `assets/css/main.html`
 - **Never** use `{% include_relative ../... %}` — Jekyll rejects `../` path traversal and breaks the build
-- When changing styles, edit `_includes/main.css` only (single source)
+- When changing styles, edit the appropriate `_includes/*.css` file; keep everything under `_includes/`
 
 ### 3. Tag / list CSS specificity
 
@@ -158,9 +164,25 @@ Deploy workflow pins current major Pages actions (Node 24-capable majors):
 
 Do not downgrade these without checking Node deprecation warnings on GH Actions.
 
+Dependabot (`.github/dependabot.yml`) opens weekly PRs for bundler and github-actions.
+
+### 6. Third-party image / CDN trust boundary
+
+Production depends on two external services for media (configured in `_config.yml` `archive_media`):
+
+| Service | Role | Config key |
+| --- | --- | --- |
+| **jsDelivr** | Serves archive media binaries from this repo (`cdn.jsdelivr.net/gh/jonathanfrei/jonathanfreidotcomV5@main/...`) so they are not in the Pages artifact | `archive_media.cdn_base` |
+| **wsrv.nl** | On-the-fly resize + WebP for all own-site images (archive + `/assets/`); full-res kept on `data-full-src` | `archive_media.optimize.proxy` |
+
+- Both are widely used public CDNs/proxies. The site has no fallback if either is unavailable (images break or fall back to original `src` depending on browser).
+- Do **not** point these at untrusted repos or arbitrary user content.
+- Changing `cdn_base` or the proxy host is a production-facing decision; prefer a PR and a smoke check of a few archive posts + `/assets/` images.
+- Local `jekyll serve` can use `ARCHIVE_MEDIA_MODE=local` so media is served from `_site/media` without the CDNs.
+
 ## Design system (short)
 
-- Tokens and components: `_includes/main.css`
+- Tokens and components: `_includes/main.css` (split into main-a / main-b for readability)
 - Principles: readable measure, modular type scale, system fonts, restrained accent, light default + `prefers-color-scheme` dark
 - Prefer existing utilities/classes (`.prose`, `.post-meta`, `.tag`, `.post-list`, layout helpers) over one-off CSS
 - Accessibility: keep skip link, focus styles, semantic HTML, sensible contrast

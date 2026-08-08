@@ -73,6 +73,32 @@ jobs:
           fi
           echo "OK: archive media not bundled; artifact is HTML/CSS/JS only"
 
+      - name: Check permalink convention
+        # Light guard for #63 / audit #103: key pages must be .html files so
+        # GitHub Pages serves clean URLs instead of application/octet-stream.
+        # Month archives intentionally remain directory/index.html.
+        run: |
+          set -euo pipefail
+          missing=0
+          for f in index.html about.html blog.html tags.html search.html; do
+            if [ ! -f "_site/$f" ]; then
+              echo "::error::Missing expected HTML page: _site/$f (permalink regression?)"
+              missing=1
+            else
+              echo "OK: _site/$f"
+            fi
+          done
+          if [ "$missing" -ne 0 ]; then
+            exit 1
+          fi
+          # Spot-check one post path pattern (year/month/day/slug.html)
+          post_html=$(find _site -mindepth 4 -maxdepth 4 -type f -name '*.html' | head -1 || true)
+          if [ -z "$post_html" ]; then
+            echo "::warning::No sample post HTML found under _site/YYYY/MM/DD/ (may be empty site)"
+          else
+            echo "OK: sample post HTML $post_html"
+          fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
