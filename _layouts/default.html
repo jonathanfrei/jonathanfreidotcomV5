@@ -20,8 +20,11 @@
 
   {% include footer.html %}
   {% include embed-scripts.html %}
-  {% comment %} Theme toggle JS: async so it never blocks paint (#121). Boot script in head still sets data-theme before paint. {% endcomment %}
-  <script src="{{ '/assets/js/theme.js' | relative_url }}" async></script>
+  {% comment %}
+    Theme toggle JS is not loaded on every page — only on first click of the
+    footer button (see footer.html stub). Boot script in head still sets
+    data-theme before paint so FOUC is avoided without the full script.
+  {% endcomment %}
   {% comment %} Code block chrome: line numbers, wrap toggle, copy (#71). {% endcomment %}
   {% if content contains '<pre' %}
   <script src="{{ '/assets/js/code-blocks.js' | relative_url }}" defer></script>

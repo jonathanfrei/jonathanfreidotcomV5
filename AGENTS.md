@@ -204,9 +204,11 @@ Production depends on two external services for media (configured in `_config.ym
 | Footer / disclaimer | `_includes/footer.html` |
 | `<head>`, favicon, meta | `_includes/head.html` |
 | Site-wide layout | `_layouts/default.html` |
-| Post chrome (tags, comment mailto) | `_layouts/post.html` |
+| Post chrome (tags, comment mailto, random post) | `_layouts/post.html` (random uses on-click fetch of `posts.json`) |
 | Tag archive title | `_layouts/tag.html` |
 | Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` |
+| Random-post URL list | `posts.json` (URLs only; not embedded in post HTML) |
+| Theme toggle | Boot in `_includes/head.html`; full `assets/js/theme.js` loads on first click (footer stub) |
 | Site config | `_config.yml` |
 | Deploy / schedule / path filters | `.github/workflows/deploy.yml` |
 | Embed providers | `_plugins/url_embeds.rb` |

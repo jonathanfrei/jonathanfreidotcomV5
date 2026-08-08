@@ -11,8 +11,8 @@
         <span class="footer-links-sep" aria-hidden="true">·</span>
         <a href="{{ '/feed.xml' | relative_url }}" target="_blank" rel="noopener noreferrer">RSS</a>
       </p>
-      {% comment %} Theme toggle in lower-right of footer; JS loads async (#121) {% endcomment %}
-      <button type="button" class="theme-toggle" aria-label="Toggle color theme" aria-pressed="false">
+      {% comment %} Theme toggle in lower-right of footer; full JS loads on first click only {% endcomment %}
+      <button type="button" class="theme-toggle" aria-label="Toggle color theme" aria-pressed="false" data-theme-src="{{ '/assets/js/theme.js' | relative_url }}">
         <svg class="theme-toggle__icon theme-toggle__icon--moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M21 14.3A9 9 0 1 1 9.7 3a7 7 0 0 0 11.3 11.3z"/>
         </svg>
@@ -29,3 +29,35 @@
     </p>
   </div>
 </footer>
+{% comment %}
+  Minimal stub: load theme.js only when the user clicks the toggle.
+  Theme preference itself is applied before paint via the head boot script.
+{% endcomment %}
+<script>
+(function () {
+  var btn = document.querySelector(".theme-toggle");
+  if (!btn) return;
+  var src = btn.getAttribute("data-theme-src") || "/assets/js/theme.js";
+  var loading = false;
+
+  function onFirstClick(e) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    if (loading) return;
+    loading = true;
+    window.__themeToggleNow = true;
+    btn.removeEventListener("click", onFirstClick, true);
+    var s = document.createElement("script");
+    s.src = src;
+    s.async = true;
+    s.onerror = function () {
+      loading = false;
+      window.__themeToggleNow = false;
+      btn.addEventListener("click", onFirstClick, true);
+    };
+    document.head.appendChild(s);
+  }
+
+  btn.addEventListener("click", onFirstClick, true);
+})();
+</script>
