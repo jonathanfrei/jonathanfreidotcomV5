@@ -12,14 +12,15 @@ This is a personal site and blog: **Jekyll 4.x → GitHub Actions → GitHub Pag
 | Repo | Static Jekyll site (no app server, no database) |
 | Content | Markdown posts/pages; HTML layouts/includes |
 | Design | Custom CSS design system in `_includes/main.css` (inlined at build) |
-| Deploy | Push to `main` runs `.github/workflows/deploy.yml` |
+| Deploy | Push to `main` runs full `deploy.yml` or post-only `incremental-posts.yml` (#64) |
 | Archive media | Kept in `_posts/v{2,3}-archive/media/`; production serves via **jsDelivr** (not Pages artifact). See `archive_media` in `_config.yml` and issue #68. |
 | Image perf | `_plugins/optimize_content_images.rb` optimizes **all own site images** (archive media + `/assets/`): dimensions, lazy/LCP hints, responsive WebP via wsrv.nl (full-res on `data-full-src`). See issue #90. |
 
 ### Directory map
 
 ```
-.github/workflows/deploy.yml   # Build + deploy + 6-hour scheduled rebuild
+.github/workflows/deploy.yml              # Full build + deploy + 6h schedule
+.github/workflows/incremental-posts.yml  # Post-only incremental build (#64)
 _config.yml                    # Site config, plugins, permalinks, excludes
 _includes/                     # head, header, footer, search UI, **main.css**
 _layouts/                      # default, page, post, tag
@@ -51,7 +52,9 @@ bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
 
 1. Prefer a branch + PR for multi-file or behavior changes; direct `main` is fine for urgent build/content fixes when the owner asks.
 2. Push to `main` deploys (except pure draft/doc paths — see CI).
-3. Future-dated posts publish on the **every-6-hours** schedule (or next push).
+   - **Post-only** content under `_posts/` → `incremental-posts.yml` (cached `_site`, `--incremental`).
+   - Everything else (layouts, CSS, config, plugins) → full `deploy.yml`.
+3. Future-dated posts publish on the **every-6-hours** full rebuild (or next non-post push).
 4. After deploy, confirm the Actions run is green when you changed build-related files.
 
 ## Content rules
@@ -184,7 +187,7 @@ Do not downgrade these without checking Node deprecation warnings on GH Actions.
 | Tag archive title | `_layouts/tag.html` |
 | Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` |
 | Site config | `_config.yml` |
-| Deploy / schedule / path filters | `.github/workflows/deploy.yml` |
+| Deploy / schedule / path filters | `.github/workflows/deploy.yml`, `.github/workflows/incremental-posts.yml` |
 | Embed providers | `_plugins/url_embeds.rb` |
 | Static HTML page | `editorial/<slug>.html` → `/editorial/<slug>` (see `static_html.roots`) |
 
