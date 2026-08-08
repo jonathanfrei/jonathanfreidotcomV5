@@ -2,10 +2,10 @@
 layout: page
 title: Typography
 permalink: /typography
-description: "Specimen page for the site’s typographic design system (Source Serif 4 / Source Sans 3 / Source Code Pro) and HTML element styles."
+description: "Specimen page for the site’s typographic design system (Source Serif 4 / Source Code Pro) and HTML element styles."
 ---
 
-This page samples the HTML elements and typographic styles used across the site. Use it when tuning tokens in `_includes/main-a.css` or checking dark mode and measure. Design system: **The Modern Editorial System** (#110) with Fontsource + jsDelivr fonts (#92).
+This page samples the HTML elements and typographic styles used across the site. Use it when tuning tokens in `_includes/main-a.css` or checking dark mode and measure. Design system: **The Modern Editorial System** (#110) with Fontsource + jsDelivr fonts (#92) — two custom faces only (serif body + code UI/mono).
 
 ## Headings
 
@@ -80,7 +80,7 @@ hello("world")
 | Token | Role | Example |
 | --- | --- | --- |
 | `--font-body` | Source Serif 4 | Editorial text |
-| `--font-ui` | Source Sans 3 | Nav / UI |
+| `--font-ui` | Source Code Pro | Nav / UI |
 | `--font-mono` | Source Code Pro | Meta / code |
 | `--type-base` | Fluid body size | `clamp(...)` |
 | `--leading-body` | Body line-height | `1.65` |

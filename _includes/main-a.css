@@ -1,17 +1,18 @@
 /* =========================================================
    jonathanfrei.com — typographic design system
    "The Modern Editorial System" (#110)
-   Principles: Superfamily visual harmony (Source Serif 4 / Source Sans 3 /
-   Source Code Pro), warm paper palette, modular scale, accessibility.
-   Fonts served via Fontsource + jsDelivr (latin subsets, variable where useful)
+   Principles: two-face setup (Source Serif 4 + Source Code Pro),
+   warm paper palette, modular scale, accessibility.
+   Fonts served via Fontsource + jsDelivr (latin subsets, variable)
    with font-display: swap to protect Core Web Vitals (#92).
+   Source Sans 3 removed — UI shares Source Code Pro with mono.
 
    This file (main-a): design tokens, @font-face, reset, base type, layout.
    Components live in main-b.css. Both are inlined via main.css.
    ========================================================= */
 
 /* ---------- Self-hosted fonts (Fontsource / jsDelivr) ---------- */
-/* Variable latin subsets keep payload small while covering design weights. */
+/* Two custom families only: body serif + UI/mono code (variable latin). */
 @font-face {
   font-family: "Source Serif 4";
   font-style: normal;
@@ -22,20 +23,11 @@
 }
 
 @font-face {
-  font-family: "Source Sans 3";
-  font-style: normal;
-  font-display: swap;
-  font-weight: 200 900;
-  src: url("https://cdn.jsdelivr.net/fontsource/fonts/source-sans-3:vf@5.2.5/latin-wght-normal.woff2") format("woff2-variations");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
   font-family: "Source Code Pro";
   font-style: normal;
   font-display: swap;
-  font-weight: 400;
-  src: url("https://cdn.jsdelivr.net/fontsource/fonts/source-code-pro@5.2.5/latin-400-normal.woff2") format("woff2");
+  font-weight: 200 900;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/source-code-pro:vf@5.2.5/latin-wght-normal.woff2") format("woff2-variations");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -53,14 +45,13 @@
   --color-surface: #F3EFEA;
 
   /*
-    Superfamily type
+    Two custom faces
     Editorial body/display: Source Serif 4
-    UI / structure: Source Sans 3
-    Metadata / code: Source Code Pro
+    UI chrome + metadata/code: Source Code Pro
     System stacks remain as immediate fallbacks (FOUT-safe).
   */
   --font-body: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
-  --font-ui: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-ui: "Source Code Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: "Source Code Pro", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 
   /*
