@@ -32,11 +32,12 @@
 <link rel="dns-prefetch" href="https://wsrv.nl">
 
 {% comment %}
-  Preload critical fonts (body serif + UI sans regular). Variable latin WOFF2
-  from Fontsource; font-display:swap is set in @font-face. (#92, #110)
+  Preload the two custom faces (body serif + UI/mono code). Variable latin
+  WOFF2 from Fontsource; font-display:swap is set in @font-face. (#92, #110)
+  Source Sans 3 dropped — UI shares Source Code Pro with mono.
 {% endcomment %}
 <link rel="preload" href="https://cdn.jsdelivr.net/fontsource/fonts/source-serif-4:vf@5.2.5/latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="https://cdn.jsdelivr.net/fontsource/fonts/source-sans-3:vf@5.2.5/latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://cdn.jsdelivr.net/fontsource/fonts/source-code-pro:vf@5.2.5/latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 
 {% if page.lcp_image %}
 <link rel="preload" as="image" href="{{ page.lcp_image }}" fetchpriority="high">
