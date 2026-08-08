@@ -90,9 +90,10 @@ tags: [tag-one, tag-two]
 ### Media embeds
 
 - A **supported raw URL alone on a line** (blank lines around it) becomes an embed via `_plugins/url_embeds.rb`.
-- Supported: YouTube, Vimeo, X/Twitter, Instagram, TikTok, Spotify, CodePen.
+- Supported: YouTube, Vimeo, X/Twitter, Instagram, TikTok, Spotify, CodePen, Imgur, Flickr.
 - Opt out per document: `url_embeds: false` in front matter.
 - Inline links inside paragraphs are **not** transformed.
+- Hotlinked third-party images are rewritten through wsrv.nl in production (`archive_media.optimize.hotlink`, #116).
 
 ### Static HTML pages (`editorial/`, extensible)
 

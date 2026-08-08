@@ -11,6 +11,13 @@ author:
 
 # Build settings
 markdown: kramdown
+# CodeRay syntax highlighting for fenced code blocks (#124)
+kramdown:
+  syntax_highlighter: coderay
+  syntax_highlighter_opts:
+    css: class
+    line_numbers: false
+    bold_every: false
 # No trailing slash: Jekyll writes .html files that GitHub Pages serves at the
 # clean path (/about, not /about/). Extensionless files would download as
 # application/octet-stream; .html does not. See issue #63.
@@ -86,20 +93,23 @@ jekyll-archives:
 # still publishes under /media/. Override with ARCHIVE_MEDIA_MODE=cdn|local.
 # See issue #68.
 #
-# Image optimization (wsrv.nl WebP + srcset) applies to ALL own site images —
-# archive media AND /assets/ — not only /media/. See issue #90.
+# Image optimization (wsrv.nl WebP + srcset) applies to:
+#   - Own site images (archive media + /assets/) — issue #90
+#   - Hotlinked third-party images in post HTML — issue #116
 archive_media:
   mode: auto
   cdn_base: "https://cdn.jsdelivr.net/gh/jonathanfrei/jonathanfreidotcomV5@main"
   # PageSpeed: resize + WebP via wsrv.nl (full-res preserved on data-full-src).
   # quality 85 is near-lossless for photos; widths cover 1x–2x of the 33em measure.
-  # Applies to archive media and /assets/ images (favicon, profile, etc.).
+  # Applies to archive media, /assets/, and hotlinked external images.
   optimize:
     enabled: auto
     proxy: "https://wsrv.nl"
     quality: 85
     widths: [480, 768, 1100]
     sizes: "(max-width: 40em) 92vw, 33em"
+    # When true, rewrite http(s) third-party <img> src through the proxy (#116)
+    hotlink: true
 
 # Static HTML drop-ins (issue #88): top-level *.html under each root publish at
 # /{root}/{slug} (no trailing slash). Sibling folders hold assets only.

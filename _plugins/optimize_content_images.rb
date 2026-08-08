@@ -13,8 +13,9 @@ require "uri"
 #   - Archive media (jsDelivr CDN or local /media/)
 #   - Site assets under /assets/ (served via GitHub Pages + Cloudflare)
 #   - Same-origin absolute URLs for this site
+#   - Hotlinked third-party images (http/https) when optimize.hotlink is on (#116)
 #
-# External third-party images (e.g. Unsplash) are left alone.
+# Skips: data: URLs, SVG/GIF, already-proxied wsrv.nl URLs, non-image schemes.
 #
 # Config (under archive_media.optimize in _config.yml — shared with archive CDN):
 #   enabled: auto|true|false   # auto → on in production
@@ -22,6 +23,7 @@ require "uri"
 #   quality: 85                # WebP quality (high; visually near-lossless for photos)
 #   widths: [480, 768, 1100]   # display widths for srcset (retina covered by 1100)
 #   sizes: "(max-width: 40em) 92vw, 33em"
+#   hotlink: true              # proxy third-party hotlinked images via wsrv (#116)
 #
 # Performance: dimensions and path lookups are memoized per build so the same
 # archive image referenced across many posts is only opened once.
@@ -46,8 +48,12 @@ module Jekyll
       "proxy" => "https://wsrv.nl",
       "quality" => 85,
       "widths" => [480, 768, 1100],
-      "sizes" => "(max-width: 40em) 92vw, 33em"
+      "sizes" => "(max-width: 40em) 92vw, 33em",
+      "hotlink" => true
     }.freeze
+
+    # Already going through our image CDN/proxy — do not re-proxy.
+    PROXY_HOST = %r{\Ahttps?://(?:wsrv\.nl|images\.weserv\.nl)/}i.freeze
 
     # Per-build memoization: same file is referenced across many posts.
     @dims_cache = {}
@@ -244,6 +250,35 @@ module Jekyll
         src.include?("/_posts/v3-archive/media/")
     end
 
+    # Third-party hotlinked image eligible for CDN proxy (#116)
+    def hotlink_media?(src)
+      return false if src.nil? || src.empty?
+      return false if src.start_with?("data:", "blob:", "//")
+      return false unless src.match?(%r{\Ahttps?://}i)
+      return false if src.match?(PROXY_HOST)
+      return false if own_media?(src)
+      return false if animated_or_svg?(src)
+
+      # Prefer clear image URLs; also allow common host CDNs without extension
+      return true if src.match?(/\.(jpe?g|png|webp|avif|bmp)(?:\?|#|$)/i)
+      return true if src.match?(%r{https?://(?:i\.)?imgur\.com/}i)
+      return true if src.match?(%r{https?://(?:live|farm\d+)\.static\.?flickr\.com/}i)
+      return true if src.match?(%r{https?://(?:images?|cdn|media|static)\.}i)
+
+      false
+    end
+
+    def optimizable?(site, src)
+      return true if own_media?(src)
+
+      cfg = config(site)
+      hotlink_on = cfg["hotlink"]
+      hotlink_on = true if hotlink_on.nil?
+      return false unless hotlink_on == true || hotlink_on.to_s.downcase == "true"
+
+      hotlink_media?(src)
+    end
+
     def animated_or_svg?(src)
       src.to_s.match?(/\.(gif|svg)(?:\?|$)/i)
     end
@@ -328,8 +363,11 @@ module Jekyll
 
     def enhance_img_tag(site, cfg, tag_attrs, index)
       src = tag_attrs["src"]
-      return nil unless own_media?(src)
+      return nil unless optimizable?(site, src)
       return nil if tag_attrs["data-img-opt"] == "1"
+      return nil if src.to_s.match?(PROXY_HOST)
+
+      is_own = own_media?(src)
 
       # Origin URL for full-quality link / optimizer source (must be absolute for wsrv)
       origin = absolute_origin(site, src)
@@ -337,7 +375,7 @@ module Jekyll
       # Skip transform for GIF/SVG (animation / vectors)
       transform = enabled?(site) && !animated_or_svg?(src)
 
-      local = local_path_for_src(site, src)
+      local = is_own ? local_path_for_src(site, src) : nil
       dims = local ? image_dimensions(local) : nil
       natural_w = dims && dims[0]
       natural_h = dims && dims[1]
@@ -347,6 +385,9 @@ module Jekyll
         tag_attrs["width"] = natural_w.to_s
         tag_attrs["height"] = natural_h.to_s
       end
+
+      # Empty alt is valid for decorative images; ensure attribute exists for a11y audits
+      tag_attrs["alt"] = "" unless tag_attrs.key?("alt")
 
       tag_attrs["decoding"] = "async" unless tag_attrs.key?("decoding")
 
@@ -362,7 +403,7 @@ module Jekyll
 
       if transform
         widths = Array(cfg["widths"]).map(&:to_i).select(&:positive?).uniq.sort
-        # Do not upscale past natural width
+        # Do not upscale past natural width when known
         widths = widths.select { |w| natural_w.nil? || w <= natural_w }
         widths = [natural_w].compact if widths.empty? && natural_w
         widths = [1100] if widths.empty?
