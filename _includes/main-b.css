@@ -1,3 +1,9 @@
+/* =========================================================
+   main-b.css — components (post list, tags, search, pagination,
+   embeds, accessibility helpers). Tokens/base live in main-a.css.
+   Both are inlined via main.css; do not load as separate network CSS.
+   ========================================================= */
+
 .prose table {
   width: 100%;
   border-collapse: collapse;
