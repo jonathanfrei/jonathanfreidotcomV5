@@ -8,10 +8,11 @@
 
 /* ---------- Tokens (map to site brand) ---------- */
 :root {
-  --ed-max: 72rem;
-  --ed-measure: 40rem;      /* ~65ch */
+  --ed-max: 80rem;          /* room for 3 cols + gutters */
+  --ed-measure: 38rem;      /* ~62–68ch reading measure */
   --ed-wide: 56rem;
   --ed-full: 100rem;
+  --ed-col-min: 16.5rem;    /* min track width before wrapping */
 
   --ed-space-1: 0.35rem;
   --ed-space-2: 0.7rem;
@@ -22,11 +23,12 @@
   --ed-space-7: 4rem;
   --ed-space-8: 5.5rem;
 
+  /* Inherit site brand tokens (dark mode remaps --brand-* / --color-*) */
   --ed-bg: var(--color-bg, #FAF9F6);
   --ed-surface: var(--color-surface, #FFFFFF);
   --ed-ink: var(--color-fg, #111C24);
-  --ed-muted: var(--color-muted, #78838A);
-  --ed-charcoal: var(--brand-charcoal, #3D4A52);
+  --ed-muted: var(--color-muted, #4A5560);
+  --ed-charcoal: var(--brand-charcoal, #2F3A42);
   --ed-border: var(--color-border, #E8E6E1);
   --ed-accent: var(--color-accent, #0077A8);
   --ed-deep: var(--brand-deep-ocean, #00334D);
@@ -69,93 +71,150 @@
 
 .editorial-main a:hover,
 .editorial-main a:focus-visible {
-  color: var(--ed-deep);
+  color: var(--color-accent-hover, var(--ed-deep));
 }
 
 .editorial-page {
   width: 100%;
 }
 
+/*
+  Layout model (no CSS multi-column fragmentation):
+  - CSS Grid places whole components as grid items (never split mid-component).
+  - 1 col → 2 col (≥900px) → 3 col (≥1200px).
+  - Prose (p/ul/ol) always spans full grid width but is capped to --ed-measure
+    so line length stays readable.
+  - Compact components (definition, cards, callouts) occupy one track and can
+    sit side-by-side when consecutive.
+  - Wide components (header, figures, tables, composition grids) span all tracks.
+*/
 .editorial-article {
+  --ed-cols: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: var(--ed-space-5);
+  row-gap: var(--ed-space-4);
   width: min(100% - 2.5rem, var(--ed-max));
   margin-inline: auto;
   padding-block: var(--ed-space-6) var(--ed-space-8);
+  align-items: start;
 }
 
-/* Default prose blocks without a component class */
+/* Keep every direct child whole (no mid-component column breaks) */
+.editorial-article > * {
+  min-width: 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Prose: full-row span, constrained reading measure */
 .editorial-article > p,
 .editorial-article > ul,
 .editorial-article > ol {
-  width: min(100%, var(--ed-measure));
-  margin: 0 auto var(--ed-space-4);
-  max-width: 68ch;
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: var(--ed-measure);
+  margin: 0 0 var(--ed-space-2);
 }
 
 .editorial-article > h2,
 .editorial-article > h3 {
-  width: min(100%, var(--ed-measure));
-  margin-inline: auto;
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: var(--ed-measure);
+  margin: 0;
 }
 
-/*
-  Multi-column flow on large screens: continuous prose balances across
-  columns; full-width editorial components span the full measure.
-*/
-@media (min-width: 960px) {
+/* Full-width / spanning components */
+.editorial-article > .editorial-header,
+.editorial-article > .metadata,
+.editorial-article > .lead,
+.editorial-article > .section-header,
+.editorial-article > .subsection-header,
+.editorial-article > .figure,
+.editorial-article > .full-bleed,
+.editorial-article > .stat-grid,
+.editorial-article > .timeline,
+.editorial-article > .data-table,
+.editorial-article > .scorecard,
+.editorial-article > .content-grid,
+.editorial-article > .two-column,
+.editorial-article > .comparison,
+.editorial-article > .pros-cons,
+.editorial-article > .figure-pair,
+.editorial-article > .gallery,
+.editorial-article > .quote,
+.editorial-article > .editorial-break,
+.editorial-article > .source-list,
+.editorial-article > .related-reading,
+.editorial-article > .editorial-list,
+.editorial-article > .content-container {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+}
+
+/* Compact components: one grid track — can sit next to peers */
+.editorial-article > .definition,
+.editorial-article > .aside,
+.editorial-article > .info-callout,
+.editorial-article > .fact-box,
+.editorial-article > .takeaways,
+.editorial-article > .recommendation,
+.editorial-article > .forecast,
+.editorial-article > .event-card,
+.editorial-article > .entity-card,
+.editorial-article > .source-note,
+.editorial-article > .glossary {
+  grid-column: auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  height: 100%;
+}
+
+/* Spanning components that still want a readable inner measure */
+.editorial-article > .lead,
+.editorial-article > .quote,
+.editorial-article > .source-list,
+.editorial-article > .related-reading,
+.editorial-article > .editorial-list,
+.editorial-article > .content-container {
+  max-width: var(--ed-wide);
+  justify-self: start;
+}
+
+.editorial-article > .editorial-header,
+.editorial-article > .metadata,
+.editorial-article > .section-header {
+  max-width: none;
+}
+
+/* 2 columns: compact cards side-by-side; prose remains full-width + measure */
+@media (min-width: 900px) {
   .editorial-article {
+    --ed-cols: 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2.5rem;
+    row-gap: var(--ed-space-5);
     width: min(100% - 3rem, var(--ed-max));
-    column-count: 2;
-    column-gap: 3.25rem;
-    column-fill: balance;
-  }
-
-  .editorial-article > p,
-  .editorial-article > ul,
-  .editorial-article > ol {
-    width: 100%;
-    max-width: none;
-    margin-inline: 0;
-  }
-
-  /* Full-width / spanning components */
-  .editorial-article > .editorial-header,
-  .editorial-article > .metadata,
-  .editorial-article > .lead,
-  .editorial-article > .section-header,
-  .editorial-article > .figure,
-  .editorial-article > .full-bleed,
-  .editorial-article > .stat-grid,
-  .editorial-article > .timeline,
-  .editorial-article > .data-table,
-  .editorial-article > .scorecard,
-  .editorial-article > .content-grid,
-  .editorial-article > .two-column,
-  .editorial-article > .comparison,
-  .editorial-article > .pros-cons,
-  .editorial-article > .figure-pair,
-  .editorial-article > .gallery,
-  .editorial-article > .quote,
-  .editorial-article > .editorial-break,
-  .editorial-article > .source-list,
-  .editorial-article > .related-reading {
-    column-span: all;
-    width: 100%;
-    max-width: none;
-  }
-
-  /* Nested measure for spanning components that still want reading width */
-  .editorial-article > .lead,
-  .editorial-article > .quote,
-  .editorial-article > .source-list,
-  .editorial-article > .related-reading {
-    width: min(100%, var(--ed-wide));
-    margin-inline: auto;
   }
 }
 
-@media (min-width: 1280px) {
+/* 3 columns on large screens */
+@media (min-width: 1200px) {
   .editorial-article {
-    column-gap: 3.75rem;
+    --ed-cols: 3;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 2.75rem;
+  }
+
+  /* Medium-width cards can span 2 of 3 tracks when alone looks sparse */
+  .editorial-article > .takeaways,
+  .editorial-article > .recommendation,
+  .editorial-article > .forecast {
+    grid-column: span 2;
   }
 
   .stat-grid {
@@ -167,18 +226,19 @@
   }
 }
 
-@media (max-width: 959px) {
-  .editorial-article {
-    column-count: 1;
+@media (min-width: 900px) and (max-width: 1199px) {
+  .content-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 /* ---------- Header / hero ---------- */
 .editorial-header {
-  width: min(100%, var(--ed-wide));
-  margin: 0 auto var(--ed-space-6);
+  width: 100%;
+  margin: 0 0 var(--ed-space-5);
   padding-bottom: var(--ed-space-5);
   border-bottom: 3px solid var(--ed-ink);
+  color: var(--ed-ink);
 }
 
 .eyebrow {
@@ -218,8 +278,8 @@
 
 /* ---------- Metadata bar ---------- */
 .metadata {
-  width: min(100%, var(--ed-wide));
-  margin: 0 auto var(--ed-space-6);
+  width: 100%;
+  margin: 0 0 var(--ed-space-5);
   padding: var(--ed-space-3) 0;
   border-bottom: 1px solid var(--ed-border);
   font-family: var(--ed-ui);
@@ -241,11 +301,11 @@
 
 /* ---------- Lead ---------- */
 .lead {
-  width: min(100%, var(--ed-wide));
-  margin: 0 auto var(--ed-space-7);
-  max-width: 48rem;
+  width: 100%;
+  max-width: var(--ed-measure);
+  margin: 0 0 var(--ed-space-5);
   font-family: var(--ed-serif);
-  font-size: clamp(1.15rem, 2.1vw, 1.4rem);
+  font-size: clamp(1.15rem, 2.1vw, 1.35rem);
   font-weight: 400;
   line-height: 1.55;
   color: var(--ed-ink);
@@ -258,10 +318,11 @@
 
 /* ---------- Section headers ---------- */
 .section-header {
-  width: min(100%, var(--ed-wide));
-  margin: var(--ed-space-8) auto var(--ed-space-5);
+  width: 100%;
+  margin: var(--ed-space-6) 0 var(--ed-space-4);
   padding-top: var(--ed-space-4);
   border-top: 1px solid var(--ed-border);
+  color: var(--ed-ink);
 }
 
 .section-header h2 {
@@ -286,8 +347,10 @@
 }
 
 .subsection-header {
-  width: min(100%, var(--ed-measure));
-  margin: var(--ed-space-6) auto var(--ed-space-3);
+  width: 100%;
+  max-width: var(--ed-measure);
+  margin: var(--ed-space-5) 0 var(--ed-space-3);
+  color: var(--ed-ink);
 }
 
 .subsection-header h3 {
@@ -317,8 +380,9 @@
 
 /* ---------- Figures ---------- */
 .figure {
-  width: min(100%, var(--ed-wide));
-  margin: var(--ed-space-6) auto;
+  width: 100%;
+  margin: var(--ed-space-5) 0;
+  color: var(--ed-ink);
 }
 
 .figure img {
@@ -369,11 +433,13 @@
 
 /* ---------- Quotes ---------- */
 .quote {
-  width: min(100%, var(--ed-measure));
-  margin: var(--ed-space-7) auto;
+  width: 100%;
+  max-width: var(--ed-measure);
+  margin: var(--ed-space-5) 0;
   padding: var(--ed-space-4) 0 var(--ed-space-4) var(--ed-space-5);
   border-left: 4px solid var(--ed-accent);
   background: transparent;
+  color: var(--ed-ink);
 }
 
 .quote blockquote {
@@ -409,18 +475,20 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   gap: 0;
-  width: min(100%, var(--ed-wide));
-  margin: var(--ed-space-6) auto;
+  width: 100%;
+  margin: var(--ed-space-5) 0;
   border-top: 1px solid var(--ed-border);
   border-bottom: 1px solid var(--ed-border);
+  color: var(--ed-ink);
 }
 
 .stat-grid .stat,
 .stat {
   min-width: 0;
   padding: var(--ed-space-5) var(--ed-space-4);
-  background: var(--ed-bg);
+  background: var(--ed-surface);
   border-right: 1px solid var(--ed-border);
+  color: var(--ed-ink);
 }
 
 .stat-grid .stat:last-child {
@@ -462,9 +530,10 @@
 /* ---------- Tables ---------- */
 .data-table,
 .scorecard {
-  width: min(100%, var(--ed-wide));
-  margin: var(--ed-space-6) auto;
+  width: 100%;
+  margin: var(--ed-space-5) 0;
   overflow-x: auto;
+  color: var(--ed-ink);
 }
 
 .data-table table,
@@ -483,6 +552,8 @@
   border-bottom: 1px solid var(--ed-border);
   text-align: left;
   vertical-align: top;
+  color: var(--ed-ink);
+  background: var(--ed-surface);
 }
 
 .data-table th,
@@ -499,14 +570,15 @@
 
 .data-table tr:hover td,
 .scorecard tr:hover td {
-  background: color-mix(in srgb, var(--ed-ice) 70%, transparent);
+  background: color-mix(in srgb, var(--ed-ice) 55%, var(--ed-surface));
 }
 
 /* ---------- Timeline ---------- */
 .timeline {
-  width: min(100%, var(--ed-wide));
-  margin: var(--ed-space-6) auto;
+  width: 100%;
+  margin: var(--ed-space-5) 0;
   border-top: 1px solid var(--ed-border);
+  color: var(--ed-ink);
 }
 
 .timeline-item {
@@ -547,13 +619,16 @@
 .recommendation,
 .forecast,
 .aside {
-  width: min(100%, var(--ed-measure));
-  margin: var(--ed-space-6) auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--ed-measure);
+  margin: var(--ed-space-5) auto;
   padding: var(--ed-space-5) var(--ed-space-5) var(--ed-space-5) calc(var(--ed-space-5) + 0.35rem);
   position: relative;
   background: var(--ed-ice);
   border: 1px solid var(--ed-border);
   border-radius: var(--ed-radius);
+  color: var(--ed-ink);
 }
 
 .info-callout::before,
@@ -660,6 +735,21 @@
 
 .fact-box {
   background: var(--ed-surface);
+  color: var(--ed-ink);
+}
+
+/* Ensure nested text inherits readable ink (dark-mode safe) */
+.info-callout p,
+.fact-box p,
+.takeaways p,
+.definition p,
+.recommendation p,
+.forecast p,
+.aside p,
+.takeaways li,
+.recommendation li,
+.forecast li {
+  color: var(--ed-ink);
 }
 
 /* ---------- Composition grids ---------- */
@@ -668,11 +758,12 @@
 .comparison,
 .pros-cons,
 .figure-pair {
-  width: min(100%, var(--ed-wide));
-  margin: var(--ed-space-6) auto;
+  width: 100%;
+  margin: var(--ed-space-5) 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--ed-space-5) var(--ed-space-6);
+  color: var(--ed-ink);
 }
 
 .content-grid > div,
@@ -685,6 +776,7 @@
   background: var(--ed-surface);
   border: 1px solid var(--ed-border);
   border-top: 3px solid var(--ed-accent);
+  color: var(--ed-ink);
 }
 
 .comparison > div:last-child,
@@ -714,10 +806,12 @@
 
 /* ---------- Lists ---------- */
 .editorial-list {
-  width: min(100%, var(--ed-measure));
-  margin: var(--ed-space-5) auto;
+  width: 100%;
+  max-width: var(--ed-measure);
+  margin: var(--ed-space-4) 0;
   padding-left: 0;
   list-style: none;
+  color: var(--ed-ink);
 }
 
 .editorial-list li {
@@ -742,14 +836,17 @@
 .source-list,
 .source-note,
 .related-reading {
-  width: min(100%, var(--ed-measure));
-  margin: var(--ed-space-6) auto;
+  width: 100%;
+  max-width: var(--ed-measure);
+  margin: var(--ed-space-5) auto;
+  color: var(--ed-ink);
 }
 
 .glossary {
   padding: var(--ed-space-4);
   background: var(--ed-surface);
   border: 1px solid var(--ed-border);
+  color: var(--ed-ink);
 }
 
 .glossary p,
@@ -817,13 +914,16 @@
 /* ---------- Cards ---------- */
 .event-card,
 .entity-card {
-  width: min(100%, var(--ed-measure));
-  margin: var(--ed-space-5) auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--ed-measure);
+  margin: var(--ed-space-4) auto;
   padding: var(--ed-space-5);
   background: var(--ed-surface);
   border: 1px solid var(--ed-border);
   border-left: 4px solid var(--ed-accent);
   box-shadow: 0 1px 0 color-mix(in srgb, var(--ed-ink) 4%, transparent);
+  color: var(--ed-ink);
 }
 
 .event-date {
@@ -855,8 +955,8 @@
 
 /* ---------- Gallery / pairs ---------- */
 .gallery {
-  width: min(100%, var(--ed-wide));
-  margin: var(--ed-space-6) auto;
+  width: 100%;
+  margin: var(--ed-space-5) 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--ed-space-3);
