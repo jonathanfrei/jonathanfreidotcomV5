@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+  {% include head.html %}
+  {% comment %}
+    Editorial pages (#144): site design system + editorial component CSS.
+    Brand tokens from main.css (#145). No narrow .container wrapper — editorial
+    measure is controlled by component classes.
+  {% endcomment %}
+  <style>
+{% include main.css %}
+{% include editorial.css %}
+  </style>
+  {% if content contains '<pre' or content contains 'CodeRay' %}
+  <style>
+{% include code.css %}
+  </style>
+  {% endif %}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  {% include header.html %}
+
+  <main id="main" class="editorial-main">
+    <div class="editorial-page">
+      <article class="editorial-article" itemscope itemtype="https://schema.org/Article">
+        {% if page.title %}<meta itemprop="headline" content="{{ page.title | escape }}">{% endif %}
+        {% if page.description %}<meta itemprop="description" content="{{ page.description | escape }}">{% endif %}
+        {{ content }}
+      </article>
+    </div>
+  </main>
+
+  {% include footer.html %}
+  {% include embed-scripts.html %}
+  {% if content contains '<pre' or content contains 'CodeRay' %}
+  <script src="{{ '/assets/js/code-blocks.js' | relative_url }}" defer></script>
+  {% endif %}
+</body>
+</html>

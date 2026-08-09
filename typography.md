@@ -85,7 +85,8 @@ hello("world")
 | `--type-base` | Fluid body size | `clamp(...)` |
 | `--leading-body` | Body line-height | `1.65` |
 | `--measure` | Reading width | `~36em` |
-| `--color-accent` | Links / focus | terracotta |
+| `--color-accent` | Links / focus | Signature Blue `#0077A8` |
+| `--brand-ink` / `--brand-paper` | Text / page ground | `#111C24` / `#FAF9F6` |
 
 ## Figure / image
 
