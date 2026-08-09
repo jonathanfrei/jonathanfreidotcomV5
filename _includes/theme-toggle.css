@@ -1,16 +1,5 @@
 /* ---------- Theme toggle (#87, #121) — lives in footer lower-right ---------- */
-.footer-end {
-  margin-left: auto;
-}
-
-.footer-links-sep {
-  margin-inline: 0.35em;
-  opacity: 0.7;
-}
-
-.footer-note {
-  color: var(--color-muted);
-}
+/* Footer row layout lives in main-a.css (critical chrome, #131). */
 
 .theme-toggle {
   appearance: none;

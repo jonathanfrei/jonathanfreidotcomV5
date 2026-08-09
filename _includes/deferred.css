@@ -1,0 +1,9 @@
+{% comment %}
+  Deferred (non-critical) CSS — loaded async after first paint (#132).
+  Components, code chrome, theme toggle, CodeRay. Cached across pages via
+  /assets/css/deferred.css. Critical tokens/chrome stay inlined.
+{% endcomment %}
+{% include main-b.css %}
+{% include code-blocks.css %}
+{% include theme-toggle.css %}
+{% include coderay.css %}

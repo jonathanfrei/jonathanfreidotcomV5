@@ -2,10 +2,17 @@
 <html lang="en">
 <head>
   {% include head.html %}
-  {% comment %} Inline critical CSS so first paint is not blocked by a network CSS hop (#24, #25, #28). Source: _includes/main.css (Jekyll forbids ../ in include_relative). {% endcomment %}
+  {% comment %}
+    Hybrid CSS (#132): inline critical ATF styles for instant first paint
+    (#24, #25, #28), then async-load deferred components (cached across pages).
+    Source lives under _includes/ (Jekyll forbids ../ in include_relative).
+  {% endcomment %}
   <style>
-{% include main.css %}
+{% include critical.css %}
   </style>
+  {% comment %} Async non-blocking load: media=print avoids render-block, then switch to all (#132) {% endcomment %}
+  <link rel="stylesheet" href="{{ '/assets/css/deferred.css' | relative_url }}" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="{{ '/assets/css/deferred.css' | relative_url }}"></noscript>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
