@@ -1,5 +1,5 @@
 ---
-permalink: /editorials/design-system
+permalink: /editorial/design-system
 layout: editorial
 title: Editorial Design System Template
 description: Component reference for the Jekyll editorial design system.

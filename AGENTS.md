@@ -30,7 +30,7 @@ _posts/v1-archive/             # Historical imported posts (treat carefully)
 _x7k9p/                        # Obfuscated drafts (excluded from build & CI paths)
 assets/                        # Images, JS; CSS tooling at assets/css/*.html
 editorial/                     # Handcrafted HTML drop-ins (slug.html → /editorial/slug)
-editorials/                    # Markdown editorials (layout: editorial → /editorials/:name)
+editorial/                     # HTML drop-ins + Markdown editorials (layout: editorial)
 index.md, about.md, blog.md, tags.md, search.md, typography.md
 ```
 
@@ -143,13 +143,15 @@ Desired URLs: `/about`, `/blog`, `/2026/08/05/slug`, `/tags/foo` — **not** `/a
 - Prefer semantic classes over utility soup
 - Kramdown: `parse_block_html: true` (Markdown inside HTML blocks for editorial components)
 
-### 2b. Editorial Markdown pages (`editorials/`)
+### 2b. Editorial content (`editorial/`)
 
-- Path: `editorials/<slug>.md` with `layout: editorial` and `permalink: /editorials/<slug>`
-- Authoring: ordinary Markdown + Kramdown block attributes (`{: .lead}`, `{: .section-header}`, …)
-- Component inventory and examples: `/editorials/design-system`
-- Sample article: `/editorials/invisible-engine`
-- Handcrafted full-HTML editorials remain under `editorial/` (static_html plugin) — different path
+- **One directory** for both formats:
+  - Handcrafted HTML: `editorial/<slug>.html` → `/editorial/<slug>` (`static_html` plugin)
+  - Markdown design system: `editorial/<slug>.md` + `layout: editorial` + `permalink: /editorial/<slug>`
+- Authoring (MD): ordinary Markdown + Kramdown attributes (`{: .lead}`, `{: .section-header}`, …)
+- Component reference: `/editorial/design-system`
+- Sample article: `/editorial/invisible-engine`
+- Plugin only manages top-level `.html` files; `.md` pages are normal Jekyll pages
 
 ### 3. Tag / list CSS specificity
 
@@ -224,7 +226,7 @@ Production depends on two external services for media (configured in `_config.ym
 | Deploy / schedule / path filters | `.github/workflows/deploy.yml` |
 | Embed providers | `_plugins/url_embeds.rb` |
 | Static HTML page | `editorial/<slug>.html` → `/editorial/<slug>` (see `static_html.roots`) |
-| Editorial Markdown | `editorials/<slug>.md` + `layout: editorial` → `/editorials/<slug>` (#144) |
+| Editorial Markdown | `editorial/<slug>.md` + `layout: editorial` → `/editorial/<slug>` (#144) |
 | Brand colors | `_includes/main.css` tokens (#145) |
 
 ## Verification checklist
