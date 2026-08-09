@@ -1,5 +1,5 @@
 ---
-permalink: /editorials/invisible-engine
+permalink: /editorial/invisible-engine
 layout: editorial
 title: "The Invisible Engine"
 description: "Mainframes in popular imagination vs. mainframes in reality — the movie machine is a character; the real one is infrastructure, and it still runs most of the world's money."

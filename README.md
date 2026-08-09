@@ -78,7 +78,7 @@ GitHub Pages sets short default cache lifetimes (Lighthouse often reports ~10 mi
 
 Optional: “Cache Everything” for HTML with a short Edge TTL (e.g. 2 hours) if you want faster global TTFB and accept brief staleness after deploys. Purge cache after important publishes if you use that rule.
 
-**CSS:** brand design system is **inlined** from `_includes/main.css` (Paper / Ink / Signature Blue `#0077A8`). Code CSS loads only on pages with fenced code. Long-form **editorials** use `layout: editorial` + `_includes/editorial.css` (Kramdown components). Tooling sheets: `/assets/css/main.css`, `/assets/css/editorial.css`.
+**CSS:** brand design system is **inlined** from `_includes/main.css` (Paper / Ink / Signature Blue `#0077A8`). Code CSS loads only on pages with fenced code. Long-form **editorials** live under `editorial/` (Markdown `layout: editorial` or handcrafted HTML) with `_includes/editorial.css`. Tooling: `/assets/css/main.css`, `/assets/css/editorial.css`.
 
 ## Structure
 
