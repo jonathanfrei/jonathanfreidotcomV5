@@ -11,7 +11,7 @@ This is a personal site and blog: **Jekyll 4.x → GitHub Actions → GitHub Pag
 | Site | [jonathanfrei.com](https://jonathanfrei.com) |
 | Repo | Static Jekyll site (no app server, no database) |
 | Content | Markdown posts/pages; HTML layouts/includes |
-| Design | Custom CSS in `_includes/main.css` (inlined); `code.css` only on pages with code |
+| Design | Brand tokens in `_includes/main.css` (Paper/Ink/Signature Blue #145); `editorial.css` for long-form (#144) |
 | Deploy | Push to `main` runs a single full `deploy.yml` (plus 6h schedule). Archive media stays on jsDelivr, not the Pages artifact. |
 | Archive media | Kept in `_posts/v{2,3}-archive/media/`; production serves via **jsDelivr** (not Pages artifact). See `archive_media` in `_config.yml` and issue #68. |
 | Image perf | `_plugins/optimize_content_images.rb` optimizes **all own site images** (archive media + `/assets/`): dimensions, lazy/LCP hints, responsive WebP via wsrv.nl (full-res on `data-full-src`). See issue #90. |
@@ -22,16 +22,18 @@ This is a personal site and blog: **Jekyll 4.x → GitHub Actions → GitHub Pag
 .github/workflows/deploy.yml              # Single full build + deploy + 6h schedule
 .github/dependabot.yml                   # Weekly bundler + Actions updates
 _config.yml                    # Site config, plugins, permalinks, excludes
-_includes/                     # head, header, footer, search UI, main.css, code.css
-_layouts/                      # default, page, post, tag
+_includes/                     # head, header, footer, main.css, code.css, editorial.css
+_layouts/                      # default, page, post, tag, editorial
 _plugins/url_embeds.rb         # Standalone media URLs → embeds
 _posts/                        # Published posts (YYYY-MM-DD-slug.md)
 _posts/v1-archive/             # Historical imported posts (treat carefully)
 _x7k9p/                        # Obfuscated drafts (excluded from build & CI paths)
-assets/                        # Images, JS; full CSS at assets/css/main.html
+assets/                        # Images, JS; CSS tooling at assets/css/*.html
 editorial/                     # Handcrafted HTML drop-ins (slug.html → /editorial/slug)
+editorials/                    # Markdown editorials (layout: editorial → /editorials/:name)
 index.md, about.md, blog.md, tags.md, search.md, typography.md
 ```
+
 
 
 
@@ -130,15 +132,24 @@ Desired URLs: `/about`, `/blog`, `/2026/08/05/slug`, `/tags/foo` — **not** `/a
 - After deploy, Cloudflare should 301 `/path/` → `/path` so old bookmarks still work (see PR for #63).
 - Month archives (`/archive/YYYY/MM/`) **must** keep the trailing slash (directory + `index.html`).
 
-### 2. CSS — single design system + optional code sheet
+### 2. CSS — brand system + optional sheets
 
-- **Source of truth:** `_includes/main.css` (tokens, base, chrome, components, theme toggle)
-- **Code only:** `_includes/code.css` (code-block toolbar + CodeRay) — inlined only when `content` contains `<pre` or `CodeRay`
-- **Delivery:** both inlined in `_layouts/default.html` as `<style>` (no async CSS hop; avoids CLS)
-- Full combined file at `/assets/css/main.css` via `assets/css/main.html` for tooling
+- **Brand (#145):** `_includes/main.css` — Paper `#FAF9F6`, Ink `#111C24`, Signature Blue `#0077A8` (use blue sparingly). Full token table in that file (blue scale + editorial accents + UI semantics).
+- **Code only:** `_includes/code.css` — inlined when content has `<pre` / `CodeRay`
+- **Editorial (#144):** `_includes/editorial.css` + `layout: editorial` — Kramdown semantic components (`.lead`, `.figure`, `.stat-grid`, …). Inlined with main.css on editorial pages.
+- **Delivery:** inlined `<style>` in layouts (no async CSS hop; avoids CLS)
+- Tooling: `/assets/css/main.css`, `/assets/css/editorial.css`
 - **Never** use `{% include_relative ../... %}` — Jekyll rejects `../`
-- Prefer semantic classes (`.post-header`, `.post-nav`, `.excerpt`) over utility class soup
-- Page-local styles (e.g. tags sort, sitemap tree) may stay in those pages
+- Prefer semantic classes over utility soup
+- Kramdown: `parse_block_html: true` (Markdown inside HTML blocks for editorial components)
+
+### 2b. Editorial Markdown pages (`editorials/`)
+
+- Path: `editorials/<slug>.md` with `layout: editorial` and `permalink: /editorials/<slug>`
+- Authoring: ordinary Markdown + Kramdown block attributes (`{: .lead}`, `{: .section-header}`, …)
+- Component inventory and examples: `/editorials/design-system`
+- Sample article: `/editorials/invisible-engine`
+- Handcrafted full-HTML editorials remain under `editorial/` (static_html plugin) — different path
 
 ### 3. Tag / list CSS specificity
 
@@ -213,6 +224,8 @@ Production depends on two external services for media (configured in `_config.ym
 | Deploy / schedule / path filters | `.github/workflows/deploy.yml` |
 | Embed providers | `_plugins/url_embeds.rb` |
 | Static HTML page | `editorial/<slug>.html` → `/editorial/<slug>` (see `static_html.roots`) |
+| Editorial Markdown | `editorials/<slug>.md` + `layout: editorial` → `/editorials/<slug>` (#144) |
+| Brand colors | `_includes/main.css` tokens (#145) |
 
 ## Verification checklist
 
