@@ -67,12 +67,14 @@ description: Hierarchical map of pages, sections, tags, and recent posts on jona
       <a href="{{ '/about' | relative_url }}">About</a>
     </li>
     <li>
-      <span class="site-map__heading">Editorial</span>
+      <span class="site-map__heading">Editorials</span>
       <ul>
-        <li><a href="{{ '/editorial/spacex-earnings' | relative_url }}">SpaceX earnings</a></li>
-        <li><a href="{{ '/editorial/mainframe-history' | relative_url }}">Mainframe history</a></li>
-        <li><a href="{{ '/editorial/lepanto' | relative_url }}">Lepanto</a></li>
-        <li><a href="{{ '/editorial/robot-vacuum' | relative_url }}">Robot vacuum</a></li>
+        <li><a href="{{ '/editorials/invisible-engine' | relative_url }}">The Invisible Engine</a></li>
+        <li><a href="{{ '/editorials/design-system' | relative_url }}">Editorial design system</a></li>
+        <li><a href="{{ '/editorial/spacex-earnings' | relative_url }}">SpaceX earnings (HTML)</a></li>
+        <li><a href="{{ '/editorial/mainframe-history' | relative_url }}">Mainframe history (HTML)</a></li>
+        <li><a href="{{ '/editorial/lepanto' | relative_url }}">Lepanto (HTML)</a></li>
+        <li><a href="{{ '/editorial/robot-vacuum' | relative_url }}">Robot vacuum (HTML)</a></li>
       </ul>
     </li>
     <li>

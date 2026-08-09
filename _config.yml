@@ -18,6 +18,8 @@ kramdown:
     css: class
     line_numbers: false
     bold_every: false
+  # Allow Markdown inside HTML blocks (editorial components, #144)
+  parse_block_html: true
 # No trailing slash: Jekyll writes .html files that GitHub Pages serves at the
 # clean path (/about, not /about/). Extensionless files would download as
 # application/octet-stream; .html does not. See issue #63.

@@ -1,0 +1,10 @@
+{% comment %}
+Optional include for structured editorial notes.
+
+Usage:
+{% include editorial-note.html title="Note" text="Your note here." %}
+{% endcomment %}
+<aside class="info-callout">
+  {% if include.title %}<strong>{{ include.title }}</strong>{% endif %}
+  {% if include.text %}<p>{{ include.text }}</p>{% endif %}
+</aside>
