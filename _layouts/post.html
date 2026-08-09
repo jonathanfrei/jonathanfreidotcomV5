@@ -3,8 +3,8 @@ layout: default
 ---
 <article class="prose" itemscope itemtype="https://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="mt-0" itemprop="headline">{{ page.title }}</h1>
-    <p class="post-meta mb-0">
+    <h1 itemprop="headline">{{ page.title }}</h1>
+    <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {{ page.date | date: "%B %-d, %Y" }}
       </time>
@@ -16,7 +16,7 @@ layout: default
   </div>
 
   {% if page.tags.size > 0 %}
-  <div class="post-tags mt-6">
+  <div class="post-tags">
     <span class="sr-only">Tags:</span>
     <ul class="post-tags__list" itemprop="keywords">
       {% for tag in page.tags %}
@@ -27,7 +27,7 @@ layout: default
   </div>
   {% endif %}
 
-  <p class="mt-8 post-comment-link">
+  <p class="post-comment-link">
     <a href="mailto:hi+comments@jonathanfrei.com?subject={{ 'Comment on: ' | append: page.title | uri_escape }}&body={{ 'Post: ' | append: page.title | append: '%0A' | append: page.url | absolute_url | uri_escape }}">Comment</a>
     <span class="post-actions-sep" aria-hidden="true">·</span>
     <a href="https://github.com/jonathanfrei/jonathanfreidotcomV5/edit/main/{{ page.path }}" target="_blank" rel="noopener noreferrer">PR</a>
@@ -40,7 +40,7 @@ layout: default
   </p>
 </article>
 
-<p class="mt-8 post-nav">
+<p class="post-nav">
   <a href="{{ '/blog' | relative_url }}">&larr; Back to blog</a>
 </p>
 

@@ -3,17 +3,17 @@
 <head>
   {% include head.html %}
   {% comment %}
-    Hybrid CSS (#132): inline all layout-affecting design system CSS (main-a +
-    main-b via critical.css) so first paint matches final geometry — no CLS from
-    late component rules (e.g. .post-header shifting /about). Feature CSS
-    (code chrome, theme toggle polish, CodeRay) loads async from deferred.css.
+    Single inlined design system (main.css). Code chrome + CodeRay only when
+    the page has fenced code — keeps most pages lean with no CLS risk.
   {% endcomment %}
   <style>
-{% include critical.css %}
+{% include main.css %}
   </style>
-  {% comment %} Async feature CSS only (not layout). media=print → all avoids render-block. {% endcomment %}
-  <link rel="stylesheet" href="{{ '/assets/css/deferred.css' | relative_url }}" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="{{ '/assets/css/deferred.css' | relative_url }}"></noscript>
+  {% if content contains '<pre' or content contains 'CodeRay' %}
+  <style>
+{% include code.css %}
+  </style>
+  {% endif %}
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -28,13 +28,8 @@
 
   {% include footer.html %}
   {% include embed-scripts.html %}
-  {% comment %}
-    Theme toggle JS is not loaded on every page — only on first click of the
-    footer button (see footer.html stub). Boot script in head still sets
-    data-theme before paint so FOUC is avoided without the full script.
-  {% endcomment %}
-  {% comment %} Code block chrome: line numbers, wrap toggle, copy (#71). {% endcomment %}
-  {% if content contains '<pre' %}
+  {% comment %} Theme JS loads on first click of footer toggle (see footer.html). {% endcomment %}
+  {% if content contains '<pre' or content contains 'CodeRay' %}
   <script src="{{ '/assets/js/code-blocks.js' | relative_url }}" defer></script>
   {% endif %}
 </body>

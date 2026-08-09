@@ -25,7 +25,7 @@ Short posts and notes.
         {% endif %}
       </div>
       {% if post.excerpt %}
-        <p class="mt-2 mb-0">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+        <p class="excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
       {% endif %}
     </li>
   {% endfor %}
