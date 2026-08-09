@@ -34,10 +34,17 @@ The design is intentionally minimal: mobile-first, system dark mode via `prefers
 
 Much of the coding and refinement for this version was done with Grok Build 4.5.
 
-Earlier versions of the site:
-- [V1 on Blogger](http://v1.jonathanfrei.com/) (2009–2010)
-- [V2 on Tumblr](https://v2.jonathanfrei.com/) (2010–2014)
-- [V3 on self-hosted WordPress](https://v3.jonathanfrei.com/) (2014–2022; the online copy is now a static archive on S3)
-- [V4 on a GitHub repo](https://v4.jonathanfrei.com/) (from 2022-2026)
+<div class="forecast" markdown="1">
+
+### Earlier versions of the site:
+
+- [V1 on Blogger](http://v1.jonathanfrei.com/) (2009–2010): pages here at [v1-archive](/categoreis/v1-archive)
+- [V2 on Tumblr](https://v2.jonathanfrei.com/) (2010–2014): pages here at [v2-archive](/categoreis/v2-archive)
+- [V3 on self-hosted WordPress](https://v3.jonathanfrei.com/) (2014–2022; the online copy is now a static archive on S3): pages here at [v3-archive](/categoreis/v3-archive)
+- [V4 on a GitHub repo](https://v4.jonathanfrei.com/) (from 2022-2026), V4 was just a single static page
+
+</div>
+
+
 
 Content & Code by Jonathan Frei + his AI assistants
