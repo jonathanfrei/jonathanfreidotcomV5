@@ -55,12 +55,12 @@ Captions are set in the smaller sans, muted, and always include the Wikimedia Co
 
 ## What Was Deliberately Omitted
 
-No sticky header.  
-No “jump to section” pills.  
-No dark-mode toggle.  
-No cookie banner mock.  
-No “as an Amazon Associate” disclosure block pretending to be design.  
-No animated progress bars or intersection-observer tricks.
+- No sticky header.  
+- No “jump to section” pills.  
+- No dark-mode toggle.  
+- No cookie banner mock.  
+- No “as an Amazon Associate” disclosure block pretending to be design.  
+- No animated progress bars or intersection-observer tricks.
 
 The page is a document. It does not try to become an application. Once the reader is past the hero, the only movement is vertical scrolling and the occasional column reflow. That restraint is the actual design statement.
 
