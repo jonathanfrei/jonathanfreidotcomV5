@@ -97,6 +97,82 @@
   margin-inline: auto;
 }
 
+/*
+  Multi-column flow on large screens: continuous prose balances across
+  columns; full-width editorial components span the full measure.
+*/
+@media (min-width: 960px) {
+  .editorial-article {
+    width: min(100% - 3rem, var(--ed-max));
+    column-count: 2;
+    column-gap: 3.25rem;
+    column-fill: balance;
+  }
+
+  .editorial-article > p,
+  .editorial-article > ul,
+  .editorial-article > ol {
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+  }
+
+  /* Full-width / spanning components */
+  .editorial-article > .editorial-header,
+  .editorial-article > .metadata,
+  .editorial-article > .lead,
+  .editorial-article > .section-header,
+  .editorial-article > .figure,
+  .editorial-article > .full-bleed,
+  .editorial-article > .stat-grid,
+  .editorial-article > .timeline,
+  .editorial-article > .data-table,
+  .editorial-article > .scorecard,
+  .editorial-article > .content-grid,
+  .editorial-article > .two-column,
+  .editorial-article > .comparison,
+  .editorial-article > .pros-cons,
+  .editorial-article > .figure-pair,
+  .editorial-article > .gallery,
+  .editorial-article > .quote,
+  .editorial-article > .editorial-break,
+  .editorial-article > .source-list,
+  .editorial-article > .related-reading {
+    column-span: all;
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Nested measure for spanning components that still want reading width */
+  .editorial-article > .lead,
+  .editorial-article > .quote,
+  .editorial-article > .source-list,
+  .editorial-article > .related-reading {
+    width: min(100%, var(--ed-wide));
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .editorial-article {
+    column-gap: 3.75rem;
+  }
+
+  .stat-grid {
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  }
+
+  .content-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 959px) {
+  .editorial-article {
+    column-count: 1;
+  }
+}
+
 /* ---------- Header / hero ---------- */
 .editorial-header {
   width: min(100%, var(--ed-wide));
@@ -533,7 +609,9 @@
 
 .takeaways h3,
 .recommendation h3,
-.forecast h3 {
+.forecast h3,
+.source-list h3,
+.related-reading h3 {
   margin: 0 0 var(--ed-space-3);
   font-family: var(--ed-ui);
   font-size: 0.95rem;
@@ -541,6 +619,43 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--ed-deep);
+}
+
+/* Nested blocks inside wrapped components */
+.takeaways ul,
+.recommendation ul,
+.forecast ul,
+.fact-box ul,
+.aside ul,
+.definition p,
+.takeaways p,
+.recommendation p,
+.forecast p {
+  margin: 0 0 var(--ed-space-3);
+}
+
+.takeaways ul,
+.recommendation ul,
+.forecast ul {
+  padding-left: 1.25rem;
+}
+
+.takeaways li,
+.recommendation li,
+.forecast li {
+  margin-bottom: 0.45rem;
+}
+
+.event-card p,
+.entity-card p,
+.definition p:last-child,
+.takeaways > *:last-child,
+.recommendation > *:last-child,
+.forecast > *:last-child,
+.fact-box > *:last-child,
+.aside > *:last-child,
+.info-callout > *:last-child {
+  margin-bottom: 0;
 }
 
 .fact-box {
