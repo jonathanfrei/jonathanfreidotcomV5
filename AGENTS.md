@@ -11,7 +11,7 @@ This is a personal site and blog: **Jekyll 4.x → GitHub Actions → GitHub Pag
 | Site | [jonathanfrei.com](https://jonathanfrei.com) |
 | Repo | Static Jekyll site (no app server, no database) |
 | Content | Markdown posts/pages; HTML layouts/includes |
-| Design | Custom CSS design system in `_includes/main.css` (inlined at build) |
+| Design | Custom CSS design system (`_includes/`); hybrid critical inline + deferred async (#132) |
 | Deploy | Push to `main` runs a single full `deploy.yml` (plus 6h schedule). Archive media stays on jsDelivr, not the Pages artifact. |
 | Archive media | Kept in `_posts/v{2,3}-archive/media/`; production serves via **jsDelivr** (not Pages artifact). See `archive_media` in `_config.yml` and issue #68. |
 | Image perf | `_plugins/optimize_content_images.rb` optimizes **all own site images** (archive media + `/assets/`): dimensions, lazy/LCP hints, responsive WebP via wsrv.nl (full-res on `data-full-src`). See issue #90. |
@@ -22,16 +22,17 @@ This is a personal site and blog: **Jekyll 4.x → GitHub Actions → GitHub Pag
 .github/workflows/deploy.yml              # Single full build + deploy + 6h schedule
 .github/dependabot.yml                   # Weekly bundler + Actions updates
 _config.yml                    # Site config, plugins, permalinks, excludes
-_includes/                     # head, header, footer, search UI, **main.css**
+_includes/                     # head, header, footer, search UI, critical/deferred CSS
 _layouts/                      # default, page, post, tag
 _plugins/url_embeds.rb         # Standalone media URLs → embeds
 _posts/                        # Published posts (YYYY-MM-DD-slug.md)
 _posts/v1-archive/             # Historical imported posts (treat carefully)
 _x7k9p/                        # Obfuscated drafts (excluded from build & CI paths)
-assets/                        # Images, JS; CSS served via assets/css/main.html
+assets/                        # Images, JS; CSS via assets/css/{main,deferred}.html
 editorial/                     # Handcrafted HTML drop-ins (slug.html → /editorial/slug)
 index.md, about.md, blog.md, tags.md, search.md, typography.md
 ```
+
 
 ## Setup (local, optional)
 
@@ -128,16 +129,17 @@ Desired URLs: `/about`, `/blog`, `/2026/08/05/slug`, `/tags/foo` — **not** `/a
 - After deploy, Cloudflare should 301 `/path/` → `/path` so old bookmarks still work (see PR for #63).
 - Month archives (`/archive/YYYY/MM/`) **must** keep the trailing slash (directory + `index.html`).
 
-### 2. CSS lives in `_includes/main.css`
+### 2. Hybrid CSS (`critical` + `deferred`) — #132
 
-- Source of truth: **`_includes/main.css`** (includes the split files)
-- Split is for readability only; still one inlined payload:
-  - `main-a.css` — design tokens, reset, base typography, layout utilities
+- Edit styles under `_includes/*.css` (never `{% include_relative ../... %}` — Jekyll rejects `../`)
+- Split files:
+  - `main-a.css` — design tokens, reset, base typography, layout, site chrome
   - `main-b.css` — components (post list, tags, search, pagination, embeds, a11y)
-  - `code-blocks.css`, `theme-toggle.css` — feature-specific
-- Inlined in `_layouts/default.html` via `{% include main.css %}` (avoids render-blocking CSS)
-- Also exposed at `/assets/css/main.css` through `assets/css/main.html`
-- **Never** use `{% include_relative ../... %}` — Jekyll rejects `../` path traversal and breaks the build
+  - `code-blocks.css`, `theme-toggle.css`, `coderay.css` — feature-specific
+- **Runtime delivery (hybrid):**
+  - **Critical** — `_includes/critical.css` inlined in `_layouts/default.html` (ATF tokens, chrome, prose, minimal list/tag styles)
+  - **Deferred** — `_includes/deferred.css` loaded async from `/assets/css/deferred.css` (`media="print"` → `media="all"` on load; `<noscript>` fallback)
+- Full combined file still at `/assets/css/main.css` via `assets/css/main.html` for tooling / cache audits
 - When changing styles, edit the appropriate `_includes/*.css` file; keep everything under `_includes/`
 
 ### 3. Tag / list CSS specificity
@@ -180,7 +182,7 @@ Production depends on two external services for media (configured in `_config.ym
 
 ## Design system (short)
 
-- Tokens and components: `_includes/main.css` (split into main-a / main-b for readability)
+- Tokens/components: `_includes/main-a.css` + `main-b.css` (hybrid critical/deferred delivery — see §2)
 - Principles: readable measure, modular type scale, system fonts, restrained accent, light default + `prefers-color-scheme` dark
 - Prefer existing utilities/classes (`.prose`, `.post-meta`, `.tag`, `.post-list`, layout helpers) over one-off CSS
 - Accessibility: keep skip link, focus styles, semantic HTML, sensible contrast
@@ -204,10 +206,10 @@ Production depends on two external services for media (configured in `_config.ym
 | Footer / disclaimer | `_includes/footer.html` |
 | `<head>`, favicon, meta | `_includes/head.html` |
 | Site-wide layout | `_layouts/default.html` |
-| Post chrome (tags, comment mailto, random post) | `_layouts/post.html` (random uses on-click fetch of `posts.json`) |
+| Post chrome (tags, comment mailto, random post) | `_layouts/post.html` (random uses on-click fetch of `search.json`) |
 | Tag archive title | `_layouts/tag.html` |
 | Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` |
-| Random-post URL list | `posts.json` (URLs only; not embedded in post HTML) |
+| Random-post URL list | `search.json` (`url` field; `posts.json` removed — #130) |
 | Theme toggle | Boot in `_includes/head.html`; full `assets/js/theme.js` loads on first click (footer stub) |
 | Site config | `_config.yml` |
 | Deploy / schedule / path filters | `.github/workflows/deploy.yml` |
@@ -219,7 +221,7 @@ Production depends on two external services for media (configured in `_config.ym
 Before finishing a change that touches build, layouts, or CSS:
 
 1. [ ] Permalinks have **no** trailing slash for HTML pages (`/about` not `/about/`)
-2. [ ] CSS still inlines from `_includes/main.css` without `../` includes
+2. [ ] Critical CSS still inlines from `_includes/critical.css`; deferred loads from `/assets/css/deferred.css` (no `../` includes)
 3. [ ] Tags on `/blog` still look like chips (not oversized title links)
 4. [ ] Drafts stay out of `_posts/` until intentional publish
 5. [ ] If workflow changed, confirm Actions majors and `paths-ignore` still make sense

@@ -1,7 +1,7 @@
 /* =========================================================
    main-b.css — components (post list, tags, search, pagination,
    embeds, accessibility helpers). Tokens/base live in main-a.css.
-   Both are inlined via main.css; do not load as separate network CSS.
+   Loaded via deferred.css (async) after critical ATF CSS (#132).
    ========================================================= */
 
 .prose table {
@@ -86,13 +86,19 @@
 .tags li {
   display: inline-flex;
   align-items: center;
-  gap: 0.35em;
+  /* Space between chip and count on /tags and /categories (#129) */
+  gap: 0.5em;
   margin: 0;
   padding: 0;
 }
 
 .tags li + li {
   margin-top: 0;
+}
+
+/* Explicit padding so the count never touches the tag chip (#129) */
+.tags li .post-meta {
+  margin-left: 0.15em;
 }
 
 .tag {
@@ -151,6 +157,25 @@
 .post-nav {
   font-family: var(--font-ui);
   font-size: var(--type-sm);
+}
+
+/* Keep post actions on one line on narrow viewports (#131) */
+.post-comment-link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 0.35em;
+  row-gap: 0.25em;
+  line-height: 1.35;
+}
+
+.post-comment-link a {
+  white-space: nowrap;
+}
+
+.post-actions-sep {
+  opacity: 0.7;
+  user-select: none;
 }
 
 /* Home intro */
