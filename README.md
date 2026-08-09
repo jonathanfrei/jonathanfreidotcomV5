@@ -78,7 +78,7 @@ GitHub Pages sets short default cache lifetimes (Lighthouse often reports ~10 mi
 
 Optional: “Cache Everything” for HTML with a short Edge TTL (e.g. 2 hours) if you want faster global TTFB and accept brief staleness after deploys. Purge cache after important publishes if you use that rule.
 
-**Hybrid CSS:** critical styles are **inlined** for first paint; the deferred bundle loads async from `/assets/css/deferred.css` (cached across pages). The full combined stylesheet is also exposed at `/assets/css/main.css` for tooling and long-lived caching once Cloudflare rules are in place.
+**Hybrid CSS:** layout styles (design system) are **inlined** for first paint without CLS; feature CSS (code chrome, theme toggle, syntax) loads async from `/assets/css/deferred.css`. The full combined stylesheet is also at `/assets/css/main.css` for tooling and long-lived caching once Cloudflare rules are in place.
 
 ## Structure
 

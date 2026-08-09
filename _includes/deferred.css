@@ -1,9 +1,14 @@
 {% comment %}
-  Deferred (non-critical) CSS — loaded async after first paint (#132).
-  Components, code chrome, theme toggle, CodeRay. Cached across pages via
-  /assets/css/deferred.css. Critical tokens/chrome stay inlined.
+  Deferred CSS — async after first paint (#132).
+
+  Only feature styles that do not change ATF box geometry of main content:
+    code-blocks.css  — pre chrome (pages with code)
+    theme-toggle.css — footer control polish (below fold; size reserved in critical)
+    coderay.css      — syntax colors (pages with code)
+
+  Design-system layout (main-a + main-b) is inlined via critical.css so
+  component margins/padding never arrive late and cause CLS.
 {% endcomment %}
-{% include main-b.css %}
 {% include code-blocks.css %}
 {% include theme-toggle.css %}
 {% include coderay.css %}

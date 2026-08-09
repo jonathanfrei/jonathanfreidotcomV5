@@ -1,7 +1,8 @@
 /* =========================================================
    main-b.css — components (post list, tags, search, pagination,
    embeds, accessibility helpers). Tokens/base live in main-a.css.
-   Loaded via deferred.css (async) after critical ATF CSS (#132).
+   Inlined via critical.css with main-a (layout must not be deferred —
+   late component styles caused CLS on <main>, e.g. .post-header).
    ========================================================= */
 
 .prose table {
