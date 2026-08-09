@@ -78,17 +78,17 @@ GitHub Pages sets short default cache lifetimes (Lighthouse often reports ~10 mi
 
 Optional: “Cache Everything” for HTML with a short Edge TTL (e.g. 2 hours) if you want faster global TTFB and accept brief staleness after deploys. Purge cache after important publishes if you use that rule.
 
-Critical CSS is also **inlined** in the HTML (from `_includes/main.css`) so first paint does not depend on a render-blocking stylesheet fetch. The same stylesheet is exposed at `/assets/css/main.css` for tooling and long-lived caching once Cloudflare rules are in place.
+**Hybrid CSS:** critical styles are **inlined** for first paint; the deferred bundle loads async from `/assets/css/deferred.css` (cached across pages). The full combined stylesheet is also exposed at `/assets/css/main.css` for tooling and long-lived caching once Cloudflare rules are in place.
 
 ## Structure
 
 ```
 ├── .github/workflows/deploy.yml   # Build + deploy + scheduled rebuild
 ├── _x7k9p/                        # Obfuscated drafts (excluded)
-├── _includes/                     # Header, footer, head
+├── _includes/                     # Header, footer, head, critical/deferred CSS
 ├── _layouts/                      # default, post, page
 ├── _posts/                        # Published short posts
-├── _includes/main.css             # Design-system CSS (inlined + /assets/css/main.css)
+├── assets/css/                    # main.css + deferred.css permalinks
 ├── _config.yml
 ├── Gemfile
 ├── index.md, about.md, blog.md

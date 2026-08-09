@@ -8,7 +8,8 @@
    Source Sans 3 removed — UI shares Source Code Pro with mono.
 
    This file (main-a): design tokens, @font-face, reset, base type, layout.
-   Components live in main-b.css. Both are inlined via main.css.
+   Components live in main-b.css. Runtime: critical.css inlines this file;
+   deferred.css async-loads components (#132).
    ========================================================= */
 
 /* ---------- Self-hosted fonts (Fontsource / jsDelivr) ---------- */
@@ -406,6 +407,57 @@ a:focus-visible {
 .site-footer a:hover,
 .site-footer a:focus-visible {
   color: var(--color-accent);
+}
+
+/* Compact footer row: stay one line when possible, else stack cleanly (#131) */
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem 0.75rem;
+}
+
+.footer-copy {
+  margin: 0;
+  min-width: 0;
+  line-height: 1.35;
+}
+
+.footer-end {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.footer-links {
+  white-space: nowrap;
+}
+
+.footer-links-sep {
+  margin-inline: 0.25em;
+  opacity: 0.7;
+}
+
+.footer-note {
+  color: var(--color-muted);
+}
+
+@media (max-width: 28em) {
+  .footer-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .footer-end {
+    margin-left: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 
 .site-main {
