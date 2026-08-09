@@ -52,8 +52,9 @@
   --brand-paper: #FAF9F6;
   --brand-white: #FFFFFF;
   --brand-warm-gray: #E8E6E1;
-  --brand-charcoal: #3D4A52;
-  --brand-stone: #78838A;
+  /* Charcoal / stone darkened for WCAG AA on Paper (#FAF9F6) */
+  --brand-charcoal: #2F3A42;
+  --brand-stone: #4A5560;
 
   /* Signature blue scale */
   --brand-primary-100: #00334D; /* Deep Ocean */
@@ -129,10 +130,11 @@
 html[data-theme="dark"] {
   --color-bg: #0B1115;
   --color-fg: #F4F3EF;
-  --color-muted: #7D8A91;
+  /* Muted lightened for AA contrast on near-black */
+  --color-muted: #A8B3B9;
   --color-border: #2A373E;
-  --color-accent: #3391BA;
-  --color-accent-hover: #66C0DD;
+  --color-accent: #4AA8D4;
+  --color-accent-hover: #7AD0EC;
   --color-code-bg: #121C22;
   --color-header-bg: #0B1115;
   --color-surface: #18262E;
@@ -148,10 +150,10 @@ html[data-theme="dark"] {
   html:not([data-theme="light"]) {
     --color-bg: #0B1115;
     --color-fg: #F4F3EF;
-    --color-muted: #7D8A91;
+    --color-muted: #A8B3B9;
     --color-border: #2A373E;
-    --color-accent: #3391BA;
-    --color-accent-hover: #66C0DD;
+    --color-accent: #4AA8D4;
+    --color-accent-hover: #7AD0EC;
     --color-code-bg: #121C22;
     --color-header-bg: #0B1115;
     --color-surface: #18262E;
@@ -324,7 +326,8 @@ a:focus-visible {
 }
 
 .site-nav a {
-  color: var(--color-muted);
+  /* Charcoal-level contrast on paper (not light stone) */
+  color: var(--brand-charcoal, #2F3A42);
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 0.01em;
@@ -335,11 +338,17 @@ a:focus-visible {
 }
 
 .site-nav a:hover,
-.site-nav a:focus-visible,
+.site-nav a:focus-visible {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
 .site-nav a[aria-current="page"] {
   color: var(--color-fg);
   text-decoration: underline;
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: 1.5px;
   text-underline-offset: 0.2em;
 }
 
@@ -350,7 +359,7 @@ a:focus-visible {
   margin-top: auto;
   border-top: 1px solid var(--color-border);
   padding-block: var(--space-5);
-  color: var(--color-muted);
+  color: var(--brand-charcoal, #2F3A42);
 }
 
 .site-footer .container {
@@ -358,12 +367,17 @@ a:focus-visible {
 }
 
 .site-footer a {
-  color: var(--color-muted);
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .site-footer a:hover,
 .site-footer a:focus-visible {
-  color: var(--color-accent);
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
 }
 
 .footer-row {
@@ -405,7 +419,50 @@ a:focus-visible {
 .footer-note {
   margin: var(--space-4) 0 0;
   font-size: var(--type-sm);
+  color: var(--brand-charcoal, #2F3A42);
+  opacity: 0.92;
+}
+
+html[data-theme="dark"] .site-nav a,
+html[data-theme="dark"] .site-footer,
+html[data-theme="dark"] .footer-note,
+html[data-theme="dark"] .theme-toggle {
   color: var(--color-muted);
+}
+
+html[data-theme="dark"] .site-nav a:hover,
+html[data-theme="dark"] .site-nav a:focus-visible {
+  color: var(--color-accent);
+}
+
+html[data-theme="dark"] .site-nav a[aria-current="page"] {
+  color: var(--color-fg);
+}
+
+html[data-theme="dark"] .site-footer a {
+  color: var(--color-accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .site-nav a,
+  html:not([data-theme="light"]) .site-footer,
+  html:not([data-theme="light"]) .footer-note,
+  html:not([data-theme="light"]) .theme-toggle {
+    color: var(--color-muted);
+  }
+
+  html:not([data-theme="light"]) .site-nav a:hover,
+  html:not([data-theme="light"]) .site-nav a:focus-visible {
+    color: var(--color-accent);
+  }
+
+  html:not([data-theme="light"]) .site-nav a[aria-current="page"] {
+    color: var(--color-fg);
+  }
+
+  html:not([data-theme="light"]) .site-footer a {
+    color: var(--color-accent);
+  }
 }
 
 @media (max-width: 28em) {
@@ -434,7 +491,7 @@ a:focus-visible {
   min-height: 44px;
   margin: 0;
   padding: 0;
-  color: var(--color-muted);
+  color: var(--brand-charcoal, #2F3A42);
   background: transparent;
   border: 1px solid transparent;
   border-radius: var(--radius);
