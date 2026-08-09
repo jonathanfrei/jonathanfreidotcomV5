@@ -3,6 +3,8 @@ layout: default
 title: Home
 ---
 
+<div class="home-intro prose">
+
 <h1> Hi, my name is <a href="https://jonathanfrei.com">Jonathan Frei</a >.</h1>
 
 <p>Pardon the mess while I get things reset up online. You can email me at
@@ -13,7 +15,13 @@ or reach me on X at <a href="https://x.com/jonathanfrei">@jonathanfrei</a> altho
 
 <p>The <a href="https://jonathanfrei.com">current site</a> is built with Jekyll, deployed via GitHub Actions, and served through Cloudflare.</p>
 
-Short posts live on the [blog]({{ '/blog' | relative_url }}). Longer writing will appear as articles. A portfolio / photo gallery may come later.
+<p>Short posts live on the <a href="/blog">blog</a>. Longer writing will appear as articles. A portfolio or photo galleries may come later.</p>
+
+
+</div>
+
+
+
 
 <h2 class="section-title">Recent posts</h2>
 
