@@ -126,11 +126,27 @@
   --cr-name: #7667A8;
 }
 
-/* Dark: ink-on-black editorial notebook (#145) */
+/* Dark: ink-on-black editorial notebook (#145)
+   Remap brand foundation tokens so components using --brand-* stay readable. */
 html[data-theme="dark"] {
+  --brand-ink: #F4F3EF;
+  --brand-deep-ocean: #8EC5E0; /* light ocean for headings on dark surfaces */
+  --brand-paper: #0B1115;
+  --brand-white: #18262E;
+  --brand-warm-gray: #2A373E;
+  --brand-charcoal: #C5CED3;
+  --brand-stone: #A8B3B9;
+  --brand-primary-100: #8EC5E0;
+  --brand-primary-10: #152028; /* “ice” → dark surface tint, not pale blue */
+  --brand-primary-20: #1A2A34;
+  --brand-sand: #1E2A32;
+  --brand-seafoam: #3DCFC0;
+  --brand-ochre: #E0A84A;
+  --brand-terracotta: #E89284;
+  --brand-lavender: #B5A8E0;
+
   --color-bg: #0B1115;
   --color-fg: #F4F3EF;
-  /* Muted lightened for AA contrast on near-black */
   --color-muted: #A8B3B9;
   --color-border: #2A373E;
   --color-accent: #4AA8D4;
@@ -148,6 +164,22 @@ html[data-theme="dark"] {
 
 @media (prefers-color-scheme: dark) {
   html:not([data-theme="light"]) {
+    --brand-ink: #F4F3EF;
+    --brand-deep-ocean: #8EC5E0;
+    --brand-paper: #0B1115;
+    --brand-white: #18262E;
+    --brand-warm-gray: #2A373E;
+    --brand-charcoal: #C5CED3;
+    --brand-stone: #A8B3B9;
+    --brand-primary-100: #8EC5E0;
+    --brand-primary-10: #152028;
+    --brand-primary-20: #1A2A34;
+    --brand-sand: #1E2A32;
+    --brand-seafoam: #3DCFC0;
+    --brand-ochre: #E0A84A;
+    --brand-terracotta: #E89284;
+    --brand-lavender: #B5A8E0;
+
     --color-bg: #0B1115;
     --color-fg: #F4F3EF;
     --color-muted: #A8B3B9;
