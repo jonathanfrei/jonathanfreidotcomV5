@@ -78,17 +78,17 @@ GitHub Pages sets short default cache lifetimes (Lighthouse often reports ~10 mi
 
 Optional: “Cache Everything” for HTML with a short Edge TTL (e.g. 2 hours) if you want faster global TTFB and accept brief staleness after deploys. Purge cache after important publishes if you use that rule.
 
-**Hybrid CSS:** layout styles (design system) are **inlined** for first paint without CLS; feature CSS (code chrome, theme toggle, syntax) loads async from `/assets/css/deferred.css`. The full combined stylesheet is also at `/assets/css/main.css` for tooling and long-lived caching once Cloudflare rules are in place.
+**CSS:** design system is **inlined** from `_includes/main.css` (no render-blocking hop, no CLS from late styles). Code toolbar + CodeRay load only on pages with fenced code. Full combined sheet at `/assets/css/main.css` for tooling and long-lived caching once Cloudflare rules are in place.
 
 ## Structure
 
 ```
 ├── .github/workflows/deploy.yml   # Build + deploy + scheduled rebuild
 ├── _x7k9p/                        # Obfuscated drafts (excluded)
-├── _includes/                     # Header, footer, head, critical/deferred CSS
+├── _includes/                     # Header, footer, head, main.css, code.css
 ├── _layouts/                      # default, post, page
 ├── _posts/                        # Published short posts
-├── assets/css/                    # main.css + deferred.css permalinks
+├── assets/css/main.html           # /assets/css/main.css (tooling)
 ├── _config.yml
 ├── Gemfile
 ├── index.md, about.md, blog.md

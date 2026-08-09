@@ -5,7 +5,7 @@ permalink: /sitemap
 description: Hierarchical map of pages, sections, tags, and recent posts on jonathanfrei.com.
 ---
 
-<p class="post-meta mb-6">A clean, hierarchical map of this site. Machine-readable XML lives at <a href="{{ '/sitemap.xml' | relative_url }}">/sitemap.xml</a>.</p>
+<p class="post-meta sitemap-lead">A clean, hierarchical map of this site. Machine-readable XML lives at <a href="{{ '/sitemap.xml' | relative_url }}">/sitemap.xml</a>.</p>
 
 <nav class="site-map" aria-label="Site map">
   <ul class="site-map__tree">
@@ -85,6 +85,9 @@ description: Hierarchical map of pages, sections, tags, and recent posts on jona
 </nav>
 
 <style>
+.sitemap-lead {
+  margin-bottom: var(--space-6);
+}
 .site-map__tree {
   list-style: none;
   padding-left: 0;

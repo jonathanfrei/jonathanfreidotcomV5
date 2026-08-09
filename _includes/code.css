@@ -1,4 +1,8 @@
-/* ---------- Enhanced code blocks (#71) — GitHub-inspired ---------- */
+/* =========================================================
+   Code chrome + CodeRay — included only on pages with code.
+   ========================================================= */
+
+/* ---------- Enhanced code blocks (toolbar / wrap / copy) ---------- */
 .code-block {
   position: relative;
   margin-block: var(--space-6);
@@ -102,11 +106,109 @@
   line-height: inherit;
 }
 
-/* Nested .prose spacing: enhanced blocks own their margin */
 .prose .code-block {
   margin-block: var(--space-6);
 }
 
 .prose .code-block pre {
   margin: 0;
+}
+
+/* ---------- CodeRay (token colors via CSS vars in main.css) ---------- */
+.CodeRay {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: var(--color-code-bg);
+  color: var(--color-fg);
+  border-radius: var(--radius);
+  overflow-x: auto;
+}
+
+.CodeRay pre {
+  margin: 0;
+  padding: var(--space-4);
+  background: transparent;
+  overflow-x: auto;
+  line-height: 1.45;
+}
+
+code.CodeRay {
+  padding: 0.12em 0.35em;
+  border-radius: 0.15rem;
+}
+
+.CodeRay .line-numbers {
+  color: var(--color-muted);
+  opacity: 0.7;
+  padding-right: 1em;
+  user-select: none;
+}
+
+.CodeRay .line-numbers a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.CodeRay .comment,
+.CodeRay .annotation,
+.CodeRay .doctype,
+.CodeRay .type {
+  color: var(--cr-comment);
+  font-style: italic;
+}
+
+.CodeRay .string,
+.CodeRay .char,
+.CodeRay .symbol,
+.CodeRay .content,
+.CodeRay .attribute-value,
+.CodeRay .regexp {
+  color: var(--cr-string);
+}
+
+.CodeRay .keyword,
+.CodeRay .reserved,
+.CodeRay .directive,
+.CodeRay .tag,
+.CodeRay .key,
+.CodeRay .important,
+.CodeRay .label {
+  color: var(--cr-keyword);
+  font-weight: 600;
+}
+
+.CodeRay .function,
+.CodeRay .predefined,
+.CodeRay .builtin,
+.CodeRay .constant {
+  color: var(--cr-function);
+}
+
+.CodeRay .integer,
+.CodeRay .float,
+.CodeRay .octal,
+.CodeRay .hex,
+.CodeRay .predefined-constant {
+  color: var(--cr-number);
+}
+
+.CodeRay .class,
+.CodeRay .namespace,
+.CodeRay .variable,
+.CodeRay .instance-variable,
+.CodeRay .class-variable,
+.CodeRay .global-variable,
+.CodeRay .attribute-name {
+  color: var(--cr-name);
+}
+
+.CodeRay .operator,
+.CodeRay .delimiter {
+  color: var(--color-fg);
+}
+
+.CodeRay .error,
+.CodeRay .debug {
+  color: #b00020;
+  background: color-mix(in srgb, #b00020 8%, transparent);
 }
