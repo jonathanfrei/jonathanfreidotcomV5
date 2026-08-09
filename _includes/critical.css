@@ -1,125 +1,40 @@
 {% comment %}
   Critical CSS — inlined in <head> for first paint (#132).
-  Above-the-fold: design tokens, reset, base type, layout, site chrome, prose.
-  Non-critical components load asynchronously via deferred.css.
+
+  Must include ALL layout-affecting design-system rules. Deferring main-b
+  caused CLS (~0.14) on pages: .post-header margin/padding/border and other
+  components applied after paint and shifted <main> content (e.g. /about).
+
+  Only purely decorative / below-fold feature CSS goes in deferred.css
+  (code-blocks, theme-toggle polish, CodeRay).
 {% endcomment %}
 {% include main-a.css %}
-{% comment %} Skip link + screen-reader utility are ATF a11y chrome {% endcomment %}
-.skip-link {
-  position: absolute;
-  top: -100%;
-  left: var(--space-4);
-  background: var(--color-bg);
-  color: var(--color-fg);
-  font-family: var(--font-ui);
-  padding: var(--space-2) var(--space-4);
-  z-index: 100;
-  border: 2px solid var(--color-accent);
-}
-
-.skip-link:focus {
-  top: var(--space-2);
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
+{% include main-b.css %}
 {% comment %}
-  Home / blog / tag index first paint: post list + tag chips are usually
-  above the fold. Keep a minimal subset here; full component styles remain
-  in deferred main-b.css (cascade re-applies the same rules safely).
+  Reserve theme-toggle geometry in critical so deferred theme-toggle.css
+  does not expand the footer control after paint (secondary CLS source).
 {% endcomment %}
-.post-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.post-list li {
-  margin-bottom: var(--space-5);
-  padding-bottom: var(--space-5);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.post-list > li > a {
-  font-family: var(--font-body);
-  font-size: var(--type-lg);
-  font-weight: 400;
-  text-decoration: none;
-  color: var(--color-fg);
-  letter-spacing: -0.01em;
-}
-
-.post-meta {
-  font-family: var(--font-mono);
-  font-size: var(--type-sm);
-  color: var(--color-muted);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.home-intro {
-  margin-bottom: var(--space-8);
-}
-
-.home-intro h1 {
-  font-size: var(--type-2xl);
-  margin-bottom: var(--space-4);
-}
-
-.section-title {
-  font-family: var(--font-mono);
-  font-size: var(--type-sm);
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--color-muted);
-  margin-bottom: var(--space-4);
-  margin-top: 0;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-2);
-  list-style: none;
-  padding: 0;
-  margin: var(--space-3) 0 0;
-  font-family: var(--font-mono);
-}
-
-.tags li {
+.theme-toggle {
+  appearance: none;
   display: inline-flex;
   align-items: center;
-  gap: 0.5em;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  min-width: 44px;
+  min-height: 44px;
   margin: 0;
   padding: 0;
-}
-
-.tags li .post-meta {
-  margin-left: 0.15em;
-}
-
-.tag {
-  display: inline-block;
-  font-size: var(--type-sm);
-  background: var(--color-code-bg);
-  padding: 0.35em 0.65em;
+  flex-shrink: 0;
+  border: 1px solid transparent;
   border-radius: var(--radius);
-  text-decoration: none;
+  background: transparent;
   color: var(--color-muted);
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  min-height: 1.75rem;
-  line-height: 1.3;
+  cursor: pointer;
+}
+
+.theme-toggle__icon {
+  display: block;
+  width: 1.15rem;
+  height: 1.15rem;
 }

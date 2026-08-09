@@ -137,8 +137,8 @@ Desired URLs: `/about`, `/blog`, `/2026/08/05/slug`, `/tags/foo` — **not** `/a
   - `main-b.css` — components (post list, tags, search, pagination, embeds, a11y)
   - `code-blocks.css`, `theme-toggle.css`, `coderay.css` — feature-specific
 - **Runtime delivery (hybrid):**
-  - **Critical** — `_includes/critical.css` inlined in `_layouts/default.html` (ATF tokens, chrome, prose, minimal list/tag styles)
-  - **Deferred** — `_includes/deferred.css` loaded async from `/assets/css/deferred.css` (`media="print"` → `media="all"` on load; `<noscript>` fallback)
+  - **Critical** — `_includes/critical.css` inlined in `_layouts/default.html` = **main-a + main-b** (all layout-affecting design system CSS). Do **not** defer main-b — late component rules (e.g. `.post-header`) cause CLS on `<main>`.
+  - **Deferred** — `_includes/deferred.css` async from `/assets/css/deferred.css` (`media="print"` → `media="all"`): code-blocks, theme-toggle, CodeRay only (feature CSS, not core layout)
 - Full combined file still at `/assets/css/main.css` via `assets/css/main.html` for tooling / cache audits
 - When changing styles, edit the appropriate `_includes/*.css` file; keep everything under `_includes/`
 
@@ -221,7 +221,7 @@ Production depends on two external services for media (configured in `_config.ym
 Before finishing a change that touches build, layouts, or CSS:
 
 1. [ ] Permalinks have **no** trailing slash for HTML pages (`/about` not `/about/`)
-2. [ ] Critical CSS still inlines from `_includes/critical.css`; deferred loads from `/assets/css/deferred.css` (no `../` includes)
+2. [ ] Critical CSS inlines main-a + main-b (layout); deferred is feature-only; no `../` includes; no ATF layout CLS
 3. [ ] Tags on `/blog` still look like chips (not oversized title links)
 4. [ ] Drafts stay out of `_posts/` until intentional publish
 5. [ ] If workflow changed, confirm Actions majors and `paths-ignore` still make sense

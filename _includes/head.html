@@ -44,9 +44,9 @@
 {% endif %}
 
 {% comment %}
-  Hybrid CSS (#132): critical styles inlined in default.html; deferred bundle
-  preloaded async from /assets/css/deferred.css. Full combined file still at
-  /assets/css/main.css for tooling and long cache TTLs (#23, #26).
+  Hybrid CSS (#132): layout CSS (main-a + main-b) inlined via critical.css;
+  feature CSS async from /assets/css/deferred.css. Keep layout inlined to
+  avoid CLS. Full file still at /assets/css/main.css for tooling (#23, #26).
 {% endcomment %}
 
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
