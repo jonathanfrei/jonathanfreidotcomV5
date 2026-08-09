@@ -28,15 +28,15 @@ layout: default
   {% endif %}
 
   <p class="mt-8 post-comment-link">
-    <a href="mailto:hi+comments@jonathanfrei.com?subject={{ 'Comment on: ' | append: page.title | uri_escape }}&body={{ 'Post: ' | append: page.title | append: '%0A' | append: page.url | absolute_url | uri_escape }}">Comment by email</a>
+    <a href="mailto:hi+comments@jonathanfrei.com?subject={{ 'Comment on: ' | append: page.title | uri_escape }}&body={{ 'Post: ' | append: page.title | append: '%0A' | append: page.url | absolute_url | uri_escape }}">Comment</a>
     <span class="post-actions-sep" aria-hidden="true">·</span>
-    <a href="https://github.com/jonathanfrei/jonathanfreidotcomV5/edit/main/{{ page.path }}" target="_blank" rel="noopener noreferrer">Submit a PR</a>
+    <a href="https://github.com/jonathanfrei/jonathanfreidotcomV5/edit/main/{{ page.path }}" target="_blank" rel="noopener noreferrer">PR</a>
     <span class="post-actions-sep" aria-hidden="true">·</span>
     {% comment %}
       Random post: no post list in HTML (would be N URLs on every post page).
-      Tiny click handler fetches shared /posts.json once, then navigates.
+      Tiny click handler fetches shared /search.json once, then navigates (#130).
     {% endcomment %}
-    <a href="{{ '/blog' | relative_url }}" id="random-post-link" class="random-post-link" data-current="{{ page.url | relative_url }}" data-posts-url="{{ '/posts.json' | relative_url }}">Random post</a>
+    <a href="{{ '/blog' | relative_url }}" id="random-post-link" class="random-post-link" data-current="{{ page.url | relative_url }}" data-posts-url="{{ '/search.json' | relative_url }}">Random</a>
   </p>
 </article>
 
@@ -50,9 +50,21 @@ layout: default
   if (!link) return;
 
   var current = link.getAttribute("data-current") || "";
-  var postsUrl = link.getAttribute("data-posts-url") || "/posts.json";
-  var cacheKey = "posts-json-urls";
+  var postsUrl = link.getAttribute("data-posts-url") || "/search.json";
+  var cacheKey = "search-json-urls";
   var pending = null;
+
+  /** Normalize search.json objects (or legacy string URLs) to a URL list. */
+  function toUrls(data) {
+    if (!Array.isArray(data)) return [];
+    var urls = [];
+    for (var i = 0; i < data.length; i++) {
+      var item = data[i];
+      var url = typeof item === "string" ? item : item && item.url;
+      if (url) urls.push(url);
+    }
+    return urls;
+  }
 
   function pickAndGo(urls) {
     var candidates = [];
@@ -82,11 +94,12 @@ layout: default
 
     pending = fetch(postsUrl, { credentials: "same-origin" })
       .then(function (res) {
-        if (!res.ok) throw new Error("posts.json " + res.status);
+        if (!res.ok) throw new Error("search.json " + res.status);
         return res.json();
       })
-      .then(function (urls) {
-        if (!Array.isArray(urls)) throw new Error("invalid posts.json");
+      .then(function (data) {
+        var urls = toUrls(data);
+        if (!urls.length) throw new Error("invalid search.json");
         try {
           sessionStorage.setItem(cacheKey, JSON.stringify(urls));
         } catch (e) { /* ignore */ }

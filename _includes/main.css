@@ -1,10 +1,9 @@
 {% comment %}
-  Design system entry point (inlined in default.html).
-  Split for readability only — still a single inlined payload at build:
-    main-a.css  → design tokens, reset, base typography, layout utilities
-    main-b.css  → components (post list, tags, search, pagination, embeds, a11y)
-    code-blocks.css, theme-toggle.css, coderay.css → feature-specific
-  Do not introduce a network stylesheet hop; keep everything under _includes/.
+  Full design system (tooling / full-file URL at /assets/css/main.css).
+  Runtime delivery is hybrid (#132):
+    critical.css  → inlined in default.html (ATF tokens, chrome, prose, list)
+    deferred.css  → async network load (components + feature CSS)
+  Split files for readability; keep everything under _includes/ (no ../).
 {% endcomment %}
 {% include main-a.css %}
 {% include main-b.css %}
