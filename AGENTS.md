@@ -148,7 +148,18 @@ Desired URLs: `/about`, `/blog`, `/2026/08/05/slug`, `/tags/foo` — **not** `/a
 - **One directory** for both formats:
   - Handcrafted HTML: `editorial/<slug>.html` → `/editorial/<slug>` (`static_html` plugin)
   - Markdown design system: `editorial/<slug>.md` + `layout: editorial` + `permalink: /editorial/<slug>`
-- Authoring (MD): ordinary Markdown + Kramdown attributes (`{: .lead}`, `{: .section-header}`, …)
+- Authoring (MD): multi-block components **must** use HTML wrappers so lists/paragraphs stay inside the component:
+  ```html
+  <div class="takeaways" markdown="1">
+
+  ### Key Takeaways
+
+  - Bullet stays in the component
+
+  </div>
+  ```
+  Kramdown `{: .class}` alone only styles the **next single block** (not following lists).
+- Requires `kramdown.parse_block_html: true` (already set).
 - Component reference: `/editorial/design-system`
 - Sample article: `/editorial/invisible-engine`
 - Plugin only manages top-level `.html` files; `.md` pages are normal Jekyll pages

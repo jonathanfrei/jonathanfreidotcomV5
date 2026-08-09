@@ -5,7 +5,7 @@ title: Editorial Design System Template
 description: Component reference for the Jekyll editorial design system.
 ---
 
-{: .editorial-header}
+<div class="editorial-header" markdown="1">
 
 <span class="eyebrow">Editorial Design System</span>
 
@@ -13,27 +13,37 @@ description: Component reference for the Jekyll editorial design system.
 
 A reference page demonstrating the available editorial components.
 
-{: .metadata}
+</div>
+
+<div class="metadata" markdown="1">
 
 **Published:** August 9, 2026  
 **Category:** Design System  
 **Reading time:** 10 minutes
 
-{: .lead}
+</div>
 
-This template demonstrates the semantic components available to editorial pages. The visual treatment is controlled by CSS while the Markdown remains focused on content.
+<div class="lead" markdown="1">
 
-{: #tier-1 .section-header}
+This template demonstrates the semantic components available to editorial pages. Multi-block components use HTML wrappers with `markdown="1"` so headings, lists, and paragraphs stay inside the component. The visual treatment is controlled by CSS.
+
+</div>
+
+<div id="tier-1" class="section-header" markdown="1">
 
 ## Tier 1 — Core Editorial Components
 
-{: .subsection-header}
+</div>
+
+<div class="subsection-header" markdown="1">
 
 ### Lead
 
+</div>
+
 The lead introduces the central idea of an article and establishes its narrative or explanatory direction.
 
-{: .figure}
+<div class="figure" markdown="1">
 
 ![Placeholder editorial image](https://placehold.co/1600x900)
 
@@ -41,13 +51,17 @@ The lead introduces the central idea of an article and establishes its narrative
 
 *Image: Placeholder image for the design-system template.*
 
-{: .quote}
+</div>
+
+<div class="quote" markdown="1">
 
 > A strong editorial design system should make the content easier to understand without becoming the content itself.
 
 — Editorial Design Principle
 
-{: .stat-grid}
+</div>
+
+<div class="stat-grid" markdown="1">
 
 <div class="stat">
 <span class="stat-value">36</span>
@@ -64,7 +78,9 @@ The lead introduces the central idea of an article and establishes its narrative
 <span class="stat-label">Shared visual system</span>
 </div>
 
-{: .data-table}
+</div>
+
+<div class="data-table" markdown="1">
 
 | Component | Purpose | Tier |
 |---|---|---:|
@@ -73,9 +89,11 @@ The lead introduces the central idea of an article and establishes its narrative
 | Stat Grid | Present important numbers | 1 |
 | Timeline | Present chronology | 1 |
 
-{: .timeline}
+</div>
 
-<div class="timeline-item">
+<div class="timeline" markdown="1">
+
+<div class="timeline-item" markdown="1">
 
 <span class="timeline-date">1944</span>
 
@@ -85,7 +103,7 @@ An example milestone in the history of computing.
 
 </div>
 
-<div class="timeline-item">
+<div class="timeline-item" markdown="1">
 
 <span class="timeline-date">1964</span>
 
@@ -95,7 +113,7 @@ A major architectural milestone in enterprise computing.
 
 </div>
 
-<div class="timeline-item">
+<div class="timeline-item" markdown="1">
 
 <span class="timeline-date">2026</span>
 
@@ -105,23 +123,31 @@ A reusable component vocabulary for long-form editorial content.
 
 </div>
 
-{: .info-callout}
+</div>
+
+<div class="info-callout" markdown="1">
 
 **Note**
 
 This is an informational callout. It can be used for methodology, context, source notes, warnings, or editorial disclaimers.
 
-{: #tier-2 .section-header}
+</div>
+
+<div id="tier-2" class="section-header" markdown="1">
 
 ## Tier 2 — Composition Components
 
-{: .content-container}
+</div>
 
-This content container demonstrates the normal readable measure used by the editorial system.
+<div class="content-container" markdown="1">
 
-{: .content-grid}
+This content container demonstrates the normal readable measure used by the editorial system. On wide viewports, article prose flows in multiple columns; full-width components span the full measure.
 
-<div>
+</div>
+
+<div class="content-grid" markdown="1">
+
+<div markdown="1">
 
 ### Column One
 
@@ -129,7 +155,7 @@ Content grids allow related content to be arranged together while remaining resp
 
 </div>
 
-<div>
+<div markdown="1">
 
 ### Column Two
 
@@ -137,9 +163,11 @@ The grid should collapse naturally at smaller viewport widths.
 
 </div>
 
-{: .two-column}
+</div>
 
-<div>
+<div class="two-column" markdown="1">
+
+<div markdown="1">
 
 ### Bull Case
 
@@ -149,7 +177,7 @@ The grid should collapse naturally at smaller viewport widths.
 
 </div>
 
-<div>
+<div markdown="1">
 
 ### Bear Case
 
@@ -159,9 +187,11 @@ The grid should collapse naturally at smaller viewport widths.
 
 </div>
 
-{: .comparison}
+</div>
 
-<div>
+<div class="comparison" markdown="1">
+
+<div markdown="1">
 
 ### Before
 
@@ -169,7 +199,7 @@ A page-specific collection of styles and markup.
 
 </div>
 
-<div>
+<div markdown="1">
 
 ### After
 
@@ -177,26 +207,36 @@ A shared semantic component system.
 
 </div>
 
-{: .editorial-list}
+</div>
+
+<div class="editorial-list" markdown="1">
 
 - **Semantic:** classes describe what content is.
 - **Reusable:** components can appear across different article types.
 - **Responsive:** layout is controlled by the design system.
 - **Extensible:** new patterns can be added when real content requires them.
 
-{: .full-bleed}
+</div>
 
-{: .figure}
+<div class="full-bleed" markdown="1">
+
+<div class="figure" markdown="1">
 
 ![Full-width placeholder image](https://placehold.co/2000x800)
 
 **Figure 2.** A full-bleed figure can escape the normal reading measure.
 
-{: #tier-3 .section-header}
+</div>
+
+</div>
+
+<div id="tier-3" class="section-header" markdown="1">
 
 ## Tier 3 — Specialized Editorial Components
 
-{: .fact-box}
+</div>
+
+<div class="fact-box" markdown="1">
 
 **The Battle of Lepanto**
 
@@ -205,7 +245,9 @@ A shared semantic component system.
 **Participants:** Holy League · Ottoman Empire  
 **Outcome:** Holy League victory
 
-{: .takeaways}
+</div>
+
+<div class="takeaways" markdown="1">
 
 ### Key Takeaways
 
@@ -213,13 +255,17 @@ A shared semantic component system.
 - Layout should remain responsive without changing article markup.
 - Specialized components should be introduced when recurring editorial patterns emerge.
 
-{: .definition}
+</div>
+
+<div class="definition" markdown="1">
 
 **Mainframe**
 
 A high-performance computer designed to process large volumes of data and support many concurrent users and applications.
 
-{: .glossary}
+</div>
+
+<div class="glossary" markdown="1">
 
 **CDP**  
 Customer Data Platform.
@@ -230,9 +276,11 @@ Content Management System.
 **DAM**  
 Digital Asset Management.
 
-{: .pros-cons}
+</div>
 
-<div>
+<div class="pros-cons" markdown="1">
+
+<div markdown="1">
 
 ### Advantages
 
@@ -242,7 +290,7 @@ Digital Asset Management.
 
 </div>
 
-<div>
+<div markdown="1">
 
 ### Limitations
 
@@ -251,13 +299,17 @@ Digital Asset Management.
 
 </div>
 
-{: .recommendation}
+</div>
+
+<div class="recommendation" markdown="1">
 
 ### Recommendation
 
 Start with the core components and allow the design system to evolve from real articles rather than attempting to anticipate every possible layout.
 
-{: .scorecard}
+</div>
+
+<div class="scorecard" markdown="1">
 
 | Criterion | Rating | Notes |
 |---|---:|---|
@@ -266,7 +318,9 @@ Start with the core components and allow the design system to evolve from real a
 | Responsiveness | 9/10 | CSS-driven |
 | Complexity | 3/10 | Low initial implementation overhead |
 
-{: .forecast}
+</div>
+
+<div class="forecast" markdown="1">
 
 ### What Happens Next
 
@@ -279,7 +333,9 @@ Compare the migrated article against the existing pages and refine spacing, typo
 **Long term**  
 Add components only when recurring editorial patterns justify them.
 
-{: .event-card}
+</div>
+
+<div class="event-card" markdown="1">
 
 <span class="event-date">7 October 1571</span>
 
@@ -287,7 +343,9 @@ Add components only when recurring editorial patterns justify them.
 
 A dedicated event card can present a date, event title, and concise description.
 
-{: .entity-card}
+</div>
+
+<div class="entity-card" markdown="1">
 
 ### Don John of Austria
 
@@ -295,7 +353,9 @@ A dedicated event card can present a date, event title, and concise description.
 **Period:** 1547–1578  
 **Known for:** Commanding the Christian fleet at Lepanto.
 
-{: .source-list}
+</div>
+
+<div class="source-list" markdown="1">
 
 ### Sources
 
@@ -304,19 +364,25 @@ A dedicated event card can present a date, event title, and concise description.
 3. Manufacturer specifications
 4. Independent testing
 
-{: .source-note}
+</div>
+
+<div class="source-note" markdown="1">
 
 **Source:** Example source note for a specific claim or figure.
 
-{: .gallery}
+</div>
+
+<div class="gallery" markdown="1">
 
 ![Gallery image one](https://placehold.co/800x600)
 ![Gallery image two](https://placehold.co/800x600)
 ![Gallery image three](https://placehold.co/800x600)
 
-{: .figure-pair}
+</div>
 
-<div>
+<div class="figure-pair" markdown="1">
+
+<div markdown="1">
 
 ![Then](https://placehold.co/900x600)
 
@@ -325,7 +391,7 @@ The original configuration.
 
 </div>
 
-<div>
+<div markdown="1">
 
 ![Now](https://placehold.co/900x600)
 
@@ -334,13 +400,17 @@ The modern configuration.
 
 </div>
 
-{: .aside}
+</div>
+
+<div class="aside" markdown="1">
 
 **Why it matters**
 
 An aside contains useful supporting context that should not interrupt the main narrative.
 
-{: .related-reading}
+</div>
+
+<div class="related-reading" markdown="1">
 
 ### Related Reading
 
@@ -348,10 +418,26 @@ An aside contains useful supporting context that should not interrupt the main n
 - [The History of Enterprise Computing](#)
 - [Virtualization Explained](#)
 
-{: .editorial-break}
+</div>
 
-{: .section-header}
+<div class="editorial-break"></div>
+
+<div class="section-header" markdown="1">
 
 ## End of Component Reference
 
-The page itself is intentionally ordinary Markdown plus semantic Kramdown attributes. That is the authoring model the design system is intended to support.
+</div>
+
+Multi-block components must use a wrapping element:
+
+```html
+<div class="takeaways" markdown="1">
+
+### Key Takeaways
+
+- List items stay inside the component
+
+</div>
+```
+
+Kramdown’s `{: .class}` alone only styles the **next single block**, which is why lists and following paragraphs were falling out of components.

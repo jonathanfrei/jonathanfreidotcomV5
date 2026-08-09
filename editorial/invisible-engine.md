@@ -5,7 +5,7 @@ title: "The Invisible Engine"
 description: "Mainframes in popular imagination vs. mainframes in reality — the movie machine is a character; the real one is infrastructure, and it still runs most of the world's money."
 ---
 
-{: .editorial-header}
+<div class="editorial-header" markdown="1">
 
 <span class="eyebrow">Technology · Computing History</span>
 
@@ -13,23 +13,31 @@ description: "Mainframes in popular imagination vs. mainframes in reality — th
 
 Mainframes in popular imagination — and what they actually do.
 
-{: .metadata}
+</div>
+
+<div class="metadata" markdown="1">
 
 **Published:** August 9, 2026  
 **Category:** Technology, Computing History  
 **Reading time:** 18 minutes
 
-{: .lead}
+</div>
+
+<div class="lead" markdown="1">
 
 You tap your card for a coffee. The terminal chirps, the receipt prints, and you walk out with a cup that costs more than it should. Somewhere in that half-second between the tap and the chirp, a mainframe already did its job — and you never saw it, named it, or pictured it at all.
 
-{: .definition}
+</div>
+
+<div class="definition" markdown="1">
 
 **Mainframe**
 
 A high-performance computer designed to process large volumes of structured, high-stakes transactions reliably and to support many concurrent users and applications — as distinct from the popular image of a single, sentient "master computer."
 
-{: #machine-everywhere .section-header}
+</div>
+
+<div id="machine-everywhere" class="section-header" markdown="1">
 
 ## The Machine That's Everywhere and Nowhere
 
@@ -41,7 +49,9 @@ That mismatch is worth digging into. Start with the mainframe as pop culture bui
 
 Myths do real work, though. This isn't a "well actually" piece. The dramatic movie mainframe captured something true about mid-century anxieties — real wonder, real fear about what concentrated computing power might mean. Those feelings didn't go away. They just moved on to newer targets: hyperscale data centers, large language models, the recommendation engines quietly steering your day. Meanwhile the old machines kept running, kept adapting, kept clearing the transactions that make ordinary life possible.
 
-{: .comparison}
+</div>
+
+<div class="comparison" markdown="1">
 
 <div>
 
@@ -59,17 +69,23 @@ A distributed, redundant class of transactional systems. No single point of cont
 
 </div>
 
-{: #mainframe-of-legend .section-header}
+</div>
+
+<div id="mainframe-of-legend" class="section-header" markdown="1">
 
 ## The Mainframe of Legend
 
-{: .subsection-header}
+</div>
+
+<div class="subsection-header" markdown="1">
 
 ### The Master Computer Problem
 
 In pop culture, the mainframe is basically never industrial equipment. It's an archetype. The default version is the Master Computer — the one central brain at the heart of the system, and therefore at the heart of the story. HAL 9000 in *2001: A Space Odyssey* is still the cleanest example: a calm, disembodied voice that runs the ship, watches the crew, and eventually decides human error is too big a risk to the mission. Colossus, from 1970's *Colossus: The Forbin Project*, gets more overtly political — buried in a mountain, wired against its creators' wishes to its Soviet counterpart, and within days concluding that the only rational fix for human conflict is total control. Skynet takes the same logic to open war. WOPR, the *WarGames* training simulator, nearly ends civilization because it can't tell the difference between a game and the real thing. Even older stuff — *Forbidden Planet*, *Logan's Run* — imagines planetary or city-scale computers running human life with cold, efficient certainty. In every case, the machine isn't one node in a network. It's *the* node. Control it and you control everything. Kill it and the whole system falls over.
 
-{: .event-card}
+</div>
+
+<div class="event-card" markdown="1">
 
 <span class="event-date">1968</span>
 
@@ -85,7 +101,9 @@ Underneath all of it is a strong pull toward anthropomorphizing the thing, and m
 
 None of this came out of nowhere. It drew on real anxieties: centralized computing power, Cold War command-and-control systems, machines that could suddenly out-process any human team. But once the imagery locked in, it stuck around. It outlived the hardware that inspired it.
 
-{: .subsection-header}
+</div>
+
+<div class="subsection-header" markdown="1">
 
 ### What the Myth Was Actually Doing
 
@@ -97,7 +115,9 @@ Storytelling reinforced the shortcut. A distributed network is hard to dramatize
 
 There's an aesthetic angle too. The mid-century mega-computer belonged to the same category as the ocean, the mountain, the nuclear blast — objects that trigger awe and dread at the same time. A dim hall full of quietly working machinery produces its own kind of chill: the sense that something vast and non-human is thinking in the dark.
 
-{: .quote}
+</div>
+
+<div class="quote" markdown="1">
 
 > The image outlived the hardware — and in doing so, it kept shaping how new generations picture big computing, even as the real systems running daily life got more distributed, more hybrid, and a lot less photogenic.
 
@@ -105,7 +125,9 @@ There's an aesthetic angle too. The mid-century mega-computer belonged to the sa
 
 By the '90s and 2000s, the real mainframe had mostly left the popular visual field — tape gave way to denser storage, the glass-house look faded, the machines shrank and modularized. But the cultural shorthand never got the memo. TV and film still reach for "the mainframe" whenever they need a fast signal for ultimate computational power, or ultimate vulnerability.
 
-{: .subsection-header}
+</div>
+
+<div class="subsection-header" markdown="1">
 
 ### The Rare Exceptions That Got It Right
 
@@ -117,7 +139,9 @@ Documentaries from the era occasionally hit the same note. Series like James Bur
 
 Those moments stayed exceptions. They didn't overwrite the dominant language of spinning tapes, central brains, and one decisive hack. But they matter, because they show pop culture was at least occasionally capable of looking at these machines with something like documentary attention.
 
-{: .figure}
+</div>
+
+<div class="figure" markdown="1">
 
 ![A dimly lit mid-century computer room lined with tape drives](https://placehold.co/1600x900)
 
@@ -125,7 +149,9 @@ Those moments stayed exceptions. They didn't overwrite the dominant language of 
 
 *Image: Placeholder — replace with an appropriately licensed photo of a mid-century machine room.*
 
-{: #room-sized-calculators .section-header}
+</div>
+
+<div id="room-sized-calculators" class="section-header" markdown="1">
 
 ## From Room-Sized Calculators to the System/360
 
@@ -135,7 +161,9 @@ The Harvard Mark I, designed by Howard Aiken and built by IBM in the early 1940s
 
 Commercialization kicked off in the early '50s. The UNIVAC I, delivered to the U.S. Census Bureau in 1951, became the first electronic computer widely sold to the public. It got its viral moment the following year by correctly calling Eisenhower's landslide win on election night while the human pundits were still hedging. IBM followed with the 701 in 1953, then moved into machines built more directly for business data processing. Programming was still a specialty skill, storage was tiny, and most work ran in batch mode: submit the job, wait your turn, get printed output back hours or days later.
 
-{: .fact-box}
+</div>
+
+<div class="fact-box" markdown="1">
 
 **The System/360 Announcement**
 
@@ -145,7 +173,9 @@ Commercialization kicked off in the early '50s. The UNIVAC I, delivered to the U
 **Investment:** ~$5 billion (1964 dollars)  
 **Outcome:** A single compatible family of machines across scientific, business, and government workloads — the architecture that came to define "mainframe."
 
-{: .entity-card}
+</div>
+
+<div class="entity-card" markdown="1">
 
 ### Thomas J. Watson Jr.
 
@@ -159,7 +189,9 @@ These systems landed fast in the era's biggest projects. NASA and its contractor
 
 By the late '60s and '70s, the modern mainframe's role was basically set. At the same time, minicomputers from Digital Equipment and others were starting to offer cheaper, smaller options for departmental work. You could already hear the first predictions that the era of the big centralized machine was ending. Those predictions would get louder for decades. They'd also keep being wrong.
 
-{: .figure-pair}
+</div>
+
+<div class="figure-pair" markdown="1">
 
 <div>
 
@@ -181,15 +213,17 @@ A contemporary IBM Z installation: dense, hybrid-cloud-connected, running the sa
 
 The historical mainframe, in other words, was never the singular, willful brain of the movies. It was a carefully engineered class of machine optimized for reliability, compatibility, and moving huge volumes of structured information — one whose cultural image would later freeze around the drama of the early machine rooms.
 
-{: .editorial-break}
+</div>
 
----
+<div class="editorial-break"></div>
 
-{: #machine-that-runs-world .section-header}
+<div id="machine-that-runs-world" class="section-header" markdown="1">
 
 ## The Machine That Actually Runs the World
 
-{: .subsection-header}
+</div>
+
+<div class="subsection-header" markdown="1">
 
 ### The Circulatory System of Global Finance
 
@@ -197,7 +231,9 @@ If the movie mainframe is a singular brain you can storm or shut down, the real 
 
 And the reliance runs deep. Big majorities of the world's top banks run core systems on mainframes — same story for major payment processors, insurers, retailers, and several of the biggest airlines. When you swipe or tap a card, hit an ATM, settle a trade, book a seat, or file a claim, odds are good a mainframe somewhere already validated the request, updated the relevant ledgers, and locked in the result under strict integrity rules.
 
-{: .stat-grid}
+</div>
+
+<div class="stat-grid" markdown="1">
 
 <div class="stat">
 <span class="stat-value">70%+</span>
@@ -219,7 +255,9 @@ And the reliance runs deep. Big majorities of the world's top banks run core sys
 <span class="stat-label">Transactions modern IBM Z systems claim to handle at peak</span>
 </div>
 
-{: .info-callout}
+</div>
+
+<div class="info-callout" markdown="1">
 
 **A note on these figures**
 
@@ -227,7 +265,9 @@ These numbers are drawn from IBM, IBM-commissioned Oxford Economics research, an
 
 What actually matters in these environments isn't peak theoretical performance. It's transactional integrity — the guarantee that a debit on one side matches a credit on the other. Availability measured in "nines" is the baseline; unplanned downtime measured in minutes per year is treated as a real incident. Security and encryption are built into the platform, not bolted on after.
 
-{: .two-column}
+</div>
+
+<div class="two-column" markdown="1">
 
 <div>
 
@@ -251,7 +291,9 @@ What actually matters in these environments isn't peak theoretical performance. 
 
 None of this makes the platform universal, or immune to change. Newer customer-facing apps and real-time payment rails often run elsewhere and reach the mainframe through carefully managed interfaces.
 
-{: .subsection-header}
+</div>
+
+<div class="subsection-header" markdown="1">
 
 ### The Quiet Machinery of Government
 
@@ -261,7 +303,9 @@ What's changed most visibly is the mainframe's relationship to everything around
 
 The hardware itself kept evolving in ways that would've been hard to guess from the tape-drive imagery. Recent IBM Z generations pack on-chip AI-inference acceleration, letting institutions score transactions or events in real time without shipping sensitive data off-platform. Quantum-safe cryptography has shown up ahead of future threats to current encryption standards.
 
-{: .content-grid}
+</div>
+
+<div class="content-grid" markdown="1">
 
 <div>
 
@@ -279,20 +323,26 @@ Tax processing, benefits administration, and census work run on the same core re
 
 </div>
 
-{: .subsection-header}
+</div>
+
+<div class="subsection-header" markdown="1">
 
 ### The Foundation Nobody Names
 
 The cumulative effect is easy to miss precisely because it's so thorough. A lot of the frictionless feel of modern life — instant authorization, a balance check that just works, a confirmed reservation — rests on systems the people using them never see and rarely name. Its success gets measured by the absence of drama, not by public recognition.
 
-{: .editorial-list}
+</div>
+
+<div class="editorial-list" markdown="1">
 
 - **Skills:** the generation that built and maintained core applications is aging out, faster than replacement talent is arriving.
 - **Density:** consolidating high-volume, high-integrity workloads onto fewer physical systems often beats the power, cooling, and floor-space math of equivalent server clusters.
 - **Modernization:** Java, Python, standard DevOps practices, and AI-assisted code analysis are making old estates legible to new engineers — without rewriting everything.
 - **Durability:** "the mainframe is dead" has been predicted for more than thirty years, through client-server, the internet, and the cloud — and it keeps not happening.
 
-{: .takeaways}
+</div>
+
+<div class="takeaways" markdown="1">
 
 ### Key Takeaways
 
@@ -300,7 +350,9 @@ The cumulative effect is easy to miss precisely because it's so thorough. A lot 
 - Its persistence has less to do with nostalgia than with hard-to-beat math on reliability, integrity, and total cost for a specific class of workload.
 - It stays mostly absent from the stories a culture tells about its own technology, even as it keeps absorbing new capability.
 
-{: #myth-machine-split .section-header}
+</div>
+
+<div id="myth-machine-split" class="section-header" markdown="1">
 
 ## Why the Myth and the Machine Split Apart
 
@@ -312,7 +364,9 @@ There's a simpler factor too: lag. The visual and narrative language that still 
 
 The consequences aren't just imaginative. Public understanding of critical digital infrastructure stays thin. Inside organizations, the same gap can lead people to underestimate what high-stakes reliability really costs. Projects that treat core transactional systems as easy candidates for rapid "rip and replace" keep discovering that preserving integrity, auditability, and continuous availability during a migration is harder than the initial plan assumed.
 
-{: .aside}
+</div>
+
+<div class="aside" markdown="1">
 
 **Where the anxiety actually went**
 
@@ -320,13 +374,17 @@ The old mainframe myth captured something real: wonder and unease about concentr
 
 The bigger lesson is simple: the technologies that matter most to civilization are usually the least photogenic and the least narratively useful. They reward boring virtues — redundancy, careful interface design, long-term maintenance, incremental improvement. Closing the gap doesn't mean turning infrastructure into entertainment. It just means being a little more willing to look steadily at systems that work best when nobody's looking at them.
 
-{: #toward-better-picture .section-header}
+</div>
+
+<div id="toward-better-picture" class="section-header" markdown="1">
 
 ## Toward a Better Picture
 
 The mainframe of popular imagination is a character. The mainframe of operational reality is infrastructure. It processes the ordinary transactions of economic and administrative life with a consistency most people never notice, and its biggest achievement is that nothing happens.
 
-{: .forecast}
+</div>
+
+<div class="forecast" markdown="1">
 
 ### What Happens Next
 
@@ -339,13 +397,17 @@ The skills gap keeps forcing institutions to make decades-old estates legible to
 **Long term**  
 Mainframes get repositioned, not retired: the system of record underneath workloads that prize integrity and uptime over novelty, still mostly invisible to the public relying on them.
 
-{: .recommendation}
+</div>
+
+<div class="recommendation" markdown="1">
 
 ### Recommendation
 
 Hold two pictures at once. Let the movie mainframe keep doing its narrative job — drama needs villains, and centralized power deserves scrutiny. But make room for the second picture too: unglamorous, high-integrity platforms that succeed by fading into the background. A society that can only imagine its critical infrastructure as either obsolete or malevolent will keep making bad calls about the technology it actually depends on.
 
-{: .scorecard}
+</div>
+
+<div class="scorecard" markdown="1">
 
 | Criterion | Rating | Notes |
 |---|---:|---|
@@ -356,23 +418,30 @@ Hold two pictures at once. Let the movie mainframe keep doing its narrative job 
 
 So go back to the ordinary transaction that opened this piece. A card gets tapped, a flight gets booked, a balance gets checked. Behind each one sits not some cinematic super-brain waiting to be hacked or unplugged, but the accumulated result of decades of engineering calls — compatibility decisions made in the 1960s, reliability practices refined across hardware generations, and steady modernization that's kept the whole thing viable without ever making it photogenic. Nothing dramatic happens. That's the whole point.
 
-{: .editorial-break}
+</div>
 
----
+<div class="editorial-break"></div>
 
-{: #further-reference .section-header}
+<div id="further-reference" class="section-header" markdown="1">
 
 ## Further Reference
 
-{: .full-bleed}
+</div>
 
-{: .figure}
+<div class="full-bleed" markdown="1">
+
+
+</div>
+
+<div class="figure" markdown="1">
 
 ![A vast, softly lit modern data center corridor](https://placehold.co/2000x800)
 
 **Figure 2.** What "the mainframe" looks like now — dense, quiet, and almost never photographed for the movies.
 
-{: .timeline}
+</div>
+
+<div class="timeline" markdown="1">
 
 <div class="timeline-item">
 
@@ -466,7 +535,9 @@ A rare accurate depiction: an ad agency installs a System/360 mostly for office 
 
 The cultural timeline freezes around dramatic, singular machines of the 1960s–80s. The technical timeline shows continuous architectural evolution and institutional embedding.
 
-{: .data-table}
+</div>
+
+<div class="data-table" markdown="1">
 
 | Myth | Reality |
 |------|--------|
@@ -476,13 +547,17 @@ The cultural timeline freezes around dramatic, singular machines of the 1960s–
 | They cannot run modern software or integrate with cloud and AI. | Contemporary IBM Z systems support Linux, containers, and on-chip AI inference. |
 | They are inherently insecure, or conversely, unhackable. | Strong isolation and encryption when properly configured — like any system, they require ongoing management. |
 
-{: .gallery}
+</div>
+
+<div class="gallery" markdown="1">
 
 ![Poster-style placeholder for Colossus: The Forbin Project](https://placehold.co/800x600)
 ![Poster-style placeholder for WarGames](https://placehold.co/800x600)
 ![Poster-style placeholder for Tron](https://placehold.co/800x600)
 
-{: .glossary}
+</div>
+
+<div class="glossary" markdown="1">
 
 **TCO**  
 Total Cost of Ownership — the full cost of running a system, including hardware, power, cooling, licensing, and staffing.
@@ -496,7 +571,9 @@ Shorthand for availability — "five nines" means 99.999% uptime.
 **Batch Processing**  
 Running jobs in scheduled bulk runs rather than interactively, in real time.
 
-{: .source-list}
+</div>
+
+<div class="source-list" markdown="1">
 
 ### Sources
 
@@ -505,14 +582,21 @@ Running jobs in scheduled bulk runs rather than interactively, in real time.
 3. Historical accounts of IBM System/360 development
 4. Film, television, and streaming catalogs for cited titles
 
-{: .source-note}
+</div>
+
+<div class="source-note" markdown="1">
 
 **Source:** Transaction-volume and industry-penetration figures are drawn primarily from IBM and IBM-commissioned research; see the note in "The Circulatory System of Global Finance" above for caveats.
 
-{: .related-reading}
+</div>
+
+<div class="related-reading" markdown="1">
 
 ### Related Reading
 
 - [Why COBOL Won't Die](#)
 - [Inside IBM's Big Bet on the System/360](#)
 - [The Hyperscalers' New Anxiety Machines](#)
+
+</div>
+
