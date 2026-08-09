@@ -160,6 +160,8 @@ Desired URLs: `/about`, `/blog`, `/2026/08/05/slug`, `/tags/foo` — **not** `/a
   ```
   Kramdown `{: .class}` alone only styles the **next single block** (not following lists).
 - Requires `kramdown.parse_block_html: true` (already set).
+- **Layout:** CSS Grid (not multi-column fragmentation). Prose spans full width with `max-width: ~38rem` measure. Compact cards (definition, callouts, event/entity) sit 1–3 across on wide screens; wide components (header, figures, tables, composition grids) always span full width.
+- **Dark mode:** brand tokens remap in `main.css` so `--ed-deep` / `--ed-ice` stay readable on dark surfaces.
 - Component reference: `/editorial/design-system`
 - Sample article: `/editorial/invisible-engine`
 - Plugin only manages top-level `.html` files; `.md` pages are normal Jekyll pages
