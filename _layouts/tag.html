@@ -10,8 +10,8 @@ layout: default
   {% assign archive_name = archive_name | remove_first: 'Tag: ' %}
 {% endif %}
 <article class="prose">
-  <header class="mb-6">
-    <h1 class="mt-0">Tag: {{ archive_name }}</h1>
+  <header class="page-title">
+    <h1>Tag: {{ archive_name }}</h1>
   </header>
 
   <ul class="post-list">
@@ -28,7 +28,7 @@ layout: default
 
   {% include pagination.html %}
 
-  <p class="mt-8">
+  <p class="post-nav">
     <a href="{{ '/tags' | relative_url }}">&larr; All tags</a>
   </p>
 </article>

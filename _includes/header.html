@@ -1,9 +1,9 @@
 <header class="site-header">
-  <div class="container flex items-center justify-between gap-4">
+  <div class="container">
     <a href="{{ '/' | relative_url }}" class="site-logo">
       {{ site.title }}
     </a>
-    <nav class="site-nav flex gap-4" aria-label="Main">
+    <nav class="site-nav" aria-label="Main">
       <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
       <a href="{{ '/blog' | relative_url }}"{% if page.url == '/blog' or page.url == '/blog.html' or page.url contains '/blog/page/' or page.layout == 'post' %} aria-current="page"{% endif %}>Blog</a>
       <a href="{{ '/archive' | relative_url }}"{% if page.url == '/archive' or page.url == '/archive.html' or page.url contains '/archive/' %} aria-current="page"{% endif %}>Archive</a>
