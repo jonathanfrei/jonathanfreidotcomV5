@@ -13,3 +13,7 @@ node_modules/
 .obsidian/appearance.json
 .obsidian/core-plugins.json
 .obsidian/workspace.json
+_posts/.obsidian/app.json
+_posts/.obsidian/appearance.json
+_posts/.obsidian/core-plugins.json
+_posts/.obsidian/workspace.json
