@@ -1,0 +1,72 @@
+/* =========================================================
+   Media embeds — optional sheet (#165)
+   Inlined only when the page has embed markup (url_embeds or hand-authored).
+   ========================================================= */
+
+.embed {
+  margin-block: var(--space-6);
+  max-width: 100%;
+}
+
+.embed-video {
+  width: 100%;
+}
+
+.embed-video__inner {
+  position: relative;
+  width: 100%;
+  padding-bottom: var(--embed-ratio, 56.25%);
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--color-code-bg);
+}
+
+.embed-video__inner iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.embed-spotify iframe,
+.embed-twitter,
+.embed-instagram,
+.embed-tiktok,
+.embed-flickr,
+.embed-imgur {
+  width: 100%;
+  max-width: 100%;
+}
+
+.embed-twitter blockquote,
+.embed-instagram blockquote,
+.embed-tiktok blockquote {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.embed-imgur-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  border-radius: var(--radius);
+  background: var(--color-code-bg);
+}
+
+.embed-flickr img,
+.embed-imgur img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+  border-radius: var(--radius);
+}
+
+.embed-fallback {
+  text-align: center;
+  margin-top: var(--space-2);
+}

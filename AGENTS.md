@@ -152,10 +152,14 @@ Desired URLs: `/about`, `/blog`, `/2026/08/05/slug`, `/tags/foo` — **not** `/a
 ### 2. CSS — brand system + optional sheets
 
 - **Brand (#145):** `_includes/main.css` — Paper `#FAF9F6`, Ink `#111C24`, Signature Blue `#0077A8` (use blue sparingly). Full token table in that file (blue scale + editorial accents + UI semantics).
-- **Code only:** `_includes/code.css` — inlined when content has `<pre` / `CodeRay`
+- **Feature sheets (#165):** gated by `_includes/optional-css.html` (content probes; no PurgeCSS/Node build — keeps Jekyll-only + inlined delivery / no CLS):
+  - `_includes/code.css` — fenced code / CodeRay (`<pre` / `CodeRay`)
+  - `_includes/search.css` — search box (`search-ui` / `search-input`)
+  - `_includes/embeds.css` — media embeds (`class="embed` / `data-embed=`)
+  - `_includes/pagination.css` — paginated lists (`pagination-list`)
 - **Editorial (#144):** `_includes/editorial.css` + `layout: editorial` — Kramdown semantic components (`.lead`, `.figure`, `.stat-grid`, …). Inlined with main.css on editorial pages.
 - **Delivery:** inlined `<style>` in layouts (no async CSS hop; avoids CLS)
-- Tooling: `/assets/css/main.css`, `/assets/css/editorial.css`
+- Tooling: `/assets/css/main.css` (full combined), `/assets/css/editorial.css`
 - **Never** use `{% include_relative ../... %}` — Jekyll rejects `../`
 - Prefer semantic classes over utility soup
 - Kramdown: `parse_block_html: true` (Markdown inside HTML blocks for editorial components)
@@ -223,7 +227,7 @@ Production depends on two external services for media (configured in `_config.ym
 
 ## Design system (short)
 
-- Tokens/components: `_includes/main.css` (see §2); code styles in `code.css`
+- Tokens/components: `_includes/main.css` (see §2); feature sheets via `optional-css.html`
 - Principles: readable measure, simple type scale, two custom faces, restrained accent, light default + dark
 - Prefer semantic classes (`.prose`, `.post-meta`, `.tag`, `.post-list`, `.post-header`) over one-off or utility CSS
 - Accessibility: keep skip link, focus styles, semantic HTML, sensible contrast
