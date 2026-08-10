@@ -4,6 +4,7 @@ on:
   push:
     branches: ["main"]
     # Drafts/docs-only commits should not rebuild (#29).
+    include: ["_pages"]
     paths-ignore:
       - "_x7k9p/**"
       - "README.md"
