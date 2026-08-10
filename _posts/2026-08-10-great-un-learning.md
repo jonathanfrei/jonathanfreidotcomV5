@@ -2,16 +2,14 @@
 title: "The Great Un-Learning: Why Forgetting Old Skills Matters as Much as Acquiring New Ones"
 date: "2026-08-09"
 tags:
-  - organizational-change
+  - organizational change
   - leadership
-  - AI-transformation
+  - AI transformation
   - culture
-  - talent-management
-  - future-of-work
+  - talent management
+  - future of work
 description: "Most AI transformations fail because we ignore the harder half of change: deliberately abandoning what used to work."
 ---
-
-# The Great Un-Learning: Why Forgetting Old Skills Matters as Much as Acquiring New Ones
 
 When the tide goes out, you see who's swimming naked. 
 
