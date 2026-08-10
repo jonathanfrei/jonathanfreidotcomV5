@@ -2,7 +2,6 @@
 layout: post
 title: "SpaceX’s First Earnings Report: A High-Stakes Test of Belief"
 date: 2026-08-05 10:30:00 -0400
-categories: [markets]
 tags: [spacex, stocks, investing, starlink, starship, ipo, markets]
 ---
 
