@@ -4,18 +4,14 @@
   {% include head.html %}
   {% comment %}
     Editorial pages (#144): site design system + editorial component CSS.
-    Brand tokens from main.css (#145). No narrow .container wrapper — editorial
-    measure is controlled by component classes.
+    Brand tokens from main.css (#145). Feature sheets gated like default (#165).
+    No narrow .container wrapper — measure is controlled by component classes.
   {% endcomment %}
   <style>
 {% include main.css %}
 {% include editorial.css %}
   </style>
-  {% if content contains '<pre' or content contains 'CodeRay' %}
-  <style>
-{% include code.css %}
-  </style>
-  {% endif %}
+  {% include optional-css.html %}
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
