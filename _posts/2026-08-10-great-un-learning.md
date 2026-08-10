@@ -11,7 +11,7 @@ tags:
 description: "Most AI transformations fail because we ignore the harder half of change: deliberately abandoning what used to work."
 ---
 
-When the tide goes out, you see who's swimming naked. 
+When the tide goes out, you see who's swimming naked.
 
 In the AI era, the tide is reversing course. Global AI spending will top $200 billion this year, yet most companies get disappointing returns. Leaders blame the tech. Bad data. Immature models.
 
