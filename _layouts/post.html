@@ -30,13 +30,13 @@ layout: default
   <p class="post-comment-link">
     <a href="mailto:hi+comments@jonathanfrei.com?subject={{ 'Comment on: ' | append: page.title | uri_escape }}&body={{ 'Post: ' | append: page.title | append: '%0A' | append: page.url | absolute_url | uri_escape }}">Comment</a>
     <span class="post-actions-sep" aria-hidden="true">·</span>
-    <a href="https://github.com/jonathanfrei/jonathanfreidotcomV5/edit/main/{{ page.path }}" target="_blank" rel="noopener noreferrer">PR</a>
+    <a href="https://github.com/jonathanfrei/jonathanfreidotcomV5/edit/main/{{ page.path }}" target="_blank" rel="noopener noreferrer">Edit</a>
     <span class="post-actions-sep" aria-hidden="true">·</span>
     {% comment %}
       Random post: no post list in HTML (would be N URLs on every post page).
       Tiny click handler fetches shared /search.json once, then navigates (#130).
     {% endcomment %}
-    <a href="{{ '/blog' | relative_url }}" id="random-post-link" class="random-post-link" data-current="{{ page.url | relative_url }}" data-posts-url="{{ '/search.json' | relative_url }}">Random</a>
+    <a href="{{ '/blog' | relative_url }}" id="random-post-link" class="random-post-link" data-current="{{ page.url | relative_url }}" data-posts-url="{{ '/search.json' | relative_url }}">Random Post</a>
   </p>
 </article>
 
