@@ -2,5 +2,12 @@
 layout: null
 permalink: /assets/css/main.css
 ---
+{% comment %}
+  Full combined sheet for tooling / inspection. Runtime pages inline main.css
+  plus only the feature sheets they need (optional-css.html, #165).
+{% endcomment %}
 {% include main.css %}
 {% include code.css %}
+{% include search.css %}
+{% include embeds.css %}
+{% include pagination.css %}

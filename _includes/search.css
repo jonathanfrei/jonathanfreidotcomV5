@@ -1,0 +1,59 @@
+/* =========================================================
+   Search UI — optional sheet (#165)
+   Inlined only when the page includes the search box.
+   ========================================================= */
+
+.search-ui {
+  margin-bottom: var(--space-6);
+}
+
+/* Archive page: more space under the search field before the month list */
+.search-ui:has(+ .archive-list) {
+  margin-bottom: var(--space-8);
+}
+
+.search-input {
+  appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 24rem;
+  min-height: 2.75rem;
+  padding: 0.55rem 0.85rem;
+  font-family: var(--font-ui);
+  font-size: 1rem; /* avoid nested em shrink from page type scale */
+  line-height: 1.4;
+  color: var(--color-fg);
+  background: var(--color-surface, #fff);
+  border: 1.5px solid var(--brand-charcoal, #3D4A52);
+  border-radius: var(--radius);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--color-fg) 4%, transparent);
+}
+
+.search-input::placeholder {
+  color: var(--color-muted);
+  opacity: 1;
+}
+
+.search-input:hover {
+  border-color: var(--color-accent);
+}
+
+.search-input:focus,
+.search-input:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-color: var(--color-accent);
+  background: var(--color-surface, #fff);
+}
+
+/* Normalize WebKit search decorations that hide the field on some browsers */
+.search-input::-webkit-search-decoration,
+.search-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.search-ui #search-results {
+  margin-top: var(--space-6);
+}

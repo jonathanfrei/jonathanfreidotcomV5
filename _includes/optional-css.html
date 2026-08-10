@@ -1,0 +1,25 @@
+{% comment %}
+  Feature CSS sheets inlined only when the rendered content needs them (#165).
+  Mirrors code.css gating: no async hop, no CLS, smaller default payload.
+  Detection uses the layout `content` (includes nested layout output).
+{% endcomment %}
+{% if content contains '<pre' or content contains 'CodeRay' %}
+<style>
+{% include code.css %}
+</style>
+{% endif %}
+{% if content contains 'search-ui' or content contains 'search-input' %}
+<style>
+{% include search.css %}
+</style>
+{% endif %}
+{% if content contains 'class="embed' or content contains "class='embed" or content contains 'data-embed=' %}
+<style>
+{% include embeds.css %}
+</style>
+{% endif %}
+{% if content contains 'pagination-list' or content contains 'class="pagination"' %}
+<style>
+{% include pagination.css %}
+</style>
+{% endif %}
