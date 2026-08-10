@@ -80,10 +80,6 @@ autopages:
   collections:
     enabled: false
 
-# Added _Pages sub directory
-    include: ["_pages"]
-
-
 # Month archive pages only (tags/categories handled by paginate-v2 autopages)
 # Must use trailing slash → directory/index.html. Without it, jekyll-archives
 # writes extensionless files (archive/2016/01) that GH Pages downloads.
