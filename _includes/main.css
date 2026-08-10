@@ -718,6 +718,16 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   margin: var(--space-2) 0 0;
 }
 
+/* Post meta: published · Updated · N min read (#75) */
+.post-meta__sep {
+  margin: 0 0.15em;
+}
+
+.post-meta__updated,
+.post-meta__reading {
+  white-space: nowrap;
+}
+
 .post-meta {
   font-family: var(--font-mono);
   font-size: var(--type-sm);
