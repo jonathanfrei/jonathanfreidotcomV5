@@ -2,7 +2,6 @@
 layout: post
 title: "When Canadian Wildfires Reach Florida: The Hidden Impact on Tourism"
 date: 2026-08-05 10:36:00 -0400
-categories: [tourism]
 tags: [florida, tourism, wildfires, canada, climate, travel]
 ---
 
