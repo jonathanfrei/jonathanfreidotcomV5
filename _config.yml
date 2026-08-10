@@ -54,6 +54,10 @@ pagination:
     before: 2
     after: 2
 
+# Public tag archives require at least this many posts (issue #140).
+# Singleton tags stay on posts as non-link chips; no /tags/:name page.
+tag_archive_min_posts: 2
+
 # Auto-generated paginated tag + category pages (jekyll-paginate-v2)
 autopages:
   enabled: true
@@ -122,6 +126,13 @@ archive_media:
 static_html:
   roots:
     - editorial
+
+# Root-level pages live under _pages/ (issue #161). Underscore dirs are
+# excluded by default; include forces Jekyll to read them as pages.
+# Permalinks: front matter wins; otherwise _plugins/pages_dir.rb maps
+# _pages/about.md → /about and _pages/services/x.md → /services/x.
+include:
+  - _pages
 
 # Exclude from processing (including obfuscated drafts folder)
 exclude:

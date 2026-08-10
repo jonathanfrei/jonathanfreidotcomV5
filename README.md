@@ -91,7 +91,8 @@ Optional: “Cache Everything” for HTML with a short Edge TTL (e.g. 2 hours) i
 ├── assets/css/main.html           # /assets/css/main.css (tooling)
 ├── _config.yml
 ├── Gemfile
-├── index.md, about.md, blog.md
+├── _pages/                        # Site pages (about, blog, tags, …)
+├── index.md
 └── robots.txt
 ```
 
