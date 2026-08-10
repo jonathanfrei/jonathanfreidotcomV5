@@ -14,6 +14,10 @@
 #   Imgur    – i.imgur.com/{id}.{ext}, imgur.com/{id}, imgur.com/a/{id}, imgur.com/gallery/{id}
 #   Flickr   – flickr.com/photos/{user}/{id}, flic.kr/p/{shortcode}
 #
+# HTML is emitted with markdown="0" and no leading indentation so Kramdown's
+# parse_block_html does not treat embed markup as a fenced/indented code block
+# (issues #156, #157).
+#
 # Usage in a post/page:
 #
 #   Some text.
@@ -30,6 +34,9 @@ module Jekyll
       (https?://[^\s<>\[\]]+)
       \s*(?=\n|\z)
     }x.freeze
+
+    # Imgur image hashes are 5–8 alnum chars; SEO gallery slugs end with that hash.
+    IMGUR_HASH = /[A-Za-z0-9]{5,8}/.freeze
 
     module_function
 
@@ -58,14 +65,17 @@ module Jekyll
         spotify($1, $2)
       when %r{codepen\.io/([^/]+)/pen/([A-Za-z0-9]+)}
         codepen($1, $2)
+      # Direct CDN video: i.imgur.com/{id}.gifv|.mp4|.webm
+      when %r{i\.imgur\.com/(#{IMGUR_HASH.source})\.(?:gifv|mp4|webm)}i
+        imgur_video($1)
       # Direct CDN image: i.imgur.com/{id}.{ext}
       when %r{i\.imgur\.com/([A-Za-z0-9]+)(\.[a-zA-Z0-9]+)?}i
         imgur_image(url, $1, $2)
-      # Album: imgur.com/a/{id}
-      when %r{imgur\.com/a/([A-Za-z0-9]+)}i
+      # Album: imgur.com/a/{id} (SEO slugs may include hyphens)
+      when %r{imgur\.com/a/([A-Za-z0-9-]+)}i
         imgur_album($1)
-      # Gallery: imgur.com/gallery/{id}
-      when %r{imgur\.com/gallery/([A-Za-z0-9]+)}i
+      # Gallery: imgur.com/gallery/{id-or-seo-slug}
+      when %r{imgur\.com/gallery/([A-Za-z0-9-]+)}i
         imgur_gallery($1)
       # Single post page: imgur.com/{id} (exclude /user, /t/, etc.)
       when %r{imgur\.com/(?!a/|gallery/|user/|t/|r/|signin)([A-Za-z0-9]+)(?:\.[a-zA-Z0-9]+)?(?:[/?#]|$)}i
@@ -100,12 +110,12 @@ module Jekyll
     end
 
     def twitter(url, id)
-      <<~HTML
+      <<~HTML.gsub(/^[ \t]+/, "")
 
-        <div class="embed embed-twitter" data-embed="twitter">
-          <blockquote class="twitter-tweet" data-dnt="true">
-            <a href="https://twitter.com/i/status/#{id}">View post on X</a>
-          </blockquote>
+        <div class="embed embed-twitter" data-embed="twitter" markdown="0">
+        <blockquote class="twitter-tweet" data-dnt="true">
+        <a href="https://twitter.com/i/status/#{id}">View post on X</a>
+        </blockquote>
         </div>
 
       HTML
@@ -114,24 +124,24 @@ module Jekyll
     def instagram(url, code)
       canonical = url.sub(%r{/reels/}, "/reel/").split("?").first
       canonical += "/" unless canonical.end_with?("/")
-      <<~HTML
+      <<~HTML.gsub(/^[ \t]+/, "")
 
-        <div class="embed embed-instagram" data-embed="instagram">
-          <blockquote class="instagram-media" data-instgrm-permalink="#{canonical}" data-instgrm-version="14" style="width:100%; max-width:540px; margin:0 auto;">
-            <a href="#{canonical}">View post on Instagram</a>
-          </blockquote>
+        <div class="embed embed-instagram" data-embed="instagram" markdown="0">
+        <blockquote class="instagram-media" data-instgrm-permalink="#{canonical}" data-instgrm-version="14" style="width:100%; max-width:540px; margin:0 auto;">
+        <a href="#{canonical}">View post on Instagram</a>
+        </blockquote>
         </div>
 
       HTML
     end
 
     def tiktok(url, id)
-      <<~HTML
+      <<~HTML.gsub(/^[ \t]+/, "")
 
-        <div class="embed embed-tiktok" data-embed="tiktok">
-          <blockquote class="tiktok-embed" cite="#{url}" data-video-id="#{id}" style="max-width:605px; min-width:325px; margin:0 auto;">
-            <a href="#{url}">View on TikTok</a>
-          </blockquote>
+        <div class="embed embed-tiktok" data-embed="tiktok" markdown="0">
+        <blockquote class="tiktok-embed" cite="#{url}" data-video-id="#{id}" style="max-width:605px; min-width:325px; margin:0 auto;">
+        <a href="#{url}">View on TikTok</a>
+        </blockquote>
         </div>
 
       HTML
@@ -139,10 +149,10 @@ module Jekyll
 
     def spotify(type, id)
       height = %w[track episode].include?(type) ? 152 : 352
-      <<~HTML
+      <<~HTML.gsub(/^[ \t]+/, "")
 
-        <div class="embed embed-spotify" data-embed="spotify">
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/#{type}/#{id}" width="100%" height="#{height}" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="embed embed-spotify" data-embed="spotify" markdown="0">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/#{type}/#{id}" width="100%" height="#{height}" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
 
       HTML
@@ -166,22 +176,42 @@ module Jekyll
       ext = ".jpg" if ext.empty?
       # Normalize bare id pages that matched as i.imgur.com/{id}
       src = "https://i.imgur.com/#{id}#{ext}" unless src.include?("i.imgur.com")
-      <<~HTML
+      <<~HTML.gsub(/^[ \t]+/, "")
 
-        <figure class="embed embed-imgur" data-embed="imgur">
-          <img src="#{src}" alt="Imgur image" loading="lazy" decoding="async" />
+        <figure class="embed embed-imgur" data-embed="imgur" markdown="0">
+        <img src="#{src}" alt="Imgur image" loading="lazy" decoding="async" />
         </figure>
 
       HTML
     end
 
-    def imgur_album(id)
-      imgur_blockquote("a/#{id}", "https://imgur.com/a/#{id}")
+    # Hosted gifv/mp4 → native video (no Imgur widget required)
+    def imgur_video(id)
+      <<~HTML.gsub(/^[ \t]+/, "")
+
+        <div class="embed embed-imgur embed-imgur-video" data-embed="imgur" markdown="0">
+        <video controls playsinline loop muted preload="metadata" poster="https://i.imgur.com/#{id}.jpg">
+        <source src="https://i.imgur.com/#{id}.mp4" type="video/mp4">
+        </video>
+        </div>
+
+      HTML
     end
 
-    def imgur_gallery(id)
-      # Gallery embeds use the same data-id form as albums when applicable
-      imgur_blockquote(id, "https://imgur.com/gallery/#{id}")
+    def imgur_album(slug)
+      id = imgur_resolve_id(slug)
+      imgur_blockquote("a/#{id}", "https://imgur.com/a/#{slug}")
+    end
+
+    def imgur_gallery(slug)
+      id = imgur_resolve_id(slug)
+      # SEO slugs (hyphenated) are almost always a single image/video; embed
+      # with the trailing hash so the official widget loads the right media.
+      if slug.include?("-")
+        imgur_blockquote(id, "https://imgur.com/gallery/#{slug}")
+      else
+        imgur_blockquote(id, "https://imgur.com/gallery/#{id}")
+      end
     end
 
     def imgur_single(id)
@@ -189,13 +219,21 @@ module Jekyll
       imgur_image("https://i.imgur.com/#{id}.jpg", id, ".jpg")
     end
 
-    def imgur_blockquote(data_id, href)
-      <<~HTML
+    # Extract the real Imgur hash from SEO slugs like "warning-canadian-porn-dvYAhGa".
+    def imgur_resolve_id(slug)
+      return slug if slug.match?(/\A#{IMGUR_HASH.source}\z/)
 
-        <div class="embed embed-imgur" data-embed="imgur">
-          <blockquote class="imgur-embed-pub" lang="en" data-id="#{data_id}">
-            <a href="#{href}">View on Imgur</a>
-          </blockquote>
+      trailing = slug[/-((?:#{IMGUR_HASH.source}))\z/, 1]
+      trailing || slug
+    end
+
+    def imgur_blockquote(data_id, href)
+      <<~HTML.gsub(/^[ \t]+/, "")
+
+        <div class="embed embed-imgur" data-embed="imgur" markdown="0">
+        <blockquote class="imgur-embed-pub" lang="en" data-id="#{data_id}">
+        <a href="#{href}">View on Imgur</a>
+        </blockquote>
         </div>
 
       HTML
@@ -220,22 +258,23 @@ module Jekyll
     end
 
     def flickr_embed_link(href, label)
-      <<~HTML
+      <<~HTML.gsub(/^[ \t]+/, "")
 
-        <div class="embed embed-flickr" data-embed="flickr">
-          <a data-flickr-embed="true" data-header="false" data-footer="true" href="#{href}" title="#{label}">#{label}</a>
+        <div class="embed embed-flickr" data-embed="flickr" markdown="0">
+        <a data-flickr-embed="true" data-header="false" data-footer="true" href="#{href}" title="#{label}">#{label}</a>
         </div>
 
       HTML
     end
 
     def wrap_video(iframe_html, ratio: "56.25%")
-      <<~HTML
+      # No indentation inside the shell: parse_block_html + indented lines → CodeRay (#156).
+      <<~HTML.gsub(/^[ \t]+/, "")
 
-        <div class="embed embed-video" data-embed="video" style="--embed-ratio: #{ratio};">
-          <div class="embed-video__inner">
-            #{iframe_html}
-          </div>
+        <div class="embed embed-video" data-embed="video" style="--embed-ratio: #{ratio};" markdown="0">
+        <div class="embed-video__inner">
+        #{iframe_html}
+        </div>
         </div>
 
       HTML
