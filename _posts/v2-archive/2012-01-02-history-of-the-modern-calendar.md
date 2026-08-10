@@ -7,6 +7,6 @@ tumblr_id: "15180127364"
 
 [Jeremiah Warren](http://www.jeremiahwarren.com/) made this quick history of the modern calendar.
 
-<iframe src="http://www.youtube.com/embed/kzprsR2SvrQ" title="embedded media" width="500" height="281" frameborder="0" allowfullscreen></iframe>
+https://www.youtube.com/watch?v=kzprsR2SvrQ
 
 via [Laughing Squid](http://laughingsquid.com)
