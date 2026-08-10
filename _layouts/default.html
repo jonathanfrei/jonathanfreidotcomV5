@@ -3,17 +3,13 @@
 <head>
   {% include head.html %}
   {% comment %}
-    Single inlined design system (main.css). Code chrome + CodeRay only when
-    the page has fenced code — keeps most pages lean with no CLS risk.
+    Core design system always inlined. Feature sheets (code, search, embeds,
+    pagination) only when content needs them — no async hop, no CLS (#165).
   {% endcomment %}
   <style>
 {% include main.css %}
   </style>
-  {% if content contains '<pre' or content contains 'CodeRay' %}
-  <style>
-{% include code.css %}
-  </style>
-  {% endif %}
+  {% include optional-css.html %}
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
