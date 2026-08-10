@@ -15,17 +15,16 @@ layout: default
     {{ content }}
   </div>
 
-  {% if page.tags.size > 0 %}
+  {%- if page.tags.size > 0 -%}
   <div class="post-tags">
     <span class="sr-only">Tags:</span>
     <ul class="post-tags__list" itemprop="keywords">
-      {% for tag in page.tags %}
-        {% assign tag_str = tag | append: "" %}
-        <li><a href="{{ '/tags/' | relative_url }}{{ tag_str | slugify }}" class="tag">{{ tag_str }}</a></li>
-      {% endfor %}
+      {%- for tag in page.tags -%}
+        <li>{% include tag-chip.html tag=tag %}</li>
+      {%- endfor -%}
     </ul>
   </div>
-  {% endif %}
+  {%- endif -%}
 
   <p class="post-comment-link">
     <a href="mailto:hi+comments@jonathanfrei.com?subject={{ 'Comment on: ' | append: page.title | uri_escape }}&body={{ 'Post: ' | append: page.title | append: '%0A' | append: page.url | absolute_url | uri_escape }}">Comment</a>

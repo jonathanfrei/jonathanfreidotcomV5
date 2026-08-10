@@ -14,15 +14,14 @@ Short posts and notes.
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       <div class="post-meta">
         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-        {% if post.tags.size > 0 %}
+        {%- if post.tags.size > 0 -%}
           ·
           <span class="tag-row">
-          {% for tag in post.tags %}
-            {% assign tag_str = tag | append: "" %}
-            <a href="{{ '/tags/' | relative_url }}{{ tag_str | slugify }}" class="tag">{{ tag_str }}</a>
-          {% endfor %}
+          {%- for tag in post.tags -%}
+            {% include tag-chip.html tag=tag %}
+          {%- endfor -%}
           </span>
-        {% endif %}
+        {%- endif -%}
       </div>
       {% if post.excerpt %}
         <p class="excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
