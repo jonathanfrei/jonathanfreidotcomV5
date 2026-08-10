@@ -244,6 +244,52 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.01em;
 }
 
+/* Heading permalinks (#160): icon left of text on hover; click heading or icon */
+.prose :is(h1, h2, h3, h4, h5, h6) {
+  position: relative;
+}
+
+.prose :is(h1, h2, h3, h4, h5, h6) > a.heading-anchor {
+  color: inherit;
+  text-decoration: none;
+}
+
+.prose :is(h1, h2, h3, h4, h5, h6) > a.heading-anchor:hover,
+.prose :is(h1, h2, h3, h4, h5, h6) > a.heading-anchor:focus-visible {
+  color: inherit;
+  text-decoration: none;
+}
+
+.heading-anchor__icon {
+  position: absolute;
+  left: -0.95em;
+  width: 0.9em;
+  margin-left: 0;
+  font-family: var(--font-mono);
+  font-size: 0.75em;
+  font-weight: 400;
+  line-height: inherit;
+  color: var(--color-muted);
+  opacity: 0;
+  transition: opacity 0.12s ease;
+  text-decoration: none;
+  user-select: none;
+}
+
+.prose :is(h1, h2, h3, h4, h5, h6):hover .heading-anchor__icon,
+.prose :is(h1, h2, h3, h4, h5, h6):focus-within .heading-anchor__icon,
+.heading-anchor:focus-visible .heading-anchor__icon {
+  opacity: 1;
+  color: var(--color-accent);
+}
+
+@media (hover: none) {
+  /* Touch: keep icon discoverable without hover */
+  .heading-anchor__icon {
+    opacity: 0.35;
+  }
+}
+
 h1 {
   font-size: var(--type-3xl);
   margin-top: 0;
@@ -750,6 +796,21 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 .tag:focus-visible {
   color: var(--color-accent);
   text-decoration: none;
+}
+
+/* Singleton tags: same chip, not a link (#140) */
+.tag--solo,
+span.tag {
+  cursor: default;
+  opacity: 0.72;
+  border: 1px dashed var(--color-border);
+  background: transparent;
+}
+
+.tag--solo:hover,
+.tag--solo:focus,
+span.tag:hover {
+  color: var(--color-muted);
 }
 
 .post-tags {

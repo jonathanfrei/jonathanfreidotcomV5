@@ -41,27 +41,36 @@ description: Hierarchical map of pages, sections, tags, and recent posts on jona
     </li>
     <li>
       <a href="{{ '/tags' | relative_url }}">Tags</a>
-      {% if site.tags.size > 0 %}
+      {%- assign tag_min = site.tag_archive_min_posts | default: 2 -%}
+      {%- assign has_multi_tags = false -%}
+      {%- for tag in site.tags -%}
+        {%- if tag[1].size >= tag_min -%}
+          {%- assign has_multi_tags = true -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if has_multi_tags -%}
       <ul class="site-map__chips">
-        {% assign tag_names = site.tags | sort %}
-        {% for tag in tag_names %}
-          {% assign tag_name = tag[0] | append: "" %}
+        {%- assign tag_names = site.tags | sort -%}
+        {%- for tag in tag_names -%}
+          {%- assign tag_name = tag[0] | append: "" -%}
+          {%- if tag[1].size >= tag_min -%}
           <li><a class="tag" href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}">{{ tag_name }}</a></li>
-        {% endfor %}
+          {%- endif -%}
+        {%- endfor -%}
       </ul>
-      {% endif %}
+      {%- endif -%}
     </li>
     <li>
       <a href="{{ '/categories' | relative_url }}">Categories</a>
-      {% if site.categories.size > 0 %}
+      {%- if site.categories.size > 0 -%}
       <ul class="site-map__chips">
-        {% assign cat_names = site.categories | sort %}
-        {% for cat in cat_names %}
-          {% assign cat_name = cat[0] | append: "" %}
+        {%- assign cat_names = site.categories | sort -%}
+        {%- for cat in cat_names -%}
+          {%- assign cat_name = cat[0] | append: "" -%}
           <li><a class="tag" href="{{ '/categories/' | relative_url }}{{ cat_name | slugify }}">{{ cat_name }}</a></li>
-        {% endfor %}
+        {%- endfor -%}
       </ul>
-      {% endif %}
+      {%- endif -%}
     </li>
     <li>
       <a href="{{ '/about' | relative_url }}">About</a>
