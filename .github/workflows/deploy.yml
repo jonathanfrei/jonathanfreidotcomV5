@@ -9,9 +9,7 @@ on:
       - "README.md"
       - "AGENTS.md"
       - ".gitignore"
-  schedule:
-    # Rebuild periodically so future-dated posts get published
-    - cron: "0 */6 * * *"
+  # No schedule — publish future-dated posts with a content push or workflow_dispatch (#142).
   workflow_dispatch:
 
 permissions:

@@ -12,15 +12,14 @@ This is a personal site and blog: **Jekyll 4.x → GitHub Actions → GitHub Pag
 | Repo | Static Jekyll site (no app server, no database) |
 | Content | Markdown posts/pages; HTML layouts/includes |
 | Design | Brand tokens in `_includes/main.css` (Paper/Ink/Signature Blue #145); `editorial.css` for long-form (#144) |
-| Deploy | Push to `main` runs a single full `deploy.yml` (plus 6h schedule). Archive media stays on jsDelivr, not the Pages artifact. |
+| Deploy | Push to `main` runs a single full `deploy.yml` (manual `workflow_dispatch` also available). Archive media stays on jsDelivr, not the Pages artifact. |
 | Archive media | Kept in `_posts/v{2,3}-archive/media/`; production serves via **jsDelivr** (not Pages artifact). See `archive_media` in `_config.yml` and issue #68. |
 | Image perf | `_plugins/optimize_content_images.rb` optimizes **all own site images** (archive media + `/assets/`): dimensions, lazy/LCP hints, responsive WebP via wsrv.nl (full-res on `data-full-src`). See issue #90. |
 
 ### Directory map
 
 ```
-.github/workflows/deploy.yml              # Single full build + deploy + 6h schedule
-.github/dependabot.yml                   # Weekly bundler + Actions updates
+.github/workflows/deploy.yml              # Full build + deploy on push to main
 _config.yml                    # Site config, plugins, permalinks, excludes
 _includes/                     # head, header, footer, main.css, code.css, editorial.css
 _layouts/                      # default, page, post, tag, editorial
@@ -56,7 +55,7 @@ bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
 
 1. Prefer a branch + PR for multi-file or behavior changes; direct `main` is fine for urgent build/content fixes when the owner asks.
 2. Push to `main` deploys via a **single** full `deploy.yml` (except pure draft/doc paths — see CI `paths-ignore`).
-3. Future-dated posts publish on the **every-6-hours** scheduled rebuild (or the next content push).
+3. Future-dated posts publish on the **next content push** (or manual **workflow_dispatch**). There is no scheduled rebuild (#142).
 4. After deploy, confirm the Actions run is green when you changed build-related files.
 5. **Media is never in the Pages artifact** — production uses `ARCHIVE_MEDIA_MODE=cdn` (jsDelivr). The deploy step fails if `_site/media` appears.
 
@@ -97,6 +96,8 @@ tags: [tag-one, tag-two]
 - Supported: YouTube, Vimeo, X/Twitter, Instagram, TikTok, Spotify, CodePen, Imgur, Flickr.
 - Opt out per document: `url_embeds: false` in front matter.
 - Inline links inside paragraphs are **not** transformed.
+- Embed HTML uses `markdown="0"` and no inner indentation so Kramdown `parse_block_html` does not turn iframes into CodeRay blocks (#156).
+- Imgur gallery SEO slugs (`/gallery/title-hash`) resolve to the trailing image hash (#157).
 - Hotlinked third-party images are rewritten through wsrv.nl in production (`archive_media.optimize.hotlink`, #116).
 
 ### Static HTML pages (`editorial/`, extensible)
@@ -188,7 +189,7 @@ Deploy workflow pins current major Pages actions (Node 24-capable majors):
 
 Do not downgrade these without checking Node deprecation warnings on GH Actions.
 
-Dependabot (`.github/dependabot.yml`) opens weekly PRs for bundler and github-actions.
+Dependabot and scheduled deploys were removed (#142). Bump Actions majors and gems intentionally in PRs when needed.
 
 ### 6. Third-party image / CDN trust boundary
 
@@ -236,7 +237,7 @@ Production depends on two external services for media (configured in `_config.ym
 | Random-post URL list | `search.json` (`url` field; `posts.json` removed — #130) |
 | Theme toggle | Boot in `_includes/head.html`; full `assets/js/theme.js` loads on first click (footer stub) |
 | Site config | `_config.yml` |
-| Deploy / schedule / path filters | `.github/workflows/deploy.yml` |
+| Deploy / path filters | `.github/workflows/deploy.yml` |
 | Embed providers | `_plugins/url_embeds.rb` |
 | Static HTML page | `editorial/<slug>.html` → `/editorial/<slug>` (see `static_html.roots`) |
 | Editorial Markdown | `editorial/<slug>.md` + `layout: editorial` → `/editorial/<slug>` (#144) |
