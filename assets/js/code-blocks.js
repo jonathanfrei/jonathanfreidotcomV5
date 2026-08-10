@@ -26,6 +26,8 @@
 
   function enhance(pre) {
     if (pre.closest(".code-block")) return;
+    // Never chrome real media embeds (embeds must win over code view — #156)
+    if (pre.closest(".embed, [data-embed]")) return;
     // Skip empty blocks
     var text = getCodeText(pre);
     if (text == null) return;

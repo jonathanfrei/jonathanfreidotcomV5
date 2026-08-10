@@ -1012,6 +1012,15 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   margin-right: auto;
 }
 
+.embed-imgur-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  border-radius: var(--radius);
+  background: var(--color-code-bg);
+}
+
 .embed-flickr img,
 .embed-imgur img {
   display: block;
