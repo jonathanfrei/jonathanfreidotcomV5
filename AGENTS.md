@@ -66,16 +66,26 @@ bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
 ### Posts
 
 - Path: `_posts/YYYY-MM-DD-slug.md`
-- Front matter typically:
+- Front matter contract (issue #75) — keep it small; optional fields stay optional:
 
 ```yaml
 ---
 title: "Post title"
-date: 2026-08-04 16:00:00 -0400
+date: 2026-08-04 16:00:00 -0400   # first published (canonical); prefer datetime + TZ
+# last_modified_at: 2026-08-10 09:00:00 -0400  # optional intentional revision stamp
 tags: [tag-one, tag-two]
+# categories: [notes]
+description: "One or two sentences for SEO/social (preferred over raw excerpt)."
+# excerpt: "Optional list blurb; falls back to auto-excerpt."
+# image: /assets/img/posts/example.jpg   # OG/Twitter when sharing
+# author: Jonathan Frei                  # only override site default when needed
 ---
 ```
 
+- **`date`** = first publication. Never auto-overwrite on edit. Prefer `YYYY-MM-DD HH:MM:SS ±ZZZZ` for new posts.
+- **`last_modified_at`**: set in front matter only for intentional revisions (shows “Updated …” in the byline when **> 24h** after `date`). If omitted, `_plugins/post_metadata.rb` fills it from **git** for Schema.org `dateModified`, `jekyll-seo-tag`, and sitemap `lastmod` — not for the visible byline (avoids archive-import noise). Deploy uses `fetch-depth: 0` for full history.
+- **Reading time / word count:** computed at build (`reading_time`, `word_count`); “N min read” shows when ≥ 2 minutes. No front matter required.
+- **`description`:** encourage on new posts for stable SEO/social; archive posts need not be backfilled.
 - Default layout is `post` (from `_config.yml`). Do not set a custom layout unless needed.
 - Tags should be simple lowercase slugs where possible; archives live at `/tags/:name`.
 
@@ -238,6 +248,7 @@ Production depends on two external services for media (configured in `_config.ym
 | `<head>`, favicon, meta | `_includes/head.html` |
 | Site-wide layout | `_layouts/default.html` |
 | Post chrome (tags, comment mailto, random post) | `_layouts/post.html` (random uses on-click fetch of `search.json`) |
+| Post metadata (last_modified, reading time) | `_plugins/post_metadata.rb` + `post_metadata` in `_config.yml` (#75) |
 | Tag archive title | `_layouts/tag.html` |
 | Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` |
 | Random-post URL list | `search.json` (`url` field; `posts.json` removed — #130) |
