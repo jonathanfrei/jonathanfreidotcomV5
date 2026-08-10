@@ -1050,3 +1050,182 @@
     padding: var(--ed-space-4);
   }
 }
+
+/* ---------- Component library (design-system page, #155) ---------- */
+.editorial-article > .component-index,
+.editorial-article > .component-doc,
+.editorial-article > .authoring-note {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+}
+
+.authoring-note {
+  margin: 0 0 var(--ed-space-5);
+  padding: var(--ed-space-4) var(--ed-space-5);
+  background: var(--ed-ice);
+  border: 1px solid var(--ed-border);
+  border-left: 4px solid var(--ed-accent);
+  color: var(--ed-ink);
+  max-width: var(--ed-wide);
+}
+
+.authoring-note p {
+  margin: 0 0 var(--ed-space-2);
+  max-width: 48rem;
+}
+
+.authoring-note p:last-child {
+  margin-bottom: 0;
+}
+
+.authoring-note code {
+  font-family: var(--ed-ui);
+  font-size: 0.88em;
+}
+
+.component-index {
+  margin: 0 0 var(--ed-space-6);
+  padding: var(--ed-space-5);
+  background: var(--ed-surface);
+  border: 1px solid var(--ed-border);
+  color: var(--ed-ink);
+}
+
+.component-index h2 {
+  margin: 0 0 var(--ed-space-3);
+  font-family: var(--ed-ui);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ed-muted);
+}
+
+.component-index h3 {
+  margin: var(--ed-space-4) 0 var(--ed-space-2);
+  font-family: var(--ed-ui);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ed-deep);
+}
+
+.component-index h3:first-of-type {
+  margin-top: 0;
+}
+
+.component-index ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.65rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.component-index li {
+  margin: 0;
+}
+
+.component-index a {
+  display: inline-block;
+  padding: 0.28em 0.65em;
+  font-family: var(--ed-ui);
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--ed-charcoal);
+  background: var(--ed-ice);
+  border: 1px solid var(--ed-border);
+  border-radius: var(--ed-radius);
+}
+
+.component-index a:hover,
+.component-index a:focus-visible {
+  color: var(--ed-accent);
+  border-color: var(--ed-accent);
+  text-decoration: none;
+}
+
+.component-doc {
+  margin: 0 0 var(--ed-space-6);
+  padding: 0 0 var(--ed-space-6);
+  border-bottom: 1px solid var(--ed-border);
+  color: var(--ed-ink);
+}
+
+.component-doc > h3 {
+  margin: 0 0 var(--ed-space-2);
+  max-width: none;
+  font-family: var(--ed-serif);
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--ed-ink);
+}
+
+.component-doc > .component-class {
+  display: block;
+  margin: 0 0 var(--ed-space-3);
+  font-family: var(--ed-ui);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ed-accent);
+}
+
+.component-doc > .component-desc {
+  max-width: var(--ed-measure);
+  margin: 0 0 var(--ed-space-4);
+  color: var(--ed-charcoal);
+}
+
+.component-doc > .component-label {
+  margin: var(--ed-space-4) 0 var(--ed-space-2);
+  font-family: var(--ed-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ed-muted);
+}
+
+.component-doc .component-example {
+  margin: 0 0 var(--ed-space-4);
+  padding: var(--ed-space-4);
+  background: color-mix(in srgb, var(--ed-bg) 70%, var(--ed-surface));
+  border: 1px dashed var(--ed-border);
+  border-radius: var(--ed-radius);
+}
+
+.component-doc .component-example > *:first-child {
+  margin-top: 0;
+}
+
+.component-doc .component-example > *:last-child {
+  margin-bottom: 0;
+}
+
+.component-doc pre,
+.component-doc .code-block,
+.component-doc .CodeRay {
+  max-width: 100%;
+}
+
+.component-doc .code-block {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .component-index {
+    padding: var(--ed-space-4);
+  }
+
+  .component-doc .component-example {
+    padding: var(--ed-space-3);
+  }
+}
