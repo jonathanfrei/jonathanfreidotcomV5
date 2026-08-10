@@ -3,7 +3,6 @@ layout: page
 title: Tags
 permalink: /tags
 ---
-
 <style>
 .tags-sort-controls {
   display: flex;
@@ -39,43 +38,44 @@ permalink: /tags
   background: var(--color-code-bg);
 }
 </style>
-
-{% if site.tags.size == 0 %}
+{%- assign tag_min = site.tag_archive_min_posts | default: 2 -%}
+{%- assign multi_tag_count = 0 -%}
+{%- for tag in site.tags -%}
+  {%- if tag[1].size >= tag_min -%}
+    {%- assign multi_tag_count = multi_tag_count | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if multi_tag_count == 0 -%}
 <p>No tags yet.</p>
-{% else %}
-
+{%- else -%}
 <p class="tags-sort-controls" role="group" aria-label="Sort tags">
   <button type="button" id="tags-sort-freq" class="tags-sort-btn is-active" aria-pressed="true">By frequency</button>
   <button type="button" id="tags-sort-alpha" class="tags-sort-btn" aria-pressed="false">Alphabetical</button>
 </p>
-
 <ul class="tags" id="tags-list">
-  {% comment %}
-    Default: most-used first. Find max post count, then emit tags in
-    descending count order. Coerce keys to strings (normalize_tags plugin
-    should already do this; append "" is a safety net).
-  {% endcomment %}
-  {% assign max_count = 0 %}
-  {% for tag in site.tags %}
-    {% if tag[1].size > max_count %}
-      {% assign max_count = tag[1].size %}
-    {% endif %}
-  {% endfor %}
-
-  {% for count in (1..max_count) reversed %}
-    {% for tag in site.tags %}
-      {% assign tag_name = tag[0] | append: "" %}
-      {% assign tag_posts = tag[1] %}
-      {% if tag_posts.size == count %}
-      <li data-name="{{ tag_name | downcase | escape }}" data-count="{{ tag_posts.size }}">
-        <a class="tag" href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}">{{ tag_name }}</a>
-        <span class="post-meta">({{ tag_posts.size }})</span>
-      </li>
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
+{%- comment -%}
+  Only tags with 2+ posts (issue #140). Most-used first: find max, walk counts
+  downward. Coerce keys to strings (normalize_tags plugin + append "" safety).
+{%- endcomment -%}
+{%- assign max_count = 0 -%}
+{%- for tag in site.tags -%}
+  {%- if tag[1].size > max_count -%}
+    {%- assign max_count = tag[1].size -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- for count in (2..max_count) reversed -%}
+  {%- for tag in site.tags -%}
+    {%- assign tag_name = tag[0] | append: "" -%}
+    {%- assign tag_posts = tag[1] -%}
+    {%- if tag_posts.size == count -%}
+  <li data-name="{{ tag_name | downcase | escape }}" data-count="{{ tag_posts.size }}">
+    <a class="tag" href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}">{{ tag_name }}</a>
+    <span class="post-meta">({{ tag_posts.size }})</span>
+  </li>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
 </ul>
-
 <script>
 (function () {
   var list = document.getElementById("tags-list");
@@ -124,5 +124,4 @@ permalink: /tags
   });
 })();
 </script>
-
-{% endif %}
+{%- endif -%}

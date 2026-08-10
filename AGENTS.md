@@ -30,7 +30,9 @@ _x7k9p/                        # Obfuscated drafts (excluded from build & CI pat
 assets/                        # Images, JS; CSS tooling at assets/css/*.html
 editorial/                     # Handcrafted HTML drop-ins (slug.html → /editorial/slug)
 editorial/                     # HTML drop-ins + Markdown editorials (layout: editorial)
-index.md, about.md, blog.md, tags.md, search.md, typography.md
+index.md                         # Home (stays at repo root)
+_pages/                          # Site pages → root URLs (/about, /blog, …)
+_pages/**/*.md                   # Nested files → /section/page (#161)
 ```
 
 
@@ -86,9 +88,13 @@ tags: [tag-one, tag-two]
 
 ### Pages
 
-- Root Markdown with front matter, e.g. `about.md`, `blog.md`.
+- Site pages live under **`_pages/`** (issue #161), not the repo root.
+- Root-level URLs: `_pages/about.md` → `/about` (front-matter `permalink` or auto via `_plugins/pages_dir.rb`).
+- Nested pages: `_pages/services/service1.md` → `/services/service1`.
+- `index.md` stays at the repo root (homepage).
 - Use **no trailing slash** in permalinks (see below).
-- Long-form specimen / design reference: `typography.md` → `/typography`.
+- Long-form specimen / design reference: `_pages/typography.md` → `/typography`.
+- Tags: only multi-post tags get `/tags/:name` archives and appear on `/tags`; singleton tags render as non-link chips on posts (#140).
 
 ### Media embeds
 
