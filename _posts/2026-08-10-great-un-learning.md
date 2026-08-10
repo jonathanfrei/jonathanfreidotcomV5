@@ -15,7 +15,7 @@ description: "Most AI transformations fail because we ignore the harder half of 
 
 When the tide goes out, you see who's swimming naked. 
 
-In the AI era, the tide isn't just going out—it's reversing course. Global AI spending will top $200 billion this year, yet most companies get disappointing returns. Leaders blame the tech. Bad data. Immature models.
+In the AI era, the tide is reversing course. Global AI spending will top $200 billion this year, yet most companies get disappointing returns. Leaders blame the tech. Bad data. Immature models.
 
 They're wrong. The real problem is human. It's not what people can't *learn*. It's what they refuse to *unlearn*.
 
