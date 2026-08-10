@@ -58,6 +58,12 @@ pagination:
 # Singleton tags stay on posts as non-link chips; no /tags/:name page.
 tag_archive_min_posts: 2
 
+# Post metadata automation (issue #75). See AGENTS.md front-matter contract.
+# last_modified_at: explicit front matter wins; else git log (needs full history in CI).
+post_metadata:
+  git_last_modified: true
+  words_per_minute: 200
+
 # Auto-generated paginated tag + category pages (jekyll-paginate-v2)
 autopages:
   enabled: true
