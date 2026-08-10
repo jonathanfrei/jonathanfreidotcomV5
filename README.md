@@ -12,7 +12,7 @@ Built with **Jekyll 4.x**, deployed via **GitHub Actions** to **GitHub Pages**, 
 - Short posts + long-form pages
 - RSS feed + sitemap + basic SEO
 - Obfuscated drafts folder (`_x7k9p`) excluded from build, indexes, feeds, and robots.txt
-- Scheduled rebuilds so future-dated posts publish automatically
+- Manual or push-triggered deploys (no scheduled rebuild)
 - Masked contact email (no form)
 
 ## Development workflow
@@ -21,7 +21,7 @@ Most work happens directly on GitHub (or via Grok-assisted edits).
 
 1. Write posts as Markdown in `_posts/` (or place drafts in `_x7k9p/`).
 2. Push to `main` → Actions builds and deploys.
-3. Future-dated posts are picked up by the scheduled workflow (every 6 hours).
+3. Future-dated posts publish on the next content push (or run **Deploy** via workflow_dispatch).
 
 ### Agents
 
@@ -83,7 +83,7 @@ Optional: “Cache Everything” for HTML with a short Edge TTL (e.g. 2 hours) i
 ## Structure
 
 ```
-├── .github/workflows/deploy.yml   # Build + deploy + scheduled rebuild
+├── .github/workflows/deploy.yml   # Build + deploy on push to main
 ├── _x7k9p/                        # Obfuscated drafts (excluded)
 ├── _includes/                     # Header, footer, head, main.css, code.css
 ├── _layouts/                      # default, post, page

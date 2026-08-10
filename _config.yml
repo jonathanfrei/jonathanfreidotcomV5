@@ -40,10 +40,12 @@ relative_links:
   collections: true
 
 # Pagination (blog index + tag/category autopages)
+# Trailing slash on permalink so jekyll-paginate-v2 writes page/N/index.html
+# and trail paths stay valid (without it, trail becomes ".../2index" — #153).
 pagination:
   enabled: true
   per_page: 50
-  permalink: "/page/:num"
+  permalink: "/page/:num/"
   title: ":title – page :num of :max"
   limit: 0
   sort_field: "date"

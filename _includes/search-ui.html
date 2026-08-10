@@ -1,12 +1,10 @@
-<div class="search-ui">
+{% comment %}
+  markdown="0" keeps Kramdown from parsing inside this shell when
+  parse_block_html is on (#154). Multi-line <input> was escaped as text.
+{% endcomment %}
+<div class="search-ui" markdown="0">
   <label for="search-input" class="sr-only">Search posts</label>
-  <input
-    type="search"
-    id="search-input"
-    class="search-input"
-    placeholder="Search posts…"
-    autocomplete="off"
-  >
+  <input type="search" id="search-input" class="search-input" placeholder="Search posts…" autocomplete="off">
   <div id="search-results" aria-live="polite"></div>
 </div>
 
