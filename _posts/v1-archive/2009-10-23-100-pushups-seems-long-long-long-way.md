@@ -11,8 +11,6 @@ A few months ago I had printed off Steve Speirs' [Hundred Pushups Training Progr
 
 I've never been able to do much more than 40 pushups in a row, so the task of working up to 100 pushups is quite daunting and maybe unrealistic for me. However, I'm confident that if I stick to the routine and work at it consistently I will succeed.
 
-I've never been able to do much more than 40 pushups in a row, so the task of working up to 100 pushups is quite daunting and maybe unrealistic for me. However, I'm confident that if I stick to the routine and work at it consistently I will succeed.
-
 The program is built around making small improvement and gradually adding more and more pushups into the workout until the body is capable of completing 100 consecutively.
 
 Routine and stick-to-it-ness are not my strong points. However, this is the sort of goal where the very act of striving after it will develop other good habits along the way.
