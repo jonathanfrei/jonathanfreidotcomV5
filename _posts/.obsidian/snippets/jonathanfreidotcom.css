@@ -1,0 +1,716 @@
+/* =========================================================
+   Jonathan Frei — Obsidian Theme
+   Visual identity adapted from https://jonathanfrei.com
+   Signature: Paper + Ink + Jonathan Blue (#0077A8)
+   Editorial minimalism with Source Serif 4 + Source Code Pro
+   ========================================================= */
+
+/* ---------- Fonts ---------- */
+@import url("https://cdn.jsdelivr.net/fontsource/fonts/source-serif-4:vf@5.2.5/latin-wght-normal.woff2");
+@import url("https://cdn.jsdelivr.net/fontsource/fonts/source-serif-4:vf@5.2.5/latin-wght-italic.woff2");
+@import url("https://cdn.jsdelivr.net/fontsource/fonts/source-code-pro:vf@5.2.5/latin-wght-normal.woff2");
+@import url("https://cdn.jsdelivr.net/fontsource/fonts/source-code-pro:vf@5.2.5/latin-wght-italic.woff2");
+
+/* Fallback @font-face for broader support */
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 900;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/source-serif-4:vf@5.2.5/latin-wght-normal.woff2") format("woff2-variations");
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 200 900;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/source-serif-4:vf@5.2.5/latin-wght-italic.woff2") format("woff2-variations");
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 900;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/source-code-pro:vf@5.2.5/latin-wght-normal.woff2") format("woff2-variations");
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 200 900;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/source-code-pro:vf@5.2.5/latin-wght-italic.woff2") format("woff2-variations");
+}
+
+/* =========================================================
+   LIGHT THEME (default)
+   ========================================================= */
+.theme-light {
+  /* Brand foundation */
+  --brand-ink: #111C24;
+  --brand-deep-ocean: #00334D;
+  --brand-paper: #FAF9F6;
+  --brand-white: #FFFFFF;
+  --brand-warm-gray: #E8E6E1;
+  --brand-charcoal: #2F3A42;
+  --brand-stone: #4A5560;
+
+  /* Signature blue scale */
+  --brand-primary-100: #00334D;
+  --brand-primary-80: #0077A8;   /* Jonathan Blue */
+  --brand-primary-60: #3391BA;
+  --brand-primary-40: #66ABD0;
+  --brand-primary-20: #D9EDF5;
+  --brand-primary-10: #EEF7FA;
+
+  /* Editorial accents */
+  --brand-seafoam: #00A896;
+  --brand-ochre: #C58B2A;
+  --brand-terracotta: #C85C4A;
+  --brand-lavender: #7667A8;
+  --brand-sand: #E9DCC8;
+
+  /* Mapped Obsidian tokens */
+  --background-primary: var(--brand-paper);
+  --background-primary-alt: #F5F4F0;
+  --background-secondary: var(--brand-white);
+  --background-secondary-alt: #F0EFEA;
+  --background-modifier-border: var(--brand-warm-gray);
+  --background-modifier-border-hover: #D9D6CF;
+  --background-modifier-border-focus: var(--brand-primary-80);
+  --background-modifier-form-field: var(--brand-white);
+  --background-modifier-form-field-highlighted: var(--brand-primary-10);
+  --background-modifier-box-shadow: rgba(17, 28, 36, 0.08);
+  --background-modifier-success: #0b6e4f;
+  --background-modifier-error: #b00020;
+  --background-modifier-error-rgb: 176, 0, 32;
+  --background-modifier-error-hover: #8a0019;
+  --background-modifier-cover: rgba(17, 28, 36, 0.4);
+
+  --text-normal: var(--brand-ink);
+  --text-muted: var(--brand-stone);
+  --text-faint: #7A858F;
+  --text-on-accent: #FFFFFF;
+  --text-error: #b00020;
+  --text-success: #0b6e4f;
+  --text-warning: var(--brand-ochre);
+  --text-accent: var(--brand-primary-80);
+  --text-accent-hover: var(--brand-primary-100);
+  --text-selection: rgba(0, 119, 168, 0.18);
+  --text-highlight-bg: rgba(0, 119, 168, 0.15);
+  --text-highlight-bg-active: rgba(0, 119, 168, 0.25);
+
+  --interactive-normal: var(--brand-white);
+  --interactive-hover: var(--brand-primary-10);
+  --interactive-accent: var(--brand-primary-80);
+  --interactive-accent-hover: var(--brand-primary-100);
+  --interactive-success: #0b6e4f;
+
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: var(--brand-warm-gray);
+  --scrollbar-active-thumb-bg: var(--brand-stone);
+
+  /* Accent color for UI elements */
+  --color-accent: var(--brand-primary-80);
+  --color-accent-1: var(--brand-primary-80);
+  --color-accent-2: var(--brand-primary-60);
+  --color-base-00: var(--brand-paper);
+  --color-base-10: #F5F4F0;
+  --color-base-20: var(--brand-white);
+  --color-base-25: #F0EFEA;
+  --color-base-30: var(--brand-warm-gray);
+  --color-base-35: #D9D6CF;
+  --color-base-40: #C8C5BD;
+  --color-base-50: var(--brand-stone);
+  --color-base-60: #6B757E;
+  --color-base-70: var(--brand-charcoal);
+  --color-base-100: var(--brand-ink);
+
+  /* Graph view */
+  --graph-line: var(--brand-warm-gray);
+  --graph-node: var(--brand-primary-80);
+  --graph-node-unresolved: var(--brand-stone);
+  --graph-node-focused: var(--brand-primary-100);
+  --graph-node-tag: var(--brand-seafoam);
+  --graph-node-attachment: var(--brand-ochre);
+  --graph-text: var(--brand-ink);
+
+  /* Code */
+  --code-normal: var(--brand-ink);
+  --code-background: var(--brand-primary-10);
+  --code-comment: #6b6b5e;
+  --code-function: var(--brand-primary-100);
+  --code-important: var(--brand-terracotta);
+  --code-keyword: var(--brand-primary-80);
+  --code-operator: var(--brand-stone);
+  --code-property: var(--brand-lavender);
+  --code-punctuation: var(--brand-stone);
+  --code-string: #0b6e4f;
+  --code-tag: var(--brand-ochre);
+  --code-value: var(--brand-primary-60);
+
+  /* Typography */
+  --font-text-theme: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --font-interface-theme: "Source Code Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-monospace-theme: "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-text-size: 16px;
+  --font-text-line-height: 1.65;
+  --font-ui-small: 12px;
+  --font-ui-medium: 13px;
+  --font-ui-large: 15px;
+
+  /* Borders & radius */
+  --radius-s: 2px;
+  --radius-m: 4px;
+  --radius-l: 6px;
+  --radius-xl: 8px;
+  --border-width: 1px;
+
+  /* Shadows — very subtle */
+  --shadow-s: 0 1px 2px rgba(17, 28, 36, 0.04);
+  --shadow-l: 0 4px 12px rgba(17, 28, 36, 0.08);
+
+  /* Workspace */
+  --titlebar-background: var(--brand-paper);
+  --titlebar-background-focused: var(--brand-paper);
+  --ribbon-background: var(--brand-paper);
+  --ribbon-background-collapsed: var(--brand-paper);
+  --tab-container-background: var(--brand-paper);
+  --tab-background-active: var(--brand-white);
+  --tab-text-color: var(--brand-charcoal);
+  --tab-text-color-active: var(--brand-ink);
+  --tab-text-color-focused: var(--brand-ink);
+  --tab-text-color-focused-active: var(--brand-ink);
+  --tab-outline-color: var(--brand-warm-gray);
+  --tab-divider-color: var(--brand-warm-gray);
+  --tab-radius: 0;
+  --tab-radius-active: 0;
+  --tab-curve: 0;
+
+  --nav-item-color: var(--brand-charcoal);
+  --nav-item-color-active: var(--brand-ink);
+  --nav-item-color-highlighted: var(--brand-primary-80);
+  --nav-item-color-hover: var(--brand-primary-80);
+  --nav-item-background-active: var(--brand-primary-10);
+  --nav-item-background-hover: rgba(0, 119, 168, 0.06);
+  --nav-indentation-guide-color: var(--brand-warm-gray);
+  --nav-collapse-icon-color: var(--brand-stone);
+  --nav-collapse-icon-color-collapsed: var(--brand-stone);
+
+  --sidebar-left-background: var(--brand-paper);
+  --sidebar-right-background: var(--brand-paper);
+  --workspace-background-translucent: rgba(250, 249, 246, 0.85);
+
+  /* Status bar */
+  --status-bar-background: var(--brand-paper);
+  --status-bar-border-color: var(--brand-warm-gray);
+
+  /* Input */
+  --input-background: var(--brand-white);
+  --input-border-color: var(--brand-warm-gray);
+  --input-border-width: 1px;
+  --input-radius: 3px;
+
+  /* Modal */
+  --modal-background: var(--brand-white);
+  --modal-border-color: var(--brand-warm-gray);
+  --modal-shadow: var(--shadow-l);
+
+  /* Prompt / search */
+  --prompt-background: var(--brand-white);
+  --prompt-border-color: var(--brand-warm-gray);
+
+  /* Checkbox */
+  --checkbox-color: var(--brand-primary-80);
+  --checkbox-color-hover: var(--brand-primary-100);
+  --checkbox-border-color: var(--brand-stone);
+  --checkbox-border-color-hover: var(--brand-primary-80);
+  --checkbox-radius: 3px;
+
+  /* Tag */
+  --tag-background: var(--brand-primary-10);
+  --tag-background-hover: var(--brand-primary-20);
+  --tag-color: var(--brand-primary-100);
+  --tag-color-hover: var(--brand-primary-100);
+  --tag-radius: 3px;
+  --tag-padding-x: 0.45em;
+  --tag-padding-y: 0.15em;
+  --tag-size: 0.85em;
+
+  /* Callouts */
+  --callout-radius: 4px;
+  --callout-border-width: 0 0 0 3px;
+  --callout-padding: 0.85em 1em;
+  --callout-title-color: inherit;
+  --callout-title-size: 0.95em;
+  --callout-content-padding: 0 0 0 0.15em;
+  --callout-blend-mode: normal;
+
+  /* Tables */
+  --table-header-background: var(--brand-primary-10);
+  --table-header-background-hover: var(--brand-primary-20);
+  --table-row-background-hover: rgba(0, 119, 168, 0.04);
+  --table-row-alt-background: rgba(0, 0, 0, 0.015);
+  --table-border-color: var(--brand-warm-gray);
+
+  /* Embeds / internal links */
+  --link-color: var(--brand-primary-80);
+  --link-color-hover: var(--brand-primary-100);
+  --link-external-color: var(--brand-primary-80);
+  --link-external-color-hover: var(--brand-primary-100);
+  --link-unresolved-color: var(--brand-stone);
+  --link-decoration: none;
+  --link-decoration-hover: underline;
+  --link-decoration-thickness: 1px;
+  --link-external-decoration: none;
+  --link-external-decoration-hover: underline;
+
+  /* Bold / italic / headings in reading mode */
+  --bold-weight: 600;
+  --italic-weight: 400;
+
+  /* Embeds */
+  --embed-max-height: 80vh;
+  --embed-background: transparent;
+  --embed-border-left: 2px solid var(--brand-primary-80);
+  --embed-border-right: none;
+  --embed-border-top: none;
+  --embed-border-bottom: none;
+  --embed-padding: 0 0 0 1em;
+}
+
+/* =========================================================
+   DARK THEME
+   ========================================================= */
+.theme-dark {
+  /* Brand foundation — inverted editorial notebook */
+  --brand-ink: #F4F3EF;
+  --brand-deep-ocean: #8EC5E0;
+  --brand-paper: #0B1115;
+  --brand-white: #18262E;
+  --brand-warm-gray: #2A373E;
+  --brand-charcoal: #C5CED3;
+  --brand-stone: #A8B3B9;
+
+  /* Signature blue scale (lighter on dark) */
+  --brand-primary-100: #8EC5E0;
+  --brand-primary-80: #4AA8D4;
+  --brand-primary-60: #66C0DD;
+  --brand-primary-40: #7AD0EC;
+  --brand-primary-20: #1A2A34;
+  --brand-primary-10: #152028;
+
+  /* Editorial accents */
+  --brand-seafoam: #3DCFC0;
+  --brand-ochre: #E0A84A;
+  --brand-terracotta: #E89284;
+  --brand-lavender: #B5A8E0;
+  --brand-sand: #1E2A32;
+
+  /* Mapped Obsidian tokens */
+  --background-primary: var(--brand-paper);
+  --background-primary-alt: #0F161B;
+  --background-secondary: var(--brand-white);
+  --background-secondary-alt: #1E2A32;
+  --background-modifier-border: var(--brand-warm-gray);
+  --background-modifier-border-hover: #3A4850;
+  --background-modifier-border-focus: var(--brand-primary-80);
+  --background-modifier-form-field: var(--brand-white);
+  --background-modifier-form-field-highlighted: var(--brand-primary-10);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.35);
+  --background-modifier-success: #7dcea0;
+  --background-modifier-error: #E89284;
+  --background-modifier-error-rgb: 232, 146, 132;
+  --background-modifier-error-hover: #f0a89c;
+  --background-modifier-cover: rgba(0, 0, 0, 0.6);
+
+  --text-normal: var(--brand-ink);
+  --text-muted: var(--brand-stone);
+  --text-faint: #7A8A94;
+  --text-on-accent: #0B1115;
+  --text-error: #E89284;
+  --text-success: #7dcea0;
+  --text-warning: var(--brand-ochre);
+  --text-accent: var(--brand-primary-80);
+  --text-accent-hover: var(--brand-primary-40);
+  --text-selection: rgba(74, 168, 212, 0.25);
+  --text-highlight-bg: rgba(74, 168, 212, 0.2);
+  --text-highlight-bg-active: rgba(74, 168, 212, 0.3);
+
+  --interactive-normal: var(--brand-white);
+  --interactive-hover: var(--brand-primary-10);
+  --interactive-accent: var(--brand-primary-80);
+  --interactive-accent-hover: var(--brand-primary-40);
+  --interactive-success: #7dcea0;
+
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: var(--brand-warm-gray);
+  --scrollbar-active-thumb-bg: var(--brand-stone);
+
+  --color-accent: var(--brand-primary-80);
+  --color-accent-1: var(--brand-primary-80);
+  --color-accent-2: var(--brand-primary-60);
+  --color-base-00: var(--brand-paper);
+  --color-base-10: #0F161B;
+  --color-base-20: var(--brand-white);
+  --color-base-25: #1E2A32;
+  --color-base-30: var(--brand-warm-gray);
+  --color-base-35: #3A4850;
+  --color-base-40: #4A5860;
+  --color-base-50: var(--brand-stone);
+  --color-base-60: #B8C2C8;
+  --color-base-70: var(--brand-charcoal);
+  --color-base-100: var(--brand-ink);
+
+  /* Graph */
+  --graph-line: var(--brand-warm-gray);
+  --graph-node: var(--brand-primary-80);
+  --graph-node-unresolved: var(--brand-stone);
+  --graph-node-focused: var(--brand-primary-40);
+  --graph-node-tag: var(--brand-seafoam);
+  --graph-node-attachment: var(--brand-ochre);
+  --graph-text: var(--brand-ink);
+
+  /* Code */
+  --code-normal: var(--brand-ink);
+  --code-background: var(--brand-primary-10);
+  --code-comment: #9a968c;
+  --code-function: #8ab4f8;
+  --code-important: var(--brand-terracotta);
+  --code-keyword: #66C0DD;
+  --code-operator: var(--brand-stone);
+  --code-property: var(--brand-lavender);
+  --code-punctuation: var(--brand-stone);
+  --code-string: #7dcea0;
+  --code-tag: var(--brand-ochre);
+  --code-value: var(--brand-primary-60);
+
+  /* Typography */
+  --font-text-theme: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --font-interface-theme: "Source Code Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-monospace-theme: "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-text-size: 16px;
+  --font-text-line-height: 1.65;
+
+  /* Borders & radius */
+  --radius-s: 2px;
+  --radius-m: 4px;
+  --radius-l: 6px;
+  --radius-xl: 8px;
+  --border-width: 1px;
+
+  --shadow-s: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-l: 0 6px 20px rgba(0, 0, 0, 0.4);
+
+  /* Workspace */
+  --titlebar-background: var(--brand-paper);
+  --titlebar-background-focused: var(--brand-paper);
+  --ribbon-background: var(--brand-paper);
+  --ribbon-background-collapsed: var(--brand-paper);
+  --tab-container-background: var(--brand-paper);
+  --tab-background-active: var(--brand-white);
+  --tab-text-color: var(--brand-charcoal);
+  --tab-text-color-active: var(--brand-ink);
+  --tab-text-color-focused: var(--brand-ink);
+  --tab-text-color-focused-active: var(--brand-ink);
+  --tab-outline-color: var(--brand-warm-gray);
+  --tab-divider-color: var(--brand-warm-gray);
+  --tab-radius: 0;
+  --tab-radius-active: 0;
+  --tab-curve: 0;
+
+  --nav-item-color: var(--brand-charcoal);
+  --nav-item-color-active: var(--brand-ink);
+  --nav-item-color-highlighted: var(--brand-primary-80);
+  --nav-item-color-hover: var(--brand-primary-80);
+  --nav-item-background-active: var(--brand-primary-10);
+  --nav-item-background-hover: rgba(74, 168, 212, 0.1);
+  --nav-indentation-guide-color: var(--brand-warm-gray);
+  --nav-collapse-icon-color: var(--brand-stone);
+  --nav-collapse-icon-color-collapsed: var(--brand-stone);
+
+  --sidebar-left-background: var(--brand-paper);
+  --sidebar-right-background: var(--brand-paper);
+  --workspace-background-translucent: rgba(11, 17, 21, 0.9);
+
+  --status-bar-background: var(--brand-paper);
+  --status-bar-border-color: var(--brand-warm-gray);
+
+  --input-background: var(--brand-white);
+  --input-border-color: var(--brand-warm-gray);
+  --input-border-width: 1px;
+  --input-radius: 3px;
+
+  --modal-background: var(--brand-white);
+  --modal-border-color: var(--brand-warm-gray);
+  --modal-shadow: var(--shadow-l);
+
+  --prompt-background: var(--brand-white);
+  --prompt-border-color: var(--brand-warm-gray);
+
+  --checkbox-color: var(--brand-primary-80);
+  --checkbox-color-hover: var(--brand-primary-40);
+  --checkbox-border-color: var(--brand-stone);
+  --checkbox-border-color-hover: var(--brand-primary-80);
+  --checkbox-radius: 3px;
+
+  --tag-background: var(--brand-primary-10);
+  --tag-background-hover: var(--brand-primary-20);
+  --tag-color: var(--brand-primary-100);
+  --tag-color-hover: var(--brand-primary-100);
+  --tag-radius: 3px;
+
+  --callout-radius: 4px;
+  --callout-border-width: 0 0 0 3px;
+
+  --table-header-background: var(--brand-primary-10);
+  --table-header-background-hover: var(--brand-primary-20);
+  --table-row-background-hover: rgba(74, 168, 212, 0.06);
+  --table-row-alt-background: rgba(255, 255, 255, 0.02);
+  --table-border-color: var(--brand-warm-gray);
+
+  --link-color: var(--brand-primary-80);
+  --link-color-hover: var(--brand-primary-40);
+  --link-external-color: var(--brand-primary-80);
+  --link-external-color-hover: var(--brand-primary-40);
+  --link-unresolved-color: var(--brand-stone);
+  --link-decoration: none;
+  --link-decoration-hover: underline;
+  --link-decoration-thickness: 1px;
+
+  --bold-weight: 600;
+  --italic-weight: 400;
+
+  --embed-border-left: 2px solid var(--brand-primary-80);
+  --embed-padding: 0 0 0 1em;
+}
+
+/* =========================================================
+   SHARED STYLES (both themes)
+   ========================================================= */
+
+/* Typography refinements — editorial feel */
+body {
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+}
+
+.markdown-preview-view,
+.markdown-source-view.mod-cm6 .cm-scroller {
+  font-family: var(--font-text-theme);
+  line-height: var(--font-text-line-height);
+  letter-spacing: -0.005em;
+}
+
+/* Headings — lighter weight, balanced */
+.markdown-preview-view h1,
+.markdown-source-view.mod-cm6 .cm-header-1,
+.HyperMD-header-1 {
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  font-size: 1.9em;
+}
+
+.markdown-preview-view h2,
+.markdown-source-view.mod-cm6 .cm-header-2,
+.HyperMD-header-2 {
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  font-size: 1.5em;
+}
+
+.markdown-preview-view h3,
+.markdown-source-view.mod-cm6 .cm-header-3,
+.HyperMD-header-3 {
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  font-size: 1.25em;
+}
+
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6,
+.markdown-source-view.mod-cm6 .cm-header-4,
+.markdown-source-view.mod-cm6 .cm-header-5,
+.markdown-source-view.mod-cm6 .cm-header-6 {
+  font-weight: 500;
+}
+
+/* Links — clean underline on hover only */
+.markdown-preview-view a.internal-link,
+.markdown-preview-view a.external-link {
+  text-underline-offset: 0.18em;
+}
+
+.markdown-preview-view a.internal-link:hover,
+.markdown-preview-view a.external-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+/* Blockquotes — left accent bar, muted italic */
+.markdown-preview-view blockquote {
+  border-left: 2px solid var(--text-accent);
+  color: var(--text-muted);
+  font-style: italic;
+  font-weight: 300;
+  padding-left: 1.1em;
+  margin-inline: 0;
+}
+
+/* Code blocks — soft paper-like background */
+.markdown-preview-view pre,
+.markdown-source-view.mod-cm6 .cm-line .cm-inline-code,
+.HyperMD-codeblock {
+  font-family: var(--font-monospace-theme);
+  font-size: 0.9em;
+}
+
+.markdown-preview-view code {
+  font-family: var(--font-monospace-theme);
+  font-size: 0.88em;
+  border-radius: 3px;
+  padding: 0.15em 0.35em;
+}
+
+/* Horizontal rule */
+.markdown-preview-view hr {
+  border: none;
+  border-top: 1px solid var(--background-modifier-border);
+  margin: 2em 0;
+}
+
+/* Tables — clean editorial */
+.markdown-preview-view table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.markdown-preview-view th,
+.markdown-preview-view td {
+  border: 1px solid var(--background-modifier-border);
+  padding: 0.5em 0.75em;
+}
+
+.markdown-preview-view th {
+  font-weight: 500;
+  text-align: left;
+}
+
+/* Tags */
+.tag,
+a.tag {
+  font-family: var(--font-interface-theme);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* Sidebar / file explorer — slightly tighter UI font */
+.nav-files-container,
+.workspace-leaf-content[data-type="file-explorer"] {
+  font-family: var(--font-interface-theme);
+  font-size: 13px;
+}
+
+/* Status bar & ribbon */
+.status-bar,
+.side-dock-ribbon {
+  font-family: var(--font-interface-theme);
+}
+
+/* Title bar */
+.titlebar {
+  font-family: var(--font-interface-theme);
+}
+
+/* Active tab underline feel (flat, editorial) */
+.workspace-tab-header.is-active {
+  box-shadow: inset 0 -1.5px 0 var(--text-accent);
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--text-accent);
+  outline-offset: 2px;
+}
+
+/* Callouts — restrained */
+.callout {
+  border-radius: var(--callout-radius);
+  border-left-width: 3px;
+}
+
+.callout[data-callout="note"],
+.callout[data-callout="info"] {
+  --callout-color: 0, 119, 168;
+}
+
+.callout[data-callout="tip"],
+.callout[data-callout="success"] {
+  --callout-color: 0, 168, 150;
+}
+
+.callout[data-callout="warning"],
+.callout[data-callout="caution"] {
+  --callout-color: 197, 139, 42;
+}
+
+.callout[data-callout="error"],
+.callout[data-callout="danger"],
+.callout[data-callout="failure"] {
+  --callout-color: 200, 92, 74;
+}
+
+.callout[data-callout="quote"],
+.callout[data-callout="cite"] {
+  --callout-color: 118, 103, 168;
+}
+
+/* Reading view max width for comfortable measure */
+.markdown-preview-view .markdown-preview-sizer {
+  max-width: 42em;
+}
+
+/* Source view comfort */
+.markdown-source-view.mod-cm6 .cm-scroller {
+  max-width: none;
+}
+
+/* Subtle selection */
+::selection {
+  background: var(--text-selection);
+}
+
+/* Metadata / properties */
+.metadata-container {
+  font-family: var(--font-interface-theme);
+  font-size: 0.9em;
+}
+
+/* Graph view refinements */
+.graph-view.color-fill {
+  color: var(--graph-node);
+}
+
+/* Empty state / placeholders */
+.workspace-empty-state {
+  color: var(--text-muted);
+}
+
+/* Mobile adjustments */
+.is-mobile .markdown-preview-view {
+  padding-inline: 1rem;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

@@ -6,6 +6,6 @@ tags: ["dave ellis", design, NoVolume, "web design"]
 wordpress_id: "6613"
 ---
 
-<img src="http://www.novolume.co.uk/admin/resources/template-01-.png" alt="" />
+![](http://www.novolume.co.uk/admin/resources/template-01-.png)
 
 via <a href="http://www.novolume.co.uk/blog/all-websites-look-the-same/">Dave Ellis at NoVolume</a>

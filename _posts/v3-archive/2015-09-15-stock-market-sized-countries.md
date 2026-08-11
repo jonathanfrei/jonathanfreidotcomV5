@@ -10,6 +10,6 @@ This <a href="https://boingboing.net/2015/09/15/world-map-with-countries-the-s.h
 
 > Created by Bank of America Merrill Lynch's Chief Investment Strategist Michael Hartnett, this illustration shows "free-float equity market capitalization" in billions of dollars.
 
-<a href="https://media.boingboing.net/wp-content/uploads/2015/09/stockmarketmap.png"><img class="alignnone" src="https://media.boingboing.net/wp-content/uploads/2015/09/stockmarketmap.png" alt="" width="1460" height="860" /></a>
+[![stock market sized countries](https://media.boingboing.net/wp-content/uploads/2015/09/stockmarketmap.png)](https://media.boingboing.net/wp-content/uploads/2015/09/stockmarketmap.png)
 
 via <a href="https://boingboing.net/2015/09/15/world-map-with-countries-the-s.html">Boing Boing</a>
