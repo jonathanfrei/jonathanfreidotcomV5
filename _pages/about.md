@@ -14,7 +14,7 @@ This current version of the site is deliberately smaller. It is less a platform 
 
 ## Get in touch / Follow for updates
 
-You can email me at [hi&#64;jonathanfrei&#46;com](mailto:hi&#64;jonathanfrei&#46;com).
+You can email me at <a href="javascript:location='mailto:\u0068\u0069\u0040\u006a\u006f\u006e\u0061\u0074\u0068\u0061\u006e\u0066\u0072\u0065\u0069\u002e\u0063\u006f\u006d';void 0">hi&#64;jonathanfrei&#46;com</a>.
 
 I’m still on X as [@jonathanfrei](https://x.com/jonathanfrei), though I no longer post.
 
