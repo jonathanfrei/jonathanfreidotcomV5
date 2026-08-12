@@ -12,7 +12,7 @@ Well, this is depressing. I used to think I was one of the young ones, but it tu
 
 <a href="http://population.io/">Population.io </a>is a data visualization project that takes demographic and population data from a variety of sources to present personalized graphs. Here's how the project's creators describe it.
 
-<blockquote><i>Population.io</i> aims to make demography – the study of human populations – accessible to a wider audience. We believe that demographic data can play an important role in understanding the social and economic developments of our time. Our hope is that people from all walks of life, in all ages and across all countries will explore a new perspective of their own life and find their own place in the world of today and tomorrow.</blockquote>
+> <i>Population.io</i> aims to make demography – the study of human populations – accessible to a wider audience. We believe that demographic data can play an important role in understanding the social and economic developments of our time. Our hope is that people from all walks of life, in all ages and across all countries will explore a new perspective of their own life and find their own place in the world of today and tomorrow.
 
 Here are a couple of other interesting factoids I learned about my age in relation to the global population:
 
@@ -28,5 +28,3 @@ It seems I still have many years ahead of me--52.7 years--based on the average l
 <img class="alignnone size-full wp-image-5444" src="media/2014/12/ScreenClip-2.png" alt="ScreenClip [2]" />
 
 You can enter your birthday along with some other basic information into <a href="http://population.io/">Population.io</a> to find out where you fit age-wise into the global family.
-
-<p style="padding-left: 30px;"></p>
