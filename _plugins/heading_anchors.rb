@@ -2,7 +2,7 @@
 
 # Automatic heading permalinks for pages and posts (issue #160).
 #
-# After Markdown→HTML conversion, wrap each h1–h6 in a same-page link and
+# After Jekyll writes the site, wrap each H2/H3 in a same-page link and
 # expose a hover/focus link icon to the left. Existing heading styles are
 # preserved (color/size come from the heading; the anchor is unstyled text).
 #
@@ -12,7 +12,7 @@ module Jekyll
   module HeadingAnchors
     module_function
 
-    HEADING_RE = %r{<(h[1-6])(\s[^>]*)?>(.*?)</\1>}mi.freeze
+    HEADING_RE = %r{<(h[23])(\s[^>]*)?>(.*?)</\1>}mi.freeze
 
     def process(html)
       return html if html.nil? || html.empty?
@@ -53,11 +53,17 @@ module Jekyll
   end
 end
 
-Jekyll::Hooks.register [:pages, :documents], :post_render do |doc|
-  # Add anchors only to the rendered HTML. Mutating `doc.content` at
-  # `post_convert` also changes the source consumed by jekyll-feed, which
-  # would expose the visual # icon in RSS entries.
-  next if doc.respond_to?(:draft?) && doc.draft?
+Jekyll::Hooks.register :site, :post_write do |site|
+  # jekyll-feed can consume rendered document output. Add this presentation
+  # enhancement only after every output file (including feed.xml) is written.
+  # That leaves feed entries unchanged while keeping anchors on HTML pages.
+  (site.pages + site.collections.values.flat_map(&:docs)).each do |doc|
+    next if doc.respond_to?(:draft?) && doc.draft?
+    next unless doc.output_ext == ".html"
 
-  doc.output = Jekyll::HeadingAnchors.process(doc.output)
+    destination = doc.destination(site.dest)
+    next unless File.file?(destination)
+
+    File.write(destination, Jekyll::HeadingAnchors.process(File.read(destination)))
+  end
 end
