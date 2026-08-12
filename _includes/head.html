@@ -41,8 +41,14 @@
 <link rel="preload" href="https://cdn.jsdelivr.net/fontsource/fonts/source-serif-4:vf@5.2.5/latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="https://cdn.jsdelivr.net/fontsource/fonts/source-code-pro:vf@5.2.5/latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 
+{% comment %}
+  LCP image preload. When the first content image has a responsive srcset,
+  also emit imagesrcset/imagesizes so the browser does not preload one width
+  and then fetch another for display (#173). post_render may inject this later
+  if page.lcp_* is still empty at layout time.
+{% endcomment %}
 {% if page.lcp_image %}
-<link rel="preload" as="image" href="{{ page.lcp_image }}" fetchpriority="high">
+<link rel="preload" as="image" href="{{ page.lcp_image }}"{% if page.lcp_imagesrcset %} imagesrcset="{{ page.lcp_imagesrcset }}"{% if page.lcp_imagesizes %} imagesizes="{{ page.lcp_imagesizes }}"{% endif %}{% endif %} fetchpriority="high">
 {% endif %}
 
 {% comment %}
