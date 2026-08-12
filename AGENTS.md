@@ -12,8 +12,8 @@ This is a personal site and blog: **Jekyll 4.x → GitHub Actions → GitHub Pag
 | Repo | Static Jekyll site (no app server, no database) |
 | Content | Markdown posts/pages; HTML layouts/includes |
 | Design | Brand tokens in `_includes/main.css` (Paper/Ink/Signature Blue #145); `editorial.css` for long-form (#144) |
-| Deploy | Push to `main` runs a single full `deploy.yml` (manual `workflow_dispatch` also available). Archive media stays on jsDelivr, not the Pages artifact. |
-| Archive media | Kept in `_posts/v{2,3}-archive/media/`; production serves via **jsDelivr** (not Pages artifact). See `archive_media` in `_config.yml` and issue #68. |
+| Deploy | Push to `main` runs a single full `deploy.yml` (manual `workflow_dispatch` also available). Archive media stays on **S3**, not the Pages artifact. |
+| Archive media | Served from **S3** (`media.jonathanfrei.com/v{2,3}-archive/media/…`). See `archive_media` in `_config.yml` and issues #68 / #170. In-repo media trees may be removed after migration. |
 | Image perf | `_plugins/optimize_content_images.rb` optimizes **all own site images** (archive media + `/assets/`): dimensions, lazy/LCP hints, responsive WebP via wsrv.nl (full-res on `data-full-src`). See issue #90. |
 
 ### Directory map
@@ -59,7 +59,7 @@ bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
 2. Push to `main` deploys via a **single** full `deploy.yml` (except pure draft/doc paths — see CI `paths-ignore`).
 3. Future-dated posts publish on the **next content push** (or manual **workflow_dispatch**). There is no scheduled rebuild (#142).
 4. After deploy, confirm the Actions run is green when you changed build-related files.
-5. **Media is never in the Pages artifact** — production uses `ARCHIVE_MEDIA_MODE=cdn` (jsDelivr). The deploy step fails if `_site/media` appears.
+5. **Media is never in the Pages artifact** — production uses `ARCHIVE_MEDIA_MODE=cdn` (S3 / `media.jonathanfrei.com`). The deploy step fails if `_site/media` appears.
 
 ## Content rules
 
@@ -213,17 +213,18 @@ Dependabot and scheduled deploys were removed (#142). Bump Actions majors and ge
 
 ### 6. Third-party image / CDN trust boundary
 
-Production depends on two external services for media (configured in `_config.yml` `archive_media`):
+Production depends on external services for media (configured in `_config.yml` `archive_media`):
 
 | Service | Role | Config key |
 | --- | --- | --- |
-| **jsDelivr** | Serves archive media binaries from this repo (`cdn.jsdelivr.net/gh/jonathanfrei/jonathanfreidotcomV5@main/...`) so they are not in the Pages artifact | `archive_media.cdn_base` |
+| **S3 / media.jonathanfrei.com** | Archive media binaries (`v{2,3}-archive/media/…`) — not in the Pages artifact (#170) | `archive_media.cdn_base` |
 | **wsrv.nl** | On-the-fly resize + WebP for all own-site images (archive + `/assets/`); full-res kept on `data-full-src` | `archive_media.optimize.proxy` |
+| **jsDelivr** | Fontsource font files only (not archive media) | `@font-face` in `main.css` |
 
-- Both are widely used public CDNs/proxies. The site has no fallback if either is unavailable (images break or fall back to original `src` depending on browser).
-- Do **not** point these at untrusted repos or arbitrary user content.
+- The site has no fallback if S3 or wsrv is unavailable (images break or fall back to original `src` depending on browser).
+- Do **not** point `cdn_base` or the proxy at untrusted hosts or arbitrary user content.
 - Changing `cdn_base` or the proxy host is a production-facing decision; prefer a PR and a smoke check of a few archive posts + `/assets/` images.
-- Local `jekyll serve` can use `ARCHIVE_MEDIA_MODE=local` so media is served from `_site/media` without the CDNs.
+- Local `jekyll serve` uses S3 in CDN mode (default once in-repo media trees are gone). `ARCHIVE_MEDIA_MODE=local` only helps while `_posts/v*-archive/media/` still exists on disk.
 
 ## Design system (short)
 

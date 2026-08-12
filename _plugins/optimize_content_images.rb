@@ -10,7 +10,7 @@ require "uri"
 #   - responsive srcset via wsrv.nl (resize + WebP) while data-full-src keeps full-res
 #
 # Runs after Markdown → HTML (post_render). Applies to:
-#   - Archive media (jsDelivr CDN or local /media/)
+#   - Archive media (S3 via media.jonathanfrei.com, or local /media/)
 #   - Site assets under /assets/ (served via GitHub Pages + Cloudflare)
 #   - Same-origin absolute URLs for this site
 #   - Hotlinked third-party images (http/https) when optimize.hotlink is on (#116)
@@ -29,11 +29,14 @@ require "uri"
 # archive image referenced across many posts is only opened once.
 module Jekyll
   module OptimizeContentImages
-    # Own images: archive media CDN, local /media/, site /assets/, or same-origin site URL.
+    # Own images: S3 archive media, local /media/, site /assets/, or same-origin site URL.
+    # S3 paths: media.jonathanfrei.com/v{2,3}-archive/media/… (#170)
     OWN_MEDIA = %r{
       \A
       (?:
-        https?://cdn\.jsdelivr\.net/gh/[^"'>\\s]+/_posts/v[123]-archive/media/
+        https?://media\.jonathanfrei\.com/v[123]-archive/media/
+        |
+        https?://s3\.us-east-1\.amazonaws\.com/media\.jonathanfrei\.com/v[123]-archive/media/
         |
         https?://(?:www\.)?jonathanfrei\.com/(?:assets/|media/)
         |
@@ -190,6 +193,8 @@ module Jekyll
     end
 
     # Map CDN, /media/, or /assets/ URL back to a local source file for dimension reads.
+    # Works while archive media still exists under _posts/v*-archive/media/; returns
+    # nil after those trees are removed from the repo (wsrv still optimizes via S3).
     def local_path_for_src(site, src)
       return nil if src.nil? || src.empty?
 
@@ -198,19 +203,12 @@ module Jekyll
       return @path_cache[cache_key] if @path_cache.key?(cache_key)
 
       result = nil
-      if (m = path.match(%r{/_posts/v[123]-archive/media/(.+?)(?:\?|$)}i))
-        rel = CGI.unescape(m[1]).tr("\\", "/")
-        %w[
-          _posts/v1-archive/media
-          _posts/v2-archive/media
-          _posts/v3-archive/media
-        ].each do |dir|
-          full = File.join(site.source, dir, rel)
-          if File.file?(full)
-            result = full
-            break
-          end
-        end
+      # S3 / custom domain: …/v2-archive/media/rel or s3…/media.jonathanfrei.com/v2-archive/media/rel
+      if (m = path.match(%r{(?:media\.jonathanfrei\.com|/_posts)/(v[123]-archive)/media/(.+?)(?:\?|$)}i))
+        slug = m[1]
+        rel = CGI.unescape(m[2]).tr("\\", "/")
+        full = File.join(site.source, "_posts", slug, "media", rel)
+        result = full if File.file?(full)
       elsif (m = path.match(%r{(?:\A|/)media/(.+?)(?:\?|$)}i))
         rel = CGI.unescape(m[1]).tr("\\", "/")
         %w[
@@ -245,9 +243,8 @@ module Jekyll
         return m[1].match?(/\.(jpe?g|png|gif|webp|avif)(?:\?|$)/i)
       end
 
-      src.include?("/_posts/v1-archive/media/") ||
-        src.include?("/_posts/v2-archive/media/") ||
-        src.include?("/_posts/v3-archive/media/")
+      # Explicit S3 host forms already covered by OWN_MEDIA; keep path fallbacks
+      src.match?(%r{/v[123]-archive/media/}i)
     end
 
     # Third-party hotlinked image eligible for CDN proxy (#116)

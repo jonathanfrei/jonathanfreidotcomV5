@@ -42,10 +42,10 @@ jobs:
         uses: actions/configure-pages@v6
 
       - name: Build with Jekyll
-        # Archive media is served from jsDelivr (see archive_media in _config.yml
-        # and _plugins/fix_archive_media.rb). Do not bundle ~200MB of images into
-        # the Pages artifact — deploy-pages hard-caps wait at 10 minutes.
-        # Full build keeps cascade pages and plugin output coherent.
+        # Archive media is served from S3 (media.jonathanfrei.com; see
+        # archive_media in _config.yml and _plugins/fix_archive_media.rb, #170).
+        # Do not bundle media into the Pages artifact — deploy-pages hard-caps
+        # wait at 10 minutes. Full build keeps cascade pages coherent.
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
@@ -71,6 +71,17 @@ jobs:
               bad=1
             fi
           done
+          # Spot-check that archive posts rewrite media/ to S3 (#170), not jsDelivr.
+          if ! grep -Rql 'media.jonathanfrei.com/v[23]-archive/media/' _site --include='*.html'; then
+            echo "::error::Expected S3 archive media URLs (media.jonathanfrei.com) in built HTML"
+            bad=1
+          else
+            echo "OK: S3 archive media URLs present in HTML"
+          fi
+          if grep -Rql 'cdn.jsdelivr.net/gh/.*/_posts/v[123]-archive/media/' _site --include='*.html'; then
+            echo "::error::Legacy jsDelivr archive media URLs still present in HTML"
+            bad=1
+          fi
           if [ "$bad" -ne 0 ]; then
             exit 1
           fi
@@ -126,7 +137,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     # deploy-pages hard-caps wait timeout at 10 minutes (MAX_TIMEOUT=600000).
-    # Archive media is offloaded to jsDelivr so this stays well under the limit.
+    # Archive media is on S3 (media.jonathanfrei.com) so this stays under the limit.
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

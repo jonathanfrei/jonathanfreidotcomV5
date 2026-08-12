@@ -22,12 +22,14 @@
 <link rel="apple-touch-icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
 
 {% comment %}
-  Archive media loads from jsDelivr; all own images (archive + /assets/) get
-  responsive WebP via wsrv.nl (see _plugins/optimize_content_images.rb, #90).
-  Preconnect speeds LCP image start and font downloads (#92).
+  Archive media loads from S3 (media.jonathanfrei.com, #170); own images get
+  responsive WebP via wsrv.nl (_plugins/optimize_content_images.rb, #90).
+  Fonts still from jsDelivr Fontsource. Preconnect speeds LCP + fonts (#92).
 {% endcomment %}
+<link rel="preconnect" href="https://media.jonathanfrei.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://wsrv.nl" crossorigin>
+<link rel="dns-prefetch" href="https://media.jonathanfrei.com">
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <link rel="dns-prefetch" href="https://wsrv.nl">
 
