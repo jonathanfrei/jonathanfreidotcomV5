@@ -53,9 +53,11 @@ module Jekyll
   end
 end
 
-Jekyll::Hooks.register [:pages, :documents], :post_convert do |doc|
-  # Documents include posts and collection docs; pages include site pages.
+Jekyll::Hooks.register [:pages, :documents], :post_render do |doc|
+  # Add anchors only to the rendered HTML. Mutating `doc.content` at
+  # `post_convert` also changes the source consumed by jekyll-feed, which
+  # would expose the visual # icon in RSS entries.
   next if doc.respond_to?(:draft?) && doc.draft?
 
-  doc.content = Jekyll::HeadingAnchors.process(doc.content)
+  doc.output = Jekyll::HeadingAnchors.process(doc.output)
 end
