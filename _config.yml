@@ -115,14 +115,15 @@ archive_media:
   mode: auto
   cdn_base: "https://media.jonathanfrei.com"
   # PageSpeed: resize + WebP via wsrv.nl (full-res preserved on data-full-src).
-  # quality 85 is near-lossless for photos; widths cover 1x–2x of the 33em measure.
+  # quality 85 is near-lossless for photos; widths cover 1x–2x of the 36em measure.
+  # sizes must match --measure so srcset selection stays accurate (#173).
   # Applies to archive media, /assets/, and hotlinked external images.
   optimize:
     enabled: auto
     proxy: "https://wsrv.nl"
     quality: 85
     widths: [480, 768, 1100]
-    sizes: "(max-width: 40em) 92vw, 33em"
+    sizes: "(max-width: 40em) 92vw, 36em"
     # When true, rewrite http(s) third-party <img> src through the proxy (#116)
     hotlink: true
 
