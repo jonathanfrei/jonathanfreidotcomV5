@@ -8,6 +8,7 @@ require "uri"
 #   - loading=lazy for below-fold images; first image gets fetchpriority=high
 #   - decoding=async
 #   - responsive srcset via wsrv.nl (resize + WebP) while data-full-src keeps full-res
+#   - LCP preload uses imagesrcset/imagesizes so the browser fetches one candidate (#173)
 #
 # Runs after Markdown → HTML (post_render). Applies to:
 #   - Archive media (S3 via media.jonathanfrei.com, or local /media/)
@@ -22,7 +23,7 @@ require "uri"
 #   proxy: "https://wsrv.nl"
 #   quality: 85                # WebP quality (high; visually near-lossless for photos)
 #   widths: [480, 768, 1100]   # display widths for srcset (retina covered by 1100)
-#   sizes: "(max-width: 40em) 92vw, 33em"
+#   sizes: "(max-width: 40em) 92vw, 36em"  # match --measure in main.css
 #   hotlink: true              # proxy third-party hotlinked images via wsrv (#116)
 #
 # Performance: dimensions and path lookups are memoized per build so the same
@@ -51,7 +52,8 @@ module Jekyll
       "proxy" => "https://wsrv.nl",
       "quality" => 85,
       "widths" => [480, 768, 1100],
-      "sizes" => "(max-width: 40em) 92vw, 33em",
+      # Match .prose / --measure (36em). Mobile: nearly full viewport.
+      "sizes" => "(max-width: 40em) 92vw, 36em",
       "hotlink" => true
     }.freeze
 
@@ -416,10 +418,12 @@ module Jekyll
         # Preserve original for debugging / optional full-res openers
         tag_attrs["data-full-src"] = origin
 
-        lcp_candidate = tag_attrs["src"] if index.zero?
+        # Responsive LCP preload must share srcset/sizes with <img> or the
+        # browser may preload 1100w and still fetch 768w for display (#173).
+        lcp_candidate = lcp_descriptor(tag_attrs) if index.zero?
       else
         tag_attrs["data-img-opt"] = "1"
-        lcp_candidate = origin if index.zero?
+        lcp_candidate = { "href" => origin } if index.zero?
       end
 
       order = %w[
@@ -427,6 +431,32 @@ module Jekyll
         fetchpriority data-full-src data-img-opt
       ]
       ["<img #{serialize_attrs(tag_attrs, order)}>", lcp_candidate]
+    end
+
+    # LCP preload payload: href plus optional imagesrcset/imagesizes.
+    def lcp_descriptor(tag_attrs)
+      desc = { "href" => tag_attrs["src"].to_s }
+      srcset = tag_attrs["srcset"].to_s
+      sizes = tag_attrs["sizes"].to_s
+      if !srcset.empty?
+        desc["imagesrcset"] = srcset
+        desc["imagesizes"] = sizes unless sizes.empty?
+      end
+      desc
+    end
+
+    def normalize_lcp(lcp)
+      case lcp
+      when Hash
+        href = (lcp["href"] || lcp[:href]).to_s
+        srcset = (lcp["imagesrcset"] || lcp[:imagesrcset] || lcp["srcset"] || lcp[:srcset]).to_s
+        sizes = (lcp["imagesizes"] || lcp[:imagesizes] || lcp["sizes"] || lcp[:sizes]).to_s
+        [href, srcset, sizes]
+      when String
+        [lcp, "", ""]
+      else
+        ["", "", ""]
+      end
     end
 
     def process_html(site, html)
@@ -459,11 +489,30 @@ module Jekyll
 
     # Inject preload even when post_render runs after the layout (so Liquid
     # {{ page.lcp_image }} may have already been evaluated empty).
-    def inject_lcp_preload(html, lcp_url)
-      return html if lcp_url.nil? || lcp_url.empty?
-      return html if html.include?('rel="preload"') && html.include?(lcp_url)
+    # Prefer imagesrcset/imagesizes so preload and <img> pick the same file (#173).
+    def inject_lcp_preload(html, lcp)
+      href, imagesrcset, imagesizes = normalize_lcp(lcp)
+      return html if href.empty?
 
-      tag = %(<link rel="preload" as="image" href="#{escape_attr(lcp_url)}" fetchpriority="high">\n)
+      href_attr = escape_attr(href)
+      # Already injected (or Liquid path rendered a matching preload).
+      # Match both raw and entity-escaped href (& → &amp; in attributes).
+      if html.match?(/rel=["']preload["']/i) && html.match?(/as=["']image["']/i) &&
+         (html.include?(href) || html.include?(href_attr))
+        return html
+      end
+
+      parts = [
+        'rel="preload"',
+        'as="image"',
+        %(href="#{href_attr}")
+      ]
+      unless imagesrcset.empty?
+        parts << %(imagesrcset="#{escape_attr(imagesrcset)}")
+        parts << %(imagesizes="#{escape_attr(imagesizes)}") unless imagesizes.empty?
+      end
+      parts << 'fetchpriority="high"'
+      tag = "<link #{parts.join(' ')}>\n"
       if html.sub!(%r{</head>}i, "#{tag}</head>")
         html
       else
@@ -476,7 +525,12 @@ module Jekyll
       return unless doc.respond_to?(:output) && doc.output
 
       new_html, lcp = process_html(site, doc.output)
-      doc.data["lcp_image"] = lcp if lcp
+      if lcp
+        href, imagesrcset, imagesizes = normalize_lcp(lcp)
+        doc.data["lcp_image"] = href unless href.empty?
+        doc.data["lcp_imagesrcset"] = imagesrcset unless imagesrcset.empty?
+        doc.data["lcp_imagesizes"] = imagesizes unless imagesizes.empty?
+      end
       new_html = inject_lcp_preload(new_html, lcp) if lcp && new_html.include?("</head>")
       doc.output = new_html
     end
