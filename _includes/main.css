@@ -245,18 +245,18 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.01em;
 }
 
-/* Heading permalinks (#160): icon left of text on hover; click heading or icon */
-.prose :is(h1, h2, h3, h4, h5, h6) {
+/* Heading permalinks (#160): H2/H3 icon left of text on hover; click heading or icon */
+.prose :is(h2, h3) {
   position: relative;
 }
 
-.prose :is(h1, h2, h3, h4, h5, h6) > a.heading-anchor {
+.prose :is(h2, h3) > a.heading-anchor {
   color: inherit;
   text-decoration: none;
 }
 
-.prose :is(h1, h2, h3, h4, h5, h6) > a.heading-anchor:hover,
-.prose :is(h1, h2, h3, h4, h5, h6) > a.heading-anchor:focus-visible {
+.prose :is(h2, h3) > a.heading-anchor:hover,
+.prose :is(h2, h3) > a.heading-anchor:focus-visible {
   color: inherit;
   text-decoration: none;
 }
@@ -277,8 +277,8 @@ h1, h2, h3, h4, h5, h6 {
   user-select: none;
 }
 
-.prose :is(h1, h2, h3, h4, h5, h6):hover .heading-anchor__icon,
-.prose :is(h1, h2, h3, h4, h5, h6):focus-within .heading-anchor__icon,
+.prose :is(h2, h3):hover .heading-anchor__icon,
+.prose :is(h2, h3):focus-within .heading-anchor__icon,
 .heading-anchor:focus-visible .heading-anchor__icon {
   opacity: 1;
   color: var(--color-accent);
