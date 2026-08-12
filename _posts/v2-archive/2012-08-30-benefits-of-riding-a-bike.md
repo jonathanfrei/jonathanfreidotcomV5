@@ -5,8 +5,8 @@ tags: [bikes, biking, "biking benefits", fitness]
 tumblr_id: "30519506412"
 ---
 
-[](http://www2.le.ac.uk/offices/estates/environment/travel/travel-images/bicycle-benefits-image.jpg/view )
+![](https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/1/2013/02/bicycle-benefits-image.jpg)
 
-# Benefits of riding a bike
+
 
 I only care about a few of these benefits. Guess which ones.
