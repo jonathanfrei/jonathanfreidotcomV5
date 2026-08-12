@@ -101,18 +101,19 @@ jekyll-archives:
   permalinks:
     month: /archive/:year/:month/
 
-# Archive media: keep files in-repo under _posts/v{2,3}-archive/media but do
-# not ship them in the GitHub Pages artifact (deploy-pages 10-minute timeout).
-# Production (JEKYLL_ENV=production) rewrites URLs to jsDelivr; local serve
-# still publishes under /media/. Override with ARCHIVE_MEDIA_MODE=cdn|local.
-# See issue #68.
+# Archive media lives on S3 (media.jonathanfrei.com), not in the Pages artifact
+# (deploy-pages 10-minute timeout). Production rewrites media/… to:
+#   https://media.jonathanfrei.com/v{2,3}-archive/media/…
+# Optional local mode still publishes under /media/ if _posts/v*-archive/media
+# trees remain in the checkout. Override with ARCHIVE_MEDIA_MODE=cdn|local.
+# See issues #68 (offload), #170 (S3).
 #
 # Image optimization (wsrv.nl WebP + srcset) applies to:
 #   - Own site images (archive media + /assets/) — issue #90
 #   - Hotlinked third-party images in post HTML — issue #116
 archive_media:
   mode: auto
-  cdn_base: "https://cdn.jsdelivr.net/gh/jonathanfrei/jonathanfreidotcomV5@main"
+  cdn_base: "https://media.jonathanfrei.com"
   # PageSpeed: resize + WebP via wsrv.nl (full-res preserved on data-full-src).
   # quality 85 is near-lossless for photos; widths cover 1x–2x of the 33em measure.
   # Applies to archive media, /assets/, and hotlinked external images.
@@ -151,8 +152,8 @@ exclude:
   - AGENTS.md
   - _x7k9p
   - .gitignore
-  # Media under _posts must not be read as documents (date-prefixed .jpg names
-  # match the posts filename pattern and trigger UTF-8 read errors).
+  # Residual local media trees (safe to delete once S3 is confirmed, #170).
+  # Excluded so date-prefixed .jpg names are not read as posts.
   - _posts/v1-archive/media
   - _posts/v2-archive/media
   - _posts/v3-archive/media
@@ -165,7 +166,7 @@ defaults:
     values:
       layout: post
       author: Jonathan Frei
-  # Historical imports: no category segment in URL; media lives at /media/
+  # Historical imports: no category segment in URL; media on S3 (#170)
   # categories: [] keeps permalink clean while still allowing explicit category
   # in front matter if desired for /categories/ pages (#93)
   - scope:
