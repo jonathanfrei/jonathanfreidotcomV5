@@ -681,6 +681,21 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   text-align: left;
 }
 
+/* Drop cap on longer posts (file > 5kb, first line > 100 chars, #123) */
+.prose--drop-cap .post-body > p:first-child::first-letter {
+  float: left;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: clamp(2.6em, 8vw, 3.4em);
+  line-height: 0.75;
+  padding: 0.1em 0.12em 0 0;
+  color: var(--color-fg);
+}
+
+.prose--drop-cap .post-body > p:first-child {
+  hyphens: none;
+}
+
 /* ---------- Post list & meta ---------- */
 .post-list {
   list-style: none;

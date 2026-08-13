@@ -50,6 +50,8 @@ jobs:
         env:
           JEKYLL_ENV: production
           ARCHIVE_MEDIA_MODE: cdn
+          # Match _config.yml timezone so permalinks/bylines stay Eastern (#180).
+          TZ: America/New_York
 
       - name: Report artifact size
         run: |
