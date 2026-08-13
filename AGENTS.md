@@ -82,7 +82,8 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 ---
 ```
 
-- **`date`** = first publication. Never auto-overwrite on edit. Prefer `YYYY-MM-DD HH:MM:SS ±ZZZZ` for new posts.
+- **`date`** = first publication. Never auto-overwrite on edit. Prefer `YYYY-MM-DD HH:MM:SS ±ZZZZ` for new posts. Site timezone is **`America/New_York`** (`_config.yml`, issue #180) so evening Eastern dates do not roll to the next UTC day in bylines or `/:year/:month/:day/` permalinks. Old UTC paths get HTML redirects (`_plugins/date_redirects.rb`).
+- **`drop_cap`:** optional override. If omitted, longer posts get a drop cap when the **file is > 5 KB** and the **first non-empty body line is prose > 100 characters** (issue #123). Set `drop_cap: false` to opt out or `drop_cap: true` to force one. Headings, images, HTML, quotes, and lists never qualify.
 - **`last_modified_at`**: set in front matter only for intentional revisions (shows “Updated …” in the byline when **> 24h** after `date`). If omitted, `_plugins/post_metadata.rb` fills it from **git** for Schema.org `dateModified`, `jekyll-seo-tag`, and sitemap `lastmod` — not for the visible byline (avoids archive-import noise). Deploy uses `fetch-depth: 0` for full history.
 - **Reading time / word count:** computed at build (`reading_time`, `word_count`); “N min read” shows when ≥ 2 minutes. No front matter required.
 - **`description`:** encourage on new posts for stable SEO/social; archive posts need not be backfilled.
@@ -142,7 +143,8 @@ editorial/
 
 Desired URLs: `/about`, `/blog`, `/2026/08/05/slug`, `/tags/foo` — **not** `/about/`, etc. (issue #63).
 
-- **Do:** `permalink: /about`, post pattern `/:categories/:year/:month/:day/:title`, tag archives `/tags/:name`
+- **Do:** `permalink: /about`, post pattern `/:year/:month/:day/:title`, tag archives `/tags/:name`
+- Post `:year/:month/:day` uses **`timezone: America/New_York`** (issue #180), not the Actions runner’s UTC clock.
 - Jekyll then writes **`.html` files** (`about.html`). GitHub Pages serves those at the clean path.
 - **Do not** write extensionless files (no `.html`) — GH Pages may download them as `application/octet-stream`.
 - Keep internal links consistent (`/blog`, `/tags/foo`, etc.).
@@ -254,6 +256,8 @@ Production depends on external services for media (configured in `_config.yml` `
 | Site-wide layout | `_layouts/default.html` |
 | Post chrome (tags, comment mailto, random post) | `_layouts/post.html` (random uses on-click fetch of `search.json`) |
 | Post metadata (last_modified, reading time) | `_plugins/post_metadata.rb` + `post_metadata` in `_config.yml` (#75) |
+| Date timezone / UTC permalink redirects | `_config.yml` `timezone` + `_plugins/date_redirects.rb` (#180) |
+| Drop caps on long posts | `_plugins/drop_cap.rb` + `.prose--drop-cap` in `main.css` (#123) |
 | Tag archive title | `_layouts/tag.html` |
 | Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` |
 | Random-post URL list | `search.json` (`url` field; `posts.json` removed — #130) |
