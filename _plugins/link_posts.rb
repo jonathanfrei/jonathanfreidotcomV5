@@ -163,7 +163,7 @@ module Jekyll
 
       if source.is_a?(Hash)
         supplied = source.transform_keys(&:to_s)
-        card = supplied.compact
+        card = utf8_hash(supplied.compact)
         card["url"] = doc.data["external_url"]
         card["host"] = doc.data["host"]
         card["title"] ||= doc.data["title"]
@@ -182,7 +182,7 @@ module Jekyll
       fetched["url"] = doc.data["external_url"]
       fetched["host"] = doc.data["host"]
       fetched["title"] ||= doc.data["title"]
-      doc.data["card"] = fetched
+      doc.data["card"] = utf8_hash(fetched)
     end
 
     def fetch_metadata(site, raw_url)
@@ -193,7 +193,7 @@ module Jekyll
       response = get_with_redirects(uri)
       return {} unless response.is_a?(Net::HTTPSuccess)
 
-      html = response.body.to_s.byteslice(0, MAX_BODY_BYTES)
+      html = utf8(response.body.to_s.byteslice(0, MAX_BODY_BYTES))
       metadata = metadata_from_html(html)
       write_card_cache(site, raw_url, metadata)
       metadata
@@ -215,7 +215,7 @@ module Jekyll
       return unless File.file?(path)
 
       data = JSON.parse(File.read(path))
-      data.is_a?(Hash) ? data : nil
+      data.is_a?(Hash) ? utf8_hash(data) : nil
     rescue JSON::ParserError
       nil
     end
@@ -255,16 +255,18 @@ module Jekyll
         value = attribute(tag, "content")
         next if key.to_s.empty? || value.to_s.empty?
 
-        values[key.downcase] ||= CGI.unescapeHTML(value.strip)
+        values[key.downcase] ||= utf8(CGI.unescapeHTML(value.strip))
       end
       title = values["og:title"] || html.to_s[/<title\b[^>]*>(.*?)<\/title>/im, 1]
-      {
-        "title" => title && CGI.unescapeHTML(title.gsub(/\s+/, " ").strip),
-        "description" => values["og:description"] || values["description"],
-        "image" => values["og:image"],
-        "image_alt" => values["og:image:alt"],
-        "site_name" => values["og:site_name"]
-      }.reject { |_key, value| value.nil? || value.empty? }
+      utf8_hash(
+        {
+          "title" => title && CGI.unescapeHTML(title.gsub(/\s+/, " ").strip),
+          "description" => values["og:description"] || values["description"],
+          "image" => values["og:image"],
+          "image_alt" => values["og:image:alt"],
+          "site_name" => values["og:site_name"]
+        }.reject { |_key, value| value.nil? || value.empty? }
+      )
     end
 
     def attribute(tag, name)
@@ -311,6 +313,23 @@ module Jekyll
 
     def blank?(value)
       value.nil? || (value.respond_to?(:empty?) && value.empty?) || value.to_s.strip.empty?
+    end
+
+    # Net::HTTP bodies are ASCII-8BIT. Liquid crashes if those bytes
+    # (smart quotes, em dashes) are joined with UTF-8 templates.
+    def utf8(value)
+      return value unless value.is_a?(String)
+
+      string = value.dup
+      string.force_encoding(Encoding::UTF_8)
+      return string if string.valid_encoding?
+
+      string.force_encoding(Encoding::ASCII_8BIT)
+            .encode(Encoding::UTF_8, invalid: :replace, undef: :replace)
+    end
+
+    def utf8_hash(hash)
+      hash.transform_values { |value| utf8(value) }
     end
 
     def stream_item_for_link(doc)
