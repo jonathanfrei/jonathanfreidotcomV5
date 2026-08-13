@@ -1,0 +1,37 @@
+---
+layout: null
+permalink: /feed.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <link>{{ '/' | absolute_url }}</link>
+    <description>{{ site.description | xml_escape }}</description>
+    <language>en-us</language>
+    <atom:link href="{{ '/feed.xml' | absolute_url }}" rel="self" type="application/rss+xml" />
+    {% for item in site.data.site_stream limit:40 %}
+    <item>
+      <title>{{ item.title | xml_escape }}</title>
+      {% if item.kind == 'link' %}
+      <link>{{ item.external_url | xml_escape }}</link>
+      <guid isPermaLink="true">{{ item.external_url | xml_escape }}</guid>
+      {% else %}
+      <link>{{ item.internal_url | absolute_url }}</link>
+      <guid isPermaLink="true">{{ item.internal_url | absolute_url }}</guid>
+      {% endif %}
+      <pubDate>{{ item.date | date_to_rfc822 }}</pubDate>
+      <author>{{ site.author.email | xml_escape }} ({{ site.author.name | xml_escape }})</author>
+      <description><![CDATA[
+        {% if item.kind == 'link' %}
+          {{ item.excerpt | default: item.description }}
+          <p><a href="{{ item.internal_url | absolute_url }}">Permalink</a></p>
+        {% else %}
+          {{ item.description | default: item.excerpt }}
+        {% endif %}
+      ]]></description>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

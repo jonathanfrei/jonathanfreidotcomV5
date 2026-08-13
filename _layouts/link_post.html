@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<article class="prose link-post" itemscope itemtype="https://schema.org/BlogPosting">
+  <meta itemprop="headline" content="{{ page.title | escape }}">
+  <link itemprop="url" href="{{ page.url | absolute_url }}">
+  {% if page.external_url %}<link itemprop="sameAs" href="{{ page.external_url }}">{% endif %}
+
+  <div class="link-post__body" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <p class="post-meta link-post__meta">
+    <time datetime="{{ page.date_xml | default: page.date | date_to_xmlschema }}" itemprop="datePublished">
+      {{ page.date | date: "%B %-d, %Y" }}
+    </time>
+  </p>
+
+  {%- if page.tags.size > 0 -%}
+  <div class="post-tags">
+    <span class="sr-only">Tags:</span>
+    <ul class="post-tags__list" itemprop="keywords">
+      {%- for tag in page.tags -%}
+        <li>{% include tag-chip.html tag=tag %}</li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  {%- endif -%}
+
+  {% include link-card.html entry=page %}
+
+  <p class="post-comment-link">
+    <a href="mailto:hi+comments@jonathanfrei.com?subject={{ 'Comment on: ' | append: page.title | uri_escape }}">Comment</a>
+    <span class="post-actions-sep" aria-hidden="true">·</span>
+    <a href="{{ '/links' | relative_url }}">Links</a>
+  </p>
+</article>

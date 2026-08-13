@@ -26,6 +26,7 @@ _layouts/                      # default, page, post, tag, editorial
 _plugins/url_embeds.rb         # Standalone media URLs → embeds
 _posts/                        # Published posts (YYYY-MM-DD-slug.md)
 _posts/v1-archive/             # Historical imported posts (treat carefully)
+_links/                        # Link posts (yyyy-mm-dd-hh-mm.md → /yyyy-mm-dd-hh-mm)
 _x7k9p/                        # Obfuscated drafts (excluded from build & CI paths)
 assets/                        # Images, JS; CSS tooling at assets/css/*.html
 editorial/                     # Handcrafted HTML drop-ins (slug.html → /editorial/slug)
@@ -96,6 +97,46 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 - Excluded from Jekyll build, feed, sitemap; blocked in `robots.txt`.
 - CI **`paths-ignore`** includes `_x7k9p/**` so draft-only commits do not rebuild the site.
 - To publish: move to `_posts/` with a proper dated filename and front matter.
+
+### Link posts (`_links/`)
+
+- One file per link: `_links/yyyy-mm-dd-hh-mm.md`. Subfolders are allowed for
+  organizing archives and do **not** change the URL.
+- Permalink is `/yyyy-mm-dd-hh-mm` (the filename stem). Duplicate basenames
+  fail the build. There is no `slug:` override — rename the file to change
+  the URL. A collision with an existing post or page URL also fails the build.
+- Required front matter: `title`, public `http(s)` `url`, timezone-aware
+  `date`, `type: "link"` (defaulted by `_config.yml`). Optional: `excerpt`,
+  `tags`, Markdown body.
+- Permalink pages are minimal: body, then date/tags, then an on-site URL
+  card. No visible title/`h1`. `title` is still used for lists, RSS, and
+  document `<title>` / SEO.
+- URL cards are **site-only** (never in RSS). Default is a build-time Open
+  Graph fetch (fail-soft, cached under `.jekyll-cache/link-cards/`).
+  `card: false` hides the card and skips the fetch. A `card:` mapping
+  (`title`, `description`, `image`, `image_alt`, `site_name`) supplies the
+  preview and skips the fetch.
+- Archives: `/links` (paginated, grouped by year), `/links/YYYY`,
+  `/links/YYYY/MM/` (trailing slash, same GH Pages rule as post month
+  archives). Tags on link pages reuse `tag-chip.html` but do **not** join
+  post tag autopages.
+- Feeds: `/feed.xml` (mixed; link items `<link>`/`<guid>` the external URL),
+  `/posts.xml` (posts only), `/links.xml` (links only).
+- Example:
+
+  ```yaml
+  ---
+  title: "A useful essay"
+  url: "https://example.com/essay"
+  date: 2026-08-13 14:30:00 -0400
+  type: "link"
+  excerpt: "Optional list blurb."
+  tags: [reading]
+  # card: false
+  ---
+
+  Optional Markdown body.
+  ```
 
 ### Pages
 
@@ -249,6 +290,7 @@ Production depends on external services for media (configured in `_config.yml` `
 | Task | Where |
 | --- | --- |
 | New post | `_posts/YYYY-MM-DD-slug.md` |
+| New link post | `_links/yyyy-mm-dd-hh-mm.md` → `/yyyy-mm-dd-hh-mm` (#37) |
 | Draft | `_x7k9p/` |
 | Nav / header | `_includes/header.html` |
 | Footer / disclaimer | `_includes/footer.html` |

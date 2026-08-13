@@ -734,6 +734,54 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   margin: var(--space-2) 0 0;
 }
 
+/* ---------- Link posts (#37) ---------- */
+.link-entry__title {
+  font-size: var(--type-lg);
+  font-weight: 400;
+  margin: 0;
+}
+
+.link-entry__title a {
+  color: var(--color-fg);
+  text-decoration: none;
+}
+
+.link-entry__title a:hover,
+.link-entry__title a:focus-visible {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.link-entry__meta { margin: var(--space-3) 0 0; }
+.link-post__body > :first-child { margin-top: 0; }
+.link-post__meta { margin-top: var(--space-6); }
+.links-year + .links-year { margin-top: var(--space-8); }
+.link-archive-months { margin-bottom: var(--space-6); }
+
+.link-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  margin-top: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  color: var(--color-fg);
+  text-decoration: none;
+  background: var(--color-bg);
+}
+
+.link-card:hover,
+.link-card:focus-visible {
+  border-color: var(--color-accent);
+  text-decoration: none;
+}
+
+.link-card__image { display: block; width: 100%; max-height: 16rem; object-fit: cover; }
+.link-card__body { display: grid; gap: var(--space-1); padding: var(--space-3); }
+.link-card__host { color: var(--color-muted); font-family: var(--font-mono); font-size: var(--type-sm); text-transform: uppercase; }
+.link-card__title { font-size: var(--type-md); font-weight: 600; }
+.link-card__description { color: var(--color-muted); font-size: var(--type-sm); }
+
 /* Post meta: published · Updated · N min read (#75) */
 .post-meta__sep {
   margin: 0 0.15em;
