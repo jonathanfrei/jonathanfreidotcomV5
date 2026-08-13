@@ -23,7 +23,7 @@ kramdown:
 # No trailing slash: Jekyll writes .html files that GitHub Pages serves at the
 # clean path (/about, not /about/). Extensionless files would download as
 # application/octet-stream; .html does not. See issue #63.
-permalink: /:categories/:year/:month/:day/:title
+permalink: /:year/:month/:day/:title
 
 # Plugins
 plugins:
