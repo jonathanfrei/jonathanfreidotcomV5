@@ -4,6 +4,11 @@ description: "Personal site and blog of Jonathan Frei. Short posts, long-form ar
 url: "https://jonathanfrei.com"
 baseurl: ""
 
+# Interpret and display dates in Eastern Time (issue #180). GitHub Actions
+# runners are UTC; without this, a TZ-aware evening date such as
+# 2026-08-12T21:17:00-04:00 becomes August 13 in permalinks and bylines.
+timezone: America/New_York
+
 # Author
 author:
   name: Jonathan Frei
