@@ -23,23 +23,29 @@ or reach me on X at <a href="https://x.com/jonathanfrei">@jonathanfrei</a> altho
 
 
 
-<h2 class="section-title">Recent posts</h2>
+<h2 class="section-title">Recent posts and links</h2>
 
 <ul class="post-list">
-  {% for post in site.posts limit:5 %}
+  {% for item in site.data.site_stream limit:5 %}
     <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      {% if item.kind == 'link' %}
+        {% include link-entry.html entry=item %}
+      {% else %}
+      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
       <div class="post-meta">
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <time datetime="{{ item.date_xml }}">{{ item.date | date: "%b %-d, %Y" }}</time>
       </div>
+      {% endif %}
     </li>
   {% endfor %}
 </ul>
 
-{% if site.posts.size > 5 %}
+{% if site.data.site_stream.size > 5 %}
 <p class="more-posts post-nav">
   <a href="{{ '/blog' | relative_url }}">More posts</a>
+  <span aria-hidden="true">·</span>
+  <a href="{{ '/links' | relative_url }}">More links</a>
 </p>
-{% elsif site.posts.size == 0 %}
-<p class="post-meta">No posts yet.</p>
+{% elsif site.data.site_stream.size == 0 %}
+<p class="post-meta">No posts or links yet.</p>
 {% endif %}

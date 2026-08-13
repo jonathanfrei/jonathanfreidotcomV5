@@ -1,0 +1,11 @@
+{% assign card = include.entry.card %}
+{% if card %}
+<a class="link-card" href="{{ include.entry.external_url | default: card.url }}" target="_blank" rel="nofollow noopener noreferrer" data-outbound="link" referrerpolicy="no-referrer">
+  {% if card.image %}<img class="link-card__image" src="{{ card.image }}" alt="{{ card.image_alt | default: '' }}" loading="lazy" decoding="async" referrerpolicy="no-referrer">{% endif %}
+  <span class="link-card__body">
+    <span class="link-card__host">{{ card.site_name | default: include.entry.host }}</span>
+    <span class="link-card__title">{{ card.title | default: include.entry.title }}</span>
+    {% if card.description %}<span class="link-card__description">{{ card.description }}</span>{% endif %}
+  </span>
+</a>
+{% endif %}

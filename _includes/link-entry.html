@@ -1,0 +1,26 @@
+{% assign entry = include.entry %}
+<div class="link-entry">
+  <h2 class="link-entry__title">
+    <a href="{{ entry.url | relative_url }}">{{ entry.title }}</a>
+  </h2>
+  {% if entry.excerpt and entry.excerpt != "" %}
+    <p class="excerpt">{{ entry.excerpt | strip_html | truncate: 160 }}</p>
+  {% endif %}
+  <p class="post-meta link-entry__meta">
+    <time datetime="{{ entry.date_xml | default: entry.date | date_to_xmlschema }}">{{ entry.date | date: "%B %-d, %Y" }}</time>
+    {% if entry.year and entry.month %}
+      <span aria-hidden="true">·</span>
+      <a href="{{ '/links/' | append: entry.year | append: '/' | append: entry.month | append: '/' | relative_url }}">{{ entry.date | date: "%B %Y" }}</a>
+    {% endif %}
+  </p>
+  {% if entry.tags.size > 0 %}
+  <div class="post-tags">
+    <ul class="post-tags__list">
+      {% for tag in entry.tags %}
+        <li>{% include tag-chip.html tag=tag %}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  {% include link-card.html entry=entry %}
+</div>

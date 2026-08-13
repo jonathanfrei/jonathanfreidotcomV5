@@ -198,11 +198,28 @@ defaults:
       type: "pages"
     values:
       layout: page
+  - scope:
+      path: ""
+      type: "links"
+    values:
+      layout: link_post
+      type: link
+      author: Jonathan Frei
 
 # SEO / social (basic)
 twitter:
   username: jonathanfrei
 
 # Feed settings – drafts never included because excluded from build
+# jekyll-feed is the posts-only feed. Combined /feed.xml and /links.xml
+# are authored templates backed by _plugins/link_posts.rb (#37).
 feed:
-  path: feed.xml
+  path: posts.xml
+
+# Link posts (#37): one file per link under _links/yyyy-mm-dd-hh-mm.md.
+# Subfolders are allowed for organizing archives; permalink is /:name
+# (the filename stem). The generator adds year/month archive pages.
+collections:
+  links:
+    output: true
+    permalink: /:name
