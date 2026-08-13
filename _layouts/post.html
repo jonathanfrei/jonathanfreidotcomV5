@@ -84,6 +84,7 @@ layout: default
     for (var i = 0; i < data.length; i++) {
       var item = data[i];
       var url = typeof item === "string" ? item : item && item.url;
+      if (item && item.kind === "link") continue;
       if (url) urls.push(url);
     }
     return urls;

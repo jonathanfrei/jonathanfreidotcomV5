@@ -1,0 +1,28 @@
+---
+layout: null
+permalink: /links.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | xml_escape }} — Links</title>
+    <link>{{ '/links' | absolute_url }}</link>
+    <description>Links and short notes from {{ site.title | xml_escape }}</description>
+    <language>en-us</language>
+    <atom:link href="{{ '/links.xml' | absolute_url }}" rel="self" type="application/rss+xml" />
+    {% for item in site.data.link_posts limit:40 %}
+    <item>
+      <title>{{ item.title | xml_escape }}</title>
+      <link>{{ item.external_url | xml_escape }}</link>
+      <guid isPermaLink="true">{{ item.external_url | xml_escape }}</guid>
+      <pubDate>{{ item.date | date_to_rfc822 }}</pubDate>
+      <author>{{ site.author.email | xml_escape }} ({{ site.author.name | xml_escape }})</author>
+      <description><![CDATA[
+        {{ item.excerpt | default: item.description }}
+        <p><a href="{{ item.url | absolute_url }}">Permalink</a></p>
+      ]]></description>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

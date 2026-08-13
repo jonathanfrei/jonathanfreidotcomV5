@@ -114,6 +114,53 @@ jobs:
             missing=1
           fi
 
+          if [ -f "_site/links.html" ]; then
+            echo "OK: _site/links.html"
+          elif [ -f "_site/links/index.html" ]; then
+            echo "OK: _site/links/index.html (paginated)"
+          else
+            echo "::error::Missing links page (expected _site/links.html or _site/links/index.html)"
+            missing=1
+          fi
+
+          if [ -f "_site/2026-08-13-14-30.html" ]; then
+            echo "OK: _site/2026-08-13-14-30.html"
+          else
+            echo "::error::Missing sample link permalink _site/2026-08-13-14-30.html"
+            missing=1
+          fi
+
+          if [ -f "_site/links/2026/08/index.html" ]; then
+            echo "OK: _site/links/2026/08/index.html"
+          else
+            echo "::error::Missing sample link month archive _site/links/2026/08/index.html"
+            missing=1
+          fi
+
+          for feed in feed.xml posts.xml links.xml; do
+            if [ ! -f "_site/$feed" ]; then
+              echo "::error::Missing feed: _site/$feed"
+              missing=1
+            else
+              echo "OK: _site/$feed"
+            fi
+          done
+
+          if [ -f "_site/links.xml" ]; then
+            if ! grep -q 'https://en.wikipedia.org/wiki/RSS' _site/links.xml; then
+              echo "::error::links.xml should guid/link the Wikipedia fixture URL"
+              missing=1
+            fi
+            if grep -q 'link-card' _site/links.xml; then
+              echo "::error::links.xml must not include URL card markup"
+              missing=1
+            fi
+            if grep -q 'link-card' _site/feed.xml; then
+              echo "::error::feed.xml must not include URL card markup"
+              missing=1
+            fi
+          fi
+
           if [ "$missing" -ne 0 ]; then
             exit 1
           fi
