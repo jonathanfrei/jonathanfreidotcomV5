@@ -5,7 +5,8 @@ tags: ["tumblr birthday", "tumblr anniversary", milestone, "happy birthday", bir
 tumblr_id: "63097783262"
 ---
 
-![Happy Birthday](http://i.imgur.com/xSnobwh.png)
+![Happy Birthday](https://i.imgur.com/xSnobwh.png)
+
 
 I received the note above in my email today from [Tumblr](http://tumblr.com/) and had to share it. It’s amazing to think I’ve run this site for that long. I let the [1,000th post](http://jonathanfrei.com/post/36179732557/post-1-000) come and go with little fanfare but feel I should mark this milestone with more than three short sentences.
 
