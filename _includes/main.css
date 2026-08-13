@@ -681,19 +681,38 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   text-align: left;
 }
 
-/* Drop cap on longer posts (file > 5kb, first line > 100 chars, #123) */
-.prose--drop-cap .post-body > p:first-child::first-letter {
-  float: left;
+/* Drop caps on the opening paragraph (after H1) and the first
+   paragraph after each H2 (#123). initial-letter: 2 sizes the
+   letter so its cap-height meets the first line and its baseline
+   meets the second line. */
+.prose--drop-cap .post-body > p:first-of-type::first-letter,
+.prose--drop-cap .post-body > h2 + p::first-letter {
+  -webkit-initial-letter: 2;
+  initial-letter: 2;
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: clamp(2.6em, 8vw, 3.4em);
-  line-height: 0.75;
-  padding: 0.1em 0.12em 0 0;
   color: var(--color-fg);
+  margin-inline-end: 0.1em;
 }
 
-.prose--drop-cap .post-body > p:first-child {
+.prose--drop-cap .post-body > p:first-of-type,
+.prose--drop-cap .post-body > h2 + p {
   hyphens: none;
+}
+
+/* Fallback when initial-letter is missing. Size from one line-height
+   plus Source Serif 4's cap-height (~0.657em) so the letter still
+   spans two lines as closely as float allows. */
+@supports not ((initial-letter: 2) or (-webkit-initial-letter: 2)) {
+  .prose--drop-cap .post-body > p:first-of-type::first-letter,
+  .prose--drop-cap .post-body > h2 + p::first-letter {
+    float: left;
+    font-size: calc((1em * var(--leading-body) + 0.657em) / 0.657);
+    line-height: 0.657;
+    padding-top: calc((1em * var(--leading-body) - 1em) / 2);
+    padding-right: 0.1em;
+    margin-inline-end: 0;
+  }
 }
 
 /* ---------- Post list & meta ---------- */

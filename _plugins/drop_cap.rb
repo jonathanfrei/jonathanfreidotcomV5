@@ -5,6 +5,9 @@
 # Default rule: file > 5 KB AND the first non-empty source line is prose
 # longer than 100 characters. Front matter `drop_cap: true|false` wins.
 #
+# When enabled, CSS applies a two-line drop cap to the opening paragraph
+# (after the H1) and to the first paragraph after each H2.
+#
 # The first line is taken as written (not the first paragraph). Headings,
 # images, HTML, quotes, lists, and fences never qualify — a 5 KB post that
 # starts with a figure should not get a drop cap on a later paragraph.
