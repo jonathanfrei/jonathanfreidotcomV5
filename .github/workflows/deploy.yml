@@ -125,10 +125,12 @@ jobs:
             missing=1
           fi
 
-          if [ -f "_site/2026-08-13-14-30.html" ]; then
-            echo "OK: _site/2026-08-13-14-30.html"
+          # Use the July fixture: it is always in the past, so Jekyll writes
+          # the permalink even if `future` is later turned off.
+          if [ -f "_site/2026-07-01-09-15.html" ]; then
+            echo "OK: _site/2026-07-01-09-15.html"
           else
-            echo "::error::Missing sample link permalink _site/2026-08-13-14-30.html"
+            echo "::error::Missing sample link permalink _site/2026-07-01-09-15.html"
             missing=1
           fi
 

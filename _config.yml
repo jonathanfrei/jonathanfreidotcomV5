@@ -9,6 +9,11 @@ baseurl: ""
 # 2026-08-12T21:17:00-04:00 becomes August 13 in permalinks and bylines.
 timezone: America/New_York
 
+# Publish future-dated posts and link documents on the next build (#142).
+# Without this, a same-day afternoon link (e.g. 14:30 ET) is omitted from
+# _site when CI runs earlier that morning, so its permalink file is missing.
+future: true
+
 # Author
 author:
   name: Jonathan Frei
