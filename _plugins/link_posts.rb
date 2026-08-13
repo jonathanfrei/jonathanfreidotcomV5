@@ -290,10 +290,23 @@ module Jekyll
 
       Addrinfo.getaddrinfo(host, nil, nil, Socket::SOCK_STREAM).any? do |addr|
         ip = IPAddr.new(addr.ip_address)
-        ip.loopback? || ip.private? || ip.link_local? || ip.unspecified? || ip.multicast?
+        ip.loopback? || ip.private? || ip.link_local? || unspecified_ip?(ip) || multicast_ip?(ip)
       end
     rescue SocketError
       false
+    end
+
+    # IPAddr#unspecified? / #multicast? arrived in Ruby 3.4; CI is 3.3.
+    def unspecified_ip?(ip)
+      return ip.unspecified? if ip.respond_to?(:unspecified?)
+
+      ip == IPAddr.new("0.0.0.0") || ip == IPAddr.new("::")
+    end
+
+    def multicast_ip?(ip)
+      return ip.multicast? if ip.respond_to?(:multicast?)
+
+      (ip.ipv4? && ((ip.to_i >> 28) == 0xE)) || (ip.ipv6? && ((ip.to_i >> 120) == 0xFF))
     end
 
     def blank?(value)
