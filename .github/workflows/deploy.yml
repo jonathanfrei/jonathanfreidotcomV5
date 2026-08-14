@@ -228,6 +228,51 @@ jobs:
             missing=1
           fi
 
+          if [ ! -f _site/assets/css/core.css ]; then
+            echo "::error::Missing _site/assets/css/core.css"
+            missing=1
+          else
+            echo "OK: _site/assets/css/core.css"
+          fi
+
+          # Front-of-house pages keep inlined main.css; archive + deep nav link it.
+          if [ -f _site/blog.html ] && grep -q '/assets/css/core.css' _site/blog.html; then
+            echo "::error::_site/blog.html should inline main.css, not link core.css"
+            missing=1
+          fi
+          archive_sample=""
+          if [ -f _site/2009/08/29/getting-started.html ]; then
+            archive_sample="_site/2009/08/29/getting-started.html"
+          fi
+          if [ -n "$archive_sample" ]; then
+            if grep -q '/assets/css/core.css' "$archive_sample"; then
+              echo "OK: archive permalink links core.css"
+            else
+              echo "::error::$archive_sample should link /assets/css/core.css"
+              missing=1
+            fi
+          fi
+          if [ -f _site/blog/page/2/index.html ]; then
+            if grep -q '/assets/css/core.css' _site/blog/page/2/index.html; then
+              echo "OK: /blog/page/2 links core.css"
+            else
+              echo "::error::_site/blog/page/2/index.html should link /assets/css/core.css"
+              missing=1
+            fi
+          fi
+          if [ -d _site/blog/page/50 ]; then
+            echo "::error::blog pagination should use 50 per page (no /blog/page/50)"
+            missing=1
+          else
+            echo "OK: no /blog/page/50 (50 per page)"
+          fi
+          if [ -e _site/tags/100-meter-dash ] || [ -f _site/tags/100-meter-dash.html ]; then
+            echo "::error::singleton tag 100-meter-dash should not get a public archive"
+            missing=1
+          else
+            echo "OK: singleton tag pages still pruned"
+          fi
+
           posts_page=""
           if [ -f "_site/posts.html" ]; then
             posts_page="_site/posts.html"

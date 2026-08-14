@@ -162,18 +162,36 @@ module Jekyll
     # Drop jekyll-paginate-v2 tag autopages that would only list one post (#140).
     # Runs at :pre_render so it is after PaginationGenerator (:lowest), which
     # both creates autopages and materializes paginated copies.
+    def page_tag_name(page)
+      tag = page.data["tag"]
+      return tag.to_s unless tag.nil? || tag.to_s.empty?
+
+      # jekyll-paginate-v2 stores the tag on the pagination config, not data.tag
+      nested = page.data.dig("pagination", "tag")
+      return nested.to_s unless nested.nil? || nested.to_s.empty?
+
+      url = page.url.to_s
+      m = url.match(%r{/tags/([^/]+)})
+      m ? m[1].to_s : ""
+    end
+
     def prune_singleton_tag_pages!(site)
       min = site.config["tag_archive_min_posts"] || MIN_TAG_ARCHIVE_POSTS
       site.pages.reject! do |page|
-        tag = page.data["tag"]
-        next false if tag.nil? || tag.to_s.empty?
-
-        # Only tag archives (autopages set data.tag + live under /tags/)
         url = page.url.to_s
         next false unless url.include?("/tags/") ||
                           page.data["autogen"] == "jekyll-paginate-v2"
 
-        tag_post_count(site, tag) < min
+        tag = page_tag_name(page)
+        next false if tag.empty?
+
+        count = tag_post_count(site, tag)
+        if count.zero?
+          slug = tag
+          match = site.tags.keys.find { |name| Utils.slugify(name.to_s) == slug }
+          count = tag_post_count(site, match) if match
+        end
+        count < min
       end
     end
   end

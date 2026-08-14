@@ -2,9 +2,10 @@
 
 # Automatic heading permalinks for pages and posts (issue #160).
 #
-# After Jekyll writes the site, wrap each H2/H3 in a same-page link and
+# After each HTML document renders, wrap each H2/H3 in a same-page link and
 # expose a hover/focus link icon to the left. Existing heading styles are
 # preserved (color/size come from the heading; the anchor is unstyled text).
+# Applied to doc.output only so RSS (post.content) stays free of anchors.
 #
 # Skips headings that already contain a .heading-anchor (idempotent).
 # Generates an id from the visible text when Kramdown did not assign one.
@@ -50,20 +51,27 @@ module Jekyll
     def escape_attr(value)
       value.to_s.gsub('"', "&quot;")
     end
+
+    def apply!(doc)
+      return if doc.respond_to?(:draft?) && doc.draft?
+      return if doc.output_ext && doc.output_ext != ".html"
+
+      output = doc.output.to_s
+      return if output.empty?
+      return unless output.include?("<h2") || output.include?("<h3") ||
+                    output.include?("<H2") || output.include?("<H3")
+
+      doc.output = process(output)
+    end
   end
 end
 
-Jekyll::Hooks.register :site, :post_write do |site|
-  # jekyll-feed can consume rendered document output. Add this presentation
-  # enhancement only after every output file (including feed.xml) is written.
-  # That leaves feed entries unchanged while keeping anchors on HTML pages.
-  (site.pages + site.collections.values.flat_map(&:docs)).each do |doc|
-    next if doc.respond_to?(:draft?) && doc.draft?
-    next unless doc.output_ext == ".html"
+# Mutate laid-out HTML (doc.output). Feeds use post.content, so RSS stays
+# free of heading-anchor markup without a post_write disk rewrite.
+Jekyll::Hooks.register :documents, :post_render do |doc|
+  Jekyll::HeadingAnchors.apply!(doc)
+end
 
-    destination = doc.destination(site.dest)
-    next unless File.file?(destination)
-
-    File.write(destination, Jekyll::HeadingAnchors.process(File.read(destination)))
-  end
+Jekyll::Hooks.register :pages, :post_render do |page|
+  Jekyll::HeadingAnchors.apply!(page)
 end
