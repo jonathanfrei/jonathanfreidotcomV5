@@ -11,9 +11,7 @@ layout: default
         Visible "Updated" only for explicit front-matter revisions > 24h later.
         Git-derived stamps feed dateModified/SEO/sitemap without byline noise.
       {%- endcomment -%}
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date: "%B %-d, %Y" }}
-      </time>
+      {% include post-date.html date=page.date url=page.url itemprop="datePublished" %}
       {%- if page.last_modified_at -%}
         {%- assign pub_s = page.date | date: "%s" | plus: 0 -%}
         {%- assign mod_s = page.last_modified_at | date: "%s" | plus: 0 -%}

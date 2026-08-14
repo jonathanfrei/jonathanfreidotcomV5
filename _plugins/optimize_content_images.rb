@@ -267,13 +267,21 @@ module Jekyll
       false
     end
 
-    def optimizable?(site, src)
+    def card_image?(tag_attrs)
+      tag_attrs.to_h["class"].to_s.split(/\s+/).include?("link-card__image")
+    end
+
+    def optimizable?(site, src, tag_attrs = {})
       return true if own_media?(src)
 
       cfg = config(site)
       hotlink_on = cfg["hotlink"]
       hotlink_on = true if hotlink_on.nil?
       return false unless hotlink_on == true || hotlink_on.to_s.downcase == "true"
+
+      if card_image?(tag_attrs) && src.to_s.match?(%r{\Ahttps?://}i) && !src.to_s.match?(PROXY_HOST)
+        return !animated_or_svg?(src)
+      end
 
       hotlink_media?(src)
     end
@@ -362,7 +370,7 @@ module Jekyll
 
     def enhance_img_tag(site, cfg, tag_attrs, index)
       src = tag_attrs["src"]
-      return nil unless optimizable?(site, src)
+      return nil unless optimizable?(site, src, tag_attrs)
       return nil if tag_attrs["data-img-opt"] == "1"
       return nil if src.to_s.match?(PROXY_HOST)
 
@@ -541,8 +549,11 @@ Jekyll::Hooks.register :site, :after_init do |_site|
   Jekyll::OptimizeContentImages.reset_caches!
 end
 
-Jekyll::Hooks.register :posts, :post_render do |post|
-  Jekyll::OptimizeContentImages.process_document(post)
+Jekyll::Hooks.register :documents, :post_render do |doc|
+  # Collection docs (posts + links). Skip feeds/assets if any sneak in.
+  next if doc.output_ext && doc.output_ext != ".html"
+
+  Jekyll::OptimizeContentImages.process_document(doc)
 end
 
 Jekyll::Hooks.register :pages, :post_render do |page|
