@@ -121,7 +121,7 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 - Archives: `/blog` (all posts, including links), `/posts` (essays only),
   `/links` (links only). Posts on `/blog` and `/posts` show the title, date,
   tags, reading time, a 2–3 paragraph excerpt, and a Read more link. Link
-  tags are ordinary post tags on `/tags/:name`. Paginated lists use 20 entries.
+  tags are ordinary post tags on `/tags/:name`. Paginated lists use 50 entries.
 - Feeds: `/feed.xml` (mixed; link items `<link>`/`<guid>` the external URL),
   `/posts.xml` (essays only), `/links.xml` (links only). All three emit full
   content. Link items use `#` for the on-site permalink in RSS only.
@@ -204,8 +204,8 @@ Desired URLs: `/about`, `/blog`, `/2026/08/05/slug`, `/tags/foo` — **not** `/a
   - `_includes/embeds.css` — media embeds (`class="embed` / `data-embed=`)
   - `_includes/pagination.css` — paginated lists (`pagination-list`)
 - **Editorial (#144):** `_includes/editorial.css` + `layout: editorial` — Kramdown semantic components (`.lead`, `.figure`, `.stat-grid`, …). Inlined with main.css on editorial pages.
-- **Delivery:** inlined `<style>` in layouts (no async CSS hop; avoids CLS)
-- Tooling: `/assets/css/main.css` (full combined), `/assets/css/editorial.css`
+- **Delivery:** inlined `<style>` on top-level pages, editorial, and recent posts. Archive permalinks (`_posts/v{1,2,3}-archive`) and deep nav (`/tags/:name`, `/categories/:name`, `/archive/YYYY/MM/`, `…/page/N/`) link `/assets/css/core.css` instead (smaller HTML at build time).
+- Tooling: `/assets/css/core.css` (design system only), `/assets/css/main.css` (full combined), `/assets/css/editorial.css`
 - **Never** use `{% include_relative ../... %}` — Jekyll rejects `../`
 - Prefer semantic classes over utility soup
 - Kramdown: `parse_block_html: true` (Markdown inside HTML blocks for editorial components)
@@ -320,7 +320,7 @@ Production depends on external services for media (configured in `_config.yml` `
 Before finishing a change that touches build, layouts, or CSS:
 
 1. [ ] Permalinks have **no** trailing slash for HTML pages (`/about` not `/about/`). Link posts use the same `/:year/:month/:day/:title` shape as essays.
-2. [ ] `main.css` inlined sitewide; `code.css` only on code pages; no `../` includes; no layout CLS from late CSS
+2. [ ] `main.css` inlined on top-level + recent posts; archive/deep nav link `/assets/css/core.css`; `code.css` only on code pages; no `../` includes
 3. [ ] Tags on `/blog` still look like chips (not oversized title links)
 4. [ ] Drafts stay out of `_posts/` until intentional publish
 5. [ ] If workflow changed, confirm Actions majors and `paths-ignore` still make sense
