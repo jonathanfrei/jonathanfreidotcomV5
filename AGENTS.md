@@ -114,19 +114,21 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 - Permalink pages are minimal: date (linked to the permalink), then an
   outbound `→` on the first line of the body, then tags and an on-site URL
   card. No visible title/`h1`. `title` is still used for RSS and document
-  `<title>` / SEO. List pages (`/blog`, `/links`) hide the title and add a
-  `#` permalink glyph next to the arrow.
+  `<title>` / SEO. List pages (`/blog`, `/links`) hide the title, put the
+  date above the body with `#` to the right of the date, and keep `→` on
+  the first line of the body.
 - URL cards are **site-only** (never in RSS). Default is a build-time Open
   Graph fetch (fail-soft, cached under `.jekyll-cache/link-cards/`).
   `card: false` hides the card and skips the fetch. A `card:` mapping
   (`title`, `description`, `image`, `image_alt`, `site_name`) supplies the
   preview and skips the fetch. Card images are proxied through wsrv.nl like
   other hotlinked assets.
-- Archives: `/blog` (blended posts + links, full content), `/posts` (posts
-  only, extended excerpts), `/links` (links only, grouped by year),
-  `/links/YYYY`, `/links/YYYY/MM/` (trailing slash, same GH Pages rule as
-  post month archives). Paginated lists use 20 entries. Link tags join
-  post tags on `/tags/:name`.
+- Archives: `/blog` (blended posts + links), `/posts` (posts only),
+  `/links` (links only, grouped by year), `/links/YYYY`, `/links/YYYY/MM/`
+  (trailing slash, same GH Pages rule as post month archives). Posts on
+  `/blog` and `/posts` show the title, date + `#`, tags, reading time, a
+  2–3 paragraph excerpt, and a Read more link. Links hide the title.
+  Paginated lists use 20 entries. Link tags join post tags on `/tags/:name`.
 - Feeds: `/feed.xml` (mixed; link items `<link>`/`<guid>` the external URL),
   `/posts.xml` (posts only), `/links.xml` (links only). All three emit full
   content. Link items use `#` instead of the word “Permalink”.

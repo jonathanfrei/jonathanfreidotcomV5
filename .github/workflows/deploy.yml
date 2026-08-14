@@ -141,13 +141,48 @@ jobs:
             missing=1
           fi
 
+          posts_page=""
           if [ -f "_site/posts.html" ]; then
+            posts_page="_site/posts.html"
             echo "OK: _site/posts.html"
           elif [ -f "_site/posts/index.html" ]; then
+            posts_page="_site/posts/index.html"
             echo "OK: _site/posts/index.html (paginated)"
           else
             echo "::error::Missing posts page (expected _site/posts.html or _site/posts/index.html)"
             missing=1
+          fi
+
+          if [ -n "$posts_page" ]; then
+            if grep -q 'class="links-year"' "$posts_page"; then
+              echo "::error::$posts_page should not use the /links year grouping"
+              missing=1
+            fi
+            if ! grep -q 'class="stream-post__title"' "$posts_page"; then
+              echo "::error::$posts_page should show full post titles"
+              missing=1
+            fi
+            if ! grep -q 'class="read-more"' "$posts_page"; then
+              echo "::error::$posts_page should include Read more links to permalinks"
+              missing=1
+            fi
+          fi
+
+          blog_page=""
+          if [ -f "_site/blog.html" ]; then
+            blog_page="_site/blog.html"
+          elif [ -f "_site/blog/index.html" ]; then
+            blog_page="_site/blog/index.html"
+          fi
+          if [ -n "$blog_page" ]; then
+            if grep -q 'class="stream-post__body"' "$blog_page"; then
+              echo "::error::$blog_page should excerpt posts, not render full bodies"
+              missing=1
+            fi
+            if ! grep -q 'class="read-more"' "$blog_page"; then
+              echo "::error::$blog_page should include Read more links on post entries"
+              missing=1
+            fi
           fi
 
           if [ -f "_site/links/2026/08/index.html" ]; then

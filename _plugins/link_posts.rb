@@ -398,6 +398,8 @@ module Jekyll
         "excerpt" => post.data["excerpt"].to_s,
         "description" => post.data["description"].to_s,
         "tags" => Array(post.data["tags"]),
+        "reading_time" => post.data["reading_time"],
+        "word_count" => post.data["word_count"],
         "document" => post
       }
     end
