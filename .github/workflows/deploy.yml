@@ -171,7 +171,9 @@ jobs:
               echo "::error::links.xml should guid/link the Wikipedia fixture URL"
               missing=1
             fi
-            if ! grep -q "Wikipedia's overview of RSS" _site/links.xml; then
+            # Body-only phrase (not in excerpt). Avoid apostrophes: the
+            # fixture uses a curly quote and Kramdown may emit &rsquo;.
+            if ! grep -q "dedicated links feed" _site/links.xml; then
               echo "::error::links.xml should include full link body content"
               missing=1
             fi
