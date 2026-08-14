@@ -63,23 +63,31 @@ module Jekyll
 
     def generate(site)
       stream = site.data["site_stream"] || []
-      blog = site.pages.find { |page| blog_page?(page) }
-      return unless blog
-
       per = StreamPagination.per_page(site)
-      base = "/blog"
-      StreamPagination.apply_page!(blog, stream, 1, per, base)
+      # Paginate /blog and /posts here. Two jekyll-paginate-v2 collection
+      # pages in `_pages/` share content, so /posts was rendering the
+      # /links template (no titles, no Read more).
+      paginate_stream!(site, "/blog", stream, per)
+      paginate_stream!(site, "/posts", stream.reject { |item| item["kind"] == "link" }, per)
+    end
 
-      pages = StreamPagination.total_pages(stream.size, per)
+    def paginate_stream!(site, base, items, per)
+      source = site.pages.find { |page| normalize(page) == base }
+      return unless source
+
+      StreamPagination.apply_page!(source, items, 1, per, base)
+
+      pages = StreamPagination.total_pages(items.size, per)
       return if pages <= 1
 
-      content = blog.content
-      layout = blog.data["layout"]
-      title = blog.data["title"]
-      description = blog.data["description"]
+      content = source.content
+      layout = source.data["layout"]
+      title = source.data["title"]
+      description = source.data["description"]
+      slug = base.delete_prefix("/")
 
       (2..pages).each do |num|
-        dir = "blog/page/#{num}"
+        dir = "#{slug}/page/#{num}"
         data = {
           "layout" => layout,
           "permalink" => StreamPagination.path_for(base, num),
@@ -88,14 +96,9 @@ module Jekyll
           "pagination" => { "enabled" => false }
         }
         page = StreamGeneratedPage.new(site, dir, "index.html", data, content)
-        StreamPagination.apply_page!(page, stream, num, per, base)
+        StreamPagination.apply_page!(page, items, num, per, base)
         site.pages << page
       end
-    end
-
-    def blog_page?(page)
-      url = normalize(page)
-      url == "/blog"
     end
 
     def normalize(page)

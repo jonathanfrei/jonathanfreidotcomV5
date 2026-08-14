@@ -16,7 +16,7 @@ pagination:
       {% if item.kind == 'link' %}
         {% include link-entry.html entry=item %}
       {% else %}
-        {% include post-entry.html entry=item full=true %}
+        {% include post-entry.html entry=item %}
       {% endif %}
     </li>
   {% endfor %}
