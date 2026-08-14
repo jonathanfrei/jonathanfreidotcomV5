@@ -1,17 +1,17 @@
 {% assign entry = include.entry %}
 {% assign doc = entry.document | default: entry %}
 {% assign dest = entry.external_url | default: doc.external_url %}
-{% assign permalink = entry.internal_url | default: entry.url | default: doc.url %}
+{% assign permalink = doc.url %}
 {% assign body = doc.content %}
 <div class="link-entry">
   <p class="post-meta link-entry__meta">
-    {% include post-date.html date=doc.date url=permalink datetime=entry.date_xml hash=true %}
+    {% include post-date.html date=doc.date url=permalink %}
   </p>
   <div class="link-entry__body">
-    {% include link-glyphs.html destination=dest title=entry.title %}
+    {% include link-glyphs.html destination=dest title=doc.title %}
     {{ body }}
   </div>
-  {% assign entry_tags = entry.tags | default: doc.tags %}
+  {% assign entry_tags = doc.tags | default: entry.tags %}
   {% if entry_tags.size > 0 %}
   <div class="post-tags">
     <ul class="post-tags__list">
