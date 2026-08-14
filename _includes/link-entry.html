@@ -1,22 +1,21 @@
 {% assign entry = include.entry %}
+{% assign doc = entry.document | default: entry %}
+{% assign dest = entry.external_url | default: doc.external_url %}
+{% assign permalink = entry.internal_url | default: entry.url | default: doc.url %}
+{% assign body = doc.content %}
 <div class="link-entry">
-  <h2 class="link-entry__title">
-    <a href="{{ entry.url | relative_url }}">{{ entry.title }}</a>
-  </h2>
-  {% if entry.excerpt and entry.excerpt != "" %}
-    <p class="excerpt">{{ entry.excerpt | strip_html | truncate: 160 }}</p>
-  {% endif %}
+  <div class="link-entry__body">
+    {% include link-glyphs.html destination=dest permalink=permalink title=entry.title %}
+    {{ body }}
+  </div>
   <p class="post-meta link-entry__meta">
-    <time datetime="{{ entry.date_xml | default: entry.date | date_to_xmlschema }}">{{ entry.date | date: "%B %-d, %Y" }}</time>
-    {% if entry.year and entry.month %}
-      <span aria-hidden="true">·</span>
-      <a href="{{ '/links/' | append: entry.year | append: '/' | append: entry.month | append: '/' | relative_url }}">{{ entry.date | date: "%B %Y" }}</a>
-    {% endif %}
+    {% include post-date.html date=doc.date url=permalink datetime=entry.date_xml %}
   </p>
-  {% if entry.tags.size > 0 %}
+  {% assign entry_tags = entry.tags | default: doc.tags %}
+  {% if entry_tags.size > 0 %}
   <div class="post-tags">
     <ul class="post-tags__list">
-      {% for tag in entry.tags %}
+      {% for tag in entry_tags %}
         <li>{% include tag-chip.html tag=tag %}</li>
       {% endfor %}
     </ul>

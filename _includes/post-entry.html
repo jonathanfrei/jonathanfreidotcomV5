@@ -1,0 +1,30 @@
+{%- comment -%}
+  Post listing: full body (blog) or extended excerpt + read more (/posts).
+  Params: entry, full (optional), excerpt (optional)
+{%- endcomment -%}
+{%- assign doc = include.entry.document | default: include.entry -%}
+<article class="stream-post">
+  <h2 class="stream-post__title">
+    <a href="{{ doc.url | relative_url }}">{{ doc.title }}</a>
+  </h2>
+  <p class="post-meta stream-post__meta">
+    {% include post-date.html date=doc.date url=doc.url datetime=include.entry.date_xml %}
+  </p>
+  {%- if include.full -%}
+  <div class="prose stream-post__body">{{ doc.content }}</div>
+  {%- elsif include.excerpt -%}
+    {%- assign excerpt_html = doc.content | extended_excerpt -%}
+  <div class="prose stream-post__excerpt">{{ excerpt_html }}</div>
+  <p class="read-more"><a href="{{ doc.url | relative_url }}">Read more</a></p>
+  {%- endif -%}
+  {%- assign entry_tags = doc.tags | default: include.entry.tags -%}
+  {%- if entry_tags.size > 0 -%}
+  <div class="post-tags">
+    <ul class="post-tags__list">
+      {%- for tag in entry_tags -%}
+        <li>{% include tag-chip.html tag=tag %}</li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  {%- endif -%}
+</article>

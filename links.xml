@@ -19,8 +19,9 @@ sitemap: false
       <pubDate>{{ item.date | date_to_rfc822 }}</pubDate>
       <author>{{ site.author.email | xml_escape }} ({{ site.author.name | xml_escape }})</author>
       <description><![CDATA[
-        {{ item.excerpt | default: item.description }}
-        <p><a href="{{ item.url | absolute_url }}">Permalink</a></p>
+        {% assign body = item.content | default: item.excerpt | default: item.description %}
+        {{ body | replace: ']]>', ']]]]><![CDATA[>' }}
+        <p><a href="{{ item.url | absolute_url }}">#</a></p>
       ]]></description>
     </item>
     {% endfor %}
