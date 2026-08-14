@@ -4,6 +4,7 @@ layout: null
 [
 {% for post in site.posts %}
   {
+    "kind": {% if post.layout == 'link' %}"link"{% else %}"post"{% endif %},
     "title": {{ post.title | jsonify }},
     "url": {{ post.url | relative_url | jsonify }},
     "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
@@ -18,17 +19,6 @@ layout: null
     "reading_time": {{ post.reading_time }},
     {%- endif -%}
     "tags": {{ post.tags | jsonify }}
-  }{% unless forloop.last %},{% endunless %}
-{% endfor %}
-{% if site.posts.size > 0 and site.data.link_posts.size > 0 %},{% endif %}
-{% for link in site.data.link_posts %}
-  {
-    "kind": "link",
-    "title": {{ link.title | jsonify }},
-    "url": {{ link.url | relative_url | jsonify }},
-    "date": {{ link.date | date: "%Y-%m-%d" | jsonify }},
-    "excerpt": {{ link.excerpt | default: link.description | strip_html | strip_newlines | truncate: 200 | jsonify }},
-    "tags": {{ link.tags | jsonify }}
   }{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ]

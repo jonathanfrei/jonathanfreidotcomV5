@@ -18,7 +18,7 @@ layout: default
     {% assign list_items = page.stream_items | default: paginator.posts | default: page.posts %}
     {% for item in list_items %}
       <li>
-        {% if item.collection == 'links' or item.kind == 'link' or item.type == 'link' %}
+        {% if item.layout == 'link' or item.type == 'link' %}
           {% include link-entry.html entry=item %}
         {% else %}
           <a href="{{ item.url | relative_url }}">{{ item.title }}</a>

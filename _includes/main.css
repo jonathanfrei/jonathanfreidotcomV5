@@ -844,12 +844,6 @@ a.post-meta__date:hover,
 a.post-meta__date:focus-visible {
   color: var(--color-accent);
 }
-.post-meta .link-glyph {
-  float: none;
-  margin-left: 0.4em;
-  margin-right: 0;
-  color: var(--color-accent);
-}
 
 .link-card {
   display: grid;

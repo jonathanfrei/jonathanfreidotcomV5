@@ -127,17 +127,10 @@ jobs:
 
           # Use the July fixture: it is always in the past, so Jekyll writes
           # the permalink even if `future` is later turned off.
-          if [ -f "_site/links/2026-07-01-09-15.html" ]; then
-            echo "OK: _site/links/2026-07-01-09-15.html"
+          if [ -f "_site/2026/07/01/example-domain.html" ]; then
+            echo "OK: _site/2026/07/01/example-domain.html"
           else
-            echo "::error::Missing sample link permalink _site/links/2026-07-01-09-15.html"
-            missing=1
-          fi
-
-          if [ -f "_site/2026-07-01-09-15.html" ]; then
-            echo "OK: _site/2026-07-01-09-15.html (legacy redirect)"
-          else
-            echo "::error::Missing legacy link redirect _site/2026-07-01-09-15.html"
+            echo "::error::Missing sample link permalink _site/2026/07/01/example-domain.html"
             missing=1
           fi
 
@@ -183,13 +176,6 @@ jobs:
               echo "::error::$blog_page should include Read more links on post entries"
               missing=1
             fi
-          fi
-
-          if [ -f "_site/links/2026/08/index.html" ]; then
-            echo "OK: _site/links/2026/08/index.html"
-          else
-            echo "::error::Missing sample link month archive _site/links/2026/08/index.html"
-            missing=1
           fi
 
           for feed in feed.xml posts.xml links.xml; do

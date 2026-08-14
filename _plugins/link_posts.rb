@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
-# Link posts (#37, #186): one Markdown file per link under _links/.
-# Filename stem yyyy-mm-dd-hh-mm is the permalink (/links/yyyy-mm-dd-hh-mm).
-# Subfolders are allowed and do not affect the URL.
+# Link posts are normal _posts/ with layout: link and a destination url:.
+# This hook copies url → external_url/host and resolves the on-site card.
 require "cgi"
 require "digest"
 require "fileutils"
@@ -10,170 +9,42 @@ require "ipaddr"
 require "json"
 require "net/http"
 require "socket"
-require "time"
 require "uri"
 
 module Jekyll
   module LinkPosts
     module_function
 
-    REQUIRED = %w[title url date].freeze
-    FILENAME = /\A\d{4}-\d{2}-\d{2}-\d{2}-\d{2}\z/
     FETCH_TIMEOUT = 4
     MAX_BODY_BYTES = 512 * 1024
     MAX_REDIRECTS = 3
-    FEED_LIMIT = 40
 
-    def prepare!(site)
-      collection = site.collections["links"]
-      return [] unless collection
-
-      docs = collection.docs.select { |doc| normalize_doc!(site, doc) }
-      drop_duplicate_slugs!(site, docs)
-      drop_collisions!(site, docs)
-      collection.docs.replace(docs)
-      docs.each { |doc| resolve_card!(site, doc) }
-      docs.sort_by { |doc| doc.data["date_sort"] }.reverse
+    def link_post?(doc)
+      doc.data["layout"].to_s == "link" || doc.data["type"].to_s == "link"
     end
 
-    def normalize_doc!(site, doc)
-      stem = File.basename(doc.path, ".*")
-      unless stem.match?(FILENAME)
-        BuildErrors.record(site, doc.relative_path,
-                           "link files must be named yyyy-mm-dd-hh-mm.md")
-        return false
-      end
+    def prepare_post!(site, doc)
+      return unless link_post?(doc)
 
-      type = doc.data["type"].to_s
-      type = "link" if type.empty?
-      unless type == "link"
-        BuildErrors.record(site, doc.relative_path,
-                           "type must be \"link\" (got #{type.inspect})")
-        return false
-      end
+      doc.data["layout"] = "link"
+      doc.data["type"] = "link"
 
-      REQUIRED.each do |field|
-        if blank?(doc.data[field])
-          BuildErrors.record(site, doc.relative_path, "`#{field}` is required")
-          return false
-        end
-      end
-
-      unless timezone?(doc)
-        BuildErrors.record(site, doc.relative_path, "date must include a timezone")
-        return false
-      end
-
-      date = coerce_time(doc.data["date"])
-      unless date
-        BuildErrors.record(site, doc.relative_path, "date must be parseable")
-        return false
-      end
-
-      stamp = date.getlocal(date.utc_offset).strftime("%Y-%m-%d-%H-%M")
-      unless stamp == stem
-        Jekyll.logger.warn "LinkPosts:",
-                           "#{doc.relative_path}: filename #{stem} does not match date #{stamp}"
+      raw = doc.data["url"].to_s
+      if blank?(raw)
+        BuildErrors.record(site, doc.relative_path, "`url` is required on link posts")
+        return
       end
 
       begin
-        url = public_url!(doc.data["url"], doc.relative_path)
+        uri = public_url!(raw, doc.relative_path)
       rescue Jekyll::Errors::FatalException => e
         BuildErrors.record(site, doc.relative_path, e.message)
-        return false
+        return
       end
 
-      tags = Array(doc.data["tags"]).map(&:to_s).reject(&:empty?)
-      excerpt = doc.data["excerpt"].to_s
-      description = doc.data["description"].to_s
-      description = excerpt if description.empty?
-
-      doc.data["type"] = "link"
-      doc.data["slug"] = stem
-      doc.data["legacy_permalink"] = "/#{stem}"
-      doc.data["permalink"] = "/links/#{stem}"
-      doc.instance_variable_set(:@url, nil)
-      doc.data["external_url"] = url.to_s
-      doc.data["host"] = url.host
-      doc.data["date"] = date
-      doc.data["date_sort"] = date.utc.iso8601
-      doc.data["date_xml"] = date.xmlschema
-      doc.data["year"] = date.getlocal(date.utc_offset).strftime("%Y")
-      doc.data["month"] = date.getlocal(date.utc_offset).strftime("%m")
-      doc.data["tags"] = tags
-      doc.data["excerpt"] = excerpt
-      doc.data["description"] = description unless description.empty?
-      NormalizeTags.coerce!(doc) if defined?(NormalizeTags)
-      true
-    end
-
-    def timezone?(doc)
-      raw = raw_front_matter_date(doc)
-      return true if raw.nil?
-
-      raw.match?(/(?:Z|[+-]\d{2}:?\d{2})\s*\z/)
-    end
-
-    def raw_front_matter_date(doc)
-      text = File.read(doc.path)
-      return unless text =~ /\A---\s*\n(.*?)\n---\s*\n/m
-
-      front = Regexp.last_match(1)
-      line = front.lines.find { |l| l.start_with?("date:") }
-      return unless line
-
-      line.sub(/\Adate:\s*/, "").strip.gsub(/\A["']|["']\z/, "")
-    rescue StandardError
-      nil
-    end
-
-    def coerce_time(value)
-      case value
-      when Time then value
-      when DateTime then value.to_time
-      when Date then value.to_time
-      else
-        Time.parse(value.to_s)
-      end
-    rescue ArgumentError
-      nil
-    end
-
-    def drop_duplicate_slugs!(site, docs)
-      seen = {}
-      docs.reject! do |doc|
-        slug = doc.data["slug"]
-        if seen[slug]
-          BuildErrors.record(site, doc.relative_path,
-                             "duplicate link filename stem `#{slug}` (kept #{seen[slug]})")
-          true
-        else
-          seen[slug] = doc.relative_path
-          false
-        end
-      end
-    end
-
-    def drop_collisions!(site, docs)
-      taken = {}
-      site.posts.docs.each { |post| taken[normalize_url(post.url)] = post.relative_path }
-      site.pages.each { |page| taken[normalize_url(page.url)] = page.relative_path }
-
-      docs.reject! do |doc|
-        key = normalize_url(doc.data["permalink"])
-        if taken[key]
-          BuildErrors.record(site, doc.relative_path,
-                             "permalink #{doc.data['permalink']} collides with #{taken[key]}")
-          true
-        else
-          taken[key] = doc.relative_path
-          false
-        end
-      end
-    end
-
-    def normalize_url(url)
-      url.to_s.sub(%r{/\z}, "").sub(/\.html\z/, "")
+      doc.data["external_url"] = uri.to_s
+      doc.data["host"] = uri.host
+      resolve_card!(site, doc)
     end
 
     def resolve_card!(site, doc)
@@ -331,7 +202,6 @@ module Jekyll
       false
     end
 
-    # IPAddr#unspecified? / #multicast? arrived in Ruby 3.4; CI is 3.3.
     def unspecified_ip?(ip)
       return ip.unspecified? if ip.respond_to?(:unspecified?)
 
@@ -348,8 +218,6 @@ module Jekyll
       value.nil? || (value.respond_to?(:empty?) && value.empty?) || value.to_s.strip.empty?
     end
 
-    # Net::HTTP bodies are ASCII-8BIT. Liquid crashes if those bytes
-    # (smart quotes, em dashes) are joined with UTF-8 templates.
     def utf8(value)
       return value unless value.is_a?(String)
 
@@ -364,134 +232,9 @@ module Jekyll
     def utf8_hash(hash)
       hash.transform_values { |value| utf8(value) }
     end
-
-    def stream_item_for_link(doc)
-      {
-        "kind" => "link",
-        "title" => doc.data["title"].to_s,
-        "url" => doc.url,
-        "internal_url" => doc.url,
-        "external_url" => doc.data["external_url"],
-        "host" => doc.data["host"],
-        "date" => doc.data["date"],
-        "date_sort" => doc.data["date_sort"],
-        "date_xml" => doc.data["date_xml"],
-        "excerpt" => doc.data["excerpt"].to_s,
-        "description" => doc.data["description"].to_s,
-        "tags" => doc.data["tags"],
-        "card" => doc.data["card"],
-        "year" => doc.data["year"],
-        "month" => doc.data["month"],
-        "document" => doc
-      }
-    end
-
-    def stream_item_for_post(post)
-      {
-        "kind" => "post",
-        "title" => post.data["title"].to_s,
-        "url" => post.url,
-        "internal_url" => post.url,
-        "date" => post.date,
-        "date_sort" => post.date.utc.iso8601,
-        "date_xml" => post.date.xmlschema,
-        "excerpt" => post.data["excerpt"].to_s,
-        "description" => post.data["description"].to_s,
-        "tags" => Array(post.data["tags"]),
-        "reading_time" => post.data["reading_time"],
-        "word_count" => post.data["word_count"],
-        "document" => post
-      }
-    end
-
-    def write_legacy_redirects!(site)
-      count = 0
-      (site.data["link_posts"] || []).each do |doc|
-        slug = doc.data["slug"].to_s
-        next if slug.empty?
-
-        from = "/#{slug}"
-        to = doc.url.to_s
-        next if from == to
-
-        dest = File.join(site.dest, "#{slug}.html")
-        if File.exist?(dest)
-          Jekyll.logger.warn "LinkPosts:", "skip legacy redirect #{from} (already exists)"
-          next
-        end
-
-        File.write(dest, DateRedirects.redirect_html(site, to))
-        count += 1
-      end
-      Jekyll.logger.info "LinkPosts:",
-                         "wrote #{count} legacy permalink redirect#{'s' unless count == 1}"
-    end
-  end
-
-  class LinkGeneratedPage < PageWithoutAFile
-    def initialize(site, dir, name, data = {})
-      super(site, site.source, dir, name)
-      self.data = data
-      self.content = ""
-    end
-  end
-
-  class LinkPostsGenerator < Generator
-    safe true
-    priority :high
-
-    def generate(site)
-      docs = LinkPosts.prepare!(site)
-      site.data["link_posts"] = docs
-      site.data["link_years"] = docs.group_by { |doc| doc.data["year"] }.map do |year, year_docs|
-        months = year_docs.group_by { |doc| doc.data["month"] }.keys.sort.reverse
-        { "name" => year, "months" => months.map { |month| { "name" => month } } }
-      end.sort_by { |entry| entry["name"] }.reverse
-      stream = site.posts.docs.map { |post| LinkPosts.stream_item_for_post(post) } +
-               docs.map { |doc| LinkPosts.stream_item_for_link(doc) }
-      site.data["site_stream"] = stream.sort_by { |item| item["date_sort"] }.reverse
-      NormalizeTags.ingest_links!(site, docs)
-
-      docs.group_by { |doc| doc.data["year"] }.each do |year, year_docs|
-        months = year_docs.group_by { |doc| doc.data["month"] }.map do |month, month_docs|
-          sample = month_docs.first.data["date"]
-          {
-            "key" => month,
-            "name" => sample.getlocal(sample.utc_offset).strftime("%B"),
-            "url" => "/links/#{year}/#{month}/",
-            "count" => month_docs.size
-          }
-        end.sort_by { |entry| entry["key"] }.reverse
-
-        site.pages << LinkGeneratedPage.new(site, "links", "#{year}.html", {
-          "layout" => "link_archive",
-          "permalink" => "/links/#{year}",
-          "title" => "Links from #{year}",
-          "description" => "Links published in #{year}.",
-          "year" => year,
-          "months" => months,
-          "link_entries" => year_docs.sort_by { |doc| doc.data["date_sort"] }.reverse
-        })
-
-        year_docs.group_by { |doc| doc.data["month"] }.each do |month, month_docs|
-          sample = month_docs.first.data["date"]
-          month_name = sample.getlocal(sample.utc_offset).strftime("%B")
-          site.pages << LinkGeneratedPage.new(site, "links/#{year}/#{month}", "index.html", {
-            "layout" => "link_archive",
-            "permalink" => "/links/#{year}/#{month}/",
-            "title" => "Links from #{month_name} #{year}",
-            "description" => "Links published in #{month_name} #{year}.",
-            "year" => year,
-            "month" => month,
-            "month_name" => month_name,
-            "link_entries" => month_docs.sort_by { |doc| doc.data["date_sort"] }.reverse
-          })
-        end
-      end
-    end
   end
 end
 
-Jekyll::Hooks.register :site, :post_write do |site|
-  Jekyll::LinkPosts.write_legacy_redirects!(site)
+Jekyll::Hooks.register :site, :post_read do |site|
+  site.posts.docs.each { |post| Jekyll::LinkPosts.prepare_post!(site, post) }
 end
