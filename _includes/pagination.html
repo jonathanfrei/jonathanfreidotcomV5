@@ -1,18 +1,23 @@
-{% if paginator.total_pages > 1 %}
+{% if paginator %}
+  {% assign pager = paginator %}
+{% else %}
+  {% assign pager = page.paginator %}
+{% endif %}
+{% if pager.total_pages > 1 %}
 <nav class="pagination" aria-label="Pagination">
   <ul class="pagination-list">
-    {% if paginator.previous_page %}
+    {% if pager.previous_page %}
       <li>
-        <a href="{{ paginator.previous_page_path | relative_url }}" rel="prev">&larr; Previous</a>
+        <a href="{{ pager.previous_page_path | relative_url }}" rel="prev">&larr; Previous</a>
       </li>
     {% else %}
       <li class="pagination-disabled"><span>&larr; Previous</span></li>
     {% endif %}
 
-    {% if paginator.page_trail %}
-      {% for trail in paginator.page_trail %}
+    {% if pager.page_trail %}
+      {% for trail in pager.page_trail %}
         <li>
-          {% if page.url == trail.path or paginator.page == trail.num %}
+          {% if page.url == trail.path or pager.page == trail.num %}
             <span class="pagination-current" aria-current="page">{{ trail.num }}</span>
           {% else %}
             {% comment %}
@@ -22,7 +27,7 @@
               "index" suffix glued onto the page number.
             {% endcomment %}
             {% if trail.num == 1 %}
-              {% assign trail_href = paginator.first_page_path %}
+              {% assign trail_href = pager.first_page_path %}
             {% else %}
               {% assign trail_href = trail.path | replace: '/index.html', '' | replace: 'index.html', '' | replace: '/index', '' | replace: 'index', '' %}
             {% endif %}
@@ -32,22 +37,22 @@
       {% endfor %}
     {% else %}
       <li>
-        <span class="pagination-current" aria-current="page">{{ paginator.page }}</span>
-        <span class="post-meta"> of {{ paginator.total_pages }}</span>
+        <span class="pagination-current" aria-current="page">{{ pager.page }}</span>
+        <span class="post-meta"> of {{ pager.total_pages }}</span>
       </li>
     {% endif %}
 
-    {% if paginator.next_page %}
+    {% if pager.next_page %}
       <li>
-        <a href="{{ paginator.next_page_path | relative_url }}" rel="next">Next &rarr;</a>
+        <a href="{{ pager.next_page_path | relative_url }}" rel="next">Next &rarr;</a>
       </li>
     {% else %}
       <li class="pagination-disabled"><span>Next &rarr;</span></li>
     {% endif %}
   </ul>
   <p class="pagination-meta post-meta">
-    Page {{ paginator.page }} of {{ paginator.total_pages }}
-    · {{ paginator.total_posts }} posts
+    Page {{ pager.page }} of {{ pager.total_pages }}
+    · {{ pager.total_posts }} entries
   </p>
 </nav>
 {% endif %}

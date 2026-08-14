@@ -24,11 +24,10 @@ sitemap: false
       <pubDate>{{ item.date | date_to_rfc822 }}</pubDate>
       <author>{{ site.author.email | xml_escape }} ({{ site.author.name | xml_escape }})</author>
       <description><![CDATA[
+        {% assign body = item.document.content | default: item.excerpt | default: item.description %}
+        {{ body | replace: ']]>', ']]]]><![CDATA[>' }}
         {% if item.kind == 'link' %}
-          {{ item.excerpt | default: item.description }}
-          <p><a href="{{ item.internal_url | absolute_url }}">Permalink</a></p>
-        {% else %}
-          {{ item.description | default: item.excerpt }}
+          <p><a href="{{ item.internal_url | absolute_url }}">#</a></p>
         {% endif %}
       ]]></description>
     </item>

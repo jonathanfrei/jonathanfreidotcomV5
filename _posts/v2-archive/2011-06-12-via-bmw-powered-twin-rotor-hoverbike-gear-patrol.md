@@ -1,5 +1,5 @@
 ---
-title: "(via BMW Powered Twin-Rotor Hoverbike | Gear Patrol )"
+title: "BMW Powered Twin-Rotor Hoverbike, Gear Patrol "
 date: 2011-06-12 20:41:00 -0400
 tumblr_id: "6471810242"
 ---

@@ -4,4 +4,7 @@ Allow: /
 # Obfuscated drafts folder (source only; never built into the site)
 Disallow: /_x7k9p/
 
+# Build-time skip log for malformed posts/links (#186)
+Disallow: /build-errors.log
+
 Sitemap: https://jonathanfrei.com/sitemap.xml

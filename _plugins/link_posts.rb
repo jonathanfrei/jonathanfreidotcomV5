@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-# Link posts (#37): one Markdown file per link under _links/.
-# Filename stem yyyy-mm-dd-hh-mm is the permalink (/yyyy-mm-dd-hh-mm).
+# Link posts (#37, #186): one Markdown file per link under _links/.
+# Filename stem yyyy-mm-dd-hh-mm is the permalink (/links/yyyy-mm-dd-hh-mm).
 # Subfolders are allowed and do not affect the URL.
 require "cgi"
 require "digest"
@@ -28,10 +28,10 @@ module Jekyll
       collection = site.collections["links"]
       return [] unless collection
 
-      docs = collection.docs
-      docs.each { |doc| normalize_doc!(site, doc) }
-      assert_unique_slugs!(docs)
-      assert_no_path_collisions!(site, docs)
+      docs = collection.docs.select { |doc| normalize_doc!(site, doc) }
+      drop_duplicate_slugs!(site, docs)
+      drop_collisions!(site, docs)
+      collection.docs.replace(docs)
       docs.each { |doc| resolve_card!(site, doc) }
       docs.sort_by { |doc| doc.data["date_sort"] }.reverse
     end
@@ -39,28 +39,35 @@ module Jekyll
     def normalize_doc!(site, doc)
       stem = File.basename(doc.path, ".*")
       unless stem.match?(FILENAME)
-        raise Jekyll::Errors::FatalException,
-              "#{doc.relative_path}: link files must be named yyyy-mm-dd-hh-mm.md"
+        BuildErrors.record(site, doc.relative_path,
+                           "link files must be named yyyy-mm-dd-hh-mm.md")
+        return false
       end
 
       type = doc.data["type"].to_s
       type = "link" if type.empty?
       unless type == "link"
-        raise Jekyll::Errors::FatalException,
-              "#{doc.relative_path}: type must be \"link\" (got #{type.inspect})"
+        BuildErrors.record(site, doc.relative_path,
+                           "type must be \"link\" (got #{type.inspect})")
+        return false
       end
 
       REQUIRED.each do |field|
         if blank?(doc.data[field])
-          raise Jekyll::Errors::FatalException,
-                "#{doc.relative_path}: `#{field}` is required"
+          BuildErrors.record(site, doc.relative_path, "`#{field}` is required")
+          return false
         end
       end
 
-      assert_timezone!(doc)
+      unless timezone?(doc)
+        BuildErrors.record(site, doc.relative_path, "date must include a timezone")
+        return false
+      end
+
       date = coerce_time(doc.data["date"])
       unless date
-        raise Jekyll::Errors::FatalException, "#{doc.relative_path}: date must be parseable"
+        BuildErrors.record(site, doc.relative_path, "date must be parseable")
+        return false
       end
 
       stamp = date.getlocal(date.utc_offset).strftime("%Y-%m-%d-%H-%M")
@@ -69,7 +76,13 @@ module Jekyll
                            "#{doc.relative_path}: filename #{stem} does not match date #{stamp}"
       end
 
-      url = public_url!(doc.data["url"], doc.relative_path)
+      begin
+        url = public_url!(doc.data["url"], doc.relative_path)
+      rescue Jekyll::Errors::FatalException => e
+        BuildErrors.record(site, doc.relative_path, e.message)
+        return false
+      end
+
       tags = Array(doc.data["tags"]).map(&:to_s).reject(&:empty?)
       excerpt = doc.data["excerpt"].to_s
       description = doc.data["description"].to_s
@@ -77,7 +90,8 @@ module Jekyll
 
       doc.data["type"] = "link"
       doc.data["slug"] = stem
-      doc.data["permalink"] = "/#{stem}"
+      doc.data["legacy_permalink"] = "/#{stem}"
+      doc.data["permalink"] = "/links/#{stem}"
       doc.instance_variable_set(:@url, nil)
       doc.data["external_url"] = url.to_s
       doc.data["host"] = url.host
@@ -89,15 +103,15 @@ module Jekyll
       doc.data["tags"] = tags
       doc.data["excerpt"] = excerpt
       doc.data["description"] = description unless description.empty?
+      NormalizeTags.coerce!(doc) if defined?(NormalizeTags)
+      true
     end
 
-    def assert_timezone!(doc)
+    def timezone?(doc)
       raw = raw_front_matter_date(doc)
-      return if raw.nil?
-      return if raw.match?(/(?:Z|[+-]\d{2}:?\d{2})\s*\z/)
+      return true if raw.nil?
 
-      raise Jekyll::Errors::FatalException,
-            "#{doc.relative_path}: date must include a timezone"
+      raw.match?(/(?:Z|[+-]\d{2}:?\d{2})\s*\z/)
     end
 
     def raw_front_matter_date(doc)
@@ -125,28 +139,36 @@ module Jekyll
       nil
     end
 
-    def assert_unique_slugs!(docs)
-      grouped = docs.group_by { |doc| doc.data["slug"] }
-      duplicate = grouped.find { |_slug, list| list.size > 1 }
-      return unless duplicate
-
-      paths = duplicate.last.map(&:relative_path).join(", ")
-      raise Jekyll::Errors::FatalException,
-            "duplicate link filename stem `#{duplicate.first}`: #{paths}"
+    def drop_duplicate_slugs!(site, docs)
+      seen = {}
+      docs.reject! do |doc|
+        slug = doc.data["slug"]
+        if seen[slug]
+          BuildErrors.record(site, doc.relative_path,
+                             "duplicate link filename stem `#{slug}` (kept #{seen[slug]})")
+          true
+        else
+          seen[slug] = doc.relative_path
+          false
+        end
+      end
     end
 
-    def assert_no_path_collisions!(site, docs)
+    def drop_collisions!(site, docs)
       taken = {}
       site.posts.docs.each { |post| taken[normalize_url(post.url)] = post.relative_path }
       site.pages.each { |page| taken[normalize_url(page.url)] = page.relative_path }
 
-      docs.each do |doc|
+      docs.reject! do |doc|
         key = normalize_url(doc.data["permalink"])
         if taken[key]
-          raise Jekyll::Errors::FatalException,
-                "#{doc.relative_path}: permalink #{doc.data['permalink']} collides with #{taken[key]}"
+          BuildErrors.record(site, doc.relative_path,
+                             "permalink #{doc.data['permalink']} collides with #{taken[key]}")
+          true
+        else
+          taken[key] = doc.relative_path
+          false
         end
-        taken[key] = doc.relative_path
       end
     end
 
@@ -167,13 +189,14 @@ module Jekyll
         card["url"] = doc.data["external_url"]
         card["host"] = doc.data["host"]
         card["title"] ||= doc.data["title"]
+        absolutize_card_image!(card, doc.data["external_url"])
         doc.data["card"] = card
         return
       end
 
       unless source.nil?
-        raise Jekyll::Errors::FatalException,
-              "#{doc.relative_path}: card must be false or a mapping"
+        BuildErrors.record(site, doc.relative_path, "card must be false or a mapping")
+        return
       end
 
       fetched = fetch_metadata(site, doc.data["external_url"])
@@ -182,7 +205,17 @@ module Jekyll
       fetched["url"] = doc.data["external_url"]
       fetched["host"] = doc.data["host"]
       fetched["title"] ||= doc.data["title"]
+      absolutize_card_image!(fetched, doc.data["external_url"])
       doc.data["card"] = utf8_hash(fetched)
+    end
+
+    def absolutize_card_image!(card, base_url)
+      image = card["image"].to_s
+      return if image.empty? || image.match?(%r{\Ahttps?://}i)
+
+      card["image"] = URI.join(base_url.to_s, image).to_s
+    rescue URI::InvalidURIError
+      nil
     end
 
     def fetch_metadata(site, raw_url)
@@ -348,7 +381,8 @@ module Jekyll
         "tags" => doc.data["tags"],
         "card" => doc.data["card"],
         "year" => doc.data["year"],
-        "month" => doc.data["month"]
+        "month" => doc.data["month"],
+        "document" => doc
       }
     end
 
@@ -363,8 +397,34 @@ module Jekyll
         "date_xml" => post.date.xmlschema,
         "excerpt" => post.data["excerpt"].to_s,
         "description" => post.data["description"].to_s,
-        "tags" => Array(post.data["tags"])
+        "tags" => Array(post.data["tags"]),
+        "reading_time" => post.data["reading_time"],
+        "word_count" => post.data["word_count"],
+        "document" => post
       }
+    end
+
+    def write_legacy_redirects!(site)
+      count = 0
+      (site.data["link_posts"] || []).each do |doc|
+        slug = doc.data["slug"].to_s
+        next if slug.empty?
+
+        from = "/#{slug}"
+        to = doc.url.to_s
+        next if from == to
+
+        dest = File.join(site.dest, "#{slug}.html")
+        if File.exist?(dest)
+          Jekyll.logger.warn "LinkPosts:", "skip legacy redirect #{from} (already exists)"
+          next
+        end
+
+        File.write(dest, DateRedirects.redirect_html(site, to))
+        count += 1
+      end
+      Jekyll.logger.info "LinkPosts:",
+                         "wrote #{count} legacy permalink redirect#{'s' unless count == 1}"
     end
   end
 
@@ -390,6 +450,7 @@ module Jekyll
       stream = site.posts.docs.map { |post| LinkPosts.stream_item_for_post(post) } +
                docs.map { |doc| LinkPosts.stream_item_for_link(doc) }
       site.data["site_stream"] = stream.sort_by { |item| item["date_sort"] }.reverse
+      NormalizeTags.ingest_links!(site, docs)
 
       docs.group_by { |doc| doc.data["year"] }.each do |year, year_docs|
         months = year_docs.group_by { |doc| doc.data["month"] }.map do |month, month_docs|
@@ -429,4 +490,8 @@ module Jekyll
       end
     end
   end
+end
+
+Jekyll::Hooks.register :site, :post_write do |site|
+  Jekyll::LinkPosts.write_legacy_redirects!(site)
 end

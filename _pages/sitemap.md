@@ -14,6 +14,10 @@ description: Hierarchical map of pages, sections, tags, and recent posts on jona
     </li>
     <li>
       <a href="{{ '/blog' | relative_url }}">Blog</a>
+      <ul>
+        <li><a href="{{ '/posts' | relative_url }}">Posts</a></li>
+        <li><a href="{{ '/links' | relative_url }}">Links</a></li>
+      </ul>
       {% if site.posts.size > 0 %}
       <ul>
         {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
