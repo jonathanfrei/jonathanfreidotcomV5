@@ -62,13 +62,14 @@ module Jekyll
     priority :low
 
     def generate(site)
-      stream = site.data["site_stream"] || []
       per = StreamPagination.per_page(site)
-      # Paginate /blog and /posts here. Two jekyll-paginate-v2 collection
-      # pages in `_pages/` share content, so /posts was rendering the
-      # /links template (no titles, no Read more).
-      paginate_stream!(site, "/blog", stream, per)
-      paginate_stream!(site, "/posts", stream.reject { |item| item["kind"] == "link" }, per)
+      posts = site.posts.docs.sort_by(&:date).reverse
+      essays = posts.reject { |doc| Jekyll::LinkPosts.link_post?(doc) }
+      links = posts.select { |doc| Jekyll::LinkPosts.link_post?(doc) }
+      # /blog uses stock paginate-v2. /posts and /links need a layout
+      # filter, which paginate-v2 cannot do, so they paginate here.
+      paginate_stream!(site, "/posts", essays, per)
+      paginate_stream!(site, "/links", links, per)
     end
 
     def paginate_stream!(site, base, items, per)

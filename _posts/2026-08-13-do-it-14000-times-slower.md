@@ -1,12 +1,10 @@
 ---
+layout: link
 title: "Do It 14,000 Times Slower With This One Trick – Semi-Rad.com"
 url: "https://semi-rad.com/2026/08/do-it-14000-times-slower-with-this-one-trick/"
 date: 2026-08-13 17:17:39 -0400
-type: link
 ---
 
 [Do It 14,000 Times Slower With This One Trick – Semi-Rad.com](https://semi-rad.com/2026/08/do-it-14000-times-slower-with-this-one-trick/)
 
-Fun comic. Hat tip to daring fireball. 
-
-
+Fun comic. Hat tip to daring fireball.

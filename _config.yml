@@ -84,8 +84,7 @@ autopages:
     # No trailing slash — same rationale as site permalink (#63)
     # slugify mode default matches Liquid | slugify (spaces → hyphens)
     permalink: "/tags/:tag"
-    # Combined post+link archives are generated in normalize_tags.rb (#186).
-    enabled: false
+    enabled: true
     slugify:
       mode: default
       cased: true
@@ -204,29 +203,14 @@ defaults:
       type: "pages"
     values:
       layout: page
-  - scope:
-      path: ""
-      type: "links"
-    values:
-      layout: link_post
-      type: link
-      author: Jonathan Frei
 
 # SEO / social (basic)
 twitter:
   username: jonathanfrei
 
 # Feed settings – drafts never included because excluded from build
-# jekyll-feed is the posts-only feed. Combined /feed.xml and /links.xml
-# are authored templates backed by _plugins/link_posts.rb (#37, #186).
+# jekyll-feed writes an unused file; /posts.xml, /feed.xml, and /links.xml
+# are authored templates so link posts can be filtered by layout.
 feed:
-  path: posts.xml
+  path: jekyll-feed-unused.xml
   excerpt_only: false
-
-# Link posts (#37, #186): one file per link under _links/yyyy-mm-dd-hh-mm.md.
-# Subfolders are allowed for organizing archives; permalink is /links/:name
-# (the filename stem). The generator adds year/month archive pages.
-collections:
-  links:
-    output: true
-    permalink: /links/:name

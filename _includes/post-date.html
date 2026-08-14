@@ -1,13 +1,9 @@
 {%- comment -%}
   Date as a permalink, same muted uppercase styling (#186).
-  Params: date, url, datetime (optional), format (optional), itemprop (optional),
-  hash (optional: show # to the right of the date on list pages)
+  Params: date, url, datetime (optional), format (optional), itemprop (optional)
 {%- endcomment -%}
 {%- assign date_fmt = include.format | default: "%B %-d, %Y" -%}
 {%- assign date_xml = include.datetime | default: include.date -%}
 <a class="post-meta__date" href="{{ include.url | relative_url }}">
   <time datetime="{{ date_xml | date_to_xmlschema }}"{% if include.itemprop %} itemprop="{{ include.itemprop }}"{% endif %}>{{ include.date | date: date_fmt }}</time>
 </a>
-{%- if include.hash -%}
-  <a class="link-glyph link-glyph--here" href="{{ include.url | relative_url }}" title="Permalink">#</a>
-{%- endif -%}

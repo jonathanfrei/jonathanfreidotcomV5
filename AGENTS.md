@@ -24,9 +24,8 @@ _config.yml                    # Site config, plugins, permalinks, excludes
 _includes/                     # head, header, footer, main.css, code.css, editorial.css
 _layouts/                      # default, page, post, tag, editorial
 _plugins/url_embeds.rb         # Standalone media URLs → embeds
-_posts/                        # Published posts (YYYY-MM-DD-slug.md)
+_posts/                        # Published posts and link posts (YYYY-MM-DD-slug.md)
 _posts/v1-archive/             # Historical imported posts (treat carefully)
-_links/                        # Link posts (yyyy-mm-dd-hh-mm.md → /links/yyyy-mm-dd-hh-mm)
 _x7k9p/                        # Obfuscated drafts (excluded from build & CI paths)
 assets/                        # Images, JS; CSS tooling at assets/css/*.html
 editorial/                     # Handcrafted HTML drop-ins (slug.html → /editorial/slug)
@@ -99,47 +98,41 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 - CI **`paths-ignore`** includes `_x7k9p/**` so draft-only commits do not rebuild the site.
 - To publish: move to `_posts/` with a proper dated filename and front matter.
 
-### Link posts (`_links/`)
+### Link posts (`layout: link`)
 
-- One file per link: `_links/yyyy-mm-dd-hh-mm.md`. Subfolders are allowed for
-  organizing archives and do **not** change the URL.
-- Permalink is `/links/yyyy-mm-dd-hh-mm` (the filename stem). Duplicate
-  basenames or collisions with an existing post/page skip that link and log
-  to `_site/build-errors.log` (they do **not** fail the build). There is no
-  `slug:` override — rename the file to change the URL. Old `/yyyy-mm-dd-hh-mm`
-  paths get an HTML redirect.
-- Required front matter: `title`, public `http(s)` `url`, timezone-aware
-  `date`, `type: "link"` (defaulted by `_config.yml`). Optional: `excerpt`,
-  `tags`, Markdown body.
+- A link is a normal post in `_posts/YYYY-MM-DD-slug.md` with `layout: link`
+  and a public `http(s)` `url:`. Permalink is the same as every other post:
+  `/:year/:month/:day/:title`.
+- Required front matter: `title`, `url`, `date`, `layout: link`. Optional:
+  `excerpt`, `tags`, Markdown body, `card`.
 - Permalink pages are minimal: date (linked to the permalink), then an
   outbound `→` on the first line of the body, then tags and an on-site URL
   card. No visible title/`h1`. `title` is still used for RSS and document
-  `<title>` / SEO. List pages (`/blog`, `/links`) hide the title, put the
-  date above the body with `#` to the right of the date, and keep `→` on
-  the first line of the body.
+  `<title>` / SEO. List pages hide the title and keep `→` on the first line
+  of the body. The date is the on-site permalink; `#` appears only in RSS.
 - URL cards are **site-only** (never in RSS). Default is a build-time Open
   Graph fetch (fail-soft, cached under `.jekyll-cache/link-cards/`).
   `card: false` hides the card and skips the fetch. A `card:` mapping
   (`title`, `description`, `image`, `image_alt`, `site_name`) supplies the
   preview and skips the fetch. Card images are proxied through wsrv.nl like
   other hotlinked assets.
-- Archives: `/blog` (blended posts + links), `/posts` (posts only),
-  `/links` (links only, grouped by year), `/links/YYYY`, `/links/YYYY/MM/`
-  (trailing slash, same GH Pages rule as post month archives). Posts on
-  `/blog` and `/posts` show the title, date + `#`, tags, reading time, a
-  2–3 paragraph excerpt, and a Read more link. Links hide the title.
-  Paginated lists use 20 entries. Link tags join post tags on `/tags/:name`.
+- A bad `url:` is skipped for the card and logged to `_site/build-errors.log`.
+  The rest of the site still builds.
+- Archives: `/blog` (all posts, including links), `/posts` (essays only),
+  `/links` (links only). Posts on `/blog` and `/posts` show the title, date,
+  tags, reading time, a 2–3 paragraph excerpt, and a Read more link. Link
+  tags are ordinary post tags on `/tags/:name`. Paginated lists use 20 entries.
 - Feeds: `/feed.xml` (mixed; link items `<link>`/`<guid>` the external URL),
-  `/posts.xml` (posts only), `/links.xml` (links only). All three emit full
-  content. Link items use `#` instead of the word “Permalink”.
+  `/posts.xml` (essays only), `/links.xml` (links only). All three emit full
+  content. Link items use `#` for the on-site permalink in RSS only.
 - Example:
 
   ```yaml
   ---
+  layout: link
   title: "A useful essay"
   url: "https://example.com/essay"
   date: 2026-08-13 14:30:00 -0400
-  type: "link"
   excerpt: "Optional list blurb."
   tags: [reading]
   # card: false
@@ -300,7 +293,7 @@ Production depends on external services for media (configured in `_config.yml` `
 | Task | Where |
 | --- | --- |
 | New post | `_posts/YYYY-MM-DD-slug.md` |
-| New link post | `_links/yyyy-mm-dd-hh-mm.md` → `/links/yyyy-mm-dd-hh-mm` (#37, #186) |
+| New link post | `_posts/YYYY-MM-DD-slug.md` with `layout: link` and `url:` |
 | Draft | `_x7k9p/` |
 | Nav / header | `_includes/header.html` |
 | Footer / disclaimer | `_includes/footer.html` |
@@ -325,7 +318,7 @@ Production depends on external services for media (configured in `_config.yml` `
 
 Before finishing a change that touches build, layouts, or CSS:
 
-1. [ ] Permalinks have **no** trailing slash for HTML pages (`/about` not `/about/`). Link posts are `/links/yyyy-mm-dd-hh-mm`.
+1. [ ] Permalinks have **no** trailing slash for HTML pages (`/about` not `/about/`). Link posts use the same `/:year/:month/:day/:title` shape as essays.
 2. [ ] `main.css` inlined sitewide; `code.css` only on code pages; no `../` includes; no layout CLS from late CSS
 3. [ ] Tags on `/blog` still look like chips (not oversized title links)
 4. [ ] Drafts stay out of `_posts/` until intentional publish

@@ -11,7 +11,8 @@ sitemap: false
     <description>Links and short notes from {{ site.title | xml_escape }}</description>
     <language>en-us</language>
     <atom:link href="{{ '/links.xml' | absolute_url }}" rel="self" type="application/rss+xml" />
-    {% for item in site.data.link_posts limit:40 %}
+    {% assign links = site.posts | where_exp: "post", "post.layout == 'link'" %}
+    {% for item in links limit:40 %}
     <item>
       <title>{{ item.title | xml_escape }}</title>
       <link>{{ item.external_url | xml_escape }}</link>
@@ -19,8 +20,7 @@ sitemap: false
       <pubDate>{{ item.date | date_to_rfc822 }}</pubDate>
       <author>{{ site.author.email | xml_escape }} ({{ site.author.name | xml_escape }})</author>
       <description><![CDATA[
-        {% assign body = item.content | default: item.excerpt | default: item.description %}
-        {{ body | replace: ']]>', ']]]]><![CDATA[>' }}
+        {{ item.content | replace: ']]>', ']]]]><![CDATA[>' }}
         <p><a href="{{ item.url | absolute_url }}">#</a></p>
       ]]></description>
     </item>
