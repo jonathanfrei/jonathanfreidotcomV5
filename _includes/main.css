@@ -681,12 +681,10 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   text-align: left;
 }
 
-/* Drop caps on the opening paragraph (after H1) and the first
-   paragraph after each H2 (#123). initial-letter: 2 sizes the
+/* Drop caps on the opening paragraph (after H1). initial-letter: 2 sizes the
    letter so its cap-height meets the first line and its baseline
    meets the second line. */
-.prose--drop-cap .post-body > p:first-of-type::first-letter,
-.prose--drop-cap .post-body > h2 + p::first-letter {
+.prose--drop-cap .post-body > p:first-of-type::first-letter {
   -webkit-initial-letter: 2;
   initial-letter: 2;
   font-family: var(--font-body);
@@ -695,8 +693,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   margin-inline-end: 0.1em;
 }
 
-.prose--drop-cap .post-body > p:first-of-type,
-.prose--drop-cap .post-body > h2 + p {
+.prose--drop-cap .post-body > p:first-of-type {
   hyphens: none;
 }
 
@@ -704,8 +701,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
    plus Source Serif 4's cap-height (~0.657em) so the letter still
    spans two lines as closely as float allows. */
 @supports not ((initial-letter: 2) or (-webkit-initial-letter: 2)) {
-  .prose--drop-cap .post-body > p:first-of-type::first-letter,
-  .prose--drop-cap .post-body > h2 + p::first-letter {
+  .prose--drop-cap .post-body > p:first-of-type::first-letter {
     float: left;
     font-size: calc((1em * var(--leading-body) + 0.657em) / 0.657);
     line-height: 0.657;
