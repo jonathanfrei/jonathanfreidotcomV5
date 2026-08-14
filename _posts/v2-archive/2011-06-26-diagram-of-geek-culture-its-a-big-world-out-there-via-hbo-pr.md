@@ -8,4 +8,4 @@ tumblr_id: "6935256362"
 
 Diagram of geek culture: it’s a big world out there.
 
-(via [HBO Programming Venn Diagram | /Film](http://www.slashfilm.com/infographics-diagram-geek-culture-hbo-programming-venn-diagram/zz13043c02-2/))
+(via [HBO Programming Venn Diagram - /Film](http://www.slashfilm.com/infographics-diagram-geek-culture-hbo-programming-venn-diagram/zz13043c02-2/))

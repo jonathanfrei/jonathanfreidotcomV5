@@ -1,5 +1,5 @@
 ---
-title: "Motivational Posters: Winston Churchill Edition (Part I) | The Art of…"
+title: "Motivational Posters: Winston Churchill Edition (Part I) - The Art of…"
 date: 2009-10-08 21:21:00 -0400
 tumblr_id: "208008287"
 ---

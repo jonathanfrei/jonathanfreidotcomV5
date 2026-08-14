@@ -20,4 +20,4 @@ Here are a few of my reading highlights from the [Foreign Policy](http://www.for
 >
 > The failure of the August coup was both ironic and tragic. In taking the extraordinary measures they believed were necessary to hold the union together, the putschists ensured its destruction. Without the coup, the union would likely have endured, albeit in a form that might have eventually resembled the European Union more than the old Soviet Union. But the three-day standoff in Moscow exploded that possibility.
 
-(via [Meltdown - By Gennady Burbulis and Michele A. Berdy | Foreign Policy](http://www.foreignpolicy.com/articles/2011/06/20/meltdown?page=full))
+(via [Meltdown - By Gennady Burbulis and Michele A. Berdy - Foreign Policy](http://www.foreignpolicy.com/articles/2011/06/20/meltdown?page=full))

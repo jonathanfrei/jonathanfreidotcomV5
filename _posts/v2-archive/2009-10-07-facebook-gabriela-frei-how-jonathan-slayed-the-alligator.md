@@ -1,5 +1,5 @@
 ---
-title: "Facebook | Gabriela Frei: How Jonathan Slayed the Alligator"
+title: "Facebook: Gabriela Frei: How Jonathan Slayed the Alligator"
 date: 2009-10-07 19:54:00 -0400
 tumblr_id: "207078459"
 ---

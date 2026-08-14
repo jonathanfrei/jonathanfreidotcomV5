@@ -14,4 +14,4 @@ And the good thing is that now Microsoft is actually encouraging this kind of di
 
 ![Illustration: Justin Wood](http://www.wired.com/magazine/wp-content/images/19-07/mf_kinect_f.jpg)
 
-(via [Kinect Hackers Are Changing the Future of Robotics | Magazine](http://www.wired.com/magazine/2011/06/mf_kinect/))
+(via [Kinect Hackers Are Changing the Future of Robotics - Magazine](http://www.wired.com/magazine/2011/06/mf_kinect/))
