@@ -9,7 +9,7 @@ The Economist examines [Gartners techno-hype chart](http://www.economist.com/blo
 
 > The annual “hype cycle” chart from Gartner, a market research firm, tries to depict the degree to which certain technologies are exaggerated. Smart robots? Don’t hold your breath. Big data? Not yet. In the firm’s view, innovation advances in stages: from exuberance to pessimism to adoption. Not every technology progresses at the same speed, so Gartner assigns each an estimated time until the end of its ride.
 
-[![Daily chart: Technohyperbole | The Economist](http://cdn.static-economist.com/sites/default/files/imagecache/original-size/images/2014/08/blogs/graphic-detail/20140830_wop977.png)
+[![Daily chart: Technohyperbole - The Economist](http://cdn.static-economist.com/sites/default/files/imagecache/original-size/images/2014/08/blogs/graphic-detail/20140830_wop977.png)
 
 ](http://cdn.static-economist.com/sites/default/files/imagecache/original-size/images/2014/08/blogs/graphic-detail/20140830_wop977.png)
 
