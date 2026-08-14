@@ -1,8 +1,8 @@
 ---
+layout: link
 title: "Project Gutenberg"
 url: "https://www.gutenberg.org/"
 date: 2026-08-13 15:00:00 -0400
-type: "link"
 excerpt: "Free public-domain books, no preview card on this entry."
 tags: [reading]
 card: false

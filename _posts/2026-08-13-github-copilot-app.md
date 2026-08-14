@@ -1,8 +1,8 @@
 ---
+layout: link
 title: "GitHub Copilot app"
 url: "https://github.com/features/ai/github-app"
 date: 2026-08-13 10:40:08 -0400
-type: link
 ---
 
 [GitHub Copilot app](https://github.com/features/ai/github-app)
