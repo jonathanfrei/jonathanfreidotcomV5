@@ -268,7 +268,7 @@ module Jekyll
     end
 
     def wrap_video(iframe_html, ratio: "56.25%")
-      # No indentation inside the shell: parse_block_html + indented lines → CodeRay (#156).
+      # No indentation inside the shell: parse_block_html + indented lines → highlighter (#156).
       <<~HTML.gsub(/^[ \t]+/, "")
 
         <div class="embed embed-video" data-embed="video" style="--embed-ratio: #{ratio};" markdown="0">

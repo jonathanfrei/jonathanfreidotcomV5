@@ -3,7 +3,7 @@
   Mirrors code.css gating: no async hop, no CLS, smaller default payload.
   Detection uses the layout `content` (includes nested layout output).
 {% endcomment %}
-{% if content contains '<pre' or content contains 'CodeRay' %}
+{% if content contains '<pre' %}
 <style>
 {% include code.css %}
 </style>
