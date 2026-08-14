@@ -6,4 +6,4 @@ tumblr_id: "6471810242"
 
 [](http://gearpatrol.com/blog/2011/06/09/bmw-powered-twin-rotorhoverbike/ )
 
-(via [BMW Powered Twin-Rotor Hoverbike | Gear Patrol](http://gearpatrol.com/blog/2011/06/09/bmw-powered-twin-rotorhoverbike/))
+(via [BMW Powered Twin-Rotor Hoverbike - Gear Patrol](http://gearpatrol.com/blog/2011/06/09/bmw-powered-twin-rotorhoverbike/))

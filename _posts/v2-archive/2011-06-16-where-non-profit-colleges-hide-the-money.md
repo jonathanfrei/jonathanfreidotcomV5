@@ -10,4 +10,4 @@ The Cato Institute has a report on federal higher education spending and policy 
 >
 > To lower the cost of education, federal government policies should encourage competition. Regulations should not favor nonprofits over for-profits. Further, the accreditation process should be reformed so that any qualified institution can easily enter the industry. The financial-aid process should be redesigned to remove the bargaining advantage that colleges currently hold over prospective students.
 
-(via [Federal Higher Education Policy and the Profitable Nonprofits | Vance Fried | Cato Institute: Policy Analysis](http://www.cato.org/pub_display.php?pub_id=13172))
+(via [Federal Higher Education Policy and the Profitable Nonprofits - Vance Fried - Cato Institute: Policy Analysis](http://www.cato.org/pub_display.php?pub_id=13172))

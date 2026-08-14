@@ -1,5 +1,5 @@
 ---
-title: "CtrlV CtrlX Ctrl Z | Pic | Gear"
+title: "CtrlV CtrlX Ctrl Z - Pic - Gear"
 date: 2010-08-29 17:46:00 -0400
 tumblr_id: "1033116143"
 ---

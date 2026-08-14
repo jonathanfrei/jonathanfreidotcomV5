@@ -1,7 +1,8 @@
 ---
-title: "Combining Files"
+title: Combining Files
 date: 2012-07-18 15:51:00 -0400
 tumblr_id: "27500237123"
+published: false
 ---
 
 # Combining Files
@@ -1176,13 +1177,13 @@ and bigger:
 
 ![](http://farm8.staticflickr.com/7130/7436065094_739c8113ab.jpg)
 
-[![Glowing Meadow.. | Flickr - Photo Sharing!](http://farm4.staticflickr.com/3051/5859800681_be57955f86_b.jpg)
+[![Glowing Meadow.. - Flickr - Photo Sharing!](http://farm4.staticflickr.com/3051/5859800681_be57955f86_b.jpg)
 
-](http://www.flickr.com/photos/atifsaeed/5859800681/ "Glowing Meadow.. | Flickr - Photo Sharing!")
+](http://www.flickr.com/photos/atifsaeed/5859800681/ "Glowing Meadow.. - Flickr - Photo Sharing!")
 
-**This Image Works** [![Glowing Meadow.. | Flickr - Photo Sharing!](http://farm4.staticflickr.com/3051/5859800681_be57955f86_b.jpg)
+**This Image Works** [![Glowing Meadow.. - Flickr - Photo Sharing!](http://farm4.staticflickr.com/3051/5859800681_be57955f86_b.jpg)
 
-](http://www.flickr.com/photos/atifsaeed/5859800681/ "Glowing Meadow.. | Flickr - Photo Sharing!")
+](http://www.flickr.com/photos/atifsaeed/5859800681/ "Glowing Meadow.. - Flickr - Photo Sharing!")
 
 [![In Focus - The Atlantic](http://cdn.theatlantic.com/static/infocus/oakridge062512/o01_92549880.jpg)
 
@@ -1327,18 +1328,18 @@ The sooner I ween myself from preview the better. When I stop to preview, I’m 
 
 # Fiction I plan to Read:
 
-  1. [Another Life | New Yorker | Jun. 25, 2012 | 17 Minutes (4,307 words)](http://www.newyorker.com/fiction/features/2012/07/02/120702fi_fiction_lafarge?currentPage=all)
-  2. [The Untitled Lincoln Love Story Project | Joyland | Apr. 5, 2012 | 24 Minutes](http://www.joylandmagazine.com/stories/new_york/untitled_lincoln_love_story_project)
-  3. [Cross Off and Move On | New York Review of Books | Jun. 1, 2012 | 42 Minutes](http://www.nybooks.com/articles/archives/2012/jul/12/cross-and-move/)
-  4. [Wasps | The New Yorker | Jul. 30, 2007 | 12 Minutes](http://www.newyorker.com/fiction/features/2007/07/30/070730fi_fiction_kennedy?currentPage=all)
-  5. [What to Do? | Swing Magazine | Jun. 13, 2012 | 12 Minutes (3,221 words)](http://www.swinkmag.com/index.php?page=archives&artID=155&catID=1)
-  6. [The World Without You | Guernica Magazine | May. 31, 2012 | 24 Minutes (6,020 words)](http://www.guernicamag.com/fiction/the-world-without-you/)
-  7. [North of | Electric Literature | Jun. 4, 2012 | 21 Minutes (5,460 words)](http://recommendedreading.tumblr.com/post/24534755489/vol-1-no-3-editors-note-i-havent-been-as-won)
-  8. [Marjorie and the Birds | Fifty-Two Stories | May. 30, 2012 | 13 Minutes (3,289 words)](http://www.fiftytwostories.com/?p=1447)
-  9. [Break All the Way Down | Joyland | May. 26, 2012 | 24 Minutes (6,184 words)](http://www.joylandmagazine.com/stories/midwest/break_all_way_down)
+  1. [Another Life - New Yorker - Jun. 25, 2012 - 17 Minutes (4,307 words)](http://www.newyorker.com/fiction/features/2012/07/02/120702fi_fiction_lafarge?currentPage=all)
+  2. [The Untitled Lincoln Love Story Project - Joyland - Apr. 5, 2012 - 24 Minutes](http://www.joylandmagazine.com/stories/new_york/untitled_lincoln_love_story_project)
+  3. [Cross Off and Move On - New York Review of Books - Jun. 1, 2012 - 42 Minutes](http://www.nybooks.com/articles/archives/2012/jul/12/cross-and-move/)
+  4. [Wasps - The New Yorker - Jul. 30, 2007 - 12 Minutes](http://www.newyorker.com/fiction/features/2007/07/30/070730fi_fiction_kennedy?currentPage=all)
+  5. [What to Do? - Swing Magazine - Jun. 13, 2012 - 12 Minutes (3,221 words)](http://www.swinkmag.com/index.php?page=archives&artID=155&catID=1)
+  6. [The World Without You - Guernica Magazine - May. 31, 2012 - 24 Minutes (6,020 words)](http://www.guernicamag.com/fiction/the-world-without-you/)
+  7. [North of - Electric Literature - Jun. 4, 2012 - 21 Minutes (5,460 words)](http://recommendedreading.tumblr.com/post/24534755489/vol-1-no-3-editors-note-i-havent-been-as-won)
+  8. [Marjorie and the Birds - Fifty-Two Stories - May. 30, 2012 - 13 Minutes (3,289 words)](http://www.fiftytwostories.com/?p=1447)
+  9. [Break All the Way Down - Joyland - May. 26, 2012 - 24 Minutes (6,184 words)](http://www.joylandmagazine.com/stories/midwest/break_all_way_down)
   10. [Magazine - Honors Track - The Atlantic](http://www.theatlantic.com/magazine/archive/2012/06/honors-track/8986/)
-  11. [Great, Wondrous | FiveChapters.com | May. 23, 2012 | 39 Minutes (9,950 words)](http://www.fivechapters.com/2012/great-wondrous/)
-  12. [Homecoming | At Length | Nov. 1, 2009 | 57 Minutes (14,448 words)](http://atlengthmag.com/prose/homecoming/)
+  11. [Great, Wondrous - FiveChapters.com - May. 23, 2012 - 39 Minutes (9,950 words)](http://www.fivechapters.com/2012/great-wondrous/)
+  12. [Homecoming - At Length - Nov. 1, 2009 - 57 Minutes (14,448 words)](http://atlengthmag.com/prose/homecoming/)
   13. [Hisham Matar: “Naima” : The New Yorker](http://www.newyorker.com/fiction/features/2011/01/24/110124fi_fiction_matar?currentPage=all)
 
 # Tweet Ideas
