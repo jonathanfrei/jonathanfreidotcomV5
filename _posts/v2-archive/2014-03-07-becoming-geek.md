@@ -12,7 +12,7 @@ John Siracusa’s post, [The Road to Geekdom](http://hypercritical.co/2014/01/14
 John spoke in-depth about this article on a few recent podcasts:
 
   * [Episode 3: Cry Me a River, Internet Boy — IRL Talk](http://www.irltalk.com/episodes/003)
-  * [5by5 | CMD+Space #85: Being a Geek, with John Siracusa](http://5by5.tv/cmdspace/85)
+  * [5by5 - CMD+Space #85: Being a Geek, with John Siracusa](http://5by5.tv/cmdspace/85)
 
 As _geekdom_ becomes less of a fringe quirk and more an aspirational badge, those who consider themselves true geeks might start to feel threatened as the walls of their knowledge kingdoms come tumbling down. However, if they are concerned about the object of their interest becoming less cool as it becomes mainstream, that would make them hipsters, not geeks.
 
