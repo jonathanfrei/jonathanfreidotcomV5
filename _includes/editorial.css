@@ -1212,7 +1212,8 @@
 
 .component-doc pre,
 .component-doc .code-block,
-.component-doc .CodeRay {
+.component-doc .highlighter-rouge,
+.component-doc .highlight {
   max-width: 100%;
 }
 

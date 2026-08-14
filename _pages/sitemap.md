@@ -18,17 +18,16 @@ description: Hierarchical map of pages, sections, tags, and recent posts on jona
         <li><a href="{{ '/posts' | relative_url }}">Posts</a></li>
         <li><a href="{{ '/links' | relative_url }}">Links</a></li>
       </ul>
-      {% if site.posts.size > 0 %}
+      {% if site.data.posts_by_year.size > 0 %}
       <ul>
-        {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-        {% for year_group in posts_by_year %}
+        {% for year_group in site.data.posts_by_year %}
         <li>
           <span class="site-map__heading">{{ year_group.name }}</span>
           <ul>
             {% for post in year_group.items %}
             <li>
               <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-              <span class="post-meta">{{ post.date | date: "%b %-d" }}</span>
+              <span class="post-meta">{{ post.date_label }}</span>
             </li>
             {% endfor %}
           </ul>
@@ -66,33 +65,22 @@ description: Hierarchical map of pages, sections, tags, and recent posts on jona
     </li>
     <li>
       <a href="{{ '/tags' | relative_url }}">Tags</a>
-      {%- assign tag_min = site.tag_archive_min_posts | default: 2 -%}
-      {%- assign has_multi_tags = false -%}
-      {%- for tag in site.tags -%}
-        {%- if tag[1].size >= tag_min -%}
-          {%- assign has_multi_tags = true -%}
-        {%- endif -%}
-      {%- endfor -%}
-      {%- if has_multi_tags -%}
+      {%- if site.data.archive_tags.size > 0 -%}
       <ul class="site-map__chips">
-        {%- assign tag_names = site.tags | sort -%}
-        {%- for tag in tag_names -%}
-          {%- assign tag_name = tag[0] | append: "" -%}
-          {%- if tag[1].size >= tag_min -%}
-          <li><a class="tag" href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}">{{ tag_name }}</a></li>
-          {%- endif -%}
+        {%- assign sitemap_tags = site.data.archive_tags | sort: "name" -%}
+        {%- for tag in sitemap_tags -%}
+          <li><a class="tag" href="{{ '/tags/' | relative_url }}{{ tag.slug }}">{{ tag.name }}</a></li>
         {%- endfor -%}
       </ul>
       {%- endif -%}
     </li>
     <li>
       <a href="{{ '/categories' | relative_url }}">Categories</a>
-      {%- if site.categories.size > 0 -%}
+      {%- if site.data.archive_categories.size > 0 -%}
       <ul class="site-map__chips">
-        {%- assign cat_names = site.categories | sort -%}
-        {%- for cat in cat_names -%}
-          {%- assign cat_name = cat[0] | append: "" -%}
-          <li><a class="tag" href="{{ '/categories/' | relative_url }}{{ cat_name | slugify }}">{{ cat_name }}</a></li>
+        {%- assign sitemap_cats = site.data.archive_categories | sort: "name" -%}
+        {%- for cat in sitemap_cats -%}
+          <li><a class="tag" href="{{ '/categories/' | relative_url }}{{ cat.slug }}">{{ cat.name }}</a></li>
         {%- endfor -%}
       </ul>
       {%- endif -%}

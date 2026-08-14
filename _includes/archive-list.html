@@ -2,17 +2,14 @@
   Monthly archive list as a dense block (v3-style), newest first.
   Links to jekyll-archives month pages at /archive/:year/:month/
   (trailing slash required so GH Pages serves index.html, not a download).
+  Months are precomputed in _plugins/site_index.rb (#195).
 {% endcomment %}
-{% assign posts_by_month = site.posts | group_by_exp: "post", "post.date | date: '%Y-%m'" %}
-{% if posts_by_month.size > 0 %}
+{% if site.data.archive_months.size > 0 %}
 <ul class="archive-list">
-  {% for month_group in posts_by_month %}
-    {% assign sample = month_group.items | first %}
-    {% assign year = sample.date | date: "%Y" %}
-    {% assign month_num = sample.date | date: "%m" %}
+  {% for month in site.data.archive_months %}
     <li>
-      <a href="{{ '/archive/' | relative_url }}{{ year }}/{{ month_num }}/">{{ sample.date | date: "%B %Y" }}</a>
-      <span class="post-meta">({{ month_group.items.size }})</span>
+      <a href="{{ '/archive/' | relative_url }}{{ month.year }}/{{ month.month }}/">{{ month.label }}</a>
+      <span class="post-meta">({{ month.count }})</span>
     </li>
   {% endfor %}
 </ul>

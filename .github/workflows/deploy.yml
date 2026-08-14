@@ -42,16 +42,97 @@ jobs:
         uses: actions/configure-pages@v6
 
       - name: Build with Jekyll
+        id: jekyll
         # Archive media is served from S3 (media.jonathanfrei.com; see
         # archive_media in _config.yml and _plugins/fix_archive_media.rb, #170).
         # Do not bundle media into the Pages artifact — deploy-pages hard-caps
         # wait at 10 minutes. Full build keeps cascade pages coherent.
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        run: |
+          set -euo pipefail
+          start=$(date +%s)
+          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+          end=$(date +%s)
+          echo "seconds=$((end - start))" >> "$GITHUB_OUTPUT"
+          echo "Built in $((end - start))s"
         env:
           JEKYLL_ENV: production
           ARCHIVE_MEDIA_MODE: cdn
           # Match _config.yml timezone so permalinks/bylines stay Eastern (#180).
           TZ: America/New_York
+
+      - name: Report build metrics
+        # Duration, payload size, and a search.json contract (#195).
+        # Warn budgets are guardrails; only an oversized search index fails.
+        env:
+          BUILD_SECONDS: ${{ steps.jekyll.outputs.seconds }}
+        run: |
+          set -euo pipefail
+          echo "Build duration: ${BUILD_SECONDS}s"
+          du -sh _site
+          if [ -f _site/search.json ]; then
+            echo "search.json: $(wc -c < _site/search.json) bytes"
+          else
+            echo "::error::Missing _site/search.json"
+            exit 1
+          fi
+          python3 - <<'PY'
+          import json, os, sys
+
+          path = "_site/search.json"
+          size = os.path.getsize(path)
+          seconds = int(os.environ.get("BUILD_SECONDS") or 0)
+          warn_bytes = 600_000
+          fail_bytes = 1_500_000
+          warn_secs = 600
+          allowed = {"kind", "title", "url", "date", "excerpt", "tags"}
+          required = {"title", "url", "date"}
+          bad = 0
+
+          with open(path, encoding="utf-8") as fh:
+              data = json.load(fh)
+          if not isinstance(data, list):
+              print("::error::search.json must be a JSON array")
+              sys.exit(1)
+          print(f"search.json entries: {len(data)}")
+
+          sample = data[:50]
+          for i, item in enumerate(sample):
+              if not isinstance(item, dict):
+                  print(f"::error::search.json[{i}] is not an object")
+                  bad = 1
+                  continue
+              extra = set(item) - allowed
+              missing = required - set(item)
+              if extra:
+                  print(f"::error::search.json[{i}] unexpected fields: {sorted(extra)}")
+                  bad = 1
+              if missing:
+                  print(f"::error::search.json[{i}] missing fields: {sorted(missing)}")
+                  bad = 1
+
+          if size > fail_bytes:
+              print(f"::error::search.json is {size} bytes (fail budget {fail_bytes})")
+              bad = 1
+          elif size > warn_bytes:
+              print(f"::warning::search.json is {size} bytes (warn budget {warn_bytes})")
+          else:
+              print(f"OK: search.json within budget ({size} <= {warn_bytes})")
+
+          if seconds > warn_secs:
+              print(f"::warning::build took {seconds}s (warn budget {warn_secs}s)")
+          else:
+              print(f"OK: build duration {seconds}s")
+
+          summary = os.environ.get("GITHUB_STEP_SUMMARY")
+          if summary:
+              with open(summary, "a", encoding="utf-8") as fh:
+                  fh.write("## Build metrics\n\n")
+                  fh.write(f"- Duration: **{seconds}s**\n")
+                  fh.write(f"- search.json: **{size} bytes**, {len(data)} entries\n")
+                  fh.write(f"- Budget: warn {warn_bytes} B / fail {fail_bytes} B; warn {warn_secs}s\n")
+
+          sys.exit(bad)
+          PY
 
       - name: Report artifact size
         run: |
@@ -98,14 +179,27 @@ jobs:
           set -euo pipefail
           missing=0
 
-          for f in index.html about.html tags.html search.html; do
+          for f in index.html about.html tags.html search.html search.json; do
             if [ ! -f "_site/$f" ]; then
-              echo "::error::Missing expected HTML page: _site/$f (permalink regression?)"
+              echo "::error::Missing expected page: _site/$f (permalink regression?)"
               missing=1
             else
               echo "OK: _site/$f"
             fi
           done
+
+          if [ -f _site/typography.html ]; then
+            if grep -q 'highlighter-rouge' _site/typography.html; then
+              echo "OK: Rouge highlighting on typography page"
+            else
+              echo "::error::typography page should contain Rouge markup (highlighter-rouge)"
+              missing=1
+            fi
+            if grep -q 'class="CodeRay"' _site/typography.html; then
+              echo "::error::CodeRay markup still present on typography page"
+              missing=1
+            fi
+          fi
 
           if [ -f "_site/blog.html" ]; then
             echo "OK: _site/blog.html"

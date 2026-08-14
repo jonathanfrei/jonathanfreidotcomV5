@@ -118,7 +118,7 @@
 
   --radius: 0.25rem;
 
-  /* CodeRay token colors (overridden in dark) */
+  /* Syntax highlighter token colors (overridden in dark) */
   --cr-comment: #6b6b5e;
   --cr-string: #0b6e4f;
   --cr-keyword: #0077A8;
