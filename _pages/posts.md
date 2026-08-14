@@ -4,23 +4,21 @@ title: Posts
 permalink: /posts
 description: Posts from Jonathan Frei, with longer excerpts.
 pagination:
-  enabled: true
-  collection: posts
-  category: ""
-  tag: ""
+  enabled: false
 ---
 
 {% include feed-filter.html %}
 
 <ul class="post-list stream-list">
-  {% for post in paginator.posts %}
+  {% assign items = page.stream_items %}
+  {% for post in items %}
     <li>
-      {% include post-entry.html entry=post excerpt=true %}
+      {% include post-entry.html entry=post %}
     </li>
   {% endfor %}
 </ul>
 
-{% if paginator.posts.size == 0 %}
+{% if items.size == 0 %}
 <p>No posts published yet.</p>
 {% endif %}
 

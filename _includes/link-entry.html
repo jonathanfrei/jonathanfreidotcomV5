@@ -4,13 +4,13 @@
 {% assign permalink = entry.internal_url | default: entry.url | default: doc.url %}
 {% assign body = doc.content %}
 <div class="link-entry">
+  <p class="post-meta link-entry__meta">
+    {% include post-date.html date=doc.date url=permalink datetime=entry.date_xml hash=true %}
+  </p>
   <div class="link-entry__body">
-    {% include link-glyphs.html destination=dest permalink=permalink title=entry.title %}
+    {% include link-glyphs.html destination=dest title=entry.title %}
     {{ body }}
   </div>
-  <p class="post-meta link-entry__meta">
-    {% include post-date.html date=doc.date url=permalink datetime=entry.date_xml %}
-  </p>
   {% assign entry_tags = entry.tags | default: doc.tags %}
   {% if entry_tags.size > 0 %}
   <div class="post-tags">
