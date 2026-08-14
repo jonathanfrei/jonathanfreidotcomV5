@@ -3,12 +3,11 @@
 <head>
   {% include head.html %}
   {% comment %}
-    Core design system always inlined. Feature sheets (code, search, embeds,
-    pagination) only when content needs them — no async hop, no CLS (#165).
+    Core design system: inlined on top-level + recent posts; linked on
+    archive permalinks and deep nav. Feature sheets still inlined only
+    when content needs them (#165).
   {% endcomment %}
-  <style>
-{% include main.css %}
-  </style>
+  {% include site-css.html %}
   {% include optional-css.html %}
 </head>
 <body>

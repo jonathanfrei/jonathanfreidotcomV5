@@ -542,6 +542,13 @@ module Jekyll
       new_html = inject_lcp_preload(new_html, lcp) if lcp && new_html.include?("</head>")
       doc.output = new_html
     end
+
+    def html_with_img?(doc)
+      return false if doc.output_ext && doc.output_ext != ".html"
+
+      output = doc.output.to_s
+      output.include?("<img") || output.include?("<IMG")
+    end
   end
 end
 
@@ -550,15 +557,14 @@ Jekyll::Hooks.register :site, :after_init do |_site|
 end
 
 Jekyll::Hooks.register :documents, :post_render do |doc|
-  # Collection docs (posts + links). Skip feeds/assets if any sneak in.
-  next if doc.output_ext && doc.output_ext != ".html"
+  # Collection docs (posts + links). Skip feeds/assets and pages with no <img>.
+  next unless Jekyll::OptimizeContentImages.html_with_img?(doc)
 
   Jekyll::OptimizeContentImages.process_document(doc)
 end
 
 Jekyll::Hooks.register :pages, :post_render do |page|
-  # Only HTML-ish pages; skip feeds/assets
-  next if page.output_ext && page.output_ext != ".html"
+  next unless Jekyll::OptimizeContentImages.html_with_img?(page)
 
   Jekyll::OptimizeContentImages.process_document(page)
 end
