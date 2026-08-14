@@ -27,7 +27,10 @@
     </ul>
   </div>
   {%- endif -%}
-  {%- assign excerpt_html = doc.content | extended_excerpt -%}
+  {%- assign excerpt_html = doc.list_excerpt -%}
+  {%- if excerpt_html == nil or excerpt_html == empty -%}
+    {%- assign excerpt_html = doc.content | extended_excerpt -%}
+  {%- endif -%}
   <div class="prose stream-post__excerpt">{{ excerpt_html }}</div>
   <p class="read-more"><a href="{{ permalink | relative_url }}">Read more</a></p>
 </article>
