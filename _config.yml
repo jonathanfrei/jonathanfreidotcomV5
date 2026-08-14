@@ -54,7 +54,7 @@ relative_links:
 # and trail paths stay valid (without it, trail becomes ".../2index" — #153).
 pagination:
   enabled: true
-  per_page: 50
+  per_page: 20
   permalink: "/page/:num/"
   title: ":title – page :num of :max"
   limit: 0
@@ -84,7 +84,8 @@ autopages:
     # No trailing slash — same rationale as site permalink (#63)
     # slugify mode default matches Liquid | slugify (spaces → hyphens)
     permalink: "/tags/:tag"
-    enabled: true
+    # Combined post+link archives are generated in normalize_tags.rb (#186).
+    enabled: false
     slugify:
       mode: default
       cased: true
@@ -217,14 +218,15 @@ twitter:
 
 # Feed settings – drafts never included because excluded from build
 # jekyll-feed is the posts-only feed. Combined /feed.xml and /links.xml
-# are authored templates backed by _plugins/link_posts.rb (#37).
+# are authored templates backed by _plugins/link_posts.rb (#37, #186).
 feed:
   path: posts.xml
+  excerpt_only: false
 
-# Link posts (#37): one file per link under _links/yyyy-mm-dd-hh-mm.md.
-# Subfolders are allowed for organizing archives; permalink is /:name
+# Link posts (#37, #186): one file per link under _links/yyyy-mm-dd-hh-mm.md.
+# Subfolders are allowed for organizing archives; permalink is /links/:name
 # (the filename stem). The generator adds year/month archive pages.
 collections:
   links:
     output: true
-    permalink: /:name
+    permalink: /links/:name

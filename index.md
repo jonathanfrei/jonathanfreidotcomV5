@@ -33,7 +33,7 @@ or reach me on X at <a href="https://x.com/jonathanfrei">@jonathanfrei</a> altho
       {% else %}
       <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
       <div class="post-meta">
-        <time datetime="{{ item.date_xml }}">{{ item.date | date: "%b %-d, %Y" }}</time>
+        {% include post-date.html date=item.date url=item.url datetime=item.date_xml format="%b %-d, %Y" %}
       </div>
       {% endif %}
     </li>

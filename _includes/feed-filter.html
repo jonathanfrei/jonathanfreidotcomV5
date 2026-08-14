@@ -1,0 +1,10 @@
+{%- comment -%}
+  Blog / posts / links switcher at the top of the updated feeds (#186).
+{%- endcomment -%}
+<nav class="feed-filter" aria-label="Blog feeds">
+  <a href="{{ '/blog' | relative_url }}"{% if page.url == '/blog' or page.url == '/blog.html' or page.url contains '/blog/page/' %} aria-current="page"{% endif %}>All</a>
+  <span aria-hidden="true">·</span>
+  <a href="{{ '/posts' | relative_url }}"{% if page.url == '/posts' or page.url == '/posts.html' or page.url contains '/posts/page/' %} aria-current="page"{% endif %}>Posts</a>
+  <span aria-hidden="true">·</span>
+  <a href="{{ '/links' | relative_url }}"{% if page.url == '/links' or page.url == '/links.html' or page.url contains '/links/page/' or page.layout == 'link_archive' %} aria-current="page"{% endif %}>Links</a>
+</nav>

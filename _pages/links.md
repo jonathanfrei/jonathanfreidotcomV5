@@ -10,6 +10,8 @@ pagination:
   tag: ""
 ---
 
+{% include feed-filter.html %}
+
 {% assign items = paginator.posts | default: site.links %}
 {% if items.size == 0 %}
 <p>No links published yet.</p>

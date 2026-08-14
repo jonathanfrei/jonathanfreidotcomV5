@@ -2,36 +2,28 @@
 layout: page
 title: Blog
 permalink: /blog
+description: Posts and links from Jonathan Frei.
 pagination:
-  enabled: true
+  enabled: false
 ---
 
-Short posts and notes.
+{% include feed-filter.html %}
 
-<ul class="post-list">
-  {% for post in paginator.posts %}
+<ul class="post-list stream-list">
+  {% assign items = page.stream_items | default: site.data.site_stream %}
+  {% for item in items %}
     <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <div class="post-meta">
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-        {%- if post.tags.size > 0 -%}
-          ·
-          <span class="tag-row">
-          {%- for tag in post.tags -%}
-            {% include tag-chip.html tag=tag %}
-          {%- endfor -%}
-          </span>
-        {%- endif -%}
-      </div>
-      {% if post.excerpt %}
-        <p class="excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+      {% if item.kind == 'link' %}
+        {% include link-entry.html entry=item %}
+      {% else %}
+        {% include post-entry.html entry=item full=true %}
       {% endif %}
     </li>
   {% endfor %}
 </ul>
 
-{% if paginator.posts.size == 0 %}
-<p>No posts published yet.</p>
+{% if items.size == 0 %}
+<p>No posts or links published yet.</p>
 {% endif %}
 
 {% include pagination.html %}
