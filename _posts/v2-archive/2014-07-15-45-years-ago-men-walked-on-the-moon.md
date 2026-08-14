@@ -5,7 +5,7 @@ tags: ["moon walk", "hitorical picures"]
 tumblr_id: "91871917108"
 ---
 
-[![Neil Armstrong](http://i.imgur.com/UIAcwm5.jpg)](http://i.imgur.com/UIAcwm5.jpg)
+[![Neil Armstrong](https://i.imgur.com/UIAcwm5.jpeg)](http://i.imgur.com/UIAcwm5.jpg)
 
 _Astronaut Neil Armstrong, back in the lunar module, after his historic moonwalk. (NASA)_
 
