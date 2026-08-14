@@ -1,5 +1,5 @@
 /* =========================================================
-   Code chrome + CodeRay — included only on pages with code.
+   Code chrome + Rouge — included only on pages with code.
    ========================================================= */
 
 /* ---------- Enhanced code blocks (toolbar / wrap / copy) ---------- */
@@ -114,8 +114,8 @@
   margin: 0;
 }
 
-/* ---------- CodeRay (token colors via CSS vars in main.css) ---------- */
-.CodeRay {
+/* ---------- Rouge (token colors via CSS vars in main.css) ---------- */
+.highlighter-rouge {
   font-family: var(--font-mono);
   font-size: 0.88em;
   background: var(--color-code-bg);
@@ -124,7 +124,13 @@
   overflow-x: auto;
 }
 
-.CodeRay pre {
+.highlighter-rouge .highlight,
+.highlighter-rouge pre.highlight {
+  margin: 0;
+  background: transparent;
+}
+
+.highlighter-rouge pre {
   margin: 0;
   padding: var(--space-4);
   background: transparent;
@@ -132,83 +138,95 @@
   line-height: 1.45;
 }
 
-code.CodeRay {
+code.highlighter-rouge {
   padding: 0.12em 0.35em;
   border-radius: 0.15rem;
 }
 
-.CodeRay .line-numbers {
-  color: var(--color-muted);
-  opacity: 0.7;
-  padding-right: 1em;
-  user-select: none;
-}
-
-.CodeRay .line-numbers a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.CodeRay .comment,
-.CodeRay .annotation,
-.CodeRay .doctype,
-.CodeRay .type {
+.highlight .c,
+.highlight .cm,
+.highlight .cp,
+.highlight .c1,
+.highlight .cs,
+.highlight .cd {
   color: var(--cr-comment);
   font-style: italic;
 }
 
-.CodeRay .string,
-.CodeRay .char,
-.CodeRay .symbol,
-.CodeRay .content,
-.CodeRay .attribute-value,
-.CodeRay .regexp {
+.highlight .s,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .s2,
+.highlight .sh,
+.highlight .sx,
+.highlight .si,
+.highlight .sr,
+.highlight .s1,
+.highlight .ss,
+.highlight .se {
   color: var(--cr-string);
 }
 
-.CodeRay .keyword,
-.CodeRay .reserved,
-.CodeRay .directive,
-.CodeRay .tag,
-.CodeRay .key,
-.CodeRay .important,
-.CodeRay .label {
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt,
+.highlight .kv {
   color: var(--cr-keyword);
   font-weight: 600;
 }
 
-.CodeRay .function,
-.CodeRay .predefined,
-.CodeRay .builtin,
-.CodeRay .constant {
+.highlight .nf,
+.highlight .fm,
+.highlight .nb,
+.highlight .bp,
+.highlight .no {
   color: var(--cr-function);
 }
 
-.CodeRay .integer,
-.CodeRay .float,
-.CodeRay .octal,
-.CodeRay .hex,
-.CodeRay .predefined-constant {
+.highlight .m,
+.highlight .mb,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .il,
+.highlight .mo,
+.highlight .mx {
   color: var(--cr-number);
 }
 
-.CodeRay .class,
-.CodeRay .namespace,
-.CodeRay .variable,
-.CodeRay .instance-variable,
-.CodeRay .class-variable,
-.CodeRay .global-variable,
-.CodeRay .attribute-name {
+.highlight .nc,
+.highlight .nn,
+.highlight .ne,
+.highlight .na,
+.highlight .nd,
+.highlight .ni,
+.highlight .nl,
+.highlight .nv,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi,
+.highlight .vm {
   color: var(--cr-name);
 }
 
-.CodeRay .operator,
-.CodeRay .delimiter {
+.highlight .nt,
+.highlight .ow {
+  color: var(--cr-keyword);
+  font-weight: 600;
+}
+
+.highlight .o,
+.highlight .p {
   color: var(--color-fg);
 }
 
-.CodeRay .error,
-.CodeRay .debug {
+.highlight .err,
+.highlight .gr {
   color: #b00020;
   background: color-mix(in srgb, #b00020 8%, transparent);
 }

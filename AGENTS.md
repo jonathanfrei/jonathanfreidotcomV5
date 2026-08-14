@@ -157,7 +157,7 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 - Supported: YouTube, Vimeo, X/Twitter, Instagram, TikTok, Spotify, CodePen, Imgur, Flickr.
 - Opt out per document: `url_embeds: false` in front matter.
 - Inline links inside paragraphs are **not** transformed.
-- Embed HTML uses `markdown="0"` and no inner indentation so Kramdown `parse_block_html` does not turn iframes into CodeRay blocks (#156).
+- Embed HTML uses `markdown="0"` and no inner indentation so Kramdown `parse_block_html` does not turn iframes into highlighter blocks (#156).
 - Imgur gallery SEO slugs (`/gallery/title-hash`) resolve to the trailing image hash (#157).
 - Hotlinked third-party images are rewritten through wsrv.nl in production (`archive_media.optimize.hotlink`, #116).
 
@@ -199,7 +199,7 @@ Desired URLs: `/about`, `/blog`, `/2026/08/05/slug`, `/tags/foo` — **not** `/a
 
 - **Brand (#145):** `_includes/main.css` — Paper `#FAF9F6`, Ink `#111C24`, Signature Blue `#0077A8` (use blue sparingly). Full token table in that file (blue scale + editorial accents + UI semantics).
 - **Feature sheets (#165):** gated by `_includes/optional-css.html` (content probes; no PurgeCSS/Node build — keeps Jekyll-only + inlined delivery / no CLS):
-  - `_includes/code.css` — fenced code / CodeRay (`<pre` / `CodeRay`)
+  - `_includes/code.css` — fenced code / Rouge (`<pre`)
   - `_includes/search.css` — search box (`search-ui` / `search-input`)
   - `_includes/embeds.css` — media embeds (`class="embed` / `data-embed=`)
   - `_includes/pagination.css` — paginated lists (`pagination-list`)
@@ -301,11 +301,12 @@ Production depends on external services for media (configured in `_config.yml` `
 | Site-wide layout | `_layouts/default.html` |
 | Post chrome (tags, comment mailto, random post) | `_layouts/post.html` (random uses on-click fetch of `search.json`) |
 | Post metadata (last_modified, reading time) | `_plugins/post_metadata.rb` + `post_metadata` in `_config.yml` (#75) |
+| Search / tag / archive indexes | `_plugins/site_index.rb` + `site_index` in `_config.yml` (#195) |
 | Date timezone / UTC permalink redirects | `_config.yml` `timezone` + `_plugins/date_redirects.rb` (#180) |
 | Drop caps on long posts | `_plugins/drop_cap.rb` + `.prose--drop-cap` in `main.css` (#123) |
 | Tag archive title | `_layouts/tag.html` |
-| Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` |
-| Random-post URL list | `search.json` (`url` field; `posts.json` removed — #130) |
+| Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` (thin dump of `site.data.search_index`) |
+| Random-post URL list | `search.json` (`url` + `kind`; `posts.json` removed — #130) |
 | Theme toggle | Boot in `_includes/head.html`; full `assets/js/theme.js` loads on first click (footer stub) |
 | Site config | `_config.yml` |
 | Deploy / path filters | `.github/workflows/deploy.yml` |

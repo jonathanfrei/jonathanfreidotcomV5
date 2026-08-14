@@ -21,13 +21,15 @@ author:
 
 # Build settings
 markdown: kramdown
-# CodeRay syntax highlighting for fenced code blocks (#124)
+# Rouge syntax highlighting (Jekyll default; faster than CodeRay, #195)
 kramdown:
-  syntax_highlighter: coderay
+  syntax_highlighter: rouge
   syntax_highlighter_opts:
-    css: class
-    line_numbers: false
-    bold_every: false
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
   # Allow Markdown inside HTML blocks (editorial components, #144)
   parse_block_html: true
 # No trailing slash: Jekyll writes .html files that GitHub Pages serves at the
@@ -73,6 +75,11 @@ tag_archive_min_posts: 2
 post_metadata:
   git_last_modified: true
   words_per_minute: 200
+
+# Precomputed search / taxonomy / archive indexes (issue #195).
+# Built once in _plugins/site_index.rb; templates dump these arrays.
+site_index:
+  excerpt_chars: 140
 
 # Auto-generated paginated tag + category pages (jekyll-paginate-v2)
 autopages:

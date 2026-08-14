@@ -38,14 +38,8 @@ permalink: /tags
   background: var(--color-code-bg);
 }
 </style>
-{%- assign tag_min = site.tag_archive_min_posts | default: 2 -%}
-{%- assign multi_tag_count = 0 -%}
-{%- for tag in site.tags -%}
-  {%- if tag[1].size >= tag_min -%}
-    {%- assign multi_tag_count = multi_tag_count | plus: 1 -%}
-  {%- endif -%}
-{%- endfor -%}
-{%- if multi_tag_count == 0 -%}
+{%- assign archive_tags = site.data.archive_tags -%}
+{%- if archive_tags.size == 0 -%}
 <p>No tags yet.</p>
 {%- else -%}
 <p class="tags-sort-controls" role="group" aria-label="Sort tags">
@@ -54,26 +48,13 @@ permalink: /tags
 </p>
 <ul class="tags" id="tags-list">
 {%- comment -%}
-  Only tags with 2+ posts (issue #140). Most-used first: find max, walk counts
-  downward. Coerce keys to strings (normalize_tags plugin + append "" safety).
+  Precomputed in _plugins/site_index.rb: tags with 2+ posts, most-used first (#140, #195).
 {%- endcomment -%}
-{%- assign max_count = 0 -%}
-{%- for tag in site.tags -%}
-  {%- if tag[1].size > max_count -%}
-    {%- assign max_count = tag[1].size -%}
-  {%- endif -%}
-{%- endfor -%}
-{%- for count in (2..max_count) reversed -%}
-  {%- for tag in site.tags -%}
-    {%- assign tag_name = tag[0] | append: "" -%}
-    {%- assign tag_posts = tag[1] -%}
-    {%- if tag_posts.size == count -%}
-  <li data-name="{{ tag_name | downcase | escape }}" data-count="{{ tag_posts.size }}">
-    <a class="tag" href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}">{{ tag_name }}</a>
-    <span class="post-meta">({{ tag_posts.size }})</span>
+{%- for tag in archive_tags -%}
+  <li data-name="{{ tag.name | downcase | escape }}" data-count="{{ tag.count }}">
+    <a class="tag" href="{{ '/tags/' | relative_url }}{{ tag.slug }}">{{ tag.name }}</a>
+    <span class="post-meta">({{ tag.count }})</span>
   </li>
-    {%- endif -%}
-  {%- endfor -%}
 {%- endfor -%}
 </ul>
 <script>
