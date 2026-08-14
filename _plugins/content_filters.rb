@@ -5,7 +5,7 @@ module Jekyll
   module ContentFilters
     # 2 paragraphs when those two are already substantial; otherwise 3.
     # Only <p> blocks so heading/embed markup after a paragraph is not pulled in.
-    def extended_excerpt(input)
+    def self.excerpt_html(input)
       html = input.to_s
       return html if html.strip.empty?
 
@@ -18,7 +18,23 @@ module Jekyll
       take = text_len >= 400 ? 2 : 3
       paragraphs.first(take).join
     end
+
+    def extended_excerpt(input)
+      Jekyll::ContentFilters.excerpt_html(input)
+    end
   end
 end
 
 Liquid::Template.register_filter(Jekyll::ContentFilters)
+
+# Posts render before pages. Stash a list blurb so /blog and /posts do not
+# walk full converted HTML through extended_excerpt on every list item.
+Jekyll::Hooks.register :documents, :post_render do |doc|
+  next unless doc.respond_to?(:collection) && doc.collection&.label == "posts"
+  next if doc.data["layout"].to_s == "link"
+
+  html = doc.content.to_s
+  next if html.strip.empty?
+
+  doc.data["list_excerpt"] = Jekyll::ContentFilters.excerpt_html(html)
+end
