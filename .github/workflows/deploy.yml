@@ -127,11 +127,62 @@ jobs:
 
           # Use the July fixture: it is always in the past, so Jekyll writes
           # the permalink even if `future` is later turned off.
-          if [ -f "_site/2026-07-01-09-15.html" ]; then
-            echo "OK: _site/2026-07-01-09-15.html"
+          if [ -f "_site/links/2026-07-01-09-15.html" ]; then
+            echo "OK: _site/links/2026-07-01-09-15.html"
           else
-            echo "::error::Missing sample link permalink _site/2026-07-01-09-15.html"
+            echo "::error::Missing sample link permalink _site/links/2026-07-01-09-15.html"
             missing=1
+          fi
+
+          if [ -f "_site/2026-07-01-09-15.html" ]; then
+            echo "OK: _site/2026-07-01-09-15.html (legacy redirect)"
+          else
+            echo "::error::Missing legacy link redirect _site/2026-07-01-09-15.html"
+            missing=1
+          fi
+
+          posts_page=""
+          if [ -f "_site/posts.html" ]; then
+            posts_page="_site/posts.html"
+            echo "OK: _site/posts.html"
+          elif [ -f "_site/posts/index.html" ]; then
+            posts_page="_site/posts/index.html"
+            echo "OK: _site/posts/index.html (paginated)"
+          else
+            echo "::error::Missing posts page (expected _site/posts.html or _site/posts/index.html)"
+            missing=1
+          fi
+
+          if [ -n "$posts_page" ]; then
+            if grep -q 'class="links-year"' "$posts_page"; then
+              echo "::error::$posts_page should not use the /links year grouping"
+              missing=1
+            fi
+            if ! grep -q 'class="stream-post__title"' "$posts_page"; then
+              echo "::error::$posts_page should show full post titles"
+              missing=1
+            fi
+            if ! grep -q 'class="read-more"' "$posts_page"; then
+              echo "::error::$posts_page should include Read more links to permalinks"
+              missing=1
+            fi
+          fi
+
+          blog_page=""
+          if [ -f "_site/blog.html" ]; then
+            blog_page="_site/blog.html"
+          elif [ -f "_site/blog/index.html" ]; then
+            blog_page="_site/blog/index.html"
+          fi
+          if [ -n "$blog_page" ]; then
+            if grep -q 'class="stream-post__body"' "$blog_page"; then
+              echo "::error::$blog_page should excerpt posts, not render full bodies"
+              missing=1
+            fi
+            if ! grep -q 'class="read-more"' "$blog_page"; then
+              echo "::error::$blog_page should include Read more links on post entries"
+              missing=1
+            fi
           fi
 
           if [ -f "_site/links/2026/08/index.html" ]; then
@@ -155,6 +206,16 @@ jobs:
               echo "::error::links.xml should guid/link the Wikipedia fixture URL"
               missing=1
             fi
+            # Body-only phrase (not in excerpt). Avoid apostrophes: the
+            # fixture uses a curly quote and Kramdown may emit &rsquo;.
+            if ! grep -q "dedicated links feed" _site/links.xml; then
+              echo "::error::links.xml should include full link body content"
+              missing=1
+            fi
+            if grep -q '>Permalink</a>' _site/links.xml _site/feed.xml; then
+              echo "::error::RSS feeds should use a permalink glyph, not the word Permalink"
+              missing=1
+            fi
             if grep -q 'link-card' _site/links.xml; then
               echo "::error::links.xml must not include URL card markup"
               missing=1
@@ -163,6 +224,11 @@ jobs:
               echo "::error::feed.xml must not include URL card markup"
               missing=1
             fi
+          fi
+
+          if [ -f "_site/build-errors.log" ]; then
+            echo "---- build-errors.log ----"
+            cat _site/build-errors.log
           fi
 
           if [ "$missing" -ne 0 ]; then

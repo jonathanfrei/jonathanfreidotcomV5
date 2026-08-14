@@ -15,13 +15,17 @@ layout: default
   </header>
 
   <ul class="post-list">
-    {% assign list_posts = paginator.posts | default: page.posts %}
-    {% for post in list_posts %}
+    {% assign list_items = page.stream_items | default: paginator.posts | default: page.posts %}
+    {% for item in list_items %}
       <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <div class="post-meta">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-        </div>
+        {% if item.collection == 'links' or item.kind == 'link' or item.type == 'link' %}
+          {% include link-entry.html entry=item %}
+        {% else %}
+          <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          <div class="post-meta">
+            {% include post-date.html date=item.date url=item.url %}
+          </div>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>

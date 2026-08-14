@@ -130,20 +130,42 @@ module Jekyll
       map
     end
 
-    def merge_related_tags!(site)
+    def merge_related_tags!(site, extra_docs: [])
       counts = Hash.new(0)
       site.posts.docs.each do |post|
         Array(post.data["tags"]).each { |t| counts[t] += 1 }
+      end
+      extra_docs.each do |doc|
+        Array(doc.data["tags"]).each { |t| counts[t] += 1 }
       end
 
       merge = singular_plural_map(counts)
       return if merge.empty?
 
-      site.posts.docs.each do |post|
-        tags = Array(post.data["tags"])
+      (site.posts.docs + extra_docs).each do |doc|
+        tags = Array(doc.data["tags"])
         next if tags.empty?
 
-        post.data["tags"] = tags.map { |t| merge.fetch(t, t) }.reject(&:empty?).uniq
+        doc.data["tags"] = tags.map { |t| merge.fetch(t, t) }.reject(&:empty?).uniq
+      end
+    end
+
+    # Fold link-post tags into site.tags so chips, /tags, and archives
+    # count posts and links together (#186).
+    def ingest_links!(site, docs)
+      docs = Array(docs)
+      docs.each { |doc| coerce!(doc) }
+      merge_related_tags!(site, extra_docs: docs)
+      reset_caches!(site)
+
+      tags_hash = site.tags
+      docs.each do |doc|
+        Array(doc.data["tags"]).each do |tag|
+          next if tag.to_s.empty?
+
+          tags_hash[tag] ||= []
+          tags_hash[tag] << doc unless tags_hash[tag].include?(doc)
+        end
       end
     end
 
@@ -189,5 +211,65 @@ Jekyll::Hooks.register :site, :post_read do |site|
 end
 
 Jekyll::Hooks.register :site, :pre_render do |site|
+  Jekyll::NormalizeTags.ingest_links!(site, site.data["link_posts"] || [])
   Jekyll::NormalizeTags.prune_singleton_tag_pages!(site)
+end
+
+# Combined post+link tag archives (#186). Autopages only see posts, so
+# we emit our own /tags/:name pages after links are ingested.
+class Jekyll::UnifiedTagPagesGenerator < Jekyll::Generator
+  safe true
+  priority :low
+
+  def generate(site)
+    min = site.config["tag_archive_min_posts"] || MIN_TAG_ARCHIVE_POSTS
+    per = Jekyll::StreamPagination.per_page(site)
+    Jekyll::NormalizeTags.ingest_links!(site, site.data["link_posts"] || [])
+
+    site.tags.each do |tag, items|
+      next if items.size < min
+
+      sorted = items.sort_by { |doc| tag_sort_key(doc) }.reverse
+      slug = Jekyll::Utils.slugify(tag.to_s, mode: "default")
+      next if slug.empty?
+
+      base = "/tags/#{slug}"
+      pages = Jekyll::StreamPagination.total_pages(sorted.size, per)
+      (1..pages).each do |num|
+        slice = sorted[((num - 1) * per), per] || []
+        permalink = Jekyll::StreamPagination.path_for(base, num)
+        dir, name = if num == 1
+                      ["tags", "#{slug}.html"]
+                    else
+                      ["tags/#{slug}/page/#{num}", "index.html"]
+                    end
+        data = {
+          "layout" => "tag",
+          "permalink" => permalink,
+          "title" => num == 1 ? "Tag: #{tag}" : "Tag: #{tag} – page #{num} of #{pages}",
+          "description" => "Posts and links tagged #{tag}.",
+          "tag" => tag,
+          "stream_items" => slice,
+          "paginator" => Jekyll::StreamPagination.paginator(
+            num, sorted.size, per, base, posts: slice
+          ),
+          "pagination" => { "enabled" => false }
+        }
+        site.pages << Jekyll::StreamGeneratedPage.new(site, dir, name, data, "")
+      end
+    end
+  end
+
+  def tag_sort_key(doc)
+    date = if doc.respond_to?(:date) && doc.date
+             doc.date
+           else
+             doc.data["date"]
+           end
+    return 0 unless date.respond_to?(:to_time)
+
+    date.to_time.to_f
+  rescue StandardError
+    0
+  end
 end

@@ -1,0 +1,10 @@
+{%- comment -%}
+  Destination arrow for the first line of a link body (#186).
+  Permalink # lives next to the date via post-date.html.
+  Params: destination, title (optional)
+{%- endcomment -%}
+{%- if include.destination -%}
+<span class="link-glyphs">
+  <a class="link-glyph link-glyph--go" href="{{ include.destination }}" target="_blank" rel="nofollow noopener noreferrer" data-outbound="link" title="{{ include.title | default: 'Open link' | escape }}">→</a>
+</span>
+{%- endif -%}

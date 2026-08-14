@@ -1,0 +1,33 @@
+{%- comment -%}
+  Post listing: title, date + #, reading time, tags, 2–3 paragraph excerpt,
+  then Read more. Link-type entries use link-entry.html instead (no title).
+{%- endcomment -%}
+{%- assign doc = include.entry.document | default: include.entry -%}
+{%- assign permalink = include.entry.internal_url | default: doc.url -%}
+<article class="stream-post">
+  <h2 class="stream-post__title">
+    <a href="{{ permalink | relative_url }}">{{ doc.title }}</a>
+  </h2>
+  <p class="post-meta stream-post__meta">
+    {% include post-date.html date=doc.date url=permalink datetime=include.entry.date_xml hash=true %}
+    {%- assign minutes = doc.reading_time | default: include.entry.reading_time -%}
+    {%- assign words = doc.word_count | default: include.entry.word_count -%}
+    {%- if minutes and minutes >= 2 -%}
+      <span class="post-meta__sep" aria-hidden="true">·</span>
+      <span class="post-meta__reading" title="{{ words }} words">{{ minutes }} min read</span>
+    {%- endif -%}
+  </p>
+  {%- assign entry_tags = doc.tags | default: include.entry.tags -%}
+  {%- if entry_tags.size > 0 -%}
+  <div class="post-tags">
+    <ul class="post-tags__list">
+      {%- for tag in entry_tags -%}
+        <li>{% include tag-chip.html tag=tag %}</li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  {%- endif -%}
+  {%- assign excerpt_html = doc.content | extended_excerpt -%}
+  <div class="prose stream-post__excerpt">{{ excerpt_html }}</div>
+  <p class="read-more"><a href="{{ permalink | relative_url }}">Read more</a></p>
+</article>

@@ -26,7 +26,7 @@ _layouts/                      # default, page, post, tag, editorial
 _plugins/url_embeds.rb         # Standalone media URLs → embeds
 _posts/                        # Published posts (YYYY-MM-DD-slug.md)
 _posts/v1-archive/             # Historical imported posts (treat carefully)
-_links/                        # Link posts (yyyy-mm-dd-hh-mm.md → /yyyy-mm-dd-hh-mm)
+_links/                        # Link posts (yyyy-mm-dd-hh-mm.md → /links/yyyy-mm-dd-hh-mm)
 _x7k9p/                        # Obfuscated drafts (excluded from build & CI paths)
 assets/                        # Images, JS; CSS tooling at assets/css/*.html
 editorial/                     # Handcrafted HTML drop-ins (slug.html → /editorial/slug)
@@ -90,6 +90,7 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 - **`description`:** encourage on new posts for stable SEO/social; archive posts need not be backfilled.
 - Default layout is `post` (from `_config.yml`). Do not set a custom layout unless needed.
 - Tags should be simple lowercase slugs where possible; archives live at `/tags/:name`.
+- A malformed post or link is skipped (site still builds). Check `_site/build-errors.log` and the Actions log before the next publish (#186).
 
 ### Drafts (`_x7k9p/`)
 
@@ -102,26 +103,35 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 
 - One file per link: `_links/yyyy-mm-dd-hh-mm.md`. Subfolders are allowed for
   organizing archives and do **not** change the URL.
-- Permalink is `/yyyy-mm-dd-hh-mm` (the filename stem). Duplicate basenames
-  fail the build. There is no `slug:` override — rename the file to change
-  the URL. A collision with an existing post or page URL also fails the build.
+- Permalink is `/links/yyyy-mm-dd-hh-mm` (the filename stem). Duplicate
+  basenames or collisions with an existing post/page skip that link and log
+  to `_site/build-errors.log` (they do **not** fail the build). There is no
+  `slug:` override — rename the file to change the URL. Old `/yyyy-mm-dd-hh-mm`
+  paths get an HTML redirect.
 - Required front matter: `title`, public `http(s)` `url`, timezone-aware
   `date`, `type: "link"` (defaulted by `_config.yml`). Optional: `excerpt`,
   `tags`, Markdown body.
-- Permalink pages are minimal: body, then date/tags, then an on-site URL
-  card. No visible title/`h1`. `title` is still used for lists, RSS, and
-  document `<title>` / SEO.
+- Permalink pages are minimal: date (linked to the permalink), then an
+  outbound `→` on the first line of the body, then tags and an on-site URL
+  card. No visible title/`h1`. `title` is still used for RSS and document
+  `<title>` / SEO. List pages (`/blog`, `/links`) hide the title, put the
+  date above the body with `#` to the right of the date, and keep `→` on
+  the first line of the body.
 - URL cards are **site-only** (never in RSS). Default is a build-time Open
   Graph fetch (fail-soft, cached under `.jekyll-cache/link-cards/`).
   `card: false` hides the card and skips the fetch. A `card:` mapping
   (`title`, `description`, `image`, `image_alt`, `site_name`) supplies the
-  preview and skips the fetch.
-- Archives: `/links` (paginated, grouped by year), `/links/YYYY`,
-  `/links/YYYY/MM/` (trailing slash, same GH Pages rule as post month
-  archives). Tags on link pages reuse `tag-chip.html` but do **not** join
-  post tag autopages.
+  preview and skips the fetch. Card images are proxied through wsrv.nl like
+  other hotlinked assets.
+- Archives: `/blog` (blended posts + links), `/posts` (posts only),
+  `/links` (links only, grouped by year), `/links/YYYY`, `/links/YYYY/MM/`
+  (trailing slash, same GH Pages rule as post month archives). Posts on
+  `/blog` and `/posts` show the title, date + `#`, tags, reading time, a
+  2–3 paragraph excerpt, and a Read more link. Links hide the title.
+  Paginated lists use 20 entries. Link tags join post tags on `/tags/:name`.
 - Feeds: `/feed.xml` (mixed; link items `<link>`/`<guid>` the external URL),
-  `/posts.xml` (posts only), `/links.xml` (links only).
+  `/posts.xml` (posts only), `/links.xml` (links only). All three emit full
+  content. Link items use `#` instead of the word “Permalink”.
 - Example:
 
   ```yaml
@@ -290,7 +300,7 @@ Production depends on external services for media (configured in `_config.yml` `
 | Task | Where |
 | --- | --- |
 | New post | `_posts/YYYY-MM-DD-slug.md` |
-| New link post | `_links/yyyy-mm-dd-hh-mm.md` → `/yyyy-mm-dd-hh-mm` (#37) |
+| New link post | `_links/yyyy-mm-dd-hh-mm.md` → `/links/yyyy-mm-dd-hh-mm` (#37, #186) |
 | Draft | `_x7k9p/` |
 | Nav / header | `_includes/header.html` |
 | Footer / disclaimer | `_includes/footer.html` |
@@ -315,7 +325,7 @@ Production depends on external services for media (configured in `_config.yml` `
 
 Before finishing a change that touches build, layouts, or CSS:
 
-1. [ ] Permalinks have **no** trailing slash for HTML pages (`/about` not `/about/`)
+1. [ ] Permalinks have **no** trailing slash for HTML pages (`/about` not `/about/`). Link posts are `/links/yyyy-mm-dd-hh-mm`.
 2. [ ] `main.css` inlined sitewide; `code.css` only on code pages; no `../` includes; no layout CLS from late CSS
 3. [ ] Tags on `/blog` still look like chips (not oversized title links)
 4. [ ] Drafts stay out of `_posts/` until intentional publish
