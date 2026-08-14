@@ -1,0 +1,12 @@
+{%- comment -%}
+  Destination arrow and optional on-site permalink glyph (#186).
+  Params: destination, permalink (optional), title (optional)
+{%- endcomment -%}
+<span class="link-glyphs">
+  {%- if include.destination -%}
+  <a class="link-glyph link-glyph--go" href="{{ include.destination }}" target="_blank" rel="nofollow noopener noreferrer" data-outbound="link" title="{{ include.title | default: 'Open link' | escape }}">→</a>
+  {%- endif -%}
+  {%- if include.permalink -%}
+  <a class="link-glyph link-glyph--here" href="{{ include.permalink | relative_url }}" title="Permalink">#</a>
+  {%- endif -%}
+</span>

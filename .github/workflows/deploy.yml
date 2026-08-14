@@ -127,10 +127,26 @@ jobs:
 
           # Use the July fixture: it is always in the past, so Jekyll writes
           # the permalink even if `future` is later turned off.
-          if [ -f "_site/2026-07-01-09-15.html" ]; then
-            echo "OK: _site/2026-07-01-09-15.html"
+          if [ -f "_site/links/2026-07-01-09-15.html" ]; then
+            echo "OK: _site/links/2026-07-01-09-15.html"
           else
-            echo "::error::Missing sample link permalink _site/2026-07-01-09-15.html"
+            echo "::error::Missing sample link permalink _site/links/2026-07-01-09-15.html"
+            missing=1
+          fi
+
+          if [ -f "_site/2026-07-01-09-15.html" ]; then
+            echo "OK: _site/2026-07-01-09-15.html (legacy redirect)"
+          else
+            echo "::error::Missing legacy link redirect _site/2026-07-01-09-15.html"
+            missing=1
+          fi
+
+          if [ -f "_site/posts.html" ]; then
+            echo "OK: _site/posts.html"
+          elif [ -f "_site/posts/index.html" ]; then
+            echo "OK: _site/posts/index.html (paginated)"
+          else
+            echo "::error::Missing posts page (expected _site/posts.html or _site/posts/index.html)"
             missing=1
           fi
 
@@ -155,6 +171,14 @@ jobs:
               echo "::error::links.xml should guid/link the Wikipedia fixture URL"
               missing=1
             fi
+            if ! grep -q "Wikipedia's overview of RSS" _site/links.xml; then
+              echo "::error::links.xml should include full link body content"
+              missing=1
+            fi
+            if grep -q '>Permalink</a>' _site/links.xml _site/feed.xml; then
+              echo "::error::RSS feeds should use a permalink glyph, not the word Permalink"
+              missing=1
+            fi
             if grep -q 'link-card' _site/links.xml; then
               echo "::error::links.xml must not include URL card markup"
               missing=1
@@ -163,6 +187,11 @@ jobs:
               echo "::error::feed.xml must not include URL card markup"
               missing=1
             fi
+          fi
+
+          if [ -f "_site/build-errors.log" ]; then
+            echo "---- build-errors.log ----"
+            cat _site/build-errors.log
           fi
 
           if [ "$missing" -ne 0 ]; then

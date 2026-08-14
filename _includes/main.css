@@ -722,13 +722,13 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   margin: 0;
 }
 
-.post-list li {
+.post-list > li {
   margin-bottom: var(--space-5);
   padding-bottom: var(--space-5);
   border-bottom: 1px solid var(--color-border);
 }
 
-.post-list li:last-child {
+.post-list > li:last-child {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -772,10 +772,77 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 }
 
 .link-entry__meta { margin: var(--space-3) 0 0; }
+.link-entry__body,
+.link-post__body { overflow: auto; }
 .link-post__body > :first-child { margin-top: 0; }
-.link-post__meta { margin-top: var(--space-6); }
+.link-post__meta { margin: 0 0 var(--space-6); }
 .links-year + .links-year { margin-top: var(--space-8); }
 .link-archive-months { margin-bottom: var(--space-6); }
+
+.link-glyphs {
+  float: left;
+  margin: 0.15em 0.45em 0 0;
+  line-height: inherit;
+}
+.link-glyph {
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  text-decoration: none;
+  margin-right: 0.15em;
+}
+.link-glyph:hover,
+.link-glyph:focus-visible {
+  text-decoration: underline;
+}
+
+.feed-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em 0.5em;
+  margin: 0 0 var(--space-6);
+  font-family: var(--font-ui);
+  font-size: var(--type-sm);
+}
+.feed-filter a[aria-current="page"] {
+  color: var(--color-fg);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.stream-post__title {
+  font-size: var(--type-lg);
+  font-weight: 400;
+  margin: 0;
+}
+.stream-post__title a {
+  color: var(--color-fg);
+  text-decoration: none;
+}
+.stream-post__title a:hover,
+.stream-post__title a:focus-visible {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+.stream-post__meta { margin: var(--space-3) 0 0; }
+.stream-post__body,
+.stream-post__excerpt { margin-top: var(--space-4); }
+.read-more {
+  margin: var(--space-3) 0 0;
+  font-family: var(--font-ui);
+  font-size: var(--type-sm);
+}
+
+.post-meta a,
+a.post-meta__date {
+  color: inherit;
+  text-decoration: none;
+}
+.post-meta a:hover,
+.post-meta a:focus-visible,
+a.post-meta__date:hover,
+a.post-meta__date:focus-visible {
+  color: var(--color-accent);
+}
 
 .link-card {
   display: grid;
