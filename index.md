@@ -42,9 +42,7 @@ or reach me on X at <a href="https://x.com/jonathanfrei">@jonathanfrei</a> altho
 
 {% if site.posts.size > 5 %}
 <p class="more-posts post-nav">
-  <a href="{{ '/blog' | relative_url }}">More posts</a>
-  <span aria-hidden="true">·</span>
-  <a href="{{ '/links' | relative_url }}">More links</a>
+  <a href="{{ '/blog' | relative_url }}">More on the blog</a>
 </p>
 {% elsif site.posts.size == 0 %}
 <p class="post-meta">No posts or links yet.</p>

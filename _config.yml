@@ -216,8 +216,7 @@ twitter:
   username: jonathanfrei
 
 # Feed settings – drafts never included because excluded from build
-# jekyll-feed writes an unused file; /posts.xml, /feed.xml, and /links.xml
-# are authored templates so link posts can be filtered by layout.
+# jekyll-feed writes an unused file; /feed.xml is the authored mixed feed.
 feed:
   path: jekyll-feed-unused.xml
   excerpt_only: false

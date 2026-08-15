@@ -14,10 +14,6 @@ description: Hierarchical map of pages, sections, tags, and recent posts on jona
     </li>
     <li>
       <a href="{{ '/blog' | relative_url }}">Blog</a>
-      <ul>
-        <li><a href="{{ '/posts' | relative_url }}">Posts</a></li>
-        <li><a href="{{ '/links' | relative_url }}">Links</a></li>
-      </ul>
       {% if site.data.posts_by_year.size > 0 %}
       <ul>
         {% for year_group in site.data.posts_by_year %}
@@ -31,27 +27,6 @@ description: Hierarchical map of pages, sections, tags, and recent posts on jona
             </li>
             {% endfor %}
           </ul>
-        </li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-    </li>
-    <li>
-      <a href="{{ '/links' | relative_url }}">Links</a>
-      {% if site.data.link_years.size > 0 %}
-      <ul>
-        {% for year_group in site.data.link_years %}
-        <li>
-          <a href="{{ '/links/' | append: year_group.name | relative_url }}">{{ year_group.name }}</a>
-          {% if year_group.months.size > 0 %}
-          <ul>
-            {% for month in year_group.months %}
-            <li>
-              <a href="{{ '/links/' | append: year_group.name | append: '/' | append: month.name | append: '/' | relative_url }}">{{ month.name }}</a>
-            </li>
-            {% endfor %}
-          </ul>
-          {% endif %}
         </li>
         {% endfor %}
       </ul>
@@ -104,10 +79,6 @@ description: Hierarchical map of pages, sections, tags, and recent posts on jona
     </li>
     <li>
       <a href="{{ '/feed.xml' | relative_url }}">RSS feed</a>
-        <ul>
-          <li><a href="{{ '/posts.xml' | relative_url }}">Posts feed</a></li>
-          <li><a href="{{ '/links.xml' | relative_url }}">Links feed</a></li>
-        </ul>
     </li>
   </ul>
 </nav>

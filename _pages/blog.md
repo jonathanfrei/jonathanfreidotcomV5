@@ -4,13 +4,12 @@ title: Blog
 permalink: /blog
 description: Posts and links from Jonathan Frei.
 pagination:
-  enabled: true
+  enabled: false
 ---
 
-{% include feed-filter.html %}
-
 <ul class="post-list stream-list">
-  {% for post in paginator.posts %}
+  {% assign items = page.stream_items %}
+  {% for post in items %}
     <li>
       {% if post.layout == 'link' %}
         {% include link-entry.html entry=post %}
@@ -21,8 +20,8 @@ pagination:
   {% endfor %}
 </ul>
 
-{% if paginator.posts.size == 0 %}
-<p>No posts or links published yet.</p>
+{% if items.size == 0 %}
+<p>No posts published yet.</p>
 {% endif %}
 
 {% include pagination.html %}

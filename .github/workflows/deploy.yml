@@ -173,8 +173,8 @@ jobs:
 
       - name: Check permalink convention
         # Light guard for #63 / audit #103: non-paginated pages must be .html
-        # files so GitHub Pages serves clean URLs. Paginated pages (blog) and
-        # month archives intentionally use directory/index.html.
+        # files so GitHub Pages serves clean URLs. /blog page 1 is blog.html;
+        # later blog pages and month archives use directory/index.html.
         run: |
           set -euo pipefail
           missing=0
@@ -203,19 +203,12 @@ jobs:
 
           if [ -f "_site/blog.html" ]; then
             echo "OK: _site/blog.html"
-          elif [ -f "_site/blog/index.html" ]; then
-            echo "OK: _site/blog/index.html (paginated)"
           else
-            echo "::error::Missing blog page (expected _site/blog.html or _site/blog/index.html)"
+            echo "::error::Missing _site/blog.html (permalink must be /blog, not /blog/)"
             missing=1
           fi
-
-          if [ -f "_site/links.html" ]; then
-            echo "OK: _site/links.html"
-          elif [ -f "_site/links/index.html" ]; then
-            echo "OK: _site/links/index.html (paginated)"
-          else
-            echo "::error::Missing links page (expected _site/links.html or _site/links/index.html)"
+          if [ -f "_site/blog/index.html" ]; then
+            echo "::error::_site/blog/index.html should not exist (trailing-slash /blog/)"
             missing=1
           fi
 
@@ -273,40 +266,8 @@ jobs:
             echo "OK: singleton tag pages still pruned"
           fi
 
-          posts_page=""
-          if [ -f "_site/posts.html" ]; then
-            posts_page="_site/posts.html"
-            echo "OK: _site/posts.html"
-          elif [ -f "_site/posts/index.html" ]; then
-            posts_page="_site/posts/index.html"
-            echo "OK: _site/posts/index.html (paginated)"
-          else
-            echo "::error::Missing posts page (expected _site/posts.html or _site/posts/index.html)"
-            missing=1
-          fi
-
-          if [ -n "$posts_page" ]; then
-            if grep -q 'class="links-year"' "$posts_page"; then
-              echo "::error::$posts_page should not use the /links year grouping"
-              missing=1
-            fi
-            if ! grep -q 'class="stream-post__title"' "$posts_page"; then
-              echo "::error::$posts_page should show full post titles"
-              missing=1
-            fi
-            if ! grep -q 'class="read-more"' "$posts_page"; then
-              echo "::error::$posts_page should include Read more links to permalinks"
-              missing=1
-            fi
-          fi
-
-          blog_page=""
-          if [ -f "_site/blog.html" ]; then
-            blog_page="_site/blog.html"
-          elif [ -f "_site/blog/index.html" ]; then
-            blog_page="_site/blog/index.html"
-          fi
-          if [ -n "$blog_page" ]; then
+          blog_page="_site/blog.html"
+          if [ -f "$blog_page" ]; then
             if grep -q 'class="stream-post__body"' "$blog_page"; then
               echo "::error::$blog_page should excerpt posts, not render full bodies"
               missing=1
@@ -315,40 +276,56 @@ jobs:
               echo "::error::$blog_page should include Read more links on post entries"
               missing=1
             fi
+            if grep -q 'feed-filter' "$blog_page"; then
+              echo "::error::$blog_page should not include the All/Posts/Links filter"
+              missing=1
+            fi
           fi
 
-          for feed in feed.xml posts.xml links.xml; do
-            if [ ! -f "_site/$feed" ]; then
-              echo "::error::Missing feed: _site/$feed"
+          for stale in posts.xml links.xml posts/index.html links/index.html; do
+            if [ -f "_site/$stale" ]; then
+              echo "::error::Stale feed or index should be gone: _site/$stale"
               missing=1
-            else
-              echo "OK: _site/$feed"
             fi
           done
 
-          if [ -f "_site/links.xml" ]; then
-            if ! grep -q 'https://en.wikipedia.org/wiki/RSS' _site/links.xml; then
-              echo "::error::links.xml should guid/link the Wikipedia fixture URL"
-              missing=1
-            fi
-            # Body-only phrase (not in excerpt). Avoid apostrophes: the
-            # fixture uses a curly quote and Kramdown may emit &rsquo;.
-            if ! grep -q "dedicated links feed" _site/links.xml; then
-              echo "::error::links.xml should include full link body content"
-              missing=1
-            fi
-            if grep -q '>Permalink</a>' _site/links.xml _site/feed.xml; then
-              echo "::error::RSS feeds should use a permalink glyph, not the word Permalink"
-              missing=1
-            fi
-            if grep -q 'link-card' _site/links.xml; then
-              echo "::error::links.xml must not include URL card markup"
-              missing=1
-            fi
+          if [ ! -f "_site/feed.xml" ]; then
+            echo "::error::Missing feed: _site/feed.xml"
+            missing=1
+          else
+            echo "OK: _site/feed.xml"
             if grep -q 'link-card' _site/feed.xml; then
               echo "::error::feed.xml must not include URL card markup"
               missing=1
             fi
+            if grep -q '>Permalink</a>' _site/feed.xml; then
+              echo "::error::RSS should use a permalink glyph, not the word Permalink"
+              missing=1
+            fi
+          fi
+
+          if [ -f "_site/posts.html" ]; then
+            if grep -q 'Redirecting' _site/posts.html && grep -q '/blog' _site/posts.html; then
+              echo "OK: _site/posts.html redirects to /blog"
+            else
+              echo "::error::_site/posts.html should redirect to /blog"
+              missing=1
+            fi
+          fi
+          if [ -f "_site/links.html" ]; then
+            if grep -q 'Redirecting' _site/links.html && grep -q '/blog' _site/links.html; then
+              echo "OK: _site/links.html redirects to /blog"
+            else
+              echo "::error::_site/links.html should redirect to /blog"
+              missing=1
+            fi
+          fi
+
+          if [ -f "_site/categories/links.html" ] || [ -f "_site/categories/links/index.html" ]; then
+            echo "OK: link posts have a links category archive"
+          else
+            echo "::error::Expected /categories/links for layout: link posts"
+            missing=1
           fi
 
           if [ -f "_site/build-errors.log" ]; then
