@@ -792,20 +792,6 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   text-decoration: underline;
 }
 
-.feed-filter {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35em 0.5em;
-  margin: 0 0 var(--space-6);
-  font-family: var(--font-ui);
-  font-size: var(--type-sm);
-}
-.feed-filter a[aria-current="page"] {
-  color: var(--color-fg);
-  font-weight: 600;
-  text-decoration: none;
-}
-
 .stream-post__title {
   font-size: var(--type-lg);
   font-weight: 400;

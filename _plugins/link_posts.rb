@@ -29,6 +29,12 @@ module Jekyll
       doc.data["layout"] = "link"
       doc.data["type"] = "link"
 
+      cats = Array(doc.data["categories"]).map(&:to_s)
+      unless cats.any? { |c| c.downcase == "links" }
+        cats << "links"
+        doc.data["categories"] = cats
+      end
+
       raw = doc.data["url"].to_s
       if blank?(raw)
         BuildErrors.record(site, doc.relative_path, "`url` is required on link posts")
@@ -237,4 +243,5 @@ end
 
 Jekyll::Hooks.register :site, :post_read do |site|
   site.posts.docs.each { |post| Jekyll::LinkPosts.prepare_post!(site, post) }
+  Jekyll::NormalizeTags.reset_caches!(site) if defined?(Jekyll::NormalizeTags)
 end

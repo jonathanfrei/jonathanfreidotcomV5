@@ -104,7 +104,7 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
   and a public `http(s)` `url:`. Permalink is the same as every other post:
   `/:year/:month/:day/:title`.
 - Required front matter: `title`, `url`, `date`, `layout: link`. Optional:
-  `excerpt`, `tags`, Markdown body, `card`.
+  `excerpt`, `tags`, Markdown body, `card`. Category defaults to `links`.
 - Permalink pages are minimal: date (linked to the permalink), then an
   outbound `→` on the first line of the body, then tags and an on-site URL
   card. No visible title/`h1`. `title` is still used for RSS and document
@@ -118,13 +118,13 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
   other hotlinked assets.
 - A bad `url:` is skipped for the card and logged to `_site/build-errors.log`.
   The rest of the site still builds.
-- Archives: `/blog` (all posts, including links), `/posts` (essays only),
-  `/links` (links only). Posts on `/blog` and `/posts` show the title, date,
-  tags, reading time, a 2–3 paragraph excerpt, and a Read more link. Link
-  tags are ordinary post tags on `/tags/:name`. Paginated lists use 50 entries.
-- Feeds: `/feed.xml` (mixed; link items `<link>`/`<guid>` the external URL),
-  `/posts.xml` (essays only), `/links.xml` (links only). All three emit full
-  content. Link items use `#` for the on-site permalink in RSS only.
+- The main feed is `/blog` (essays and links mixed, 50 per page). There is
+  no separate `/posts` or `/links` index; those URLs redirect to `/blog`.
+  Essays on `/blog` show title, date, tags, reading time, a 2–3 paragraph
+  excerpt, and Read more. Link entries hide the title and keep `→` on the
+  first line. Link tags are ordinary post tags on `/tags/:name`.
+- Feed: `/feed.xml` (mixed; link items `<link>`/`<guid>` the external URL;
+  full content). Link items use `#` for the on-site permalink in RSS only.
 - Example:
 
   ```yaml

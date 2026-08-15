@@ -27,8 +27,8 @@ end
 
 Liquid::Template.register_filter(Jekyll::ContentFilters)
 
-# Posts render before pages. Stash a list blurb so /blog and /posts do not
-# walk full converted HTML through extended_excerpt on every list item.
+# Posts render before pages. Stash a list blurb so /blog does not walk
+# full converted HTML through extended_excerpt on every list item.
 Jekyll::Hooks.register :documents, :post_render do |doc|
   next unless doc.respond_to?(:collection) && doc.collection&.label == "posts"
   next if doc.data["layout"].to_s == "link"

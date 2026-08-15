@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-# Paginated blended /blog stream and helpers for other 20-item lists (#186).
+# Paginated /blog stream. Page 1 uses permalink /blog (blog.html, no
+# trailing slash). Later pages are /blog/page/N/ (directory + index.html).
 module Jekyll
   module StreamPagination
     module_function
@@ -64,12 +65,9 @@ module Jekyll
     def generate(site)
       per = StreamPagination.per_page(site)
       posts = site.posts.docs.sort_by(&:date).reverse
-      essays = posts.reject { |doc| Jekyll::LinkPosts.link_post?(doc) }
-      links = posts.select { |doc| Jekyll::LinkPosts.link_post?(doc) }
-      # /blog uses stock paginate-v2. /posts and /links need a layout
-      # filter, which paginate-v2 cannot do, so they paginate here.
-      paginate_stream!(site, "/posts", essays, per)
-      paginate_stream!(site, "/links", links, per)
+      # paginate-v2 forces a trailing slash on page 1. Paginate /blog here
+      # so the first page stays /blog (blog.html).
+      paginate_stream!(site, "/blog", posts, per)
     end
 
     def paginate_stream!(site, base, items, per)
