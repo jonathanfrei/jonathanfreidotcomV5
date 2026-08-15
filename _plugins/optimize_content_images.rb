@@ -12,7 +12,8 @@ require "uri"
 #
 # Runs after Markdown → HTML (post_render). Applies to:
 #   - Archive media (S3 via media.jonathanfrei.com, or local /media/)
-#   - Site assets under /assets/ (served via GitHub Pages + Cloudflare)
+#   - New post photos on S3 (https://media.jonathanfrei.com/assets/img/…)
+#   - Site chrome under /assets/ (served via GitHub Pages + Cloudflare)
 #   - Same-origin absolute URLs for this site
 #   - Hotlinked third-party images (http/https) when optimize.hotlink is on (#116)
 #
@@ -30,14 +31,20 @@ require "uri"
 # archive image referenced across many posts is only opened once.
 module Jekyll
   module OptimizeContentImages
-    # Own images: S3 archive media, local /media/, site /assets/, or same-origin site URL.
-    # S3 paths: media.jonathanfrei.com/v{2,3}-archive/media/… (#170)
+    # Own images: S3 archive media, new post photos on S3 /assets/img/,
+    # local /media/, in-repo /assets/ chrome, or same-origin site URL.
+    # S3: media.jonathanfrei.com/v{2,3}-archive/media/… (#170)
+    #      media.jonathanfrei.com/assets/img/… (upload-worker)
     OWN_MEDIA = %r{
       \A
       (?:
         https?://media\.jonathanfrei\.com/v[123]-archive/media/
         |
+        https?://media\.jonathanfrei\.com/assets/img/
+        |
         https?://s3\.us-east-1\.amazonaws\.com/media\.jonathanfrei\.com/v[123]-archive/media/
+        |
+        https?://s3\.us-east-1\.amazonaws\.com/media\.jonathanfrei\.com/assets/img/
         |
         https?://(?:www\.)?jonathanfrei\.com/(?:assets/|media/)
         |

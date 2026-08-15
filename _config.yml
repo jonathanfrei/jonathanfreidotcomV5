@@ -126,7 +126,7 @@ jekyll-archives:
 # See issues #68 (offload), #170 (S3).
 #
 # Image optimization (wsrv.nl WebP + srcset) applies to:
-#   - Own site images (archive media + /assets/) — issue #90
+#   - Own site images (archive media + S3 /assets/img/ + in-repo /assets/) — issue #90
 #   - Hotlinked third-party images in post HTML — issue #116
 archive_media:
   mode: auto
