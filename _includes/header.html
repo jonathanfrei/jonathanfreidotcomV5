@@ -5,7 +5,7 @@
     </a>
     <nav class="site-nav" aria-label="Main">
       <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
-      <a href="{{ '/blog' | relative_url }}"{% if page.url == '/blog' or page.url == '/blog.html' or page.url contains '/blog/page/' or page.url == '/posts' or page.url == '/posts.html' or page.url contains '/posts/page/' or page.url == '/links' or page.url == '/links.html' or page.url contains '/links/page/' or page.layout == 'post' or page.layout == 'link' %} aria-current="page"{% endif %}>Blog</a>
+      <a href="{{ '/blog' | relative_url }}"{% if page.url == '/blog' or page.url == '/blog.html' or page.url contains '/blog/page/' or page.layout == 'post' or page.layout == 'link' %} aria-current="page"{% endif %}>Blog</a>
       <a href="{{ '/archive' | relative_url }}"{% if page.url == '/archive' or page.url == '/archive.html' or page.url contains '/archive/' %} aria-current="page"{% endif %}>Archive</a>
       <a href="{{ '/about' | relative_url }}"{% if page.url == '/about' or page.url == '/about.html' %} aria-current="page"{% endif %}>About</a>
     </nav>
