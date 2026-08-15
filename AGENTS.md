@@ -14,7 +14,8 @@ This is a personal site and blog: **Jekyll 4.x → GitHub Actions → GitHub Pag
 | Design | Brand tokens in `_includes/main.css` (Paper/Ink/Signature Blue #145); `editorial.css` for long-form (#144) |
 | Deploy | Push to `main` runs a single full `deploy.yml` (manual `workflow_dispatch` also available). Archive media stays on **S3**, not the Pages artifact. |
 | Archive media | Served from **S3** (`media.jonathanfrei.com/v{2,3}-archive/media/…`). See `archive_media` in `_config.yml` and issues #68 / #170. In-repo media trees may be removed after migration. |
-| Image perf | `_plugins/optimize_content_images.rb` optimizes **all own site images** (archive media + `/assets/`): dimensions, lazy/LCP hints, responsive WebP via wsrv.nl (full-res on `data-full-src`). See issue #90. |
+| New post photos | S3 `https://media.jonathanfrei.com/assets/img/…` via the factory upload worker. Absolute CDN URLs in Markdown. Do **not** commit binaries or use site-relative `/assets/img/` for new photos (that path is favicon/profile on Pages). |
+| Image perf | `_plugins/optimize_content_images.rb` optimizes **all own site images** (archive media + S3 `/assets/img/` + in-repo `/assets/`): dimensions, lazy/LCP hints, responsive WebP via wsrv.nl (full-res on `data-full-src`). See issue #90. |
 
 ### Directory map
 
@@ -77,7 +78,7 @@ tags: [tag-one, tag-two]
 # categories: [notes]
 description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 # excerpt: "Optional list blurb; falls back to auto-excerpt."
-# image: /assets/img/posts/example.jpg   # OG/Twitter when sharing
+# image: https://media.jonathanfrei.com/assets/img/2026/2026-08-15-093000-example.jpg
 # author: Jonathan Frei                  # only override site default when needed
 ---
 ```
@@ -263,8 +264,8 @@ Production depends on external services for media (configured in `_config.yml` `
 
 | Service | Role | Config key |
 | --- | --- | --- |
-| **S3 / media.jonathanfrei.com** | Archive media binaries (`v{2,3}-archive/media/…`) — not in the Pages artifact (#170) | `archive_media.cdn_base` |
-| **wsrv.nl** | On-the-fly resize + WebP for all own-site images (archive + `/assets/`); full-res kept on `data-full-src` | `archive_media.optimize.proxy` |
+| **S3 / media.jonathanfrei.com** | Archive binaries (`v{2,3}-archive/media/…`) and new post photos (`assets/img/…`) — not in the Pages artifact (#170) | `archive_media.cdn_base` |
+| **wsrv.nl** | On-the-fly resize + WebP for own-site images (archive + S3 `/assets/img/` + in-repo `/assets/`); full-res on `data-full-src` | `archive_media.optimize.proxy` |
 | **jsDelivr** | Fontsource font files only (not archive media) | `@font-face` in `main.css` |
 
 - The site has no fallback if S3 or wsrv is unavailable (images break or fall back to original `src` depending on browser).
@@ -293,6 +294,7 @@ Production depends on external services for media (configured in `_config.yml` `
 | Task | Where |
 | --- | --- |
 | New post | `_posts/YYYY-MM-DD-slug.md` |
+| New post photo | Upload via factory `tools/upload-worker/`; paste `![alt](https://media.jonathanfrei.com/assets/img/…)` — never commit the file |
 | New link post | `_posts/YYYY-MM-DD-slug.md` with `layout: link` and `url:` |
 | Draft | `_x7k9p/` |
 | Nav / header | `_includes/header.html` |
@@ -331,6 +333,7 @@ Before finishing a change that touches build, layouts, or CSS:
 
 - Do not add heavy front-end frameworks, bundlers, or CMS layers unless requested
 - Do not put secrets or personal tokens in the repo
+- Do not commit new post photographs; they live on S3 under `assets/img/`
 - Do not “fix” downloads by inventing client-side routers; fix output paths (`.html` under clean URLs)
 - Do not expand scope into unrelated redesigns when asked for a small fix
 - Do not remove the AI/content footer note or contact masking patterns without being asked
