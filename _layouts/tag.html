@@ -4,6 +4,7 @@ layout: default
 {% comment %}
   Tag pages from jekyll-paginate-v2 autopages expose paginator.
   page.title is set to the configured title (e.g. "Tag: name").
+  List entries match /blog (#201).
 {% endcomment %}
 {% assign archive_name = page.tag | default: page.title | default: page.category %}
 {% if archive_name contains 'Tag: ' %}
@@ -14,21 +15,8 @@ layout: default
     <h1>Tag: {{ archive_name }}</h1>
   </header>
 
-  <ul class="post-list">
-    {% assign list_items = page.stream_items | default: paginator.posts | default: page.posts %}
-    {% for item in list_items %}
-      <li>
-        {% if item.layout == 'link' or item.type == 'link' %}
-          {% include link-entry.html entry=item %}
-        {% else %}
-          <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-          <div class="post-meta">
-            {% include post-date.html date=item.date url=item.url %}
-          </div>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
+  {% assign list_items = page.stream_items | default: paginator.posts | default: page.posts %}
+  {% include stream-list.html items=list_items %}
 
   {% include pagination.html %}
 

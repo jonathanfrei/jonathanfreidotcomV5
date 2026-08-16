@@ -124,6 +124,10 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
   Essays on `/blog` show title, date, tags, reading time, a 2–3 paragraph
   excerpt, and Read more. Link entries hide the title and keep `→` on the
   first line. Link tags are ordinary post tags on `/tags/:name`.
+- **List views match `/blog`** (`_includes/stream-list.html`, #201): month
+  archives (`/archive/YYYY/MM/`), tag pages (`/tags/:name`), and category
+  pages (`/categories/:name`) use the same post-entry / link-entry stream.
+  Do not regress those pages to title+date-only rows.
 - Feed: `/feed.xml` (mixed; link items `<link>`/`<guid>` the external URL;
   full content). Link items use `#` for the on-site permalink in RSS only.
 - Example:
@@ -160,7 +164,8 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 - Inline links inside paragraphs are **not** transformed.
 - Embed HTML uses `markdown="0"` and no inner indentation so Kramdown `parse_block_html` does not turn iframes into highlighter blocks (#156).
 - Imgur gallery SEO slugs (`/gallery/title-hash`) resolve to the trailing image hash (#157).
-- Hotlinked third-party images are rewritten through wsrv.nl in production (`archive_media.optimize.hotlink`, #116).
+- Hotlinked third-party images are rewritten through wsrv.nl in production (`archive_media.optimize.hotlink`, #116). HTTPS-only hosts such as Springer need `ssl:` in the wsrv `url` param (wsrv defaults to http and 404s). If the proxy still fails, `data-full-src` plus a capture-phase error listener falls back to the original (#203).
+- Standalone article images fill the measure; on viewports ≤40em they full-bleed past `.container` padding (#202, #203). Do not apply `width: 100%` to every `.prose img` (the typography favicon specimen must stay small).
 
 ### Static HTML pages (`editorial/`, extensible)
 
@@ -323,7 +328,7 @@ Before finishing a change that touches build, layouts, or CSS:
 
 1. [ ] Permalinks have **no** trailing slash for HTML pages (`/about` not `/about/`). Link posts use the same `/:year/:month/:day/:title` shape as essays.
 2. [ ] `main.css` inlined on top-level + recent posts; archive/deep nav link `/assets/css/core.css`; `code.css` only on code pages; no `../` includes
-3. [ ] Tags on `/blog` still look like chips (not oversized title links)
+3. [ ] Tags on `/blog` still look like chips (not oversized title links). Month/tag/category lists use the same stream entries as `/blog` (#201).
 4. [ ] Drafts stay out of `_posts/` until intentional publish
 5. [ ] If workflow changed, confirm Actions majors and `paths-ignore` still make sense
 6. [ ] Prefer a green deploy run after merge/push to `main`

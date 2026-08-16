@@ -1,0 +1,19 @@
+{%- comment -%}
+  Shared post+link stream used by /blog and the archive, tag, and
+  category list views (#201). Pass items= the page of documents.
+{%- endcomment -%}
+{%- assign items = include.items -%}
+<ul class="post-list stream-list">
+  {%- for post in items -%}
+    <li>
+      {%- if post.layout == 'link' or post.type == 'link' -%}
+        {% include link-entry.html entry=post %}
+      {%- else -%}
+        {% include post-entry.html entry=post %}
+      {%- endif -%}
+    </li>
+  {%- endfor -%}
+</ul>
+{%- if items.size == 0 -%}
+<p>No posts published yet.</p>
+{%- endif -%}
