@@ -1,7 +1,7 @@
 /* =========================================================
    jonathanfrei.com — design system (single source of truth)
-   Inlined in default.html. Feature sheets ship only when needed
-   (code, search, embeds, pagination — see optional-css.html, #165).
+   Served as /assets/css/core.css on every page. Feature sheets ship
+   only when needed (code, search, embeds, pagination — optional-css.html, #165).
    Keep everything under _includes/.
    ========================================================= */
 

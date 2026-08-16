@@ -1,25 +1,7 @@
 {% comment %}
-  Inline main.css on front-of-house pages; link /assets/css/core.css on
-  archive permalinks and deep nav so those files stay small at build time.
-  Front of house: top-level pages, editorial, recent (non-archive) posts.
-  Linked: _posts/v{1,2,3}-archive, /tags/:name, /categories/:name,
-  /archive/YYYY/MM/, and any …/page/N/.
+  Shared design system on every page. Linked CSS matches inlined
+  performance here (Cloudflare cache) and keeps HTML small. Feature
+  sheets stay content-gated in optional-css.html (#165).
 {% endcomment %}
-{%- assign css_inline = true -%}
-{%- assign css_path = page.path | default: "" -%}
-{%- assign css_url = page.url | default: "" -%}
-{%- if css_path contains "v1-archive" or css_path contains "v2-archive" or css_path contains "v3-archive" -%}
-  {%- assign css_inline = false -%}
-{%- elsif css_url contains "/page/" or css_url contains "/tags/" or css_url contains "/categories/" -%}
-  {%- assign css_inline = false -%}
-{%- elsif css_url contains "/archive/19" or css_url contains "/archive/20" -%}
-  {%- assign css_inline = false -%}
-{%- endif -%}
-{%- if css_inline -%}
-<style>
-{% include main.css %}
-</style>
-{%- else -%}
 <link rel="preload" href="{{ '/assets/css/core.css' | relative_url }}" as="style">
 <link rel="stylesheet" href="{{ '/assets/css/core.css' | relative_url }}">
-{%- endif -%}

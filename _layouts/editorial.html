@@ -3,14 +3,13 @@
 <head>
   {% include head.html %}
   {% comment %}
-    Editorial pages (#144): site design system + editorial component CSS.
+    Editorial pages (#144): shared core.css plus editorial component sheet.
     Brand tokens from main.css (#145). Feature sheets gated like default (#165).
     No narrow .container wrapper — measure is controlled by component classes.
   {% endcomment %}
-  <style>
-{% include main.css %}
-{% include editorial.css %}
-  </style>
+  {% include site-css.html %}
+  <link rel="preload" href="{{ '/assets/css/editorial.css' | relative_url }}" as="style">
+  <link rel="stylesheet" href="{{ '/assets/css/editorial.css' | relative_url }}">
   {% include optional-css.html %}
 </head>
 <body>

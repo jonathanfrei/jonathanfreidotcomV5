@@ -75,8 +75,8 @@
 {% endif %}
 
 {% comment %}
-  CSS: main.css inlined in layouts; feature sheets (code/search/embeds/pagination)
-  only when needed (#165). Full combined sheet at /assets/css/main.css for tooling.
+  CSS: /assets/css/core.css is linked from site-css.html. Feature sheets
+  (code/search/embeds/pagination) only when needed (#165).
 {% endcomment %}
 
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
