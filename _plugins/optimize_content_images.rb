@@ -17,7 +17,8 @@ require "uri"
 #   - Same-origin absolute URLs for this site
 #   - Hotlinked third-party images (http/https) when optimize.hotlink is on (#116)
 #
-# Skips: data: URLs, SVG/GIF, already-proxied wsrv.nl URLs, non-image schemes.
+# Skips transform (wsrv) for: data: URLs, SVG/GIF, already-proxied wsrv.nl
+# URLs, non-image schemes. GIFs still get loading=lazy (never LCP/eager).
 #
 # Config (under archive_media.optimize in _config.yml — shared with archive CDN):
 #   enabled: auto|true|false   # auto → on in production
@@ -284,6 +285,10 @@ module Jekyll
     end
 
     def optimizable?(site, src, tag_attrs = {})
+      # GIFs are never proxied, but they still need loading=lazy so an
+      # 11MB animation is not the LCP candidate or an eager feed asset.
+      return true if gif?(src)
+
       return true if own_media?(src)
 
       cfg = config(site)
@@ -299,7 +304,11 @@ module Jekyll
     end
 
     def animated_or_svg?(src)
-      src.to_s.match?(/\.(gif|svg)(?:\?|$)/i)
+      src.to_s.match?(/\.(gif|svg)(?:\?|#|$)/i)
+    end
+
+    def gif?(src)
+      src.to_s.match?(/\.gif(?:\?|#|$)/i)
     end
 
     def strip_protocol(url)
@@ -419,7 +428,13 @@ module Jekyll
         tag_attrs["referrerpolicy"] = "no-referrer" unless tag_attrs.key?("referrerpolicy")
       end
 
-      if index.zero?
+      # Animated GIFs are often multi-megabyte. Never mark them eager/LCP,
+      # including when they are the first image on the post or a list page.
+      is_gif = gif?(src)
+      if is_gif
+        tag_attrs["loading"] = "lazy"
+        tag_attrs.delete("fetchpriority")
+      elsif index.zero?
         tag_attrs["loading"] = "eager"
         tag_attrs["fetchpriority"] = "high"
       else
@@ -449,10 +464,10 @@ module Jekyll
 
         # Responsive LCP preload must share srcset/sizes with <img> or the
         # browser may preload 1100w and still fetch 768w for display (#173).
-        lcp_candidate = lcp_descriptor(tag_attrs) if index.zero?
+        lcp_candidate = lcp_descriptor(tag_attrs) if index.zero? && !is_gif
       else
         tag_attrs["data-img-opt"] = "1"
-        lcp_candidate = { "href" => origin } if index.zero?
+        lcp_candidate = { "href" => origin } if index.zero? && !is_gif
       end
 
       order = %w[
