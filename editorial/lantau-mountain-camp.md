@@ -191,6 +191,10 @@ Life inside the cabin preserved smaller habits of self-sufficiency. My mother co
 
 </div>
 
+<div class="editorial-spread" markdown="1">
+
+<div class="content-container" markdown="1">
+
 The community that built that life nearly lost it during the Second World War. The camp closed under the Japanese occupation. Most of the buildings were heavily damaged, and reinforced concrete roofs were broken apart for the steel inside. Only two cabins reportedly escaped serious destruction because guerrillas used them as lookout posts. When owners returned after the war, the damage was discouraging. One early inspection party found Kennedy-Skipton at the ruined Mess Hall, already heating water for coffee over a fire. Repairs proceeded cabin by cabin while Hong Kong itself was rebuilding. The seams near the tops of many walls still show where new concrete met the prewar stone.
 
 The postwar decades restored the summer camp. Owners were encouraged to rent their cabins during the season, bringing church groups and other vacationers into its communal routines. Cabins adopted numbers in 1956, replacing or supplementing the names of owners and missionary societies. The pool was maintained, the Mess operated, carriers moved supplies, and the association continued to manage the roads, water, common buildings, rentals, and rules.
@@ -201,7 +205,9 @@ The year-round caretaker service ended in 1973. Major missionary participation d
 
 The surrounding land was changing too. Lantau South Country Park protects the island’s rugged southern mountains and coast, while the camp sits where the northern and southern protected landscapes meet around the high ridge. The creation of Lantau North and South Country Parks in 1978 gave official protection to much of the landscape while leaving the privately held camp as the Yi Tung Shan enclave. The seventy-kilometer Lantau Trail opened in 1984, incorporating paths that had once existed primarily to serve the cabins. The camp became easier to encounter without becoming easier to inhabit.
 
-<div class="timeline" markdown="1">
+</div>
+
+<div class="timeline timeline--compact" markdown="1">
 
 <div class="timeline-item" markdown="1">
 
@@ -260,6 +266,8 @@ The caretaker service ends, missionary participation declines, and the organized
 ### A living heritage landscape
 
 Research, restoration, ecological monitoring, and visitor education attempt to protect a private camp inside a public landscape.
+
+</div>
 
 </div>
 
