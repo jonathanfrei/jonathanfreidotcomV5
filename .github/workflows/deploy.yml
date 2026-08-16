@@ -228,28 +228,28 @@ jobs:
             echo "OK: _site/assets/css/core.css"
           fi
 
-          # Front-of-house pages keep inlined main.css; archive + deep nav link it.
-          if [ -f _site/blog.html ] && grep -q '/assets/css/core.css' _site/blog.html; then
-            echo "::error::_site/blog.html should inline main.css, not link core.css"
-            missing=1
-          fi
-          archive_sample=""
-          if [ -f _site/2009/08/29/getting-started.html ]; then
-            archive_sample="_site/2009/08/29/getting-started.html"
-          fi
-          if [ -n "$archive_sample" ]; then
-            if grep -q '/assets/css/core.css' "$archive_sample"; then
-              echo "OK: archive permalink links core.css"
+          # Every page links /assets/css/core.css (PR #208). Do not inline main.css.
+          for sample in _site/blog.html _site/index.html _site/about.html \
+            _site/2009/08/29/getting-started.html _site/blog/page/2/index.html; do
+            if [ ! -f "$sample" ]; then
+              continue
+            fi
+            if grep -q '/assets/css/core.css' "$sample"; then
+              echo "OK: $sample links core.css"
             else
-              echo "::error::$archive_sample should link /assets/css/core.css"
+              echo "::error::$sample should link /assets/css/core.css"
               missing=1
             fi
-          fi
-          if [ -f _site/blog/page/2/index.html ]; then
-            if grep -q '/assets/css/core.css' _site/blog/page/2/index.html; then
-              echo "OK: /blog/page/2 links core.css"
+            if grep -q -- '--brand-paper:' "$sample"; then
+              echo "::error::$sample should not inline main.css"
+              missing=1
+            fi
+          done
+          if [ -f _site/editorial/design-system.html ]; then
+            if grep -q '/assets/css/editorial.css' _site/editorial/design-system.html; then
+              echo "OK: editorial page links editorial.css"
             else
-              echo "::error::_site/blog/page/2/index.html should link /assets/css/core.css"
+              echo "::error::_site/editorial/design-system.html should link /assets/css/editorial.css"
               missing=1
             fi
           fi
