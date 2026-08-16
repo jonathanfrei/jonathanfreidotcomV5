@@ -6,4 +6,4 @@ tags: [""]
 
 With iOS Shortcuts, iA Writer, and Working Copy, I can quickly create short posts to push to the site.
 
-Testing the updated workflow.
+Testing the updated workflow. 
