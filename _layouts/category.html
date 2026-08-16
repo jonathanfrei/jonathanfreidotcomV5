@@ -3,7 +3,7 @@ layout: default
 ---
 {% comment %}
   Category pages from jekyll-paginate-v2 autopages (#93).
-  Mirrors tag.html structure for consistency.
+  List entries match /blog (#201).
 {% endcomment %}
 {% assign archive_name = page.category | default: page.title %}
 {% if archive_name contains 'Category: ' %}
@@ -14,17 +14,8 @@ layout: default
     <h1>Category: {{ archive_name }}</h1>
   </header>
 
-  <ul class="post-list">
-    {% assign list_posts = paginator.posts | default: page.posts %}
-    {% for post in list_posts %}
-      <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <div class="post-meta">
-          {% include post-date.html date=post.date url=post.url %}
-        </div>
-      </li>
-    {% endfor %}
-  </ul>
+  {% assign list_posts = paginator.posts | default: page.posts %}
+  {% include stream-list.html items=list_posts %}
 
   {% include pagination.html %}
 

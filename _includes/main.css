@@ -632,6 +632,18 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   border-radius: var(--radius);
 }
 
+/* Standalone article images fill the measure (#203). Small figure
+   specimens (e.g. the typography favicon) stay intrinsic-sized. */
+.prose p:has(> img:only-child) img,
+.prose p:has(> a:only-child > img:only-child) img {
+  display: block;
+  width: 100%;
+}
+
+.prose p:has(> a:only-child > img:only-child) > a {
+  display: block;
+}
+
 .prose figcaption {
   font-family: var(--font-mono);
   font-size: var(--type-sm);
@@ -1103,5 +1115,18 @@ span.tag:hover {
 
   .site-main {
     padding-block: var(--space-6);
+  }
+
+  /* Full-bleed standalone images: cancel .container inline padding (#202). */
+  .prose p:has(> img:only-child),
+  .prose p:has(> a:only-child > img:only-child) {
+    width: calc(100% + (2 * var(--space-4)));
+    max-width: none;
+    margin-inline: calc(-1 * var(--space-4));
+  }
+
+  .prose p:has(> img:only-child) img,
+  .prose p:has(> a:only-child > img:only-child) img {
+    border-radius: 0;
   }
 }

@@ -24,7 +24,7 @@ require "uri"
 #   proxy: "https://wsrv.nl"
 #   quality: 85                # WebP quality (high; visually near-lossless for photos)
 #   widths: [480, 768, 1100]   # display widths for srcset (retina covered by 1100)
-#   sizes: "(max-width: 40em) 92vw, 36em"  # match --measure in main.css
+#   sizes: "(max-width: 40em) 100vw, 36em"  # full-bleed mobile (#202); 36em = --measure
 #   hotlink: true              # proxy third-party hotlinked images via wsrv (#116)
 #
 # Performance: dimensions and path lookups are memoized per build so the same
@@ -59,13 +59,18 @@ module Jekyll
       "proxy" => "https://wsrv.nl",
       "quality" => 85,
       "widths" => [480, 768, 1100],
-      # Match .prose / --measure (36em). Mobile: nearly full viewport.
-      "sizes" => "(max-width: 40em) 92vw, 36em",
+      # Match .prose / --measure (36em). Mobile: full-bleed (#202).
+      "sizes" => "(max-width: 40em) 100vw, 36em",
       "hotlink" => true
     }.freeze
 
     # Already going through our image CDN/proxy — do not re-proxy.
     PROXY_HOST = %r{\Ahttps?://(?:wsrv\.nl|images\.weserv\.nl)/}i.freeze
+
+    # wsrv defaults to http when the scheme is omitted. Some origins
+    # (Springer) 404 on that http fetch; force ssl: for those (#203).
+    # Do not apply globally — Wikimedia 404s when ssl: is forced.
+    PROXY_SSL_HOSTS = %r{\Ahttps://(?:[^/]+\.)?(?:springernature\.com|springer\.com)/}i.freeze
 
     # Per-build memoization: same file is referenced across many posts.
     @dims_cache = {}
@@ -298,7 +303,10 @@ module Jekyll
     end
 
     def strip_protocol(url)
-      url.sub(%r{\Ahttps?://}i, "")
+      s = url.to_s
+      return s.sub(%r{\Ahttps://}i, "ssl:") if s.match?(PROXY_SSL_HOSTS)
+
+      s.sub(%r{\Ahttps?://}i, "")
     end
 
     # Ensure origin is an absolute https URL so wsrv.nl can fetch it.
@@ -405,6 +413,12 @@ module Jekyll
 
       tag_attrs["decoding"] = "async" unless tag_attrs.key?("decoding")
 
+      # Hotlinked originals (and wsrv fallbacks) should not send a
+      # site referrer; some hosts 403 otherwise (#203).
+      unless is_own
+        tag_attrs["referrerpolicy"] = "no-referrer" unless tag_attrs.key?("referrerpolicy")
+      end
+
       if index.zero?
         tag_attrs["loading"] = "eager"
         tag_attrs["fetchpriority"] = "high"
@@ -443,7 +457,7 @@ module Jekyll
 
       order = %w[
         src srcset sizes width height alt title class loading decoding
-        fetchpriority data-full-src data-img-opt
+        fetchpriority referrerpolicy data-full-src data-img-opt
       ]
       ["<img #{serialize_attrs(tag_attrs, order)}>", lcp_candidate]
     end
