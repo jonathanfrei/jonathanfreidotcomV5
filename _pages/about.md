@@ -37,7 +37,7 @@ This is version 5 of jonathanfrei.com.
 
 It is built with Jekyll 4.x. The source lives in a public GitHub repository. Builds and deploys are handled by GitHub Actions and published to GitHub Pages. The live site is served and cached through Cloudflare.
 
-The design is intentionally minimal: mobile-first, system dark mode via `prefers-color-scheme`, semantic HTML, skip links, focus styles, and reduced-motion support. Design-system CSS is inlined for fast first paint; code-syntax styles load only on pages that need them. There are no trackers, no comment system, and no third-party scripts beyond what’s required to serve the pages.
+The design is intentionally minimal: mobile-first, system dark mode via `prefers-color-scheme`, semantic HTML, skip links, focus styles, and reduced-motion support. Design-system CSS is a shared stylesheet; code-syntax styles load only on pages that need them. There are no trackers, no comment system, and no third-party scripts beyond what’s required to serve the pages.
 
 Much of the coding and refinement for this version was done with Grok Build 4.5.
 
