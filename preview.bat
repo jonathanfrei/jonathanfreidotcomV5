@@ -9,10 +9,28 @@ set PORT=4000
 set URL=http://127.0.0.1:%PORT%/
 set IMAGE_OPTIMIZE=true
 
+rem Toggle: 1 = incremental rebuilds after the first build. 0 = full rebuilds.
+rem A command-line argument overrides this: incremental  or  full
+set INCREMENTAL=0
+if /I "%~1"=="incremental" set INCREMENTAL=1
+if /I "%~1"=="--incremental" set INCREMENTAL=1
+if /I "%~1"=="-I" set INCREMENTAL=1
+if /I "%~1"=="/I" set INCREMENTAL=1
+if /I "%~1"=="fast" set INCREMENTAL=1
+if /I "%~1"=="full" set INCREMENTAL=0
+if /I "%~1"=="--full" set INCREMENTAL=0
+
 echo.
 echo  jonathanfrei.com - local preview
 echo  Repo: %CD%
 echo  URL:  %URL%
+if "%INCREMENTAL%"=="1" (
+  echo  Mode: incremental - faster rebuilds after the first build.
+  echo        Run preview.bat full if lists, tags, or images look stale.
+) else (
+  echo  Mode: full build
+  echo        For faster rebuilds: preview.bat incremental
+)
 echo.
 echo  First build can take a couple of minutes. The browser
 echo  opens when the homepage is ready. Close this window
@@ -52,12 +70,15 @@ if errorlevel 1 (
   if errorlevel 1 goto fail
 )
 
+set JEKYLL_FLAGS=--host 127.0.0.1 --port %PORT% --open-url --livereload
+if "%INCREMENTAL%"=="1" set JEKYLL_FLAGS=%JEKYLL_FLAGS% --incremental
+
 echo Building and serving. IMAGE_OPTIMIZE=true so images match production.
 echo.
 
 rem call is required: bundle is a .bat, and running a .bat without call
 rem exits this script as soon as that .bat returns.
-call bundle exec jekyll serve --host 127.0.0.1 --port %PORT% --open-url --livereload
+call bundle exec jekyll serve %JEKYLL_FLAGS%
 if errorlevel 1 goto fail
 goto end
 
