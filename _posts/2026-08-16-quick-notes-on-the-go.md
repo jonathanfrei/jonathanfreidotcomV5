@@ -1,7 +1,7 @@
 ---
 title: "Quick notes on the go"
 date: 2026-08-16 07:53:15 -0400
-tags: [notes,tag2]
+tags: [notes,reopen save]
 published: false
 ---
 
