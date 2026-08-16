@@ -9,4 +9,4 @@ With iOS Shortcuts, iA Writer, and Working Copy, I can quickly create short post
 
 Testing the updated workflow.
 
-Fixed commit naming. 
+Fixed commit naming.
