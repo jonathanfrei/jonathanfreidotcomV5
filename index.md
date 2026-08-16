@@ -25,6 +25,25 @@ or reach me on X at <a href="https://x.com/jonathanfrei">@jonathanfrei</a> altho
 
 <h2 class="section-title">Recent posts and links</h2>
 
-{% include stream-list.html items=page.stream_items %}
+<ul class="post-list">
+  {% for post in site.posts limit:5 %}
+    <li>
+      {% if post.layout == 'link' %}
+        {% include link-entry.html entry=post %}
+      {% else %}
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <div class="post-meta">
+        {% include post-date.html date=post.date url=post.url format="%b %-d, %Y" %}
+      </div>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
 
-{% include pagination.html %}
+{% if site.posts.size > 5 %}
+<p class="more-posts post-nav">
+  <a href="{{ '/blog' | relative_url }}">More on the blog</a>
+</p>
+{% elsif site.posts.size == 0 %}
+<p class="post-meta">No posts or links yet.</p>
+{% endif %}
