@@ -20,7 +20,7 @@
 
   <main id="main" class="editorial-main">
     <div class="editorial-page">
-      <article class="editorial-article" itemscope itemtype="https://schema.org/Article">
+      <article class="editorial-article{% if page.editorial_class %} {{ page.editorial_class }}{% endif %}" itemscope itemtype="https://schema.org/Article">
         {% if page.title %}<meta itemprop="headline" content="{{ page.title | escape }}">{% endif %}
         {% if page.description %}<meta itemprop="description" content="{{ page.description | escape }}">{% endif %}
         {{ content }}

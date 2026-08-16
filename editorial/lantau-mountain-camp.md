@@ -2,6 +2,7 @@
 title: "The Camp Above Hong Kong"
 permalink: /editorial/lantau-mountain-camp
 layout: editorial
+editorial_class: editorial-article--sidebar
 description: "The history of Lantau Mountain Camp, from its origins as a missionary refuge in South China to its survival as a living heritage site above Hong Kong."
 ---
 
@@ -54,15 +55,11 @@ Lantau is the largest of those islands. At [148.4 square kilometers](https://www
 
 </div>
 
-<div class="full-bleed" markdown="1">
-
 <div class="figure" markdown="1">
 
 [![Black-and-white view of stone cabins scattered across the slopes of Lantau Mountain Camp in 1938](https://gwulo.com/sites/default/files/styles/extra_large_640x640_/public/thumbnails/image/img_4534_2.jpg?itok=V1RR4TyV "Stone cabins at Lantau Mountain Camp in 1938")](https://gwulo.com/media/35271 "Source: Huts at Lantau Mountain Camp — Gwulo")
 
 *Stone cabins scattered across the Lantau ridge in 1938. Photograph attributed to Raymond Smith; source: [Gwulo](https://gwulo.com/media/35271).*
-
-</div>
 
 </div>
 
@@ -84,7 +81,7 @@ The choice was partly a process of elimination. The desirable high ground on Hon
 
 Negotiations with the government covered land, building permits, access trails, water protection, and whether the area could be reserved for foreigners. The lots went to auction on Christmas Eve 1924. Prospective campers coordinated their bidding beforehand so they could secure the whole group. The earliest buyers included missionaries from Britain, Ireland, the United States, Canada, the Netherlands, Australia, and New Zealand, some purchasing in their own names and others through churches or missionary societies.
 
-<div class="quote" markdown="1">
+<div class="quote editorial-sidebar" markdown="1">
 
 > Water could be caught on the ridge, but food and people still had to climb to reach it.
 
@@ -100,7 +97,19 @@ Negotiations with the government covered land, building permits, access trails, 
 
 A Western-trained Chinese Presbyterian contractor directed construction. Stonecutters quarried blocks just below the summit. The mountain is built largely from hard volcanic rocks, including rhyolite and tuff, whose resistance to erosion helped preserve [Lantau’s high ridges and peaks](https://sslo.cedd.gov.hk/en/exploring-more/nature-conservation/geo-logs/on-the-hills/index.html). The cabins therefore rose from the geology beneath them. Cement was mixed on the mountain with local sand and stream water because hauling material to the ridge was so difficult that building there cost roughly three times as much as building below. Eleven cabins and a caretaker’s hut went up in 1925. The Mess Hall followed in 1928. More cabins appeared over the next several years on the slopes of Yi Tung Shan and nearer Sunset Peak. By 1934, the camp contained nineteen residential cabins, the Mess, a caretaker’s hut, an amah’s hut, and a swimming pool made by damming a mountain stream. Cabin 24, originally known as Dobson’s Hut, remains Hong Kong’s highest residential premises.
 
-<div class="figure" markdown="1">
+<div class="fact-box editorial-sidebar" markdown="1">
+
+**The original shelter**
+
+**Footprint:** about 18 × 16 feet<br>
+**Rooms:** no more than three<br>
+**Walls:** 12–16 inches of local stone<br>
+**Roof:** reinforced concrete<br>
+**Protection:** stout wooden shutters
+
+</div>
+
+<div class="figure editorial-sidebar" markdown="1">
 
 [![Two children playing outside a stone hut at Lantau Mountain Camp with the Tung Chung landscape behind them](https://gwulo.com/sites/default/files/styles/extra_large_640x640_/public/thumbnails/image/img_4550_2.jpg?itok=CM-1jvc3 "Children outside a Lantau Mountain Camp hut in 1939")](https://gwulo.com/media/35278 "Source: Playing outside a hut at Lantau Mountain Camp — Gwulo")
 
@@ -112,9 +121,17 @@ Arthur J. May, a Methodist preacher and mission architect, produced the original
 
 The cabins survived, but the objections were not entirely wrong. May had designed them around the habits of Luofushan, where families spent much of their time outdoors. Sunset Peak brought more wind, rain, cloud, and unstable weather. Some windows and doors faced the prevailing storms so badly that residents later recalled entering through windows because rain beat through the doors. Families enlarged the cabins piece by piece, adding storm entrances, lean-tos, kitchens, bunk rooms, toilets, and sitting rooms. The later walls were often only half as thick as the originals and proved adequate through many typhoons. Almost every cabin became an architectural record of correction: a simple common plan reshaped by weather and use.
 
+<div class="quote editorial-sidebar" markdown="1">
+
+> Almost every cabin became an architectural record of correction: a simple common plan reshaped by weather and use.
+
+— Architecture as accumulated experience
+
+</div>
+
 The interiors demanded similar improvisation. Beds were raised when needed and stored when the same space had to become a kitchen or dining room. Gear hung from ceiling hooks. Early mattresses were cloth ticks filled with rice straw. One [floor plan drawn by camp manager Carter Morgan](https://link.springer.com/article/10.1186/s43238-024-00170-z/figures/4) shows a dense arrangement of bunks, tables, storage, and small domestic spaces inside the thick stone shell.
 
-<div class="figure" markdown="1">
+<div class="figure editorial-sidebar" markdown="1">
 
 [![Hand-drawn floor plan of a Baptist cabin at Lantau Mountain Camp showing its compact rooms and furnishings](https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs43238-024-00170-z/MediaObjects/43238_2024_170_Fig4_HTML.png "Floor plan of the Baptist cabin at Lantau Mountain Camp")](https://link.springer.com/article/10.1186/s43238-024-00170-z/figures/4 "Source: Figure 4 in From Hermitage to Heritage?")
 
@@ -130,7 +147,7 @@ The interiors demanded similar improvisation. Beds were raised when needed and s
 
 What looked like rustic simplicity rested on a large system of labor. The Caretaker’s Hut was enlarged twice to house a year-round caretaker and as many as eight carriers. During the active summer season, the carriers made daily journeys on foot with food and supplies from villages below. The caretaker maintained the common property and could reach cabins scattered across both sides of the saddle.
 
-<div class="figure" markdown="1">
+<div class="figure editorial-sidebar" markdown="1">
 
 [![Black-and-white photograph of travelers pausing on the mountain journey to Lantau Mountain Camp in 1939](https://gwulo.com/sites/default/files/styles/extra_large_640x640_/public/thumbnails/image/2020-02-06_235059_4.jpg?itok=PCoX_MF5 "A rest on the journey to Lantau Mountain Camp, 1939")](https://gwulo.com/media/35396 "Source: A rest on the journey up to Lantau Mountain Camp — Gwulo")
 
@@ -148,7 +165,7 @@ The center of the original camp was the Mess Hall. Built in the heart of the sad
 
 The residents’ association expected owners and guests to participate. Its constitution aimed to preserve Christian fellowship as well as the owners’ practical interests. Anyone selling a cabin was encouraged to find a buyer acceptable as someone who would share the life of the community. Guests received camp notes explaining that management and catering were performed by people who were themselves on holiday. Meals required punctuality, advance notice, and help from everyone. Association meetings, held over the decades at the YMCA, Helena May, St Andrew’s Church, and church offices, opened and closed with prayer.
 
-<div class="figure" markdown="1">
+<div class="figure editorial-sidebar" markdown="1">
 
 [![Scanned pages of Lantau Mountain Camp notes issued to campers for the summer of 1933](https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs43238-024-00170-z/MediaObjects/43238_2024_170_Fig5_HTML.png "Lantau Mountain Camp notes for summer 1933")](https://link.springer.com/article/10.1186/s43238-024-00170-z/figures/5 "Source: Figure 5 in From Hermitage to Heritage?")
 
@@ -160,7 +177,7 @@ The Mess was still recognizably fulfilling that role when my family visited. I r
 
 Life inside the cabin preserved smaller habits of self-sufficiency. My mother cooked our meal over a gas stove. Kerosene lanterns supplied the light. I remember standing beside my dad while he shaved with a safety razor; I covered my own face with shaving cream and removed it with a spoon. Outside, my siblings and I made little gardens from the moss, including moss landscapes for my G.I. Joes. These memories do not explain the history of the camp. They show what the cabins were built to contain: ordinary family life made slightly strange by altitude, carried provisions, and the distance from the city’s machinery.
 
-<div class="quote" markdown="1">
+<div class="quote editorial-sidebar" markdown="1">
 
 > These memories do not explain the history of the camp. They show what the cabins were built to contain: ordinary family life made slightly strange by altitude, carried provisions, and the distance from the city’s machinery.
 
@@ -260,7 +277,7 @@ During those same years, north Lantau below us was being transformed for a new a
 
 The contrast is tempting as a symbol, but the camp was not simply frozen while the modern city advanced. It had changed continually. Its buildings survived because people modified them, repaired them, changed ownership arrangements, shortened visits, and found new reasons to climb. What remained constant was that the mountain set the terms.
 
-<div class="quote" markdown="1">
+<div class="quote editorial-sidebar" markdown="1">
 
 > What remained constant was that the mountain set the terms.
 
@@ -280,7 +297,7 @@ Many hikers do not realize that the cabins are private and still in use. The lac
 
 The pressure has forced Hong Kong to decide what kind of place it wants to preserve. The answer remains divided among agencies. The Antiquities Advisory Board has not graded the cabin cluster as historical buildings. The Agriculture, Fisheries and Conservation Department approaches the area primarily as protected landscape and recreation. The Sustainable Lantau Office and Civil Engineering and Development Department have emphasized cultural history and rural conservation. Owners, churches, hikers, ecologists, and heritage researchers bring still other priorities.
 
-<div class="aside" markdown="1">
+<div class="aside editorial-sidebar" markdown="1">
 
 **Public scenery, private place**
 
@@ -320,15 +337,11 @@ The hut had been unused for more than thirty years. Conservators repaired unstab
 
 The restored hut is not new tourist accommodation. It is a base for the people trying to care for the mountain. Conservation Guardians trained with Raleigh International Hong Kong periodically staff it, conduct ecological surveys, assess visitor impact, explain the camp’s history, and teach leave-no-trace practices. The wider project has run guided nature tours, historical workshops, stargazing, mountain-safety activities, and a bilingual virtual-reality record of culturally and ecologically significant sites. Its stated next steps include further building repair, continued environmental monitoring, and broader education.
 
-<div class="full-bleed" markdown="1">
-
-<div class="figure" markdown="1">
+<div class="figure editorial-sidebar" markdown="1">
 
 [![Hikers walking past the stone Mess Hall at Lantau Mountain Camp in 2022](https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs43238-024-00170-z/MediaObjects/43238_2024_170_Fig2_HTML.png "Hikers passing the Mess Hall at Lantau Mountain Camp")](https://link.springer.com/article/10.1186/s43238-024-00170-z/figures/2 "Source: Figure 2 in From Hermitage to Heritage?")
 
 *Hikers pass the 1928 Mess Hall in November 2022. Photograph by Miriam Lee, reproduced in [Built Heritage](https://link.springer.com/article/10.1186/s43238-024-00170-z/figures/2).*
-
-</div>
 
 </div>
 
@@ -338,11 +351,19 @@ A conventional museum might protect the stones while ending that continuity. Unm
 
 The Caretaker’s Hut offers a modest answer to what preservation might mean here. It was not frozen in its original form or converted into accommodation for hikers. It was repaired so it could once again support the people responsible for the mountain. Its purpose has changed, but it has a purpose.
 
+<div class="quote editorial-sidebar" markdown="1">
+
+> Its purpose has changed, but it has a purpose.
+
+— A working definition of conservation
+
+</div>
+
 Lantau Mountain Camp has survived through a century of such adaptations. The cabins were altered when their original designs proved unequal to the weather, rebuilt after the war, passed from missionaries to churches and private owners, and repaired by people willing to carry materials uphill. The camp endured because it remained useful to people who thought it worth the trouble.
 
 Nearly everything that made the camp difficult also helped preserve it. The climb restricted development. The lack of a road discouraged replacement. The absence of ordinary utilities kept its comforts simple and its use deliberate. But inconvenience alone preserves nothing. Without owners, carriers, caretakers, church volunteers, and conservation workers, the cabins would long ago have become ruins.
 
-<div class="quote" markdown="1">
+<div class="quote editorial-sidebar" markdown="1">
 
 > Inconvenience alone preserves nothing.
 
