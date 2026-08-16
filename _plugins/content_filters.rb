@@ -11,6 +11,11 @@ module Jekyll
 
       paragraphs = html.scan(/<p(?:\s[^>]*)?>.*?<\/p>/im)
       return html if paragraphs.empty?
+
+      # GIF-only paragraphs stay on the permalink; they are too heavy for
+      # /blog and other list excerpts (e.g. an 11MB Giphy on a short post).
+      paragraphs = paragraphs.reject { |p| gif_only_paragraph?(p) }
+      return "" if paragraphs.empty?
       return paragraphs.join if paragraphs.size <= 2
 
       first_two = paragraphs.first(2).join
@@ -21,6 +26,19 @@ module Jekyll
 
     def extended_excerpt(input)
       Jekyll::ContentFilters.excerpt_html(input)
+    end
+
+    def self.gif_only_paragraph?(html)
+      has_gif = html.match?(/<img\b[^>]*\bsrc\s*=\s*["']?[^"'\s>]+\.gif(?:\?[^"'\s>]*)?/i)
+      return false unless has_gif
+
+      text = html.gsub(/<img\b[^>]*>/i, "")
+                 .gsub(%r{</?a\b[^>]*>}i, "")
+                 .gsub(/<[^>]+>/, " ")
+                 .gsub("&nbsp;", " ")
+                 .gsub(/\s+/, " ")
+                 .strip
+      text.empty?
     end
   end
 end
