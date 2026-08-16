@@ -17,6 +17,29 @@
 })();
 </script>
 
+{% comment %}
+  If wsrv.nl cannot fetch a hotlinked original (HTTPS-only hosts, 404),
+  fall back to data-full-src so the image still shows (#203).
+{% endcomment %}
+<script>
+(function () {
+  document.addEventListener("error", function (e) {
+    var t = e.target;
+    if (!t || t.tagName !== "IMG") return;
+    if (t.getAttribute("data-img-fallback") === "1") return;
+    var full = t.getAttribute("data-full-src");
+    if (!full) return;
+    var current = t.currentSrc || t.src || "";
+    if (current === full) return;
+    t.setAttribute("data-img-fallback", "1");
+    t.removeAttribute("srcset");
+    t.removeAttribute("sizes");
+    t.referrerPolicy = "no-referrer";
+    t.src = full;
+  }, true);
+})();
+</script>
+
 {% comment %} Favicon (#22) {% endcomment %}
 <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" type="image/png">
 <link rel="apple-touch-icon" href="{{ '/assets/img/favicon.png' | relative_url }}">

@@ -3,23 +3,14 @@ layout: default
 ---
 {% comment %}
   jekyll-archives month pages: page.type is 'month', page.date is a Date,
-  page.posts is the matching posts.
+  page.posts is the matching posts. List entries match /blog (#201).
 {% endcomment %}
 <article class="prose">
   <header class="page-title">
     <h1>{{ page.date | date: "%B %Y" }}</h1>
   </header>
 
-  <ul class="post-list">
-    {% for post in page.posts %}
-      <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <div class="post-meta">
-          {% include post-date.html date=post.date url=post.url %}
-        </div>
-      </li>
-    {% endfor %}
-  </ul>
+  {% include stream-list.html items=page.posts %}
 
   <p class="post-nav">
     <a href="{{ '/archive' | relative_url }}">&larr; All archives</a>
