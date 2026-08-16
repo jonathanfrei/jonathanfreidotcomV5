@@ -590,6 +590,8 @@
 }
 
 .timeline-date {
+  grid-column: 1;
+  grid-row: 1 / span 2;
   font-family: var(--ed-ui);
   font-size: 0.9rem;
   font-weight: 700;
@@ -598,6 +600,7 @@
 }
 
 .timeline-item h3 {
+  grid-column: 2;
   margin: 0 0 var(--ed-space-2);
   font-family: var(--ed-ui);
   font-size: 1.1rem;
@@ -606,6 +609,7 @@
 }
 
 .timeline-item p {
+  grid-column: 2;
   margin: 0;
   max-width: 55ch;
   color: var(--ed-charcoal);
@@ -1022,6 +1026,13 @@
     gap: var(--ed-space-2);
   }
 
+  .timeline-date,
+  .timeline-item h3,
+  .timeline-item p {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
   .full-bleed {
     width: 100%;
     margin-inline: 0;
@@ -1030,6 +1041,35 @@
 
   .editorial-header h1 {
     max-width: none;
+  }
+}
+
+/* Optional long-form composition: readable prose with an editorial side rail. */
+@media (min-width: 900px) {
+  .editorial-article--sidebar > p,
+  .editorial-article--sidebar > ul,
+  .editorial-article--sidebar > ol {
+    grid-column: 1;
+  }
+
+  .editorial-article--sidebar > .editorial-sidebar {
+    grid-column: 2;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    align-self: start;
+  }
+}
+
+@media (min-width: 1200px) {
+  .editorial-article--sidebar > p,
+  .editorial-article--sidebar > ul,
+  .editorial-article--sidebar > ol {
+    grid-column: 1 / span 2;
+  }
+
+  .editorial-article--sidebar > .editorial-sidebar {
+    grid-column: 3;
   }
 }
 
