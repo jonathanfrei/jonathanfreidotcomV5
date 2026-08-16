@@ -8,7 +8,7 @@ status: published
 type: essay
 created: 2026-08-15T16:20:00-04:00
 updated: 2026-08-16T12:49:32-04:00
-thesis: "Lantau Mountain Camp survived because its remoteness and simplicity continued to make demands on the people who used it; preserving the camp now requires protecting not only its stones, but the limits and living relationships that kept it alive."
+thesis: "Lantau Mountain Camp survived because its remoteness and simplicity continued to make demands on the people who used it; preserving the camp now requires protecting not only its stones, but the limits and living relationships that kept it alive." 
 worldview: applied
 ---
 
