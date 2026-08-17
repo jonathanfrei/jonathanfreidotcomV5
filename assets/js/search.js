@@ -1,4 +1,4 @@
-/* Client-side search for jonathanfrei.com (#209)
+/* Client-side search for jonathanfrei.com (#209, #211)
  *
  * URL convention on any page with the search box:
  *   ?q=photography          free-text (title, excerpt, tags)
@@ -8,6 +8,10 @@
  *   ?q=pope&tag=vatican     AND across present fields
  *
  * The search box also accepts field tokens: tag:photography title:"a phrase"
+ *
+ * Until the user types, the query string is the source of truth. The input
+ * can be empty on first paint (autofill / form restore / deferred script),
+ * and must not wipe ?tag= or skip the search.
  */
 (function () {
   var input = document.getElementById("search-input");
@@ -16,6 +20,7 @@
 
   var index = [];
   var indexReady = false;
+  var userTyped = false;
   var writingUrl = false;
 
   function resolveIndexUrl() {
@@ -62,10 +67,12 @@
     return value;
   }
 
-  function parseParams() {
+  function parseParams(search) {
     var params;
     try {
-      params = new URLSearchParams(window.location.search || "");
+      params = new URLSearchParams(
+        search == null ? window.location.search || "" : search
+      );
     } catch (e) {
       return { q: "", tag: "", title: "" };
     }
@@ -212,14 +219,25 @@
     results.innerHTML = html;
   }
 
-  function currentState() {
+  function stateForSearch() {
+    if (!userTyped) return parseParams();
     return parseInput(input.value);
   }
 
+  function seedInput(state) {
+    if (userTyped) return;
+    var text = hasActiveQuery(state) ? formatInput(state) : "";
+    input.value = text;
+    try {
+      input.defaultValue = text;
+    } catch (e) { /* ignore */ }
+  }
+
   function runSearch() {
-    var state = currentState();
+    var state = stateForSearch();
+    seedInput(state);
     setSearching(hasActiveQuery(state));
-    writeUrl(state);
+    if (userTyped) writeUrl(state);
     if (!indexReady) return;
     if (!canSearch(state)) {
       results.innerHTML = "";
@@ -231,11 +249,8 @@
     render(matches, state);
   }
 
-  function applyParamsToInput() {
-    input.value = formatInput(parseParams());
-  }
-
-  applyParamsToInput();
+  seedInput(parseParams());
+  setSearching(hasActiveQuery(parseParams()));
 
   fetch(resolveIndexUrl())
     .then(function (r) {
@@ -251,11 +266,21 @@
       results.innerHTML = '<p class="post-meta">Search index unavailable.</p>';
     });
 
-  input.addEventListener("input", runSearch);
+  input.addEventListener("input", function () {
+    userTyped = true;
+    runSearch();
+  });
+
+  window.addEventListener("pageshow", function () {
+    if (writingUrl) return;
+    if (!userTyped) seedInput(parseParams());
+    runSearch();
+  });
 
   window.addEventListener("popstate", function () {
     if (writingUrl) return;
-    applyParamsToInput();
+    userTyped = false;
+    seedInput(parseParams());
     runSearch();
   });
 })();

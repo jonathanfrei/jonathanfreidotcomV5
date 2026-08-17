@@ -57,6 +57,15 @@
 .search-hint {
   margin-top: var(--space-2);
   margin-bottom: 0;
+  font-family: var(--font-ui);
+  font-size: var(--type-sm);
+  color: var(--color-muted);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.search-hint__token {
+  font-family: var(--font-mono);
 }
 
 .search-ui #search-results {
