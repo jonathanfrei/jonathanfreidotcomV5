@@ -275,7 +275,7 @@ Production depends on external services for media (configured in `_config.yml` `
 | **wsrv.nl** | On-the-fly resize + WebP for own-site images (archive + S3 `/assets/img/` + in-repo `/assets/`); full-res on `data-full-src` | `archive_media.optimize.proxy` |
 | **jsDelivr** | Fontsource fonts, plus production `/assets` (CSS/JS/favicons) pinned to the build commit | `assets_cdn` in `_config.yml`; `@font-face` in `main.css` |
 
-- The site has no fallback if S3, wsrv, or jsDelivr is unavailable (images break or fall back to the original `src` depending on the browser; production CSS/JS are on jsDelivr).
+- Production CSS/JS/favicons load from jsDelivr and fall back to origin `/assets` if the CDN cannot fetch the commit (GitHub blip). S3/wsrv still have no chrome fallback: images break or revert to the original `src`.
 - Do **not** point `cdn_base` or the proxy at untrusted hosts or arbitrary user content.
 - Changing `cdn_base` or the proxy host is a production-facing decision; prefer a PR and a smoke check of a few archive posts + `/assets/` images.
 - Local `jekyll serve` uses S3 in CDN mode (default once in-repo media trees are gone). `ARCHIVE_MEDIA_MODE=local` only helps while `_posts/v*-archive/media/` still exists on disk.
@@ -317,7 +317,7 @@ Production depends on external services for media (configured in `_config.yml` `
 | Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` (thin dump of `site.data.search_index`). URLs: `?q=`, `?tag=`, `?title=`; `?=text` aliases `?q=`. The query string is the source of truth until the user types; an inline seed fills the box on first paint (#211). `search.js` is deferred; `/search` and `?q=`/`?tag=` URLs reserve result space so the footer does not shift (#212). Tag and archive lists stay visible below results. |
 | Random-post URL list | `search.json` (`url` + `kind`; `posts.json` removed — #130) |
 | Theme toggle | Boot in `_includes/head.html`; full `assets/js/theme.js` loads on first click (footer stub) |
-| Asset CDN | `_plugins/asset_cdn.rb` + `assets_cdn` in `_config.yml`. Production: jsDelivr `@SHA`. Local: `/assets`. Filter: `asset_url`. |
+| Asset CDN | `_plugins/asset_cdn.rb` + `assets_cdn` in `_config.yml`. Production: jsDelivr `@SHA` with origin `/assets` `onerror` fallback (`asset_url` / `asset_origin_url`). Local: `/assets`. |
 | Site config | `_config.yml` |
 | Deploy / path filters | `.github/workflows/deploy.yml` |
 | Embed providers | `_plugins/url_embeds.rb` |

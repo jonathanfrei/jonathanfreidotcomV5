@@ -1,0 +1,11 @@
+{%- comment -%}
+  Stylesheet or style preload with origin fallback when jsDelivr fails.
+  Params: path (required), rel (stylesheet|preload), as (for preload)
+{%- endcomment -%}
+{%- assign asset_href = include.path | asset_url -%}
+{%- assign asset_origin = include.path | asset_origin_url -%}
+{%- if include.rel == "preload" -%}
+<link rel="preload" href="{{ asset_href }}" as="{{ include.as | default: 'style' }}"{%- if asset_href != asset_origin %} data-fallback="{{ asset_origin }}" onerror="assetFallback(this)"{%- endif %}>
+{%- else -%}
+<link rel="stylesheet" href="{{ asset_href }}"{%- if asset_href != asset_origin %} data-fallback="{{ asset_origin }}" onerror="assetFallback(this)"{%- endif %}>
+{%- endif -%}

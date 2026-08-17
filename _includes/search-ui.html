@@ -42,5 +42,5 @@
   <script>
     window.siteBaseurl = {{ site.baseurl | jsonify }};
   </script>
-  <script src="{{ '/assets/js/search.js' | asset_url }}" defer></script>
+  {% include asset-script.html path="/assets/js/search.js" defer=true %}
 </div>
