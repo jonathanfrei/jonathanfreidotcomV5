@@ -139,8 +139,8 @@ jobs:
           set -euo pipefail
           du -sh _site
           # Only the archive media publish root (and mirrored archive paths)
-          # must stay out of the artifact. Do NOT match tag pages such as
-          # _site/tags/media — those are HTML autopages, not binary media.
+          # must stay out of the artifact. Individual tag archives are gone
+          # (#209), so _site/tags/ should not exist at all.
           bad=0
           if [ -d _site/media ]; then
             echo "::error::_site/media should not exist in CDN mode (would bloat Pages deploy)"
@@ -169,7 +169,6 @@ jobs:
             exit 1
           fi
           echo "OK: archive media not bundled; artifact is HTML/CSS/JS only"
-          # Note: _site/tags/media is a tag page for the 'media' tag — expected.
 
       - name: Check permalink convention
         # Light guard for #63 / audit #103: non-paginated pages must be .html
@@ -259,15 +258,37 @@ jobs:
           else
             echo "OK: no /blog/page/50 (50 per page)"
           fi
-          if [ -e _site/tags/100-meter-dash ] || [ -f _site/tags/100-meter-dash.html ]; then
-            echo "::error::singleton tag 100-meter-dash should not get a public archive"
+          if [ -d _site/tags ]; then
+            echo "::error::_site/tags/ should not exist; tag archives are search URLs (#209)"
             missing=1
           else
-            echo "OK: singleton tag pages still pruned"
+            echo "OK: no individual tag archive pages"
+          fi
+          if [ -f _site/tags.html ]; then
+            if grep -q 'search-ui' _site/tags.html && grep -q '?tag=' _site/tags.html; then
+              echo "OK: /tags uses search UI and ?tag= chip links"
+            else
+              echo "::error::_site/tags.html should include search UI and ?tag= chip links"
+              missing=1
+            fi
+          fi
+          if [ -f _site/assets/js/search.js ]; then
+            if grep -q 'params.get("tag")' _site/assets/js/search.js && grep -q 'params.get("q")' _site/assets/js/search.js; then
+              echo "OK: search.js reads q/tag URL params"
+            else
+              echo "::error::search.js should read ?q= and ?tag= URL params"
+              missing=1
+            fi
           fi
 
           blog_page="_site/blog.html"
           if [ -f "$blog_page" ]; then
+            if grep -q '?tag=' "$blog_page"; then
+              echo "OK: $blog_page tag chips use search URLs"
+            else
+              echo "::error::$blog_page tag chips should link to /tags?tag="
+              missing=1
+            fi
             if grep -q 'class="stream-post__body"' "$blog_page"; then
               echo "::error::$blog_page should excerpt posts, not render full bodies"
               missing=1

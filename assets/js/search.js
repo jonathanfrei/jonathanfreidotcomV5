@@ -1,4 +1,14 @@
-/* Minimal client-side search for jonathanfrei.com */
+/* Client-side search for jonathanfrei.com (#209)
+ *
+ * URL convention on any page with the search box:
+ *   ?q=photography          free-text (title, excerpt, tags)
+ *   ?=photography           alias for ?q=
+ *   ?tag=photography        tags field only
+ *   ?title=photography      title field only
+ *   ?q=pope&tag=vatican     AND across present fields
+ *
+ * The search box also accepts field tokens: tag:photography title:"a phrase"
+ */
 (function () {
   var input = document.getElementById("search-input");
   var results = document.getElementById("search-results");
@@ -6,6 +16,7 @@
 
   var index = [];
   var indexReady = false;
+  var writingUrl = false;
 
   function resolveIndexUrl() {
     var base = typeof window.siteBaseurl === "string" ? window.siteBaseurl : "";
@@ -31,12 +42,155 @@
     return el.innerHTML;
   }
 
-  function render(items) {
+  function slugify(value) {
+    return String(value || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+  }
+
+  function includesFold(hay, needle) {
+    return (
+      String(hay || "")
+        .toLowerCase()
+        .indexOf(String(needle || "").toLowerCase()) !== -1
+    );
+  }
+
+  function quoteIfNeeded(value) {
+    if (/[\s:=]/.test(value)) return '"' + value + '"';
+    return value;
+  }
+
+  function parseParams() {
+    var params;
+    try {
+      params = new URLSearchParams(window.location.search || "");
+    } catch (e) {
+      return { q: "", tag: "", title: "" };
+    }
+    var q = (params.get("q") || "").trim();
+    var tag = (params.get("tag") || "").trim();
+    var title = (params.get("title") || "").trim();
+    if (!q) {
+      var emptyKey = params.get("");
+      if (emptyKey) q = String(emptyKey).trim();
+    }
+    return { q: q, tag: tag, title: title };
+  }
+
+  function parseInput(raw) {
+    var tag = "";
+    var title = "";
+    var rest = String(raw || "").replace(
+      /(^|\s)(tag|title)[:=](?:"([^"]*)"|(\S+))/gi,
+      function (_, _lead, field, quoted, bare) {
+        var value = (typeof quoted === "string" ? quoted : bare || "").trim();
+        field = String(field || "").toLowerCase();
+        if (field === "tag") tag = value;
+        if (field === "title") title = value;
+        return " ";
+      }
+    );
+    return {
+      q: rest.replace(/\s+/g, " ").trim(),
+      tag: tag,
+      title: title
+    };
+  }
+
+  function formatInput(state) {
+    var parts = [];
+    if (state.tag) parts.push("tag:" + quoteIfNeeded(state.tag));
+    if (state.title) parts.push("title:" + quoteIfNeeded(state.title));
+    if (state.q) parts.push(state.q);
+    return parts.join(" ");
+  }
+
+  function describeQuery(state) {
+    return formatInput(state);
+  }
+
+  function hasActiveQuery(state) {
+    return !!(state.tag || state.title || state.q);
+  }
+
+  function canSearch(state) {
+    if (state.tag || state.title) return true;
+    return state.q.length >= 2;
+  }
+
+  function writeUrl(state) {
+    var params = new URLSearchParams();
+    if (state.tag) params.set("tag", state.tag);
+    if (state.title) params.set("title", state.title);
+    if (state.q) params.set("q", state.q);
+    var qs = params.toString();
+    var path = window.location.pathname || "";
+    var hash = window.location.hash || "";
+    var next = path + (qs ? "?" + qs : "") + hash;
+    var current = path + (window.location.search || "") + hash;
+    if (next === current) return;
+    if (window.history && window.history.replaceState) {
+      writingUrl = true;
+      window.history.replaceState(null, "", next);
+      writingUrl = false;
+    }
+  }
+
+  function tagMatches(tags, query) {
+    if (!query) return true;
+    if (!Array.isArray(tags)) return false;
+    var q = query.toLowerCase();
+    var qSlug = slugify(query);
+    for (var i = 0; i < tags.length; i++) {
+      var tag = String(tags[i] || "");
+      var folded = tag.toLowerCase();
+      if (folded === q) return true;
+      if (slugify(tag) === qSlug) return true;
+      if (folded.indexOf(q) !== -1) return true;
+    }
+    return false;
+  }
+
+  function matchEntry(post, state) {
+    if (state.tag && !tagMatches(post.tags, state.tag)) return false;
+    if (state.title && !includesFold(post.title, state.title)) return false;
+    if (state.q) {
+      var hay =
+        (post.title || "") +
+        " " +
+        (post.excerpt || "") +
+        " " +
+        (Array.isArray(post.tags) ? post.tags.join(" ") : "");
+      if (!includesFold(hay, state.q)) return false;
+    }
+    return hasActiveQuery(state);
+  }
+
+  function setSearching(on) {
+    var root = input.closest ? input.closest("article") : input.parentNode;
+    if (root && root.classList) {
+      root.classList.toggle("has-search-query", !!on);
+    }
+  }
+
+  function render(items, state) {
+    var label = describeQuery(state);
     if (!items.length) {
-      results.innerHTML = '<p class="post-meta">No matching posts.</p>';
+      results.innerHTML =
+        '<p class="post-meta">No matching posts' +
+        (label ? " for " + escapeHtml(label) : "") +
+        ".</p>";
       return;
     }
-    var html = '<ul class="post-list">';
+    var html =
+      '<p class="post-meta">' +
+      items.length +
+      (items.length === 1 ? " post" : " posts") +
+      (label ? " for " + escapeHtml(label) : "") +
+      ".</p>";
+    html += '<ul class="post-list">';
     for (var i = 0; i < items.length; i++) {
       var p = items[i];
       html +=
@@ -58,24 +212,30 @@
     results.innerHTML = html;
   }
 
+  function currentState() {
+    return parseInput(input.value);
+  }
+
   function runSearch() {
+    var state = currentState();
+    setSearching(hasActiveQuery(state));
+    writeUrl(state);
     if (!indexReady) return;
-    var q = input.value.trim().toLowerCase();
-    if (q.length < 2) {
+    if (!canSearch(state)) {
       results.innerHTML = "";
       return;
     }
     var matches = index.filter(function (p) {
-      var hay =
-        (p.title || "") +
-        " " +
-        (p.excerpt || "") +
-        " " +
-        (Array.isArray(p.tags) ? p.tags.join(" ") : "");
-      return hay.toLowerCase().indexOf(q) !== -1;
+      return matchEntry(p, state);
     });
-    render(matches);
+    render(matches, state);
   }
+
+  function applyParamsToInput() {
+    input.value = formatInput(parseParams());
+  }
+
+  applyParamsToInput();
 
   fetch(resolveIndexUrl())
     .then(function (r) {
@@ -92,4 +252,10 @@
     });
 
   input.addEventListener("input", runSearch);
+
+  window.addEventListener("popstate", function () {
+    if (writingUrl) return;
+    applyParamsToInput();
+    runSearch();
+  });
 })();

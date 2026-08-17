@@ -66,8 +66,8 @@ pagination:
     before: 2
     after: 2
 
-# Public tag archives require at least this many posts (issue #140).
-# Singleton tags stay on posts as non-link chips; no /tags/:name page.
+# /tags index lists tags with at least this many posts (issue #140).
+# Individual /tags/:name archives are not generated; chips use /tags?tag= (#209).
 tag_archive_min_posts: 2
 
 # Post metadata automation (issue #75). See AGENTS.md front-matter contract.
@@ -91,7 +91,8 @@ autopages:
     # No trailing slash — same rationale as site permalink (#63)
     # slugify mode default matches Liquid | slugify (spaces → hyphens)
     permalink: "/tags/:tag"
-    enabled: true
+    # Tag archives are search URLs (/tags?tag=name), not generated pages (#209).
+    enabled: false
     slugify:
       mode: default
       cased: true

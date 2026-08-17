@@ -44,7 +44,7 @@ description: Hierarchical map of pages, sections, tags, and recent posts on jona
       <ul class="site-map__chips">
         {%- assign sitemap_tags = site.data.archive_tags | sort: "name" -%}
         {%- for tag in sitemap_tags -%}
-          <li><a class="tag" href="{{ '/tags/' | relative_url }}{{ tag.slug }}">{{ tag.name }}</a></li>
+          <li><a class="tag" href="{{ '/tags' | relative_url }}?tag={{ tag.name | url_encode }}">{{ tag.name }}</a></li>
         {%- endfor -%}
       </ul>
       {%- endif -%}
