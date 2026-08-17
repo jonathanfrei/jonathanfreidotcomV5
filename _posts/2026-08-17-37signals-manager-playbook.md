@@ -2,13 +2,11 @@
 title: "Making Management Smaller"
 date: 2026-08-17T07:53:00-04:00
 tags: ["management", "37signals", "work"]
-categories: work
 description: "The 37signals Manager Playbook is interesting less for its management techniques than for how much management the company has designed away."
 status: published
 type: essay
 created: 2026-08-16T23:03:00-04:00
 updated: 2026-08-17T07:53:00-04:00
-worldview: n/a
 ---
 
 Most management advice is about how to become a better manager. The [37signals Manager Playbook](https://basecamp.com/managers) left me thinking more about how much management a company actually needs.
