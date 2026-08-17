@@ -235,10 +235,12 @@ jobs:
               continue
             fi
             if grep -q 'cdn.jsdelivr.net/gh/jonathanfrei/jonathanfreidotcomV5@' "$sample" \
-              && grep -q '_includes/main.css' "$sample"; then
-              echo "OK: $sample links core.css via jsDelivr"
+              && grep -q '_includes/main.css' "$sample" \
+              && grep -q 'data-fallback="/assets/css/core.css"' "$sample" \
+              && grep -q 'assetFallback' "$sample"; then
+              echo "OK: $sample links core.css via jsDelivr with origin fallback"
             else
-              echo "::error::$sample should link core.css from cdn.jsdelivr.net (git SHA)"
+              echo "::error::$sample should link core.css from jsDelivr and fall back to /assets/css/core.css"
               missing=1
             fi
             if grep -q -- '--brand-paper:' "$sample"; then
@@ -249,10 +251,12 @@ jobs:
           if [ -f _site/editorial/design-system.html ]; then
             if grep -q 'cdn.jsdelivr.net/gh/jonathanfrei/jonathanfreidotcomV5@' \
               _site/editorial/design-system.html \
-              && grep -q '_includes/editorial.css' _site/editorial/design-system.html; then
-              echo "OK: editorial page links editorial.css via jsDelivr"
+              && grep -q '_includes/editorial.css' _site/editorial/design-system.html \
+              && grep -q 'data-fallback="/assets/css/editorial.css"' \
+              _site/editorial/design-system.html; then
+              echo "OK: editorial page links editorial.css via jsDelivr with origin fallback"
             else
-              echo "::error::_site/editorial/design-system.html should link editorial.css from jsDelivr"
+              echo "::error::_site/editorial/design-system.html should fall back to /assets/css/editorial.css"
               missing=1
             fi
           fi
