@@ -281,10 +281,16 @@ jobs:
             fi
           fi
           if [ -f _site/assets/js/search.js ]; then
-            if grep -q 'params.get("tag")' _site/assets/js/search.js && grep -q 'params.get("q")' _site/assets/js/search.js; then
-              echo "OK: search.js reads q/tag URL params"
+            if grep -q 'params.get("tag")' _site/assets/js/search.js && grep -q 'params.get("q")' _site/assets/js/search.js && grep -q 'params.get("category")' _site/assets/js/search.js; then
+              echo "OK: search.js reads q/tag/category URL params"
             else
-              echo "::error::search.js should read ?q= and ?tag= URL params"
+              echo "::error::search.js should read ?q=, ?tag=, and ?category= URL params"
+              missing=1
+            fi
+            if grep -q 'search.json?v=' _site/assets/js/search.js || grep -q 'searchIndexRev' _site/assets/js/search.js; then
+              echo "OK: search.js cache-busts search.json"
+            else
+              echo "::error::search.js should fetch /search.json?v= so edge cache cannot keep a stale index"
               missing=1
             fi
             if grep -q 'userTyped' _site/assets/js/search.js; then
@@ -419,10 +425,10 @@ jobs:
             echo "OK: no individual category archive pages"
           fi
           if [ -f _site/categories.html ]; then
-            if grep -q 'search-ui' _site/categories.html && grep -q '?category=' _site/categories.html; then
-              echo "OK: /categories uses search UI and ?category= chip links"
+            if grep -q 'search-ui' _site/categories.html && grep -q '?category=' _site/categories.html && grep -q 'searchIndexRev' _site/categories.html && grep -q 'params.get("category")' _site/categories.html; then
+              echo "OK: /categories uses search UI, ?category= chips, and a busted index URL"
             else
-              echo "::error::_site/categories.html should include search UI and ?category= chip links"
+              echo "::error::_site/categories.html should include search UI, ?category= chips, and searchIndexRev"
               missing=1
             fi
           fi
