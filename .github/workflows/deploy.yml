@@ -279,6 +279,20 @@ jobs:
               echo "::error::search.js should read ?q= and ?tag= URL params"
               missing=1
             fi
+            if grep -q 'userTyped' _site/assets/js/search.js; then
+              echo "OK: search.js keeps URL params until the user types"
+            else
+              echo "::error::search.js should treat the query string as source of truth until input"
+              missing=1
+            fi
+          fi
+          if [ -f _site/tags.html ]; then
+            if grep -q 'URLSearchParams' _site/tags.html && grep -q 'search.js?v=' _site/tags.html; then
+              echo "OK: /tags inlines URL seed and cache-busts search.js"
+            else
+              echo "::error::_site/tags.html should inline a URL seed and load search.js?v="
+              missing=1
+            fi
           fi
 
           blog_page="_site/blog.html"
