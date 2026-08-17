@@ -65,8 +65,8 @@
 </script>
 
 {% comment %} Favicon (#22) {% endcomment %}
-<link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" type="image/png">
-<link rel="apple-touch-icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
+<link rel="icon" href="{{ '/assets/img/favicon.ico' | asset_url }}" type="image/png">
+<link rel="apple-touch-icon" href="{{ '/assets/img/favicon.png' | asset_url }}">
 
 {% comment %}
   Archive media loads from S3 (media.jonathanfrei.com, #170); own images get

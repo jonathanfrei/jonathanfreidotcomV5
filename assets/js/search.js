@@ -26,18 +26,9 @@
   function resolveIndexUrl() {
     var base = typeof window.siteBaseurl === "string" ? window.siteBaseurl : "";
     if (base === "/") base = "";
-    if (base) return base + "/search.json";
-
-    var scripts = document.getElementsByTagName("script");
-    for (var i = 0; i < scripts.length; i++) {
-      var src = scripts[i].src || "";
-      var marker = "/assets/js/search.js";
-      var pos = src.indexOf(marker);
-      if (pos !== -1) {
-        return src.slice(0, pos) + "/search.json";
-      }
-    }
-    return "/search.json";
+    // search.json is generated and stays on origin. Do not derive it from the
+    // search.js URL — that script is on jsDelivr in production.
+    return (base || "") + "/search.json";
   }
 
   // Avoid HTML entity literals in source (GitHub content API can strip them).
