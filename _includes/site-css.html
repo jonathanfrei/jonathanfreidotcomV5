@@ -1,7 +1,7 @@
 {% comment %}
-  Shared design system on every page. Linked CSS matches inlined
-  performance here (Cloudflare cache) and keeps HTML small. Feature
-  sheets stay content-gated in optional-css.html (#165).
+  Shared design system on every page. Production loads from jsDelivr;
+  onerror swaps to the origin copy under /assets. Feature sheets stay
+  content-gated in optional-css.html (#165).
 {% endcomment %}
-<link rel="preload" href="{{ '/assets/css/core.css' | relative_url }}" as="style">
-<link rel="stylesheet" href="{{ '/assets/css/core.css' | relative_url }}">
+{% include asset-stylesheet.html path="/assets/css/core.css" rel="preload" as="style" %}
+{% include asset-stylesheet.html path="/assets/css/core.css" %}

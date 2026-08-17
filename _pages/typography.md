@@ -91,7 +91,7 @@ hello("world")
 ## Figure / image
 
 <figure>
-  <img src="{{ '/assets/img/favicon.png' | relative_url }}" alt="Site favicon specimen" width="64" height="64">
+  <img src="{{ '/assets/img/favicon.png' | asset_url }}" data-fallback="{{ '/assets/img/favicon.png' | asset_origin_url }}" onerror="assetFallback(this)" alt="Site favicon specimen" width="64" height="64">
   <figcaption>Favicon used as a small figure specimen.</figcaption>
 </figure>
 

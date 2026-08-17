@@ -8,8 +8,8 @@
     No narrow .container wrapper — measure is controlled by component classes.
   {% endcomment %}
   {% include site-css.html %}
-  <link rel="preload" href="{{ '/assets/css/editorial.css' | relative_url }}" as="style">
-  <link rel="stylesheet" href="{{ '/assets/css/editorial.css' | relative_url }}">
+  {% include asset-stylesheet.html path="/assets/css/editorial.css" rel="preload" as="style" %}
+  {% include asset-stylesheet.html path="/assets/css/editorial.css" %}
   {% include optional-css.html %}
 </head>
 <body>
@@ -30,7 +30,7 @@
   {% include footer.html %}
   {% include embed-scripts.html %}
   {% if content contains '<pre' %}
-  <script src="{{ '/assets/js/code-blocks.js' | relative_url }}" defer></script>
+  {% include asset-script.html path="/assets/js/code-blocks.js" defer=true %}
   {% endif %}
 </body>
 </html>
