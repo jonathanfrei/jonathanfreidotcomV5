@@ -202,8 +202,19 @@ Desired URLs: `/about`, `/blog`, `/2026/08/05/slug`, `/tags` — **not** `/about
 - Jekyll then writes **`.html` files** (`about.html`). GitHub Pages serves those at the clean path.
 - **Do not** write extensionless files (no `.html`) — GH Pages may download them as `application/octet-stream`.
 - Keep internal links consistent (`/blog`, `/tags?tag=foo`, etc.).
-- After deploy, Cloudflare should 301 `/path/` → `/path` so old bookmarks still work (see PR for #63).
+- After deploy, Cloudflare should 301 `/path/` → `/path` so old bookmarks still work (issue #82). Exclude `/`, `/archive/YYYY/MM/`, and `/…/page/N/`. See README “Cloudflare performance”.
 - Month archives (`/archive/YYYY/MM/`) **must** keep the trailing slash (directory + `index.html`).
+
+### 1b. Cloudflare edge
+
+Dashboard rules live in README (redirects before cache). Do not regress:
+
+- SSL/TLS mode is **Full**, not Full (strict). GitHub Pages has no apex certificate for `jonathanfrei.com`; Full (strict) returns 526. Do not switch back to Flexible (that emits `http://` origin redirects).
+- HTML must be Cache Everything at the edge. `cf-cache-status: DYNAMIC` on documents means the rule is off; TTFB will stay a full Cloudflare → GitHub Pages hop.
+- `deploy.yml` purges Cloudflare after Pages deploy when `CLOUDFLARE_ZONE_ID` and `CLOUDFLARE_API_TOKEN` are set. Do not remove that step if HTML stays cached.
+- `_includes/head.html` always `preconnect`s `cdn.jsdelivr.net`. `wsrv.nl` and `media.jonathanfrei.com` only when the page will fetch them (`<img>` / those hosts in `content`). `optimize_content_images.rb` injects a missing host hint after image rewrite. Do not restore unconditional preconnects or redundant `dns-prefetch` for the same hosts.
+- Speculation Rules in `head.html` prefetch `/`, `/about`, `/blog`, `/archive` on moderate eagerness. Prefetch only — do not prerender, and do not add `<link rel="preload" as="document">` for the current page.
+- Free-plan Redirect Rules cannot use `regex_replace` or `matches`. Use `wildcard` / `wildcard_replace` / `ends_with`. Do not put the SHA-pinned jsDelivr `main.css` URL in a Cloudflare `Link` / Early Hints rule; it changes every commit.
 
 ### 2. CSS — brand system + optional sheets
 
@@ -338,6 +349,7 @@ Before finishing a change that touches build, layouts, or CSS:
 5. [ ] If workflow changed, confirm Actions majors and `paths-ignore` still make sense
 6. [ ] Prefer a green deploy run after merge/push to `main`
 7. [ ] Static HTML drop-ins use `editorial/<slug>.html` → `/editorial/<slug>` (no `index.html` in asset folders)
+8. [ ] Text pages (e.g. `/about`) do not `preconnect` `wsrv.nl` or `media.jonathanfrei.com`. After a production deploy with Cache Everything on, HTML `cf-cache-status` is `HIT` (or the purge secrets are documented as still missing).
 
 ## What not to do
 
