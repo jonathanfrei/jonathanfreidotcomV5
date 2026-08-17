@@ -11,7 +11,9 @@ I’ve enjoyed John Malkovich on the big screen for years, but recently he’s t
 
 Here are a few of my favorites from the collection:
 
-![Dorothea Lange / Migrant Mother, Nipomo, California \(1936\), 2014](http://edelmangallery.com/manager/templates/edelman/artwork/miller/malkovich/Dorothea_Lange___Migrant_Mother,_Nipomo,_California_\(date\),_2014.jpg) _Dorothea Lange / Migrant Mother, Nipomo, California (1936), 2014_
+![Dorothea Lange / Migrant Mother, Nipomo, California \(1936\), 2014](http://edelmangallery.com/manager/templates/edelman/artwork/miller/malkovich/Dorothea_Lange___Migrant_Mother,_Nipomo,_California_\(date\),_2014.jpg) 
+
+_Dorothea Lange / Migrant Mother, Nipomo, California (1936), 2014_
 
 ![Yousuf Karsh / Ernest Hemingway \(1957\), 2014](http://edelmangallery.com/manager/templates/edelman/artwork/miller/malkovich/Yousuf_Karsh___Ernest_Hemingway_\(1957\),_2014.jpg) 
 
