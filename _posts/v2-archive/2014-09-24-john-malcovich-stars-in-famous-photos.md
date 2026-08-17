@@ -11,20 +11,18 @@ I’ve enjoyed John Malkovich on the big screen for years, but recently he’s t
 
 Here are a few of my favorites from the collection:
 
-![Dorothea Lange / Migrant Mother, Nipomo, California \(1936\), 2014](http://edelmangallery.com/manager/templates/edelman/artwork/miller/malkovich/Dorothea_Lange___Migrant_Mother,_Nipomo,_California_\(date\)
+![Dorothea Lange / Migrant Mother, Nipomo, California \(1936\), 2014](http://edelmangallery.com/manager/templates/edelman/artwork/miller/malkovich/Dorothea_Lange___Migrant_Mother,_Nipomo,_California_\(date\),_2014.jpg) _Dorothea Lange / Migrant Mother, Nipomo, California (1936), 2014_
 
-,_2014.jpg) _Dorothea Lange / Migrant Mother, Nipomo, California (1936), 2014_
+![Yousuf Karsh / Ernest Hemingway \(1957\), 2014](http://edelmangallery.com/manager/templates/edelman/artwork/miller/malkovich/Yousuf_Karsh___Ernest_Hemingway_\(1957\),_2014.jpg) 
 
-![Yousuf Karsh / Ernest Hemingway \(1957\), 2014](http://edelmangallery.com/manager/templates/edelman/artwork/miller/malkovich/Yousuf_Karsh___Ernest_Hemingway_\(1957\)
+_Yousuf Karsh / Ernest Hemingway (1957), 2014_
 
-,_2014.jpg) _Yousuf Karsh / Ernest Hemingway (1957), 2014_
+![Herb Ritts / Jack Nicholson, London \(1988\) \(B\), 2014](http://edelmangallery.com/manager/templates/edelman/artwork/miller/malkovich/Herb_Ritts___Jack_Nicholson,_London_\(1988\),_2014_b.jpg) 
 
-![Herb Ritts / Jack Nicholson, London \(1988\) \(B\), 2014](http://edelmangallery.com/manager/templates/edelman/artwork/miller/malkovich/Herb_Ritts___Jack_Nicholson,_London_\(1988\)
+_Herb Ritts / Jack Nicholson, London (1988) (B), 2014_
 
-,_2014_b.jpg) _Herb Ritts / Jack Nicholson, London (1988) (B), 2014_
+![Philippe Halsman / Salvador Dalí \(1954\), 2014](http://edelmangallery.com/manager/templates/edelman/artwork/miller/malkovich/Philippe_Halsman___Salvador_Dali_\(1954\),_2014.jpg) 
 
-![Philippe Halsman / Salvador Dalí \(1954\), 2014](http://edelmangallery.com/manager/templates/edelman/artwork/miller/malkovich/Philippe_Halsman___Salvador_Dali_\(1954\)
-
-,_2014.jpg) _Philippe Halsman / Salvador Dalí (1954), 2014_
+_Philippe Halsman / Salvador Dalí (1954), 2014_
 
 [The full gallery](http://edelmangallery.com/exhibitions-and-projects/exhibition-pages/2014/sandro-miller-malkovich,-malkovich,-malkovich-homage-to-photographic-masters.html) is worth checking out.
