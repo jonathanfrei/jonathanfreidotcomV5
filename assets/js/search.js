@@ -1,4 +1,4 @@
-/* Client-side search for jonathanfrei.com (#209, #211)
+/* Client-side search for jonathanfrei.com (#209, #211, #219)
  *
  * URL convention on any page with the search box:
  *   ?q=photography          free-text (title, excerpt, tags)
@@ -42,6 +42,161 @@
     var el = document.createElement("span");
     el.textContent = String(str);
     return el.innerHTML;
+  }
+
+  function siteBase() {
+    var base = typeof window.siteBaseurl === "string" ? window.siteBaseurl : "";
+    if (base === "/") base = "";
+    return base || "";
+  }
+
+  function formatLongDate(iso) {
+    var parts = String(iso || "").split("-");
+    if (parts.length < 3) return iso || "";
+    var months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ];
+    var month = months[parseInt(parts[1], 10) - 1];
+    var day = parseInt(parts[2], 10);
+    if (!month || !day) return iso || "";
+    return month + " " + day + ", " + parts[0];
+  }
+
+  function tagHref(tag) {
+    return siteBase() + "/tags?tag=" + encodeURIComponent(tag);
+  }
+
+  function isSafeSrc(src) {
+    if (!src) return false;
+    if (/^https?:\/\//i.test(src)) return true;
+    if (src.charAt(0) === "/" && src.charAt(1) !== "/") return true;
+    return false;
+  }
+
+  function isGifSrc(src) {
+    return /\.gif(?:[?#]|$)/i.test(String(src || ""));
+  }
+
+  function displayImgSrc(src) {
+    if (!src || isGifSrc(src)) return src;
+    if (/^https?:\/\/(?:wsrv\.nl|images\.weserv\.nl)\//i.test(src)) return src;
+    if (!/^https?:\/\//i.test(src)) return src;
+    var inner;
+    if (/^https:\/\/(?:[^/]+\.)?(?:springernature\.com|springer\.com)\//i.test(src)) {
+      inner = src.replace(/^https:\/\//i, "ssl:");
+    } else {
+      inner = src.replace(/^https?:\/\//i, "");
+    }
+    return (
+      "https://wsrv.nl/?url=" +
+      encodeURIComponent(inner) +
+      "&w=768&output=webp&q=85&we"
+    );
+  }
+
+  function renderTags(tags) {
+    if (!Array.isArray(tags) || !tags.length) return "";
+    var html = '<div class="post-tags"><ul class="post-tags__list">';
+    var count = 0;
+    for (var i = 0; i < tags.length; i++) {
+      var t = String(tags[i] || "").trim();
+      if (!t) continue;
+      html +=
+        '<li><a href="' +
+        escapeHtml(tagHref(t)) +
+        '" class="tag">' +
+        escapeHtml(t) +
+        "</a></li>";
+      count += 1;
+    }
+    html += "</ul></div>";
+    return count ? html : "";
+  }
+
+  function renderImg(img, permalink) {
+    if (!img) return "";
+    var src = typeof img === "string" ? img : img.src;
+    var alt = typeof img === "object" && img ? img.alt : "";
+    if (!isSafeSrc(src) || isGifSrc(src)) return "";
+    var display = displayImgSrc(src);
+    var tag =
+      '<img src="' +
+      escapeHtml(display) +
+      '" alt="' +
+      escapeHtml(alt || "") +
+      '" loading="lazy" decoding="async"';
+    if (display !== src) {
+      tag += ' data-full-src="' + escapeHtml(src) + '"';
+    }
+    tag += ">";
+    if (permalink) {
+      return (
+        '<p><a href="' + escapeHtml(permalink) + '">' + tag + "</a></p>"
+      );
+    }
+    return "<p>" + tag + "</p>";
+  }
+
+  function renderDate(p) {
+    var url = p.url || "";
+    var label = p.date_label || formatLongDate(p.date) || p.date || "";
+    return (
+      '<a class="post-meta__date" href="' +
+      escapeHtml(url) +
+      '"><time datetime="' +
+      escapeHtml(p.date || "") +
+      '">' +
+      escapeHtml(label) +
+      "</time></a>"
+    );
+  }
+
+  function renderEntry(p) {
+    var url = p.url || "";
+    var tags = renderTags(p.tags);
+    var excerpt = p.excerpt ? "<p>" + escapeHtml(p.excerpt) + "</p>" : "";
+    var img = renderImg(p.img, url);
+    var body = excerpt + img;
+    if (p.kind === "link") {
+      return (
+        '<li><div class="link-entry">' +
+        '<p class="post-meta link-entry__meta">' +
+        renderDate(p) +
+        "</p>" +
+        (excerpt ? '<div class="link-entry__body">' + excerpt + "</div>" : "") +
+        tags +
+        (img ? '<div class="prose">' + img + "</div>" : "") +
+        "</div></li>"
+      );
+    }
+    return (
+      '<li><article class="stream-post">' +
+      '<h2 class="stream-post__title"><a href="' +
+      escapeHtml(url) +
+      '">' +
+      escapeHtml(p.title || "") +
+      "</a></h2>" +
+      '<p class="post-meta stream-post__meta">' +
+      renderDate(p) +
+      "</p>" +
+      tags +
+      (body ? '<div class="prose stream-post__excerpt">' + body + "</div>" : "") +
+      '<p class="read-more"><a href="' +
+      escapeHtml(url) +
+      '">Read more</a></p>' +
+      "</article></li>"
+    );
   }
 
   function slugify(value) {
@@ -200,23 +355,9 @@
       (items.length === 1 ? " post" : " posts") +
       (label ? " for " + escapeHtml(label) : "") +
       ".</p>";
-    html += '<ul class="post-list">';
+    html += '<ul class="post-list stream-list">';
     for (var i = 0; i < items.length; i++) {
-      var p = items[i];
-      html +=
-        "<li>" +
-        '<a href="' +
-        escapeHtml(p.url) +
-        '">' +
-        escapeHtml(p.title) +
-        "</a>" +
-        '<div class="post-meta">' +
-        escapeHtml(p.date || "") +
-        "</div>" +
-        '<p class="mt-2 mb-0">' +
-        escapeHtml(p.excerpt || "") +
-        "</p>" +
-        "</li>";
+      html += renderEntry(items[i]);
     }
     html += "</ul>";
     results.innerHTML = html;
