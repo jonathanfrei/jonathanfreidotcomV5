@@ -24,7 +24,7 @@
   {% include embed-scripts.html %}
   {% comment %} Theme JS loads on first click of footer toggle (see footer.html). {% endcomment %}
   {% if content contains '<pre' %}
-  <script src="{{ '/assets/js/code-blocks.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/code-blocks.js' | asset_url }}" defer></script>
   {% endif %}
 </body>
 </html>

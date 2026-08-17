@@ -66,7 +66,7 @@ module Jekyll
     }.freeze
 
     # Already going through our image CDN/proxy — do not re-proxy.
-    PROXY_HOST = %r{\Ahttps?://(?:wsrv\.nl|images\.weserv\.nl)/}i.freeze
+    PROXY_HOST = %r{\Ahttps?://(?:wsrv\.nl|images\.weserv\.nl|cdn\.jsdelivr\.net)/}i.freeze
 
     # wsrv defaults to http when the scheme is omitted. Some origins
     # (Springer) 404 on that http fetch; force ssl: for those (#203).
