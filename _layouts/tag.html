@@ -2,9 +2,9 @@
 layout: default
 ---
 {% comment %}
-  Tag pages from jekyll-paginate-v2 autopages expose paginator.
-  page.title is set to the configured title (e.g. "Tag: name").
-  List entries match /blog (#201).
+  Unused since #209: individual /tags/:name archives are not generated.
+  Tag chips and /tags link to /tags?tag=name (client-side search).
+  Kept so the layout exists if tag autopages are ever re-enabled.
 {% endcomment %}
 {% assign archive_name = page.tag | default: page.title | default: page.category %}
 {% if archive_name contains 'Tag: ' %}

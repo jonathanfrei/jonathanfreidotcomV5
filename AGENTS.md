@@ -89,7 +89,7 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 - **Reading time / word count:** computed at build (`reading_time`, `word_count`); “N min read” shows when ≥ 2 minutes. No front matter required.
 - **`description`:** encourage on new posts for stable SEO/social; archive posts need not be backfilled.
 - Default layout is `post` (from `_config.yml`). Do not set a custom layout unless needed.
-- Tags should be simple lowercase slugs where possible; archives live at `/tags/:name`.
+- Tags should be simple lowercase slugs where possible; chips link to `/tags?tag=name`.
 - A malformed post or link is skipped (site still builds). Check `_site/build-errors.log` and the Actions log before the next publish (#186).
 
 ### Drafts (`_x7k9p/`)
@@ -123,11 +123,12 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
   no separate `/posts` or `/links` index; those URLs redirect to `/blog`.
   Essays on `/blog` show title, date, tags, reading time, a 2–3 paragraph
   excerpt, and Read more. Link entries hide the title and keep `→` on the
-  first line. Link tags are ordinary post tags on `/tags/:name`.
+  first line. Link tags are ordinary post tags; chips go to `/tags?tag=name`.
 - **List views match `/blog`** (`_includes/stream-list.html`, #201): month
-  archives (`/archive/YYYY/MM/`), tag pages (`/tags/:name`), and category
-  pages (`/categories/:name`) use the same post-entry / link-entry stream.
-  Do not regress those pages to title+date-only rows.
+  archives (`/archive/YYYY/MM/`) and category pages (`/categories/:name`)
+  use the same post-entry / link-entry stream. Tag results are client-side
+  search on `/tags?tag=name` (no generated `/tags/:name` pages, #209).
+  Do not regress remaining list pages to title+date-only rows.
 - Feed: `/feed.xml` (mixed; link items `<link>`/`<guid>` the external URL;
   full content). Link items use `#` for the on-site permalink in RSS only.
 - Example:
@@ -154,7 +155,7 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 - `index.md` stays at the repo root (homepage).
 - Use **no trailing slash** in permalinks (see below).
 - Long-form specimen / design reference: `_pages/typography.md` → `/typography`.
-- Tags: only multi-post tags get `/tags/:name` archives and appear on `/tags`; singleton tags render as non-link chips on posts (#140).
+- Tags: `/tags` lists multi-post tags (#140). Every chip (including singletons) links to `/tags?tag=name`. Individual `/tags/:name` pages are not generated (#209). Old `/tags/:name` URLs 404-redirect to the search URL.
 
 ### Media embeds
 
@@ -192,13 +193,13 @@ editorial/
 
 ### 1. Permalinks must not use a trailing slash
 
-Desired URLs: `/about`, `/blog`, `/2026/08/05/slug`, `/tags/foo` — **not** `/about/`, etc. (issue #63).
+Desired URLs: `/about`, `/blog`, `/2026/08/05/slug`, `/tags` — **not** `/about/`, etc. (issue #63).
 
-- **Do:** `permalink: /about`, post pattern `/:year/:month/:day/:title`, tag archives `/tags/:name`
+- **Do:** `permalink: /about`, post pattern `/:year/:month/:day/:title`, tag search `/tags?tag=name`
 - Post `:year/:month/:day` uses **`timezone: America/New_York`** (issue #180), not the Actions runner’s UTC clock.
 - Jekyll then writes **`.html` files** (`about.html`). GitHub Pages serves those at the clean path.
 - **Do not** write extensionless files (no `.html`) — GH Pages may download them as `application/octet-stream`.
-- Keep internal links consistent (`/blog`, `/tags/foo`, etc.).
+- Keep internal links consistent (`/blog`, `/tags?tag=foo`, etc.).
 - After deploy, Cloudflare should 301 `/path/` → `/path` so old bookmarks still work (see PR for #63).
 - Month archives (`/archive/YYYY/MM/`) **must** keep the trailing slash (directory + `index.html`).
 
@@ -312,8 +313,8 @@ Production depends on external services for media (configured in `_config.yml` `
 | Search / tag / archive indexes | `_plugins/site_index.rb` + `site_index` in `_config.yml` (#195) |
 | Date timezone | `_config.yml` `timezone: America/New_York` (#180) |
 | Drop caps on long posts | `_plugins/drop_cap.rb` + `.prose--drop-cap` in `main.css` (#123) |
-| Tag archive title | `_layouts/tag.html` |
-| Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` (thin dump of `site.data.search_index`) |
+| Tag archive title | unused `_layouts/tag.html` (tag pages not generated, #209) |
+| Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` (thin dump of `site.data.search_index`). URLs: `?q=`, `?tag=`, `?title=`; `?=text` aliases `?q=`. |
 | Random-post URL list | `search.json` (`url` + `kind`; `posts.json` removed — #130) |
 | Theme toggle | Boot in `_includes/head.html`; full `assets/js/theme.js` loads on first click (footer stub) |
 | Site config | `_config.yml` |
@@ -329,7 +330,7 @@ Before finishing a change that touches build, layouts, or CSS:
 
 1. [ ] Permalinks have **no** trailing slash for HTML pages (`/about` not `/about/`). Link posts use the same `/:year/:month/:day/:title` shape as essays.
 2. [ ] Every HTML page links `/assets/css/core.css` (no inlined `main.css`); `code.css` only on code pages; no `../` includes
-3. [ ] Tags on `/blog` still look like chips (not oversized title links). Month/tag/category lists use the same stream entries as `/blog` (#201).
+3. [ ] Tags on `/blog` still look like chips (not oversized title links) and point at `/tags?tag=`. Month/category lists use the same stream entries as `/blog` (#201). No `/tags/:name` HTML files.
 4. [ ] Drafts stay out of `_posts/` until intentional publish
 5. [ ] If workflow changed, confirm Actions majors and `paths-ignore` still make sense
 6. [ ] Prefer a green deploy run after merge/push to `main`

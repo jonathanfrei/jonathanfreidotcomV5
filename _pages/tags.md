@@ -3,6 +3,7 @@ layout: page
 title: Tags
 permalink: /tags
 ---
+{% include search-ui.html %}
 <style>
 .tags-sort-controls {
   display: flex;
@@ -49,10 +50,11 @@ permalink: /tags
 <ul class="tags" id="tags-list">
 {%- comment -%}
   Precomputed in _plugins/site_index.rb: tags with 2+ posts, most-used first (#140, #195).
+  Chips link to /tags?tag=name instead of /tags/:name (#209).
 {%- endcomment -%}
 {%- for tag in archive_tags -%}
   <li data-name="{{ tag.name | downcase | escape }}" data-count="{{ tag.count }}">
-    <a class="tag" href="{{ '/tags/' | relative_url }}{{ tag.slug }}">{{ tag.name }}</a>
+    <a class="tag" href="{{ '/tags' | relative_url }}?tag={{ tag.name | url_encode }}">{{ tag.name }}</a>
     <span class="post-meta">({{ tag.count }})</span>
   </li>
 {%- endfor -%}
