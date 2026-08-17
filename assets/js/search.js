@@ -30,7 +30,11 @@
     if (base === "/") base = "";
     // search.json is generated and stays on origin. Do not derive it from the
     // search.js URL — that script is on jsDelivr in production.
-    return (base || "") + "/search.json";
+    // ?v= is the build time so a Cloudflare Cache Everything HIT cannot keep
+    // a pre-deploy index (the #214 categories miss).
+    var path = (base || "") + "/search.json";
+    var rev = window.searchIndexRev == null ? "" : String(window.searchIndexRev);
+    return rev ? path + "?v=" + encodeURIComponent(rev) : path;
   }
 
   // Avoid HTML entity literals in source (GitHub content API can strip them).

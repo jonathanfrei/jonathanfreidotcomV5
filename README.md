@@ -100,7 +100,9 @@ This zone is on the **Free** plan. Redirect **Then** expressions cannot use `reg
 
 **Cache Rule** so HTML is stored at the nearest Cloudflare PoP. Exclude static extensions so the existing long-TTL asset rule (issue #119) is not shortened to 2 hours.
 
-When: Hostname equals `jonathanfrei.com`, and file extension is not `css` / `js` / `png` / `jpg` / `webp` / `svg` / `ico` / `woff` / `woff2` / `xml`.
+When: Hostname equals `jonathanfrei.com`, and file extension is not `css` / `js` / `png` / `jpg` / `webp` / `svg` / `ico` / `woff` / `woff2` / `xml` / `json`.
+
+Exclude **`.json`**. `/search.json` changes every publish; if Cache Everything holds it for 2 hours, `/categories?category=` and `/tags?tag=` show “No matching posts” until the edge expires or you purge.
 
 | Setting | Value |
 | --- | --- |

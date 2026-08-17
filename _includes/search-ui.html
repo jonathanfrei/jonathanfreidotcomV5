@@ -43,6 +43,7 @@
   <div id="search-results" aria-live="polite"></div>
   <script>
     window.siteBaseurl = {{ site.baseurl | jsonify }};
+    window.searchIndexRev = {{ site.time | date: "%s" | jsonify }};
   </script>
   {% include asset-script.html path="/assets/js/search.js" defer=true %}
 </div>
