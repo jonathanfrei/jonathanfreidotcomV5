@@ -72,6 +72,14 @@
   margin-top: var(--space-6);
 }
 
+#search-results .stream-list {
+  margin-top: var(--space-5);
+}
+
+#search-results .stream-post__excerpt img {
+  margin-top: 0;
+}
+
 /*
   Keep the footer out of the first screen on /search, and hold space for
   results when the URL already has ?q= / ?tag= (#212). Tag and archive

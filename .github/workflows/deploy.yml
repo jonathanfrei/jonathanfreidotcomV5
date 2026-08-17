@@ -61,7 +61,7 @@ jobs:
           TZ: America/New_York
 
       - name: Report build metrics
-        # Duration, payload size, and a search.json contract (#195).
+        # Duration, payload size, and a search.json contract (#195, #219).
         # Warn budgets are guardrails; only an oversized search index fails.
         env:
           BUILD_SECONDS: ${{ steps.jekyll.outputs.seconds }}
@@ -84,8 +84,18 @@ jobs:
           warn_bytes = 600_000
           fail_bytes = 1_500_000
           warn_secs = 600
-          allowed = {"kind", "title", "url", "date", "excerpt", "tags", "categories"}
-          required = {"title", "url", "date"}
+          allowed = {
+              "kind",
+              "title",
+              "url",
+              "date",
+              "date_label",
+              "excerpt",
+              "tags",
+              "categories",
+              "img",
+          }
+          required = {"title", "url", "date", "date_label"}
           bad = 0
 
           with open(path, encoding="utf-8") as fh:
@@ -108,6 +118,12 @@ jobs:
                   bad = 1
               if missing:
                   print(f"::error::search.json[{i}] missing fields: {sorted(missing)}")
+                  bad = 1
+              img = item.get("img")
+              if img is not None and (
+                  not isinstance(img, dict) or not str(img.get("src") or "").strip()
+              ):
+                  print(f"::error::search.json[{i}] img must be an object with src")
                   bad = 1
 
           if size > fail_bytes:

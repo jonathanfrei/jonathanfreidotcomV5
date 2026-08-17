@@ -6,8 +6,10 @@
 # /tags, /categories, /sitemap, month archive list). That work now happens
 # once here; Liquid just dumps the precomputed arrays.
 #
-# search.json stays a thin payload: kind, title, url, date, short excerpt,
-# tags, categories. No description, last_modified, reading_time, or full body.
+# search.json stays a thin payload: kind, title, url, date (ISO), date_label
+# (long, e.g. "August 17, 2026"), short excerpt, tags, categories, and the
+# first non-GIF content image (src + alt) when one exists (#219).
+# No description, last_modified, reading_time, or full body.
 #
 # Config (_config.yml):
 #   site_index:
@@ -44,15 +46,19 @@ module Jekyll
     end
 
     def search_entry(site, post, excerpt_chars)
-      {
+      entry = {
         "kind" => kind(post),
         "title" => post.data["title"].to_s,
         "url" => relative_url(site, post.url),
         "date" => format_iso_date(post.date),
+        "date_label" => format_long_date(post.date),
         "excerpt" => blurb(post, excerpt_chars),
         "tags" => Array(post.data["tags"]).map(&:to_s),
         "categories" => Array(post.data["categories"]).map(&:to_s)
       }
+      img = first_image(site, post)
+      entry["img"] = img if img
+      entry
     end
 
     def kind(post)
@@ -120,6 +126,104 @@ module Jekyll
       return "" unless value.respond_to?(:strftime)
 
       value.strftime("%Y-%m-%d")
+    end
+
+    # Portable long date. Avoid "%-d" — MSVC strftime on Windows rejects it.
+    def format_long_date(value)
+      return "" unless value.respond_to?(:year)
+
+      "#{value.strftime("%B")} #{value.day}, #{value.year}"
+    end
+
+    # First usable <img> / markdown image in the post body. GIFs stay off
+    # list views (same policy as list_excerpt). Archive media/ paths are
+    # resolved the same way FixArchiveMedia rewrites them at render time.
+    MD_IMG = %r{!\[([^\]]*)\]\(\s*(?:<([^>]+)>|((?:\\[()]|[^)\s])+))}.freeze
+    HTML_IMG = %r{<img\b[^>]*>}i.freeze
+
+    def first_image(site, post)
+      each_source_image(post.content.to_s) do |src, alt|
+        resolved = normalize_img_src(site, post, src)
+        next unless usable_img_src?(resolved)
+
+        return { "src" => resolved, "alt" => alt.to_s }
+      end
+
+      fallback = post.data["image"].to_s.strip
+      if !fallback.empty?
+        resolved = normalize_img_src(site, post, fallback)
+        if usable_img_src?(resolved)
+          alt = post.data["image_alt"].to_s
+          return { "src" => resolved, "alt" => alt }
+        end
+      end
+
+      nil
+    end
+
+    def each_source_image(content)
+      found = []
+      content.to_s.scan(MD_IMG) do
+        src = (Regexp.last_match(2) || Regexp.last_match(3)).to_s
+        found << [Regexp.last_match.begin(0), src, Regexp.last_match(1).to_s]
+      end
+      content.to_s.scan(HTML_IMG) do
+        tag = Regexp.last_match[0]
+        src = tag[/\bsrc\s*=\s*["']([^"']+)["']/i, 1]
+        next if src.nil?
+
+        alt = tag[/\balt\s*=\s*["']([^"']*)["']/i, 1].to_s
+        found << [Regexp.last_match.begin(0), src, alt]
+      end
+      found.sort_by(&:first).each { |_, src, alt| yield src, alt }
+    end
+
+    def normalize_img_src(site, post, src)
+      value = unescape_markdown_dest(src.to_s).strip
+      value = value.sub(/\A["']/, "").sub(/["']\z/, "")
+      return "" if value.empty?
+
+      if value.match?(%r{\Amedia/}i)
+        return resolve_archive_media_src(site, post, value)
+      end
+      return value if value.match?(%r{\Ahttps?://}i)
+      return relative_url(site, value) if value.start_with?("/")
+
+      ""
+    end
+
+    def resolve_archive_media_src(site, post, src)
+      rel = src.sub(%r{\Amedia/}i, "")
+      path = post.respond_to?(:relative_path) ? post.relative_path.to_s : ""
+      if defined?(Jekyll::FixArchiveMedia) &&
+         Jekyll::FixArchiveMedia.archive_post?(path)
+        slug = Jekyll::FixArchiveMedia.archive_slug_for_post(path)
+        baseurl = site.config["baseurl"] || ""
+        mode_name = Jekyll::FixArchiveMedia.mode(site)
+        return Jekyll::FixArchiveMedia.resolve_media_url(
+          site, rel, baseurl, mode_name, archive_slug: slug
+        ).to_s
+      end
+
+      relative_url(site, "/media/#{rel.sub(%r{\A/+}, "")}")
+    end
+
+    def unescape_markdown_dest(src)
+      src.to_s.gsub(/\\([()\\])/, '\1')
+    end
+
+    def usable_img_src?(src)
+      return false if src.nil? || src.empty?
+      return false if gif_src?(src)
+      return false if src.match?(/\A(?:javascript|data|blob|file):/i)
+      return true if src.match?(%r{\Ahttps?://}i)
+      return true if src.start_with?("/") && !src.start_with?("//")
+
+      false
+    end
+
+    def gif_src?(src)
+      src.to_s.match?(/\.gif(?:\?|#|$)/i)
     end
 
     def count_map(hash)

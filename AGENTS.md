@@ -127,9 +127,11 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 - **List views match `/blog`** (`_includes/stream-list.html`, #201): month
   archives (`/archive/YYYY/MM/`) use the same post-entry / link-entry stream.
   Tag results are `/tags?tag=name`; category results are
-  `/categories?category=name`. No generated `/tags/:name` or
-  `/categories/:name` pages. Do not regress remaining list pages to
-  title+date-only rows.
+  `/categories?category=name`. Those query views (and `/search?q=`) render
+  from `search.json` with the same stream elements that exist in the index:
+  title, long date, tags, excerpt, first image, Read more (#219). No
+  generated `/tags/:name` or `/categories/:name` pages. Do not regress
+  remaining list pages to title+date-only rows.
 - Feed: `/feed.xml` (mixed; link items `<link>`/`<guid>` the external URL;
   full content). Link items use `#` for the on-site permalink in RSS only.
 - Example:
@@ -323,11 +325,11 @@ Production depends on external services for media (configured in `_config.yml` `
 | Site-wide layout | `_layouts/default.html` |
 | Post chrome (tags, comment mailto, random post) | `_layouts/post.html` (random uses on-click fetch of `search.json`) |
 | Post metadata (last_modified, reading time) | `_plugins/post_metadata.rb` + `post_metadata` in `_config.yml` (#75) |
-| Search / tag / archive indexes | `_plugins/site_index.rb` + `site_index` in `_config.yml` (#195) |
+| Search / tag / archive indexes | `_plugins/site_index.rb` + `site_index` in `_config.yml` (#195). `search.json` includes `date_label` and first-image `img` (`src` + `alt`) for stream results (#219). |
 | Date timezone | `_config.yml` `timezone: America/New_York` (#180) |
 | Drop caps on long posts | `_plugins/drop_cap.rb` + `.prose--drop-cap` in `main.css` (#123) |
 | Tag archive title | unused `_layouts/tag.html` (tag pages not generated, #209) |
-| Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` (thin dump of `site.data.search_index`). URLs: `?q=`, `?tag=`, `?category=`, `?title=`; `?=text` aliases `?q=`. The query string is the source of truth until the user types; an inline seed fills the box on first paint (#211). `search.js` is deferred; `/search` and query URLs reserve result space so the footer does not shift (#212). Tag, category, and archive lists stay visible below results. |
+| Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` (thin dump of `site.data.search_index`). URLs: `?q=`, `?tag=`, `?category=`, `?title=`; `?=text` aliases `?q=`. The query string is the source of truth until the user types; an inline seed fills the box on first paint (#211). `search.js` is deferred; `/search` and query URLs reserve result space so the footer does not shift (#212). Result cards reuse the `/blog` stream markup (title, long date, tag chips, excerpt, first image, Read more; link entries hide the title) (#219). Tag, category, and archive lists stay visible below results. |
 | Random-post URL list | `search.json` (`url` + `kind`; `posts.json` removed — #130) |
 | Theme toggle | Boot in `_includes/head.html`; full `assets/js/theme.js` loads on first click (footer stub) |
 | Asset CDN | `_plugins/asset_cdn.rb` + `assets_cdn` in `_config.yml`. Production: jsDelivr `@SHA` with origin `/assets` `onerror` fallback (`asset_url` / `asset_origin_url`). Local: `/assets`. |
