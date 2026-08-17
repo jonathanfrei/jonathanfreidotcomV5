@@ -8,7 +8,8 @@
 #
 # Pin the URL to the build commit (GITHUB_SHA, or git HEAD) so a deploy is
 # not stuck behind jsDelivr's @main cache. Origin copies still write to
-# _site/assets for local serve and as a fallback.
+# _site/assets. Templates attach data-fallback + assetFallback() so a
+# GitHub/jsDelivr miss still loads /assets from Pages.
 #
 # Config (_config.yml):
 #   assets_cdn:
@@ -126,6 +127,11 @@ module Jekyll
     def asset_url(input)
       site = @context.registers[:site]
       Jekyll::AssetCdn.url(site, input)
+    end
+
+    def asset_origin_url(input)
+      site = @context.registers[:site]
+      Jekyll::AssetCdn.origin_url(site, input)
     end
   end
 

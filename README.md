@@ -78,7 +78,7 @@ GitHub Pages sets short default cache lifetimes (Lighthouse often reports ~10 mi
 
 Optional: “Cache Everything” for HTML with a short Edge TTL (e.g. 2 hours) if you want faster global TTFB and accept brief staleness after deploys. Purge cache after important publishes if you use that rule.
 
-**CSS:** brand design system is `_includes/main.css` (Paper / Ink / Signature Blue `#0077A8`). Production pages load it (and `/assets` JS/favicons) from jsDelivr, pinned to the deploy commit. Local `jekyll serve` still uses `/assets/css/core.css`. Feature sheets (code, search, embeds, pagination) load only when the page needs them. Long-form **editorials** live under `editorial/` (Markdown `layout: editorial` or handcrafted HTML) and add the editorial sheet. Tooling: `/assets/css/main.css`, `/assets/css/editorial.css`.
+**CSS:** brand design system is `_includes/main.css` (Paper / Ink / Signature Blue `#0077A8`). Production pages load it (and `/assets` JS/favicons) from jsDelivr, pinned to the deploy commit, and fall back to origin `/assets` if the CDN misses. Local `jekyll serve` still uses `/assets/css/core.css`. Feature sheets (code, search, embeds, pagination) load only when the page needs them. Long-form **editorials** live under `editorial/` (Markdown `layout: editorial` or handcrafted HTML) and add the editorial sheet. Tooling: `/assets/css/main.css`, `/assets/css/editorial.css`.
 
 ## Structure
 
