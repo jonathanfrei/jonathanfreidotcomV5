@@ -1,15 +1,43 @@
 {% comment %}
   markdown="0" keeps Kramdown from parsing inside this shell when
   parse_block_html is on (#154). Multi-line <input> was escaped as text.
+  The seed script sits next to the input so ?tag= / ?q= fill the box
+  even if a cached copy of search.js is late or empty (#211).
 {% endcomment %}
 <div class="search-ui" markdown="0">
   <label for="search-input" class="sr-only">Search posts</label>
-  <input type="search" id="search-input" class="search-input" placeholder="Search posts…" autocomplete="off">
-  <p class="post-meta search-hint">Use <code>tag:photography</code> to search tags. Shareable as <code>?q=</code> or <code>?tag=</code>.</p>
+  <input type="search" id="search-input" class="search-input" placeholder="Search posts…" autocomplete="off" spellcheck="false">
+  <script>
+  (function () {
+    var input = document.getElementById("search-input");
+    if (!input) return;
+    var params, q, tag, title, parts;
+    try {
+      params = new URLSearchParams(window.location.search || "");
+    } catch (e) {
+      return;
+    }
+    q = (params.get("q") || "").trim();
+    tag = (params.get("tag") || "").trim();
+    title = (params.get("title") || "").trim();
+    if (!q) {
+      var emptyKey = params.get("");
+      if (emptyKey) q = String(emptyKey).trim();
+    }
+    parts = [];
+    if (tag) parts.push("tag:" + (/[\s:=]/.test(tag) ? '"' + tag + '"' : tag));
+    if (title) parts.push("title:" + (/[\s:=]/.test(title) ? '"' + title + '"' : title));
+    if (q) parts.push(q);
+    if (!parts.length) return;
+    var text = parts.join(" ");
+    input.value = text;
+    input.defaultValue = text;
+  })();
+  </script>
+  <p class="search-hint">Try <span class="search-hint__token">tag:photography</span> to search one tag.</p>
   <div id="search-results" aria-live="polite"></div>
+  <script>
+    window.siteBaseurl = {{ site.baseurl | jsonify }};
+  </script>
+  <script src="{{ '/assets/js/search.js' | relative_url }}?v=211"></script>
 </div>
-
-<script>
-  window.siteBaseurl = {{ site.baseurl | jsonify }};
-</script>
-<script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>
