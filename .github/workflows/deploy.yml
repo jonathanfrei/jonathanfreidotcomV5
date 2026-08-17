@@ -286,11 +286,25 @@ jobs:
               missing=1
             fi
           fi
-          if [ -f _site/tags.html ]; then
-            if grep -q 'URLSearchParams' _site/tags.html && grep -q 'search.js?v=' _site/tags.html; then
-              echo "OK: /tags inlines URL seed and cache-busts search.js"
+          if [ -f _site/search.html ]; then
+            if grep -q 'search-landing' _site/search.html && grep -q 'min-height: 55vh' _site/search.html; then
+              echo "OK: /search reserves result space to limit CLS"
             else
-              echo "::error::_site/tags.html should inline a URL seed and load search.js?v="
+              echo "::error::_site/search.html should reserve min-height for search results"
+              missing=1
+            fi
+            if grep -q '#tags-list' _site/search.html && grep -q 'display: none' _site/search.html; then
+              echo "::error::search CSS should not hide the tag or archive lists"
+              missing=1
+            else
+              echo "OK: search does not hide tag/archive lists"
+            fi
+          fi
+          if [ -f _site/tags.html ]; then
+            if grep -q 'URLSearchParams' _site/tags.html && grep -q 'search.js?v=' _site/tags.html && grep -q 'defer' _site/tags.html; then
+              echo "OK: /tags inlines URL seed, defers search.js, and cache-busts it"
+            else
+              echo "::error::_site/tags.html should inline a URL seed and defer search.js?v="
               missing=1
             fi
           fi
