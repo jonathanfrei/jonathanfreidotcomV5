@@ -227,16 +227,20 @@ jobs:
             echo "OK: _site/assets/css/core.css"
           fi
 
-          # Every page links /assets/css/core.css (PR #208). Do not inline main.css.
+          # Production pages load the design system from jsDelivr (git SHA).
+          # Origin still writes _site/assets/css/core.css as a fallback.
           for sample in _site/blog.html _site/index.html _site/about.html \
             _site/2009/08/29/getting-started.html _site/blog/page/2/index.html; do
             if [ ! -f "$sample" ]; then
               continue
             fi
-            if grep -q '/assets/css/core.css' "$sample"; then
-              echo "OK: $sample links core.css"
+            if grep -q 'cdn.jsdelivr.net/gh/jonathanfrei/jonathanfreidotcomV5@' "$sample" \
+              && grep -q '_includes/main.css' "$sample" \
+              && grep -q 'data-fallback="/assets/css/core.css"' "$sample" \
+              && grep -q 'assetFallback' "$sample"; then
+              echo "OK: $sample links core.css via jsDelivr with origin fallback"
             else
-              echo "::error::$sample should link /assets/css/core.css"
+              echo "::error::$sample should link core.css from jsDelivr and fall back to /assets/css/core.css"
               missing=1
             fi
             if grep -q -- '--brand-paper:' "$sample"; then
@@ -245,10 +249,14 @@ jobs:
             fi
           done
           if [ -f _site/editorial/design-system.html ]; then
-            if grep -q '/assets/css/editorial.css' _site/editorial/design-system.html; then
-              echo "OK: editorial page links editorial.css"
+            if grep -q 'cdn.jsdelivr.net/gh/jonathanfrei/jonathanfreidotcomV5@' \
+              _site/editorial/design-system.html \
+              && grep -q '_includes/editorial.css' _site/editorial/design-system.html \
+              && grep -q 'data-fallback="/assets/css/editorial.css"' \
+              _site/editorial/design-system.html; then
+              echo "OK: editorial page links editorial.css via jsDelivr with origin fallback"
             else
-              echo "::error::_site/editorial/design-system.html should link /assets/css/editorial.css"
+              echo "::error::_site/editorial/design-system.html should fall back to /assets/css/editorial.css"
               missing=1
             fi
           fi
@@ -301,10 +309,10 @@ jobs:
             fi
           fi
           if [ -f _site/tags.html ]; then
-            if grep -q 'URLSearchParams' _site/tags.html && grep -q 'search.js?v=' _site/tags.html && grep -q 'defer' _site/tags.html; then
-              echo "OK: /tags inlines URL seed, defers search.js, and cache-busts it"
+            if grep -q 'URLSearchParams' _site/tags.html && grep -q 'search.js' _site/tags.html && grep -q 'defer' _site/tags.html; then
+              echo "OK: /tags inlines URL seed and defers search.js"
             else
-              echo "::error::_site/tags.html should inline a URL seed and defer search.js?v="
+              echo "::error::_site/tags.html should inline a URL seed and defer search.js"
               missing=1
             fi
           fi

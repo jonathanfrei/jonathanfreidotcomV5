@@ -7,6 +7,35 @@
 {% comment %}
   Legacy /tags/:name and /categories/:name archives 404. Send them to
   search URLs before paint (#209).
+  If jsDelivr cannot fetch the pinned commit (GitHub blip), swap CSS/JS/images
+  to the origin copy still published under /assets.
+{% endcomment %}
+<script>
+window.assetFallback = function (el) {
+  var fallback = el && el.getAttribute && el.getAttribute("data-fallback");
+  if (!fallback) return;
+  el.onerror = null;
+  el.removeAttribute("data-fallback");
+  if (el.tagName === "LINK") {
+    el.href = fallback;
+    return;
+  }
+  if (el.tagName === "IMG") {
+    el.src = fallback;
+    return;
+  }
+  if (el.tagName === "SCRIPT") {
+    var next = document.createElement("script");
+    if (el.defer) next.defer = true;
+    if (el.async) next.async = true;
+    next.src = fallback;
+    (el.parentNode || document.head).insertBefore(next, el.nextSibling);
+  }
+};
+</script>
+
+{% comment %}
+  Legacy /tags/:name archives now 404. Send them to /tags?tag= before paint (#209).
 {% endcomment %}
 {% if page.url == '/404.html' %}
 <script>
@@ -68,8 +97,12 @@
 </script>
 
 {% comment %} Favicon (#22) {% endcomment %}
-<link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" type="image/png">
-<link rel="apple-touch-icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
+{%- assign favicon_ico = '/assets/img/favicon.ico' | asset_url -%}
+{%- assign favicon_ico_origin = '/assets/img/favicon.ico' | asset_origin_url -%}
+{%- assign favicon_png = '/assets/img/favicon.png' | asset_url -%}
+{%- assign favicon_png_origin = '/assets/img/favicon.png' | asset_origin_url -%}
+<link rel="icon" href="{{ favicon_ico }}"{% if favicon_ico != favicon_ico_origin %} data-fallback="{{ favicon_ico_origin }}" onerror="assetFallback(this)"{% endif %} type="image/png">
+<link rel="apple-touch-icon" href="{{ favicon_png }}"{% if favicon_png != favicon_png_origin %} data-fallback="{{ favicon_png_origin }}" onerror="assetFallback(this)"{% endif %}>
 
 {% comment %}
   Archive media loads from S3 (media.jonathanfrei.com, #170); own images get
