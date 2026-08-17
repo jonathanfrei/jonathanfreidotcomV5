@@ -2,8 +2,9 @@
 layout: default
 ---
 {% comment %}
-  Category pages from jekyll-paginate-v2 autopages (#93).
-  List entries match /blog (#201).
+  Unused: individual /categories/:name archives are not generated.
+  Category chips and /categories link to /categories?category=name.
+  Kept so the layout exists if category autopages are ever re-enabled.
 {% endcomment %}
 {% assign archive_name = page.category | default: page.title %}
 {% if archive_name contains 'Category: ' %}

@@ -55,7 +55,7 @@ description: Hierarchical map of pages, sections, tags, and recent posts on jona
       <ul class="site-map__chips">
         {%- assign sitemap_cats = site.data.archive_categories | sort: "name" -%}
         {%- for cat in sitemap_cats -%}
-          <li><a class="tag" href="{{ '/categories/' | relative_url }}{{ cat.slug }}">{{ cat.name }}</a></li>
+          <li><a class="tag" href="{{ '/categories' | relative_url }}?category={{ cat.name | url_encode }}">{{ cat.name }}</a></li>
         {%- endfor -%}
       </ul>
       {%- endif -%}
