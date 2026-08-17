@@ -9,6 +9,7 @@ require "uri"
 #   - decoding=async
 #   - responsive srcset via wsrv.nl (resize + WebP) while data-full-src keeps full-res
 #   - LCP preload uses imagesrcset/imagesizes so the browser fetches one candidate (#173)
+#   - preconnect wsrv.nl / media.jonathanfrei.com only when the page uses them
 #
 # Runs after Markdown → HTML (post_render). Applies to:
 #   - Archive media (S3 via media.jonathanfrei.com, or local /media/)
@@ -564,6 +565,25 @@ module Jekyll
       end
     end
 
+    # Layout-time Liquid may miss these hosts when image URLs are rewritten
+    # here. Add the hint only if the final HTML actually fetches that origin.
+    def inject_host_preconnects(html)
+      return html unless html.include?("</head>")
+
+      tags = []
+      unless html.match?(%r{rel=["']preconnect["'][^>]+https://wsrv\.nl}i)
+        tags << '<link rel="preconnect" href="https://wsrv.nl" crossorigin>' if html.include?("wsrv.nl")
+      end
+      unless html.match?(%r{rel=["']preconnect["'][^>]+https://media\.jonathanfrei\.com}i)
+        if html.include?("media.jonathanfrei.com")
+          tags << '<link rel="preconnect" href="https://media.jonathanfrei.com" crossorigin>'
+        end
+      end
+      return html if tags.empty?
+
+      html.sub(%r{</head>}i, "#{tags.join("\n")}\n</head>")
+    end
+
     def process_document(doc)
       site = doc.site
       return unless doc.respond_to?(:output) && doc.output
@@ -575,7 +595,10 @@ module Jekyll
         doc.data["lcp_imagesrcset"] = imagesrcset unless imagesrcset.empty?
         doc.data["lcp_imagesizes"] = imagesizes unless imagesizes.empty?
       end
-      new_html = inject_lcp_preload(new_html, lcp) if lcp && new_html.include?("</head>")
+      if new_html.include?("</head>")
+        new_html = inject_lcp_preload(new_html, lcp) if lcp
+        new_html = inject_host_preconnects(new_html)
+      end
       doc.output = new_html
     end
 
