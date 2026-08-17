@@ -361,6 +361,40 @@ jobs:
             fi
           fi
 
+          # Resource hints: jsDelivr always; wsrv/media only when the page uses them.
+          if [ -f _site/about.html ]; then
+            if grep -q 'rel="preconnect" href="https://cdn.jsdelivr.net"' _site/about.html; then
+              echo "OK: /about preconnects jsDelivr"
+            else
+              echo "::error::_site/about.html should preconnect cdn.jsdelivr.net"
+              missing=1
+            fi
+            if grep -q 'href="https://wsrv.nl"' _site/about.html; then
+              echo "::error::_site/about.html should not hint wsrv.nl"
+              missing=1
+            else
+              echo "OK: /about does not hint wsrv.nl"
+            fi
+            if grep -q 'href="https://media.jonathanfrei.com"' _site/about.html; then
+              echo "::error::_site/about.html should not hint media.jonathanfrei.com"
+              missing=1
+            else
+              echo "OK: /about does not hint media.jonathanfrei.com"
+            fi
+            if grep -q 'rel="dns-prefetch"' _site/about.html; then
+              echo "::error::_site/about.html should not emit redundant dns-prefetch"
+              missing=1
+            else
+              echo "OK: /about has no dns-prefetch"
+            fi
+            if grep -q 'type="speculationrules"' _site/about.html; then
+              echo "OK: /about includes speculation rules"
+            else
+              echo "::error::_site/about.html should include speculation rules"
+              missing=1
+            fi
+          fi
+
           if [ -f "_site/posts.html" ]; then
             if grep -q 'Redirecting' _site/posts.html && grep -q '/blog' _site/posts.html; then
               echo "OK: _site/posts.html redirects to /blog"
@@ -437,3 +471,24 @@ jobs:
         with:
           error_count: 20
           reporting_interval: 10000
+
+      # HTML is Cache-Everything at Cloudflare (2h edge TTL). Purge so the
+      # next visitor does not keep the pre-deploy homepage for two hours.
+      # Secrets are optional: forks and first-time setups skip this step.
+      - name: Purge Cloudflare cache
+        env:
+          CF_ZONE: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${CF_ZONE}" ] || [ -z "${CF_TOKEN}" ]; then
+            echo "Skipping Cloudflare purge (CLOUDFLARE_ZONE_ID / CLOUDFLARE_API_TOKEN not set)"
+            exit 0
+          fi
+          resp="$(curl -sS -X POST \
+            "https://api.cloudflare.com/client/v4/zones/${CF_ZONE}/purge_cache" \
+            -H "Authorization: Bearer ${CF_TOKEN}" \
+            -H "Content-Type: application/json" \
+            --data '{"purge_everything":true}')"
+          echo "${resp}"
+          printf '%s' "${resp}" | python3 -c 'import json,sys; d=json.load(sys.stdin); raise SystemExit(0 if d.get("success") else 1)'
