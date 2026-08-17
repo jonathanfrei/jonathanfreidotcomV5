@@ -8,7 +8,7 @@ module Jekyll
 
     def per_page(site)
       n = site.config.dig("pagination", "per_page").to_i
-      n.positive? ? n : 50
+      n.positive? ? n : 100
     end
 
     def total_pages(size, per)
