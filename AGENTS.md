@@ -167,7 +167,7 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 - Inline links inside paragraphs are **not** transformed.
 - Embed HTML uses `markdown="0"` and no inner indentation so Kramdown `parse_block_html` does not turn iframes into highlighter blocks (#156).
 - Imgur gallery SEO slugs (`/gallery/title-hash`) resolve to the trailing image hash (#157).
-- Hotlinked third-party images are rewritten through wsrv.nl in production (`archive_media.optimize.hotlink`, #116). HTTPS-only hosts such as Springer need `ssl:` in the wsrv `url` param (wsrv defaults to http and 404s). If the proxy still fails, `data-full-src` plus a capture-phase error listener falls back to the original (#203).
+- Hotlinked third-party images are rewritten through wsrv.nl in production (`archive_media.optimize.hotlink`, #116). HTTPS-only hosts such as Springer need `ssl:` in the wsrv `url` param (wsrv defaults to http and 404s). If the proxy still fails, `data-full-src` plus a capture-phase error listener falls back to the original (#203). Kramdown leaves `\( \)` in destinations (cmark/GitHub unescapes them); the optimizer strips those backslashes before proxying. For new markup, wrap URLs that contain parentheses in `<>`.
 - **GIFs** are never sent through wsrv. Every `<img src="…gif">` gets `loading="lazy"` and is never the LCP/eager candidate. GIF-only paragraphs are omitted from list excerpts (`list_excerpt`) so `/blog` does not download a multi-megabyte animation in the stream. The GIF still renders on the permalink.
 - Standalone article images fill the measure; on viewports ≤40em they full-bleed past `.container` padding (#202, #203). Do not apply `width: 100%` to every `.prose img` (the typography favicon specimen must stay small).
 

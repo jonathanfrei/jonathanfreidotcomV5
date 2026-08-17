@@ -319,6 +319,13 @@ module Jekyll
       s.sub(%r{\Ahttps?://}i, "")
     end
 
+    # Kramdown keeps CommonMark \( \) escapes in the destination; cmark/GitHub
+    # unescapes them. Those leftover backslashes 404 on origin and wsrv.nl
+    # (e.g. file_\(1957\).jpg vs file_(1957).jpg).
+    def unescape_markdown_dest(src)
+      src.to_s.gsub(/\\([()\\])/, '\1')
+    end
+
     # Ensure origin is an absolute https URL so wsrv.nl can fetch it.
     def absolute_origin(site, src)
       s = src.to_s
@@ -394,7 +401,8 @@ module Jekyll
     end
 
     def enhance_img_tag(site, cfg, tag_attrs, index)
-      src = tag_attrs["src"]
+      src = unescape_markdown_dest(tag_attrs["src"])
+      tag_attrs["src"] = src
       return nil unless optimizable?(site, src, tag_attrs)
       return nil if tag_attrs["data-img-opt"] == "1"
       return nil if src.to_s.match?(PROXY_HOST)
