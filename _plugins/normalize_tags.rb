@@ -6,9 +6,10 @@
 # 2. Normalize strings so autopages don't emit duplicate slugs
 #    (e.g. "google+" vs "google", "dr. seuss" vs "dr seuss").
 # 3. Merge known aliases + singular/plural pairs into one canonical label.
-# 4. Expose helpers for singleton-tag UI and prune autopages with < 2 posts.
+# 4. Expose helpers for the /tags index and prune leftover /tags/:name pages.
 #
-# Min posts for a public tag archive /tags list entry (not a clickable chip):
+# Min posts for a public /tags list entry. Chips always link to /tags?tag=
+# (issue #209); individual tag archives are not generated.
 MIN_TAG_ARCHIVE_POSTS = 2
 
 module Jekyll
@@ -159,9 +160,8 @@ module Jekyll
       tag_post_count(site, tag) >= min
     end
 
-    # Drop jekyll-paginate-v2 tag autopages that would only list one post (#140).
-    # Runs at :pre_render so it is after PaginationGenerator (:lowest), which
-    # both creates autopages and materializes paginated copies.
+    # Drop leftover individual tag archives. Tag discovery is /tags?tag= (#209).
+    # Runs at :pre_render so it is after PaginationGenerator (:lowest).
     def page_tag_name(page)
       tag = page.data["tag"]
       return tag.to_s unless tag.nil? || tag.to_s.empty?
@@ -175,24 +175,22 @@ module Jekyll
       m ? m[1].to_s : ""
     end
 
-    def prune_singleton_tag_pages!(site)
-      min = site.config["tag_archive_min_posts"] || MIN_TAG_ARCHIVE_POSTS
-      site.pages.reject! do |page|
-        url = page.url.to_s
-        next false unless url.include?("/tags/") ||
-                          page.data["autogen"] == "jekyll-paginate-v2"
+    def tag_index_url?(url)
+      url.to_s.sub(/\.html\z/, "").sub(%r{/\z}, "") == "/tags"
+    end
 
-        tag = page_tag_name(page)
-        next false if tag.empty?
+    def tag_archive_page?(page)
+      return false if tag_index_url?(page.url)
+      return true if page.url.to_s.match?(%r{/tags/.+})
+      return false unless page.data["autogen"].to_s == "jekyll-paginate-v2"
+      return true unless page.data["tag"].to_s.empty?
 
-        count = tag_post_count(site, tag)
-        if count.zero?
-          slug = tag
-          match = site.tags.keys.find { |name| Utils.slugify(name.to_s) == slug }
-          count = tag_post_count(site, match) if match
-        end
-        count < min
-      end
+      nested = page.data.dig("pagination", "tag")
+      !(nested.nil? || nested.to_s.empty?)
+    end
+
+    def prune_tag_archive_pages!(site)
+      site.pages.reject! { |page| tag_archive_page?(page) }
     end
   end
 end
@@ -210,5 +208,5 @@ Jekyll::Hooks.register :site, :post_read do |site|
 end
 
 Jekyll::Hooks.register :site, :pre_render do |site|
-  Jekyll::NormalizeTags.prune_singleton_tag_pages!(site)
+  Jekyll::NormalizeTags.prune_tag_archive_pages!(site)
 end

@@ -54,6 +54,18 @@
   -webkit-appearance: none;
 }
 
+.search-hint {
+  margin-top: var(--space-2);
+  margin-bottom: 0;
+}
+
 .search-ui #search-results {
   margin-top: var(--space-6);
+}
+
+/* Hide the static index under the box while a query is active (#209). */
+.has-search-query .archive-list,
+.has-search-query .tags-sort-controls,
+.has-search-query #tags-list {
+  display: none;
 }

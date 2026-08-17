@@ -1,18 +1,10 @@
 {%- comment -%}
-  Single tag chip for posts/lists (issue #140).
+  Single tag chip for posts/lists (issues #140, #209).
   Params: tag (string)
-  Multi-post tags → clickable archive link.
-  Singleton tags → non-link chip (same chip look, muted, not interactive).
+  Every tag links to the /tags search URL. Individual /tags/:name
+  archives are no longer generated.
 {%- endcomment -%}
-{%- assign tag_str = include.tag | append: "" -%}
-{%- assign tag_min = site.tag_archive_min_posts | default: 2 -%}
-{%- assign tag_count = site.data.tag_counts[tag_str] -%}
-{%- if tag_count == nil -%}
-  {%- assign tag_posts = site.tags[tag_str] -%}
-  {%- assign tag_count = tag_posts.size -%}
-{%- endif -%}
-{%- if tag_count >= tag_min -%}
-<a href="{{ '/tags/' | relative_url }}{{ tag_str | slugify }}" class="tag">{{ tag_str }}</a>
-{%- else -%}
-<span class="tag tag--solo">{{ tag_str }}</span>
+{%- assign tag_str = include.tag | append: "" | strip -%}
+{%- if tag_str != empty -%}
+<a href="{{ '/tags' | relative_url }}?tag={{ tag_str | url_encode }}" class="tag">{{ tag_str }}</a>
 {%- endif -%}

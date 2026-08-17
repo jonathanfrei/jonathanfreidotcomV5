@@ -119,9 +119,9 @@ hello("world")
 <p class="section-title">Section title</p>
 
 <ul class="tags">
-  <li><a class="tag" href="{{ '/tags' | relative_url }}">tag</a></li>
-  <li><a class="tag" href="{{ '/tags' | relative_url }}">typography</a></li>
-  <li><a class="tag" href="{{ '/tags' | relative_url }}">specimen</a></li>
+  <li><a class="tag" href="{{ '/tags' | relative_url }}?tag=tag">tag</a></li>
+  <li><a class="tag" href="{{ '/tags' | relative_url }}?tag=typography">typography</a></li>
+  <li><a class="tag" href="{{ '/tags' | relative_url }}?tag=specimen">specimen</a></li>
 </ul>
 
 ## Embed wrapper (empty shell)
