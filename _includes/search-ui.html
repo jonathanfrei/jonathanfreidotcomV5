@@ -28,6 +28,9 @@
     if (tag) parts.push("tag:" + (/[\s:=]/.test(tag) ? '"' + tag + '"' : tag));
     if (title) parts.push("title:" + (/[\s:=]/.test(title) ? '"' + title + '"' : title));
     if (q) parts.push(q);
+    if (q || tag || title) {
+      document.documentElement.classList.add("has-search-query");
+    }
     if (!parts.length) return;
     var text = parts.join(" ");
     input.value = text;
@@ -39,5 +42,5 @@
   <script>
     window.siteBaseurl = {{ site.baseurl | jsonify }};
   </script>
-  <script src="{{ '/assets/js/search.js' | relative_url }}?v=211"></script>
+  <script src="{{ '/assets/js/search.js' | relative_url }}?v=212" defer></script>
 </div>
