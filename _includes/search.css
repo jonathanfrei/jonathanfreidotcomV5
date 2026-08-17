@@ -72,9 +72,13 @@
   margin-top: var(--space-6);
 }
 
-/* Hide the static index under the box while a query is active (#209). */
-.has-search-query .archive-list,
-.has-search-query .tags-sort-controls,
-.has-search-query #tags-list {
-  display: none;
+/*
+  Keep the footer out of the first screen on /search, and hold space for
+  results when the URL already has ?q= / ?tag= (#212). Tag and archive
+  lists stay visible below the results.
+*/
+.search-landing #search-results,
+html.has-search-query #search-results {
+  min-height: 55vh;
+  min-height: 55svh;
 }
