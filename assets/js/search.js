@@ -176,10 +176,7 @@
   }
 
   function setSearching(on) {
-    var root = input.closest ? input.closest("article") : input.parentNode;
-    if (root && root.classList) {
-      root.classList.toggle("has-search-query", !!on);
-    }
+    document.documentElement.classList.toggle("has-search-query", !!on);
   }
 
   function render(items, state) {

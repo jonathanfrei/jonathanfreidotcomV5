@@ -314,7 +314,7 @@ Production depends on external services for media (configured in `_config.yml` `
 | Date timezone | `_config.yml` `timezone: America/New_York` (#180) |
 | Drop caps on long posts | `_plugins/drop_cap.rb` + `.prose--drop-cap` in `main.css` (#123) |
 | Tag archive title | unused `_layouts/tag.html` (tag pages not generated, #209) |
-| Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` (thin dump of `site.data.search_index`). URLs: `?q=`, `?tag=`, `?title=`; `?=text` aliases `?q=`. The query string is the source of truth until the user types; an inline seed fills the box on first paint (#211). |
+| Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` (thin dump of `site.data.search_index`). URLs: `?q=`, `?tag=`, `?title=`; `?=text` aliases `?q=`. The query string is the source of truth until the user types; an inline seed fills the box on first paint (#211). `search.js` is deferred; `/search` and `?q=`/`?tag=` URLs reserve result space so the footer does not shift (#212). Tag and archive lists stay visible below results. |
 | Random-post URL list | `search.json` (`url` + `kind`; `posts.json` removed — #130) |
 | Theme toggle | Boot in `_includes/head.html`; full `assets/js/theme.js` loads on first click (footer stub) |
 | Site config | `_config.yml` |
