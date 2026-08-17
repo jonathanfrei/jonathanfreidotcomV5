@@ -5,25 +5,28 @@
 <meta name="description" content="{{ page.description | default: site.description | escape }}">
 
 {% comment %}
-  Legacy /tags/:name archives now 404. Send them to /tags?tag= before paint (#209).
+  Legacy /tags/:name and /categories/:name archives 404. Send them to
+  search URLs before paint (#209).
 {% endcomment %}
 {% if page.url == '/404.html' %}
 <script>
 (function () {
   var path = window.location.pathname || "";
   path = path.replace(/\/index\.html$/i, "").replace(/\/+$/, "");
-  var m = path.match(/\/tags\/([^/]+)(?:\/page\/\d+)?$/);
+  var m = path.match(/^\/(tags|categories)\/([^/]+)(?:\/page\/\d+)?$/);
   if (!m) return;
+  var kind = m[1];
   var slug = "";
   try {
-    slug = decodeURIComponent(m[1] || "");
+    slug = decodeURIComponent(m[2] || "");
   } catch (e) {
-    slug = m[1] || "";
+    slug = m[2] || "";
   }
   if (!slug) return;
   var base = {{ site.baseurl | jsonify }};
   if (base === "/") base = "";
-  window.location.replace(base + "/tags?tag=" + encodeURIComponent(slug));
+  var field = kind === "categories" ? "category" : "tag";
+  window.location.replace(base + "/" + kind + "?" + field + "=" + encodeURIComponent(slug));
 })();
 </script>
 {% endif %}

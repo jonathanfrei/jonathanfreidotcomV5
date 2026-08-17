@@ -4,10 +4,12 @@
  *   ?q=photography          free-text (title, excerpt, tags)
  *   ?=photography           alias for ?q=
  *   ?tag=photography        tags field only
+ *   ?category=links         categories field only
  *   ?title=photography      title field only
  *   ?q=pope&tag=vatican     AND across present fields
  *
- * The search box also accepts field tokens: tag:photography title:"a phrase"
+ * The search box also accepts field tokens:
+ *   tag:photography category:links title:"a phrase"
  *
  * Until the user types, the query string is the source of truth. The input
  * can be empty on first paint (autofill / form restore / deferred script),
@@ -74,27 +76,30 @@
         search == null ? window.location.search || "" : search
       );
     } catch (e) {
-      return { q: "", tag: "", title: "" };
+      return { q: "", tag: "", category: "", title: "" };
     }
     var q = (params.get("q") || "").trim();
     var tag = (params.get("tag") || "").trim();
+    var category = (params.get("category") || "").trim();
     var title = (params.get("title") || "").trim();
     if (!q) {
       var emptyKey = params.get("");
       if (emptyKey) q = String(emptyKey).trim();
     }
-    return { q: q, tag: tag, title: title };
+    return { q: q, tag: tag, category: category, title: title };
   }
 
   function parseInput(raw) {
     var tag = "";
+    var category = "";
     var title = "";
     var rest = String(raw || "").replace(
-      /(^|\s)(tag|title)[:=](?:"([^"]*)"|(\S+))/gi,
+      /(^|\s)(tag|category|title)[:=](?:"([^"]*)"|(\S+))/gi,
       function (_, _lead, field, quoted, bare) {
         var value = (typeof quoted === "string" ? quoted : bare || "").trim();
         field = String(field || "").toLowerCase();
         if (field === "tag") tag = value;
+        if (field === "category") category = value;
         if (field === "title") title = value;
         return " ";
       }
@@ -102,6 +107,7 @@
     return {
       q: rest.replace(/\s+/g, " ").trim(),
       tag: tag,
+      category: category,
       title: title
     };
   }
@@ -109,6 +115,7 @@
   function formatInput(state) {
     var parts = [];
     if (state.tag) parts.push("tag:" + quoteIfNeeded(state.tag));
+    if (state.category) parts.push("category:" + quoteIfNeeded(state.category));
     if (state.title) parts.push("title:" + quoteIfNeeded(state.title));
     if (state.q) parts.push(state.q);
     return parts.join(" ");
@@ -119,17 +126,18 @@
   }
 
   function hasActiveQuery(state) {
-    return !!(state.tag || state.title || state.q);
+    return !!(state.tag || state.category || state.title || state.q);
   }
 
   function canSearch(state) {
-    if (state.tag || state.title) return true;
+    if (state.tag || state.category || state.title) return true;
     return state.q.length >= 2;
   }
 
   function writeUrl(state) {
     var params = new URLSearchParams();
     if (state.tag) params.set("tag", state.tag);
+    if (state.category) params.set("category", state.category);
     if (state.title) params.set("title", state.title);
     if (state.q) params.set("q", state.q);
     var qs = params.toString();
@@ -145,23 +153,24 @@
     }
   }
 
-  function tagMatches(tags, query) {
+  function listMatches(values, query) {
     if (!query) return true;
-    if (!Array.isArray(tags)) return false;
+    if (!Array.isArray(values)) return false;
     var q = query.toLowerCase();
     var qSlug = slugify(query);
-    for (var i = 0; i < tags.length; i++) {
-      var tag = String(tags[i] || "");
-      var folded = tag.toLowerCase();
+    for (var i = 0; i < values.length; i++) {
+      var raw = String(values[i] || "");
+      var folded = raw.toLowerCase();
       if (folded === q) return true;
-      if (slugify(tag) === qSlug) return true;
+      if (slugify(raw) === qSlug) return true;
       if (folded.indexOf(q) !== -1) return true;
     }
     return false;
   }
 
   function matchEntry(post, state) {
-    if (state.tag && !tagMatches(post.tags, state.tag)) return false;
+    if (state.tag && !listMatches(post.tags, state.tag)) return false;
+    if (state.category && !listMatches(post.categories, state.category)) return false;
     if (state.title && !includesFold(post.title, state.title)) return false;
     if (state.q) {
       var hay =
@@ -169,7 +178,9 @@
         " " +
         (post.excerpt || "") +
         " " +
-        (Array.isArray(post.tags) ? post.tags.join(" ") : "");
+        (Array.isArray(post.tags) ? post.tags.join(" ") : "") +
+        " " +
+        (Array.isArray(post.categories) ? post.categories.join(" ") : "");
       if (!includesFold(hay, state.q)) return false;
     }
     return hasActiveQuery(state);

@@ -6,8 +6,8 @@
 # /tags, /categories, /sitemap, month archive list). That work now happens
 # once here; Liquid just dumps the precomputed arrays.
 #
-# search.json stays a thin payload: kind, title, url, date, short excerpt, tags.
-# No description, last_modified, reading_time, or full body.
+# search.json stays a thin payload: kind, title, url, date, short excerpt,
+# tags, categories. No description, last_modified, reading_time, or full body.
 #
 # Config (_config.yml):
 #   site_index:
@@ -50,7 +50,8 @@ module Jekyll
         "url" => relative_url(site, post.url),
         "date" => format_iso_date(post.date),
         "excerpt" => blurb(post, excerpt_chars),
-        "tags" => Array(post.data["tags"]).map(&:to_s)
+        "tags" => Array(post.data["tags"]).map(&:to_s),
+        "categories" => Array(post.data["categories"]).map(&:to_s)
       }
     end
 
