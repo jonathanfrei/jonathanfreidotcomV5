@@ -4,6 +4,30 @@
 <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 <meta name="description" content="{{ page.description | default: site.description | escape }}">
 
+{% comment %}
+  Legacy /tags/:name archives now 404. Send them to /tags?tag= before paint (#209).
+{% endcomment %}
+{% if page.url == '/404.html' %}
+<script>
+(function () {
+  var path = window.location.pathname || "";
+  path = path.replace(/\/index\.html$/i, "").replace(/\/+$/, "");
+  var m = path.match(/\/tags\/([^/]+)(?:\/page\/\d+)?$/);
+  if (!m) return;
+  var slug = "";
+  try {
+    slug = decodeURIComponent(m[1] || "");
+  } catch (e) {
+    slug = m[1] || "";
+  }
+  if (!slug) return;
+  var base = {{ site.baseurl | jsonify }};
+  if (base === "/") base = "";
+  window.location.replace(base + "/tags?tag=" + encodeURIComponent(slug));
+})();
+</script>
+{% endif %}
+
 {% comment %} Apply stored/system theme before paint to avoid FOUC (#87) {% endcomment %}
 <script>
 (function () {
