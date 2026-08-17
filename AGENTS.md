@@ -212,7 +212,7 @@ Desired URLs: `/about`, `/blog`, `/2026/08/05/slug`, `/tags` — **not** `/about
   - `_includes/embeds.css` — media embeds (`class="embed` / `data-embed=`)
   - `_includes/pagination.css` — paginated lists (`pagination-list`)
 - **Editorial (#144):** `_includes/editorial.css` + `layout: editorial` — Kramdown semantic components (`.lead`, `.figure`, `.stat-grid`, …). Linked as `/assets/css/editorial.css` after `core.css`.
-- **Delivery:** every page links `/assets/css/core.css` (`_includes/site-css.html`). Do not inline `main.css` or restore the front-of-house vs archive split from PR #197.
+- **Delivery:** every page links the design system via `asset_url` (`_includes/site-css.html`). Production uses jsDelivr (`cdn.jsdelivr.net/gh/…@SHA/_includes/main.css`); local serve stays on `/assets/css/core.css`. Do not inline `main.css` or restore the front-of-house vs archive split from PR #197.
 - Tooling: `/assets/css/core.css` (design system), `/assets/css/main.css` (full combined), `/assets/css/editorial.css` (editorial components only)
 - **Never** use `{% include_relative ../... %}` — Jekyll rejects `../`
 - Prefer semantic classes over utility soup
@@ -273,9 +273,9 @@ Production depends on external services for media (configured in `_config.yml` `
 | --- | --- | --- |
 | **S3 / media.jonathanfrei.com** | Archive binaries (`v{2,3}-archive/media/…`) and new post photos (`assets/img/…`) — not in the Pages artifact (#170) | `archive_media.cdn_base` |
 | **wsrv.nl** | On-the-fly resize + WebP for own-site images (archive + S3 `/assets/img/` + in-repo `/assets/`); full-res on `data-full-src` | `archive_media.optimize.proxy` |
-| **jsDelivr** | Fontsource font files only (not archive media) | `@font-face` in `main.css` |
+| **jsDelivr** | Fontsource fonts, plus production `/assets` (CSS/JS/favicons) pinned to the build commit | `assets_cdn` in `_config.yml`; `@font-face` in `main.css` |
 
-- The site has no fallback if S3 or wsrv is unavailable (images break or fall back to original `src` depending on browser).
+- The site has no fallback if S3, wsrv, or jsDelivr is unavailable (images break or fall back to the original `src` depending on the browser; production CSS/JS are on jsDelivr).
 - Do **not** point `cdn_base` or the proxy at untrusted hosts or arbitrary user content.
 - Changing `cdn_base` or the proxy host is a production-facing decision; prefer a PR and a smoke check of a few archive posts + `/assets/` images.
 - Local `jekyll serve` uses S3 in CDN mode (default once in-repo media trees are gone). `ARCHIVE_MEDIA_MODE=local` only helps while `_posts/v*-archive/media/` still exists on disk.
@@ -317,6 +317,7 @@ Production depends on external services for media (configured in `_config.yml` `
 | Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` (thin dump of `site.data.search_index`). URLs: `?q=`, `?tag=`, `?title=`; `?=text` aliases `?q=`. The query string is the source of truth until the user types; an inline seed fills the box on first paint (#211). `search.js` is deferred; `/search` and `?q=`/`?tag=` URLs reserve result space so the footer does not shift (#212). Tag and archive lists stay visible below results. |
 | Random-post URL list | `search.json` (`url` + `kind`; `posts.json` removed — #130) |
 | Theme toggle | Boot in `_includes/head.html`; full `assets/js/theme.js` loads on first click (footer stub) |
+| Asset CDN | `_plugins/asset_cdn.rb` + `assets_cdn` in `_config.yml`. Production: jsDelivr `@SHA`. Local: `/assets`. Filter: `asset_url`. |
 | Site config | `_config.yml` |
 | Deploy / path filters | `.github/workflows/deploy.yml` |
 | Embed providers | `_plugins/url_embeds.rb` |
@@ -329,7 +330,7 @@ Production depends on external services for media (configured in `_config.yml` `
 Before finishing a change that touches build, layouts, or CSS:
 
 1. [ ] Permalinks have **no** trailing slash for HTML pages (`/about` not `/about/`). Link posts use the same `/:year/:month/:day/:title` shape as essays.
-2. [ ] Every HTML page links `/assets/css/core.css` (no inlined `main.css`); `code.css` only on code pages; no `../` includes
+2. [ ] Every HTML page links the design system (jsDelivr in production, `/assets/css/core.css` locally); no inlined `main.css`; `code.css` only on code pages; no `../` includes
 3. [ ] Tags on `/blog` still look like chips (not oversized title links) and point at `/tags?tag=`. Month/category lists use the same stream entries as `/blog` (#201). No `/tags/:name` HTML files.
 4. [ ] Drafts stay out of `_posts/` until intentional publish
 5. [ ] If workflow changed, confirm Actions majors and `paths-ignore` still make sense
