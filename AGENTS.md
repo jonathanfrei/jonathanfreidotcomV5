@@ -125,10 +125,11 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
   excerpt, and Read more. Link entries hide the title and keep `→` on the
   first line. Link tags are ordinary post tags; chips go to `/tags?tag=name`.
 - **List views match `/blog`** (`_includes/stream-list.html`, #201): month
-  archives (`/archive/YYYY/MM/`) and category pages (`/categories/:name`)
-  use the same post-entry / link-entry stream. Tag results are client-side
-  search on `/tags?tag=name` (no generated `/tags/:name` pages, #209).
-  Do not regress remaining list pages to title+date-only rows.
+  archives (`/archive/YYYY/MM/`) use the same post-entry / link-entry stream.
+  Tag results are `/tags?tag=name`; category results are
+  `/categories?category=name`. No generated `/tags/:name` or
+  `/categories/:name` pages. Do not regress remaining list pages to
+  title+date-only rows.
 - Feed: `/feed.xml` (mixed; link items `<link>`/`<guid>` the external URL;
   full content). Link items use `#` for the on-site permalink in RSS only.
 - Example:
@@ -156,6 +157,7 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 - Use **no trailing slash** in permalinks (see below).
 - Long-form specimen / design reference: `_pages/typography.md` → `/typography`.
 - Tags: `/tags` lists multi-post tags (#140). Every chip (including singletons) links to `/tags?tag=name`. Individual `/tags/:name` pages are not generated (#209). Old `/tags/:name` URLs 404-redirect to the search URL.
+- Categories: `/categories` lists categories. Chips link to `/categories?category=name`. Individual `/categories/:name` pages are not generated. Old `/categories/:name` URLs 404-redirect to the search URL.
 
 ### Media embeds
 
@@ -314,7 +316,7 @@ Production depends on external services for media (configured in `_config.yml` `
 | Date timezone | `_config.yml` `timezone: America/New_York` (#180) |
 | Drop caps on long posts | `_plugins/drop_cap.rb` + `.prose--drop-cap` in `main.css` (#123) |
 | Tag archive title | unused `_layouts/tag.html` (tag pages not generated, #209) |
-| Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` (thin dump of `site.data.search_index`). URLs: `?q=`, `?tag=`, `?title=`; `?=text` aliases `?q=`. The query string is the source of truth until the user types; an inline seed fills the box on first paint (#211). `search.js` is deferred; `/search` and `?q=`/`?tag=` URLs reserve result space so the footer does not shift (#212). Tag and archive lists stay visible below results. |
+| Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` (thin dump of `site.data.search_index`). URLs: `?q=`, `?tag=`, `?category=`, `?title=`; `?=text` aliases `?q=`. The query string is the source of truth until the user types; an inline seed fills the box on first paint (#211). `search.js` is deferred; `/search` and query URLs reserve result space so the footer does not shift (#212). Tag, category, and archive lists stay visible below results. |
 | Random-post URL list | `search.json` (`url` + `kind`; `posts.json` removed — #130) |
 | Theme toggle | Boot in `_includes/head.html`; full `assets/js/theme.js` loads on first click (footer stub) |
 | Site config | `_config.yml` |
@@ -330,7 +332,7 @@ Before finishing a change that touches build, layouts, or CSS:
 
 1. [ ] Permalinks have **no** trailing slash for HTML pages (`/about` not `/about/`). Link posts use the same `/:year/:month/:day/:title` shape as essays.
 2. [ ] Every HTML page links `/assets/css/core.css` (no inlined `main.css`); `code.css` only on code pages; no `../` includes
-3. [ ] Tags on `/blog` still look like chips (not oversized title links) and point at `/tags?tag=`. Month/category lists use the same stream entries as `/blog` (#201). No `/tags/:name` HTML files.
+3. [ ] Tags on `/blog` still look like chips (not oversized title links) and point at `/tags?tag=`. Category chips point at `/categories?category=`. Month lists use the same stream entries as `/blog` (#201). No `/tags/:name` or `/categories/:name` HTML files.
 4. [ ] Drafts stay out of `_posts/` until intentional publish
 5. [ ] If workflow changed, confirm Actions majors and `paths-ignore` still make sense
 6. [ ] Prefer a green deploy run after merge/push to `main`

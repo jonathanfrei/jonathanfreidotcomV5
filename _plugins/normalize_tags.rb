@@ -192,6 +192,24 @@ module Jekyll
     def prune_tag_archive_pages!(site)
       site.pages.reject! { |page| tag_archive_page?(page) }
     end
+
+    def category_index_url?(url)
+      url.to_s.sub(/\.html\z/, "").sub(%r{/\z}, "") == "/categories"
+    end
+
+    def category_archive_page?(page)
+      return false if category_index_url?(page.url)
+      return true if page.url.to_s.match?(%r{/categories/.+})
+      return false unless page.data["autogen"].to_s == "jekyll-paginate-v2"
+      return true unless page.data["category"].to_s.empty?
+
+      nested = page.data.dig("pagination", "category")
+      !(nested.nil? || nested.to_s.empty?)
+    end
+
+    def prune_category_archive_pages!(site)
+      site.pages.reject! { |page| category_archive_page?(page) }
+    end
   end
 end
 
@@ -209,4 +227,5 @@ end
 
 Jekyll::Hooks.register :site, :pre_render do |site|
   Jekyll::NormalizeTags.prune_tag_archive_pages!(site)
+  Jekyll::NormalizeTags.prune_category_archive_pages!(site)
 end

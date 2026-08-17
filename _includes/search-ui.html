@@ -11,7 +11,7 @@
   (function () {
     var input = document.getElementById("search-input");
     if (!input) return;
-    var params, q, tag, title, parts;
+    var params, q, tag, category, title, parts;
     try {
       params = new URLSearchParams(window.location.search || "");
     } catch (e) {
@@ -19,6 +19,7 @@
     }
     q = (params.get("q") || "").trim();
     tag = (params.get("tag") || "").trim();
+    category = (params.get("category") || "").trim();
     title = (params.get("title") || "").trim();
     if (!q) {
       var emptyKey = params.get("");
@@ -26,9 +27,10 @@
     }
     parts = [];
     if (tag) parts.push("tag:" + (/[\s:=]/.test(tag) ? '"' + tag + '"' : tag));
+    if (category) parts.push("category:" + (/[\s:=]/.test(category) ? '"' + category + '"' : category));
     if (title) parts.push("title:" + (/[\s:=]/.test(title) ? '"' + title + '"' : title));
     if (q) parts.push(q);
-    if (q || tag || title) {
+    if (q || tag || category || title) {
       document.documentElement.classList.add("has-search-query");
     }
     if (!parts.length) return;
@@ -37,10 +39,10 @@
     input.defaultValue = text;
   })();
   </script>
-  <p class="search-hint">Try <span class="search-hint__token">tag:photography</span> to search one tag.</p>
+  <p class="search-hint">Try <span class="search-hint__token">tag:photography</span> or <span class="search-hint__token">category:links</span>.</p>
   <div id="search-results" aria-live="polite"></div>
   <script>
     window.siteBaseurl = {{ site.baseurl | jsonify }};
   </script>
-  <script src="{{ '/assets/js/search.js' | relative_url }}?v=212" defer></script>
+  <script src="{{ '/assets/js/search.js' | relative_url }}?v=214" defer></script>
 </div>

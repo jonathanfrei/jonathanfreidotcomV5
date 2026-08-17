@@ -26,9 +26,9 @@ The [full archive of posts—across all the earlier eras]({{ '/archive' | relati
 
 ### Earlier versions of the site:
 
-- [V1 on Blogger](http://v1.jonathanfrei.com/) (2009–2010): pages here at [v1-archive](/categories/v1-archive)
-- [V2 on Tumblr](https://v2.jonathanfrei.com/) (2010–2014): pages here at [v2-archive](/categories/v2-archive)
-- [V3 on self-hosted WordPress](https://v3.jonathanfrei.com/) (2014–2022; the online copy is now a static archive on S3): pages here at [v3-archive](/categories/v3-archive)
+- [V1 on Blogger](http://v1.jonathanfrei.com/) (2009–2010): pages here at [v1-archive](/categories?category=v1-archive)
+- [V2 on Tumblr](https://v2.jonathanfrei.com/) (2010–2014): pages here at [v2-archive](/categories?category=v2-archive)
+- [V3 on self-hosted WordPress](https://v3.jonathanfrei.com/) (2014–2022; the online copy is now a static archive on S3): pages here at [v3-archive](/categories?category=v3-archive)
 - [V4 on a GitHub repo](https://v4.jonathanfrei.com/) (from 2022-2026), V4 was just a single static page
 
 ## Colophon
