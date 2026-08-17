@@ -84,7 +84,7 @@ jobs:
           warn_bytes = 600_000
           fail_bytes = 1_500_000
           warn_secs = 600
-          allowed = {"kind", "title", "url", "date", "excerpt", "tags"}
+          allowed = {"kind", "title", "url", "date", "excerpt", "tags", "categories"}
           required = {"title", "url", "date"}
           bad = 0
 
@@ -378,11 +378,27 @@ jobs:
             fi
           fi
 
-          if [ -f "_site/categories/links.html" ] || [ -f "_site/categories/links/index.html" ]; then
-            echo "OK: link posts have a links category archive"
-          else
-            echo "::error::Expected /categories/links for layout: link posts"
+          if [ -d _site/categories ]; then
+            echo "::error::_site/categories/ should not exist; category archives are search URLs"
             missing=1
+          else
+            echo "OK: no individual category archive pages"
+          fi
+          if [ -f _site/categories.html ]; then
+            if grep -q 'search-ui' _site/categories.html && grep -q '?category=' _site/categories.html; then
+              echo "OK: /categories uses search UI and ?category= chip links"
+            else
+              echo "::error::_site/categories.html should include search UI and ?category= chip links"
+              missing=1
+            fi
+          fi
+          if [ -f _site/search.json ]; then
+            if python3 -c 'import json,sys; d=json.load(open("_site/search.json",encoding="utf-8")); sys.exit(0 if d and "categories" in d[0] else 1)'; then
+              echo "OK: search.json includes categories"
+            else
+              echo "::error::search.json entries should include a categories field"
+              missing=1
+            fi
           fi
 
           if [ -f "_site/build-errors.log" ]; then

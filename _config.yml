@@ -101,7 +101,8 @@ autopages:
       - category.html
     title: "Category: :cat"
     permalink: "/categories/:cat"
-    enabled: true
+    # Category archives are search URLs (/categories?category=name).
+    enabled: false
     slugify:
       mode: default
       cased: true
@@ -198,7 +199,7 @@ defaults:
       author: Jonathan Frei
   # Historical imports: no category segment in URL; media on S3 (#170)
   # categories: [] keeps permalink clean while still allowing explicit category
-  # in front matter if desired for /categories/ pages (#93)
+  # in front matter if desired for /categories?category= filters
   - scope:
       path: "_posts/v1-archive"
       type: "posts"

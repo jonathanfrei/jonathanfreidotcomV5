@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
-# Do not materialize /tags/:name archives. Tag discovery is client-side
-# search at /tags?tag=name (issue #209). prune_tag_archive_pages! is a backstop.
+# Do not materialize /tags/:name or /categories/:name archives.
+# Discovery is client-side search (?tag= / ?category=).
+# prune_*_archive_pages! remains a backstop.
 
 return unless defined?(Jekyll::PaginateV2::AutoPages)
 
@@ -13,6 +14,10 @@ module Jekyll
       def autopage_create(autopage_config, pagination_config, posts_to_use, configkey_name, indexkey_name, createpage_lambda)
         if configkey_name.to_s == "tags"
           Jekyll.logger.info "AutoPages:", "skipped all tag archives (search URLs, #209)"
+          return
+        end
+        if configkey_name.to_s == "categories"
+          Jekyll.logger.info "AutoPages:", "skipped all category archives (search URLs)"
           return
         end
 
