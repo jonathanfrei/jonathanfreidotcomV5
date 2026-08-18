@@ -35,7 +35,8 @@ A navigable reference for the semantic components used on long-form editorial pa
 {: .metadata} 
 
 
-Trying to add a meta data element alone as the block might have hidden what I was doing. {: .metadata} 
+**Trying to add a meta data element** alone as the block might have hidden what I was doing. 
+{: .metadata} 
 
 ^
 
