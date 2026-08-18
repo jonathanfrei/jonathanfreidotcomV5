@@ -97,11 +97,12 @@ Kramdown classes on ordinary posts and pages (`{: .aside}`, `{: .pull-quote}`, `
 
 Typography is the craft of endowing human language with a durable visual form, and asides should not interrupt that line length when the page has room for a margin.
 
+### Pull quote from the text
+
 A complete sentence is still the unit of thought, even when it is pulled out of the column and boxed.
 {: .pull-quote}
 
-> A complete sentence is still the unit of thought, even when it is pulled out of the column and boxed.
-{: .pull-quote}
+### Full Bleed Images
 
 ![full sized image](https://images.unsplash.com/photo-1770034568779-af19841f2aeb?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
 {: .figure-wide}
@@ -111,8 +112,6 @@ A complete sentence is still the unit of thought, even when it is pulled out of 
 
 ![Testing another large image but not full bleed](https://media.jonathanfrei.com/assets/img/2026-08-18-20260818101515-9080.png)
 {: .figure-wide}
-
-
 
 **large but not full bleed** Body of the caption in the reading face. *[Credit or source](https://unsplash.com/photos/rocky-mountain-slope-in-stepantsminda-fJrVETFC1lE)*
 {: .caption}
