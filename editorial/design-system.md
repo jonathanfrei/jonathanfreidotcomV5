@@ -23,6 +23,13 @@ A navigable reference for the semantic components used on long-form editorial pa
 
 </div>
 
+^
+**Updated:** August 18, 2026  
+**Category:** Kramdown block extension parsing test
+**Use:** Copy shells into `editorial/*.md` pages with `layout: editorial`
+^
+{: .metadata} 
+
 <div class="lead" markdown="1">
 
 This page is the working library for composition: jump to a component, preview it, copy the shell, and fill in real content. Multi-block components use HTML wrappers with `markdown="1"` so headings, lists, and paragraphs stay inside the component. Visual treatment lives in CSS (`_includes/editorial.css`).
