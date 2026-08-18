@@ -5,15 +5,15 @@
 # Prefer the following paragraph (typography.md). If the next sibling is not a
 # host paragraph — often a heading — pair with the preceding paragraph instead.
 # A code sample between the host and the aside is left in place; the aside is
-# lifted next to the host so the float still hugs the paragraph.
-# The wrapper always lists the aside first so a wide-screen float wraps the host.
+# lifted next to the host so the margin column still hugs the paragraph.
+# The wrapper always lists the host first so screen readers hear the paragraph
+# before the sidenote (#232).
 # Editorial grid asides (`<div class="aside">` on layout: editorial) are left
 # alone.
 module Jekyll
   module AsidePairs
     P_TAG = %r{<p\b[^>]*>(?:(?!</p>).)*</p>}im
     ASIDE_CLASS = /\A<p\b[^>]*\bclass\s*=\s*["'][^"']*\baside\b/i
-    ALREADY_PAIRED = /<div\b[^>]*\bclass\s*=\s*["'][^"']*\baside-pair\b[^"']*["'][^>]*>\s*\z/i
     ONLY_GAP = /\A(?:\s+|<!--.*?-->)*\z/m
     HIGHLIGHT_DIV = /\A<div\b[^>]*\bclass\s*=\s*["'][^"']*\b(?:highlighter-rouge|highlight|language-)/i
 
@@ -68,7 +68,12 @@ module Jekyll
     end
 
     def already_paired?(html, start)
-      html[0...start].match?(ALREADY_PAIRED)
+      before = html[0...start]
+      last_open = before.rindex(/<div\b[^>]*\bclass\s*=\s*["'][^"']*\baside-pair\b/i)
+      return false unless last_open
+
+      last_close = before.rindex("</div>")
+      last_close.nil? || last_close < last_open
     end
 
     def only_gap?(html, from, to)
@@ -97,10 +102,10 @@ module Jekyll
 
     # Adjacent siblings can be wrapped in place. If a code sample sits
     # between the host and the aside, lift the aside next to the host and
-    # leave the sample where it is so the float still hugs the paragraph.
+    # leave the sample where it is. Host is always first for reading order.
     def pair_replacements(html, aside, host)
       first, last = aside[:start] < host[:start] ? [aside, host] : [host, aside]
-      wrapped = %(<div class="aside-pair">#{aside[:text]}\n#{host[:text]}</div>)
+      wrapped = %(<div class="aside-pair">#{host[:text]}\n#{aside[:text]}</div>)
       if only_gap?(html, first[:finish], last[:start])
         return [[first[:start], last[:finish], wrapped]]
       end
