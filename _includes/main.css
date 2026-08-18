@@ -210,9 +210,6 @@ html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
-  /* Do not set overflow-x on html. iOS Safari then sizes the layout
-     viewport to the overflowing content (~980px) and every max-width
-     media query sees a desktop canvas. */
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -230,9 +227,6 @@ body {
   color: var(--color-fg);
   background-color: var(--color-bg);
   min-height: 100vh;
-  min-width: 0;
-  max-width: 100%;
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   font-kerning: normal;
@@ -362,15 +356,12 @@ a:focus-visible {
 .container {
   width: 100%;
   max-width: var(--measure);
-  min-width: 0;
   margin-inline: auto;
   padding-inline: var(--space-4);
 }
 
 .site-main {
   flex: 1;
-  min-width: 0;
-  max-width: 100%;
   padding-block: var(--space-8);
 }
 
@@ -627,7 +618,6 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 /* ---------- Prose ---------- */
 .prose {
   max-width: var(--measure);
-  min-width: 0;
   hyphens: auto;
 }
 
@@ -795,12 +785,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   color: var(--brand-deep-ocean, var(--color-fg));
 }
 
-/*
-  Hang the sidenote only when the leftover space beside the 36em
-  measure can hold 14.5rem + gap + a small gutter. At 60em the
-  hanging box sat off the left edge and overflow-x: clip hid it.
-*/
-@media (min-width: 70em) and (min-device-width: 70em) {
+@media (min-width: 60em) {
   .aside-pair {
     display: contents;
   }
@@ -885,9 +870,29 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   text-decoration-style: solid;
 }
 
-/* Default: full-bleed by canceling .container padding. Do not use
-   100vw here — iOS Safari measures that overflow before the 40em
-   query and then treats the page as a desktop canvas. */
+/*
+  Wide figures grow past the reading measure without 100vw.
+  100vw + (50% - 50vw) is wider than the device (scrollbar) and
+  makes iOS Safari size the layout viewport like a desktop canvas.
+  Instead: when a wide figure is present, the main column may use
+  the full site-main width; the figure is 100% of that (plus the
+  container padding so it can full-bleed). Other prose stays on
+  --measure.
+*/
+.site-main > .container:has(.figure-wide) {
+  max-width: none;
+}
+
+.container:has(.figure-wide) .prose {
+  max-width: none;
+}
+
+.container:has(.figure-wide) .prose > *:not(.figure-wide),
+.container:has(.figure-wide) .prose > .aside-pair > :not(.aside) {
+  max-width: var(--measure);
+  margin-inline: auto;
+}
+
 .prose .figure-wide,
 .prose p.figure-wide,
 .prose figure.figure-wide {
@@ -896,16 +901,6 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   margin-inline: calc(-1 * var(--space-4));
   margin-block: var(--space-5);
   text-align: center;
-}
-
-@media (min-width: 40.01em) and (min-device-width: 40.01em) {
-  .prose .figure-wide,
-  .prose p.figure-wide,
-  .prose figure.figure-wide {
-    width: 100vw;
-    max-width: 100vw;
-    margin-inline: calc(50% - 50vw);
-  }
 }
 
 .prose .figure-wide img,
@@ -1299,14 +1294,8 @@ span.tag:hover {
   text-decoration: underline;
 }
 
-/*
-  Phone layout. max-device-width covers iOS Safari when it inflates
-  the *layout* viewport to ~980px (media queries then see a desktop
-  canvas even though the phone is ~390px). html.is-narrow is set from
-  screen.width before CSS loads, so it still wins if device-width is
-  ignored.
-*/
-@media (max-width: 40em), (max-device-width: 40em) {
+/* Small screens */
+@media (max-width: 40em) {
   .site-header .container {
     flex-direction: column;
     align-items: flex-start;
@@ -1326,44 +1315,9 @@ span.tag:hover {
   }
 
   .prose p:has(> img:only-child):not(.figure-wide) img,
-  .prose p:has(> a:only-child > img:only-child):not(.figure-wide) img {
-    border-radius: 0;
-  }
-
+  .prose p:has(> a:only-child > img:only-child):not(.figure-wide) img,
   .prose .figure-wide img,
   .prose img.figure-wide {
     border-radius: 0;
   }
-}
-
-html.is-narrow .site-header .container {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-2);
-}
-
-html.is-narrow .site-main {
-  padding-block: var(--space-6);
-}
-
-html.is-narrow .prose p:has(> img:only-child):not(.figure-wide),
-html.is-narrow .prose p:has(> a:only-child > img:only-child):not(.figure-wide) {
-  width: calc(100% + (2 * var(--space-4)));
-  max-width: none;
-  margin-inline: calc(-1 * var(--space-4));
-}
-
-html.is-narrow .prose p:has(> img:only-child):not(.figure-wide) img,
-html.is-narrow .prose p:has(> a:only-child > img:only-child):not(.figure-wide) img,
-html.is-narrow .prose .figure-wide img,
-html.is-narrow .prose img.figure-wide {
-  border-radius: 0;
-}
-
-html.is-narrow .prose .figure-wide,
-html.is-narrow .prose p.figure-wide,
-html.is-narrow .prose figure.figure-wide {
-  width: calc(100% + (2 * var(--space-4)));
-  max-width: none;
-  margin-inline: calc(-1 * var(--space-4));
 }
