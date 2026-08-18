@@ -18,7 +18,7 @@ A navigable reference for the semantic components used on long-form editorial pa
 <div class="metadata" markdown="1">
 
 **Updated:** August 10, 2026  
-**Category:** Design System  
+**Category:** Dcesign System  
 **Use:** Copy shells into `editorial/*.md` pages with `layout: editorial`
 
 </div>
@@ -29,6 +29,14 @@ A navigable reference for the semantic components used on long-form editorial pa
 **Use:** Copy shells into `editorial/*.md` pages with `layout: editorial`
 ^
 {: .metadata} 
+
+Trying to add another element as the block might have hidden what I was doing. 
+
+Another eyebrow
+{: .eyebrow}
+
+# Title 2
+{: .editorial-header}
 
 <div class="lead" markdown="1">
 
