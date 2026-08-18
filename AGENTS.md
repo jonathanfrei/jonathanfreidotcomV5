@@ -109,10 +109,8 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 - Permalink pages are minimal: date (linked to the permalink), then an
   outbound `→` on the first line of the body, then tags and an on-site URL
   card. No visible title/`h1`. `title` is still used for RSS and document
-  `<title>` / SEO. The ending matches essays: Comment · Edit · Random · Blog
-  (#221). Random draws from every `search.json` entry, including link posts.
-  List pages hide the title and keep `→` on the first line of the body. The
-  date is the on-site permalink; `#` appears only in RSS.
+  `<title>` / SEO. List pages hide the title and keep `→` on the first line
+  of the body. The date is the on-site permalink; `#` appears only in RSS.
 - URL cards are **site-only** (never in RSS). Default is a build-time Open
   Graph fetch (fail-soft, cached under `.jekyll-cache/link-cards/`).
   `card: false` hides the card and skips the fetch. A `card:` mapping
@@ -159,7 +157,7 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 - Nested pages: `_pages/services/service1.md` → `/services/service1`.
 - `index.md` stays at the repo root (homepage).
 - Use **no trailing slash** in permalinks (see below).
-- Long-form specimen / design reference: `_pages/typography.md` → `/typography` (includes `#223` aside / pull-quote / caption).
+- Long-form specimen / design reference: `_pages/typography.md` → `/typography`.
 - Tags: `/tags` lists multi-post tags (#140). Every chip (including singletons) links to `/tags?tag=name`. Individual `/tags/:name` pages are not generated (#209). Old `/tags/:name` URLs 404-redirect to the search URL.
 - Categories: `/categories` lists categories. Chips link to `/categories?category=name`. Individual `/categories/:name` pages are not generated. Old `/categories/:name` URLs 404-redirect to the search URL.
 
@@ -224,13 +222,11 @@ Dashboard rules live in README (redirects before cache). Do not regress:
 
 - **Brand (#145):** `_includes/main.css` — Paper `#FAF9F6`, Ink `#111C24`, Signature Blue `#0077A8` (use blue sparingly). Full token table in that file (blue scale + editorial accents + UI semantics).
 - **Feature sheets (#165):** gated by `_includes/optional-css.html` (content probes; no PurgeCSS/Node build):
-  - `_includes/code.css` — fenced code / Rouge (`<pre`); wrap by default, line numbers follow wrapped lines (#222)
+  - `_includes/code.css` — fenced code / Rouge (`<pre`)
   - `_includes/search.css` — search box (`search-ui` / `search-input`)
   - `_includes/embeds.css` — media embeds (`class="embed` / `data-embed=`)
   - `_includes/pagination.css` — paginated lists (`pagination-list`)
 - **Editorial (#144):** `_includes/editorial.css` + `layout: editorial` — Kramdown semantic components (`.lead`, `.figure`, `.stat-grid`, …). Linked as `/assets/css/editorial.css` after `core.css`.
-- **Prose marks (#223):** `{: .aside}`, `{: .pull-quote}`, `{: .caption}` live in `main.css` for ordinary posts/pages. Do not reuse editorial-grid `.aside` for blog sidenotes. Do not reintroduce `{: .figure-wide}` — `#224`’s `100vw` breakout and later `:has()` / 3-column grids inflate iOS Safari’s layout viewport to ~980px (#231). Standalone images already full-bleed at `max-width: 40em` (#202). Never `margin-inline: auto` on every prose child to fake a measure — headings shrink-wrap and the column falls apart.
-- **iOS Safari viewport (#231):** do not set `overflow-x` on `html` (Safari then sizes the layout viewport to overflowing content, ~980px, and every `max-width` query sees a desktop canvas). Do not use `100vw` breakouts. `html.is-narrow` is set only when the UA contains `iPhone`/`iPod` (mobile Safari). Request Desktop Website changes the UA to Macintosh, so the class stays off and the wide layout applies. Do **not** key `is-narrow` off `screen.width` or `max-device-width` — those stay phone-sized during Request Desktop Website. The boot script also writes `width=<device CSS px>` on the viewport meta so Safari re-evaluates `width` media queries. Hang asides only at `70em`.
 - **Delivery:** every page links the design system via `asset_url` (`_includes/site-css.html`). Production uses jsDelivr (`cdn.jsdelivr.net/gh/…@SHA/_includes/main.css`); local serve stays on `/assets/css/core.css`. Do not inline `main.css` or restore the front-of-house vs archive split from PR #197.
 - Tooling: `/assets/css/core.css` (design system), `/assets/css/main.css` (full combined), `/assets/css/editorial.css` (editorial components only)
 - **Never** use `{% include_relative ../... %}` — Jekyll rejects `../`
@@ -327,14 +323,14 @@ Production depends on external services for media (configured in `_config.yml` `
 | Footer / disclaimer | `_includes/footer.html` |
 | `<head>`, favicon, meta | `_includes/head.html` |
 | Site-wide layout | `_layouts/default.html` |
-| Post chrome (tags, comment mailto, random post) | `_layouts/post.html` tags; `_includes/post-actions.html` (Comment · Edit · Random · Blog on essays and links; random fetches `search.json`, including link posts — #221) |
+| Post chrome (tags, comment mailto, random post) | `_layouts/post.html` (random uses on-click fetch of `search.json`) |
 | Post metadata (last_modified, reading time) | `_plugins/post_metadata.rb` + `post_metadata` in `_config.yml` (#75) |
 | Search / tag / archive indexes | `_plugins/site_index.rb` + `site_index` in `_config.yml` (#195). `search.json` includes `date_label` and first-image `img` (`src` + `alt`) for stream results (#219). |
 | Date timezone | `_config.yml` `timezone: America/New_York` (#180) |
 | Drop caps on long posts | `_plugins/drop_cap.rb` + `.prose--drop-cap` in `main.css` (#123) |
 | Tag archive title | unused `_layouts/tag.html` (tag pages not generated, #209) |
 | Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` (thin dump of `site.data.search_index`). URLs: `?q=`, `?tag=`, `?category=`, `?title=`; `?=text` aliases `?q=`. The query string is the source of truth until the user types; an inline seed fills the box on first paint (#211). `search.js` is deferred; `/search` and query URLs reserve result space so the footer does not shift (#212). Result cards reuse the `/blog` stream markup (title, long date, tag chips, excerpt, first image, Read more; link entries hide the title) (#219). Tag, category, and archive lists stay visible below results. |
-| Random-post URL list | `search.json` (`url` + `kind`; essays and link posts; `posts.json` removed — #130, #221) |
+| Random-post URL list | `search.json` (`url` + `kind`; `posts.json` removed — #130) |
 | Theme toggle | Boot in `_includes/head.html`; full `assets/js/theme.js` loads on first click (footer stub) |
 | Asset CDN | `_plugins/asset_cdn.rb` + `assets_cdn` in `_config.yml`. Production: jsDelivr `@SHA` with origin `/assets` `onerror` fallback (`asset_url` / `asset_origin_url`). Local: `/assets`. |
 | Site config | `_config.yml` |

@@ -3,22 +3,9 @@
    ========================================================= */
 
 /* ---------- Enhanced code blocks (toolbar / wrap / copy) ---------- */
-/* Spacing matches prose blocks. No extra tint around the chrome (#222). */
-div.highlighter-rouge {
-  background: transparent;
-  overflow: hidden;
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-  margin: 0 0 var(--space-4);
-}
-
 .code-block {
   position: relative;
-  margin: 0;
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
+  margin-block: var(--space-6);
   background: var(--color-code-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
@@ -29,17 +16,10 @@ div.highlighter-rouge {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  flex-wrap: wrap;
   gap: 0.35rem;
   padding: 0.35rem 0.5rem;
   border-bottom: 1px solid var(--color-border);
   background: color-mix(in srgb, var(--color-code-bg) 85%, var(--color-fg) 4%);
-}
-
-@media (max-width: 40em) {
-  .code-block__toolbar {
-    justify-content: flex-start;
-  }
 }
 
 .code-block__btn {
@@ -77,73 +57,45 @@ div.highlighter-rouge {
 }
 
 .code-block__body {
-  display: block;
-  min-width: 0;
-  overflow-x: hidden;
-}
-
-/* Line numbers sit in padding so a wrapped line keeps its number (#222). */
-.code-block__line {
-  display: block;
-  position: relative;
-  padding-left: 3.15rem;
-  min-height: 1.45em;
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-
-.code-block__line::before {
-  content: attr(data-n);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2.5rem;
-  font-variant-numeric: tabular-nums;
-  text-align: right;
-  color: var(--color-muted);
-  user-select: none;
-}
-
-.code-block pre {
-  margin: 0;
-  padding: var(--space-4) var(--space-4) var(--space-4) var(--space-2);
-  max-width: 100%;
-  min-width: 0;
-  overflow: hidden;
-  background: transparent;
-  border-radius: 0;
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
-  word-break: break-word;
-  tab-size: 2;
-}
-
-.code-block.is-nowrap .code-block__body {
+  display: flex;
+  align-items: stretch;
   overflow-x: auto;
 }
 
-.code-block.is-nowrap pre {
-  overflow: visible;
-  max-width: none;
-}
-
-.code-block.is-nowrap pre,
-.code-block.is-nowrap .code-block__line {
+.code-block__lines {
+  flex: 0 0 auto;
+  padding: var(--space-4) 0.65rem var(--space-4) 0.75rem;
+  margin: 0;
+  border-right: 1px solid var(--color-border);
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  line-height: 1.45;
+  text-align: right;
+  color: var(--color-muted);
+  user-select: none;
   white-space: pre;
-  overflow-wrap: normal;
-  word-break: normal;
+  background: color-mix(in srgb, var(--color-code-bg) 92%, var(--color-fg) 3%);
 }
 
-.code-block.is-nowrap .code-block__line {
-  width: max-content;
-  min-width: 100%;
+.code-block pre {
+  flex: 1 1 auto;
+  margin: 0;
+  padding: var(--space-4);
+  overflow: visible;
+  background: transparent;
+  border-radius: 0;
+  white-space: pre;
+  tab-size: 2;
 }
 
-.code-block.is-nowrap .code-block__line::before {
-  position: sticky;
-  left: 0;
-  background: var(--color-code-bg);
+.code-block.is-wrap pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.code-block.is-wrap .code-block__body {
+  overflow-x: hidden;
 }
 
 .code-block pre code {
@@ -155,29 +107,21 @@ div.highlighter-rouge {
 }
 
 .prose .code-block {
-  margin: 0;
+  margin-block: var(--space-6);
 }
 
-.prose .code-block pre,
-.code-block pre.highlight {
+.prose .code-block pre {
   margin: 0;
-  background: transparent;
 }
 
 /* ---------- Rouge (token colors via CSS vars in main.css) ---------- */
 .highlighter-rouge {
   font-family: var(--font-mono);
   font-size: 0.88em;
+  background: var(--color-code-bg);
   color: var(--color-fg);
-}
-
-div.highlighter-rouge,
-div.highlighter-rouge .highlight {
-  background: transparent;
-  border-radius: 0;
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
+  border-radius: var(--radius);
+  overflow-x: auto;
 }
 
 .highlighter-rouge .highlight,
@@ -190,22 +134,13 @@ div.highlighter-rouge .highlight {
   margin: 0;
   padding: var(--space-4);
   background: transparent;
-  overflow-x: hidden;
+  overflow-x: auto;
   line-height: 1.45;
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-
-div.highlighter-rouge pre {
-  background: var(--color-code-bg);
-  border-radius: var(--radius);
 }
 
 code.highlighter-rouge {
   padding: 0.12em 0.35em;
   border-radius: 0.15rem;
-  background: var(--color-code-bg);
 }
 
 .highlight .c,
