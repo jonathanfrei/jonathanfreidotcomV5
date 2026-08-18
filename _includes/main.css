@@ -751,6 +751,154 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   }
 }
 
+/* ---------- Prose editorial marks (#223) ---------- */
+/* Kramdown: {: .aside} / {: .pull-quote} / {: .caption} */
+
+/* Host paragraph first in the DOM (reading order). On small screens the
+   aside stays boxed underneath. On wide screens a hanging grid puts it
+   in the left margin without overlapping the measure. */
+.aside-pair {
+  display: flex;
+  flex-direction: column;
+}
+
+.prose p.aside,
+.prose aside.aside,
+.aside-pair > .aside {
+  font-family: var(--font-ui);
+  font-weight: 400;
+  font-size: 0.82em;
+  line-height: 1.45;
+  color: var(--color-fg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-4);
+  margin: 0 0 var(--space-4);
+}
+
+.prose p.aside a,
+.prose aside.aside a,
+.aside-pair > .aside a {
+  color: var(--color-accent);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+.prose p.aside a:hover,
+.prose p.aside a:focus-visible,
+.prose aside.aside a:hover,
+.prose aside.aside a:focus-visible,
+.aside-pair > .aside a:hover,
+.aside-pair > .aside a:focus-visible {
+  color: var(--color-accent-hover);
+}
+
+.prose p.aside strong,
+.prose aside.aside strong,
+.aside-pair > .aside strong {
+  font-weight: 700;
+  color: var(--brand-deep-ocean, var(--color-fg));
+}
+
+/* Hang only when 11.5rem + gap fits beside the 36em measure. At 60em
+   the box sat off the left edge and widened the page (#226, #231).
+   Only paired asides hang; an unpaired .aside stays boxed instead of
+   sitting on a heading (#232). The hang selectors must beat
+   `.prose p.aside` or the box/padding/margin win and the sidenote
+   overlaps the paragraph. */
+@media (min-width: 70em) {
+  .aside-pair {
+    display: grid;
+    grid-template-columns: 11.5rem minmax(0, 1fr);
+    column-gap: 1.35rem;
+    align-items: start;
+    margin-inline-start: calc(-11.5rem - 1.35rem);
+    width: calc(100% + 11.5rem + 1.35rem);
+  }
+
+  .aside-pair > :not(.aside) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .prose .aside-pair > .aside,
+  .prose .aside-pair > p.aside {
+    grid-column: 1;
+    grid-row: 1;
+    float: none;
+    width: auto;
+    max-width: none;
+    margin: 0.15em 0 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    border-radius: 0;
+  }
+}
+
+.prose .pull-quote {
+  font-family: var(--font-body);
+  font-size: 1.15em;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: var(--color-fg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-4) var(--space-5);
+  margin-block: var(--space-5);
+}
+
+.prose blockquote.pull-quote {
+  border-left: 1px solid var(--color-border);
+  color: var(--color-fg);
+}
+
+.prose .caption {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 0.75em;
+  line-height: 1.5;
+  color: var(--color-fg);
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.prose .caption strong {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-style: normal;
+  color: var(--color-fg);
+  text-transform: uppercase;
+}
+
+.prose .caption em,
+.prose .caption i {
+  font-family: var(--font-mono);
+  font-weight: 300;
+  font-style: normal;
+  color: var(--color-muted);
+}
+
+.prose .caption a {
+  color: var(--color-accent);
+  font-weight: 400;
+  text-decoration: none;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+.prose .caption a:hover,
+.prose .caption a:focus-visible {
+  color: var(--color-accent-hover);
+  text-decoration-style: solid;
+}
 
 /* ---------- Post list & meta ---------- */
 .post-list {
