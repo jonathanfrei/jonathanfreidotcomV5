@@ -23,40 +23,6 @@ A navigable reference for the semantic components used on long-form editorial pa
 
 </div>
 
-^
-
-**Updated:** August 18, 2026
-
-**Category:** Kramdown block extension parsing test
-
-**Use:** Copy shells into `editorial/*.md` pages with `layout: editorial`
-
-^
-{: .metadata} 
-
-
-**Trying to add a meta data element** alone as the block might have hidden what I was doing.
-**Will a second line** stay grouped with the meta data? 
-{: .metadata} 
-
-> **what about blockquote?** Will that allow the grouping? 
-> **Will a second line** stay grouped with the meta data? 
-{: .metadata} 
-
-
-^
-
-Testing one line block
-
-^ 
-{: .metadata} 
-
-Another eyebrow
-{: .eyebrow}
-
-# Title 2
-{: .editorial-header}
-
 <div class="lead" markdown="1">
 
 This page is the working library for composition: jump to a component, preview it, copy the shell, and fill in real content. Multi-block components use HTML wrappers with `markdown="1"` so headings, lists, and paragraphs stay inside the component. Visual treatment lives in CSS (`_includes/editorial.css`).
