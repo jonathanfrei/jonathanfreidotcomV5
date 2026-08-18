@@ -801,14 +801,14 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   .prose p.aside,
   .prose aside.aside,
   .aside-pair > .aside {
-    float: left;
-    clear: left;
-    width: 11.5rem;
-    margin: 0.15em 0 var(--space-3) calc(-11.5rem - 1.35rem);
-    padding: 0;
-    background: none;
-    border: 0;
-    border-radius: 0;
+        float: right;
+        clear: right;
+        width: 11.5rem;
+        margin: 0.15em -15em var(--space-3) calc(-11.5rem - 1.35rem);
+        padding: 0;
+        background: none;
+        border: 0;
+        border-radius: 0;
   }
 }
 
