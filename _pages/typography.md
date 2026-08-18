@@ -88,13 +88,6 @@ hello("world")
 | `--color-accent` | Links / focus | Signature Blue `#0077A8` |
 | `--brand-ink` / `--brand-paper` | Text / page ground | `#111C24` / `#FAF9F6` |
 
-## Figure / image
-
-<figure>
-  <img src="{{ '/assets/img/favicon.png' | asset_url }}" data-fallback="{{ '/assets/img/favicon.png' | asset_origin_url }}" onerror="assetFallback(this)" alt="Site favicon specimen" width="64" height="64">
-  <figcaption>Favicon used as a small figure specimen.</figcaption>
-</figure>
-
 ## Editorial marks
 
 Kramdown classes on ordinary posts and pages (`{: .aside}`, `{: .pull-quote}`, `{: .caption}`, `{: .figure-wide}`).
@@ -107,8 +100,13 @@ Typography is the craft of endowing human language with a durable visual form, a
 A complete sentence is still the unit of thought, even when it is pulled out of the column and boxed.
 {: .pull-quote}
 
-**Caption title** Body of the caption in the reading face. *[Credit or source]({{ '/about' | relative_url }})*
+![full sized image](https://images.unsplash.com/photo-1770034568779-af19841f2aeb?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+{: .figure-wide}
+
+**Caption title** Body of the caption in the reading face. *[Credit or source](https://unsplash.com/photos/rocky-mountain-slope-in-stepantsminda-fJrVETFC1lE)*
 {: .caption}
+
+
 
 <p class="figure-wide">
   <img src="{{ '/assets/img/favicon.png' | asset_url }}" data-fallback="{{ '/assets/img/favicon.png' | asset_origin_url }}" onerror="assetFallback(this)" alt="Site favicon, shown at intrinsic size inside a full-bleed track" width="64" height="64">
@@ -151,3 +149,11 @@ A complete sentence is still the unit of thought, even when it is pulled out of 
 </div>
 
 <p class="post-meta">Empty 16:9 embed shell (`.embed` / `.embed-video`) for layout checks.</p>
+
+
+## Figure / image
+
+<figure>
+  <img src="{{ '/assets/img/favicon.png' | asset_url }}" data-fallback="{{ '/assets/img/favicon.png' | asset_origin_url }}" onerror="assetFallback(this)" alt="Site favicon specimen" width="64" height="64">
+  <figcaption>Favicon used as a small figure specimen.</figcaption>
+</figure>
