@@ -903,13 +903,14 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 }
 
 /*
-  Wide figures must not use 100vw. That unit is wider than the
-  device (scrollbar) and iOS Safari then treats the page as desktop.
+  .figure-wide is a desktop breakout only (#231). On phones, standalone
+  images already full-bleed via the 40em padding-cancel rule. Do not
+  open the container or build the 3-column grid below that point: the
+  middle track is min(36em, …), which is a ~576px minimum. iOS Safari
+  then inflates the layout viewport to ~980px and the whole page
+  looks like desktop.
 
-  When a wide figure is present, prose becomes a 3-column grid:
-  side gutters + a center measure. Every child sits in the center
-  track (same left edge). The figure spans all three columns, so it
-  can use the full main width without overflowing the viewport.
+  Never use 100vw here. That unit is wider than the device.
 */
 .site-main > .container:has(.figure-wide) {
   max-width: none;
@@ -931,12 +932,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 
 .prose .figure-wide,
 .prose p.figure-wide,
-.prose figure.figure-wide,
-.container:has(.figure-wide) .prose > .figure-wide {
-  grid-column: 1 / -1;
-  width: 100%;
-  max-width: none;
-  margin-inline: 0;
+.prose figure.figure-wide {
   margin-block: var(--space-5);
   text-align: center;
 }
@@ -948,6 +944,47 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   max-width: 100%;
   height: auto;
   margin-inline: auto;
+}
+
+@media (min-width: 40.01em) {
+  .site-main > .container:has(.figure-wide) {
+    max-width: none;
+    padding-inline: 0;
+  }
+
+  .container:has(.figure-wide) .prose {
+    max-width: none;
+    display: grid;
+    grid-template-columns:
+      minmax(var(--space-4), 1fr)
+      min(var(--measure), calc(100% - 2 * var(--space-4)))
+      minmax(var(--space-4), 1fr);
+  }
+
+  .container:has(.figure-wide) .prose > * {
+    grid-column: 2;
+  }
+
+  .container:has(.figure-wide) .prose > .aside-pair {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .prose .figure-wide,
+  .prose p.figure-wide,
+  .prose figure.figure-wide,
+  .container:has(.figure-wide) .prose > .figure-wide {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+  }
+}
+
+@media (min-width: 70em) {
+  .container:has(.figure-wide) .prose > .aside-pair {
+    display: block;
+  }
 }
 
 /* ---------- Post list & meta ---------- */
@@ -1341,18 +1378,16 @@ span.tag:hover {
     padding-block: var(--space-6);
   }
 
-  /* Full-bleed standalone images: cancel .container inline padding (#202). */
-  .prose p:has(> img:only-child):not(.figure-wide),
-  .prose p:has(> a:only-child > img:only-child):not(.figure-wide) {
+  /* Full-bleed standalone images, including .figure-wide (#202, #231). */
+  .prose p:has(> img:only-child),
+  .prose p:has(> a:only-child > img:only-child) {
     width: calc(100% + (2 * var(--space-4)));
     max-width: none;
     margin-inline: calc(-1 * var(--space-4));
   }
 
-  .prose p:has(> img:only-child):not(.figure-wide) img,
-  .prose p:has(> a:only-child > img:only-child):not(.figure-wide) img,
-  .prose .figure-wide img,
-  .prose img.figure-wide {
+  .prose p:has(> img:only-child) img,
+  .prose p:has(> a:only-child > img:only-child) img {
     border-radius: 0;
   }
 }
