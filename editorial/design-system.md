@@ -34,7 +34,15 @@ A navigable reference for the semantic components used on long-form editorial pa
 ^
 {: .metadata} 
 
-Trying to add another element as the block might have hidden what I was doing. 
+
+Trying to add a meta data element alone as the block might have hidden what I was doing. {: .metadata} 
+
+^
+
+Testing one line block
+
+^ 
+{: .metadata} 
 
 Another eyebrow
 {: .eyebrow}
