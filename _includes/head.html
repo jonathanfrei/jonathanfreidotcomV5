@@ -1,5 +1,36 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+{% comment %}
+  iOS Safari (mobile UA) can keep a ~980px layout viewport even with
+  width=device-width, so min-width: 40em matches and the page looks
+  like desktop. Chrome/DDG on the same phone do not. Request Desktop
+  Website switches the UA to Macintosh — do not key off screen.width
+  (#228), which stays phone-sized and would ignore that setting (#231).
+{% endcomment %}
+<script>
+(function () {
+  var ua = navigator.userAgent || "";
+  if (!/iPhone|iPod/i.test(ua)) return;
+  document.documentElement.classList.add("is-narrow");
+  var meta = document.querySelector('meta[name="viewport"]');
+  if (!meta) return;
+  function apply() {
+    var landscape = typeof window.orientation === "number" && Math.abs(window.orientation) === 90;
+    var shortSide = Math.min(screen.width || 0, screen.height || 0);
+    var longSide = Math.max(screen.width || 0, screen.height || 0);
+    var w = landscape ? longSide : shortSide;
+    if (!w) return;
+    meta.setAttribute(
+      "content",
+      "width=" + w + ", initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+    );
+  }
+  apply();
+  window.addEventListener("orientationchange", function () {
+    setTimeout(apply, 50);
+  });
+})();
+</script>
 <meta name="color-scheme" content="light dark">
 <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 <meta name="description" content="{{ page.description | default: site.description | escape }}">
