@@ -390,7 +390,9 @@ a:focus-visible {
 }
 
 .site-header .container {
+  width: 100%;
   max-width: var(--measure-wide);
+  min-width: 0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -399,7 +401,7 @@ a:focus-visible {
 }
 
 @media (min-width: 40em) {
-  .site-header .container {
+  html:not(.is-narrow) .site-header .container {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -960,7 +962,14 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 .link-entry__body,
 .link-post__body {
   min-width: 0;
+  max-width: 100%;
   overflow-x: auto;
+}
+
+.link-entry__body img,
+.link-post__body img {
+  max-width: 100%;
+  height: auto;
 }
 .link-entry__body > :first-child,
 .link-post__body > :first-child { margin-top: 0; }
@@ -1285,7 +1294,8 @@ span.tag:hover {
   text-decoration: underline;
 }
 
-/* Small screens */
+/* Small screens, plus iPhone Safari when it inflates the layout
+   viewport so max-width: 40em never matches (#231). */
 @media (max-width: 40em) {
   .site-main {
     padding-block: var(--space-6);
@@ -1303,4 +1313,26 @@ span.tag:hover {
   .prose p:has(> a:only-child > img:only-child) img {
     border-radius: 0;
   }
+}
+
+html.is-narrow .site-header .container {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+html.is-narrow .site-main {
+  padding-block: var(--space-6);
+}
+
+html.is-narrow .prose p:has(> img:only-child),
+html.is-narrow .prose p:has(> a:only-child > img:only-child) {
+  width: calc(100% + (2 * var(--space-4)));
+  max-width: none;
+  margin-inline: calc(-1 * var(--space-4));
+}
+
+html.is-narrow .prose p:has(> img:only-child) img,
+html.is-narrow .prose p:has(> a:only-child > img:only-child) img {
+  border-radius: 0;
 }
