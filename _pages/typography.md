@@ -88,23 +88,7 @@ hello("world")
 | `--color-accent` | Links / focus | Signature Blue `#0077A8` |
 | `--brand-ink` / `--brand-paper` | Text / page ground | `#111C24` / `#FAF9F6` |
 
-## Figure / image
 
-
-  <img src="{{ '/assets/img/favicon.ico' | asset_url }}" data-fallback="{{ '/assets/img/favicon.png' | asset_origin_url }}" onerror="assetFallback(this)" alt="Site favicon specimen" width="64" height="64">
-  <figcaption>Favicon used as a small figure specimen.</figcaption>
-
-
-## Definition list
-
-<dl>
-  <dt>Measure</dt>
-  <dd>The length of a line of text; kept moderate for readability.</dd>
-  <dt>Leading</dt>
-  <dd>Vertical space between baselines of body text.</dd>
-  <dt>Hierarchy</dt>
-  <dd>Relative size and weight that signal structure without shouting.</dd>
-</dl>
 
 ## Form controls (unstyled baseline)
 
