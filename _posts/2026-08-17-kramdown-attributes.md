@@ -81,7 +81,6 @@ Then the stylesheet decides what a pull quote looks like:
 That small distinction is the foundation of a reusable content design system. Markdown becomes the author-facing API. The classes describe editorial roles such as `.lede`, `.pull-quote`, `.aside`, `.note`, `.data-block`, `.figure-wide`, or `.section-break`. CSS owns typography, spacing, color, borders, responsive behavior, and themes.
 
 Once those roles are stable, the design can change without rewriting the article source. A `.note` can be a pale bordered box in one theme and a compact icon treatment in another. The Markdown remains the same because the meaning of the content has not changed.
-{: .aside}
 
 ## Start with a small component vocabulary
 
@@ -105,7 +104,6 @@ For a long-form Jekyll site, that might look something like this:
 The exact names are less important than keeping them semantic, documented, and few enough that an author can remember them.
 
 I would avoid turning every CSS utility into a Kramdown attribute. Classes such as `.mt-32`, `.text-blue`, or `.grid-span-8` are useful inside templates, but they make prose depend on the current implementation. Editorial Markdown should normally use components; layouts and CSS can use utilities underneath them.
-{: .aside}
 
 ## Build the CSS in layers
 
@@ -137,7 +135,6 @@ Then a component is assembled from common tokens instead of inventing new values
 ```
 
 This becomes especially useful for light and dark themes. The Markdown should not need `.note-dark` and `.note-light`. The `.note` component should consume theme-aware tokens, while the theme changes those tokens.
-{: .aside}
 
 ## Let Jekyll handle the larger components
 
@@ -177,7 +174,6 @@ That affects previews too. GitHub's own Markdown view, an editor preview, a CMS 
 Jekyll also processes pages through more than one layer: front matter and Liquid are handled as part of the site build, Markdown is converted to HTML, and the resulting content is inserted into layouts. [Jekyll's documentation describes that rendering pipeline](https://jekyllrb.com/tutorials/convert-site-to-jekyll/). That means attributes should generally describe content, while Liquid and layouts own application structure.
 
 Raw HTML is still available when needed, but mixing Markdown inside HTML blocks has its own Kramdown parsing rules. If a design regularly needs containers with complicated nested Markdown, that is another signal to move the structure into an include rather than making authors manage parsing details in each article.
-{: .aside}
 
 ## Make the design system self-documenting
 

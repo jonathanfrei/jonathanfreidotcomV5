@@ -206,19 +206,10 @@ html[data-theme="dark"] {
   box-sizing: border-box;
 }
 
-img,
-video {
-  max-width: 100%;
-  height: auto;
-}
-
 html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
-  /* Do not set overflow-x on html. iOS Safari then sizes the layout
-     viewport to overflowing content (~980px) and every max-width
-     media query sees a desktop canvas (#227, #231). */
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -236,8 +227,6 @@ body {
   color: var(--color-fg);
   background-color: var(--color-bg);
   min-height: 100vh;
-  min-width: 0;
-  max-width: 100%;
   display: flex;
   flex-direction: column;
   font-kerning: normal;
@@ -367,15 +356,12 @@ a:focus-visible {
 .container {
   width: 100%;
   max-width: var(--measure);
-  min-width: 0;
   margin-inline: auto;
   padding-inline: var(--space-4);
 }
 
 .site-main {
   flex: 1;
-  min-width: 0;
-  max-width: 100%;
   padding-block: var(--space-8);
 }
 
@@ -390,23 +376,11 @@ a:focus-visible {
 }
 
 .site-header .container {
-  width: 100%;
   max-width: var(--measure-wide);
-  min-width: 0;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: var(--space-2);
-}
-
-@media (min-width: 40em) {
-  html:not(.is-narrow) .site-header .container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-4);
-  }
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
 }
 
 .site-logo {
@@ -644,7 +618,6 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 /* ---------- Prose ---------- */
 .prose {
   max-width: var(--measure);
-  min-width: 0;
   hyphens: auto;
 }
 
@@ -689,13 +662,10 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 .prose pre {
   background: var(--color-code-bg);
   padding: var(--space-4);
-  overflow-x: hidden;
+  overflow-x: auto;
   border-radius: var(--radius);
   line-height: 1.45;
   hyphens: none;
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
-  word-break: break-word;
 }
 
 .prose code {
@@ -751,155 +721,6 @@ html:not([data-theme]) .theme-toggle__icon--sun {
     padding-right: 0.1em;
     margin-inline-end: 0;
   }
-}
-
-/* ---------- Prose editorial marks (#223) ---------- */
-/* Kramdown: {: .aside} / {: .pull-quote} / {: .caption} */
-
-/* Host paragraph first in the DOM (reading order). On small screens the
-   aside stays boxed underneath. On wide screens a hanging grid puts it
-   in the left margin without overlapping the measure. */
-.aside-pair {
-  display: flex;
-  flex-direction: column;
-}
-
-.prose p.aside,
-.prose aside.aside,
-.aside-pair > .aside {
-  font-family: var(--font-ui);
-  font-weight: 400;
-  font-size: 0.82em;
-  line-height: 1.45;
-  color: var(--color-fg);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  padding: var(--space-3) var(--space-4);
-  margin: 0 0 var(--space-4);
-}
-
-.prose p.aside a,
-.prose aside.aside a,
-.aside-pair > .aside a {
-  color: var(--color-accent);
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.16em;
-}
-
-.prose p.aside a:hover,
-.prose p.aside a:focus-visible,
-.prose aside.aside a:hover,
-.prose aside.aside a:focus-visible,
-.aside-pair > .aside a:hover,
-.aside-pair > .aside a:focus-visible {
-  color: var(--color-accent-hover);
-}
-
-.prose p.aside strong,
-.prose aside.aside strong,
-.aside-pair > .aside strong {
-  font-weight: 700;
-  color: var(--brand-deep-ocean, var(--color-fg));
-}
-
-/* Hang only when 11.5rem + gap fits beside the 36em measure. At 60em
-   the box sat off the left edge and widened the page (#226, #231).
-   Only paired asides hang; an unpaired .aside stays boxed instead of
-   sitting on a heading (#232). The hang selectors must beat
-   `.prose p.aside` or the box/padding/margin win and the sidenote
-   overlaps the paragraph. */
-@media (min-width: 70em) {
-  .aside-pair {
-    display: grid;
-    grid-template-columns: 11.5rem minmax(0, 1fr);
-    column-gap: 1.35rem;
-    align-items: start;
-    margin-inline-start: calc(-11.5rem - 1.35rem);
-    width: calc(100% + 11.5rem + 1.35rem);
-  }
-
-  .aside-pair > :not(.aside) {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .prose .aside-pair > .aside,
-  .prose .aside-pair > p.aside {
-    grid-column: 1;
-    grid-row: 1;
-    float: none;
-    width: auto;
-    max-width: none;
-    margin: 0.15em 0 0;
-    padding: 0;
-    background: none;
-    border: 0;
-    border-radius: 0;
-  }
-}
-
-.prose .pull-quote {
-  font-family: var(--font-body);
-  font-size: 1.15em;
-  font-weight: 700;
-  font-style: italic;
-  line-height: 1.4;
-  letter-spacing: -0.01em;
-  color: var(--color-fg);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  padding: var(--space-4) var(--space-5);
-  margin-block: var(--space-5);
-}
-
-.prose blockquote.pull-quote {
-  border-left: 1px solid var(--color-border);
-  color: var(--color-fg);
-}
-
-.prose .caption {
-  font-family: var(--font-body);
-  font-weight: 300;
-  font-size: 0.75em;
-  line-height: 1.5;
-  color: var(--color-fg);
-  margin-top: var(--space-2);
-  margin-bottom: var(--space-4);
-}
-
-.prose .caption strong {
-  font-family: var(--font-mono);
-  font-weight: 700;
-  font-style: normal;
-  color: var(--color-fg);
-  text-transform: uppercase;
-}
-
-.prose .caption em,
-.prose .caption i {
-  font-family: var(--font-mono);
-  font-weight: 300;
-  font-style: normal;
-  color: var(--color-muted);
-}
-
-.prose .caption a {
-  color: var(--color-accent);
-  font-weight: 400;
-  text-decoration: none;
-  text-decoration-style: dotted;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.16em;
-}
-
-.prose .caption a:hover,
-.prose .caption a:focus-visible {
-  color: var(--color-accent-hover);
-  text-decoration-style: solid;
 }
 
 /* ---------- Post list & meta ---------- */
@@ -960,17 +781,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 
 .link-entry__meta { margin: 0 0 var(--space-3); }
 .link-entry__body,
-.link-post__body {
-  min-width: 0;
-  max-width: 100%;
-  overflow-x: auto;
-}
-
-.link-entry__body img,
-.link-post__body img {
-  max-width: 100%;
-  height: auto;
-}
+.link-post__body { overflow: auto; }
 .link-entry__body > :first-child,
 .link-post__body > :first-child { margin-top: 0; }
 .link-post__meta { margin: 0 0 var(--space-6); }
@@ -1294,9 +1105,14 @@ span.tag:hover {
   text-decoration: underline;
 }
 
-/* Small screens, plus iPhone Safari when it inflates the layout
-   viewport so max-width: 40em never matches (#231). */
+/* Small screens */
 @media (max-width: 40em) {
+  .site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
   .site-main {
     padding-block: var(--space-6);
   }
@@ -1313,26 +1129,4 @@ span.tag:hover {
   .prose p:has(> a:only-child > img:only-child) img {
     border-radius: 0;
   }
-}
-
-html.is-narrow .site-header .container {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-2);
-}
-
-html.is-narrow .site-main {
-  padding-block: var(--space-6);
-}
-
-html.is-narrow .prose p:has(> img:only-child),
-html.is-narrow .prose p:has(> a:only-child > img:only-child) {
-  width: calc(100% + (2 * var(--space-4)));
-  max-width: none;
-  margin-inline: calc(-1 * var(--space-4));
-}
-
-html.is-narrow .prose p:has(> img:only-child) img,
-html.is-narrow .prose p:has(> a:only-child > img:only-child) img {
-  border-radius: 0;
 }
