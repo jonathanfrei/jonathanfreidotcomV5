@@ -65,11 +65,11 @@ Ordered:
 
 Inline: `bundle exec jekyll serve`
 
-Fenced block:
+Fenced block (wraps by default; unwrap from the toolbar if you want a single long line):
 
 ```ruby
 def hello(name)
-  puts "Hello, #{name}"
+  puts "Hello, #{name} — this line is intentionally long so wrapped text stays aligned with its line number"
 end
 
 hello("world")
@@ -94,6 +94,25 @@ hello("world")
   <img src="{{ '/assets/img/favicon.png' | asset_url }}" data-fallback="{{ '/assets/img/favicon.png' | asset_origin_url }}" onerror="assetFallback(this)" alt="Site favicon specimen" width="64" height="64">
   <figcaption>Favicon used as a small figure specimen.</figcaption>
 </figure>
+
+## Editorial marks
+
+Kramdown classes on ordinary posts and pages (`{: .aside}`, `{: .pull-quote}`, `{: .caption}`, `{: .figure-wide}`).
+
+A sidenote about the following paragraph. On a wide screen it sits in the left margin; on a narrow screen it drops below in a box.
+{: .aside}
+
+Typography is the craft of endowing human language with a durable visual form, and asides should not interrupt that line length when the page has room for a margin.
+
+A complete sentence is still the unit of thought, even when it is pulled out of the column and boxed.
+{: .pull-quote}
+
+**Caption title** Body of the caption in the reading face. *[Credit or source]({{ '/about' | relative_url }})*
+{: .caption}
+
+<p class="figure-wide">
+  <img src="{{ '/assets/img/favicon.png' | asset_url }}" data-fallback="{{ '/assets/img/favicon.png' | asset_origin_url }}" onerror="assetFallback(this)" alt="Site favicon, shown at intrinsic size inside a full-bleed track" width="64" height="64">
+</p>
 
 ## Definition list
 
