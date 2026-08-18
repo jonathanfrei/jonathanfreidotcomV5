@@ -871,34 +871,51 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 }
 
 /*
-  Wide figures grow past the reading measure without 100vw.
-  100vw + (50% - 50vw) is wider than the device (scrollbar) and
-  makes iOS Safari size the layout viewport like a desktop canvas.
-  Instead: when a wide figure is present, the main column may use
-  the full site-main width; the figure is 100% of that (plus the
-  container padding so it can full-bleed). Other prose stays on
-  --measure.
+  Wide figures must not use 100vw. That unit is wider than the
+  device (scrollbar) and iOS Safari then treats the page as desktop.
+
+  When a wide figure is present, prose becomes a 3-column grid:
+  side gutters + a center measure. Every child sits in the center
+  track (same left edge). The figure spans all three columns, so it
+  can use the full main width without overflowing the viewport.
 */
 .site-main > .container:has(.figure-wide) {
   max-width: none;
+  padding-inline: 0;
 }
 
 .container:has(.figure-wide) .prose {
   max-width: none;
+  display: grid;
+  grid-template-columns:
+    minmax(var(--space-4), 1fr)
+    min(var(--measure), calc(100% - 2 * var(--space-4)))
+    minmax(var(--space-4), 1fr);
 }
 
-.container:has(.figure-wide) .prose > *:not(.figure-wide),
-.container:has(.figure-wide) .prose > .aside-pair > :not(.aside) {
-  max-width: var(--measure);
-  margin-inline: auto;
+.container:has(.figure-wide) .prose > * {
+  grid-column: 2;
+}
+
+.container:has(.figure-wide) .prose > .aside-pair {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 60em) {
+  .container:has(.figure-wide) .prose > .aside-pair {
+    display: block;
+  }
 }
 
 .prose .figure-wide,
 .prose p.figure-wide,
-.prose figure.figure-wide {
-  width: calc(100% + (2 * var(--space-4)));
+.prose figure.figure-wide,
+.container:has(.figure-wide) .prose > .figure-wide {
+  grid-column: 1 / -1;
+  width: 100%;
   max-width: none;
-  margin-inline: calc(-1 * var(--space-4));
+  margin-inline: 0;
   margin-block: var(--space-5);
   text-align: center;
 }
