@@ -800,7 +800,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   measure can hold 14.5rem + gap + a small gutter. At 60em the
   hanging box sat off the left edge and overflow-x: clip hid it.
 */
-@media (min-width: 70em) {
+@media (min-width: 70em) and (min-device-width: 70em) {
   .aside-pair {
     display: contents;
   }
@@ -898,7 +898,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   text-align: center;
 }
 
-@media (min-width: 40.01em) {
+@media (min-width: 40.01em) and (min-device-width: 40.01em) {
   .prose .figure-wide,
   .prose p.figure-wide,
   .prose figure.figure-wide {
@@ -1299,8 +1299,14 @@ span.tag:hover {
   text-decoration: underline;
 }
 
-/* Small screens */
-@media (max-width: 40em) {
+/*
+  Phone layout. max-device-width covers iOS Safari when it inflates
+  the *layout* viewport to ~980px (media queries then see a desktop
+  canvas even though the phone is ~390px). html.is-narrow is set from
+  screen.width before CSS loads, so it still wins if device-width is
+  ignored.
+*/
+@media (max-width: 40em), (max-device-width: 40em) {
   .site-header .container {
     flex-direction: column;
     align-items: flex-start;
@@ -1328,4 +1334,36 @@ span.tag:hover {
   .prose img.figure-wide {
     border-radius: 0;
   }
+}
+
+html.is-narrow .site-header .container {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+html.is-narrow .site-main {
+  padding-block: var(--space-6);
+}
+
+html.is-narrow .prose p:has(> img:only-child):not(.figure-wide),
+html.is-narrow .prose p:has(> a:only-child > img:only-child):not(.figure-wide) {
+  width: calc(100% + (2 * var(--space-4)));
+  max-width: none;
+  margin-inline: calc(-1 * var(--space-4));
+}
+
+html.is-narrow .prose p:has(> img:only-child):not(.figure-wide) img,
+html.is-narrow .prose p:has(> a:only-child > img:only-child):not(.figure-wide) img,
+html.is-narrow .prose .figure-wide img,
+html.is-narrow .prose img.figure-wide {
+  border-radius: 0;
+}
+
+html.is-narrow .prose .figure-wide,
+html.is-narrow .prose p.figure-wide,
+html.is-narrow .prose figure.figure-wide {
+  width: calc(100% + (2 * var(--space-4)));
+  max-width: none;
+  margin-inline: calc(-1 * var(--space-4));
 }
