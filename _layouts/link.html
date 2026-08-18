@@ -28,11 +28,5 @@ layout: default
 
   {% include link-card.html entry=page %}
 
-  <p class="post-comment-link">
-    <a href="mailto:hi+comments@jonathanfrei.com?subject={{ 'Comment on: ' | append: page.title | uri_escape }}&body={{ 'Post: ' | append: page.title | append: '%0A' | append: page.url | absolute_url | uri_escape }}">Comment</a>
-    <span class="post-actions-sep" aria-hidden="true">·</span>
-    <a href="https://github.com/jonathanfrei/jonathanfreidotcomV5/edit/main/{{ page.path }}" target="_blank" rel="noopener noreferrer">Edit</a>
-    <span class="post-actions-sep" aria-hidden="true">·</span>
-    <a href="{{ '/blog' | relative_url }}">Blog</a>
-  </p>
+  {% include post-actions.html %}
 </article>
