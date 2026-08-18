@@ -755,8 +755,8 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 .prose p.aside,
 .prose aside.aside,
 .aside-pair > .aside {
-  font-family: var(--font-body);
-  font-weight: 600;
+  font-family: var(--font-interface);
+  font-weight: 400;
   font-size: 0.92em;
   line-height: 1.45;
   color: var(--color-fg);

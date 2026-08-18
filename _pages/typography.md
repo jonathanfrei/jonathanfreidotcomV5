@@ -92,12 +92,15 @@ hello("world")
 
 Kramdown classes on ordinary posts and pages (`{: .aside}`, `{: .pull-quote}`, `{: .caption}`, `{: .figure-wide}`).
 
-A sidenote about the following paragraph. On a wide screen it sits in the left margin; on a narrow screen it drops below in a box.
+**A sidenote** about the following paragraph. On a *wide screen* it sits in the left margin; on a narrow screen it drops below in a box. [Links look like this](xx)
 {: .aside}
 
 Typography is the craft of endowing human language with a durable visual form, and asides should not interrupt that line length when the page has room for a margin.
 
 A complete sentence is still the unit of thought, even when it is pulled out of the column and boxed.
+{: .pull-quote}
+
+> A complete sentence is still the unit of thought, even when it is pulled out of the column and boxed.
 {: .pull-quote}
 
 ![full sized image](https://images.unsplash.com/photo-1770034568779-af19841f2aeb?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
@@ -106,11 +109,15 @@ A complete sentence is still the unit of thought, even when it is pulled out of 
 **Caption title** Body of the caption in the reading face. *[Credit or source](https://unsplash.com/photos/rocky-mountain-slope-in-stepantsminda-fJrVETFC1lE)*
 {: .caption}
 
+![Testing another large image but not full bleed](https://media.jonathanfrei.com/assets/img/2026-08-18-20260818101515-9080.png)
+{: .figure-wide}
 
 
-<p class="figure-wide">
-  <img src="{{ '/assets/img/favicon.png' | asset_url }}" data-fallback="{{ '/assets/img/favicon.png' | asset_origin_url }}" onerror="assetFallback(this)" alt="Site favicon, shown at intrinsic size inside a full-bleed track" width="64" height="64">
-</p>
+
+**large but not full bleed** Body of the caption in the reading face. *[Credit or source](https://unsplash.com/photos/rocky-mountain-slope-in-stepantsminda-fJrVETFC1lE)*
+{: .caption}
+
+
 
 ## Definition list
 
@@ -149,11 +156,3 @@ A complete sentence is still the unit of thought, even when it is pulled out of 
 </div>
 
 <p class="post-meta">Empty 16:9 embed shell (`.embed` / `.embed-video`) for layout checks.</p>
-
-
-## Figure / image
-
-<figure>
-  <img src="{{ '/assets/img/favicon.png' | asset_url }}" data-fallback="{{ '/assets/img/favicon.png' | asset_origin_url }}" onerror="assetFallback(this)" alt="Site favicon specimen" width="64" height="64">
-  <figcaption>Favicon used as a small figure specimen.</figcaption>
-</figure>
