@@ -755,18 +755,12 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 /* ---------- Prose editorial marks (#223) ---------- */
 /* Kramdown: {: .aside} / {: .pull-quote} / {: .caption} / {: .figure-wide} */
 
-/* Pair wrapper lets the aside sit under its host paragraph on small screens. */
+/* Host paragraph first in the DOM (reading order). On small screens the
+   aside stays boxed underneath. On wide screens a hanging grid puts it
+   in the left margin without overlapping the measure. */
 .aside-pair {
   display: flex;
   flex-direction: column;
-}
-
-.aside-pair > .aside {
-  order: 2;
-}
-
-.aside-pair > :not(.aside) {
-  order: 1;
 }
 
 .prose p.aside,
@@ -813,17 +807,33 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 /* Hang only when 11.5rem + gap fits beside the 36em measure. At 60em
    the box sat off the left edge and widened the page (#226, #231).
    Only paired asides hang; an unpaired .aside stays boxed instead of
-   floating beside a heading (#232). */
+   sitting on a heading (#232). The hang selectors must beat
+   `.prose p.aside` or the box/padding/margin win and the sidenote
+   overlaps the paragraph. */
 @media (min-width: 70em) {
-  .aside-pair {
-    display: contents;
+  .aside-pair,
+  .container:has(.figure-wide) .prose > .aside-pair {
+    display: grid;
+    grid-template-columns: 11.5rem minmax(0, 1fr);
+    column-gap: 1.35rem;
+    align-items: start;
+    margin-inline-start: calc(-11.5rem - 1.35rem);
+    width: calc(100% + 11.5rem + 1.35rem);
   }
 
-  .aside-pair > .aside {
-    float: left;
-    clear: left;
-    width: 11.5rem;
-    margin: 0.15em 0 var(--space-3) calc(-11.5rem - 1.35rem);
+  .aside-pair > :not(.aside) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .prose .aside-pair > .aside,
+  .prose .aside-pair > p.aside {
+    grid-column: 1;
+    grid-row: 1;
+    float: none;
+    width: auto;
+    max-width: none;
+    margin: 0.15em 0 0;
     padding: 0;
     background: none;
     border: 0;
@@ -902,6 +912,24 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 
   Never use 100vw here. That unit is wider than the device.
 */
+.site-main > .container:has(.figure-wide) {
+  max-width: none;
+  padding-inline: 0;
+}
+
+.container:has(.figure-wide) .prose {
+  max-width: none;
+  display: grid;
+  grid-template-columns:
+    minmax(var(--space-4), 1fr)
+    min(var(--measure), calc(100% - 2 * var(--space-4)))
+    minmax(var(--space-4), 1fr);
+}
+
+.container:has(.figure-wide) .prose > * {
+  grid-column: 2;
+}
+
 .prose .figure-wide,
 .prose p.figure-wide,
 .prose figure.figure-wide {
