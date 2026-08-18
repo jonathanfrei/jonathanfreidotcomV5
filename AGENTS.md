@@ -157,7 +157,7 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 - Nested pages: `_pages/services/service1.md` → `/services/service1`.
 - `index.md` stays at the repo root (homepage).
 - Use **no trailing slash** in permalinks (see below).
-- Long-form specimen / design reference: `_pages/typography.md` → `/typography`.
+- Long-form specimen / design reference: `_pages/typography.md` → `/typography` (includes `#223` aside / pull-quote / caption / figure-wide).
 - Tags: `/tags` lists multi-post tags (#140). Every chip (including singletons) links to `/tags?tag=name`. Individual `/tags/:name` pages are not generated (#209). Old `/tags/:name` URLs 404-redirect to the search URL.
 - Categories: `/categories` lists categories. Chips link to `/categories?category=name`. Individual `/categories/:name` pages are not generated. Old `/categories/:name` URLs 404-redirect to the search URL.
 
@@ -222,11 +222,12 @@ Dashboard rules live in README (redirects before cache). Do not regress:
 
 - **Brand (#145):** `_includes/main.css` — Paper `#FAF9F6`, Ink `#111C24`, Signature Blue `#0077A8` (use blue sparingly). Full token table in that file (blue scale + editorial accents + UI semantics).
 - **Feature sheets (#165):** gated by `_includes/optional-css.html` (content probes; no PurgeCSS/Node build):
-  - `_includes/code.css` — fenced code / Rouge (`<pre`)
+  - `_includes/code.css` — fenced code / Rouge (`<pre`); wrap by default, line numbers follow wrapped lines (#222)
   - `_includes/search.css` — search box (`search-ui` / `search-input`)
   - `_includes/embeds.css` — media embeds (`class="embed` / `data-embed=`)
   - `_includes/pagination.css` — paginated lists (`pagination-list`)
 - **Editorial (#144):** `_includes/editorial.css` + `layout: editorial` — Kramdown semantic components (`.lead`, `.figure`, `.stat-grid`, …). Linked as `/assets/css/editorial.css` after `core.css`.
+- **Prose marks (#223):** `{: .aside}`, `{: .pull-quote}`, `{: .caption}`, `{: .figure-wide}` live in `main.css` for ordinary posts/pages. Do not reuse editorial-grid `.aside` for blog sidenotes.
 - **Delivery:** every page links the design system via `asset_url` (`_includes/site-css.html`). Production uses jsDelivr (`cdn.jsdelivr.net/gh/…@SHA/_includes/main.css`); local serve stays on `/assets/css/core.css`. Do not inline `main.css` or restore the front-of-house vs archive split from PR #197.
 - Tooling: `/assets/css/core.css` (design system), `/assets/css/main.css` (full combined), `/assets/css/editorial.css` (editorial components only)
 - **Never** use `{% include_relative ../... %}` — Jekyll rejects `../`
