@@ -18,15 +18,19 @@ A navigable reference for the semantic components used on long-form editorial pa
 <div class="metadata" markdown="1">
 
 **Updated:** August 10, 2026  
-**Category:** Dcesign System  
+**Category:** Design System  
 **Use:** Copy shells into `editorial/*.md` pages with `layout: editorial`
 
 </div>
 
 ^
-**Updated:** August 18, 2026  
+
+**Updated:** August 18, 2026
+
 **Category:** Kramdown block extension parsing test
+
 **Use:** Copy shells into `editorial/*.md` pages with `layout: editorial`
+
 ^
 {: .metadata} 
 
