@@ -658,10 +658,9 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 }
 
 /* Standalone article images fill the measure (#203). Small figure
-   specimens (e.g. the typography favicon) stay intrinsic-sized.
-   .figure-wide keeps intrinsic size and may break out of the measure (#223). */
-.prose p:has(> img:only-child):not(.figure-wide) img,
-.prose p:has(> a:only-child > img:only-child):not(.figure-wide) img {
+   specimens (e.g. the typography favicon) stay intrinsic-sized. */
+.prose p:has(> img:only-child) img,
+.prose p:has(> a:only-child > img:only-child) img {
   display: block;
   width: 100%;
 }
@@ -753,7 +752,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 }
 
 /* ---------- Prose editorial marks (#223) ---------- */
-/* Kramdown: {: .aside} / {: .pull-quote} / {: .caption} / {: .figure-wide} */
+/* Kramdown: {: .aside} / {: .pull-quote} / {: .caption} */
 
 /* Host paragraph first in the DOM (reading order). On small screens the
    aside stays boxed underneath. On wide screens a hanging grid puts it
@@ -811,8 +810,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
    `.prose p.aside` or the box/padding/margin win and the sidenote
    overlaps the paragraph. */
 @media (min-width: 70em) {
-  .aside-pair,
-  .container:has(.figure-wide) .prose > .aside-pair {
+  .aside-pair {
     display: grid;
     grid-template-columns: 11.5rem minmax(0, 1fr);
     column-gap: 1.35rem;
@@ -900,91 +898,6 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 .prose .caption a:focus-visible {
   color: var(--color-accent-hover);
   text-decoration-style: solid;
-}
-
-/*
-  .figure-wide is a desktop breakout only (#231). On phones, standalone
-  images already full-bleed via the 40em padding-cancel rule. Do not
-  open the container or build the 3-column grid below that point: the
-  middle track is min(36em, …), which is a ~576px minimum. iOS Safari
-  then inflates the layout viewport to ~980px and the whole page
-  looks like desktop.
-
-  Never use 100vw here. That unit is wider than the device.
-*/
-.site-main > .container:has(.figure-wide) {
-  max-width: none;
-  padding-inline: 0;
-}
-
-.container:has(.figure-wide) .prose {
-  max-width: none;
-  display: grid;
-  grid-template-columns:
-    minmax(var(--space-4), 1fr)
-    min(var(--measure), calc(100% - 2 * var(--space-4)))
-    minmax(var(--space-4), 1fr);
-}
-
-.container:has(.figure-wide) .prose > * {
-  grid-column: 2;
-}
-
-.prose .figure-wide,
-.prose p.figure-wide,
-.prose figure.figure-wide {
-  margin-block: var(--space-5);
-  text-align: center;
-}
-
-.prose .figure-wide img,
-.prose img.figure-wide {
-  display: block;
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  margin-inline: auto;
-}
-
-@media (min-width: 40.01em) {
-  .site-main > .container:has(.figure-wide) {
-    max-width: none;
-    padding-inline: 0;
-  }
-
-  .container:has(.figure-wide) .prose {
-    max-width: none;
-    display: grid;
-    grid-template-columns:
-      minmax(var(--space-4), 1fr)
-      min(var(--measure), calc(100% - 2 * var(--space-4)))
-      minmax(var(--space-4), 1fr);
-  }
-
-  .container:has(.figure-wide) .prose > * {
-    grid-column: 2;
-  }
-
-  .container:has(.figure-wide) .prose > .aside-pair {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .prose .figure-wide,
-  .prose p.figure-wide,
-  .prose figure.figure-wide,
-  .container:has(.figure-wide) .prose > .figure-wide {
-    grid-column: 1 / -1;
-    width: 100%;
-    max-width: none;
-    margin-inline: 0;
-  }
-}
-
-@media (min-width: 70em) {
-  .container:has(.figure-wide) .prose > .aside-pair {
-    display: block;
-  }
 }
 
 /* ---------- Post list & meta ---------- */
@@ -1378,7 +1291,7 @@ span.tag:hover {
     padding-block: var(--space-6);
   }
 
-  /* Full-bleed standalone images, including .figure-wide (#202, #231). */
+  /* Full-bleed standalone images: cancel .container inline padding (#202). */
   .prose p:has(> img:only-child),
   .prose p:has(> a:only-child > img:only-child) {
     width: calc(100% + (2 * var(--space-4)));

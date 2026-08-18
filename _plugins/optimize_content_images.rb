@@ -400,15 +400,7 @@ module Jekyll
       widths.map { |w| "#{optimized_url(cfg, origin, width: w, format: format)} #{w}w" }.join(", ")
     end
 
-    def figure_wide?(html, pos, tag_attrs)
-      return true if tag_attrs["class"].to_s.match?(/\bfigure-wide\b/)
-
-      window_start = [pos - 280, 0].max
-      prefix = html[window_start...pos].to_s
-      prefix.match?(/<(?:p|figure|div|a)\b[^>]*\bclass\s*=\s*["'][^"']*\bfigure-wide\b[^"']*["'][^>]*>\s*(?:<a\b[^>]*>\s*)?\z/i)
-    end
-
-    def enhance_img_tag(site, cfg, tag_attrs, index, wide: false)
+    def enhance_img_tag(site, cfg, tag_attrs, index)
       src = unescape_markdown_dest(tag_attrs["src"])
       tag_attrs["src"] = src
       return nil unless optimizable?(site, src, tag_attrs)
@@ -463,15 +455,13 @@ module Jekyll
 
       if transform
         widths = Array(cfg["widths"]).map(&:to_i).select(&:positive?).uniq.sort
-        # Wide figures can fill the viewport; don't invent pixels past intrinsic size.
-        widths = (widths + [1600, 2200]).uniq.sort if wide
         # Do not upscale past natural width when known
         widths = widths.select { |w| natural_w.nil? || w <= natural_w }
         widths = [natural_w].compact if widths.empty? && natural_w
         widths = [1100] if widths.empty?
 
         default_w = widths.max
-        sizes = wide ? "100vw" : cfg["sizes"].to_s
+        sizes = cfg["sizes"].to_s
         sizes = DEFAULTS["sizes"] if sizes.empty?
 
         tag_attrs["src"] = optimized_url(cfg, origin, width: default_w, format: "webp")
@@ -537,8 +527,7 @@ module Jekyll
         pos = Regexp.last_match.begin(0)
         # Skip self-closing slash noise
         attrs = parse_attrs(raw_attrs.sub(%r{/\s*\z}, ""))
-        wide = figure_wide?(html, pos, attrs)
-        enhanced = enhance_img_tag(site, cfg, attrs, index, wide: wide)
+        enhanced = enhance_img_tag(site, cfg, attrs, index)
         if enhanced
           tag, candidate = enhanced
           lcp ||= candidate
