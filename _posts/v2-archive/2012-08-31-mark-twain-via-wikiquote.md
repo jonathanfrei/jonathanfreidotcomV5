@@ -5,6 +5,6 @@ tags: [quote, "mark twain"]
 tumblr_id: "30584000021"
 ---
 
-If you don&rsquo;t read the newspaper, you are uninformed; if you do read the newspaper, you are misinformed.
+> If you don&rsquo;t read the newspaper, you are uninformed; if you do read the newspaper, you are misinformed.
 
 — Mark Twain via [Wikiquote](http://en.wikiquote.org/wiki/Talk:Mark_Twain)
