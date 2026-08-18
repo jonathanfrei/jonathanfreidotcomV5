@@ -109,8 +109,10 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 - Permalink pages are minimal: date (linked to the permalink), then an
   outbound `→` on the first line of the body, then tags and an on-site URL
   card. No visible title/`h1`. `title` is still used for RSS and document
-  `<title>` / SEO. List pages hide the title and keep `→` on the first line
-  of the body. The date is the on-site permalink; `#` appears only in RSS.
+  `<title>` / SEO. The ending matches essays: Comment · Edit · Random · Blog
+  (#221). Random draws from every `search.json` entry, including link posts.
+  List pages hide the title and keep `→` on the first line of the body. The
+  date is the on-site permalink; `#` appears only in RSS.
 - URL cards are **site-only** (never in RSS). Default is a build-time Open
   Graph fetch (fail-soft, cached under `.jekyll-cache/link-cards/`).
   `card: false` hides the card and skips the fetch. A `card:` mapping
@@ -324,14 +326,14 @@ Production depends on external services for media (configured in `_config.yml` `
 | Footer / disclaimer | `_includes/footer.html` |
 | `<head>`, favicon, meta | `_includes/head.html` |
 | Site-wide layout | `_layouts/default.html` |
-| Post chrome (tags, comment mailto, random post) | `_layouts/post.html` (random uses on-click fetch of `search.json`) |
+| Post chrome (tags, comment mailto, random post) | `_layouts/post.html` tags; `_includes/post-actions.html` (Comment · Edit · Random · Blog on essays and links; random fetches `search.json`, including link posts — #221) |
 | Post metadata (last_modified, reading time) | `_plugins/post_metadata.rb` + `post_metadata` in `_config.yml` (#75) |
 | Search / tag / archive indexes | `_plugins/site_index.rb` + `site_index` in `_config.yml` (#195). `search.json` includes `date_label` and first-image `img` (`src` + `alt`) for stream results (#219). |
 | Date timezone | `_config.yml` `timezone: America/New_York` (#180) |
 | Drop caps on long posts | `_plugins/drop_cap.rb` + `.prose--drop-cap` in `main.css` (#123) |
 | Tag archive title | unused `_layouts/tag.html` (tag pages not generated, #209) |
 | Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` (thin dump of `site.data.search_index`). URLs: `?q=`, `?tag=`, `?category=`, `?title=`; `?=text` aliases `?q=`. The query string is the source of truth until the user types; an inline seed fills the box on first paint (#211). `search.js` is deferred; `/search` and query URLs reserve result space so the footer does not shift (#212). Result cards reuse the `/blog` stream markup (title, long date, tag chips, excerpt, first image, Read more; link entries hide the title) (#219). Tag, category, and archive lists stay visible below results. |
-| Random-post URL list | `search.json` (`url` + `kind`; `posts.json` removed — #130) |
+| Random-post URL list | `search.json` (`url` + `kind`; essays and link posts; `posts.json` removed — #130, #221) |
 | Theme toggle | Boot in `_includes/head.html`; full `assets/js/theme.js` loads on first click (footer stub) |
 | Asset CDN | `_plugins/asset_cdn.rb` + `assets_cdn` in `_config.yml`. Production: jsDelivr `@SHA` with origin `/assets` `onerror` fallback (`asset_url` / `asset_origin_url`). Local: `/assets`. |
 | Site config | `_config.yml` |
