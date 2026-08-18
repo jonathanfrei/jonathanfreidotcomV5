@@ -793,7 +793,12 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   color: var(--brand-deep-ocean, var(--color-fg));
 }
 
-@media (min-width: 60em) {
+/*
+  Hang the sidenote only when the leftover space beside the 36em
+  measure can hold 14.5rem + gap + a small gutter. At 60em the
+  hanging box sat off the left edge and overflow-x: clip hid it.
+*/
+@media (min-width: 70em) {
   .aside-pair {
     display: contents;
   }
@@ -838,8 +843,13 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   font-size: 0.75em;
   line-height: 1.5;
   color: var(--color-fg);
-  margin-top: var(--space-2);
+  margin-top: 0.25em;
   margin-bottom: var(--space-4);
+}
+
+.prose .figure-wide:has(+ .caption),
+.prose p:has(> img):has(+ .caption) {
+  margin-bottom: 0.25em;
 }
 
 .prose .caption strong {
@@ -873,6 +883,8 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   text-decoration-style: solid;
 }
 
+/* Desktop: break out of the measure up to the viewport.
+   Small screens override this so 100vw cannot widen the page. */
 .prose .figure-wide,
 .prose p.figure-wide,
 .prose figure.figure-wide {
@@ -1296,6 +1308,24 @@ span.tag:hover {
 
   .prose p:has(> img:only-child):not(.figure-wide) img,
   .prose p:has(> a:only-child > img:only-child):not(.figure-wide) img {
+    border-radius: 0;
+  }
+
+  /* Wide figures stay full-bleed but must not use 100vw here: that
+     widens the page past the phone layout. Cancel container padding
+     instead so the image fills the screen and shrinks with it. */
+  .prose .figure-wide,
+  .prose p.figure-wide,
+  .prose figure.figure-wide {
+    width: calc(100% + (2 * var(--space-4)));
+    max-width: none;
+    margin-inline: calc(-1 * var(--space-4));
+  }
+
+  .prose .figure-wide img,
+  .prose img.figure-wide {
+    max-width: 100%;
+    width: auto;
     border-radius: 0;
   }
 }
