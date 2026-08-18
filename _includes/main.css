@@ -811,14 +811,14 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 }
 
 /* Hang only when 11.5rem + gap fits beside the 36em measure. At 60em
-   the box sat off the left edge and widened the page (#226, #231). */
+   the box sat off the left edge and widened the page (#226, #231).
+   Only paired asides hang; an unpaired .aside stays boxed instead of
+   floating beside a heading (#232). */
 @media (min-width: 70em) {
   .aside-pair {
     display: contents;
   }
 
-  .prose p.aside,
-  .prose aside.aside,
   .aside-pair > .aside {
     float: left;
     clear: left;
