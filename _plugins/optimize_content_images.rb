@@ -524,7 +524,6 @@ module Jekyll
       out = html.gsub(/<img\b([^>]*?)>/i) do
         raw_attrs = Regexp.last_match(1)
         original = Regexp.last_match(0)
-        pos = Regexp.last_match.begin(0)
         # Skip self-closing slash noise
         attrs = parse_attrs(raw_attrs.sub(%r{/\s*\z}, ""))
         enhanced = enhance_img_tag(site, cfg, attrs, index)
