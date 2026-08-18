@@ -401,7 +401,7 @@ a:focus-visible {
 }
 
 @media (min-width: 40em) {
-  html:not(.is-narrow) .site-header .container {
+  .site-header .container {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -660,9 +660,10 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 }
 
 /* Standalone article images fill the measure (#203). Small figure
-   specimens (e.g. the typography favicon) stay intrinsic-sized. */
-.prose p:has(> img:only-child) img,
-.prose p:has(> a:only-child > img:only-child) img {
+   specimens (e.g. the typography favicon) stay intrinsic-sized.
+   .figure-wide keeps intrinsic size and may break out of the measure (#223). */
+.prose p:has(> img:only-child):not(.figure-wide) img,
+.prose p:has(> a:only-child > img:only-child):not(.figure-wide) img {
   display: block;
   width: 100%;
 }
@@ -754,7 +755,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 }
 
 /* ---------- Prose editorial marks (#223) ---------- */
-/* Kramdown: {: .aside} / {: .pull-quote} / {: .caption} */
+/* Kramdown: {: .aside} / {: .pull-quote} / {: .caption} / {: .figure-wide} */
 
 /* Host paragraph first in the DOM (reading order). On small screens the
    aside stays boxed underneath. On wide screens a hanging grid puts it
@@ -900,6 +901,70 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 .prose .caption a:focus-visible {
   color: var(--color-accent-hover);
   text-decoration-style: solid;
+}
+
+/*
+  Wide figures must not use 100vw. That unit is wider than the
+  device (scrollbar). On phones, standalone images already full-bleed
+  via the 40em padding-cancel rule (#202). Above 40em, prose becomes
+  a 3-column grid: side gutters + a center measure. The figure spans
+  all three columns so it can use the full main width.
+*/
+.prose .figure-wide,
+.prose p.figure-wide,
+.prose figure.figure-wide {
+  margin-block: var(--space-5);
+  text-align: center;
+}
+
+.prose .figure-wide img,
+.prose img.figure-wide {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+}
+
+@media (min-width: 40.01em) {
+  .site-main > .container:has(.figure-wide) {
+    max-width: none;
+    padding-inline: 0;
+  }
+
+  .container:has(.figure-wide) .prose {
+    max-width: none;
+    display: grid;
+    grid-template-columns:
+      minmax(var(--space-4), 1fr)
+      min(var(--measure), calc(100% - 2 * var(--space-4)))
+      minmax(var(--space-4), 1fr);
+  }
+
+  .container:has(.figure-wide) .prose > * {
+    grid-column: 2;
+  }
+
+  .container:has(.figure-wide) .prose > .aside-pair {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .prose .figure-wide,
+  .prose p.figure-wide,
+  .prose figure.figure-wide,
+  .container:has(.figure-wide) .prose > .figure-wide {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+  }
+}
+
+@media (min-width: 70em) {
+  .container:has(.figure-wide) .prose > .aside-pair {
+    display: grid;
+  }
 }
 
 /* ---------- Post list & meta ---------- */
@@ -1294,14 +1359,13 @@ span.tag:hover {
   text-decoration: underline;
 }
 
-/* Small screens, plus iPhone Safari when it inflates the layout
-   viewport so max-width: 40em never matches (#231). */
+/* Small screens */
 @media (max-width: 40em) {
   .site-main {
     padding-block: var(--space-6);
   }
 
-  /* Full-bleed standalone images: cancel .container inline padding (#202). */
+  /* Full-bleed standalone images, including .figure-wide (#202). */
   .prose p:has(> img:only-child),
   .prose p:has(> a:only-child > img:only-child) {
     width: calc(100% + (2 * var(--space-4)));
@@ -1313,26 +1377,4 @@ span.tag:hover {
   .prose p:has(> a:only-child > img:only-child) img {
     border-radius: 0;
   }
-}
-
-html.is-narrow .site-header .container {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-2);
-}
-
-html.is-narrow .site-main {
-  padding-block: var(--space-6);
-}
-
-html.is-narrow .prose p:has(> img:only-child),
-html.is-narrow .prose p:has(> a:only-child > img:only-child) {
-  width: calc(100% + (2 * var(--space-4)));
-  max-width: none;
-  margin-inline: calc(-1 * var(--space-4));
-}
-
-html.is-narrow .prose p:has(> img:only-child) img,
-html.is-narrow .prose p:has(> a:only-child > img:only-child) img {
-  border-radius: 0;
 }
