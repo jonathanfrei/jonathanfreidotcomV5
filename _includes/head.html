@@ -1,5 +1,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+<script>
+(function () {
+  var nav = navigator;
+  var ua = nav.userAgent || "";
+  var shortest = Math.min(screen.width || 0, screen.height || 0);
+  var iphone = /iPhone|iPod/i.test(ua);
+  var phoneScreen = shortest > 0 && shortest <= 500;
+  if (iphone || phoneScreen) {
+    document.documentElement.classList.add("is-narrow");
+  }
+})();
+</script>
 <meta name="color-scheme" content="light dark">
 <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 <meta name="description" content="{{ page.description | default: site.description | escape }}">
