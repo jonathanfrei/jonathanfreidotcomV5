@@ -14,10 +14,25 @@
   document.documentElement.classList.add("is-narrow");
   var meta = document.querySelector('meta[name="viewport"]');
   if (!meta) return;
+  function cssScreenSize() {
+    var width = Number(screen.width) || 0;
+    var height = Number(screen.height) || 0;
+    var ratio = Number(window.devicePixelRatio) || 1;
+
+    /* Some iOS Safari builds expose screen dimensions in device pixels.
+       A phone's short side cannot be wider than 500 CSS px; normalize both
+       axes together so landscape still uses the long CSS-pixel side. */
+    if (Math.min(width, height) > 500 && ratio > 1) {
+      width = Math.round(width / ratio);
+      height = Math.round(height / ratio);
+    }
+    return { width: width, height: height };
+  }
   function apply() {
     var landscape = typeof window.orientation === "number" && Math.abs(window.orientation) === 90;
-    var shortSide = Math.min(screen.width || 0, screen.height || 0);
-    var longSide = Math.max(screen.width || 0, screen.height || 0);
+    var size = cssScreenSize();
+    var shortSide = Math.min(size.width, size.height);
+    var longSide = Math.max(size.width, size.height);
     var w = landscape ? longSide : shortSide;
     if (!w) return;
     meta.setAttribute(
