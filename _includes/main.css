@@ -811,6 +811,13 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   color: var(--brand-deep-ocean, var(--color-fg));
 }
 
+.prose .aside-pair > .aside img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
 /* Hang only when 11.5rem + gap fits beside the 36em measure. At 60em
    the box sat off the left edge and widened the page (#226, #231).
    Only paired asides hang; an unpaired .aside stays boxed instead of
