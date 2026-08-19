@@ -952,7 +952,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 .prose .figure-wide,
 .prose p.figure-wide,
 .prose figure.figure-wide {
-  margin-block: var(--space-5);
+  margin-block: var(--space-5) var(--space-4);
   text-align: center;
   width: calc(100% + 2 * var(--space-4));
   max-width: none;
