@@ -938,6 +938,11 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   via the 40em padding-cancel rule (#202). Above 40em, prose becomes
   a 3-column grid: side gutters + a center measure. The figure spans
   all three columns so it can use the full main width.
+
+  Posts wrap Markdown in .post-body (display:block). grid-column on
+  .figure-wide only applies when that wrapper is the same 3-column
+  grid (#243). The img stays intrinsic-sized: full bleed when it is
+  wide enough, never stretched.
 */
 .prose .figure-wide,
 .prose p.figure-wide,
@@ -962,27 +967,38 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   }
 
   .container:has(.figure-wide) .prose {
-    max-width: none;
-    display: grid;
-    grid-template-columns:
+    --figure-wide-cols:
       minmax(var(--space-4), 1fr)
       min(var(--measure), calc(100% - 2 * var(--space-4)))
       minmax(var(--space-4), 1fr);
+    max-width: none;
+    display: grid;
+    grid-template-columns: var(--figure-wide-cols);
   }
 
-  .container:has(.figure-wide) .prose > * {
+  .container:has(.figure-wide) .prose > *,
+  .container:has(.figure-wide) .prose > .post-body > * {
     grid-column: 2;
   }
 
-  .container:has(.figure-wide) .prose > .aside-pair {
+  .container:has(.figure-wide) .prose > .aside-pair,
+  .container:has(.figure-wide) .prose > .post-body > .aside-pair {
     display: flex;
     flex-direction: column;
+  }
+
+  /* Same columns as .prose so nested .figure-wide can span the row. */
+  .container:has(.figure-wide) .prose > .post-body {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: var(--figure-wide-cols);
   }
 
   .prose .figure-wide,
   .prose p.figure-wide,
   .prose figure.figure-wide,
-  .container:has(.figure-wide) .prose > .figure-wide {
+  .container:has(.figure-wide) .prose > .figure-wide,
+  .container:has(.figure-wide) .prose > .post-body > .figure-wide {
     grid-column: 1 / -1;
     width: 100%;
     max-width: none;
@@ -991,7 +1007,8 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 }
 
 @media (min-width: 70em) {
-  .container:has(.figure-wide) .prose > .aside-pair {
+  .container:has(.figure-wide) .prose > .aside-pair,
+  .container:has(.figure-wide) .prose > .post-body > .aside-pair {
     display: grid;
   }
 }
