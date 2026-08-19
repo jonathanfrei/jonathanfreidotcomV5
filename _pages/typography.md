@@ -116,8 +116,6 @@ A complete sentence is still the unit of thought, even when it is pulled out of 
 **large but not full bleed** Body of the caption in the reading face. *[Credit or source](https://unsplash.com/photos/rocky-mountain-slope-in-stepantsminda-fJrVETFC1lE)*
 {: .caption}
 
-
-
 ## Definition list
 
 <dl>

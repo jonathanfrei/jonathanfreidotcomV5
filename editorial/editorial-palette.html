@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robotic Vacuum Cleaners — Editorial Feature</title>
+<meta name="description" content="A redesigned editorial feature on the history, technology, performance, and implications of robotic vacuum cleaners.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  --paper: #FAF9F6;
+  --surface: #FFFFFF;
+  --surface-2: #F2F1ED;
+  --ink: #111C24;
+  --ink-2: #3D4A52;
+  --muted: #78838A;
+  --border: #E8E6E1;
+  --blue: #0077A8;
+  --blue-dark: #00334D;
+  --blue-light: #3391BA;
+  --blue-pale: #EEF7FA;
+  --seafoam: #00A896;
+  --ochre: #C58B2A;
+  --terracotta: #C85C4A;
+  --lavender: #7667A8;
+  --sand: #E9DCC8;
+  --accent-seafoam-bg: color-mix(in srgb, var(--seafoam) 12%, var(--surface));
+  --accent-ochre-bg: color-mix(in srgb, var(--ochre) 13%, var(--surface));
+  --accent-terracotta-bg: color-mix(in srgb, var(--terracotta) 12%, var(--surface));
+  --accent-lavender-bg: color-mix(in srgb, var(--lavender) 12%, var(--surface));
+  --accent-sand-bg: color-mix(in srgb, var(--sand) 64%, var(--surface));
+  --shadow: 0 18px 60px rgba(17,28,36,.08);
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  --paper: #0B1115;
+  --surface: #121C22;
+  --surface-2: #18262E;
+  --ink: #F4F3EF;
+  --ink-2: #B8C1C5;
+  --muted: #7D8A91;
+  --border: #2A373E;
+  --blue: #3391BA;
+  --blue-dark: #0077A8;
+  --blue-light: #66C0DD;
+  --blue-pale: #102A36;
+  --shadow: 0 18px 60px rgba(0,0,0,.24);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", system-ui, sans-serif;
+  line-height: 1.7;
+  transition: background .25s ease, color .25s ease;
+}
+a { color: var(--blue); }
+a:hover { color: var(--blue-light); }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(14px);
+}
+.nav {
+  max-width: 1240px;
+  margin: auto;
+  min-height: 68px;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.brand {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: -.03em;
+}
+.brand span { color: var(--blue); }
+.nav-right { display:flex; align-items:center; gap:22px; }
+.nav-link {
+  color: var(--ink-2);
+  text-decoration: none;
+  font-size: .9rem;
+}
+.nav-link:hover { color: var(--blue); }
+.theme-toggle {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 8px 13px;
+  cursor: pointer;
+  font: 600 .78rem "DM Sans", sans-serif;
+}
+
+.hero {
+  max-width: 1240px;
+  margin: auto;
+  padding: 110px 28px 80px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr);
+  gap: 80px;
+  align-items: end;
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--blue);
+  font: 500 .75rem "DM Mono", monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.eyebrow::before {
+  content: "";
+  width: 34px;
+  height: 2px;
+  background: var(--blue);
+}
+h1, h2, h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -.035em;
+  line-height: 1.05;
+}
+h1 {
+  font-size: clamp(4rem, 9vw, 8.5rem);
+  margin: 22px 0 28px;
+  max-width: 900px;
+}
+.hero h1 em { color: var(--blue); font-style: normal; }
+.deck {
+  max-width: 720px;
+  color: var(--ink-2);
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+  line-height: 1.55;
+}
+.meta {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  color: var(--muted);
+  font: .72rem "DM Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.hero-art {
+  min-height: 360px;
+  border-radius: 4px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 30% 35%, color-mix(in srgb, var(--blue) 65%, transparent), transparent 35%),
+    linear-gradient(135deg, var(--blue-dark), var(--blue), #0b2835);
+  position: relative;
+  box-shadow: var(--shadow);
+}
+.hero-art::before {
+  content: "01";
+  position: absolute;
+  top: 22px;
+  left: 24px;
+  color: rgba(255,255,255,.7);
+  font: 500 .72rem "DM Mono", monospace;
+}
+.robot {
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%,-50%);
+  background: linear-gradient(145deg, #f4f4ef, #a9b2b5);
+  box-shadow: 0 28px 55px rgba(0,0,0,.35), inset -18px -20px 30px rgba(0,0,0,.14);
+}
+.robot::before {
+  content: "";
+  position: absolute;
+  width: 54px; height: 54px;
+  left: 78px; top: 20px;
+  border-radius: 50%;
+  background: #1b2b32;
+  box-shadow: inset 0 0 0 9px #52646b, 0 4px 12px rgba(0,0,0,.25);
+}
+.robot::after {
+  content: "";
+  position: absolute;
+  width: 16px; height: 42px;
+  left: 97px; bottom: 24px;
+  border-radius: 50%;
+  background: #66767c;
+}
+
+.intro {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 28px 80px;
+}
+.intro-grid {
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+  border-top: 1px solid var(--border);
+  padding-top: 55px;
+}
+.section-label {
+  color: var(--blue);
+  font: 500 .72rem "DM Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.intro p { font-size: 1.12rem; max-width: 780px; }
+.dropcap:first-letter {
+  float:left;
+  font: 600 5rem/0.78 "Playfair Display", Georgia, serif;
+  color: var(--blue);
+  padding: 8px 12px 0 0;
+}
+
+.content {
+  max-width: 1240px;
+  margin: auto;
+  padding: 20px 28px 120px;
+}
+.chapter {
+  display:grid;
+  grid-template-columns: 120px minmax(0, 780px);
+  gap: 60px;
+  padding: 100px 0;
+  border-top: 1px solid var(--border);
+}
+.chapter-number {
+  font: 500 .75rem "DM Mono", monospace;
+  color: var(--blue);
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+.chapter h2 {
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  margin: 0 0 36px;
+}
+.chapter h3 {
+  font-size: 1.75rem;
+  margin: 48px 0 14px;
+}
+.chapter p { font-size: 1.05rem; color: var(--ink-2); }
+.lead { font-size: 1.28rem !important; color: var(--ink) !important; }
+.quote {
+  margin: 44px 0;
+  padding: 30px 0 30px 30px;
+  border-left: 3px solid var(--blue);
+  font: 500 1.45rem/1.5 "Playfair Display", Georgia, serif;
+  color: var(--ink);
+}
+.figure {
+  margin: 45px 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 10px;
+  box-shadow: var(--shadow);
+}
+.figure img {
+  display:block;
+  width:100%;
+  max-height:520px;
+  object-fit:cover;
+  background: var(--surface-2);
+}
+.caption {
+  padding: 14px 8px 6px;
+  color: var(--muted);
+  font: .7rem/1.5 "DM Mono", monospace;
+}
+.caption a { color: inherit; }
+
+.stats {
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1px;
+  margin: 45px 0;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.stat {
+  background: var(--surface);
+  padding: 26px 20px;
+}
+.stat strong {
+  display:block;
+  font: 600 clamp(1.7rem,3vw,2.6rem) "Playfair Display", Georgia, serif;
+  color: var(--blue);
+}
+.stat span {
+  color: var(--muted);
+  font: .68rem/1.4 "DM Mono", monospace;
+  text-transform: uppercase;
+}
+
+table {
+  width:100%;
+  border-collapse: collapse;
+  margin: 35px 0;
+  font-size: .93rem;
+}
+th, td {
+  padding: 15px 12px;
+  text-align:left;
+  border-bottom: 1px solid var(--border);
+}
+th {
+  color: var(--ink);
+  font: 600 .7rem "DM Mono", monospace;
+  text-transform: uppercase;
+}
+td { color: var(--ink-2); }
+
+.callout {
+  margin: 55px 0;
+  padding: 35px;
+  background: var(--blue-pale);
+  border-top: 2px solid var(--blue);
+}
+.callout strong { color: var(--blue); }
+
+.endnote {
+  max-width: 1240px;
+  margin: auto;
+  padding: 0 28px 90px;
+}
+.endnote-inner {
+  border-top: 1px solid var(--border);
+  padding-top: 45px;
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+}
+.endnote p { color: var(--muted); font-size: .9rem; }
+.footer {
+  border-top:1px solid var(--border);
+  padding: 28px;
+  text-align:center;
+  color:var(--muted);
+  font: .68rem "DM Mono", monospace;
+}
+
+.palette-ribbon { max-width:1240px; margin:0 auto 10px; padding:0 28px; }
+.palette-ribbon-inner { display:grid; grid-template-columns:repeat(5,1fr); border:1px solid var(--border); overflow:hidden; }
+.palette-swatch { min-height:84px; padding:14px; display:flex; align-items:flex-end; color:white; font:500 .68rem/1.35 "DM Mono",monospace; text-transform:uppercase; letter-spacing:.04em; }
+.palette-swatch.seafoam{background:var(--seafoam)} .palette-swatch.ochre{background:var(--ochre)} .palette-swatch.terracotta{background:var(--terracotta)} .palette-swatch.lavender{background:var(--lavender)} .palette-swatch.sand{background:var(--sand);color:#3d362d}
+.accent-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:38px 0}.accent-card{min-height:170px;padding:24px;border:1px solid var(--border);background:var(--surface);position:relative;overflow:hidden}.accent-card::after{content:"";position:absolute;width:90px;height:90px;border-radius:50%;right:-24px;bottom:-24px;opacity:.22;background:currentColor}.accent-card .kicker{font:500 .67rem "DM Mono",monospace;text-transform:uppercase;letter-spacing:.07em;margin-bottom:20px}.accent-card h3{margin:0 0 8px;font-size:1.45rem}.accent-card p{margin:0;font-size:.92rem}.accent-card.seafoam{color:var(--seafoam);background:var(--accent-seafoam-bg);border-top:3px solid var(--seafoam)}.accent-card.ochre{color:var(--ochre);background:var(--accent-ochre-bg);border-top:3px solid var(--ochre)}.accent-card.terracotta{color:var(--terracotta);background:var(--accent-terracotta-bg);border-top:3px solid var(--terracotta)}.accent-card.lavender{color:var(--lavender);background:var(--accent-lavender-bg);border-top:3px solid var(--lavender)}.accent-card h3,.accent-card p{color:var(--ink)}
+.timeline{margin:42px 0;border-left:1px solid var(--border);padding-left:26px}.timeline-item{position:relative;padding:0 0 30px 20px}.timeline-item:last-child{padding-bottom:0}.timeline-item::before{content:"";position:absolute;left:-31px;top:.55rem;width:9px;height:9px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px var(--paper)}.timeline-item:nth-child(2)::before{background:var(--seafoam)}.timeline-item:nth-child(3)::before{background:var(--ochre)}.timeline-item:nth-child(4)::before{background:var(--terracotta)}.timeline-item:nth-child(5)::before{background:var(--lavender)}.timeline-year{font:500 .72rem "DM Mono",monospace;color:var(--muted)}.timeline-title{color:var(--ink);font-weight:600}
+.pull-quote-warm{margin:46px 0;padding:34px 36px;background:var(--accent-sand-bg);border-left:5px solid var(--ochre);font:500 1.35rem/1.5 "Playfair Display",Georgia,serif;color:var(--ink)}.note-terracotta{margin:40px 0;padding:28px 30px;border:1px solid color-mix(in srgb,var(--terracotta) 45%,var(--border));background:var(--accent-terracotta-bg)}.note-terracotta strong{color:var(--terracotta)}
+.chapter:nth-of-type(2) .chapter-number{color:var(--seafoam)}.chapter:nth-of-type(3) .chapter-number{color:var(--ochre)}.chapter:nth-of-type(4) .chapter-number{color:var(--terracotta)}.chapter:nth-of-type(5) .chapter-number{color:var(--lavender)}.chapter:nth-of-type(2) h2::after,.chapter:nth-of-type(3) h2::after,.chapter:nth-of-type(4) h2::after,.chapter:nth-of-type(5) h2::after{content:"";display:block;width:48px;height:4px;margin-top:24px}.chapter:nth-of-type(2) h2::after{background:var(--seafoam)}.chapter:nth-of-type(3) h2::after{background:var(--ochre)}.chapter:nth-of-type(4) h2::after{background:var(--terracotta)}.chapter:nth-of-type(5) h2::after{background:var(--lavender)}
+.theme-demo{max-width:1240px;margin:0 auto;padding:10px 28px 80px}.theme-demo-inner{display:grid;grid-template-columns:1fr 1fr;gap:18px}.demo-panel{min-height:210px;padding:28px;border:1px solid var(--border);background:var(--surface)}.demo-panel h3{margin-top:0}.legend{display:flex;flex-wrap:wrap;gap:10px;margin:30px 0}.legend-chip{display:inline-flex;align-items:center;gap:8px;padding:7px 10px;border:1px solid var(--border);background:var(--surface);border-radius:999px;font:500 .66rem "DM Mono",monospace}.legend-dot{width:8px;height:8px;border-radius:50%}.legend-dot.blue{background:var(--blue)}.legend-dot.seafoam{background:var(--seafoam)}.legend-dot.ochre{background:var(--ochre)}.legend-dot.terracotta{background:var(--terracotta)}.legend-dot.lavender{background:var(--lavender)}.legend-dot.sand{background:var(--sand);border:1px solid var(--border)}.demo-bars{display:grid;grid-template-columns:1.4fr 1fr .8fr .7fr .6fr;gap:6px;margin-top:28px}.demo-bars span{height:40px;display:block}.demo-bars span:nth-child(1){background:var(--blue)}.demo-bars span:nth-child(2){background:var(--seafoam)}.demo-bars span:nth-child(3){background:var(--ochre)}.demo-bars span:nth-child(4){background:var(--terracotta)}.demo-bars span:nth-child(5){background:var(--lavender)}
+
+@media (max-width: 800px) {
+  .palette-ribbon-inner { grid-template-columns:1fr; }
+  .palette-swatch { min-height:58px; }
+  .accent-grid, .theme-demo-inner { grid-template-columns:1fr; }
+  .hero { grid-template-columns: 1fr; gap: 40px; padding-top: 70px; }
+  .hero-art { min-height: 280px; }
+  .intro-grid, .endnote-inner { grid-template-columns:1fr; gap:20px; }
+  .chapter { grid-template-columns:1fr; gap:18px; padding:70px 0; }
+  .chapter-number { position:static; }
+  .stats { grid-template-columns: repeat(2,1fr); }
+  .nav-link { display:none; }
+  h1 { font-size: clamp(3.4rem, 18vw, 6rem); }
+}
+</style>
+</head>
+
+<body>
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="/">JONATHAN <span>FREI</span></a>
+    <div class="nav-right">
+      <a class="nav-link" href="#history">History</a>
+      <a class="nav-link" href="#technology">Technology</a>
+      <a class="nav-link" href="#performance">Performance</a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">Dark mode</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <div class="eyebrow">Technology · Domestic Robotics</div>
+    <h1>Robotic<br><em>Vacuum</em><br>Cleaners</h1>
+    <p class="deck">From experimental prototypes in the 1950s to AI-mapped, self-emptying machines that scrub floors while you sleep — the quiet revolution in household cleaning.</p>
+    <div class="meta">Editorial feature · Research & technology · 2026</div>
+  </div>
+  <div class="hero-art" aria-label="Abstract illustration of a robotic vacuum">
+    <div class="robot"></div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="intro-grid">
+    <div>
+      <div class="section-label">At a glance</div>
+      <p class="meta">Autonomous domestic robotics</p>
+    </div>
+    <div>
+      <p class="dropcap">A robotic vacuum cleaner is a compact autonomous mobile robot designed to clean hard-floor surfaces by systematically vacuuming dust, dirt, pet hair and small debris. Today's machines combine motorized brushes, high-pressure suction, navigation systems and onboard computing to operate independently while avoiding obstacles, stairs and furniture.</p>
+      <p>The concept emerged from research in the 1980s, with practical prototypes appearing in the 1990s. Electrolux's Trilobite became the first commercially available model in 2001, followed by iRobot's Roomba in 2002 and the rapid expansion of the category.</p>
+    </div>
+  </div>
+</section>
+
+<section class="palette-ribbon" aria-label="Editorial accent palette"><div class="palette-ribbon-inner"><div class="palette-swatch seafoam">Seafoam<br>#00A896</div><div class="palette-swatch ochre">Ochre<br>#C58B2A</div><div class="palette-swatch terracotta">Terracotta<br>#C85C4A</div><div class="palette-swatch lavender">Lavender<br>#7667A8</div><div class="palette-swatch sand">Sand<br>#E9DCC8</div></div></section>
+
+<section class="content">
+  <article class="chapter" id="history">
+    <div class="chapter-number">01 / HISTORY</div>
+    <div>
+      <h2>From experiment<br>to appliance</h2>
+      <p class="lead">The idea of a machine that could clean a floor without human guidance is older than the computing power needed to make it practical.</p>
+      <h3>Early concepts and prototypes</h3>
+      <p>The earliest documented concept for a robotic floor cleaner appeared in a 1957 U.S. patent filed by American engineer Donald G. Moore. It described a self-propelled device equipped with sensors to detect dirt, navigate obstacles and follow pre-laid tracks. Whirlpool demonstrated a prototype in 1959, but limitations in batteries and computing stalled progress.</p>
+
+      <figure class="figure">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Roomba_original.jpg" alt="First generation Roomba">
+        <figcaption class="caption">First-generation Roomba, photographed in 2006. Larry D. Moore, CC BY 4.0, Wikimedia Commons.</figcaption>
+      </figure>
+
+      <h3>Commercial launch and mass adoption</h3>
+      <p>Electrolux developed the Trilobite in Sweden beginning in the early 1990s. A prototype was demonstrated internally in 1996 and publicly unveiled in 1997. Its ultrasonic sensors, infrared beacons and systematic navigation represented a major step toward practical domestic autonomy.</p>
+      <p>Released commercially in 2001, the Trilobite remained a niche product at roughly €2,000. In September 2002, iRobot launched the Roomba at around $200. Its simpler reactive navigation, bump sensors and cliff detectors prioritized reliability and affordability, helping turn robotic floor cleaning into a consumer category.</p>
+
+      <figure class="figure">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Electrolux_trilobite.jpg" alt="Electrolux Trilobite 2.0">
+        <figcaption class="caption">Electrolux Trilobite 2.0. Patrik Tschudin, CC BY 2.0, Wikimedia Commons.</figcaption>
+      </figure>
+
+
+      <div class="timeline" aria-label="Robotic vacuum milestones"><div class="timeline-item"><div class="timeline-year">1957</div><div class="timeline-title">Patent-era autonomous floor-cleaning concept</div></div><div class="timeline-item"><div class="timeline-year">2001</div><div class="timeline-title">Electrolux Trilobite reaches market</div></div><div class="timeline-item"><div class="timeline-year">2002</div><div class="timeline-title">Roomba brings the category to mass consumers</div></div><div class="timeline-item"><div class="timeline-year">2010s</div><div class="timeline-title">Mapping, LiDAR and self-emptying become defining features</div></div><div class="timeline-item"><div class="timeline-year">2020s</div><div class="timeline-title">AI vision, mopping and autonomous docks converge</div></div></div>
+      <h3>Key technological milestones</h3>
+      <p>Around 2010, LiDAR mapping introduced real-time 2D maps and more efficient coverage. Self-emptying bases appeared in the early 2010s, while vacuum-and-mop combinations proliferated later in the decade. Recent premium systems add AI object recognition, retractable sensors, extendable mop pads and increasingly autonomous maintenance docks.</p>
+    </div>
+  </article>
+
+  <article class="chapter" id="technology">
+    <div class="chapter-number">02 / TECHNOLOGY</div>
+    <div>
+      <h2>The machine<br>underneath</h2>
+      <p class="lead">Modern robotic vacuums are less like appliances with motors and more like small autonomous systems that happen to clean floors.</p>
+      <h3>Sensors & navigation</h3>
+      <p>Bump sensors register collisions. Cliff sensors prevent falls. Ultrasonic and infrared proximity sensors detect walls and furniture, while accelerometers and gyroscopes support dead reckoning. Dirt-detection optics can trigger intensified cleaning.</p>
+      <p>Premium systems increasingly rely on simultaneous localization and mapping (SLAM). LiDAR creates precise 2D maps through time-of-flight laser scanning; visual SLAM uses cameras for richer spatial information and object differentiation. Hybrid sensor fusion is now common.</p>
+
+      <h3>Cleaning & drive systems</h3>
+      <p>A central brush roller agitates dirt while side brushes sweep edges. High-speed impeller fans generate suction measured in pascals. Differential steering, using two independently powered wheels and a passive caster, allows tight pivots and precise navigation.</p>
+      <p>Many hybrid models lift mop pads when carpets are detected, automatically switch suction modes and use vibrating or rotating mechanisms for wet cleaning.</p>
+
+
+      <div class="accent-grid"><div class="accent-card seafoam"><div class="kicker">Seafoam / Autonomy</div><h3>Navigation</h3><p>Mapping, obstacle avoidance and spatial reasoning turn cleaning into an autonomous system.</p></div><div class="accent-card ochre"><div class="kicker">Ochre / Mechanics</div><h3>Cleaning</h3><p>Brush geometry, suction, edge reach and mopping still determine whether the robot actually cleans well.</p></div><div class="accent-card terracotta"><div class="kicker">Terracotta / Friction</div><h3>Intervention</h3><p>Cords, thresholds, tangles and clutter remain the places where autonomy gives way to human help.</p></div><div class="accent-card lavender"><div class="kicker">Lavender / Intelligence</div><h3>Software</h3><p>SLAM, object recognition, routines and app control are increasingly the product's differentiators.</p></div></div>
+      <h3>Power & battery</h3>
+      <p>Lithium-ion packs typically deliver 60–150+ minutes of runtime. Battery management systems prevent over-discharge and thermal problems. Self-docking stations recharge the robot, while newer docks also empty dust bins, wash and dry mops and refill water tanks.</p>
+
+      <div class="stats">
+        <div class="stat"><strong>65%</strong><span>Top sand pickup<br>CNET 2026 average</span></div>
+        <div class="stat"><strong>8–22 kPa</strong><span>Flagship suction<br>reported range</span></div>
+        <div class="stat"><strong>60–150</strong><span>Minutes<br>typical runtime</span></div>
+        <div class="stat"><strong>≤60 dB</strong><span>Quiet mode<br>noise level</span></div>
+      </div>
+    </div>
+  </article>
+
+  <article class="chapter">
+    <div class="chapter-number">03 / OPERATIONS</div>
+    <div>
+      <h2>Autonomy as<br>a feature</h2>
+      <p class="lead">The defining product is not suction. It is the reduction of human intervention.</p>
+      <h3>Cleaning modes</h3>
+      <p>Standard modes include Auto for systematic coverage, Spot for intensive localized cleaning and Edge/Border for perimeter focus. Modern path-planning algorithms use mapped floor plans to reduce overlap and energy consumption compared with early random-bounce approaches.</p>
+      <h3>Vacuum + mop combinations</h3>
+      <p>Simultaneous dry and wet cleaning is now common. Roller-mop systems continuously refresh the cleaning surface, while hot-water washing and heated-air drying in the dock aim to reduce mold and odors. Advanced machines detect floor types, boost suction on carpet and lift or retract mops automatically.</p>
+      <h3>Smart-home integration</h3>
+      <p>Companion apps provide multi-floor maps, virtual no-go zones, room-specific scheduling, real-time status and voice control. Premium platforms increasingly integrate with major smart-home ecosystems and may perform some processing locally for improved privacy.</p>
+    </div>
+  </article>
+
+  <article class="chapter" id="performance">
+    <div class="chapter-number">04 / PERFORMANCE</div>
+    <div>
+      <h2>Good enough<br>to disappear</h2>
+      <p class="lead">Robotic vacuums excel when the objective is daily maintenance. They are less convincing when the job demands a deep clean.</p>
+      <p>Robots perform strongly on hard floors, with reported sand and cereal pickup often ranging from 72–99%. Results on low-pile carpet are more variable, while high-pile and fringed rugs remain difficult. Edge and corner cleaning is a persistent weakness for round chassis designs.</p>
+
+      <table>
+        <thead>
+          <tr><th>Surface</th><th>Debris pickup</th><th>Key limitation</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Hardwood / Tile</td><td>72–99%</td><td>Edge & baseboard misses</td></tr>
+          <tr><td>Low-Pile Carpet</td><td>41–64%</td><td>Embedded dirt, reduced agitation</td></tr>
+          <tr><td>High-Pile Carpet</td><td>41–66%</td><td>Deep penetration, tangling</td></tr>
+        </tbody>
+      </table>
+
+      <p>Compared with traditional uprights or canisters, robots trade some deep-cleaning power for autonomy. They can reclaim meaningful amounts of household time, but cords, thresholds, clutter and high-pile zones still create moments where the human has to intervene.</p>
+
+      <div class="callout">
+        <strong>The useful mental model:</strong> a robotic vacuum is best understood as an automated maintenance system, not a complete replacement for manual cleaning.
+      </div>
+
+      <h3>Common failure modes</h3>
+      <p>Typical problems include getting stuck on cords, rugs or furniture legs; false cliff-sensor triggers on dark floors; battery degradation; brush and filter clogs; and dust buildup in docking stations. Advanced LiDAR and AI systems can reduce, but not eliminate, these problems.</p>
+    </div>
+  </article>
+
+  <article class="chapter">
+    <div class="chapter-number">05 / MARKET</div>
+    <div>
+      <h2>A crowded<br>intelligence race</h2>
+      <p class="lead">The market has shifted from “robot that vacuums” to competing visions of the autonomous home.</p>
+      <p>As of early 2025, Chinese manufacturers led global smart-vacuum shipments, with Roborock, Ecovacs and Dreame among the largest brands. iRobot remains strong in the United States, alongside SharkNinja, Samsung, LG, Xiaomi, Eufy, Philips, Neato and Dyson.</p>
+      <p>Prices now span from entry-level models below $300 to premium AI-and-mop systems above $1,500. The middle of the market remains attractive because consumers tend to value balanced navigation, cleaning and convenience features rather than every available flagship capability.</p>
+      <div class="pull-quote-warm">“The real product isn't a cleaner. It's the absence of a recurring chore.”</div>
+    </div>
+  </article>
+
+  <article class="chapter">
+    <div class="chapter-number">06 / IMPLICATIONS</div>
+    <div>
+      <h2>When the home<br>becomes data</h2>
+      <p class="lead">The more autonomous the robot becomes, the more it needs to know about the environment around it.</p>
+      <h3>Efficiency gains</h3>
+      <p>Mapped navigation can reduce redundant passes and energy use. Robots generally consume substantially less power during cleaning than traditional vacuum cleaners, while automation can reclaim recurring household labor.</p>
+      <h3>Criticisms</h3>
+      <p>Real-world performance often lags marketing claims. Robots struggle with edges, high-pile carpets and dynamic clutter. High upfront cost and ongoing maintenance also remain barriers.</p>
+      <div class="note-terracotta"><strong>Design-system demo note:</strong> Terracotta is intentionally used here as a human-risk and caution accent rather than an error state. In production, semantic error colors should remain separate from editorial accent colors.</div>
+      <h3>Privacy, security & safety</h3>
+      <p>Camera- and map-equipped robots can collect detailed information about a home. Cloud storage of spatial data and security vulnerabilities raise legitimate privacy questions. A thoughtful deployment treats the robot as a networked computer with physical access to the home, not merely as a household appliance.</p>
+    </div>
+  </article>
+
+  <article class="chapter">
+    <div class="chapter-number">07 / 2026</div>
+    <div>
+      <h2>The category<br>now</h2>
+      <p class="lead">There is no single “best” robotic vacuum. The right choice depends on which compromise matters most: navigation, cleaning, mopping, autonomy, price or privacy.</p>
+      <p>Recent independent reviews have highlighted different strengths across the category. CNET has favored the Mova V50 Ultra Complete for overall cleaning performance; RTINGS has highlighted the Roborock Saros 10R; Wirecutter has recommended the Roborock Q7 M5+ for navigation and multi-level mapping; and PCMag has selected the Ecovacs Deebot X8 Pro Omni as an Editors’ Choice hybrid.</p>
+      <p>That fragmentation is revealing. The category has matured enough that the question is no longer whether robotic cleaning works. The question is <em>how much autonomy, complexity and cost are worth buying into.</em></p>
+    </div>
+  </article>
+</section>
+
+
+<section class="theme-demo"><div class="theme-demo-inner"><div class="demo-panel"><div class="section-label" style="color:var(--seafoam)">Palette in context</div><h3>Editorial accent family</h3><p style="color:var(--ink-2)">A compact view of how the accents sit beside Signature Blue, Ink, Paper and the neutral system.</p><div class="legend"><span class="legend-chip"><span class="legend-dot blue"></span>Signature Blue</span><span class="legend-chip"><span class="legend-dot seafoam"></span>Seafoam</span><span class="legend-chip"><span class="legend-dot ochre"></span>Ochre</span><span class="legend-chip"><span class="legend-dot terracotta"></span>Terracotta</span><span class="legend-chip"><span class="legend-dot lavender"></span>Lavender</span><span class="legend-chip"><span class="legend-dot sand"></span>Sand</span></div><div class="demo-bars"><span></span><span></span><span></span><span></span><span></span></div></div><div class="demo-panel" style="background:var(--accent-sand-bg)"><div class="section-label" style="color:var(--ochre)">Warm editorial surface</div><h3>Sand + Ink + Ochre</h3><p style="color:var(--ink-2)">This demonstrates the warmer side of the system for personal essays, pull quotes, historical material and reflective passages without abandoning the core blue identity.</p></div></div></section>
+<section class="endnote">
+  <div class="endnote-inner">
+    <div>
+      <div class="section-label">Sources & notes</div>
+    </div>
+    <div>
+      <p>Text adapted from the original JonathanFrei.com editorial feature and retained as an editorial redesign rather than a new fact-check. The original page identifies Grokipedia as a source and Wikimedia Commons for its historical imagery.</p>
+      <p>Historical images: First-generation Roomba by Larry D. Moore, CC BY 4.0; Electrolux Trilobite 2.0 by Patrik Tschudin, CC BY 2.0. Images are loaded from Wikimedia Commons.</p>
+      <p>Designed as a responsive single-page editorial feature. The color system uses Signature Blue #0077A8 with Ink #111C24 and Paper #FAF9F6 as the core light-theme identity, and an ink/navy foundation for dark mode.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  JONATHAN FREI · EDITORIAL · ROBOTIC VACUUM CLEANERS · 2026
+</footer>
+
+<script>
+(function () {
+  const root = document.documentElement;
+  const button = document.getElementById('themeToggle');
+  const stored = localStorage.getItem('jf-theme');
+  const preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  const initial = stored || preferred;
+
+  function setTheme(theme) {
+    root.dataset.theme = theme;
+    button.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
+    button.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    localStorage.setItem('jf-theme', theme);
+  }
+  setTheme(initial);
+  button.addEventListener('click', () => setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
+})();
+</script>
+</body>
+</html>
