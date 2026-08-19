@@ -21,10 +21,8 @@ Hong Kong makes this kind of remoteness possible in an unusually compressed spac
 Lantau is the largest of those islands. At [148 square kilometers](https://www.landsd.gov.hk/en/resources/mapping-information/hk-geographic-data.html), it is larger than Hong Kong Island and Kowloon combined. Its spine rises abruptly from the South China Sea through Lantau Peak at 934 meters and Sunset Peak at 869 meters, the territory’s second- and third-highest summits. Lantau Mountain Camp occupies the high saddle east of Sunset Peak, around 2,500 feet above sea level, with Yi Tung Shan rising to about 747 meters on the other side. The cabins are not far from the city in miles. They are remote because the land between them and the city is steep.
 
 [![Black-and-white view of stone cabins scattered across the slopes of Lantau Mountain Camp in 1938](https://gwulo.com/sites/default/files/styles/extra_large_640x640_/public/thumbnails/image/img_4534_2.jpg?itok=V1RR4TyV "Stone cabins at Lantau Mountain Camp in 1938")](https://gwulo.com/media/35271 "Source: Huts at Lantau Mountain Camp — Gwulo")
-{: .figure-wide}
 
-**Stone cabins scattered across the Lantau ridge in 1938**. Photograph attributed to Raymond Smith; *source: [Gwulo](https://gwulo.com/media/35271).*
-{: .caption}
+**Stone cabins scattered across the Lantau ridge in 1938** Photograph attributed to Raymond Smith. *source: [Gwulo](https://gwulo.com/media/35271).*
 
 ## The Search for Higher Ground
 
@@ -124,12 +122,12 @@ The hut had been unused for more than thirty years. Conservators repaired unstab
 
 [![Weathered exterior of the disused 1925 Caretaker's Hut before conservation work](https://lmc.cuhk.edu.hk/images/Before-Exter-3.jpg "Caretaker's Hut before restoration")](https://lmc.cuhk.edu.hk/conservation-restoration.html "Source: The Caretaker's Hut — Regenerating Lantau Mountain Camp")
 
-**The Caretaker’s Hut before restoration;** *source: [Regenerating Lantau Mountain Camp](https://lmc.cuhk.edu.hk/conservation-restoration.html).*
+**The Caretaker’s Hut before restoration** *source: [Regenerating Lantau Mountain Camp](https://lmc.cuhk.edu.hk/conservation-restoration.html).*
 {: .caption}
 
 [![Restored stone Caretaker's Hut with blue door and red shutter on the grassy Lantau mountainside](https://lmc.cuhk.edu.hk/images/After-Exter-3.jpg "Restored Caretaker's Hut at Lantau Mountain Camp")](https://lmc.cuhk.edu.hk/conservation-restoration.html "Source: The Caretaker's Hut — Regenerating Lantau Mountain Camp")
 
-**The restored hut now supports conservation research, visitor education, and emergency readiness;** *source: [Regenerating Lantau Mountain Camp](https://lmc.cuhk.edu.hk/conservation-restoration.html).*
+**The restored hut now supports conservation research, visitor education, and emergency readiness** *source: [Regenerating Lantau Mountain Camp](https://lmc.cuhk.edu.hk/conservation-restoration.html).*
 {: .caption}
 
 The restored hut is not new tourist accommodation. It is a base for the people trying to care for the mountain. Conservation Guardians trained with Raleigh International Hong Kong periodically staff it, conduct ecological surveys, assess visitor impact, explain the camp’s history, and teach leave-no-trace practices. The wider project has run guided nature tours, historical workshops, stargazing, mountain-safety activities, and a bilingual virtual-reality record of culturally and ecologically significant sites. Its stated next steps include further building repair, continued environmental monitoring, and broader education.
@@ -137,7 +135,7 @@ The restored hut is not new tourist accommodation. It is a base for the people t
 [![Hikers walking past the stone Mess Hall at Lantau Mountain Camp in 2022](https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs43238-024-00170-z/MediaObjects/43238_2024_170_Fig2_HTML.png "Hikers passing the Mess Hall at Lantau Mountain Camp")](https://link.springer.com/article/10.1186/s43238-024-00170-z/figures/2 "Source: Figure 2 in From Hermitage to Heritage?")
 {: .figure-wide}
 
-**Hikers pass the 1928 Mess Hall in November 2022.** Photograph by Miriam Lee, *reproduced in [Built Heritage](https://link.springer.com/article/10.1186/s43238-024-00170-z/figures/2).*
+**Hikers pass the 1928 Mess Hall in November 2022** Photograph by Miriam Lee. *Reproduced in [Built Heritage](https://link.springer.com/article/10.1186/s43238-024-00170-z/figures/2).*
 {: .caption}
 
 The approach recognizes that the camp’s history cannot be separated from continued use. It is not a ruin waiting for the government to assign it a function. Some cabins remain with churches and institutions connected to early owners; others belong to individuals. Volunteers still repair church cabins so retreats can continue. Owners and guests still go up for quiet and the mountain air. The buildings have survived as private dwellings, religious inheritance, and working shelters even while the surrounding paths became public.
