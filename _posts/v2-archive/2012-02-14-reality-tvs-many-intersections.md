@@ -7,8 +7,6 @@ tumblr_id: "17603420615"
 
 This [Venn Diagram from New York Magazine](http://nymag.com/daily/entertainment/2012/01/reailty-show-venn-diagram.html) shows an incredible amount of overlap in the titles and themes of various reality show.
 
-[![](media/17603420615_0.png)
-
-](http://pixel.nymag.com/imgs/daily/vulture/2012/01/31/realitydiagram.o.png/a_980x1230.png)
+[![](media/17603420615_0.png)](http://pixel.nymag.com/imgs/daily/vulture/2012/01/31/realitydiagram.o.png/a_980x1230.png)
 
 Here’s the [big version](http://pixel.nymag.com/imgs/daily/vulture/2012/01/31/realitydiagram.o.png/a_980x1230.png).
