@@ -820,9 +820,10 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 @media (min-width: 84em) {
   .aside-pair {
     display: grid;
-    grid-template-columns: var(--measure);
+    grid-template-columns: var(--measure) minmax(0, 1fr);
     column-gap: 1.35rem;
     align-items: start;
+    position: relative;
     width: calc(100% + 11.5rem + 11.5rem);
   }
 
@@ -835,10 +836,14 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   .prose .aside-pair > p.aside {
     grid-column: 2;
     grid-row: 1;
+    position: absolute;
+    top: 0.15em;
+    right: 0;
+    left: 0;
     float: none;
     width: auto;
     max-width: none;
-    margin: 0.15em 0 0;
+    margin: 0;
     padding: 0;
     background: none;
     border: 0;
