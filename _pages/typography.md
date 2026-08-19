@@ -94,10 +94,10 @@ hello("world")
 
 Kramdown classes on ordinary posts and pages (`{: .eyebrow}`, `{: .aside}`, `{: .pull-quote}`, `{: .caption}`, `{: .figure-wide}`).
 
-**A sidenote** about the following paragraph. On a *wide screen* it sits in the left margin; on a narrow screen it drops below in a box. [Links look like this](xx)
-{: .aside}
-
 Typography is the craft of endowing human language with a durable visual form, and asides should not interrupt that line length when the page has room for a margin.
+
+**A sidenote** about the preceding paragraph. On a *wide screen* it sits in the margin; on a narrow screen it drops below in a box. [Links look like this](xx)
+{: .aside}
 
 Quoted language
 {: .eyebrow}
