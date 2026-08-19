@@ -852,16 +852,41 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   line-height: 1.4;
   letter-spacing: -0.01em;
   color: var(--color-fg);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  padding: var(--space-4) var(--space-5);
+  padding: var(--space-3) 0 var(--space-3) var(--space-5);
   margin-block: var(--space-5);
 }
 
 .prose blockquote.pull-quote {
-  border-left: 1px solid var(--color-border);
+  border: 0;
+  border-left: 4px solid var(--brand-ochre);
   color: var(--color-fg);
+}
+
+.prose blockquote.pull-quote > p {
+  margin-bottom: var(--space-3);
+}
+
+.prose blockquote.pull-quote > p:last-child {
+  margin-bottom: 0;
+}
+
+/* A final emphasized line is the quote attribution. */
+.prose blockquote.pull-quote > p:last-child > em:only-child {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: var(--type-sm);
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  color: var(--color-muted);
+}
+
+@media (min-width: 52em) {
+  .prose blockquote.pull-quote {
+    width: calc(100% + 8rem);
+    max-width: calc(100vw - 2 * var(--space-4));
+    margin-inline: -4rem;
+  }
 }
 
 .prose .caption {
@@ -1148,6 +1173,26 @@ a.post-meta__date:focus-visible {
 .post-header h1 {
   margin-top: 0;
   margin-bottom: var(--space-3);
+}
+
+.prose .eyebrow {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-ui);
+  font-size: var(--type-sm);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand-ochre);
+}
+
+.prose .deck {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--type-lg);
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--color-muted);
 }
 
 .post-header .post-meta {
