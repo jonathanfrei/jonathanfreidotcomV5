@@ -21,6 +21,8 @@ Hong Kong makes this kind of remoteness possible in an unusually compressed spac
 Lantau is the largest of those islands. At [148 square kilometers](https://www.landsd.gov.hk/en/resources/mapping-information/hk-geographic-data.html), it is larger than Hong Kong Island and Kowloon combined. Its spine rises abruptly from the South China Sea through Lantau Peak at 934 meters and Sunset Peak at 869 meters, the territory’s second- and third-highest summits. Lantau Mountain Camp occupies the high saddle east of Sunset Peak, around 2,500 feet above sea level, with Yi Tung Shan rising to about 747 meters on the other side. The cabins are not far from the city in miles. They are remote because the land between them and the city is steep.
 
 [![Black-and-white view of stone cabins scattered across the slopes of Lantau Mountain Camp in 1938](https://gwulo.com/sites/default/files/styles/extra_large_640x640_/public/thumbnails/image/img_4534_2.jpg?itok=V1RR4TyV "Stone cabins at Lantau Mountain Camp in 1938")](https://gwulo.com/media/35271 "Source: Huts at Lantau Mountain Camp — Gwulo")
+{: .figure-wide}
+
 
 **Stone cabins scattered across the Lantau ridge in 1938** Photograph attributed to Raymond Smith. *source: [Gwulo](https://gwulo.com/media/35271).*
 
@@ -43,8 +45,10 @@ Negotiations with the government covered land, building permits, access trails, 
 A Western-trained Chinese Presbyterian contractor directed construction. Stonecutters quarried blocks just below the summit. The mountain is built largely from hard volcanic rocks, including rhyolite and tuff, whose resistance to erosion helped preserve [Lantau’s high ridges and peaks](https://sslo.cedd.gov.hk/en/exploring-more/nature-conservation/geo-logs/on-the-hills/index.html). The cabins therefore rose from the geology beneath them. Cement was mixed on the mountain with local sand and stream water because hauling material to the ridge was so difficult that building there cost roughly three times as much as building below. Eleven cabins and a caretaker’s hut went up in 1925. The Mess Hall followed in 1928. More cabins appeared over the next several years on the slopes of Yi Tung Shan and nearer Sunset Peak. By 1934, the camp contained nineteen residential cabins, the Mess, a caretaker’s hut, an amah’s hut, and a swimming pool made by damming a mountain stream. Cabin 24, originally known as Dobson’s Hut, remains Hong Kong’s highest residential premises.
 
 [![Two children playing outside a stone hut at Lantau Mountain Camp with the Tung Chung landscape behind them](https://gwulo.com/sites/default/files/styles/extra_large_640x640_/public/thumbnails/image/img_4550_2.jpg?itok=CM-1jvc3 "Children outside a Lantau Mountain Camp hut in 1939")](https://gwulo.com/media/35278 "Source: Playing outside a hut at Lantau Mountain Camp — Gwulo")
+{: .figure-wide}
 
-**John Anton-Smith and an unidentified girl outside a camp hut in 1939, looking toward Tung Chung**. Photograph attributed to Raymond Smith; *source: [Gwulo](https://gwulo.com/media/35278).*
+
+**John Anton-Smith and an unidentified girl outside a camp hut in 1939, looking toward Tung Chung** Photograph attributed to Raymond Smith. *source: [Gwulo](https://gwulo.com/media/35278).*
 {: .caption}
 
 Arthur J. May, a Methodist preacher and mission architect, produced the original cabin plan. The buildings were supposed to be alike, compact shelters about eighteen by sixteen feet with no more than three rooms. Their walls were between twelve and sixteen inches thick, topped by reinforced concrete roofs and protected by stout wooden shutters. A district officer objected that they were too small and low to be considered proper human habitation. The campers replied that seasonal mountain shelters could not reasonably be built to the same rules as lowland houses.
@@ -63,8 +67,10 @@ The interiors demanded similar improvisation. Beds were raised when needed and s
 What looked like rustic simplicity rested on a large system of labor. The Caretaker’s Hut was enlarged twice to house a year-round caretaker and as many as eight carriers. During the active summer season, the carriers made daily journeys on foot with food and supplies from villages below. The caretaker maintained the common property and could reach cabins scattered across both sides of the saddle.
 
 [![Black-and-white photograph of travelers pausing on the mountain journey to Lantau Mountain Camp in 1939](https://gwulo.com/sites/default/files/styles/extra_large_640x640_/public/thumbnails/image/2020-02-06_235059_4.jpg?itok=PCoX_MF5 "A rest on the journey to Lantau Mountain Camp, 1939")](https://gwulo.com/media/35396 "Source: A rest on the journey up to Lantau Mountain Camp — Gwulo")
+{: .figure-wide}
 
-**A rest on the journey up to Lantau Mountain Camp in 1939.** Raymond Smith’s photographs of the approach also record the bearers and sedan chairs used on the climb; *source: [Gwulo](https://gwulo.com/media/35396).*
+
+**A rest on the journey up to Lantau Mountain Camp in 1939** Raymond Smith’s photographs of the approach also record the bearers and sedan chairs used on the climb. *source: [Gwulo](https://gwulo.com/media/35396).*
 {: .caption}
 
 Access itself was a construction project. The first trail climbed from the Tung Chung valley and was built through an agreement between the government and the prospective campers. The government paid the initial cost on the condition that the camp maintain the route to the District Officer’s satisfaction for three years. For nearly a decade it was the only way in. A second path from Mui Wo was developed in 1933 and 1934 along an older route associated with monks, with much more work completed after the war. George Stacey Kennedy-Skipton led the trail committee for more than thirty years. Repairs involved local contractors, masons who had fled China, and later prisoners from Chi Ma Wan and Ma Po Ping. The paths created to supply a private mountain camp eventually became part of Hong Kong’s public trail system.
@@ -78,6 +84,8 @@ The center of the original camp was the Mess Hall. Built in the heart of the sad
 The residents’ association expected owners and guests to participate. Its constitution aimed to preserve Christian fellowship as well as the owners’ practical interests. Anyone selling a cabin was encouraged to find a buyer acceptable as someone who would share the life of the community. Guests received camp notes explaining that management and catering were performed by people who were themselves on holiday. Meals required punctuality, advance notice, and help from everyone. Association meetings, held over the decades at the YMCA, Helena May, St Andrew’s Church, and church offices, opened and closed with prayer.
 
 [![Scanned pages of Lantau Mountain Camp notes issued to campers for the summer of 1933](https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs43238-024-00170-z/MediaObjects/43238_2024_170_Fig5_HTML.png "Lantau Mountain Camp notes for summer 1933")](https://link.springer.com/article/10.1186/s43238-024-00170-z/figures/5 "Source: Figure 5 in From Hermitage to Heritage?")
+{: .figure-wide}
+
 
 **Camp notes issued for the summer of 1933.** Original held in the Laan Tau Mountain Camp Collection at California State University, Northridge; *reproduced in [Built Heritage](https://link.springer.com/article/10.1186/s43238-024-00170-z/figures/5).*
 {: .caption}
