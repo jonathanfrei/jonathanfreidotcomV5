@@ -817,13 +817,13 @@ html:not([data-theme]) .theme-toggle__icon--sun {
    sitting on a heading (#232). The hang selectors must beat
    `.prose p.aside` or the box/padding/margin win and the sidenote
    overlaps the paragraph. */
-@media (min-width: 70em) {
+@media (min-width: 84em) {
   .aside-pair {
     display: grid;
     grid-template-columns: var(--measure);
     column-gap: 1.35rem;
     align-items: start;
-    width: calc(100% + 11.5rem + 1.35rem);
+    width: calc(100% + 11.5rem + 11.5rem);
   }
 
   .aside-pair > :not(.aside) {
