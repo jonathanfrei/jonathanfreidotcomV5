@@ -1,5 +1,7 @@
 ---
 title: "The Camp Above Hong Kong"
+eyebrow: History
+deck: The history of Lantau Mountain Camp, from its origins as a missionary refuge in South China to its survival as a living heritage site above Hong Kong.
 date: 2026-08-16T12:49:32-04:00
 tags: ["Hong Kong", "Lantau Island", "history", "heritage", "family"]
 categories: essay
