@@ -817,18 +817,10 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 @media (min-width: 70em) {
   .aside-pair {
     display: grid;
-<<<<<<< HEAD
     grid-template-columns: var(--measure);
     column-gap: 1.35rem;
     align-items: start;
     width: calc(100% + 11.5rem + 1.35rem);
-=======
-    grid-template-columns: var(--measure)
-    column-gap: 1.35rem;
-    align-items: start;
-    margin-inline-start: inherit
-    width: var(--measure-wide);
->>>>>>> parent of 1112d46 (restore aside css)
   }
 
   .aside-pair > :not(.aside) {
