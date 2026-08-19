@@ -820,13 +820,14 @@ html:not([data-theme]) .theme-toggle__icon--sun {
     grid-template-columns: 40.5rem minmax(0, 1fr)
     column-gap: 1.35rem;
     align-items: start;
-    margin-inline-start: calc(-11.5rem - 1.35rem);
+    margin-inline-start: inherit;
     width: calc(100% + 11.5rem + 1.35rem);
   }
 
   .aside-pair > :not(.aside) {
     grid-column: 1;
     grid-row: 1;
+    width: inherit;
   }
 
   .prose .aside-pair > .aside,
@@ -841,6 +842,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
     background: none;
     border: 0;
     border-radius: 0;
+    margin-inline-start: 16rem;
   }
 }
 
