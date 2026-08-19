@@ -94,6 +94,10 @@ module Jekyll
       text.gsub!(/!\[[^\]]*\]\([^)]*\)/, " ")
       text.gsub!(/\[([^\]]*)\]\([^)]*\)/, '\1')
       text.gsub!(/<[^>]+>/, " ")
+      # Kramdown IALs / ALDs ({: .figure-wide}, {: .caption}, {::comment}).
+      # Strip before hyphen collapsing or `{:.figure-wide}` becomes
+      # `{: .figure wide}` in search.json excerpts.
+      text.gsub!(/\{::?[^}]*\}/, " ")
       text.gsub!(/[#>*_\-|]+/, " ")
       text.gsub!(/\s+/, " ")
       text.strip
