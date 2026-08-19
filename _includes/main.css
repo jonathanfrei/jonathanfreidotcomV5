@@ -434,12 +434,14 @@ a:focus-visible {
   /* Charcoal-level contrast on paper (not light stone) */
   color: var(--brand-charcoal, #2F3A42);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.01em;
   padding: 0.45em 0.35em;
   min-height: 44px;
   display: inline-flex;
   align-items: center;
+  text-transform: uppercase
+
 }
 
 .site-nav a:hover,
@@ -868,7 +870,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   font-size: 0.75em;
   line-height: 1.5;
   color: var(--color-fg);
-  margin-top: var(--space-2);
+  margin-top: -1.5rem;
   margin-bottom: var(--space-4);
 }
 
@@ -878,19 +880,21 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   font-style: normal;
   color: var(--color-fg);
   text-transform: uppercase;
+  margin-right: 0.5rem;
 }
 
 .prose .caption em,
 .prose .caption i {
   font-family: var(--font-mono);
-  font-weight: 300;
+  font-weight: 200;
   font-style: normal;
   color: var(--color-muted);
+  margin-left: 0.5rem;
 }
 
 .prose .caption a {
   color: var(--color-accent);
-  font-weight: 400;
+  font-weight: inherit;
   text-decoration: none;
   text-decoration-style: dotted;
   text-decoration-thickness: 1px;
