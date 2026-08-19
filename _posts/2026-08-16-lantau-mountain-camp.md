@@ -21,10 +21,10 @@ Hong Kong makes this kind of remoteness possible in an unusually compressed spac
 Lantau is the largest of those islands. At [148 square kilometers](https://www.landsd.gov.hk/en/resources/mapping-information/hk-geographic-data.html), it is larger than Hong Kong Island and Kowloon combined. Its spine rises abruptly from the South China Sea through Lantau Peak at 934 meters and Sunset Peak at 869 meters, the territory’s second- and third-highest summits. Lantau Mountain Camp occupies the high saddle east of Sunset Peak, around 2,500 feet above sea level, with Yi Tung Shan rising to about 747 meters on the other side. The cabins are not far from the city in miles. They are remote because the land between them and the city is steep.
 
 [![Black-and-white view of stone cabins scattered across the slopes of Lantau Mountain Camp in 1938](https://gwulo.com/sites/default/files/styles/extra_large_640x640_/public/thumbnails/image/img_4534_2.jpg?itok=V1RR4TyV "Stone cabins at Lantau Mountain Camp in 1938")](https://gwulo.com/media/35271 "Source: Huts at Lantau Mountain Camp — Gwulo")
-{: .figure-wide}
-
 
 **Stone cabins scattered across the Lantau ridge in 1938** Photograph attributed to Raymond Smith. *source: [Gwulo](https://gwulo.com/media/35271).*
+{: .caption}
+
 
 ## The Search for Higher Ground
 
