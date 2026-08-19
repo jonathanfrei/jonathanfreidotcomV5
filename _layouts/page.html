@@ -3,7 +3,13 @@ layout: default
 ---
 <article class="prose">
   <header class="post-header">
+    {%- if page.eyebrow %}
+    <p class="eyebrow">{{ page.eyebrow | escape }}</p>
+    {%- endif %}
     <h1>{{ page.title }}</h1>
+    {%- if page.deck %}
+    <p class="deck">{{ page.deck | escape }}</p>
+    {%- endif %}
   </header>
   {{ content }}
 </article>

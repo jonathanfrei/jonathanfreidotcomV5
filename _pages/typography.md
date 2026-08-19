@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Typography
+eyebrow: Design system
+deck: A specimen of the type, rhythm, and editorial marks used across the site.
 permalink: /typography
 description: "Specimen page for the site’s typographic design system (Source Serif 4 / Source Code Pro) and HTML element styles."
 ---
@@ -90,16 +92,21 @@ hello("world")
 
 ## Editorial marks
 
-Kramdown classes on ordinary posts and pages (`{: .aside}`, `{: .pull-quote}`, `{: .caption}`, `{: .figure-wide}`).
+Kramdown classes on ordinary posts and pages (`{: .eyebrow}`, `{: .aside}`, `{: .pull-quote}`, `{: .caption}`, `{: .figure-wide}`).
 
 **A sidenote** about the following paragraph. On a *wide screen* it sits in the left margin; on a narrow screen it drops below in a box. [Links look like this](xx)
 {: .aside}
 
 Typography is the craft of endowing human language with a durable visual form, and asides should not interrupt that line length when the page has room for a margin.
 
+Quoted language
+{: .eyebrow}
+
 ### Pull quote from the text
 
-A complete sentence is still the unit of thought, even when it is pulled out of the column and boxed.
+> A complete sentence is still the unit of thought, even when it is pulled beyond the column.
+>
+> *— The typography specimen*
 {: .pull-quote}
 
 ### Full Bleed Images
