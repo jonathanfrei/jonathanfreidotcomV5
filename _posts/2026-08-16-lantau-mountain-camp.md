@@ -22,7 +22,8 @@ Lantau is the largest of those islands. At [148 square kilometers](https://www.l
 
 [![Black-and-white view of stone cabins scattered across the slopes of Lantau Mountain Camp in 1938](https://gwulo.com/sites/default/files/styles/extra_large_640x640_/public/thumbnails/image/img_4534_2.jpg?itok=V1RR4TyV "Stone cabins at Lantau Mountain Camp in 1938")](https://gwulo.com/media/35271 "Source: Huts at Lantau Mountain Camp — Gwulo")
 
-*Stone cabins scattered across the Lantau ridge in 1938. Photograph attributed to Raymond Smith; source: [Gwulo](https://gwulo.com/media/35271).*
+**Stone cabins scattered across the Lantau ridge in 1938**. Photograph attributed to Raymond Smith; *source: [Gwulo](https://gwulo.com/media/35271).*
+{: .caption}
 
 ## The Search for Higher Ground
 
@@ -44,7 +45,8 @@ A Western-trained Chinese Presbyterian contractor directed construction. Stonecu
 
 [![Two children playing outside a stone hut at Lantau Mountain Camp with the Tung Chung landscape behind them](https://gwulo.com/sites/default/files/styles/extra_large_640x640_/public/thumbnails/image/img_4550_2.jpg?itok=CM-1jvc3 "Children outside a Lantau Mountain Camp hut in 1939")](https://gwulo.com/media/35278 "Source: Playing outside a hut at Lantau Mountain Camp — Gwulo")
 
-*John Anton-Smith and an unidentified girl outside a camp hut in 1939, looking toward Tung Chung. Photograph attributed to Raymond Smith; source: [Gwulo](https://gwulo.com/media/35278).*
+**John Anton-Smith and an unidentified girl outside a camp hut in 1939, looking toward Tung Chung**. Photograph attributed to Raymond Smith; *source: [Gwulo](https://gwulo.com/media/35278).*
+{: .caption}
 
 Arthur J. May, a Methodist preacher and mission architect, produced the original cabin plan. The buildings were supposed to be alike, compact shelters about eighteen by sixteen feet with no more than three rooms. Their walls were between twelve and sixteen inches thick, topped by reinforced concrete roofs and protected by stout wooden shutters. A district officer objected that they were too small and low to be considered proper human habitation. The campers replied that seasonal mountain shelters could not reasonably be built to the same rules as lowland houses.
 
@@ -54,7 +56,8 @@ The interiors demanded similar improvisation. Beds were raised when needed and s
 
 [![Hand-drawn floor plan of a Baptist cabin at Lantau Mountain Camp showing its compact rooms and furnishings](https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs43238-024-00170-z/MediaObjects/43238_2024_170_Fig4_HTML.png "Floor plan of the Baptist cabin at Lantau Mountain Camp")](https://link.springer.com/article/10.1186/s43238-024-00170-z/figures/4 "Source: Figure 4 in From Hermitage to Heritage?")
 
-*Dr. Carter Morgan’s floor plan of the Baptist cabin. Original held in the Laan Tau Mountain Camp Collection at California State University, Northridge; reproduced in [Built Heritage](https://link.springer.com/article/10.1186/s43238-024-00170-z/figures/4).*
+**Dr. Carter Morgan’s floor plan of the Baptist cabin.** Original held in the Laan Tau Mountain Camp Collection at California State University, Northridge; *reproduced in [Built Heritage](https://link.springer.com/article/10.1186/s43238-024-00170-z/figures/4).*
+{: .caption}
 
 ## The Work Behind the Simplicity
 
@@ -62,7 +65,8 @@ What looked like rustic simplicity rested on a large system of labor. The Careta
 
 [![Black-and-white photograph of travelers pausing on the mountain journey to Lantau Mountain Camp in 1939](https://gwulo.com/sites/default/files/styles/extra_large_640x640_/public/thumbnails/image/2020-02-06_235059_4.jpg?itok=PCoX_MF5 "A rest on the journey to Lantau Mountain Camp, 1939")](https://gwulo.com/media/35396 "Source: A rest on the journey up to Lantau Mountain Camp — Gwulo")
 
-*A rest on the journey up to Lantau Mountain Camp in 1939. Raymond Smith’s photographs of the approach also record the bearers and sedan chairs used on the climb; source: [Gwulo](https://gwulo.com/media/35396).*
+**A rest on the journey up to Lantau Mountain Camp in 1939.** Raymond Smith’s photographs of the approach also record the bearers and sedan chairs used on the climb; *source: [Gwulo](https://gwulo.com/media/35396).*
+{: .caption}
 
 Access itself was a construction project. The first trail climbed from the Tung Chung valley and was built through an agreement between the government and the prospective campers. The government paid the initial cost on the condition that the camp maintain the route to the District Officer’s satisfaction for three years. For nearly a decade it was the only way in. A second path from Mui Wo was developed in 1933 and 1934 along an older route associated with monks, with much more work completed after the war. George Stacey Kennedy-Skipton led the trail committee for more than thirty years. Repairs involved local contractors, masons who had fled China, and later prisoners from Chi Ma Wan and Ma Po Ping. The paths created to supply a private mountain camp eventually became part of Hong Kong’s public trail system.
 
@@ -76,7 +80,8 @@ The residents’ association expected owners and guests to participate. Its cons
 
 [![Scanned pages of Lantau Mountain Camp notes issued to campers for the summer of 1933](https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs43238-024-00170-z/MediaObjects/43238_2024_170_Fig5_HTML.png "Lantau Mountain Camp notes for summer 1933")](https://link.springer.com/article/10.1186/s43238-024-00170-z/figures/5 "Source: Figure 5 in From Hermitage to Heritage?")
 
-*Camp notes issued for the summer of 1933. Original held in the Laan Tau Mountain Camp Collection at California State University, Northridge; reproduced in [Built Heritage](https://link.springer.com/article/10.1186/s43238-024-00170-z/figures/5).*
+**Camp notes issued for the summer of 1933.** Original held in the Laan Tau Mountain Camp Collection at California State University, Northridge; *reproduced in [Built Heritage](https://link.springer.com/article/10.1186/s43238-024-00170-z/figures/5).*
+{: .caption}
 
 The Mess was still recognizably fulfilling that role when my family visited. I remember watching skits there and performing one with my dad: David and Goliath, with the casting adjusted so that I played Goliath and my dad played David. The performance continued a tradition of camp entertainment that reached back to the earliest campers. 
 
@@ -118,17 +123,20 @@ The hut had been unused for more than thirty years. Conservators repaired unstab
 
 [![Weathered exterior of the disused 1925 Caretaker's Hut before conservation work](https://lmc.cuhk.edu.hk/images/Before-Exter-3.jpg "Caretaker's Hut before restoration")](https://lmc.cuhk.edu.hk/conservation-restoration.html "Source: The Caretaker's Hut — Regenerating Lantau Mountain Camp")
 
-*The Caretaker’s Hut before restoration; source: [Regenerating Lantau Mountain Camp](https://lmc.cuhk.edu.hk/conservation-restoration.html).*
+**The Caretaker’s Hut before restoration;** *source: [Regenerating Lantau Mountain Camp](https://lmc.cuhk.edu.hk/conservation-restoration.html).*
+{: .caption}
 
 [![Restored stone Caretaker's Hut with blue door and red shutter on the grassy Lantau mountainside](https://lmc.cuhk.edu.hk/images/After-Exter-3.jpg "Restored Caretaker's Hut at Lantau Mountain Camp")](https://lmc.cuhk.edu.hk/conservation-restoration.html "Source: The Caretaker's Hut — Regenerating Lantau Mountain Camp")
 
-*The restored hut now supports conservation research, visitor education, and emergency readiness; source: [Regenerating Lantau Mountain Camp](https://lmc.cuhk.edu.hk/conservation-restoration.html).*
+**The restored hut now supports conservation research, visitor education, and emergency readiness;** *source: [Regenerating Lantau Mountain Camp](https://lmc.cuhk.edu.hk/conservation-restoration.html).*
+{: .caption}
 
 The restored hut is not new tourist accommodation. It is a base for the people trying to care for the mountain. Conservation Guardians trained with Raleigh International Hong Kong periodically staff it, conduct ecological surveys, assess visitor impact, explain the camp’s history, and teach leave-no-trace practices. The wider project has run guided nature tours, historical workshops, stargazing, mountain-safety activities, and a bilingual virtual-reality record of culturally and ecologically significant sites. Its stated next steps include further building repair, continued environmental monitoring, and broader education.
 
 [![Hikers walking past the stone Mess Hall at Lantau Mountain Camp in 2022](https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs43238-024-00170-z/MediaObjects/43238_2024_170_Fig2_HTML.png "Hikers passing the Mess Hall at Lantau Mountain Camp")](https://link.springer.com/article/10.1186/s43238-024-00170-z/figures/2 "Source: Figure 2 in From Hermitage to Heritage?")
 
-*Hikers pass the 1928 Mess Hall in November 2022. Photograph by Miriam Lee, reproduced in [Built Heritage](https://link.springer.com/article/10.1186/s43238-024-00170-z/figures/2).*
+**Hikers pass the 1928 Mess Hall in November 2022.** Photograph by Miriam Lee, *reproduced in [Built Heritage](https://link.springer.com/article/10.1186/s43238-024-00170-z/figures/2).*
+{: .caption}
 
 The approach recognizes that the camp’s history cannot be separated from continued use. It is not a ruin waiting for the government to assign it a function. Some cabins remain with churches and institutions connected to early owners; others belong to individuals. Volunteers still repair church cabins so retreats can continue. Owners and guests still go up for quiet and the mountain air. The buildings have survived as private dwellings, religious inheritance, and working shelters even while the surrounding paths became public.
 
