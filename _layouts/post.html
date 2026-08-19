@@ -3,7 +3,13 @@ layout: default
 ---
 <article class="prose{% if page.drop_cap %} prose--drop-cap{% endif %}" itemscope itemtype="https://schema.org/BlogPosting">
   <header class="post-header">
+    {%- if page.eyebrow %}
+    <p class="eyebrow">{{ page.eyebrow | escape }}</p>
+    {%- endif %}
     <h1 itemprop="headline">{{ page.title }}</h1>
+    {%- if page.deck %}
+    <p class="deck" itemprop="description">{{ page.deck | escape }}</p>
+    {%- endif %}
     <p class="post-meta">
       {%- comment -%}
         Published date is first publication (never auto-overwritten).
