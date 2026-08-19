@@ -883,12 +883,12 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   color: var(--color-muted);
 }
 
-@media (min-width: 52em) {
-  .prose blockquote.pull-quote {
-    width: calc(100% + 8rem);
-    max-width: calc(100vw - 2 * var(--space-4));
-    margin-inline: -4rem;
-  }
+@media (min-width: 56em) {
+    .prose blockquote.pull-quote {
+        width: calc(100% + 16rem);
+        max-width: calc(100vw - 2 * var(--space-4));
+        margin-inline: -8rem;
+    }
 }
 
 .prose .caption {
