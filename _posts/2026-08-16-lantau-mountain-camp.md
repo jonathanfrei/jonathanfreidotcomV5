@@ -47,8 +47,6 @@ Negotiations with the government covered land, building permits, access trails, 
 A Western-trained Chinese Presbyterian contractor directed construction. Stonecutters quarried blocks just below the summit. The mountain is built largely from hard volcanic rocks, including rhyolite and tuff, whose resistance to erosion helped preserve [Lantau’s high ridges and peaks](https://sslo.cedd.gov.hk/en/exploring-more/nature-conservation/geo-logs/on-the-hills/index.html). The cabins therefore rose from the geology beneath them. Cement was mixed on the mountain with local sand and stream water because hauling material to the ridge was so difficult that building there cost roughly three times as much as building below. Eleven cabins and a caretaker’s hut went up in 1925. The Mess Hall followed in 1928. More cabins appeared over the next several years on the slopes of Yi Tung Shan and nearer Sunset Peak. By 1934, the camp contained nineteen residential cabins, the Mess, a caretaker’s hut, an amah’s hut, and a swimming pool made by damming a mountain stream. Cabin 24, originally known as Dobson’s Hut, remains Hong Kong’s highest residential premises.
 
 [![Two children playing outside a stone hut at Lantau Mountain Camp with the Tung Chung landscape behind them](https://gwulo.com/sites/default/files/styles/extra_large_640x640_/public/thumbnails/image/img_4550_2.jpg?itok=CM-1jvc3 "Children outside a Lantau Mountain Camp hut in 1939")](https://gwulo.com/media/35278 "Source: Playing outside a hut at Lantau Mountain Camp — Gwulo")
-{: .figure-wide}
-
 
 **John Anton-Smith and an unidentified girl outside a camp hut in 1939, looking toward Tung Chung** Photograph attributed to Raymond Smith. *source: [Gwulo](https://gwulo.com/media/35278).*
 {: .caption}
@@ -69,8 +67,6 @@ The interiors demanded similar improvisation. Beds were raised when needed and s
 What looked like rustic simplicity rested on a large system of labor. The Caretaker’s Hut was enlarged twice to house a year-round caretaker and as many as eight carriers. During the active summer season, the carriers made daily journeys on foot with food and supplies from villages below. The caretaker maintained the common property and could reach cabins scattered across both sides of the saddle.
 
 [![Black-and-white photograph of travelers pausing on the mountain journey to Lantau Mountain Camp in 1939](https://gwulo.com/sites/default/files/styles/extra_large_640x640_/public/thumbnails/image/2020-02-06_235059_4.jpg?itok=PCoX_MF5 "A rest on the journey to Lantau Mountain Camp, 1939")](https://gwulo.com/media/35396 "Source: A rest on the journey up to Lantau Mountain Camp — Gwulo")
-{: .figure-wide}
-
 
 **A rest on the journey up to Lantau Mountain Camp in 1939** Raymond Smith’s photographs of the approach also record the bearers and sedan chairs used on the climb. *source: [Gwulo](https://gwulo.com/media/35396).*
 {: .caption}
