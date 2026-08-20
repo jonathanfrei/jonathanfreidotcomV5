@@ -3,12 +3,11 @@ title: "Harry Potter Is a Story About Virtue, Not Magic"
 date: 2026-08-15 09:36:00 -0400
 tags: [Harry Potter, Catholicism, virtue, Christianity, literature]
 categories: [culture]
-description: "Harry Potter is full of spectacular spells, but its most powerful magic comes from ordinary acts of courage, loyalty, mercy, and sacrificial love."
+deck: Harry Potter is full of spectacular spells, but its most powerful magic comes from ordinary acts of courage, loyalty, mercy, and sacrificial love. If you want to understand what *Harry Potter* is really about, watch what happens when the spells stop working.
 ---
 
-If you want to understand what *Harry Potter* is really about, watch what happens when the spells stop working.
-
 Seven books give us wands, curses, flying broomsticks, enchanted castles, talking portraits, dragons, ghosts, potions, prophecies, and people who cheerfully call themselves witches and wizards. Yet when the story reaches its biggest moments, magic is rarely what saves anyone. Harry does not defeat Voldemort because he becomes the best wizard. He wins because, over seven books, he learns courage, loyalty, mercy, and finally the willingness to give his life for someone else.
+{: .lede}
 
 Most of the magic at Hogwarts belongs to the familiar world of fairy tales. Ron says *Wingardium Leviosa* and a feather rises. A broom flies because this is the sort of story in which brooms fly. Nobody has sacrificed a goat or sold his soul to make the dishes wash themselves. Magic is simply part of the furniture of Rowling's world. It gives the characters extraordinary abilities without making them better people. A wand gives Draco Malfoy more power than an ordinary schoolboy. It does not make cruelty less cruel.
 
