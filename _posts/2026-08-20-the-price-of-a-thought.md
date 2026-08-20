@@ -2,11 +2,12 @@
 title: "The Price of a Thought"
 date: 2026-08-20 06:05:00 -0400
 tags: [AI, inference, infrastructure, economics]
-categories: [technology]
-description: "AI models get the attention, but inference engineering is building the infrastructure that can make useful machine intelligence cheap enough to become ordinary."
+eyebrow: [technology]
+deck: AI models get the attention, but inference engineering is building the infrastructure that can make useful machine intelligence cheap enough to become ordinary.
 ---
 
 For most of human history, if you wanted another useful thought, you needed another person or more of someone's time. A calculation needed a mathematician. A translation needed someone who knew both languages. A legal opinion needed a lawyer. A drawing needed a draftsman. Even after computers arrived, most of the judgment surrounding computation still came from people.
+{: .lede}
 
 We now have machines that can produce a growing range of this work. I [wrote recently about what happens when intelligence becomes cheap](https://jonathanfrei.com/2026/08/15/when-intelligence-is-cheap), and especially what that might do to the excuses we make when knowledge and competent advice are no longer particularly scarce. But there is a more basic question underneath that one: what actually makes intelligence cheap?
 
