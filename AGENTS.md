@@ -173,7 +173,7 @@ _books/
 - `slug:` front matter is the permalink segment; if omitted, the filename minus the numeric prefix is used.
 - Titles should be **number-free**. The layout prints computed numbers in the TOC and pager.
 - Book-home front matter: `index: false` blocks crawlers (robots.txt Disallow, `noindex,nofollow`, omit from sitemap/search). `listed: false` hides the book from `/books`. Defaults: `index` true; `listed` follows `index`.
-- Layout is `book` (hamburger contents overlay, layered breadcrumbs, prev/next). The overlay is not sticky and starts closed on every page. Do not add a header “Books” link unless asked.
+- Layout is `book` (sticky hamburger + wrapping breadcrumbs, contents overlay, prev/next). The overlay starts closed on every page. Do not add a header “Books” link unless asked.
 - Demo: `_books/dispelling-beauty-lies/` is borrowed content (`index: false`, `listed: false`).
 - Optional `scripts/import_beauty_book.py` rebuilds that demo tree from the Downloads conversion.
 

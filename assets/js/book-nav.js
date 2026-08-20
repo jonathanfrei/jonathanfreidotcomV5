@@ -48,13 +48,4 @@
   if (backdrop) {
     backdrop.addEventListener("click", function () { setOpen(false); });
   }
-
-  document.querySelectorAll("[data-book-focus-toc]").forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      setOpen(true);
-      layoutOverlay();
-      var summary = panel.querySelector("summary");
-      if (summary) summary.focus();
-    });
-  });
 })();
