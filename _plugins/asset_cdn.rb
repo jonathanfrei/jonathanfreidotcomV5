@@ -2,7 +2,7 @@
 
 # Serve /assets from jsDelivr's GitHub CDN in production.
 #
-# Generated CSS (core.css / editorial.css) is not in git at those permalinks,
+# Generated CSS (core.css / editorial.css / book.css) is not in git at those permalinks,
 # so those public paths map to the include files jsDelivr can fetch.
 # JS and images under assets/ are served from their repo paths.
 #
@@ -32,7 +32,8 @@ module Jekyll
     # Public permalink → file path in the git repo (jsDelivr cannot see _site).
     SOURCE_MAP = {
       "/assets/css/core.css" => "_includes/main.css",
-      "/assets/css/editorial.css" => "_includes/editorial.css"
+      "/assets/css/editorial.css" => "_includes/editorial.css",
+      "/assets/css/book.css" => "_includes/book.css"
     }.freeze
 
     def config(site)
