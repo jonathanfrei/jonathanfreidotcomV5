@@ -23,8 +23,10 @@ This is a personal site and blog: **Jekyll 4.x → GitHub Actions → GitHub Pag
 .github/workflows/deploy.yml              # Full build + deploy on push to main
 _config.yml                    # Site config, plugins, permalinks, excludes
 _includes/                     # head, header, footer, main.css, code.css, editorial.css
-_layouts/                      # default, page, post, tag, editorial
+_layouts/                      # default, page, post, tag, editorial, book
 _plugins/url_embeds.rb         # Standalone media URLs → embeds
+_plugins/books.rb              # Book collection: slugs, TOC, prev/next, noindex
+_books/<book-slug>/            # Nested markdown books → /books/<book-slug>/…
 _posts/                        # Published posts and link posts (YYYY-MM-DD-slug.md)
 _posts/v1-archive/             # Historical imported posts (treat carefully)
 _x7k9p/                        # Obfuscated drafts (excluded from build & CI paths)
@@ -151,6 +153,29 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 
   Optional Markdown body.
   ```
+
+### Books (`_books/`)
+
+Long-form books are a Jekyll collection. One folder per book; nested folders are chapters.
+
+```
+_books/
+  my-book/                         # stable book slug (no numeric prefix)
+    001-my-book.md                 # book home → /books/my-book
+    002-first-chapter/
+      001-first-chapter.md         # → /books/my-book/first-chapter
+      002-a-section.md             # → /books/my-book/first-chapter/a-section
+    003-appendix.md                # leaf chapter → /books/my-book/appendix
+```
+
+- **`001-` prefixes (and `002a-` insertions) are sort keys only.** Permalinks use slugs. Renaming prefixes does not change URLs.
+- Insert a chapter between `002` and `003` as `002a-new-chapter/` (or `order:` in front matter). Display numbers (`1`, `1.1`) are computed at build; existing permalinks stay put.
+- `slug:` front matter is the permalink segment; if omitted, the filename minus the numeric prefix is used.
+- Titles should be **number-free**. The layout prints computed numbers in the TOC and pager.
+- Book-home front matter: `index: false` blocks crawlers (robots.txt Disallow, `noindex,nofollow`, omit from sitemap/search). `listed: false` hides the book from `/books`. Defaults: `index` true; `listed` follows `index`.
+- Layout is `book` (sticky collapsed Contents panel, prev/next). Do not add a header “Books” link unless asked.
+- Demo: `_books/dispelling-beauty-lies/` is borrowed content (`index: false`, `listed: false`).
+- Optional `scripts/import_beauty_book.py` rebuilds that demo tree from the Downloads conversion.
 
 ### Pages
 
