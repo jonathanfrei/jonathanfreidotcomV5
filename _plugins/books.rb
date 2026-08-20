@@ -1,8 +1,14 @@
 # frozen_string_literal: true
 
+require "json"
+
 # Book collections: nested markdown under _books/<book-slug>/ becomes a
 # navigable book with stable slug permalinks, computed display numbers,
 # and prev/next links. Filename prefixes (001-, 002a-) are sort keys only.
+#
+# The hamburger TOC is not inlined into every chapter (that duplicated ~200
+# links per page). Each book emits /books/<slug>/toc.json; book-nav.js fetches
+# it. The title page still renders an in-article HTML TOC.
 
 module Jekyll
   module Books
@@ -208,19 +214,61 @@ module Jekyll
         doc.data["book_prev"] = i.positive? ? reading[i - 1] : nil
         doc.data["book_next"] = reading[i + 1]
         doc.data["book_home"] = home
-        doc.data["book_toc"] = toc
-        doc.data["book_pages"] = reading
         doc.data["is_book_home"] = (doc == home)
+        doc.data["book_toc_url"] = "/#{COLLECTION}/#{book_id}/toc.json"
         apply_flags!(doc, home, index_flag, listed_flag, book_id)
       end
 
-      # Children pointers for Liquid
+      # In-article TOC is title-page only. Overlay nav loads toc.json.
+      home.data["book_toc"] = toc
+
       toc.each do |item|
         parent = item["page"]
         children = item["children"].map { |c| c["page"] }
         parent.data["book_children"] = children
         children.each { |c| c.data["book_parent"] = parent }
       end
+
+      site.data["book_nav"] ||= {}
+      site.data["book_nav"][book_id] = {
+        "id" => book_id,
+        "title" => home.data["title"].to_s,
+        "url" => home.url,
+        "noindex" => !index_flag,
+        "items" => toc.map { |item| json_item(item) }
+      }
+    end
+
+    def json_item(item)
+      doc = item["page"]
+      children = item["children"] || []
+      node = {
+        "title" => doc.data["title"].to_s,
+        "url" => doc.url,
+        "slug" => doc.data["slug"].to_s,
+        "num" => doc.data["nav_number"].to_s
+      }
+      node["children"] = children.map { |child| json_item(child) } unless children.empty?
+      node
+    end
+
+    def emit_toc_pages!(site)
+      (site.data["book_nav"] || {}).each do |book_id, payload|
+        permalink = "/books/#{book_id}/toc.json"
+        json = toc_json_body(payload)
+        existing = site.pages.find { |p| p.data["permalink"] == permalink }
+        if existing
+          existing.content = json
+        else
+          site.pages << TocJson.new(site, book_id, payload, json)
+        end
+      end
+    end
+
+    def toc_json_body(payload)
+      body = payload.dup
+      body.delete("noindex")
+      JSON.generate(body)
     end
 
     def entry_for(doc)
@@ -258,6 +306,31 @@ module Jekyll
       doc.data["sitemap"] = false
       doc.data["robots"] = "noindex, nofollow"
     end
+
+    class TocJson < Jekyll::PageWithoutAFile
+      def initialize(site, book_id, payload, json)
+        super(site, site.source, File.join("books", book_id), "toc.json")
+        self.data["layout"] = nil
+        self.data["sitemap"] = false
+        self.data["permalink"] = "/books/#{book_id}/toc.json"
+        self.data["robots"] = "noindex, nofollow" if payload["noindex"]
+        self.content = json
+      end
+
+      def render_with_liquid?
+        false
+      end
+    end
+
+    class Generator < Jekyll::Generator
+      safe true
+      priority :high
+
+      def generate(site)
+        Jekyll::Books.enrich!(site)
+        Jekyll::Books.emit_toc_pages!(site)
+      end
+    end
   end
 end
 
@@ -265,6 +338,3 @@ Jekyll::Hooks.register :documents, :post_init do |doc|
   Jekyll::Books.apply_permalink!(doc)
 end
 
-Jekyll::Hooks.register :site, :pre_render do |site|
-  Jekyll::Books.enrich!(site)
-end

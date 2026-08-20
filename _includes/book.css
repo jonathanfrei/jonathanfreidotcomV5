@@ -204,6 +204,11 @@ html.book-nav-open {
   font-weight: 600;
 }
 
+.book-toc__status {
+  margin: 0;
+  color: var(--color-muted);
+}
+
 .book-toc--article {
   margin-top: var(--space-8);
   padding-top: var(--space-6);
