@@ -15,6 +15,7 @@ worldview: applied
 ---
 
 High on the saddle between Sunset Peak and Yi Tung Shan, nineteen small stone cabins sit among the grass and clouds. They have no road and, with limited exceptions such as solar equipment installed during recent conservation work, no electricity. The nearest traffic passes far below. From a distance the buildings can look like abandoned military posts, but they are the remains of Lantau Mountain Camp, a Christian summer retreat founded by missionaries working across South China nearly a century ago.
+{: .lede}
 
 In the mid-1990s, my family stayed there several times. I remember climbing the mountain with my parents and two younger siblings, drinking fresh water along the way, and lighting the kerosene lanterns at night. Those visits are why the camp means something to me, but my family entered a story already seventy years old. The cabins had survived political disorder, a failed camp on another mountain, wartime destruction, the retreat of the missionary community that built them, and the transformation of Lantau Island below. They remain because generations of owners, churches, residents, laborers, and volunteers kept carrying what was needed up the mountain.
 
