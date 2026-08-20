@@ -167,7 +167,7 @@ div.highlighter-rouge {
 /* ---------- Rouge (token colors via CSS vars in main.css) ---------- */
 .highlighter-rouge {
   font-family: var(--font-mono);
-  font-size: 0.88em;
+  font-size: var(--type-sm);
   color: var(--color-fg);
 }
 
@@ -190,6 +190,7 @@ div.highlighter-rouge .highlight {
   margin: 0;
   padding: var(--space-4);
   background: transparent;
+  font-size: inherit;
   overflow-x: hidden;
   line-height: 1.45;
   white-space: pre-wrap;
