@@ -1,5 +1,6 @@
 ---
-title: 'Dispelling Beauty Lies: The Truth About Feminine Beauty'
+title: Dispelling Beauty Lies
+deck: The Truth About Feminine Beauty
 id: dispelling-beauty-lies
 slug: dispelling-beauty-lies
 author: J. Sanilac
