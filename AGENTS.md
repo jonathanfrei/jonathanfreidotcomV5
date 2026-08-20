@@ -173,7 +173,7 @@ _books/
 - `slug:` front matter is the permalink segment; if omitted, the filename minus the numeric prefix is used.
 - Titles should be **number-free**. The layout prints computed numbers in the TOC and pager.
 - Book-home front matter: `index: false` blocks crawlers (robots.txt Disallow, `noindex,nofollow`, omit from sitemap/search). `listed: false` hides the book from `/books`. Defaults: `index` true; `listed` follows `index`.
-- Layout is `book` (sticky hamburger + wrapping breadcrumbs, contents overlay, prev/next). Book chrome CSS is `/assets/css/book.css`, not inlined. The overlay starts closed on every page. Do not add a header “Books” link unless asked.
+- Layout is `book` (sticky hamburger + wrapping breadcrumbs, contents overlay, prev/next). Book chrome CSS is `/assets/css/book.css`, not inlined. The hamburger TOC is loaded from `/books/<slug>/toc.json` (same idea as `search.json`) so chapter HTML does not embed the full tree. The title page still renders an in-article HTML TOC. The overlay starts closed on every page. Do not add a header “Books” link unless asked.
 - Demo: `_books/dispelling-beauty-lies/` is borrowed content (`index: false`, `listed: false`).
 - Optional `scripts/import_beauty_book.py` rebuilds that demo tree from the Downloads conversion.
 
