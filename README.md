@@ -9,9 +9,10 @@ Built with **Jekyll 4.x**, deployed via **GitHub Actions** to **GitHub Pages**, 
 - Minimalist, mobile-first design with system dark mode (`prefers-color-scheme`)
 - Accessibility-focused (semantic HTML, skip link, focus styles, reduced-motion)
 - Tiny custom utility CSS
-- Short posts + long-form pages
+- Short posts + long-form pages + nested markdown **books** (`_books/`)
 - RSS feed + sitemap + basic SEO
 - Obfuscated drafts folder (`_x7k9p`) excluded from build, indexes, feeds, and robots.txt
+- Per-book `index: false` (demo: Dispelling Beauty Lies) is noindex and Disallow’d in generated `robots.txt`
 - Manual or push-triggered deploys (no scheduled rebuild)
 - Masked contact email (no form)
 
@@ -145,14 +146,15 @@ Uncheck Chrome DevTools **Disable cache**. That checkbox is what sends request `
 ├── .github/workflows/deploy.yml   # Build + deploy on push to main
 ├── _x7k9p/                        # Obfuscated drafts (excluded)
 ├── _includes/                     # Header, footer, head, main.css, feature CSS
-├── _layouts/                      # default, post, page
+├── _layouts/                      # default, post, page, book
+├── _books/                        # Nested books → /books/<slug>/…
 ├── _posts/                        # Published short posts
 ├── assets/css/main.html           # /assets/css/main.css (tooling)
 ├── _config.yml
 ├── Gemfile
-├── _pages/                        # Site pages (about, blog, tags, …)
+├── _pages/                        # Site pages (about, blog, books, robots.txt, …)
 ├── index.md
-└── robots.txt
+└── (robots.txt generated from _pages/robots.html)
 ```
 
 ## License

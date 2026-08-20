@@ -46,6 +46,13 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-relative-links
 
+# Books: nested markdown under _books/<book-slug>/ (_plugins/books.rb).
+# Filename 001- prefixes are sort keys; permalinks use slugs only.
+collections:
+  books:
+    output: true
+    permalink: /books/:path
+
 # Relative links: convert Markdown .md links to rendered permalinks (#94)
 relative_links:
   enabled: true
@@ -181,6 +188,7 @@ exclude:
   - .github
   - README.md
   - AGENTS.md
+  - scripts
   - _x7k9p
   - .gitignore
   # Residual local media trees (safe to delete once S3 is confirmed, #170).
@@ -223,6 +231,12 @@ defaults:
       type: "pages"
     values:
       layout: page
+  - scope:
+      path: "_books"
+      type: "books"
+    values:
+      layout: book
+      author: Jonathan Frei
 
 # SEO / social (basic)
 twitter:

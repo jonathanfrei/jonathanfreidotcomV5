@@ -64,6 +64,17 @@ description: Hierarchical map of pages, sections, tags, and recent posts on jona
       <a href="{{ '/about' | relative_url }}">About</a>
     </li>
     <li>
+      <a href="{{ '/books' | relative_url }}">Books</a>
+      {%- assign listed_books = site.books | where_exp: "doc", "doc.is_book_home and doc.book_listed" -%}
+      {%- if listed_books.size > 0 -%}
+      <ul>
+        {%- for book in listed_books -%}
+        <li><a href="{{ book.url | relative_url }}">{{ book.title }}</a></li>
+        {%- endfor -%}
+      </ul>
+      {%- endif -%}
+    </li>
+    <li>
       <span class="site-map__heading">Editorial</span>
       <ul>
         <li><a href="{{ '/editorial/invisible-engine' | relative_url }}">The Invisible Engine</a></li>

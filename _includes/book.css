@@ -1,0 +1,240 @@
+/* Book collection chrome. Tokens come from main.css. Gated via optional-css.html. */
+
+.book-shell {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.book-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--color-header-bg);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-2) var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-ui);
+  font-size: var(--type-sm);
+}
+
+.book-toc-panel {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.book-toc-toggle {
+  list-style: none;
+  cursor: pointer;
+  font-family: var(--font-ui);
+  font-size: var(--type-sm);
+  font-weight: 600;
+  color: var(--color-fg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.45em 0.8em;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  letter-spacing: 0.01em;
+}
+
+.book-toc-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.book-toc-panel[open] .book-toc-toggle {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.book-toc--panel {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.35em);
+  width: min(28em, calc(100vw - 2rem));
+  max-height: min(70vh, 36em);
+  overflow: auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: 0 0.5em 1.5em color-mix(in srgb, var(--brand-ink) 12%, transparent);
+  padding: var(--space-3);
+}
+
+.book-crumb {
+  margin: 0;
+  min-width: 0;
+  color: var(--color-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.book-crumb a {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+.book-crumb a:hover,
+.book-crumb a:focus-visible {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.book-crumb__sep {
+  margin-inline: 0.35em;
+}
+
+.book-main {
+  flex: 1;
+  padding-block: var(--space-8);
+}
+
+.book-article {
+  width: 100%;
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+.book-toc__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.book-toc__list ol {
+  list-style: none;
+  margin: 0.35em 0 0;
+  padding-left: var(--space-3);
+}
+
+.book-toc__list a,
+.book-toc__chapter summary {
+  color: var(--color-fg);
+  text-decoration: none;
+  display: block;
+  padding: 0.35em 0;
+  line-height: var(--leading-tight);
+}
+
+.book-toc__list a:hover,
+.book-toc__list a:focus-visible {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.book-toc__list a[aria-current="page"] {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.book-toc__num {
+  font-variant-numeric: tabular-nums;
+  color: var(--color-muted);
+  margin-right: 0.35em;
+}
+
+.book-toc__chapter summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.book-toc--article {
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.book-toc--article .book-toc__list {
+  font-family: var(--font-ui);
+  font-size: var(--type-sm);
+}
+
+.book-pager {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--space-3);
+  align-items: start;
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+  font-family: var(--font-ui);
+  font-size: var(--type-sm);
+}
+
+.book-pager__link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  text-decoration: none;
+  color: var(--color-fg);
+  min-height: 44px;
+}
+
+.book-pager__link--next {
+  text-align: right;
+}
+
+.book-pager__dir {
+  color: var(--color-muted);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+.book-pager__link:hover,
+.book-pager__link:focus-visible {
+  color: var(--color-accent);
+}
+
+.book-pager__contents {
+  font-family: var(--font-ui);
+  font-size: var(--type-sm);
+  font-weight: 600;
+  background: transparent;
+  border: 0;
+  color: var(--color-muted);
+  cursor: pointer;
+  min-height: 44px;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.book-pager__contents:hover,
+.book-pager__contents:focus-visible {
+  color: var(--color-accent);
+}
+
+.book-pager__link--empty {
+  pointer-events: none;
+}
+
+@media (max-width: 40em) {
+  .book-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .book-crumb {
+    flex: 1 1 100%;
+    white-space: normal;
+  }
+
+  .book-pager {
+    grid-template-columns: 1fr;
+  }
+
+  .book-pager__link--next {
+    text-align: left;
+  }
+
+  .book-pager__contents {
+    order: -1;
+  }
+}

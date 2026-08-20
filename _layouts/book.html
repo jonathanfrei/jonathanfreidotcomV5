@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+  {% include head.html %}
+  {% if page.book_noindex %}
+  <meta name="robots" content="noindex, nofollow">
+  {% endif %}
+  {% comment %}
+    Book pages use site chrome + a sticky collapsed contents panel.
+    Not nested in default.html so the 36em .container does not trap the overlay.
+  {% endcomment %}
+  {% include site-css.html %}
+  {% include optional-css.html %}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  {% include header.html %}
+
+  <div class="book-shell">
+    <div class="book-toolbar" id="book-toolbar">
+      <details class="book-toc-panel" id="book-nav-panel" data-book="{{ page.book_id | escape }}">
+        <summary class="book-toc-toggle">Contents</summary>
+        {% include book-toc.html variant="panel" %}
+      </details>
+      <p class="book-crumb">
+        <a href="{{ page.book_home.url | relative_url }}">{{ page.book_title | default: page.book_home.title }}</a>
+        {% unless page.is_book_home %}
+        <span class="book-crumb__sep" aria-hidden="true">/</span>
+        <span>{% if page.nav_number != "" %}{{ page.nav_number }} {% endif %}{{ page.title }}</span>
+        {% endunless %}
+      </p>
+    </div>
+
+    <main id="main" class="book-main">
+      <article class="prose book-article" itemscope itemtype="https://schema.org/Chapter">
+        {% if page.title %}<h1 itemprop="headline">{{ page.title }}</h1>{% endif %}
+        {% if page.author %}
+        <p class="post-meta">
+          <span itemprop="author">{{ page.author }}</span>
+          {% if page.source %}
+          <span class="post-meta__sep" aria-hidden="true">·</span>
+          <a href="{{ page.source }}">Source</a>
+          {% endif %}
+        </p>
+        {% endif %}
+        <div itemprop="articleBody">
+          {{ content }}
+        </div>
+        {% if page.is_book_home %}
+          {% include book-toc.html variant="article" %}
+        {% endif %}
+        {% include book-pager.html %}
+      </article>
+    </main>
+  </div>
+
+  {% include footer.html %}
+  {% include embed-scripts.html %}
+  {% if content contains '<pre' %}
+  {% include asset-script.html path="/assets/js/code-blocks.js" defer=true %}
+  {% endif %}
+  {% include asset-script.html path="/assets/js/book-nav.js" defer=true %}
+</body>
+</html>

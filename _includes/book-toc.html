@@ -1,0 +1,68 @@
+{% comment %}
+  Book table of contents.
+  include.variant = "panel" (sticky nav) or "article" (book home map).
+{% endcomment %}
+{% assign toc = page.book_toc %}
+{% if toc and toc.size > 0 %}
+<nav class="book-toc book-toc--{{ include.variant | default: 'panel' }}" aria-label="Book contents">
+  <ol class="book-toc__list">
+    {% for item in toc %}
+      {% assign node = item.page %}
+      {% assign kids = item.children %}
+      {% if include.variant == "article" %}
+        <li>
+          <a href="{{ node.url | relative_url }}"{% if node.url == page.url %} aria-current="page"{% endif %}>
+            {% if node.nav_number != "" %}<span class="book-toc__num">{{ node.nav_number }}</span> {% endif %}{{ node.title }}
+          </a>
+          {% if kids.size > 0 %}
+          <ol>
+            {% for child in kids %}
+              {% assign section = child.page %}
+              <li>
+                <a href="{{ section.url | relative_url }}"{% if section.url == page.url %} aria-current="page"{% endif %}>
+                  <span class="book-toc__num">{{ section.nav_number }}</span> {{ section.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ol>
+          {% endif %}
+        </li>
+      {% else %}
+        {% assign chapter_open = false %}
+        {% if node.url == page.url %}{% assign chapter_open = true %}{% endif %}
+        {% for child in kids %}
+          {% if child.page.url == page.url %}{% assign chapter_open = true %}{% endif %}
+        {% endfor %}
+        {% if kids.size > 0 %}
+        <li>
+          <details class="book-toc__chapter" data-chapter="{{ node.slug }}"{% if chapter_open %} open{% endif %}>
+            <summary>
+              <span class="book-toc__num">{{ node.nav_number }}</span> {{ node.title }}
+            </summary>
+            <ol>
+              <li>
+                <a href="{{ node.url | relative_url }}"{% if node.url == page.url %} aria-current="page"{% endif %}>{{ node.title }}</a>
+              </li>
+              {% for child in kids %}
+                {% assign section = child.page %}
+                <li>
+                  <a href="{{ section.url | relative_url }}"{% if section.url == page.url %} aria-current="page"{% endif %}>
+                    <span class="book-toc__num">{{ section.nav_number }}</span> {{ section.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ol>
+          </details>
+        </li>
+        {% else %}
+        <li>
+          <a href="{{ node.url | relative_url }}"{% if node.url == page.url %} aria-current="page"{% endif %}>
+            {% if node.nav_number != "" %}<span class="book-toc__num">{{ node.nav_number }}</span> {% endif %}{{ node.title }}
+          </a>
+        </li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </ol>
+</nav>
+{% endif %}
