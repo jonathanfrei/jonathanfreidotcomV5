@@ -32,7 +32,9 @@
           </svg>
           <span class="sr-only">Contents</span>
         </summary>
-        {% include book-toc.html variant="panel" %}
+        <nav class="book-toc book-toc--panel" id="book-toc-mount" aria-label="Book contents" data-toc-src="{{ page.book_toc_url | relative_url }}?v={{ site.time | date: '%s' }}" data-current="{{ page.url }}">
+          <p class="book-toc__status">Loading contents…</p>
+        </nav>
       </details>
       {% include book-crumb.html %}
     </div>
