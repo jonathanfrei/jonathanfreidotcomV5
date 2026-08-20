@@ -156,6 +156,7 @@ archive_media:
 
 # Production /assets (CSS, JS, favicons) via jsDelivr's GitHub CDN.
 # Generated /assets/css/core.css maps to _includes/main.css (the file in git).
+# editorial.css / book.css map the same way (see AssetCdn::SOURCE_MAP).
 # Pinned to the build commit so deploys are not stuck on the @main cache.
 # Origin copies still write to _site/assets for local serve. ASSETS_CDN=off
 # forces origin URLs. Local `jekyll serve` stays on /assets.
