@@ -8,13 +8,13 @@
 }
 
 .book-toolbar {
-  position: sticky;
-  top: 0;
-  z-index: 5;
+  position: relative;
+  z-index: 21;
   background: var(--color-header-bg);
   border-bottom: 1px solid var(--color-border);
   padding: var(--space-2) var(--space-4);
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   gap: var(--space-3);
   font-family: var(--font-ui);
@@ -29,21 +29,33 @@
 .book-toc-toggle {
   list-style: none;
   cursor: pointer;
-  font-family: var(--font-ui);
-  font-size: var(--type-sm);
-  font-weight: 600;
   color: var(--color-fg);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  padding: 0.45em 0.8em;
+  padding: 0;
+  width: 44px;
+  height: 44px;
   min-height: 44px;
+  min-width: 44px;
   display: inline-flex;
   align-items: center;
-  letter-spacing: 0.01em;
+  justify-content: center;
 }
 
-.book-toc-toggle::-webkit-details-marker {
+.book-toc-toggle::-webkit-details-marker,
+.book-toc-toggle::marker {
+  display: none;
+  content: "";
+}
+
+.book-toc-toggle__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: block;
+}
+
+.book-toc-toggle__icon--close {
   display: none;
 }
 
@@ -52,30 +64,76 @@
   color: var(--color-accent);
 }
 
-.book-toc--panel {
-  position: absolute;
+.book-toc-panel[open] .book-toc-toggle__icon--menu {
+  display: none;
+}
+
+.book-toc-panel[open] .book-toc-toggle__icon--close {
+  display: block;
+}
+
+.book-toc-backdrop {
+  display: none;
+  position: fixed;
   left: 0;
-  top: calc(100% + 0.35em);
-  width: min(28em, calc(100vw - 2rem));
-  max-height: min(70vh, 36em);
+  right: 0;
+  bottom: 0;
+  top: var(--book-overlay-top, 0px);
+  z-index: 19;
+  background: color-mix(in srgb, var(--brand-ink) 35%, transparent);
+}
+
+html.book-nav-open .book-toc-backdrop {
+  display: block;
+}
+
+html.book-nav-open {
+  overflow: hidden;
+}
+
+.book-toc--panel {
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  right: auto;
+  width: min(32em, 100%);
+  top: var(--book-overlay-top, 0px);
+  bottom: 0;
   overflow: auto;
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  box-shadow: 0 0.5em 1.5em color-mix(in srgb, var(--brand-ink) 12%, transparent);
-  padding: var(--space-3);
+  border-right: 1px solid var(--color-border);
+  padding: var(--space-4);
+  box-shadow: 0.5em 0 1.5em color-mix(in srgb, var(--brand-ink) 12%, transparent);
 }
 
 .book-crumb {
   margin: 0;
   min-width: 0;
+  flex: 1 1 auto;
   color: var(--color-muted);
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow-x: auto;
+  overflow-y: hidden;
   white-space: nowrap;
+  scrollbar-width: thin;
 }
 
-.book-crumb a {
+.book-crumb__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: max-content;
+}
+
+.book-crumb__item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.book-crumb a,
+.book-crumb [aria-current="page"] {
   color: var(--color-muted);
   text-decoration: none;
 }
@@ -84,6 +142,10 @@
 .book-crumb a:focus-visible {
   color: var(--color-accent);
   text-decoration: underline;
+}
+
+.book-crumb [aria-current="page"] {
+  color: var(--color-fg);
 }
 
 .book-crumb__sep {
@@ -196,15 +258,18 @@
 
 .book-pager__contents {
   font-family: var(--font-ui);
-  font-size: var(--type-sm);
-  font-weight: 600;
   background: transparent;
-  border: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
   color: var(--color-muted);
   cursor: pointer;
+  width: 44px;
+  height: 44px;
   min-height: 44px;
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
 }
 
 .book-pager__contents:hover,
@@ -217,13 +282,12 @@
 }
 
 @media (max-width: 40em) {
-  .book-toolbar {
-    flex-wrap: wrap;
-  }
-
-  .book-crumb {
-    flex: 1 1 100%;
-    white-space: normal;
+  .book-toc--panel {
+    width: 100%;
+    left: 0;
+    right: 0;
+    border-right: 0;
+    box-shadow: none;
   }
 
   .book-pager {
@@ -236,5 +300,6 @@
 
   .book-pager__contents {
     order: -1;
+    justify-self: start;
   }
 }
