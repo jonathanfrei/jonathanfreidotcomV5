@@ -118,6 +118,10 @@
 
   --radius: 0.25rem;
 
+  /* Unit policy: em follows local type; rem anchors fixed UI geometry;
+     px preserves device-level strokes and minimum targets; %, viewport,
+     and container units remain fluid. Prefer tokens for shared values. */
+
   /* Syntax highlighter token colors (overridden in dark) */
   --cr-comment: #6b6b5e;
   --cr-string: #0b6e4f;
@@ -695,7 +699,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 .prose pre,
 .prose code {
   font-family: var(--font-mono);
-  font-size: 0.88em;
+  font-size: var(--type-sm);
 }
 
 .prose pre {
@@ -713,11 +717,12 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 .prose code {
   background: var(--color-code-bg);
   padding: 0.12em 0.35em;
-  border-radius: 0.15rem;
+  border-radius: calc(var(--radius) * 0.6);
 }
 
 .prose pre code {
   background: transparent;
+  font-size: inherit;
   padding: 0;
 }
 
@@ -772,6 +777,9 @@ html:not([data-theme]) .theme-toggle__icon--sun {
    aside stays boxed underneath. On wide screens a hanging grid puts it
    in the left margin without overlapping the measure. */
 .aside-pair {
+  --aside-outer-space: 11.5rem;
+  --aside-gap: 1.35rem;
+
   display: flex;
   flex-direction: column;
 }
@@ -824,7 +832,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   height: auto;
 }
 
-/* Hang only when 11.5rem + gap fits beside the 36em measure. At 60em
+/* Hang only when the aside space and gap fit beside the 36em measure. At 60em
    the box sat off the left edge and widened the page (#226, #231).
    Only paired asides hang; an unpaired .aside stays boxed instead of
    sitting on a heading (#232). The hang selectors must beat
@@ -834,10 +842,10 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   .aside-pair {
     display: grid;
     grid-template-columns: var(--measure) minmax(0, 1fr);
-    column-gap: 1.35rem;
+    column-gap: var(--aside-gap);
     align-items: start;
     position: relative;
-    width: calc(100% + 11.5rem + 11.5rem);
+    width: calc(100% + 2 * var(--aside-outer-space));
   }
 
   .aside-pair > :not(.aside) {
@@ -877,6 +885,8 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 }
 
 .prose blockquote.pull-quote {
+  --pull-quote-bleed: 8rem;
+
   border: 0;
   border-left: 4px solid var(--brand-ochre);
   color: var(--color-fg);
@@ -903,9 +913,9 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 
 @media (min-width: 56em) {
     .prose blockquote.pull-quote {
-        width: calc(100% + 16rem);
+        width: calc(100% + 2 * var(--pull-quote-bleed));
         max-width: calc(100vw - 2 * var(--space-4));
-        margin-inline: -8rem;
+        margin-inline: calc(-1 * var(--pull-quote-bleed));
     }
 }
 
@@ -915,7 +925,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   font-size: 0.75em;
   line-height: 1.5;
   color: var(--color-fg);
-  margin-top: -1.5rem;
+  margin-top: calc(-1 * var(--space-4));
   margin-bottom: var(--space-4);
 }
 
@@ -925,7 +935,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   font-style: normal;
   color: var(--color-fg);
   text-transform: uppercase;
-  margin-right: 0.5rem;
+  margin-right: 0.5em;
 }
 
 .prose .caption em,
@@ -934,7 +944,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   font-weight: 200;
   font-style: normal;
   color: var(--color-muted);
-  margin-left: 0.5rem;
+  margin-left: 0.5em;
 }
 
 .prose .caption a {
