@@ -1,0 +1,19 @@
+<nav class="book-pager" aria-label="Book pagination">
+  {% if page.book_prev %}
+  <a class="book-pager__link book-pager__link--prev" href="{{ page.book_prev.url | relative_url }}">
+    <span class="book-pager__dir">Previous</span>
+    <span class="book-pager__title">{% if page.book_prev.nav_number != "" %}{{ page.book_prev.nav_number }} {% endif %}{{ page.book_prev.title }}</span>
+  </a>
+  {% else %}
+  <span class="book-pager__link book-pager__link--prev book-pager__link--empty"></span>
+  {% endif %}
+  <button type="button" class="book-pager__contents" data-book-focus-toc>Contents</button>
+  {% if page.book_next %}
+  <a class="book-pager__link book-pager__link--next" href="{{ page.book_next.url | relative_url }}">
+    <span class="book-pager__dir">Next</span>
+    <span class="book-pager__title">{% if page.book_next.nav_number != "" %}{{ page.book_next.nav_number }} {% endif %}{{ page.book_next.title }}</span>
+  </a>
+  {% else %}
+  <span class="book-pager__link book-pager__link--next book-pager__link--empty"></span>
+  {% endif %}
+</nav>
