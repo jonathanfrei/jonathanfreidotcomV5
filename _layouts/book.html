@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow">
   {% endif %}
   {% comment %}
-    Book pages use site chrome + a sticky collapsed contents panel.
+    Book pages use site chrome plus a hamburger contents overlay.
     Not nested in default.html so the 36em .container does not trap the overlay.
   {% endcomment %}
   {% include site-css.html %}
@@ -14,22 +14,25 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="book-toc-backdrop" id="book-toc-backdrop" hidden></div>
 
   {% include header.html %}
 
   <div class="book-shell">
     <div class="book-toolbar" id="book-toolbar">
       <details class="book-toc-panel" id="book-nav-panel" data-book="{{ page.book_id | escape }}">
-        <summary class="book-toc-toggle">Contents</summary>
+        <summary class="book-toc-toggle">
+          <svg class="book-toc-toggle__icon book-toc-toggle__icon--menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16"/>
+          </svg>
+          <svg class="book-toc-toggle__icon book-toc-toggle__icon--close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18"/>
+          </svg>
+          <span class="sr-only">Contents</span>
+        </summary>
         {% include book-toc.html variant="panel" %}
       </details>
-      <p class="book-crumb">
-        <a href="{{ page.book_home.url | relative_url }}">{{ page.book_title | default: page.book_home.title }}</a>
-        {% unless page.is_book_home %}
-        <span class="book-crumb__sep" aria-hidden="true">/</span>
-        <span>{% if page.nav_number != "" %}{{ page.nav_number }} {% endif %}{{ page.title }}</span>
-        {% endunless %}
-      </p>
+      {% include book-crumb.html %}
     </div>
 
     <main id="main" class="book-main">

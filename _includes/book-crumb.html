@@ -1,0 +1,23 @@
+<nav class="book-crumb" aria-label="Breadcrumb">
+  <ol class="book-crumb__list">
+    <li class="book-crumb__item">
+      {% if page.is_book_home %}
+      <span aria-current="page">{{ page.book_title | default: page.title }}</span>
+      {% else %}
+      <a href="{{ page.book_home.url | relative_url }}">{{ page.book_title | default: page.book_home.title }}</a>
+      {% endif %}
+    </li>
+    {% if page.book_parent %}
+    <li class="book-crumb__item">
+      <span class="book-crumb__sep" aria-hidden="true">/</span>
+      <a href="{{ page.book_parent.url | relative_url }}">{% if page.book_parent.nav_number != "" %}{{ page.book_parent.nav_number }} {% endif %}{{ page.book_parent.title }}</a>
+    </li>
+    {% endif %}
+    {% unless page.is_book_home %}
+    <li class="book-crumb__item">
+      <span class="book-crumb__sep" aria-hidden="true">/</span>
+      <span aria-current="page">{% if page.nav_number != "" %}{{ page.nav_number }} {% endif %}{{ page.title }}</span>
+    </li>
+    {% endunless %}
+  </ol>
+</nav>
