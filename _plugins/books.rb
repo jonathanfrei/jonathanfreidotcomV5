@@ -2,13 +2,18 @@
 
 require "json"
 
-# Book collections: nested markdown under _books/<book-slug>/ becomes a
+# Book collections: nested Markdown under _books/<book-slug>/ becomes a
 # navigable book with stable slug permalinks, computed display numbers,
-# and prev/next links. Filename prefixes (001-, 002a-) are sort keys only.
+# recursive TOC data, and prev/next links. Filename and directory prefixes
+# such as 001- and 002a- are sort keys only.
 #
-# The hamburger TOC is not inlined into every chapter (that duplicated ~200
-# links per page). Each book emits /books/<slug>/toc.json; book-nav.js fetches
-# it. The title page still renders an in-article HTML TOC.
+# Each directory is a content container. Its first directly contained Markdown
+# file is the landing page for that directory; subsequent files and directories
+# are its children. This convention is recursive and has no hard-coded depth.
+#
+# The hamburger TOC is not inlined into every chapter. Each book emits
+# /books/<slug>/toc.json for book-nav.js. The title page still receives an
+# in-article HTML TOC through book_toc.
 
 module Jekyll
   module Books
@@ -18,10 +23,10 @@ module Jekyll
     module_function
 
     def book_docs(site)
-      coll = site.collections[COLLECTION]
-      return [] unless coll
+      collection = site.collections[COLLECTION]
+      return [] unless collection
 
-      coll.docs
+      collection.docs
     end
 
     def posix(path)
@@ -29,19 +34,20 @@ module Jekyll
     end
 
     def relative_under_books(doc)
-      rel = posix(doc.relative_path)
-      rel = rel.sub(%r{\A_#{COLLECTION}/}, "")
-      rel.sub(%r{\.[^./]+\z}, "")
+      relative = posix(doc.relative_path)
+      relative = relative.sub(%r{\A_#{COLLECTION}/}, "")
+      relative.sub(%r{\.[^./]+\z}, "")
     end
 
-    # "002a-i-everyone-lies" => { int: 2, suffix: "a", slug: "i-everyone-lies" }
+    # "002a-i-everyone-lies" becomes:
+    # { int: 2, suffix: "a", slug: "i-everyone-lies" }
     def parse_segment(segment)
       name = segment.to_s
-      if (m = PREFIX_RE.match(name))
+      if (match = PREFIX_RE.match(name))
         {
-          int: m[1].to_i,
-          suffix: m[2].to_s.downcase,
-          slug: m[3].to_s
+          int: match[1].to_i,
+          suffix: match[2].to_s.downcase,
+          slug: match[3].to_s
         }
       else
         {
@@ -68,8 +74,8 @@ module Jekyll
       explicit = doc.data["slug"].to_s.strip
       return explicit unless explicit.empty?
 
-      base = File.basename(posix(doc.relative_path), ".*")
-      parse_segment(base)[:slug]
+      basename = File.basename(posix(doc.relative_path), ".*")
+      parse_segment(basename)[:slug]
     end
 
     def book_id_for(doc)
@@ -77,17 +83,18 @@ module Jekyll
     end
 
     def permalink_for(doc)
-      rel = relative_under_books(doc)
-      parts = rel.split("/")
-      book = parts.first
-      segs = [book]
+      parts = relative_under_books(doc).split("/")
+      book_id = parts.first
+      segments = [book_id]
+
       parts[1..].each do |part|
         slug = parse_segment(part)[:slug]
-        segs << slug unless segs.last == slug
+        segments << slug unless segments.last == slug
       end
+
       file_slug = slug_for(doc)
-      segs << file_slug unless segs.last == file_slug
-      "/#{COLLECTION}/#{segs.join('/')}"
+      segments << file_slug unless segments.last == file_slug
+      "/#{COLLECTION}/#{segments.join('/')}"
     end
 
     def apply_permalink!(doc)
@@ -95,8 +102,9 @@ module Jekyll
 
       doc.data["book_id"] = book_id_for(doc)
       doc.data["slug"] = slug_for(doc)
-      # Author permalink still wins.
-      return if doc.data["permalink"].to_s.strip != ""
+
+      # An author-supplied permalink always wins.
+      return unless doc.data["permalink"].to_s.strip.empty?
 
       doc.data["permalink"] = permalink_for(doc)
     end
@@ -107,127 +115,60 @@ module Jekyll
 
       docs.each { |doc| apply_permalink!(doc) }
 
-      grouped = docs.group_by { |d| d.data["book_id"] }
-      grouped.each do |book_id, book_pages|
+      docs.group_by { |doc| doc.data["book_id"] }.each do |book_id, book_pages|
         enrich_book!(site, book_id, book_pages)
       end
 
-      urls = docs.map { |d| d.url }
-      dupes = urls.tally.select { |_, n| n > 1 }.keys
-      unless dupes.empty?
-        raise Jekyll::Errors::FatalException,
-              "Book permalink collision(s): #{dupes.join(', ')}"
-      end
+      duplicate_urls = docs.map(&:url).tally.select { |_, count| count > 1 }.keys
+      return if duplicate_urls.empty?
+
+      raise Jekyll::Errors::FatalException,
+            "Book permalink collision(s): #{duplicate_urls.join(', ')}"
     end
 
     def enrich_book!(site, book_id, docs)
       entries = docs.map { |doc| entry_for(doc) }
+      nodes = build_nodes(entries)
 
-      root_files, in_folders = entries.partition { |e| e[:dir_parts].empty? }
-      root_files.sort_by! { |e| e[:sort] }
+      raise Jekyll::Errors::FatalException, "Book #{book_id} has no pages" if nodes.empty?
 
-      folders = {}
-      in_folders.each do |e|
-        folder = e[:dir_parts].first
-        folders[folder] ||= []
-        folders[folder] << e
-      end
-      folders.each_value { |list| list.sort_by! { |e| e[:sort] } }
-
-      top = []
-      root_files.each { |e| top << { kind: :file, entry: e, sort: e[:sort] } }
-      folders.each do |folder, list|
-        top << { kind: :folder, folder: folder, entries: list, sort: sort_key(folder) }
-      end
-      top.sort_by! { |n| n[:sort] }
-
-      raise Jekyll::Errors::FatalException, "Book #{book_id} has no pages" if top.empty?
-
-      home_node = top.first
+      home_node = nodes.first
       unless home_node[:kind] == :file
         raise Jekyll::Errors::FatalException,
-              "Book #{book_id} must start with a root markdown file (book home), not a folder"
+              "Book #{book_id} must start with a root Markdown file (book home), not a folder"
       end
 
       home = home_node[:entry][:doc]
       index_flag = home.data.key?("index") ? !!home.data["index"] : true
-      listed_flag =
-        if home.data.key?("listed")
-          !!home.data["listed"]
-        else
-          index_flag
-        end
+      listed_flag = home.data.key?("listed") ? !!home.data["listed"] : index_flag
 
       reading = []
       toc = []
 
       home.data["nav_number"] = ""
       home.data["is_book_home"] = true
+      apply_flags!(home, home, index_flag, listed_flag, book_id)
       reading << home
       toc << toc_item(home, [])
 
-      chapter_i = 0
-      top.drop(1).each do |node|
-        chapter_i += 1
-        if node[:kind] == :file
-          doc = node[:entry][:doc]
-          number_doc!(doc, chapter_i.to_s, home, index_flag, listed_flag, book_id)
-          reading << doc
-          toc << toc_item(doc, [])
-        else
-          kids = node[:entries]
-          chapter_home = kids.first[:doc]
-          number_doc!(chapter_home, chapter_i.to_s, home, index_flag, listed_flag, book_id)
-          reading << chapter_home
-          child_items = []
-          kids.drop(1).each_with_index do |child, idx|
-            section = child[:doc]
-            number_doc!(
-              section,
-              "#{chapter_i}.#{idx + 1}",
-              home,
-              index_flag,
-              listed_flag,
-              book_id
-            )
-            reading << section
-            child_items << toc_item(section, [])
-          end
-          toc << toc_item(chapter_home, child_items)
-        end
+      nodes.drop(1).each_with_index do |node, index|
+        toc << materialize_node!(
+          node,
+          (index + 1).to_s,
+          home,
+          index_flag,
+          listed_flag,
+          book_id,
+          reading
+        )
       end
 
-      sibling_slugs = Hash.new { |h, k| h[k] = [] }
-      docs.each do |doc|
-        parent_dir = File.dirname(relative_under_books(doc))
-        sibling_slugs[parent_dir] << doc.data["slug"]
-      end
-      sibling_slugs.each do |dir, slugs|
-        dup = slugs.tally.select { |_, n| n > 1 }.keys
-        next if dup.empty?
+      validate_sibling_slugs!(book_id, docs)
+      assign_reading_links!(reading, home, index_flag, listed_flag, book_id)
 
-        raise Jekyll::Errors::FatalException,
-              "Duplicate book slugs in #{book_id}/#{dir}: #{dup.join(', ')}"
-      end
-
-      reading.each_with_index do |doc, i|
-        doc.data["book_prev"] = i.positive? ? reading[i - 1] : nil
-        doc.data["book_next"] = reading[i + 1]
-        doc.data["book_home"] = home
-        doc.data["is_book_home"] = (doc == home)
-        doc.data["book_toc_url"] = "/#{COLLECTION}/#{book_id}/toc.json"
-        apply_flags!(doc, home, index_flag, listed_flag, book_id)
-      end
-
-      # In-article TOC is title-page only. Overlay nav loads toc.json.
+      # In-article TOC is title-page only. Overlay navigation loads toc.json.
       home.data["book_toc"] = toc
-
-      toc.each do |item|
-        parent = item["page"]
-        children = item["children"].map { |c| c["page"] }
-        parent.data["book_children"] = children
-        children.each { |c| c.data["book_parent"] = parent }
-      end
+      assign_toc_relationships!(toc)
 
       site.data["book_nav"] ||= {}
       site.data["book_nav"][book_id] = {
@@ -237,6 +178,118 @@ module Jekyll
         "noindex" => !index_flag,
         "items" => toc.map { |item| json_item(item) }
       }
+    end
+
+    # Build a recursively nested tree from entry directory paths. At each
+    # depth, directly contained files and immediate child directories become
+    # sibling nodes and are sorted together by their numeric prefixes.
+    def build_nodes(entries, depth = 0)
+      direct_files, nested_entries = entries.partition do |entry|
+        entry[:dir_parts].length == depth
+      end
+
+      nodes = direct_files.map do |entry|
+        { kind: :file, entry: entry, sort: entry[:sort] }
+      end
+
+      nested_entries.group_by { |entry| entry[:dir_parts][depth] }.each do |folder, children|
+        nodes << {
+          kind: :folder,
+          folder: folder,
+          entries: build_nodes(children, depth + 1),
+          sort: sort_key(folder)
+        }
+      end
+
+      nodes.sort_by { |node| node[:sort] }
+    end
+
+    # Convert one tree node into TOC data and append its pages to reading order.
+    # A folder consumes one number. Its landing page receives that number, and
+    # every later child receives a dotted number beneath it.
+    def materialize_node!(node, number, home, index_flag, listed_flag, book_id, reading)
+      if node[:kind] == :file
+        doc = node[:entry][:doc]
+        number_doc!(doc, number, home, index_flag, listed_flag, book_id)
+        reading << doc
+        return toc_item(doc, [])
+      end
+
+      children = node[:entries]
+      landing_node = children.first
+      unless landing_node && landing_node[:kind] == :file
+        folder_path = folder_path_for(book_id, node, landing_node)
+        raise Jekyll::Errors::FatalException,
+              "Book folder #{folder_path} must start with a directly contained Markdown file"
+      end
+
+      landing = landing_node[:entry][:doc]
+      number_doc!(landing, number, home, index_flag, listed_flag, book_id)
+      reading << landing
+
+      child_items = children.drop(1).each_with_index.map do |child, index|
+        materialize_node!(
+          child,
+          "#{number}.#{index + 1}",
+          home,
+          index_flag,
+          listed_flag,
+          book_id,
+          reading
+        )
+      end
+
+      toc_item(landing, child_items)
+    end
+
+    def folder_path_for(book_id, node, landing_node)
+      if landing_node && landing_node[:kind] == :file
+        directory = File.dirname(relative_under_books(landing_node[:entry][:doc]))
+        return directory unless directory == "."
+      end
+
+      "#{book_id}/#{node[:folder]}"
+    end
+
+    def validate_sibling_slugs!(book_id, docs)
+      sibling_slugs = Hash.new { |hash, key| hash[key] = [] }
+
+      docs.each do |doc|
+        parent_directory = File.dirname(relative_under_books(doc))
+        sibling_slugs[parent_directory] << doc.data["slug"]
+      end
+
+      sibling_slugs.each do |directory, slugs|
+        duplicates = slugs.tally.select { |_, count| count > 1 }.keys
+        next if duplicates.empty?
+
+        raise Jekyll::Errors::FatalException,
+              "Duplicate book slugs in #{book_id}/#{directory}: #{duplicates.join(', ')}"
+      end
+    end
+
+    def assign_reading_links!(reading, home, index_flag, listed_flag, book_id)
+      reading.each_with_index do |doc, index|
+        doc.data["book_prev"] = index.positive? ? reading[index - 1] : nil
+        doc.data["book_next"] = reading[index + 1]
+        doc.data["book_home"] = home
+        doc.data["is_book_home"] = (doc == home)
+        doc.data["book_toc_url"] = "/#{COLLECTION}/#{book_id}/toc.json"
+        apply_flags!(doc, home, index_flag, listed_flag, book_id)
+      end
+    end
+
+    # Populate book_parent and book_children recursively at every TOC depth.
+    def assign_toc_relationships!(items, parent = nil)
+      items.each do |item|
+        page = item["page"]
+        children = item["children"] || []
+        child_pages = children.map { |child| child["page"] }
+
+        page.data["book_parent"] = parent if parent
+        page.data["book_children"] = child_pages
+        assign_toc_relationships!(children, page)
+      end
     end
 
     def json_item(item)
@@ -256,7 +309,8 @@ module Jekyll
       (site.data["book_nav"] || {}).each do |book_id, payload|
         permalink = "/books/#{book_id}/toc.json"
         json = toc_json_body(payload)
-        existing = site.pages.find { |p| p.data["permalink"] == permalink }
+        existing = site.pages.find { |page| page.data["permalink"] == permalink }
+
         if existing
           existing.content = json
         else
@@ -272,14 +326,15 @@ module Jekyll
     end
 
     def entry_for(doc)
-      rel = relative_under_books(doc)
-      parts = rel.split("/")
-      dir_parts = parts[1..-2] || []
-      base = File.basename(posix(doc.relative_path), ".*")
+      relative = relative_under_books(doc)
+      parts = relative.split("/")
+      directory_parts = parts[1...-1] || []
+      basename = File.basename(posix(doc.relative_path), ".*")
+
       {
         doc: doc,
-        dir_parts: dir_parts,
-        sort: sort_key(base, doc.data["order"]),
+        dir_parts: directory_parts,
+        sort: sort_key(basename, doc.data["order"]),
         slug: slug_for(doc)
       }
     end
@@ -299,6 +354,7 @@ module Jekyll
       doc.data["book_noindex"] = !index_flag
       doc.data["book_listed"] = listed_flag
       doc.data["book_title"] = home.data["title"]
+
       home_author = home.data["author"].to_s.strip
       doc.data["author"] = home_author unless home_author.empty?
       return if index_flag
@@ -337,4 +393,3 @@ end
 Jekyll::Hooks.register :documents, :post_init do |doc|
   Jekyll::Books.apply_permalink!(doc)
 end
-

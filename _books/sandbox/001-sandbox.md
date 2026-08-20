@@ -1,8 +1,5 @@
 ---
 title: Sandbox
-id: sandbox
-slug: sandbox
-author: Jonathan Frei
 date: 2026-08-20
 updated: 2026-08-20
 description: Sandbox playground to try out the pages and understand how new pages and sections are added to the directory.
