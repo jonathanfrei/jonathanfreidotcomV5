@@ -2,7 +2,7 @@
 title: "The Price of a Thought"
 date: 2026-08-20 06:05:00 -0400
 tags: [AI, inference, infrastructure, economics]
-eyebrow: [technology]
+eyebrow: Technology
 deck: AI models get the attention, but inference engineering is building the infrastructure that can make useful machine intelligence cheap enough to become ordinary.
 ---
 
