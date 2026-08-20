@@ -1,4 +1,3 @@
-001-nested-page
 ---
 title: It goes deeper
 ---
