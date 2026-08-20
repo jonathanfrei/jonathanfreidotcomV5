@@ -1,5 +1,5 @@
 ---
-title: From Idea to Obligation: Vow, Protection, and Charters
+title: From Idea to Obligation - Vow, Protection, and Charters
 ---
 
 Ideas move people only when they are given binding form. The months after Clermont show how quickly the new concept acquired institutional shape.
