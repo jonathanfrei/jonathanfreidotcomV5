@@ -25,7 +25,7 @@ This page samples the HTML elements and typographic styles used across the site.
 
 ## Body copy
 
-Body text uses **Source Serif 4** (Regular) sized with a fluid modular scale. The measure is constrained so lines stay near the Practical Typography range (roughly 45–75 characters). Leading is set for comfortable long-form reading.
+Body text uses **Source Serif 4** (Light) sized with a fluid modular scale. The measure is constrained so lines stay near the Practical Typography range (roughly 45–75 characters). Leading is set for comfortable long-form reading.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
@@ -85,7 +85,7 @@ hello("world")
 | `--font-ui` | Source Code Pro | Nav / UI |
 | `--font-mono` | Source Code Pro | Meta / code |
 | `--type-base` | Fluid body size | `clamp(...)` |
-| `--leading-body` | Body line-height | `1.4` |
+| `--leading-body` | Body line-height | `1.65` |
 | `--measure` | Reading width | `~36em` |
 | `--color-accent` | Links / focus | Signature Blue `#0077A8` |
 | `--brand-ink` / `--brand-paper` | Text / page ground | `#111C24` / `#FAF9F6` |
