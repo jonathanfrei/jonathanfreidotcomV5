@@ -2,75 +2,59 @@
   var panel = document.getElementById("book-nav-panel");
   if (!panel) return;
 
-  var book = panel.getAttribute("data-book") || "book";
-  var key = "book-nav:" + book;
+  var toolbar = document.getElementById("book-toolbar");
+  var overlay = panel.querySelector(".book-toc--panel");
+  var backdrop = document.getElementById("book-toc-backdrop");
+  var header = document.querySelector(".site-header");
 
-  function readState() {
-    try {
-      var raw = localStorage.getItem(key);
-      if (!raw) return { panel: false, open: [] };
-      var parsed = JSON.parse(raw);
-      return {
-        panel: !!parsed.panel,
-        open: Array.isArray(parsed.open) ? parsed.open : []
-      };
-    } catch (e) {
-      return { panel: false, open: [] };
+  function overlayTop() {
+    if (toolbar) {
+      var t = toolbar.getBoundingClientRect();
+      if (t.bottom > 0 && t.bottom < window.innerHeight) return t.bottom;
     }
+    if (header) {
+      var h = header.getBoundingClientRect();
+      if (h.bottom > 0) return Math.max(0, h.bottom);
+    }
+    return 0;
   }
 
-  function writeState(state) {
-    try {
-      localStorage.setItem(key, JSON.stringify(state));
-    } catch (e) { /* private mode */ }
+  function layoutOverlay() {
+    if (!overlay || !panel.open) return;
+    document.documentElement.style.setProperty("--book-overlay-top", overlayTop() + "px");
   }
 
-  function currentOpenChapters() {
-    return Array.prototype.map.call(
-      panel.querySelectorAll("details.book-toc__chapter[open]"),
-      function (el) { return el.getAttribute("data-chapter"); }
-    ).filter(Boolean);
+  function setOpen(open) {
+    panel.open = !!open;
   }
 
-  function applyState(state) {
-    panel.open = !!state.panel;
-    var want = {};
-    (state.open || []).forEach(function (slug) { want[slug] = true; });
-    panel.querySelectorAll("details.book-toc__chapter").forEach(function (el) {
-      var slug = el.getAttribute("data-chapter");
-      if (slug && Object.prototype.hasOwnProperty.call(want, slug)) {
-        el.open = !!want[slug];
-      }
-    });
+  function syncOpenClass() {
+    document.documentElement.classList.toggle("book-nav-open", panel.open);
+    if (backdrop) backdrop.hidden = !panel.open;
+    if (panel.open) layoutOverlay();
   }
 
-  var state = readState();
-  panel.open = !!state.panel;
-  if (state.open && state.open.length) {
-    applyState(state);
-  }
+  panel.addEventListener("toggle", syncOpenClass);
+  window.addEventListener("resize", layoutOverlay);
 
-  panel.addEventListener("toggle", function () {
-    state.panel = panel.open;
-    if (panel.open) state.open = currentOpenChapters();
-    writeState(state);
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && panel.open) {
+      setOpen(false);
+      var summary = panel.querySelector("summary");
+      if (summary) summary.focus();
+    }
   });
 
-  panel.addEventListener("toggle", function (event) {
-    if (event.target === panel) return;
-    if (!event.target.classList.contains("book-toc__chapter")) return;
-    state.open = currentOpenChapters();
-    writeState(state);
-  }, true);
+  if (backdrop) {
+    backdrop.addEventListener("click", function () { setOpen(false); });
+  }
 
   document.querySelectorAll("[data-book-focus-toc]").forEach(function (btn) {
     btn.addEventListener("click", function () {
-      panel.open = true;
-      state.panel = true;
-      writeState(state);
+      setOpen(true);
+      layoutOverlay();
       var summary = panel.querySelector("summary");
       if (summary) summary.focus();
-      panel.scrollIntoView({ block: "nearest" });
     });
   });
 })();
