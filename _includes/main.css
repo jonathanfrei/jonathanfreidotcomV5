@@ -336,7 +336,7 @@ blockquote {
   border-left: 2px solid var(--color-accent);
   color: var(--color-muted);
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 hr {
