@@ -1,5 +1,5 @@
 ---
-Title: The First Test: Cooperation on the Road to Jerusalem
+Title: The First Test - Cooperation on the Road to Jerusalem
 ---
 
 The first great test was whether men who owed loyalty to different rulers, spoke different languages, and had long been accustomed to fighting one another could remain in the field together long enough to reach a common goal.
