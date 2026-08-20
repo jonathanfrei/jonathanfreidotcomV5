@@ -1,4 +1,5 @@
-/* Book collection chrome. Tokens come from main.css. Gated via optional-css.html. */
+/* Book collection chrome. Tokens come from main.css.
+   Linked as /assets/css/book.css on layout: book only — do not inline. */
 
 .book-shell {
   flex: 1;

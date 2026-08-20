@@ -173,7 +173,7 @@ _books/
 - `slug:` front matter is the permalink segment; if omitted, the filename minus the numeric prefix is used.
 - Titles should be **number-free**. The layout prints computed numbers in the TOC and pager.
 - Book-home front matter: `index: false` blocks crawlers (robots.txt Disallow, `noindex,nofollow`, omit from sitemap/search). `listed: false` hides the book from `/books`. Defaults: `index` true; `listed` follows `index`.
-- Layout is `book` (sticky hamburger + wrapping breadcrumbs, contents overlay, prev/next). The overlay starts closed on every page. Do not add a header “Books” link unless asked.
+- Layout is `book` (sticky hamburger + wrapping breadcrumbs, contents overlay, prev/next). Book chrome CSS is `/assets/css/book.css`, not inlined. The overlay starts closed on every page. Do not add a header “Books” link unless asked.
 - Demo: `_books/dispelling-beauty-lies/` is borrowed content (`index: false`, `listed: false`).
 - Optional `scripts/import_beauty_book.py` rebuilds that demo tree from the Downloads conversion.
 
@@ -254,10 +254,11 @@ Dashboard rules live in README (redirects before cache). Do not regress:
   - `_includes/embeds.css` — media embeds (`class="embed` / `data-embed=`)
   - `_includes/pagination.css` — paginated lists (`pagination-list`)
 - **Editorial (#144):** `_includes/editorial.css` + `layout: editorial` — Kramdown semantic components (`.lead`, `.figure`, `.stat-grid`, …). Linked as `/assets/css/editorial.css` after `core.css`.
+- **Books:** `_includes/book.css` + `layout: book` — linked as `/assets/css/book.css` after `core.css` (same pattern as editorial). Do **not** inline it in `optional-css.html`; that would copy the sheet into every chapter HTML.
 - **Prose marks (#223):** `{: .aside}`, `{: .pull-quote}`, `{: .caption}`, `{: .figure-wide}` live in `main.css` for ordinary posts/pages. Do not reuse editorial-grid `.aside` for blog sidenotes. `.figure-wide` must not use `100vw` and must not restyle the page via `.container:has(.figure-wide)` — that indented every `.prose` child on `/blog` and `/archive` (the Blog page is itself `article.prose`). Only the figure breaks out, using `100cqi` of `.site-main` (fallback: container padding-cancel). Images keep intrinsic size (`width: auto; max-width: 100%`); on small screens the img fills the bleed slot. Kramdown IALs (`{: .figure-wide}`) are stripped from `search.json` excerpts in `_plugins/site_index.rb`. Never `margin-inline: auto` on every prose child to fake a measure — headings shrink-wrap and the column falls apart.
 - **iOS Safari (#231):** the “desktop layout” was a locked page zoom on the site, not a CSS viewport bug. Do not restore `html.is-narrow` or a head script that rewrites the viewport meta. Do not set `overflow-x` on `html`. Hang asides only at `70em`.
 - **Delivery:** every page links the design system via `asset_url` (`_includes/site-css.html`). Production uses jsDelivr (`cdn.jsdelivr.net/gh/…@SHA/_includes/main.css`); local serve stays on `/assets/css/core.css`. Do not inline `main.css` or restore the front-of-house vs archive split from PR #197.
-- Tooling: `/assets/css/core.css` (design system), `/assets/css/main.css` (full combined), `/assets/css/editorial.css` (editorial components only)
+- Tooling: `/assets/css/core.css` (design system), `/assets/css/main.css` (full combined), `/assets/css/editorial.css` (editorial components only), `/assets/css/book.css` (book chrome only)
 - **Never** use `{% include_relative ../... %}` — Jekyll rejects `../`
 - Prefer semantic classes over utility soup
 - Kramdown: `parse_block_html: true` (Markdown inside HTML blocks for editorial components)

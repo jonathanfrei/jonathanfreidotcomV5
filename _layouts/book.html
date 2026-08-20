@@ -10,6 +10,8 @@
     Not nested in default.html so the 36em .container does not trap the overlay.
   {% endcomment %}
   {% include site-css.html %}
+  {% include asset-stylesheet.html path="/assets/css/book.css" rel="preload" as="style" %}
+  {% include asset-stylesheet.html path="/assets/css/book.css" %}
   {% include optional-css.html %}
 </head>
 <body>
