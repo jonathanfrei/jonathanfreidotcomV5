@@ -21,7 +21,7 @@
   max-width: 24rem;
   min-height: 2.75rem;
   padding: 0.55rem 0.85rem;
-  font-family: var(--font-ui);
+  font-family: var(--font-mono);
   font-size: 1rem; /* avoid nested em shrink from page type scale */
   line-height: 1.4;
   color: var(--color-fg);
