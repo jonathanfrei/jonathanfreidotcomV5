@@ -237,7 +237,8 @@ defaults:
       type: "books"
     values:
       layout: book
-      author: Jonathan Frei
+      # No default author. Show a byline only when book-home front matter
+      # sets author: (copied to chapters by _plugins/books.rb). #277
 
 # SEO / social (basic)
 twitter:
