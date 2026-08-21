@@ -1,5 +1,5 @@
 ---
-Title: "Politics: A System That Can Change Its Own Rules"
+title: "Politics: A System That Can Change Its Own Rules"
 ---
 
 **Core question:** Can a political system recursively modify its own decision mechanism?

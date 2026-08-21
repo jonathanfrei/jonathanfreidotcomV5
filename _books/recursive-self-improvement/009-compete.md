@@ -1,5 +1,5 @@
 ---
-Title: When Adaptive Systems Compete
+title: When Adaptive Systems Compete
 ---
 
 **Core question:** What happens when recursive improvement changes the environment for other recursive systems?
