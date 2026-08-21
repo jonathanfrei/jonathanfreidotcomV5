@@ -748,7 +748,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   width: 100%;
   border-collapse: collapse;
   font-size: var(--type-sm);
-  font-family: var(--font-ui);
+  font-family: var(--font-mono);
 }
 
 .prose th,
@@ -1201,7 +1201,7 @@ a.post-meta__date:focus-visible {
 
 .prose .eyebrow {
   margin: 0 0 var(--space-2);
-  font-family: var(--font-ui);
+  font-family: var(--font-mono);
   font-size: var(--type-sm);
   font-weight: 700;
   line-height: 1.35;
