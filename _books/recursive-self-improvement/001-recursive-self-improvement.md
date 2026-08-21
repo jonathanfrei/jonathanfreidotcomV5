@@ -1,5 +1,5 @@
 ---
-title: What Is Recursive Self-Improvement?
+title: Recursive Self-Improvement
 ---
 
 Front matter and introduction 
