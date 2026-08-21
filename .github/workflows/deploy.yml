@@ -3,9 +3,8 @@ name: Deploy Jekyll site to GitHub Pages
 on:
   push:
     branches: ["main"]
-    # Drafts/docs-only commits should not rebuild (#29).
+    # Docs-only commits should not rebuild (#29).
     paths-ignore:
-      - "_x7k9p/**"
       - "README.md"
       - "AGENTS.md"
       - ".gitignore"
