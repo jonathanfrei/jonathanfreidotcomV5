@@ -11,7 +11,7 @@ Built with **Jekyll 4.x**, deployed via **GitHub Actions** to **GitHub Pages**, 
 - Tiny custom utility CSS
 - Short posts + long-form pages + nested markdown **books** (`_books/`)
 - RSS feed + sitemap + basic SEO
-- Obfuscated drafts folder (`_x7k9p`) excluded from build, indexes, feeds, and robots.txt
+- Source-only deprecated-code archive under `assets/deprecated` (excluded from builds)
 - Per-book `index: false` (demo: Dispelling Beauty Lies) is noindex and Disallow’d in generated `robots.txt`
 - Manual or push-triggered deploys (no scheduled rebuild)
 - Masked contact email (no form)
@@ -20,17 +20,13 @@ Built with **Jekyll 4.x**, deployed via **GitHub Actions** to **GitHub Pages**, 
 
 Most work happens directly on GitHub (or via Grok-assisted edits).
 
-1. Write posts as Markdown in `_posts/` (or place drafts in `_x7k9p/`).
+1. Write publishable posts as Markdown in `_posts/`; keep unfinished drafts outside this repository.
 2. Push to `main` → Actions builds and deploys.
 3. Future-dated posts publish on the next content push (or run **Deploy** via workflow_dispatch).
 
 ### Agents
 
-AI coding agents should read **[AGENTS.md](./AGENTS.md)** first. It covers repo layout, drafts, permalinks, CSS include rules, deploy constraints, and common pitfalls for this site.
-
-### Drafts
-
-Place unfinished Markdown files in the obfuscated folder `_x7k9p/`.
+AI coding agents should read **[AGENTS.md](./AGENTS.md)** first. It covers repo layout, permalinks, CSS include rules, deploy constraints, and common pitfalls for this site.
 They are never included in the public site build, never appear in the RSS feed or sitemap, and are blocked in `robots.txt`.
 When ready, move the file to `_posts/` with a proper `YYYY-MM-DD-title.md` name and front matter.
 
@@ -144,7 +140,7 @@ Uncheck Chrome DevTools **Disable cache**. That checkbox is what sends request `
 
 ```
 ├── .github/workflows/deploy.yml   # Build + deploy on push to main
-├── _x7k9p/                        # Obfuscated drafts (excluded)
+├── assets/deprecated/             # Archived unused source (excluded)
 ├── _includes/                     # Header, footer, head, main.css, feature CSS
 ├── _layouts/                      # default, post, page, book
 ├── _books/                        # Nested books → /books/<slug>/…
