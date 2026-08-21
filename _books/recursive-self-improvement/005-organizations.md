@@ -30,9 +30,7 @@ Organizations need ways to carry learning across time. Checklists, training, dec
 
 Yet institutional memory can harden into institutional inertia. Every old failure can add an approval step until no one can change anything without a meeting. Rules remain after their environment disappears. New employees learn how to route around the official process, so the written organization and the real organization drift apart.
 
-**Ask what the rule remembers**
-
-Before removing a cumbersome practice, find the failure that created it. Before keeping it, ask whether that failure is still likely and whether the practice still prevents it.
+**Ask what the rule remembers**: Before removing a cumbersome practice, find the failure that created it. Before keeping it, ask whether that failure is still likely and whether the practice still prevents it.
 {: .aside}
 
 Healthy recursive improvement therefore needs deletion as well as accumulation. Procedures should have owners, reasons, and opportunities for review. Small experiments make assumptions testable. Local authority lets people closest to a problem act on knowledge that never reaches the executive level, while shared constraints prevent a local gain from becoming a global loss.

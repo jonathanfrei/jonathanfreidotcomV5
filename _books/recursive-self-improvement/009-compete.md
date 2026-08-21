@@ -30,9 +30,7 @@ But local rationality can also create a globally foolish race. If every politica
 
 The usual self-improvement question asks how an agent can become more capable. Competitive systems add another: can participants improve the rules of interaction, or will any restraint be exploited by the first defector? Arms control, technical standards, sporting rules, market regulation, and professional ethics are attempts to modify the larger loop.
 
-**Shared constraints are also strategies**
-
-A speed limit in a race is not merely less capability. If it is enforceable, it can redirect effort from dangerous escalation toward reliability, skill, or another good the participants still value.
+**Shared constraints are also strategies**: A speed limit in a race is not merely less capability. If it is enforceable, it can redirect effort from dangerous escalation toward reliability, skill, or another good the participants still value.
 {: .aside}
 
 Cooperation doesn't remove adaptation. Participants learn the rule, discover its edges, and sometimes capture the institution enforcing it. A stable agreement needs observation, credible consequences, and enough mutual benefit that compliance survives short-term temptation. It also needs revision, because an old rule can freeze the advantages of yesterday's winners.

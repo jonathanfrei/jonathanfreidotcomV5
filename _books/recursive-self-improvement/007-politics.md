@@ -32,9 +32,7 @@ Political learning therefore needs more than frequent voting. It depends on free
 
 Courts add another kind of feedback. A law written in general language encounters a particular dispute, and the resulting judgment can expose ambiguity or conflict that the legislature did not anticipate. Judicial review can restrain ordinary politics, but courts are institutions with their own precedents and limits, not an oracle outside the constitutional system.
 
-**The minority test**
-
-A procedural change should be judged partly by whether its advocates would still accept it after losing power. Rules designed only for today's winner are unlikely to remain legitimate tomorrow.
+**The minority test**: A procedural change should be judged partly by whether its advocates would still accept it after losing power. Rules designed only for today's winner are unlikely to remain legitimate tomorrow.
 {: .aside}
 
 Politics also shows why recursive improvement requires restraint. A more efficient state can deliver services better, but it can also enforce a bad policy more thoroughly. A more responsive election system can represent voters more accurately, or become so sensitive to immediate opinion that it cannot keep long promises. Institutional capability and political goodness are separate achievements.

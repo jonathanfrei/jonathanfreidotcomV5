@@ -34,9 +34,7 @@ Three questions survived every domain. **What changed?** Better output, better b
 
 Several conditions repeatedly made the loop healthier: multiple sources of evidence, limited authority, visible changes, independent correction, and reversibility. None guarantees safety. Together they keep an optimizer in contact with a world it does not fully understand.
 
-**The human boundary**
-
-Not every good should be turned into a target. Friendship, craftsmanship, courage, faith, and care grow through practice and correction, but they are diminished when treated only as scores to maximize.
+**The human boundary**: Not every good should be turned into a target. Friendship, craftsmanship, courage, faith, and care grow through practice and correction, but they are diminished when treated only as scores to maximize.
 {: .aside}
 
 This is the quiet risk behind a great deal of talk about self-improvement. The method becomes more elaborate, the dashboard becomes more precise, and the person or institution gradually forgets what the machinery was meant to serve. Becoming better at becoming better cannot decide the end toward which becoming is directed.

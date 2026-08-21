@@ -30,9 +30,7 @@ This apparent cleanliness is deceptive. Tests encode expectations, not truth. A 
 
 Automation also adds machinery. A test suite can become slow and brittle. A delivery pipeline can accumulate checks whose original purpose nobody remembers. Engineers then spend their time satisfying the improvement system rather than improving the product. The recursive loop has created a new surface that needs maintenance, evaluation, and sometimes removal.
 
-**The deletion test**
-
-An improvement mechanism should be able to lose obsolete parts. A process that only accumulates checks and never retires them is learning without forgetting, which eventually looks a lot like bureaucracy.
+**The deletion test**: An improvement mechanism should be able to lose obsolete parts. A process that only accumulates checks and never retires them is learning without forgetting, which eventually looks a lot like bureaucracy.
 {: .aside}
 
 The most reliable software loops therefore preserve human judgment and reversibility. Small changes are easier to review. Version control keeps history. Feature flags and staged deployments limit the cost of a mistaken assumption. Monitoring makes consequences visible, while rollback keeps one bad iteration from becoming permanent.

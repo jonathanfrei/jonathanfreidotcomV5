@@ -30,9 +30,7 @@ Not every failure involves deception. Feedback may be late. A company cuts maint
 
 Corrections made on delayed or noisy evidence can overshoot. A thermostat with excessive delay heats a room past the target, then cools it too far. Organizations lurch between centralization and decentralization, each reform reacting to the last reform's visible failures while recreating older ones. Recommendation systems feed users more of what they recently chose, making the next choice less independent and the signal increasingly self-produced.
 
-**Beware self-confirming data**
-
-When a system's action changes the evidence used to evaluate that action, apparent success may be an echo. Ask what the data would have looked like without the intervention.
+**Beware self-confirming data**: When a system's action changes the evidence used to evaluate that action, apparent success may be an echo. Ask what the data would have looked like without the intervention.
 {: .aside}
 
 Local optimization creates another trap. A team reduces its cost by pushing work onto another team. A model performs well on a benchmark and poorly outside it. A factory maximizes throughput while consuming the slack needed to recover from disruption. Each subsystem can show improvement while the whole grows fragile.

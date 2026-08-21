@@ -38,9 +38,7 @@ Software contributes tests and rollback. Individual practice contributes reflect
 
 No checklist can make every self-modifying system safe. Unknown environments produce unknown failures, and human overseers have their own blind spots and incentives. The right question is often not whether a system is “safe” in the abstract, but safe to change which component, with what evidence, under whose authority, at what speed, and with what path back.
 
-**Keep the right to stop**
-
-Oversight is meaningful only if someone can pause the loop before the system's next improvement removes the opportunity.
+**Keep the right to stop**: Oversight is meaningful only if someone can pause the loop before the system's next improvement removes the opportunity.
 {: .aside}
 
 Recursive improvement deserves neither automatic fear nor automatic trust. It can preserve lessons, widen human agency, and make difficult work steadily more reliable. It can also compound a bad objective or outrun the people living with its consequences. Safety begins by refusing to place every part of improvement inside one unchecked loop.

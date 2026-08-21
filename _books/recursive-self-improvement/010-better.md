@@ -30,9 +30,7 @@ Direction is not solved by adding more metrics. A balanced scorecard can reduce 
 
 “Better” always contains a point of view. Better for the customer may be worse for the worker. Better quarterly performance may weaken a company ten years later. Better national efficiency may reduce local freedom. Conflicts among real goods cannot be erased by technical vocabulary.
 
-**Watch the omitted person**
-
-When a metric improves, ask whose experience is absent from the data and who bears a cost outside the boundary of the system being optimized.
+**Watch the omitted person**: When a metric improves, ask whose experience is absent from the data and who bears a cost outside the boundary of the system being optimized.
 {: .aside}
 
 That doesn't make measurement futile. It makes plural evidence and correction essential. Quantitative signals can reveal patterns intuition misses. Qualitative accounts can reveal harms a dashboard averaged away. Independent review can challenge the people who chose the target. Reversibility limits the damage when an objective turns out to be poorly specified.

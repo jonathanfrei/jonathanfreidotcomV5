@@ -30,9 +30,7 @@ Competition can reward genuine improvement. A firm that makes batteries cheaper 
 
 But profit is a signal, not a complete moral judgment. A company may externalize costs onto neighbors, exploit an information gap, or make a product more compulsive without making its users better off. The market can reveal what people will pay under existing rules and circumstances; it cannot decide by itself which rules are just or which desires deserve cultivation.
 
-**No fixed finish line**
-
-Competitive advantage is relational. A ten-percent improvement can be decisive when rivals stand still and irrelevant when they improve by twenty percent.
+**No fixed finish line**: Competitive advantage is relational. A ten-percent improvement can be decisive when rivals stand still and irrelevant when they improve by twenty percent.
 {: .aside}
 
 Recursive capability can deepen both the discovery and the distortion. Firms improve experimentation, personalization, logistics, and pricing. Then they improve how those systems learn from customers. The resulting service may become wonderfully responsive. It may also become very good at finding the point where convenience turns into dependence, or where tailored pricing becomes extraction.

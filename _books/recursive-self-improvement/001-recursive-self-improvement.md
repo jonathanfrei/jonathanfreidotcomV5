@@ -1,7 +1,6 @@
 ---
 title: Recursive Self-Improvement
 description: "Recursive self-improvement begins when a system’s effort to get better reaches back into the machinery that produces improvement. The system doesn’t merely produce a better answer, product, habit, or policy. It alters how future answers are found, how future mistakes are noticed, or how future changes are chosen."
-author: ""
 ---
 
 A programmer can spend an afternoon fixing a bug and leave the software better than it was that morning. Or she can spend the afternoon building a test that catches the same kind of bug before it reaches a customer. Both are improvements, but they operate at different depths. The fix changes the program. The test changes part of the process by which the program will be changed tomorrow.

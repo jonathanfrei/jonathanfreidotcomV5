@@ -32,9 +32,7 @@ Antibiotic resistance makes the pattern painfully concrete. Treatment removes su
 
 The improvement mechanism can also change indirectly. Sexual reproduction reshuffles variation. Developmental systems affect which variations are possible. Organisms alter environments through nests, dams, soil, and social behavior, changing later selection pressures. Evolution has, over immense spans of time, produced organisms capable of learning during a lifetime and cultures capable of transmitting acquired knowledge much faster than genes.
 
-**Where the analogy breaks**
-
-Evolution is cumulative adaptation, but it is not straightforwardly self-improvement. There is no unified evolutionary self choosing an objective, evaluating a proposal, and authorizing a revision.
+**Where the analogy breaks**: Evolution is cumulative adaptation, but it is not straightforwardly self-improvement. There is no unified evolutionary self choosing an objective, evaluating a proposal, and authorizing a revision.
 {: .aside}
 
 That break is valuable. It keeps recursive self-improvement from being defined by intention alone while preventing the concept from swallowing every adaptive change. Evolution demonstrates that complexity and fit can arise from distributed processes. It does not show that those processes converge on a universal good.
