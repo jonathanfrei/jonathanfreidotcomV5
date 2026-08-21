@@ -30,9 +30,7 @@ People often imagine self-improvement as a contest of intention. Yet altering th
 
 This is recursion at a human scale. A failed habit becomes information about cues and friction. The next attempt is designed differently. Over time, the person can improve at choosing environments, interpreting setbacks, and distinguishing a hard method from a bad one.
 
-**The observer is involved**
-
-Self-knowledge has no neutral dashboard. The person gathering evidence is also tired, proud, frightened, hopeful, and capable of explaining away an inconvenient result.
+**The observer is involved**: Self-knowledge has no neutral dashboard. The person gathering evidence is also tired, proud, frightened, hopeful, and capable of explaining away an inconvenient result.
 {: .aside}
 
 That limitation matters. A single bad session is noisy feedback. A measurable goal can crowd out an unmeasured good. A productivity system may become a hobby that produces elaborate records and very little work. Constantly revising the method can prevent the consistency required for a method to work. Sometimes the improvement is to stop optimizing and keep a reasonable practice long enough to learn from it.
