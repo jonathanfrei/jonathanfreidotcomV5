@@ -1,5 +1,6 @@
 ---
-title: Residues of Unity - Cooperation, Idiom, and Habit
+title: Residues of Unity 
+deck: Cooperation, Idiom, and Habit
 ---
 
 The benefits of that repeated exercise of unity were tangible, even when particular expeditions failed. They should be stated with precision, and they should be tested against the stronger counter-reading: that the record is mostly failure punctuated by rare success, and that Jerusalem 1099 stands out against Dorylaeum, the Cadmus Mountains, Fariskur, and the diversion of 1204 precisely because it was exceptional rather than paradigmatic.

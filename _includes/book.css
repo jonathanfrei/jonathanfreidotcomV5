@@ -157,7 +157,7 @@ html.book-nav-open {
 }
 
 .book-crumb__sep {
-  margin-inline: 0.35em;
+  margin-inline: -0.35em;
 }
 
 .book-main {

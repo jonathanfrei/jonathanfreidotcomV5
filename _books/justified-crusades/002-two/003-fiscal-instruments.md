@@ -1,5 +1,6 @@
 ---
-title: "Fiscal Instruments: From Emergency Levy to Shared Sacred Revenue"
+title: Fiscal Instruments
+deck: From Emergency Levy to Shared Sacred Revenue
 ---
 
 The first joint to harden was fiscal.

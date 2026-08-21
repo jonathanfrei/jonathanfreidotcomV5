@@ -1,5 +1,6 @@
 ---
-title: The Combined System - Lowered Barriers, Real Limits
+title: The Combined System 
+deck: Lowered Barriers, Real Limits
 ---
 
 The parish table of 1188 was never only a tax assessment. Priest and dean, king’s man and baron’s man, bishop’s clerk, Templar and Hospitaller stood in one doorway because the recovery of Jerusalem had acquired instruments that ordinary feudal politics did not possess. A tenth could be demanded under a sacred claim that reached beyond any single lord’s aid. Permanent corporations could stand inside the collection and carry surplus from western estates to an eastern front. Ships could be hired on known terms, in known seasons, from ports that held privileges and contracts ready for the next departure. A sign sewn on a shoulder could be solemnized by a rite that a bishop in another kingdom would recognize, preached by men licensed from Rome, and kept present in locked chests and votive masses long after any particular host had dispersed.

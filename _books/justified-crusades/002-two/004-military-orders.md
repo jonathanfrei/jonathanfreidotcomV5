@@ -1,5 +1,6 @@
 ---
-title: Military Orders - Permanent Corporations Across Borders
+title: Military Orders 
+deck: Permanent Corporations Across Borders
 ---
 
 A commandery in Burgundy or Yorkshire did not look like an army. It looked like an estate: barns, tenants, a chapel, a small community of brothers under a commander, accounts kept in the local coin. What made it different from an ordinary monastic house was the destination of its surplus. A substantial share of what the house produced—commonly framed in the order’s own expectations as on the order of a third of income, though the real rate flexed with politics, war, and negotiation—was supposed to travel to the central treasury for the eastern front. Grain, wool, and rents in one kingdom became wages, horses, and fortification in another. The donor who had given the land a generation earlier might never have seen Jerusalem. His gift still funded a frontier he would never walk.
