@@ -927,6 +927,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   color: var(--color-fg);
   margin-top: calc(-1 * var(--space-4));
   margin-bottom: var(--space-4);
+  letter-spacing: -0.06em;
 }
 
 .prose .caption strong {
