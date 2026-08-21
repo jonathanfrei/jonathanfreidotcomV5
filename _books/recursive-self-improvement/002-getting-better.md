@@ -1,5 +1,5 @@
 ---
-Title: Getting Better vs. Getting Better at Getting Better
+title: Getting Better vs. Getting Better at Getting Better
 ---
 
 **Core question:** When does improvement become recursive?
