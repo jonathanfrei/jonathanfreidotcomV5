@@ -1,5 +1,5 @@
 ---
-Title: Organizations and Complex Adaptive Systems
+title: Organizations and Complex Adaptive Systems
 ---
 
 **Core question:** Why is improving a company harder than improving software?

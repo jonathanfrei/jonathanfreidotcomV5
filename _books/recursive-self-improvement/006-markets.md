@@ -1,5 +1,5 @@
 ---
-Title: "Markets: Optimization Against Optimizers"
+title: "Markets: Optimization Against Optimizers"
 ---
 
 **Core question:** What happens when systems improve while competing against other improving systems?
