@@ -3,7 +3,7 @@
 # Tag/category hygiene (issue #140):
 #
 # 1. Coerce YAML quirks (integer tags like 404 / 2010 break Liquid filters).
-# 2. Normalize strings so autopages don't emit duplicate slugs
+# 2. Normalize strings so query-driven taxonomy filters use canonical labels
 #    (e.g. "google+" vs "google", "dr. seuss" vs "dr seuss").
 # 3. Merge known aliases + singular/plural pairs into one canonical label.
 # 4. Expose helpers for the /tags index and prune leftover /tags/:name pages.
@@ -160,15 +160,11 @@ module Jekyll
       tag_post_count(site, tag) >= min
     end
 
-    # Drop leftover individual tag archives. Tag discovery is /tags?tag= (#209).
-    # Runs at :pre_render so it is after PaginationGenerator (:lowest).
+    # Drop accidental individual taxonomy archives. Discovery uses query-driven
+    # index pages (/tags?tag= and /categories?category=).
     def page_tag_name(page)
       tag = page.data["tag"]
       return tag.to_s unless tag.nil? || tag.to_s.empty?
-
-      # jekyll-paginate-v2 stores the tag on the pagination config, not data.tag
-      nested = page.data.dig("pagination", "tag")
-      return nested.to_s unless nested.nil? || nested.to_s.empty?
 
       url = page.url.to_s
       m = url.match(%r{/tags/([^/]+)})
@@ -182,11 +178,7 @@ module Jekyll
     def tag_archive_page?(page)
       return false if tag_index_url?(page.url)
       return true if page.url.to_s.match?(%r{/tags/.+})
-      return false unless page.data["autogen"].to_s == "jekyll-paginate-v2"
-      return true unless page.data["tag"].to_s.empty?
-
-      nested = page.data.dig("pagination", "tag")
-      !(nested.nil? || nested.to_s.empty?)
+      false
     end
 
     def prune_tag_archive_pages!(site)
@@ -200,11 +192,7 @@ module Jekyll
     def category_archive_page?(page)
       return false if category_index_url?(page.url)
       return true if page.url.to_s.match?(%r{/categories/.+})
-      return false unless page.data["autogen"].to_s == "jekyll-paginate-v2"
-      return true unless page.data["category"].to_s.empty?
-
-      nested = page.data.dig("pagination", "category")
-      !(nested.nil? || nested.to_s.empty?)
+      false
     end
 
     def prune_category_archive_pages!(site)
