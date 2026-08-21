@@ -5,8 +5,5 @@ tags: [hamlet, "lion king", imgur]
 tumblr_id: "32694556126"
 ---
 
-# If only Hamlet had friends like these
 
-[![Wat.... - Imgur](http://i.imgur.com/IX1g8.jpg)
-
-](http://imgur.com/gallery/IX1g8)
+[![Wat.... - Imgur](http://i.imgur.com/IX1g8.jpg)](http://imgur.com/gallery/IX1g8)
