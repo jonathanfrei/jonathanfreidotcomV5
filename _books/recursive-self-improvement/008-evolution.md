@@ -1,5 +1,5 @@
 ---
-Title: "Evolution: Recursive Improvement Without Intelligence"
+title: "Evolution: Recursive Improvement Without Intelligence"
 ---
 
 **Core question:** Does cumulative improvement require an intelligent optimizer?
