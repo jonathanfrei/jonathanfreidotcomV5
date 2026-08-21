@@ -1,5 +1,7 @@
 ---
 title: Recursive Self-Improvement
+description: "Recursive self-improvement begins when a system’s effort to get better reaches back into the machinery that produces improvement. The system doesn’t merely produce a better answer, product, habit, or policy. It alters how future answers are found, how future mistakes are noticed, or how future changes are chosen."
+author: ""
 ---
 
 A programmer can spend an afternoon fixing a bug and leave the software better than it was that morning. Or she can spend the afternoon building a test that catches the same kind of bug before it reaches a customer. Both are improvements, but they operate at different depths. The fix changes the program. The test changes part of the process by which the program will be changed tomorrow.
@@ -30,9 +32,7 @@ Any claim of recursive self-improvement should survive three questions. **What i
 
 Those questions keep ordinary repetition from masquerading as recursion. A thermostat acts again and again, but a conventional thermostat doesn't redesign its control rule. A runner repeating the same workout may become fitter, but the training process becomes recursive only when results change how future workouts are selected. Feedback supplies information; learning changes behavior; recursive improvement changes some part of learning or optimization itself.
 
-**A practical test**
-
-After an improvement, ask what the system can now do differently when it next tries to improve. If the honest answer is “nothing,” the process may be useful, adaptive, or repeated, but it isn't recursive in the sense used here.
+**A practical test**: After an improvement, ask what the system can now do differently when it next tries to improve. If the honest answer is “nothing,” the process may be useful, adaptive, or repeated, but it isn't recursive in the sense used here.
 {: .aside}
 
 This is also why “better” cannot remain a vague compliment. A system can become faster while growing fragile, more productive while exhausting its people, or more engaging while making its users miserable. Capability and direction are separate. A stronger improvement mechanism can pursue a poor objective more efficiently.
