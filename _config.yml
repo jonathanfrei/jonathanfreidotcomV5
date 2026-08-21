@@ -141,7 +141,7 @@ assets_cdn:
 # Future roots (articles, long-form-writing) can be added here.
 static_html:
   roots:
-    - _pages/editorial
+    - _pages
 
 # Root-level pages live under _pages/ (issue #161). Underscore dirs are
 # excluded by default; include forces Jekyll to read them as pages.
