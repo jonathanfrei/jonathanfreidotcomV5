@@ -1,5 +1,5 @@
 ---
-Title: When Recursive Improvement Goes Wrong
+title: When Recursive Improvement Goes Wrong
 ---
 
 **Core question:** Why don't feedback loops always produce improvement?

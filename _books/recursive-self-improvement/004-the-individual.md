@@ -1,5 +1,5 @@
 ---
-Title: "The Individual: A Self-Modifying System"
+title: "The Individual: A Self-Modifying System"
 ---
 
 **Core question:** Can a person improve the way they improve?
