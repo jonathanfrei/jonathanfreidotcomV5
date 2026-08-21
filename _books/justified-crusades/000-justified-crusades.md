@@ -1,5 +1,6 @@
 ---
 title: Justified Crusades
+deck: The Invention of a Pan-Christian Project
 date: 2026-08-20
 updated: 2026-08-20
 description: Working project on history book

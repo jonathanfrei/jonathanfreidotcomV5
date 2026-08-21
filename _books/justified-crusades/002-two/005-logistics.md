@@ -1,5 +1,6 @@
 ---
-title: Logistics - The Routines of Projection
+title: Logistics 
+deck: The Routines of Projection
 ---
 
 At the Rock of Marseilles in August 1248, the ports of the vessel were opened and the horses led in. When men and animals were aboard, the port was caulked and stopped up as close as a large tun of wine, because once the ship was at sea the opening would lie under water. The captain called to his people on the prow: was the work done? Were they ready? Priests and clerks mounted to the castle of the ship and chanted the *Veni Creator* from beginning to end; the mariners set their sails in the name of God; a breeze filled the canvas and the land fell away until there was only sea and sky. Jean de Joinville, who crossed that month in a ship he and his cousins had hired—some twenty knights between them—recorded the scene as a traveler’s marvel. It was also the lived form of a clause that Italian shipowners and crusading principals had been writing into charter-parties for two generations.

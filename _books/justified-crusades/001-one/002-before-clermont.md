@@ -1,9 +1,7 @@
 ---
 title: Before Clermont
+deck: Precedents and Their Limits
 ---
-
-Precedents and Their Limits
-{: .deck}
 
 For generations before that morning at Clermont, Latin Christians had fought under religious banners. The practice was neither rare nor clandestine. In the ninth century, when Muslim raiders from North Africa and Spain threatened the coasts of Italy and even the approaches to Rome, popes had appealed for help and spoken of spiritual reward for those who fell in defense of the Roman see. Leo IV had fortified the Leonine City after the Saracen raid of 846 and been present when Christian forces met Saracen ships at the mouth of the Tiber. John VIII, writing in the later ninth century, had spoken of heavenly recompense for those who died fighting the enemies of the Church. These were real grants of spiritual privilege, rooted in the defense of Christian territory and of the papal city itself. A warrior who answered such a call still fought under the authority of a local ruler or in defense of a specific place. He did not join a general enterprise of Latin Christendom as a whole, directed toward a distant goal under a shared sacred obligation that crossed the boundaries of kingdoms.
 
