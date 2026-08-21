@@ -42,7 +42,7 @@ A [2021 reconstruction by researchers at University College London](https://www.
 
 Even the number of holes around one damaged calendar ring is still being debated. In 2024, researchers at the University of Glasgow [applied Bayesian analysis originally developed for gravitational-wave astronomy](https://www.gla.ac.uk/news/headline_1086100_en.html) to measurements of the surviving holes. Their analysis favored 354 divisions, consistent with a lunar calendar, rather than the 365 one might expect for a solar calendar. Other Antikythera researchers have challenged the conclusion. There is something wonderful about scientists using techniques developed to study ripples in spacetime to argue over how many holes a Greek machinist drilled into a bronze ring two thousand years ago.
 
-![Diagram of the known gearing of the Antikythera mechanism](https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/AntikytheraMechanismSchematic-Freeth12.png/1280px-AntikytheraMechanismSchematic-Freeth12.png){: .bleed }
+![Diagram of the known gearing of the Antikythera mechanism](https://upload.wikimedia.org/wikipedia/commons/5/59/AntikytheraMechanismSchematic-Freeth12.png){: .bleed }
 *One reconstruction of the mechanism's gearing, including proposed gearing for the five known planets. Wikimedia Commons.*{: .caption }
 
 ## The machine and its maker
@@ -75,7 +75,7 @@ We can count what survived. We can't count what disappeared.
 
 That doesn't mean the ancient Mediterranean was full of mechanical computers, or that some forgotten industrial revolution was about to happen. One extraordinary object can't support that story. But the absence of other surviving machines can't tell us they never existed either. Before the divers reached the wreck, we had zero Antikythera mechanisms. After they pulled up one ugly lump of bronze, our estimate of what an ancient craftsman could build had to change.
 
-![Fragments of the Antikythera mechanism on display in Athens](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Antikythera_Mechanism_%28NAMA%29_2017.jpg/1280px-Antikythera_Mechanism_%28NAMA%29_2017.jpg){: .full-bleed }
+![Fragments of the Antikythera mechanism on display in Athens](https://upload.wikimedia.org/wikipedia/commons/6/63/Antikythera_Mechanism_%28NAMA%29_2017.jpg){: .full-bleed }
 *Surviving fragments of the Antikythera mechanism at the National Archaeological Museum in Athens. Photo: Peulle/Wikimedia Commons.*{: .caption }
 
 It's a small caution about the smooth lines we tend to draw through technological history. Those lines are made from whatever evidence happened to reach us. Stone temples survive better than wooden workshops. Pottery survives better than textiles. Monumental inscriptions survive better than everyday instructions. A bronze machine on land is useful raw material for somebody else. A bronze machine sealed under the sea can become a message to people two millennia later.
