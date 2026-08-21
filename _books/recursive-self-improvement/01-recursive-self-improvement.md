@@ -1,5 +1,5 @@
 ---
-Title: What Is Recursive Self-Improvement?
+Title: "What Is Recursive Self-Improvement?"
 ---
 
 Recursive self-improvement is not simply a system getting better. It is a system changing the mechanism by which it gets better, so that the next iteration can potentially improve more effectively than the previous one.
