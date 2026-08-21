@@ -486,7 +486,7 @@ a:focus-visible {
 
 /* ---------- Footer ---------- */
 .site-footer {
-  font-family: var(--font-ui);
+  font-family: var(--font-mono);
   font-size: var(--type-sm);
   margin-top: auto;
   border-top: 1px solid var(--color-border);
@@ -1410,7 +1410,7 @@ span.tag:hover {
   list-style: none;
   padding: 0;
   margin: var(--space-4) 0 0;
-  font-family: var(--font-ui);
+  font-family: var(--font-mono);
   font-size: var(--type-sm);
 }
 
