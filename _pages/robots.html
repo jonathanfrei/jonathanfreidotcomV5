@@ -4,7 +4,6 @@ permalink: /robots.txt
 ---
 User-agent: *
 Allow: /
-Disallow: /_x7k9p/
 Disallow: /build-errors.log
 {% for doc in site.books %}{% if doc.is_book_home and doc.book_noindex %}Disallow: {{ doc.url }}
 {% endif %}{% endfor %}
