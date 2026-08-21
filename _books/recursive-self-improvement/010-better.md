@@ -1,5 +1,5 @@
 ---
-Title: "The Problem of Defining “Better”"
+title: "The Problem of Defining “Better”"
 ---
 
 **Core question:** Better according to whom, and according to what objective?
