@@ -1329,7 +1329,7 @@ span.tag:hover {
 /* Post footer actions */
 .post-comment-link,
 .post-nav {
-  font-family: var(--font-ui);
+  font-family: var(--font-mono);
   font-size: var(--type-sm);
   margin-top: var(--space-8);
 }
