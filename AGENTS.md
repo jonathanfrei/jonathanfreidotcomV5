@@ -340,7 +340,6 @@ Production depends on external services for media (configured in `_config.yml` `
 | Task | Where |
 | --- | --- |
 | New post | `_posts/YYYY-MM-DD-slug.md` |
-| New post photo | Upload via factory `tools/upload-worker/`; paste `![alt](https://media.jonathanfrei.com/assets/img/…)` — never commit the file |
 | New link post | `_posts/YYYY-MM-DD-slug.md` with `layout: link` and `url:` |
 | Nav / header | `_includes/header.html` |
 | Footer / disclaimer | `_includes/footer.html` |
@@ -352,7 +351,7 @@ Production depends on external services for media (configured in `_config.yml` `
 | Date timezone | `_config.yml` `timezone: America/New_York` (#180) |
 | Drop caps on long posts | `_plugins/drop_cap.rb` + `.prose--drop-cap` in `main.css` (#123) |
 | Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` (thin dump of `site.data.search_index`). URLs: `?q=`, `?tag=`, `?category=`, `?title=`; `?=text` aliases `?q=`. The query string is the source of truth until the user types; an inline seed fills the box on first paint (#211). `search.js` is deferred; `/search` and query URLs reserve result space so the footer does not shift (#212). Result cards reuse the `/blog` stream markup (title, long date, tag chips, excerpt, first image, Read more; link entries hide the title) (#219). Tag, category, and archive lists stay visible below results. |
-| Random-post URL list | `search.json` (`url` + `kind`; essays and link posts; `posts.json` removed — #130, #221) |
+| Random-post URL list | `search.json` (`url` + `kind`; essays and link posts) |
 | Theme toggle | Boot in `_includes/head.html`; full `assets/js/theme.js` loads on first click (footer stub) |
 | Asset CDN | `_plugins/asset_cdn.rb` + `assets_cdn` in `_config.yml`. Production: jsDelivr `@SHA` with origin `/assets` `onerror` fallback (`asset_url` / `asset_origin_url`). Local: `/assets`. |
 | Site config | `_config.yml` |
