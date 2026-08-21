@@ -143,7 +143,8 @@ static_html:
   roots:
     - editorial
     - _pages/editorial
-
+    - _pages
+    
 # Root-level pages live under _pages/ (issue #161). Underscore dirs are
 # excluded by default; include forces Jekyll to read them as pages.
 # Permalinks: front matter wins; otherwise _plugins/pages_dir.rb maps
