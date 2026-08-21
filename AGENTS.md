@@ -29,7 +29,6 @@ _plugins/books.rb              # Book collection: slugs, TOC, prev/next, noindex
 _books/<book-slug>/            # Nested markdown books → /books/<book-slug>/…
 _posts/                        # Published posts and link posts (YYYY-MM-DD-slug.md)
 _posts/v1-archive/             # Historical imported posts (treat carefully)
-_x7k9p/                        # Obfuscated drafts (excluded from build & CI paths)
 assets/                        # Images, JS; CSS tooling at assets/css/*.html
 editorial/                     # Handcrafted HTML drop-ins (slug.html → /editorial/slug)
 editorial/                     # HTML drop-ins + Markdown editorials (layout: editorial)
@@ -59,7 +58,7 @@ bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
 ## How work usually lands
 
 1. Prefer a branch + PR for multi-file or behavior changes; direct `main` is fine for urgent build/content fixes when the owner asks.
-2. Push to `main` deploys via a **single** full `deploy.yml` (except pure draft/doc paths — see CI `paths-ignore`).
+2. Push to `main` deploys via a **single** full `deploy.yml` (except documentation-only paths — see CI `paths-ignore`).
 3. Future-dated posts publish on the **next content push** (or manual **workflow_dispatch**). There is no scheduled rebuild (#142).
 4. After deploy, confirm the Actions run is green when you changed build-related files.
 5. **Media is never in the Pages artifact** — production uses `ARCHIVE_MEDIA_MODE=cdn` (S3 / `media.jonathanfrei.com`). The deploy step fails if `_site/media` appears.
@@ -93,13 +92,6 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
 - Default layout is `post` (from `_config.yml`). Do not set a custom layout unless needed.
 - Tags should be simple lowercase slugs where possible; chips link to `/tags?tag=name`.
 - A malformed post or link is skipped (site still builds). Check `_site/build-errors.log` and the Actions log before the next publish (#186).
-
-### Drafts (`_x7k9p/`)
-
-- Unfinished work goes in **`_x7k9p/`**, never in `_posts/` until ready to publish.
-- Excluded from Jekyll build, feed, sitemap; blocked in `robots.txt`.
-- CI **`paths-ignore`** includes `_x7k9p/**` so draft-only commits do not rebuild the site.
-- To publish: move to `_posts/` with a proper dated filename and front matter.
 
 ### Link posts (`layout: link`)
 
@@ -173,7 +165,9 @@ _books/
 - `slug:` front matter is the permalink segment; if omitted, the filename minus the numeric prefix is used.
 - Titles should be **number-free**. The layout prints computed numbers in the TOC and pager.
 - Book-home front matter: `index: false` blocks crawlers (robots.txt Disallow, `noindex,nofollow`, omit from sitemap/search). `listed: false` hides the book from `/books`. Defaults: `index` true; `listed` follows `index`.
-- Layout is `book` (sticky hamburger + wrapping breadcrumbs, contents overlay, prev/next). Book chrome CSS is `/assets/css/book.css`, not inlined. The hamburger TOC is loaded from `/books/<slug>/toc.json` (same idea as `search.json`) so chapter HTML does not embed the full tree. The title page still renders an in-article HTML TOC. The overlay starts closed on every page. Do not add a header “Books” link unless asked.
+- Optional `eyebrow` and `deck` in front matter render above/below the title, same as posts and pages (#278).
+- Optional `author` on the book home is copied to every chapter and shown with `source` **below** `articleBody` (#277). There is no collection default; a book without `author` in page-one front matter does not display “Jonathan Frei”.
+- Layout is `book` (sticky hamburger + wrapping breadcrumbs, contents overlay, prev/next). Book chrome CSS is `/assets/css/book.css`, not inlined. Hash links use `scroll-padding-top` so H2/H3 are not hidden behind the sticky toolbar (#275). The hamburger TOC is loaded from `/books/<slug>/toc.json` (same idea as `search.json`) so chapter HTML does not embed the full tree. The title page still renders an in-article HTML TOC. The overlay starts closed on every page. Do not add a header “Books” link unless asked.
 - Demo: `_books/dispelling-beauty-lies/` is borrowed content (`index: false`, `listed: false`).
 - Optional `scripts/import_beauty_book.py` rebuilds that demo tree from the Downloads conversion.
 
@@ -295,7 +289,7 @@ Dashboard rules live in README (redirects before cache). Do not regress:
 
 Keep these out of the site build (see `_config.yml` `exclude`):
 
-- `Gemfile`, `Gemfile.lock`, `vendor`, `node_modules`, `.github`, `README.md`, `AGENTS.md`, `_x7k9p`, `.gitignore`
+- `Gemfile`, `Gemfile.lock`, `vendor`, `node_modules`, `.github`, `README.md`, `AGENTS.md`, `assets/deprecated`, `.gitignore`
 
 ### 5. Actions / Node runtime
 
@@ -348,7 +342,6 @@ Production depends on external services for media (configured in `_config.yml` `
 | New post | `_posts/YYYY-MM-DD-slug.md` |
 | New post photo | Upload via factory `tools/upload-worker/`; paste `![alt](https://media.jonathanfrei.com/assets/img/…)` — never commit the file |
 | New link post | `_posts/YYYY-MM-DD-slug.md` with `layout: link` and `url:` |
-| Draft | `_x7k9p/` |
 | Nav / header | `_includes/header.html` |
 | Footer / disclaimer | `_includes/footer.html` |
 | `<head>`, favicon, meta | `_includes/head.html` |
@@ -358,7 +351,6 @@ Production depends on external services for media (configured in `_config.yml` `
 | Search / tag / archive indexes | `_plugins/site_index.rb` + `site_index` in `_config.yml` (#195). `search.json` includes `date_label` and first-image `img` (`src` + `alt`) for stream results (#219). |
 | Date timezone | `_config.yml` `timezone: America/New_York` (#180) |
 | Drop caps on long posts | `_plugins/drop_cap.rb` + `.prose--drop-cap` in `main.css` (#123) |
-| Tag archive title | unused `_layouts/tag.html` (tag pages not generated, #209) |
 | Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` (thin dump of `site.data.search_index`). URLs: `?q=`, `?tag=`, `?category=`, `?title=`; `?=text` aliases `?q=`. The query string is the source of truth until the user types; an inline seed fills the box on first paint (#211). `search.js` is deferred; `/search` and query URLs reserve result space so the footer does not shift (#212). Result cards reuse the `/blog` stream markup (title, long date, tag chips, excerpt, first image, Read more; link entries hide the title) (#219). Tag, category, and archive lists stay visible below results. |
 | Random-post URL list | `search.json` (`url` + `kind`; essays and link posts; `posts.json` removed — #130, #221) |
 | Theme toggle | Boot in `_includes/head.html`; full `assets/js/theme.js` loads on first click (footer stub) |
@@ -377,7 +369,7 @@ Before finishing a change that touches build, layouts, or CSS:
 1. [ ] Permalinks have **no** trailing slash for HTML pages (`/about` not `/about/`). Link posts use the same `/:year/:month/:day/:title` shape as essays.
 2. [ ] Every HTML page links the design system (jsDelivr in production, `/assets/css/core.css` locally); no inlined `main.css`; `code.css` only on code pages; no `../` includes
 3. [ ] Tags on `/blog` still look like chips (not oversized title links) and point at `/tags?tag=`. Category chips point at `/categories?category=`. Month lists use the same stream entries as `/blog` (#201). No `/tags/:name` or `/categories/:name` HTML files.
-4. [ ] Drafts stay out of `_posts/` until intentional publish
+4. [ ] Only intentional publications are added to `_posts/`; unfinished drafts stay outside the repository
 5. [ ] If workflow changed, confirm Actions majors and `paths-ignore` still make sense
 6. [ ] Prefer a green deploy run after merge/push to `main`
 7. [ ] Static HTML drop-ins use `editorial/<slug>.html` → `/editorial/<slug>` (no `index.html` in asset folders)
@@ -394,4 +386,4 @@ Before finishing a change that touches build, layouts, or CSS:
 
 ## Owner intent
 
-Ship a calm, readable personal site. Agents should be careful with production deploys, preserve typography/accessibility choices, and keep the content workflow (drafts → posts → Actions) simple.
+Ship a calm, readable personal site. Agents should be careful with production deploys, preserve typography/accessibility choices, and keep the content workflow (posts → Actions) simple.

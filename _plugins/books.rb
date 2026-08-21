@@ -299,6 +299,8 @@ module Jekyll
       doc.data["book_noindex"] = !index_flag
       doc.data["book_listed"] = listed_flag
       doc.data["book_title"] = home.data["title"]
+      # Visible author comes from book-home front matter only (#277).
+      # There is no collection default; empty home author stays empty.
       home_author = home.data["author"].to_s.strip
       doc.data["author"] = home_author unless home_author.empty?
       return if index_flag

@@ -43,7 +43,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-archives
-  - jekyll-paginate-v2
   - jekyll-relative-links
 
 # Books: nested markdown under _books/<book-slug>/ (_plugins/books.rb).
@@ -58,9 +57,8 @@ relative_links:
   enabled: true
   collections: true
 
-# Pagination (blog index + tag/category autopages)
-# Trailing slash on permalink so jekyll-paginate-v2 writes page/N/index.html
-# and trail paths stay valid (without it, trail becomes ".../2index" — #153).
+# Pagination for the custom /blog stream generator (`_plugins/stream_pages.rb`).
+# Later pages use directories so /blog/page/N/ resolves to index.html.
 pagination:
   enabled: true
   per_page: 100
@@ -88,35 +86,7 @@ post_metadata:
 site_index:
   excerpt_chars: 140
 
-# Auto-generated paginated tag + category pages (jekyll-paginate-v2)
-autopages:
-  enabled: true
-  tags:
-    layouts:
-      - tag.html
-    title: "Tag: :tag"
-    # No trailing slash — same rationale as site permalink (#63)
-    # slugify mode default matches Liquid | slugify (spaces → hyphens)
-    permalink: "/tags/:tag"
-    # Tag archives are search URLs (/tags?tag=name), not generated pages (#209).
-    enabled: false
-    slugify:
-      mode: default
-      cased: true
-  categories:
-    layouts:
-      - category.html
-    title: "Category: :cat"
-    permalink: "/categories/:cat"
-    # Category archives are search URLs (/categories?category=name).
-    enabled: false
-    slugify:
-      mode: default
-      cased: true
-  collections:
-    enabled: false
-
-# Month archive pages only (tags/categories handled by paginate-v2 autopages)
+# Month archive pages only. Tags and categories use query-driven index pages.
 # Must use trailing slash → directory/index.html. Without it, jekyll-archives
 # writes extensionless files (archive/2016/01) that GH Pages downloads.
 jekyll-archives:
@@ -180,7 +150,7 @@ static_html:
 include:
   - _pages
 
-# Exclude from processing (including obfuscated drafts folder)
+# Exclude source and tooling files from processing.
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -190,7 +160,7 @@ exclude:
   - README.md
   - AGENTS.md
   - scripts
-  - _x7k9p
+  - assets/deprecated
   - .gitignore
   # Residual local media trees (safe to delete once S3 is confirmed, #170).
   # Excluded so date-prefixed .jpg names are not read as posts.
@@ -237,13 +207,14 @@ defaults:
       type: "books"
     values:
       layout: book
-      author: Jonathan Frei
+      # No default author. Show a byline only when book-home front matter
+      # sets author: (copied to chapters by _plugins/books.rb). #277
 
 # SEO / social (basic)
 twitter:
   username: jonathanfrei
 
-# Feed settings – drafts never included because excluded from build
+# Feed settings. jekyll-feed writes an unused file; /feed.xml is authored below.
 # jekyll-feed writes an unused file; /feed.xml is the authored mixed feed.
 feed:
   path: jekyll-feed-unused.xml

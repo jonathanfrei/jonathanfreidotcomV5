@@ -20,16 +20,10 @@
           {% if page.url == trail.path or pager.page == trail.num %}
             <span class="pagination-current" aria-current="page">{{ trail.num }}</span>
           {% else %}
-            {% comment %}
-              jekyll-paginate-v2 trail.path can become "/blog/page/2index" when
-              pagination.permalink has no trailing slash (#153). Prefer the
-              known-good first_page_path for page 1; otherwise strip a bare
-              "index" suffix glued onto the page number.
-            {% endcomment %}
             {% if trail.num == 1 %}
               {% assign trail_href = pager.first_page_path %}
             {% else %}
-              {% assign trail_href = trail.path | replace: '/index.html', '' | replace: 'index.html', '' | replace: '/index', '' | replace: 'index', '' %}
+              {% assign trail_href = trail.path %}
             {% endif %}
             <a href="{{ trail_href | relative_url }}">{{ trail.num }}</a>
           {% endif %}
