@@ -1,6 +1,18 @@
 /* Book collection chrome. Tokens come from main.css.
    Linked as /assets/css/book.css on layout: book only — do not inline. */
 
+html.layout-book {
+  /* Sticky .book-toolbar sits at top: 0. Keep hash targets (H2/H3) below it (#275).
+     Fallback covers the 44px toggle, toolbar padding, border, and one wrapped
+     crumb line. book-nav.js overwrites --book-sticky-offset from measured height. */
+  --book-sticky-offset: calc(44px + (var(--space-2) * 2) + 1px + var(--space-4));
+  scroll-padding-top: var(--book-sticky-offset);
+}
+
+html.layout-book body {
+  scroll-padding-top: var(--book-sticky-offset);
+}
+
 .book-shell {
   flex: 1;
   display: flex;
@@ -158,6 +170,15 @@ html.book-nav-open {
   max-width: var(--measure);
   margin-inline: auto;
   padding-inline: var(--space-4);
+}
+
+.book-article .post-header {
+  margin-bottom: var(--space-6);
+}
+
+.book-meta {
+  margin-top: var(--space-6);
+  margin-bottom: 0;
 }
 
 .book-toc__list {

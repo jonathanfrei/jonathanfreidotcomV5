@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}" class="layout-book">
 <head>
   {% include head.html %}
   {% if page.book_noindex %}
@@ -41,19 +41,35 @@
 
     <main id="main" class="book-main">
       <article class="prose book-article" itemscope itemtype="https://schema.org/Chapter">
-        {% if page.title %}<h1 itemprop="headline">{{ page.title }}</h1>{% endif %}
-        {% if page.author %}
-        <p class="post-meta">
-          <span itemprop="author">{{ page.author }}</span>
-          {% if page.source %}
-          <span class="post-meta__sep" aria-hidden="true">·</span>
-          <a href="{{ page.source }}">Source</a>
-          {% endif %}
-        </p>
-        {% endif %}
+        {%- if page.eyebrow or page.title or page.deck %}
+        <header class="post-header">
+          {%- if page.eyebrow %}
+          <p class="eyebrow">{{ page.eyebrow | escape }}</p>
+          {%- endif %}
+          {%- if page.title %}
+          <h1 itemprop="headline">{{ page.title }}</h1>
+          {%- endif %}
+          {%- if page.deck %}
+          <p class="deck" itemprop="description">{{ page.deck | escape }}</p>
+          {%- endif %}
+        </header>
+        {%- endif %}
         <div itemprop="articleBody">
           {{ content }}
         </div>
+        {%- if page.author or page.source %}
+        <p class="post-meta book-meta">
+          {%- if page.author %}
+          <span itemprop="author">{{ page.author }}</span>
+          {%- endif %}
+          {%- if page.author and page.source %}
+          <span class="post-meta__sep" aria-hidden="true">·</span>
+          {%- endif %}
+          {%- if page.source %}
+          <a href="{{ page.source }}">Source</a>
+          {%- endif %}
+        </p>
+        {%- endif %}
         {% if page.is_book_home %}
           {% include book-toc.html variant="article" %}
         {% endif %}

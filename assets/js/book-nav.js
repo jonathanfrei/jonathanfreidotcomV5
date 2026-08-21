@@ -26,6 +26,13 @@
     document.documentElement.style.setProperty("--book-overlay-top", overlayTop() + "px");
   }
 
+  function syncStickyOffset() {
+    if (!toolbar) return;
+    var extra = 12;
+    var height = Math.ceil(toolbar.getBoundingClientRect().height) + extra;
+    document.documentElement.style.setProperty("--book-sticky-offset", height + "px");
+  }
+
   function setOpen(open) {
     panel.open = !!open;
   }
@@ -155,7 +162,14 @@
   }
 
   panel.addEventListener("toggle", syncOpenClass);
-  window.addEventListener("resize", layoutOverlay);
+  window.addEventListener("resize", function () {
+    layoutOverlay();
+    syncStickyOffset();
+  });
+  if (typeof ResizeObserver !== "undefined" && toolbar) {
+    new ResizeObserver(syncStickyOffset).observe(toolbar);
+  }
+  syncStickyOffset();
 
   panel.addEventListener("pointerenter", function () {
     loadToc();
