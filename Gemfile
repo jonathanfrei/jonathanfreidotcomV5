@@ -7,7 +7,6 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag", "~> 2.8"
   gem "jekyll-sitemap", "~> 1.4"
   gem "jekyll-archives", "~> 2.2"
-  gem "jekyll-paginate-v2", "~> 3.0"
   gem "jekyll-relative-links", "~> 0.7"
   # Rouge is Jekyll's default highlighter (faster than CodeRay, #195)
 end
