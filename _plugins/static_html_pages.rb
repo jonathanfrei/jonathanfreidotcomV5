@@ -66,7 +66,7 @@ module Jekyll
     safe true
     priority :low
 
-    DEFAULT_ROOTS = %w[_pages/editorial].freeze
+    DEFAULT_ROOTS = %w[_pages].freeze
 
     def generate(site)
       roots = roots_for(site)
