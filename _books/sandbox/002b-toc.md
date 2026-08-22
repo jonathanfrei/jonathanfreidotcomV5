@@ -2,7 +2,6 @@
 title: TOC
 id: toc
 slug: toc
-author: Jonathan Frei
 date: 2026-08-20
 updated: 2026-08-20
 ---
@@ -21,6 +20,6 @@ Look into how to register a directory as a collection and then begin developing 
 
 > Come, you spirits / That tend on mortal thoughts, unsex me here, / And fill me from the crown to the toe top-full / Of direst cruelty!
 > *Lady Macbeth (Act 1, Scene 5 Macbeth)*
-{: .pullquote}
+{: .pull-quote}
 
 [![chatgpt](https://media.jonathanfrei.com/assets/img/2026-08-22-073216-29514.jpg)](https://media.jonathanfrei.com/assets/img/2026-08-22-073216-29514.jpg)
