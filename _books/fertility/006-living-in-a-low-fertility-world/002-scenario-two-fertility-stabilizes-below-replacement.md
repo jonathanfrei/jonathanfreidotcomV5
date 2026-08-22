@@ -1,5 +1,5 @@
 ---
-title: Scenario two: fertility stabilizes below replacement
+title: "Scenario two: fertility stabilizes below replacement"
 ---
 
 1. Managed population decline.

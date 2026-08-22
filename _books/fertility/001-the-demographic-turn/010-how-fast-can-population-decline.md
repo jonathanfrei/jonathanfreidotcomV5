@@ -11,11 +11,7 @@ Four forces determine the pace: births, deaths, immigration, and emigration. Fer
 
 A country with fertility modestly below replacement and a balanced age structure may stabilize gradually. A country with very low fertility, few young adults, and a large elderly population can decline faster as deaths rise and births remain few. The same TFR therefore does not imply the same annual population change.
 
-<<<<<<< HEAD
 Migration changes the national arithmetic most quickly. It can add working-age adults directly and, because migrants are often young, add future births as well. It cannot make every country grow at once: international migration redistributes population rather than creating it. As immigrants and their children adapt to the host country's family pattern, their fertility tends to converge too. A stable national total can conceal both an unrepaired birth deficit and a loss of young people somewhere else.
-=======
-Migration changes the national arithmetic most quickly. It can add working-age adults directly and, because migrants are often young, add future births as well. It cannot make every country grow at once: international migration redistributes population rather than creating it. Nor does a stable national total mean that every region or age group is stable.
->>>>>>> d02348d4d0140927c90b344a2b1c1599c3cfdb54
 
 ## National turns precede the global turn
 
@@ -27,15 +23,8 @@ After a peak, decline need not proceed at a constant percentage. It may accelera
 
 Forecasts should therefore be read as conditional trajectories. They are most useful for showing what current age structure and plausible assumptions imply—not for assigning a date to an unavoidable future. The near term is constrained by people already alive. The distant pace depends increasingly on choices and conditions we cannot yet observe.
 
-<<<<<<< HEAD
 **Citations**
 
 1. United Nations, Department of Economic and Social Affairs, Population Division, [*World Population Prospects 2024: Summary of Results*](https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/wpp2024_summary_of_results_final_web.pdf).
 2. United Nations, Department of Economic and Social Affairs, Population Division, [*World Population Prospects 2024: Methodology Report*](https://www.un.org/development/desa/pd/content/world-population-prospects-2024-methodology-report).
 3. Organisation for Economic Co-operation and Development, [“Migrant family building: Recent evidence and implications”](https://www.oecd.org/en/publications/international-migration-outlook-2023_b0f40584-en/full-report/component-8.html), in *International Migration Outlook 2023*, 2023.
-=======
-## Citations
-
-1. United Nations, Department of Economic and Social Affairs, Population Division, [*World Population Prospects 2024: Summary of Results*](https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/wpp2024_summary_of_results_final_web.pdf).
-2. United Nations, Department of Economic and Social Affairs, Population Division, [*World Population Prospects 2024: Methodology Report*](https://www.un.org/development/desa/pd/content/world-population-prospects-2024-methodology-report).
->>>>>>> d02348d4d0140927c90b344a2b1c1599c3cfdb54

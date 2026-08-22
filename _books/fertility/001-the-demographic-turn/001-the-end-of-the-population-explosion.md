@@ -23,11 +23,7 @@ When low fertility persists, smaller birth cohorts eventually become smaller coh
 
 I do not take this to mean that population moves along a fixed track. Fertility can rise, migration can alter national trajectories, and forecasts become less certain with distance. The narrower point is enough: the population explosion is no longer a useful default model for the century ahead. To see why, we first need to recover the fears it created—and the transition that eventually slowed it.
 
-<<<<<<< HEAD
 **Citations**
-=======
-## Citations
->>>>>>> d02348d4d0140927c90b344a2b1c1599c3cfdb54
 
 1. United Nations, Department of Economic and Social Affairs, Population Division, [*World Population Prospects 2024*](https://www.un.org/development/desa/pd/world-population-prospects-2024).
 2. United Nations, [“Day of Eight Billion”](https://www.un.org/en/dayof8billion).
