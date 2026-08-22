@@ -23,11 +23,7 @@ The shared structure is more useful here. Education and work consume more of ear
 
 East Asia also shows why reversal becomes harder with delay. Policies may improve the conditions for each potential family, but they cannot quickly recreate adults who were never born. Low fertility first changes behavior, then cohort size, and finally the range of near-term demographic possibilities.
 
-<<<<<<< HEAD
 **Citations**
-=======
-## Citations
->>>>>>> d02348d4d0140927c90b344a2b1c1599c3cfdb54
 
 1. Statistics Bureau of Japan, [*Current Population Estimates as of October 1, 2024*](https://www.stat.go.jp/english/data/jinsui/2024np/).
 2. Statistics Korea, [*Birth Statistics in 2024*](https://kostat.go.kr/boardDownload.es?bid=11773&list_no=436027&seq=1).

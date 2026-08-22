@@ -17,21 +17,14 @@ At almost the same moment, the Green Revolution increased harvests across much o
 
 ## From targets to persons
 
-<<<<<<< HEAD
 Population policy carried a harder legacy. Some programs expanded voluntary access to contraception and maternal health care. Others used quotas, pressure, forced sterilization, and forced abortion. [China's one-child policy](https://www.congress.gov/112/chrg/CHRG-112hhrg68446/CHRG-112hhrg68446.pdf) made the evil unusually visible: the state entered the family, punished unauthorized children, and left demographic wounds that persisted after the policy ended. When a government reduces people to a target, administrative efficiency can become cruelty with a form attached.
 
 The 1994 International Conference on Population and Development marked an important correction. Its Program of Action put reproductive health and individual rights ahead of aggregate population targets. It established a sounder principle: demographic outcomes are made from intimate human decisions, and policy must respect the persons making them.
-=======
-Population policy carried a harder legacy. Some programs expanded voluntary access to contraception and maternal health care. Others used quotas, pressure, or coercion. When a state reduces people to a target, the distinction between helping families act and making them serve a plan can disappear quickly.
-
-The 1994 International Conference on Population and Development marked an important correction. Its Programme of Action put reproductive health and individual rights ahead of aggregate population targets. It established a sounder principle: demographic outcomes are made from intimate human decisions, and policy must respect the persons making them.
->>>>>>> d02348d4d0140927c90b344a2b1c1599c3cfdb54
 
 The older fear still influences population news. Growth is easy to imagine as pressure; decline can look like relief. In ecological terms it sometimes will be. But the history warns against forecasting by straight line. Malthus underestimated innovation, the population-bomb literature underestimated fertility decline, and later forecasts have repeatedly adjusted as behavior changed.
 
 The lesson is not that limits are imaginary. Soil, water, climate, and ecosystems remain real constraints. It is that population and subsistence are not independent clocks. Technology, institutions, mortality, family aspirations, and policy alter both. The demographic transition is the name we give to the most important of those linked changes.
 
-<<<<<<< HEAD
 **Citations**
 
 1. Thomas Robert Malthus, [*An Essay on the Principle of Population*](https://en.wikisource.org/wiki/An_Essay_on_the_Principle_of_Population_(1798)), 1798.
@@ -40,11 +33,3 @@ The lesson is not that limits are imaginary. Soil, water, climate, and ecosystem
 4. Paul R. Ehrlich, *The Population Bomb* (Ballantine Books, 1968).
 5. Congressional-Executive Commission on China, [*China's One-Child Policy: The Government's Massive Crime Against Women and Unborn Babies*](https://www.congress.gov/112/chrg/CHRG-112hhrg68446/CHRG-112hhrg68446.pdf), 2011.
 6. Wang Feng, Yong Cai, and Baochang Gu, [“Population, Policy, and Politics: How Will History Judge China's One-Child Policy?”](https://doi.org/10.1111/j.1728-4457.2013.00555.x), *Population and Development Review* 38, 2013.
-=======
-## Citations
-
-1. Thomas Robert Malthus, [*An Essay on the Principle of Population*](https://en.wikisource.org/wiki/An_Essay_on_the_Principle_of_Population_(1798)), 1798.
-2. The Nobel Prize, [“Norman Borlaug—Biographical”](https://www.nobelprize.org/prizes/peace/1970/borlaug/biographical/).
-3. United Nations Population Fund, [*Programme of Action of the International Conference on Population and Development*](https://www.unfpa.org/publications/international-conference-population-and-development-programme-action), 1994.
-4. Paul R. Ehrlich, *The Population Bomb* (Ballantine Books, 1968).
->>>>>>> d02348d4d0140927c90b344a2b1c1599c3cfdb54

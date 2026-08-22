@@ -17,11 +17,7 @@ Clean water, sewage systems, vaccination, antibiotics, better nutrition, and saf
 
 Fertility commonly adjusts later because children are embedded in a household economy and a way of life. Where mortality is high, parents may have more births knowing some children will not survive. Children may contribute labor and provide security in old age. As survival becomes reliable, education expands, cities grow, and the cost of raising children changes, parents generally choose fewer births.
 
-<<<<<<< HEAD
 Women's education and control over timing matter greatly. Urbanization can make children more costly within the household. Formal schooling extends dependence. Pensions can reduce reliance on adult children. Contraception prevents births that would otherwise occur, abortion prevents pregnancies from ending in live births, and later marriage shortens the years available for childbearing. Moving women's prime reproductive years into education and paid work changes timing and raises the cost of having several children. These mechanisms are obvious even though their relative weight differs by country and period.
-=======
-Women's education and control over timing matter greatly, but no single variable completes the explanation. Urbanization can make children more costly within the household. Formal schooling extends dependence. Pensions can reduce reliance on adult children. Contraception makes preferences easier to realize. Later marriage or partnership shortens the years in which births are likely. Norms adjust as smaller families become ordinary.
->>>>>>> d02348d4d0140927c90b344a2b1c1599c3cfdb54
 
 ## The transition does not stop at two
 
@@ -31,11 +27,7 @@ The classic transition explains the great burst of growth: mortality fell before
 
 For now, it supplies the basic chronology. Growth accelerates because survival improves. It slows after births adjust. It may turn negative if low fertility persists and migration does not offset the gap between births and deaths. Before mapping where that process stands, we need to be precise about what fertility measures do—and do not—tell us.
 
-<<<<<<< HEAD
 **Citations**
-=======
-## Citations
->>>>>>> d02348d4d0140927c90b344a2b1c1599c3cfdb54
 
 1. United Nations Inter-agency Group for Child Mortality Estimation, [*Levels & Trends in Child Mortality 2024*](https://childmortality.org/reports).
 2. United Nations, Department of Economic and Social Affairs, Population Division, [*World Population Prospects 2024: Methodology Report*](https://www.un.org/development/desa/pd/content/world-population-prospects-2024-methodology-report).
