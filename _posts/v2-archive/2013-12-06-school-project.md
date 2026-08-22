@@ -11,6 +11,4 @@ tumblr_id: "69184695898"
 
 ![](media/69184695898_2.jpg)
 
-# School project
-
 One of the fun things about having a school aged kid is getting to help him with special projects. This is my favorite so far. I’m not saying I’ve never been prouder of anything else I’ve made. I’m not saying that at all. But this comes close.

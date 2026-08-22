@@ -10,9 +10,10 @@ The webapp, <a href="http://rhiever.github.io/baby-name-explorer/index.html">Bab
 
 It looks like my parents picked my name right at he height of its popularity.&nbsp;
 
-<a href="media/2015/09/IMG_7882.png"><img src="media/2015/09/IMG_7882.png" alt=""></a>&nbsp;
+<a href="media/2015/09/IMG_7882.png"><img src="media/2015/09/IMG_7882.png" alt=""></a>
+
 However, I don't feel like I encounter that many other Jonathan's. On the other hand, my in-laws picked a name well ahead of its time for my wife.
 
-<a href="media/2015/09/IMG_7883.png"><img  alt="" src="media/2015/09/IMG_7883.png" title="" class="size-custom"></a>&nbsp;
+<a href="media/2015/09/IMG_7883.png"><img  alt="" src="media/2015/09/IMG_7883.png" title="" class="size-custom"></a>
 
 via <a href="https://boingboing.net/2015/09/04/find-out-when-your-first-name.html">Boing Boing</a>
