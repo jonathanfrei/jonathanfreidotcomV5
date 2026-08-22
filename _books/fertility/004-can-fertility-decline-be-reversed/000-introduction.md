@@ -1,6 +1,5 @@
 ---
-title: Introduction
-deck: Can Fertility Decline Be Reversed?
+title: Can Fertility Decline Be Reversed?
 ---
 
 Write the section intro after the sections.

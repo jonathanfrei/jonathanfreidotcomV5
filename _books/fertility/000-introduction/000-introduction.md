@@ -1,6 +1,5 @@
 ---
-title: Introduction
-deck: The Civilizational Stakes of a Shrinking Humanity
+title: The Civilizational Stakes of a Shrinking Humanity
 eyebrow: The fertility decline
 ---
 

@@ -1,6 +1,5 @@
 ---
-title: Introduction
-deck: Humanity’s Expansion to the Stars
+title: "Humanity’s Expansion to the Stars"
 ---
 
 Write the section intro after the sections.
