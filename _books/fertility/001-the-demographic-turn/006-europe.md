@@ -1,10 +1,6 @@
 ---
 title: Europe
-<<<<<<< HEAD
 deck: The first low-fertility continent now contains several distinct versions of demographic aging
-=======
-deck: The first low-fertility continent now contains several distinct versions of demographic ageing
->>>>>>> d02348d4d0140927c90b344a2b1c1599c3cfdb54
 eyebrow: The early transition
 ---
 
@@ -25,11 +21,7 @@ Migration separates national fertility from national growth. Germany and several
 
 Europe therefore offers no single forecast. Some countries will age while remaining roughly stable through immigration. Others are likely to become smaller. Within each, large cities may grow while rural districts empty. What Europe demonstrates most clearly is the persistence of below-replacement fertility: once established, it can survive economic cycles, policy changes, and substantial differences in welfare provision.
 
-<<<<<<< HEAD
 **Citations**
-=======
-## Citations
->>>>>>> d02348d4d0140927c90b344a2b1c1599c3cfdb54
 
 1. Eurostat, [“Fertility statistics”](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Fertility_statistics), 2026.
 2. Eurostat, [*Demography of Europe—2026 edition*](https://ec.europa.eu/eurostat/web/interactive-publications/demography-2026).
