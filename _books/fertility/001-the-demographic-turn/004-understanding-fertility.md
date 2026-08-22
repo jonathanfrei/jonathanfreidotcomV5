@@ -27,7 +27,11 @@ Crossing below replacement does not make population fall immediately. A youthful
 
 No one measure tells the whole story. I will usually pair fertility with births, age structure, mortality, and migration, and distinguish an observation from a projection. These habits are less dramatic than treating every release as a turning point. They are also the only reliable way to see the demographic turn as it unfolds.
 
+<<<<<<< HEAD
 **Citations**
+=======
+## Citations
+>>>>>>> d02348d4d0140927c90b344a2b1c1599c3cfdb54
 
 1. Eurostat, [“Fertility statistics”](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Fertility_statistics).
 2. United Nations, Department of Economic and Social Affairs, Population Division, [*World Population Prospects 2024: Methodology Report*](https://www.un.org/development/desa/pd/content/world-population-prospects-2024-methodology-report).
