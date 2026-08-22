@@ -1,6 +1,5 @@
 ---
-title: Introduction
-deck: The Social Conditions of Family Formation
+title: The Social Conditions of Family Formation
 ---
 
 Write the section intro after the sections.

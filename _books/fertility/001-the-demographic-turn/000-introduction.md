@@ -1,6 +1,5 @@
 ---
-title: Introduction
-deck: The Demographic Turn
+title: The Demographic Turn
 ---
 
 Write the section intro after the sections.

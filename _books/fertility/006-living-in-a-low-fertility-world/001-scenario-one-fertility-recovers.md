@@ -1,5 +1,5 @@
 ---
-title: Scenario one: fertility recovers
+title: "Scenario one: fertility recovers"
 ---
 
 1. Possible pathways.
