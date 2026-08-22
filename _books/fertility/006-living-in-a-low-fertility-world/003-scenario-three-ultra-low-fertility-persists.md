@@ -1,5 +1,5 @@
 ---
-title: "Scenario three: ultra-low fertility persists"
+title: Scenario three: ultra-low fertility persists
 ---
 
 1. Long-term demographic contraction.
