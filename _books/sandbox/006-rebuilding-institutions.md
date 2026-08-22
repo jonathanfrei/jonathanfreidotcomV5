@@ -1,6 +1,13 @@
 ---
 title: Rebuilding the institutions around families
+deck: Extended Family, Community Institutions, Marraige & Partnership
+eyebrow: Beyond Policy
 ---
+
+For most of human history, the family did not stand alone. It existed inside a web of other institutions: grandparents and relatives, neighbors and congregations, schools and civic organizations, marriages supported by communities that expected to see them endure. Together, these institutions distributed some of the work, risk, expense, and uncertainty of raising children across a much larger group of people.
+{: .lede}
+
+Modern life has weakened many of those connections while leaving the household responsible for more of the burden itself. If we want to make family formation easier, then, we have to look beyond what governments can pay for or employers can provide. We also have to rebuild the human infrastructure around the family—the relationships and institutions that make raising children a shared undertaking rather than an increasingly private one.
 
 ## Extended family
 
