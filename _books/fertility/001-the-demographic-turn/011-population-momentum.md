@@ -19,11 +19,19 @@ Momentum separates a change in family behavior from its full population effect. 
 
 This lag creates two common errors. One is to see continued growth after fertility falls and conclude that the decline did not matter. The other is to see a small annual population loss and assume future decline will remain small. Both confuse the current total with the age structure producing it.
 
+<<<<<<< HEAD
 Momentum also sets limits on short-term policy. A government can affect migration relatively quickly and may improve conditions for family formation. It cannot quickly enlarge a cohort that was born twenty-five years ago. Conversely, countries with youthful populations have time to build institutions before aging intensifies, but only if they recognize the transition while the window remains open.
 
 The lag should encourage patience in interpreting annual data and urgency in understanding cohort structure. Demography moves slowly at the level of individual lives. Across generations, those slow movements compound.
 
 **Citations**
+=======
+Momentum also sets limits on short-term policy. A government can affect migration relatively quickly and may improve conditions for family formation. It cannot quickly enlarge a cohort that was born twenty-five years ago. Conversely, countries with youthful populations have time to build institutions before ageing intensifies, but only if they recognize the transition while the window remains open.
+
+The lag should encourage patience in interpreting annual data and urgency in understanding cohort structure. Demography moves slowly at the level of individual lives. Across generations, those slow movements compound.
+
+## Citations
+>>>>>>> d02348d4d0140927c90b344a2b1c1599c3cfdb54
 
 1. United Nations, Department of Economic and Social Affairs, Population Division, [*The Impact of Population Momentum on Future Population Growth*](https://population.un.org/wpp/assets/Files/PopFacts_2017-4_Population-Momentum.pdf), 2017.
 2. United Nations, Department of Economic and Social Affairs, Population Division, [*World Population Prospects 2024: Methodology Report*](https://www.un.org/development/desa/pd/content/world-population-prospects-2024-methodology-report).
