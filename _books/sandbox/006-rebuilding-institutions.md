@@ -1,13 +1,16 @@
 ---
 title: Rebuilding the institutions around families
-deck: Extended Family, Community Institutions, Marraige & Partnership
+deck: Extended Family, Community Institutions, Marriage & Partnership
 eyebrow: Beyond Policy
 ---
 
 For most of human history, the family did not stand alone. It existed inside a web of other institutions: grandparents and relatives, neighbors and congregations, schools and civic organizations, marriages supported by communities that expected to see them endure. Together, these institutions distributed some of the work, risk, expense, and uncertainty of raising children across a much larger group of people.
 {: .lede}
 
-Modern life has weakened many of those connections while leaving the household responsible for more of the burden itself. If we want to make family formation easier, then, we have to look beyond what governments can pay for or employers can provide. We also have to rebuild the human infrastructure around the family—the relationships and institutions that make raising children a shared undertaking rather than an increasingly private one.
+Modern life has weakened many of those connections while leaving the household responsible for more of the burden itself. If we want to make family formation easier, then we have to look beyond what governments can pay for or employers can provide. We also have to rebuild the human infrastructure around the family—the relationships and institutions that make raising children a shared undertaking rather than an increasingly private one.
+
+[![](https://media.jonathanfrei.com/assets/img/2026-08-22-103041-35787.jpg)](https://media.jonathanfrei.com/assets/img/2026-08-22-103041-35787.jpg)
+{: .figure-wide}
 
 ## Extended family
 
@@ -21,7 +24,7 @@ Grandparents occupy a peculiar position in modern family life. They are close en
 
 That can mean regular childcare, but often it means something less formal. A grandparent can pick up a sick child from school when both parents are working. They can keep the children during an anniversary dinner, cover the gap between the end of the school day and the end of the workday, or take a toddler for a few hours while a newborn’s exhausted parents sleep. None of these interventions is individually transformative. Their value comes from accumulation. Family life contains hundreds of small emergencies and scheduling conflicts, and grandparents can absorb many of them.
 
-Longer healthy lifespans potentially make this resource more abundant. A person who becomes a grandparent at sixty may remain active well into a grandchild’s adulthood. But delayed family formation pushes in the opposite direction. If people have their first child later, their parents become grandparents later too. The years in which grandparents are healthy enough to help can shrink just as the period of elder care begins to overlap with the raising of children.
+Longer, healthier lifespans potentially make this resource more abundant. A person who becomes a grandparent at sixty may remain active well into a grandchild’s adulthood. But delayed family formation pushes in the opposite direction. If people have their first child later, their parents become grandparents later too. The years in which grandparents are healthy enough to help can shrink just as the period of elder care begins to overlap with the raising of children.
 
 There is also an important difference between grandparents being alive and grandparents being available. Retirement patterns, health, work, divorce, and distance all shape what grandparents can actually contribute. The practical question is not simply whether a child has grandparents, but whether family life is organized in a way that allows generations to help one another.
 
