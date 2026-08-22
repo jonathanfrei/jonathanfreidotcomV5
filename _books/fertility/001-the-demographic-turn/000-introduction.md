@@ -1,5 +1,17 @@
 ---
-title: The Demographic Turn
+title: How the age of population explosion became an age of uneven demographic retreat
+eyebrow: The demographic turn
 ---
 
-Write the section intro after the sections.
+The last chapter asked what falling fertility might mean. This one begins further back, with the demographic machinery beneath the question: how humanity moved from slow growth to a population explosion, why that explosion is ending, and how decline emerges at different speeds in different places.
+{: .lede}
+
+The change is easy to misunderstand because several eras now coexist. The world still adds people, many countries have already begun to shrink, and others will grow rapidly for decades. Fertility can fall below replacement long before population does. Migration can sustain a national total while its native-born age structure grows older. A single global number hides these different motions.
+
+I will start with the fears of scarcity that rapid growth produced, then trace the demographic transition that reduced both death rates and birth rates. From there, the chapter moves across the present map—from Europe's long experience of low fertility to East Asia's sharper contraction, North America's dependence on migration, and the developing world's uneven transition. It ends with momentum and compounding, the two ideas that explain why demographic change arrives late and then can become difficult to reverse.
+
+The aim is orientation rather than prediction. Before considering causes or remedies, we need to know what the measures mean, what they leave out, and why a world that is still growing has already entered a demographic turn.
+
+## Citations
+
+1. United Nations, Department of Economic and Social Affairs, Population Division, [*World Population Prospects 2024*](https://www.un.org/development/desa/pd/world-population-prospects-2024).
