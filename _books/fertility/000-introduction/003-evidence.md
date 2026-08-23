@@ -13,15 +13,35 @@ I will use these measures throughout the book, so it helps to be clear about wha
 
 The total fertility rate is a period measure. It combines the age-specific fertility rates observed in a particular year and asks how many children a hypothetical woman would have if she experienced those rates throughout her reproductive life. [Eurostat's definition](https://ec.europa.eu/eurostat/documents/3433488/5585916/KS-SF-13-013-EN.PDF/a812b080-7ede-41a4-97ef-589ee767c581) is careful on this point: the number summarizes the pattern of a period, not the completed life of an actual woman.
 
+![Total fertility rate trends 1950–2100 by region and world](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Total_Fertility_Rate_for_6_Regions_and_the_World%2C_1950-2100%2C_UN2022.svg/960px-Total_Fertility_Rate_for_6_Regions_and_the_World%2C_1950-2100%2C_UN2022.svg.png)
+
+**Period total fertility rates over time** Chart of total fertility rates for six regions and the world, 1950–2100 (UN data). The period measure summarizes a year’s age-specific rates and is sensitive to changes in the timing of births. *[VIA Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Total_Fertility_Rate_for_6_Regions_and_the_World,_1950-2100,_UN2022.svg)*
+{: .caption}
+
+![World population pyramid 2024](https://upload.wikimedia.org/wikipedia/commons/4/4e/World_Population_Pyramid_%282024%29.png)
+
+**World population pyramid** Age-sex structure of the global population. Pyramids reveal the cumulative imprint of past fertility, mortality, and migration in a single shape. *[VIA Wikimedia Commons](https://commons.wikimedia.org/wiki/File:World_Population_Pyramid_(2024).png)*
+{: .caption}
+
 That makes the measure timely and comparable, but sensitive to changes in timing. If many people postpone births during a recession, pandemic, housing shock, or broad shift toward later parenthood, the annual total fertility rate can fall even when some of those births occur later. This is often called a tempo effect. If postponed births never occur, the decline becomes a change in completed family size as well as timing. We usually cannot know the balance immediately.
 
 Completed or cohort fertility follows people born in the same period and counts the children they actually have by the end of their reproductive years. It answers a different question and arrives much later. Period fertility is more like a current reading; cohort fertility is closer to the finished history. I will use both where the distinction affects the argument.
+
+![Demographic transition overview](https://upload.wikimedia.org/wikipedia/commons/8/8c/Demographic-TransitionOWID.png)
+
+**Demographic transition diagram** Classic stages of the demographic transition, showing how birth and death rates shift and produce temporary rapid growth followed by slower change. *[VIA Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Demographic-TransitionOWID.png)*
+{: .caption}
 
 The birth rate is different again. It counts births relative to the total population, so it is strongly affected by age structure. A country can have similar fertility behavior but fewer births because it has fewer women and men at typical childbearing ages. Replacement fertility is also not a universal law fixed at exactly 2.1. It is the level at which one generation replaces itself in the long run without migration. A [UN technical account](https://www.un.org/en/development/desa/population/publications/pdf/fertility/Fertility-levels-and-trends_WPP2012.pdf) explains why it varies with survival to reproductive age and the sex ratio at birth. Around 2.1 is a useful shorthand for many low-mortality populations, not a moral target for every place and year.
 
 ## Averages and lived differences
 
 National averages hide composition. Fertility can vary within a country by region, income, education, religion, ethnicity, urban or rural residence, partnership status, and migration history. The groups themselves are not fixed, and the relationships among these characteristics can change. A national decline may come from smaller families among parents, more people remaining childless, later births, fewer partnerships, or some combination of all four.
+
+![World map of total fertility rates by country](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Countriesbyfertilityrate.svg/960px-Countriesbyfertilityrate.svg.png)
+
+**Fertility rates by country** World map of total fertility rates, illustrating the large cross-national differences that national averages can conceal. *[VIA Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Countriesbyfertilityrate.svg)*
+{: .caption}
 
 This is why I will be cautious when moving from population data to claims about motivation. If fertility falls after housing costs rise, the pattern does not prove that housing caused the decline. If religious people have more children on average, the difference may involve belief, marriage, community support, selection, or other characteristics that travel with religious participation. Correlation can identify a question worth investigating. It cannot answer the question by itself.
 
@@ -34,6 +54,11 @@ I will not treat voluntary childlessness as a policy failure, or every unrealize
 Population projections are among the most useful tools in the book. Near-term age structure has considerable inertia because most of the people who will be alive a few decades from now have already been born. Farther out, small changes in fertility, mortality, and migration accumulate across generations.
 
 The [UN methodology for its 2024 projections](https://www.un.org/development/desa/pd/content/world-population-prospects-2024-methodology-report) makes those assumptions visible. It advances each population by age and sex, adding births, subtracting deaths, and accounting for migration. For 2024 through 2100, probabilistic models produce a central path and uncertainty intervals, while alternative scenarios show how different assumptions change population size and age structure.
+
+![World population 1800–2100 with UN medium-fertility projections](https://upload.wikimedia.org/wikipedia/commons/a/ae/2024_Our_World_In_Data_Population%2C_1800_to_2100_chart_with_future_projections_based_on_UN%27s_medium-fertility_scenario.png)
+
+**Population projections to 2100** Historical population and United Nations medium-fertility scenario projections. Far-horizon forecasts are conditional on assumptions about future fertility, mortality, and migration. *[VIA Wikimedia Commons](https://commons.wikimedia.org/wiki/File:2024_Our_World_In_Data_Population,_1800_to_2100_chart_with_future_projections_based_on_UN%27s_medium-fertility_scenario.png)*
+{: .caption}
 
 The central path is not a promise. In 2013, the UN assessed the probability that global population growth would end during this century at about 30 percent. The [2024 revision places it at 80 percent](https://www.un.org/development/desa/pd/content/world-population-prospects-2024-summary-results-0), largely because fertility fell faster than previously expected in several populous countries. The revision does not make the earlier work useless. It shows why forecasts should be updated as behavior changes and new data arrive.
 

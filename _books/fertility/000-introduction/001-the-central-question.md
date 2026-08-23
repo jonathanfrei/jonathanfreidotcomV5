@@ -7,15 +7,40 @@ eyebrow: Civilizational stakes
 For most of my life, population growth felt like part of the background of the world. Cities spread, schools filled, new workers arrived, and every argument about the future began with the assumption that there would be more people living in it. That assumption is starting to weaken. The [United Nations estimated](https://www.un.org/development/desa/pd/content/world-population-prospects-2024-summary-results-0) the global fertility rate at 2.25 births per woman in 2024, down from 3.31 in 1990, with fertility below the long-run replacement level in more than half of all countries and areas. One quarter of humanity already lives in a country whose population has peaked.
 {: .lede}
 
+![Total fertility rate trends 1950–2100 by region and world](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Total_Fertility_Rate_for_6_Regions_and_the_World%2C_1950-2100%2C_UN2022.svg/960px-Total_Fertility_Rate_for_6_Regions_and_the_World%2C_1950-2100%2C_UN2022.svg.png)
+
+**Global fertility rate decline** Chart of total fertility rates for six regions and the world from 1950 to 2100, based on United Nations World Population Prospects data, illustrating the long-term fall toward and below replacement levels. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Total_Fertility_Rate_for_6_Regions_and_the_World,_1950-2100,_UN2022.svg)*
+{: .caption}
+
 The world as a whole is still growing. The same UN projection puts the global peak around 10.3 billion people in the mid-2080s, followed by a gradual decline to about 10.2 billion in 2100. Those numbers are large enough to make the language of population decline sound premature. But global totals can hide a change that is already well underway: in many countries, fewer children are entering schools, fewer young adults are entering work and family life, and a growing share of the population is moving into old age.
 
+![World population 1800–2100 with UN medium-fertility projections](https://upload.wikimedia.org/wikipedia/commons/a/ae/2024_Our_World_In_Data_Population%2C_1800_to_2100_chart_with_future_projections_based_on_UN%27s_medium-fertility_scenario.png)
+
+**World population trajectory to 2100** Our World in Data chart showing historical growth and United Nations medium-fertility projections that peak around the mid-2080s before a slight decline. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:2024_Our_World_In_Data_Population,_1800_to_2100_chart_with_future_projections_based_on_UN%27s_medium-fertility_scenario.png)*
+{: .caption}
+
 This is a story about fewer births, and then about everything fewer births touch. It changes family life first. Later it reaches the workplace, the care of older people, and organizations trying to find successors. A birth today may become the person who carries some inherited craft into another generation. When births fall for many years, the effects arrive slowly and then appear almost everywhere at once.
+
+![World population pyramid 2024](https://upload.wikimedia.org/wikipedia/commons/4/4e/World_Population_Pyramid_%282024%29.png)
+
+**World population pyramid, 2024** Age-sex structure of the global population in 2024, reflecting the ongoing shift toward a larger share of older people amid falling fertility. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:World_Population_Pyramid_(2024).png)*
+{: .caption}
+
+![Global population pyramids 1950–2100](https://upload.wikimedia.org/wikipedia/commons/f/f6/Global_Population-Pyramid-1950-to-2100.jpg)
+
+**Changing age structure of the world, 1950–2100** Series of population pyramids illustrating the transition from a youthful base in the mid-20th century toward a top-heavy, aging structure by the end of the century. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Global_Population-Pyramid-1950-to-2100.jpg)*
+{: .caption}
 
 ## The arithmetic becomes human
 
 Population aging comes from something very good: people live longer. Sustained low fertility shapes it too. The [UN Population Division](https://www.un.org/development/desa/pd/content/ageing-1) describes the sequence plainly. As fertility first falls, the working-age share of a population can rise and create a demographic dividend. Later, the age distribution shifts upward. By 2050, [the UN expects](https://www.un.org/en/global-issues/ageing) roughly one person in six worldwide to be over 65.
 
 Ratios do not care for anyone, though people do. A rising old-age dependency ratio eventually means more retirees relative to conventional working ages, but it does not tell us how healthy those retirees will be, how long people will work, how productive each worker will become, or how families and communities will share care. The [UN's own work on aging](https://desapublications.un.org/publications/world-social-report-2023-leaving-no-one-behind-ageing-world) cautions that traditional dependency measures can overstate the burden when longer lives change what a fixed age threshold means. Demography sets the conditions; families and governments decide how to respond.
+
+![Empty classroom](https://upload.wikimedia.org/wikipedia/commons/d/d0/Empty_classroom.jpg)
+
+**Empty classroom** A vacant schoolroom that visualizes the first, most visible effect of sustained below-replacement fertility: fewer children in successive generations. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Empty_classroom.jpg)*
+{: .caption}
 
 Even so, conditions matter. Pension systems need contributors. Hospitals and nursing homes need staff. Schools, firms, and public agencies need successors who can understand what they have inherited before deciding what to change. Automation can help with some of this. Immigration can change the scale and age structure of a country. Healthier old age can extend working lives. None of them makes the underlying generational question disappear.
 
