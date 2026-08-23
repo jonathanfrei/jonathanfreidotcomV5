@@ -17,7 +17,7 @@ Parenthood has become both more voluntary and more demanding at once. The expect
 
 This “intensive parenting” makes an ordinary family feel negligent. Adults wait until they possess the right home, relationship, and temperament. Earlier parents were not necessarily wiser. They were more willing to begin without feeling “ready”, sometimes because they didn’t have a choice.
 
-Environmental and political pessimism adds another argument for waiting. Some people fear bringing a child into a world facing climate change and political instability. The concerns are not invented. I think the conclusion is often backward. A damaged world needs capable people who can fix it and love it enough to make it a valuable inheritance. Refusing the future its people is not a way to protect it.
+Environmental and political pessimism adds another argument for waiting. Some people fear bringing a child into a world facing climate change and political instability. The concerns are not invented. I think the conclusion is backward. A damaged world needs capable people who can fix it and love it enough to make it a valuable inheritance. Refusing the future its people is not a way to protect it.
 
 ## Communities that still expect children
 

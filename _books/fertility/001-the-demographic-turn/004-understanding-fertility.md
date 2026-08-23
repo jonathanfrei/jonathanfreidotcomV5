@@ -7,7 +7,7 @@ eyebrow: Reading the measures
 Fertility statistics compress millions of lives into a few numbers. That compression lets us compare countries and years, but it can make a provisional measure look more certain than it is.
 {: .lede}
 
-The total fertility rate is the measure used most often in this book. It adds the age-specific birth rates observed in a particular year and asks how many children a hypothetical woman would have if she experienced those rates throughout her reproductive life. A TFR of 1.5 does not mean that the average woman alive has 1.5 children. It describes the pattern of births occurring now.
+The total fertility rate is the measure used most commonly in this book. It adds the age-specific birth rates observed in a particular year and asks how many children a hypothetical woman would have if she experienced those rates throughout her reproductive life. A TFR of 1.5 does not mean that the average woman alive has 1.5 children. It describes the pattern of births occurring now.
 
 Completed cohort fertility follows women born in the same period until their childbearing years are largely complete. This is closer to actual lifetime family size, but it arrives too late to describe the present. Period TFR is timely; cohort fertility is conclusive. I will use each for the question it can answer.
 

@@ -9,7 +9,7 @@ The goal cannot be the largest possible number on a population chart. A civiliza
 
 Birth maximization would be a coarse and dangerous standard. It could praise conditions in which women have many children because they lack education, security, or control over sex. It could treat a mother as an instrument of the state and a child as a future taxpayer. The argument of this book points elsewhere. People should be able to form the families they want, mothers and fathers should be honored for the work they do, and children should arrive in a culture glad to receive them.
 
-That culture also owes dignity to people who never become parents. They remain bound to others and to the common life, often giving care that no fertility statistic records. A society confident in family life does not need to demean them. It can speak plainly about the public value of children because it understands value as richer than a contest for status.
+That culture also owes dignity to people who never become parents. They remain bound to others and to the common life, giving care that no fertility statistic records. A society confident in family life does not need to demean them. It can speak plainly about the public value of children because it understands value as richer than a contest for status.
 
 The demographic stakes emerge from continuity. Every institution depends on people who did not found it. A language survives because children learn it imperfectly and make it their own. A constitutional order survives because new citizens accept duties toward strangers and the unborn. Science advances because another student enters a field whose hardest questions outlived the last professor. Civilization is a relay conducted mostly among people who never meet.
 

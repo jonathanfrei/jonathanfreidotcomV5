@@ -4,7 +4,7 @@ deck: Fewer children thin the web of kin before they empty the institutions arou
 eyebrow: The missing relations
 ---
 
-The first consequence of having fewer children is a smaller family. Population debate often rushes past that plain fact toward GDP and pensions. A child without siblings might also grow up without nieces or nephews. Her own child will have fewer cousins. One missing relationship removes another from the next generation.
+The first consequence of having fewer children is a smaller family. Population debates rush past that plain fact toward GDP and pensions. A child without siblings might also grow up without nieces or nephews. Her own child will have fewer cousins. One missing relationship removes another from the next generation.
 {: .lede}
 
 Longer lives pull families vertically, allowing children to know grandparents and sometimes great-grandparents. Low fertility thins them horizontally. A family reunion may span four generations and fit around one table. The result can be close and loving. It also leaves fewer people to share care or remember the same childhood from another angle.
@@ -21,13 +21,13 @@ Childlessness makes the problem sharper. Friends can provide real affection, and
 
 Kinless people may have devoted friends, just as estrangement can make a large family unavailable. Family remains the care network that ordinarily brings its next members into being. Paid alternatives have to find the next caregiver and persuade her to stay.
 
-Technology can make that work lighter. A sensor can detect a fall, and a lifting machine may let one aide care safely for more people. The frightened person awake at three in the morning will often need human company. Intimate knowledge of a parent also matters when someone must decide what she would have wanted.
+Technology can make that work lighter. A sensor can detect a fall, and a lifting machine may let one aide care safely for more people. The frightened person awake at three in the morning will need human company. Intimate knowledge of a parent also matters when someone must decide what she would have wanted.
 
 ## When the school closes
 
 The same thinning moves outward. A school loses a class, then combines grades, then closes. The decision may be fiscally sensible: keeping a building open for six children can consume money that would educate them better elsewhere. It also removes the place where parents most reliably meet and a town sees its future.
 
-An OECD review of rural school systems found that closures often reflected community decline more than they caused it. The two processes can still reinforce one another. A young family is less likely to move to a town without a nearby school. The next enrollment count falls further.
+An OECD review of rural school systems found that closures reflected community decline more than they caused it. The two processes can still reinforce one another. A young family is less likely to move to a town without a nearby school. The next enrollment count falls further.
 
 Churches and clubs face the same succession problem in slower motion. A congregation can remain active for years as its members age together. Eventually it has too few young families to run its nursery or replace a treasurer. The institution may merge with one in the next town. Something efficient has happened on paper, and another web of local obligation has disappeared.
 

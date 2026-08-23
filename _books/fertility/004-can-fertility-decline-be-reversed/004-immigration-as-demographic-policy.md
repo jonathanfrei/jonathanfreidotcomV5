@@ -7,7 +7,7 @@ eyebrow: Borrowing a generation
 Immigration is the fastest humane way for a low-fertility country to add young adults. A migrant arrives already raised and often ready to work, pay taxes, form a household, and have children. That speed makes immigration valuable. It also tempts governments to call a transfer of people a solution to fertility decline.
 {: .lede}
 
-At the national level, migration can prevent population loss for decades. It can fill a hospital vacancy before a newborn could finish kindergarten. Because migrants are often younger than the receiving population, they improve the age balance as well as the head count. Canada recently demonstrated how strongly immigration can separate population growth from native fertility: the country grew rapidly while its TFR fell to 1.25 in 2024.
+At the national level, migration can prevent population loss for decades. It can fill a hospital vacancy before a newborn could finish kindergarten. Because migrants are typically younger than the receiving population, they improve the age balance as well as the head count. Canada recently demonstrated how strongly immigration can separate population growth from native fertility: the country grew rapidly while its TFR fell to 1.25 in 2024.
 
 The fiscal effect depends on who arrives and what happens afterward. A young worker with scarce skills may contribute more in taxes than she receives in services for many years. A child who migrates will first attend school, then work. Refugees often need costly help at arrival and may contribute more as language and employment improve. “Immigrants” are not one entry in a ledger.
 

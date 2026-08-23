@@ -9,7 +9,7 @@ Democracy counts the citizens who are present. Future citizens receive the resul
 
 A retired renter and a wealthy homeowner may disagree about nearly everything, so age produces a varied electorate. Older adults generally vote at higher rates than younger adults, and their share of eligible voters is growing. The [OECD has warned](https://www.oecd.org/en/publications/governance-for-youth-trust-and-intergenerational-justice_c3e5cb8a-en/full-report/component-10.html) that young people risk losing political weight both in the electorate and in public decision-making.
 
-The resulting bias often comes from ordinary political attention. A pension check due next month is concrete. The child who might be born five years from now has no constituency. Parties learn to protect current benefits before making distant investments whose beneficiaries cannot punish them at the next election.
+The resulting bias comes from ordinary political attention. A pension check due next month is concrete. The child who might be born five years from now has no constituency. Parties learn to protect current benefits before making distant investments whose beneficiaries cannot punish them at the next election.
 
 Housing makes the conflict unusually visible. Older owners benefit when scarcity raises the value of their homes; young families need more housing to make room for children. Local rules that block building can preserve a neighborhood as current residents like it and close that neighborhood to the next generation. Each vote may be understandable. The accumulated choice tells young adults that an inherited view matters more than their household.
 

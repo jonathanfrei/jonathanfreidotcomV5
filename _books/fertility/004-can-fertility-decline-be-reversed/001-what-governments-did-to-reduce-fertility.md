@@ -4,7 +4,7 @@ deck: States learned to suppress births more readily than they have learned to r
 eyebrow: The demographic ratchet
 ---
 
-Some governments set out to cause fertility decline. The bluntest used force. Liberal states more often subsidized control over reproduction and reorganized public life around the continuous career. These acts differ morally and practically. Taken together, they show how policy helped turn smaller families from a private choice into an institutional direction.
+Some governments set out to cause fertility decline. The bluntest used force. Liberal states subsidized control over reproduction and reorganized public life around the continuous career. These acts differ morally and practically. Taken together, they show how policy helped turn smaller families from a private choice into an institutional direction.
 {: .lede}
 
 The worst cases began with a numerical target. Once a state decides that too many children are being born, a pregnancy becomes a failure in a plan. The official can then treat the mother, father, and unborn child as obstacles to be managed.

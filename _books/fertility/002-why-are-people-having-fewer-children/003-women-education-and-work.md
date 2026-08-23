@@ -17,7 +17,7 @@ The laws as enacted did not require anyone to write a fertility-reduction clause
 
 ## Work before and after a birth
 
-Paid work affects fertility in opposing directions. A secure job makes marriage and a first child financially possible. Long hours, inflexible schedules, and fear of losing one's place make having children harder. Across OECD countries, women's employment has been positively associated with fertility since the 1990s, reversing the older national pattern. Countries that help mothers combine work and family often do better than countries that demand a choice between them. They still remain mostly below replacement.
+Paid work affects fertility in opposing directions. A secure job makes marriage and a first child financially possible. Long hours, inflexible schedules, and fear of losing one's place make having children harder. Across OECD countries, women's employment has been positively associated with fertility since the 1990s, reversing the older national pattern. Countries that help mothers combine work and family do better than countries that demand a choice between them. They still remain mostly below replacement.
 
 The conflict becomes visible after the first birth. Henrik Kleven's [U.S. estimates](https://www.nber.org/reporter/2022number4/child-penalties-and-gender-inequality) show women's employment falling about 25 percent and earnings about 33 percent relative to men's after children arrive. Men and women follow nearly parallel earnings paths beforehand. The break is immediate and persistent.
 
