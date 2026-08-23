@@ -9,11 +9,36 @@ Long before population became a line on a United Nations chart, it was an argume
 
 In his 1798 *Essay on the Principle of Population*, Thomas Robert Malthus proposed a stark imbalance. Population, when unchecked, could increase geometrically, while subsistence increased only arithmetically. Famine, disease, and other restraints would close the gap. His formulation was too mechanical to describe the full course of modern development, but its intuition was powerful: gains in living standards could be swallowed by additional population.
 
+![Portrait of Thomas Robert Malthus](https://upload.wikimedia.org/wikipedia/commons/e/e6/Thomas_Malthus.jpg)
+
+**Thomas Robert Malthus** Historical portrait of the English economist and clergyman whose 1798 essay framed population growth as inevitably outrunning food supply. *[VIA Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Thomas_Malthus.jpg)*
+{: .caption}
+
+![Title page of An Essay on the Principle of Population, 1798](https://upload.wikimedia.org/wikipedia/commons/5/5b/An_Essay_on_the_Principle_of_Population.jpg)
+
+**Title page of Malthus’s 1798 Essay** The first-edition title page of *An Essay on the Principle of Population*, the work that launched modern debates over geometric population growth versus arithmetic subsistence. *[VIA Wikimedia Commons](https://commons.wikimedia.org/wiki/File:An_Essay_on_the_Principle_of_Population.jpg)*
+{: .caption}
+
 The industrial and agricultural transformations that followed repeatedly expanded the apparent limit. Fossil energy and synthetic fertilizer supported larger populations and longer lives. These gains did not abolish hunger, which often reflected war and distribution as much as an absolute lack of food. They did make a simple race between mouths and acres inadequate.
 
 Yet the twentieth-century surge gave Malthusian fears new force. In 1968, Paul and Anne Ehrlich's *The Population Bomb* presented mass starvation as an imminent consequence of rapid growth. Governments and international institutions increasingly treated fertility as something public policy should reduce.
 
+![Cover of The Population Bomb by Paul Ehrlich](https://upload.wikimedia.org/wikipedia/en/d/da/The_Population_Bomb.jpg)
+
+**The Population Bomb (1968)** Front cover of the bestselling book by Paul and Anne Ehrlich that revived Malthusian fears and helped spur 20th-century population-control policies. *[VIA Wikipedia](https://en.wikipedia.org/wiki/File:The_Population_Bomb.jpg)*
+{: .caption}
+
+![Paul R. Ehrlich in 2008](https://upload.wikimedia.org/wikipedia/commons/0/04/Paul_R._Ehrlich_2008.jpg)
+
+**Paul R. Ehrlich** Photograph of the Stanford biologist and co-author of *The Population Bomb*, taken in 2008. *[VIA Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Paul_R._Ehrlich_2008.jpg)*
+{: .caption}
+
 At almost the same moment, the Green Revolution increased harvests across much of Asia and Latin America. Research associated with Norman Borlaug helped produce high-yielding wheat varieties, while irrigation raised output further. The achievement was neither costless nor universal, but it confounded the most immediate claims that food production could not keep pace.
+
+![Norman Borlaug in 2004](https://upload.wikimedia.org/wikipedia/commons/d/d7/Norman_Borlaug_%282004%29.jpg)
+
+**Norman Borlaug** Nobel Peace Prize laureate and architect of the Green Revolution, photographed on his 90th birthday in 2004; his high-yielding wheat varieties helped expand food supplies beyond Malthusian limits. *[VIA Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Norman_Borlaug_(2004).jpg)*
+{: .caption}
 
 ## From targets to persons
 
