@@ -19,7 +19,7 @@ In his 1798 *Essay on the Principle of Population*, Thomas Robert Malthus propos
 **Title page of Malthus’s 1798 Essay** The first-edition title page of *An Essay on the Principle of Population*, the work that launched modern debates over geometric population growth versus arithmetic subsistence. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:An_Essay_on_the_Principle_of_Population.jpg)*
 {: .caption}
 
-The industrial and agricultural transformations that followed repeatedly expanded the apparent limit. Fossil energy and synthetic fertilizer supported larger populations and longer lives. These gains did not abolish hunger, which often reflected war and distribution as much as an absolute lack of food. They did make a simple race between mouths and acres inadequate.
+The industrial and agricultural transformations that followed repeatedly expanded the apparent limit. Fossil energy and synthetic fertilizer supported larger populations and longer lives. These gains did not abolish hunger, which reflected war and distribution as much as an absolute lack of food. They did make a simple race between mouths and acres inadequate.
 
 Yet the twentieth-century surge gave Malthusian fears new force. In 1968, Paul and Anne Ehrlich's *The Population Bomb* presented mass starvation as an imminent consequence of rapid growth. Governments and international institutions increasingly treated fertility as something public policy should reduce.
 

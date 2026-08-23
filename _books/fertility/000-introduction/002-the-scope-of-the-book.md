@@ -4,7 +4,7 @@ deck: Causes, consequences, adaptation, and the limits of adaptation
 eyebrow: The inquiry
 ---
 
-The causes and consequences of fertility decline vary. Several mechanisms are obvious. Contraception prevents conception. Abortion converts pregnancies that would otherwise often end in births into non-births. Education, paid employment, and later marriage consume years that were once available for childbearing and raise the opportunity cost of motherhood. Housing, culture, health, and the expectations attached to parenting shape the result further. The mix differs from one country to another, but complexity is not a reason to talk around the mechanisms.
+The causes and consequences of fertility decline vary. Several mechanisms are obvious. Contraception prevents conception. Abortion converts pregnancies that would otherwise  end in births into non-births. Education, paid employment, and later marriage consume years that were once available for childbearing and raise the opportunity cost of motherhood. Housing, culture, health, and the expectations attached to parenting shape the result further. The mix differs from one country to another, but complexity is not a reason to talk around the mechanisms.
 {: .lede}
 
 The chapters move from demographic history into family formation and then outward to public policy and the long future. They examine what happens inside a household and what happens to a pension system; why two people may postpone a first child and why a country may struggle to staff hospitals thirty years later. These are different levels of analysis. They belong together because demographic change is the accumulated result of intimate decisions made within social and biological limits.
@@ -46,7 +46,7 @@ Paid work and fertility run in both directions: women may work less after having
 
 The second question is whether fertility can rise again. Governments have tried direct payments, family services, and changes to work and housing policy. Some policies make family life easier, and that is worthwhile even when the effect on birth rates is modest. The harder question is whether policy can reverse a durable social pattern without treating people as instruments of the state.
 
-The third question is how well societies can adapt if fertility remains low. The [OECD's work on aging populations](https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/10/ageing-populations-their-fiscal-implications-and-policy-responses_be4bd619/6aec03b3-en.pdf) describes several options, including longer working lives, pension reform, and productivity growth. Technology may allow fewer workers to produce more. Healthier old age may make the familiar boundary between worker and retiree less useful. Immigration can give a country time and talent. It also shuffles people from one country to another, and [migrant fertility generally converges toward the host population](https://www.oecd.org/en/publications/international-migration-outlook-2023_b0f40584-en/full-report/component-8.html), often substantially by the second generation. It cannot be a permanent answer to a global decline.
+The third question is how well societies can adapt if fertility remains low. The [OECD's work on aging populations](https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/10/ageing-populations-their-fiscal-implications-and-policy-responses_be4bd619/6aec03b3-en.pdf) describes several options, including longer working lives, pension reform, and productivity growth. Technology may allow fewer workers to produce more. Healthier old age may make the familiar boundary between worker and retiree less useful. Immigration can give a country time and talent. It also shuffles people from one country to another, and [migrant fertility generally converges toward the host population](https://www.oecd.org/en/publications/international-migration-outlook-2023_b0f40584-en/full-report/component-8.html),  substantially by the second generation. It cannot be a permanent answer to a global decline.
 
 
 
@@ -55,7 +55,7 @@ The third question is how well societies can adapt if fertility remains low. The
 **Senior residence** A modern seniors’ residence that symbolizes the rising need for care systems, pensions, and adaptation as populations age under sustained low fertility. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:R%C3%A9sidence_seniors.jpg)*
 {: .caption}
 
-These questions are often collapsed into one argument. A person who doubts that governments can raise fertility may still believe societies should remove needless barriers to family formation. A person who thinks adaptation can work for decades may still worry about repeated global contraction over centuries. A policy can improve family well-being without moving the national fertility rate very much. I will try to keep those claims separate.
+These questions collapse into one argument. A person who doubts that governments can raise fertility may still believe societies should remove needless barriers to family formation. A person who thinks adaptation can work for decades may still worry about repeated global contraction over centuries. A policy can improve family well-being without moving the national fertility rate very much. I will try to keep those claims separate.
 
 ## What the book is trying to protect
 

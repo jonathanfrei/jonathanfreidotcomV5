@@ -4,7 +4,7 @@ deck: The demographic pattern that defined the modern age is giving way to somet
 eyebrow: The great reversal
 ---
 
-For most of human history, population changed slowly. Then, within a few lifetimes, the number of people alive rose at a speed without precedent. We learned to treat that acceleration as the natural direction of history. It was not.
+Historically, population changed slowly. Then, within a few lifetimes, the number of people alive rose at a speed without precedent. We learned to treat that acceleration as the natural direction of history. It was not.
 {: .lede}
 
 The population explosion was real. The United Nations estimates that the world reached one billion people around 1800, two billion in 1927, and eight billion in 2022. Vaccination and safer childbirth allowed many more children to survive, while adults lived longer too. Birth rates did not fall at once, so populations expanded rapidly.

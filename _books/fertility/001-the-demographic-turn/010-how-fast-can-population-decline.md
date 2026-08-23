@@ -4,14 +4,14 @@ deck: The pace depends on more than fertility, and it can change sharply once la
 eyebrow: From plateau to contraction
 ---
 
-Population decline often begins quietly. Growth slows, the total reaches a plateau, and annual changes remain small. The underlying age structure may nevertheless be preparing a much faster contraction.
+Population decline begins quietly. Growth slows, the total reaches a plateau, and annual changes remain small. The underlying age structure may nevertheless be preparing a much faster contraction.
 {: .lede}
 
 Four forces determine the pace: births, deaths, immigration, and emigration. Fertility affects births per woman, but the number of births also depends on how many women are at childbearing ages. Mortality affects both the number and timing of deaths. Migration can offset natural decrease or accelerate it. Age structure carries the history of all three forward.
 
 A country with fertility modestly below replacement and a balanced age structure may stabilize gradually. A country with very low fertility, few young adults, and a large elderly population can decline faster as deaths rise and births remain few. The same TFR can produce very different annual population changes.
 
-Migration changes the national arithmetic most quickly. It can add working-age adults directly and, because migrants are often young, add future births as well. It cannot make every country grow at once: international migration redistributes population rather than creating it. As immigrants and their children adapt to the host country's family pattern, their fertility tends to converge too. A stable national total can conceal both an unrepaired birth deficit and a loss of young people somewhere else.
+Migration changes the national arithmetic most quickly. It can add working-age adults directly and, because migrants are usually younger, add future births as well. It cannot make every country grow at once: international migration redistributes population rather than creating it. As immigrants and their children adapt to the host country's family pattern, their fertility tends to converge too. A stable national total can conceal both an unrepaired birth deficit and a loss of young people somewhere else.
 
 ## National turns precede the global turn
 

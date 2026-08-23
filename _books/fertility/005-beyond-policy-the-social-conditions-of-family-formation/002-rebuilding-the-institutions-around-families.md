@@ -13,7 +13,7 @@ Linked Israeli census and population-register data offer an unusually sharp meas
 
 Proximity cannot be ordered from an office. Adult children move for jobs; grandparents have work and care obligations of their own. Some families are estranged for good reasons. Still, employers and housing markets make choices about proximity easier or harder. A society that requires every ambitious young adult to leave home may gain efficient labor matching and lose the aunt who could have made a second child manageable.
 
-Multigenerational living can restore daily contact, especially where housing is expensive. It also brings crowded rooms and old conflicts into close quarters. The best arrangement may be a small apartment nearby or two houses within walking distance. Family policy often counts units. Families experience doors and travel time.
+Multigenerational living can restore daily contact, especially where housing is expensive. It also brings crowded rooms and old conflicts into close quarters. The best arrangement may be a small apartment nearby or two houses within walking distance. Family policy counts units. Families experience doors and travel time.
 
 ## Places where families meet
 

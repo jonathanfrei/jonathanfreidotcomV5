@@ -4,7 +4,7 @@ deck: Small differences in fertility become large differences when they repeat a
 eyebrow: The generational arithmetic
 ---
 
-Below-replacement fertility is often described as a gap from 2.1. The more revealing comparison is between generations. A modest gap repeated many times can reshape a population; a large gap can do so with surprising speed.
+Below-replacement fertility is described as a gap from 2.1. The more revealing comparison is between generations. A modest gap repeated many times can reshape a population; a large gap can do so with surprising speed.
 {: .lede}
 
 Consider a deliberately simple illustration. Assume no migration, unchanged mortality, and a constant fertility rate. Divide each rate by a replacement benchmark of 2.1 to approximate the size of one generation relative to the one before it. This is not a population forecast. It isolates the compounding effect.

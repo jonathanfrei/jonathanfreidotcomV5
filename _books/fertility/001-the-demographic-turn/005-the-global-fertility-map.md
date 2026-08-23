@@ -13,7 +13,7 @@ National averages conceal much of the story. Fertility can differ between cities
 
 ## The transition is spreading and compressing
 
-Europe's decline unfolded over a long period. Later transitions have often been much faster. Public health, contraception, and new expectations can spread without each country retracing the same economic history. Latin America moved from high fertility to below replacement within a few generations. Several Asian countries moved faster still.
+Europe's decline unfolded over a long period. Later transitions have been much faster. Public health, contraception, and new expectations can spread without each country retracing the same economic history. Latin America moved from high fertility to below replacement within a few generations. Several Asian countries moved faster still.
 
 This compression creates a different challenge from the one older countries faced. A society can begin aging before it has built mature pension and health systems. The phrase “getting old before getting rich” is imperfect, but it names a real tension: the institutions that support a long old age take time and resources to build.
 

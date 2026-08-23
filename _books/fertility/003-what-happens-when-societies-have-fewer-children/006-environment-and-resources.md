@@ -31,7 +31,7 @@ Consumption can move abroad too. An aging rich country may close a polluting fac
 
 ## Human capacity is an environmental resource
 
-Lower population makes some environmental targets easier by reducing demand. It can also leave fewer workers to manage forests and build clean energy. Environmental stewardship often needs a payroll.
+Lower population makes some environmental targets easier by reducing demand. It can also leave fewer workers to manage forests and build clean energy. Environmental stewardship needs a payroll.
 
 More people increase consumption, and technology can rebound into more total use. We shouldn't maximize population and assume invention will repair every damage. Human cleverness instead gives us a chance to understand limits and build better tools.
 

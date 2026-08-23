@@ -7,7 +7,7 @@ eyebrow: The hinge
 The population explosion was not caused first by people having more children. It began because fewer people died—especially fewer infants and children—while families continued, for a time, to have many births.
 {: .lede}
 
-Demographers describe the broad sequence as the demographic transition. In simplified form, a society moves from high mortality and high fertility to low mortality and low fertility. Death rates often fall first, while birth rates respond more slowly. During that gap, births greatly exceed deaths and population rises.
+Demographers describe the broad sequence as the demographic transition. In simplified form, a society moves from high mortality and high fertility to low mortality and low fertility. Death rates  fall first, while birth rates respond more slowly. During that gap, births greatly exceed deaths and population rises.
 
 The transition sketches a common sequence rather than a universal timetable. European mortality and fertility declined over generations. In many lower-income countries after the Second World War, public-health measures and imported medical technologies reduced mortality much faster. Similar stages therefore produced very different speeds of growth.
 
@@ -21,7 +21,7 @@ Women's education and control over timing matter greatly. Urbanization can make 
 
 ## The transition does not stop at two
 
-Early versions of the model could be read as if fertility would settle near replacement once mortality became low. Experience has not been so tidy. Many affluent societies passed through replacement and continued downward. Middle-income countries have often followed faster than Europe did, sometimes reaching very low fertility before they became comparably wealthy.
+Early versions of the model could be read as if fertility would settle near replacement once mortality became low. Experience has not been so tidy. Many affluent societies passed through replacement and continued downward. Middle-income countries have  followed faster than Europe did, sometimes reaching very low fertility before they became comparably wealthy.
 
 The classic transition explains the great burst of growth: mortality fell before fertility. Persistent low fertility and the divergence among similar economies require a further account. Those are questions for later chapters.
 

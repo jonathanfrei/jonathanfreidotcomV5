@@ -4,7 +4,7 @@ deck: Before a child can be born, two people usually have to build a life in whi
 eyebrow: The missing household
 ---
 
-The most immediate cause of fewer children is often simpler than the debates around fertility make it sound: fewer people form durable partnerships while they are young enough to have the families they want. A child normally arrives after several earlier events—a meeting, a commitment, and a shared home. Tack on the time to “find yourself”, and each event has become later and less certain.
+The most immediate cause of fewer children is simpler than the debates around fertility make it sound: fewer people form durable partnerships while they are young enough to have the families they want. A child normally arrives after several earlier events—a meeting, a commitment, and a shared home. Tack on the time to “find yourself”, and each event has become later and less certain.
 {: .lede}
 
 In the United States, the [median age at first marriage in 2025](https://www.census.gov/newsroom/press-releases/2025/families-and-living-arrangements.html) was 30.8 for men and 28.4 for women, up from 23.5 and 21.1 in 1975. The change gave individuals more freedom to leave bad relationships, more time to mature, and less pressure to marry the first plausible person nearby. It also removed years from the period in which a couple can have children without age-related difficulty. A wedding delayed seven years removes seven years of childbearing, makes the first birth later, and the third or fourth less likely.
@@ -29,7 +29,7 @@ Dating apps widen that pool and sometimes produce marriages that could not have 
 
 Divorce does not explain the original postwar fertility decline by itself, but marraige instability still changes fertility. Separation can end a couple’s childbearing years together, consume time before another partnership forms, and make both adults more cautious about another child. The effect falls especially hard on a second or third birth, which requires confidence that the household will endure.
 
-Single adulthood has also become a longer normal stage of life. Some people prefer it. Others remain single through a series of small postponements while still imagining marriage later. The difference can be invisible at thirty and painful at forty. Survey intentions often preserve the family a person hopes to have after the years available to form it have begun to narrow.
+Single adulthood has also become a longer normal stage of life. Some people prefer it. Others remain single through a series of small postponements while still imagining marriage later. The difference can be invisible at thirty and painful at forty. Survey intentions preserve the family a person hopes to have after the years available to form it have begun to narrow.
 
 I think marriage is a promise between two people, and its goods exceed demography. But that is why it matters for demography. Children are easier to welcome when two adults have promised to remain, their families recognize the promise, and the surrounding culture expects them to carry it through every ordinary difficulty.
 

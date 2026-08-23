@@ -7,7 +7,7 @@ eyebrow: The emptying world
 Ultra-low fertility can feel surprisingly normal at first. Trains run, and a smaller class receives more attention from its teacher. The disruption appears in sequence. The shortage moves from maternity ward to workplace before there are too few people to keep every place inherited from the larger society.
 {: .lede}
 
-Nearly one fifth of countries and areas had fertility below 1.4 births per woman in 2024, a range often called ultra-low. For the 24 countries in that group whose populations had peaked, the United Nations [estimated the probability of returning to replacement within thirty years at one tenth of one percent](https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/wpp2024_summary_of_results_final_web.pdf). A scenario built around persistence is not a prediction of doom. It is a serious reading of the path those countries are on.
+Nearly one fifth of countries and areas had fertility below 1.4 births per woman in 2024, a range called ultra-low. For the 24 countries in that group whose populations had peaked, the United Nations [estimated the probability of returning to replacement within thirty years at one tenth of one percent](https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/wpp2024_summary_of_results_final_web.pdf). A scenario built around persistence is not a prediction of doom. It is a serious reading of the path those countries are on.
 
 The previous chapters explained the arithmetic. Here the carrying pattern is succession. Each contraction leaves a larger inheritance to fewer possible heirs, and the heirs choose what they can still carry.
 

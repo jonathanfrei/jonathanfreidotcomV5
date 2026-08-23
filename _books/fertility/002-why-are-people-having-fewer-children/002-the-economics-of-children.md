@@ -15,7 +15,7 @@ Childcare creates another bind. Parents need it when both their incomes are nece
 
 ## The cost off the books
 
-The other economic cost is time. An hour caring for a child is an hour not spent earning, resting, or advancing a career. That trade used to be distributed through a household where one income could support several children and the mother provided most of the care at home. Now it is often squeezed around two jobs.
+The other economic cost is time. An hour caring for a child is an hour not spent earning, resting, or advancing a career. That trade used to be distributed through a household where one income could support several children and the mother provided most of the care at home. Now it is squeezed around two jobs.
 
 Mothers still absorb most of the work of child care. In the [2024 American Time Use Survey](https://www.bls.gov/news.release/archives/atus_06262025.htm), women living with children under eighteen averaged 1.79 hours a day of primary childcare, compared with 1.11 for men. With a child under six, women spent about three hours and men two. Those averages omit much of the background labor of parenthood—the early pickup of a sick child that disrupts the workday and the mental list running while another task is underway.
 
