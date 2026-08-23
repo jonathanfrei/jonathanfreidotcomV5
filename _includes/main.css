@@ -1020,6 +1020,15 @@ html:not([data-theme]) .theme-toggle__icon--sun {
   margin-inline: auto;
 }
 
+.citation {
+    font-family: var(--font-mono);
+    font-size: var(--type-sm);
+}
+
+.citation p {
+    margin: 0;
+}
+
 /* ---------- Post list & meta ---------- */
 .post-list {
   list-style: none;
