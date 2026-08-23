@@ -35,6 +35,8 @@ For each item: **pass**, **fail** (quote evidence), or **n/a**. Density matters�
 | P25 | Excessive rhetorical symmetry | Prose repeatedly resolves complications into neat balanced formulations instead of allowing unevenness, ambiguity, emphasis, or a paragraph to end without synthesis |
 | P26 | False calm | The prose hedges or lowers the stakes where evidence supports urgency about compounding demographic or civilizational loss |
 | P27 | Single-horizon thinking | A civilizational claim remains confined to the next budget cycle or forecast endpoint when a generational, centennial, or millennial view would materially change it |
+| P28 | Defensive caveat reflex | A clear claim repeatedly begins with “does not fully explain,” “is not necessarily,” “still,” “partly,” or similar protection before stating the supported mechanism |
+| P29 | Unnamed social actor | “Society,” “systems,” or “institutions” appears where employers, families, law, policy, markets, or culture is the actual actor |
 
 ## Voice preservation
 
