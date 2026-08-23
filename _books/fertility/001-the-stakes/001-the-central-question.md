@@ -4,79 +4,83 @@ deck: What changes when each generation is smaller than the last
 eyebrow: Civilizational stakes
 ---
 
-For most of my life, population growth felt like part of the background of the world. Cities spread, schools filled, new workers arrived, and every argument about the future began with the assumption that there would be more people living in it. That assumption is starting to weaken. The [United Nations estimated](https://www.un.org/development/desa/pd/content/world-population-prospects-2024-summary-results-0) the global fertility rate at 2.25 births per woman in 2024, down from 3.31 in 1990, with fertility below the long-run replacement level in more than half of all countries and areas. One quarter of humanity already lives in a country whose population has peaked.
+The demographic problem is not that humanity is about to vanish. It is that a growing number of societies are learning how to live with fewer children, fewer future parents, and eventually fewer people. The transition can look gentle for a long time. A country can remain rich, orderly, and technologically advanced while the age structure underneath it shifts year after year.
 {: .lede}
+
+The [United Nations estimated](https://www.un.org/development/desa/pd/content/world-population-prospects-2024-summary-results-0) the global fertility rate at 2.25 births per woman in 2024, down from 3.31 in 1990. The world as a whole is still above replacement, but more than half of countries and areas are below it. In some places the demographic turn is already visible in the population total. In others it is hidden by migration, longer life, or the momentum of large older cohorts.
 
 ![Total fertility rate trends 1950–2100 by region and world](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Total_Fertility_Rate_for_6_Regions_and_the_World%2C_1950-2100%2C_UN2022.svg/960px-Total_Fertility_Rate_for_6_Regions_and_the_World%2C_1950-2100%2C_UN2022.svg.png)
 
-**Global fertility rate decline** Chart of total fertility rates for six regions and the world from 1950 to 2100, based on United Nations World Population Prospects data, illustrating the long-term fall toward and below replacement levels. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Total_Fertility_Rate_for_6_Regions_and_the_World,_1950-2100,_UN2022.svg)*
+**Global fertility rate decline** Total fertility rates for six regions and the world from 1950 to 2100, based on United Nations data. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Total_Fertility_Rate_for_6_Regions_and_the_World,_1950-2100,_UN2022.svg)*
 {: .caption}
 
-The world as a whole is still growing. The same UN projection puts the global peak around 10.3 billion people in the mid-2080s, followed by a gradual decline to about 10.2 billion in 2100. Those numbers are large enough to make the language of population decline sound premature. But global totals can hide a change that is already well underway: in many countries, fewer children are entering schools, fewer young adults are entering work and family life, and a growing share of the population is moving into old age.
+The central question is simple enough to state: can a society continue to flourish when each generation is smaller than the one before it?
 
-![World population 1800–2100 with UN medium-fertility projections](https://upload.wikimedia.org/wikipedia/commons/a/ae/2024_Our_World_In_Data_Population%2C_1800_to_2100_chart_with_future_projections_based_on_UN%27s_medium-fertility_scenario.png)
-
-**World population trajectory to 2100** Our World in Data chart showing historical growth and United Nations medium-fertility projections that peak around the mid-2080s before a slight decline. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:2024_Our_World_In_Data_Population,_1800_to_2100_chart_with_future_projections_based_on_UN%27s_medium-fertility_scenario.png)*
-{: .caption}
-
-This is a story about fewer births, and then about everything fewer births touch. It changes family life first. Later it reaches the workplace, the care of older people, and organizations trying to find successors. A birth today may become the person who carries some inherited craft into another generation. When births fall for many years, the effects arrive slowly and then appear almost everywhere at once.
-
-![World population pyramid 2024](https://upload.wikimedia.org/wikipedia/commons/4/4e/World_Population_Pyramid_%282024%29.png)
-
-**World population pyramid, 2024** Age-sex structure of the global population in 2024, reflecting the ongoing shift toward a larger share of older people amid falling fertility. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:World_Population_Pyramid_(2024).png)*
-{: .caption}
-
-![Global population pyramids 1950–2100](https://upload.wikimedia.org/wikipedia/commons/f/f6/Global_Population-Pyramid-1950-to-2100.jpg)
-
-**Changing age structure of the world, 1950–2100** Series of population pyramids illustrating the transition from a youthful base in the mid-20th century toward a top-heavy, aging structure by the end of the century. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Global_Population-Pyramid-1950-to-2100.jpg)*
-{: .caption}
+I mean flourishing in a fairly ordinary sense. Can people form the families they want? Can children grow up surrounded by enough adults with the time and means to care for them? Can parents look after their own parents without being overwhelmed? Can employers find successors, towns maintain basic services, and governments keep promises made when the population pyramid had a wider base? Can a civilization remain confident enough to build things whose payoff will belong mostly to people not yet born?
 
 ## The arithmetic becomes human
 
-Population aging comes from something very good: people live longer. Sustained low fertility shapes it too. The [UN Population Division](https://www.un.org/development/desa/pd/content/ageing-1) describes the sequence plainly. As fertility first falls, the working-age share of a population can rise and create a demographic dividend. Later, the age distribution shifts upward. By 2050, [the UN expects](https://www.un.org/en/global-issues/ageing) roughly one person in six worldwide to be over 65.
+Population aging begins partly with good news. People live longer. Better survival changes the shape of a society before low fertility does anything else, and longer healthy lives can soften many of the pressures that follow. People can work later, remain independent longer, and contribute for decades beyond the retirement ages designed for an earlier era.
 
-Ratios do not care for anyone, though people do. A rising old-age dependency ratio eventually means more retirees relative to conventional working ages, but it does not tell us how healthy those retirees will be, how long people will work, how productive each worker will become, or how families and communities will share care. The [UN's own work on aging](https://desapublications.un.org/publications/world-social-report-2023-leaving-no-one-behind-ageing-world) cautions that traditional dependency measures can overstate the burden when longer lives change what a fixed age threshold means. Demography sets the conditions; families and governments decide how to respond.
+Sustained low fertility adds a different pressure. By 2050, [the United Nations expects](https://www.un.org/en/global-issues/ageing) roughly one person in six worldwide to be over 65. A larger older population is not itself a problem to solve. The strain comes from the relationship between generations: how many people need care, how many are available to provide it, and how much productivity, savings, technology, and family support can bridge the difference.
+
+Ratios can make this sound more mechanical than it is. An old-age dependency ratio does not tell us whether a seventy-year-old is frail or running a company. It cannot measure whether grandparents live nearby, whether a family can afford home care, or whether a nurse is supported by technology that lets one person do the work that once required two. The [UN's own work on aging](https://desapublications.un.org/publications/world-social-report-2023-leaving-no-one-behind-ageing-world) cautions against treating a fixed age threshold as a complete measure of dependency.
+
+Still, somebody has to do the work. Hospitals need staff. Water systems need technicians. Children need teachers. Firms need people who understand what the previous generation built. Families need sons, daughters, nieces, nephews, neighbors, and friends when age finally does make someone dependent. Productivity can stretch a workforce. It cannot make the need for human succession disappear.
 
 ![Empty classroom](https://upload.wikimedia.org/wikipedia/commons/d/d0/Empty_classroom.jpg)
 
-**Empty classroom** A vacant schoolroom that visualizes the first, most visible effect of sustained below-replacement fertility: fewer children in successive generations. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Empty_classroom.jpg)*
+**Empty classroom** A vacant schoolroom makes the first stage of demographic contraction easy to see: fewer children in one cohort become fewer young adults in the next. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Empty_classroom.jpg)*
 {: .caption}
 
-Even so, conditions matter. Pension systems need contributors. Hospitals and nursing homes need staff. Schools, firms, and public agencies need successors who can understand what they have inherited before deciding what to change. Automation can help with some of this. Immigration can change the scale and age structure of a country. Healthier old age can extend working lives. None of them makes the underlying generational question disappear.
+## Freedom and the family people hoped for
 
-That question is whether a society can continue to flourish when each generation is smaller than the one before it. I mean flourishing in a fairly ordinary sense: people able to form the families they want, care for those who depend on them, and leave their children more possibility than they inherited. For one generation, a society can draw down inherited abundance. Across five or ten, the people available to renew that inheritance keep thinning. A civilization has to be able to think past the first comfortable decade.
+Any argument about fertility has to begin with the people whose lives are being counted. Governments do not own anyone's body, and a pension system's need for contributors does not create an obligation to have children. Voluntary childlessness is not a demographic defect to be corrected.
 
-## A real benefit, and a real trade-off
+That does not mean every low birth rate is simply freedom expressing itself. The [United Nations Population Fund's 2025 survey](https://www.unfpa.org/swp2025), conducted in 14 countries containing more than a third of the world's population, found that nearly one in five reproductive-age adults expected not to have the number of children they wanted. Financial constraints and difficulty finding a suitable partner were among the most common obstacles. Some people want smaller families than their parents did. Some want none. Others find that the family they expected to have becomes harder to reach as housing, work, partnership, health, and time pile up around the decision.
 
-A slower-growing population can ease pressure on habitat and the climate. The UN has said that an earlier and lower population peak could reduce environmental pressure through lower aggregate consumption. The [Intergovernmental Panel on Climate Change](https://www.ipcc.ch/report/ar6/wg3/chapter/chapter-2/) likewise identifies both rising income and population growth as drivers of emissions, while finding that growth in consumption associated with rising incomes has had the larger effect in recent decades.
+Those cases should not be collapsed into one statistic. I will distinguish throughout this book between voluntary childlessness, delayed childbearing, infertility, fewer children than desired, and the very different paths that can produce the same national fertility rate. The distinctions affect both the moral argument and the practical one. Helping people have children they do not want is not a goal. Helping people form families they do want is.
 
-It would be strange to write about fertility decline without taking that benefit seriously. A smaller population may make some environmental goals easier. It may also allow crowded places to become less expensive or give damaged ecosystems room to recover. Consumption can outweigh population as a driver of environmental harm. A smaller affluent population can consume more than a larger poor one. Energy technology and consumption determine whether fewer people actually produce a lighter footprint.
+## A smaller footprint
 
-The trade-off is not between a crowded planet and an abstract desire for more births. It is between goods that can pull in different directions. Lower aggregate consumption may relieve pressure on nature. Fewer young people may also reduce the human capacity available to repair ecological damage, maintain complex infrastructure, discover cleaner technologies, and respond to risks we cannot yet see. I don't assume that more people automatically solve those problems. I do think human beings are the source of every solution we have found so far.
+There are real benefits to slower population growth. Fewer people can mean less aggregate pressure on land, water, habitat, and the climate. The [Intergovernmental Panel on Climate Change](https://www.ipcc.ch/report/ar6/wg3/chapter/chapter-2/) identifies population growth as one driver of emissions, alongside the much larger recent effect of rising consumption and income. A smaller population may make some environmental goals easier, especially if it is also wealthier, cleaner, and more efficient.
 
-## Freedom and continuity
+I don't think that case should be brushed aside. A world of ten billion people will place different demands on nature than a world of eight billion, all else equal. Some shrinking regions may see forests return or land pressures ease.
 
-Any serious discussion of fertility has to begin with the dignity and freedom of the people whose lives are being counted. A government may want more births, an economist may want more workers, and a pension system may need more contributors. None of those needs gives the state ownership of a person's body or family. People are not inputs into a demographic plan.
+But people are not only mouths. They are also the people who restore wetlands, invent cheaper batteries, maintain nuclear plants, improve crops, monitor fisheries, design buildings, and decide that a damaged landscape is worth repairing. A smaller society can be an excellent steward. A society that contracts generation after generation eventually has fewer stewards too. Population decline is not a conservation policy so much as another condition conservation has to survive.
 
-They are also not isolated choices floating outside every institution. The [United Nations Population Fund's 2025 survey](https://www.unfpa.org/swp2025), conducted in 14 countries containing more than a third of the world's population, found that nearly one in five reproductive-age adults expected not to have the number of children they desired. Money and difficulty finding a suitable partner were common barriers. Fear about the future also appeared. The survey cannot speak for every person in every country, but it complicates the easy claim that low fertility is simply modern freedom expressing itself. Sometimes people are choosing smaller families. Sometimes the life they hoped to build has become difficult to reach.
+## Adaptation buys time
 
-I want to hold both truths together. Reproductive freedom deserves consideration, including the freedom not to have children ethically. A society also has reason to care when many people cannot form the families they want, and when the accumulated result is fewer future parents.
+There are several ways to make a low-fertility society work better. Automation can allow fewer workers to produce more. Healthier old age can extend careers and reduce years of dependency. Pension systems can change. Cities can consolidate infrastructure. Immigration can add workers and families quickly, sometimes transforming a country's prospects for decades.
 
-The question becomes larger as fertility decline spreads. A country can draw workers from younger places. That helps the receiving country, sometimes enormously, but it moves a person rather than creating one and may take talent from the country that raised her. The [OECD's review of migrant family formation](https://www.oecd.org/en/publications/international-migration-outlook-2023_b0f40584-en/full-report/component-8.html) finds that immigrant fertility tends to move toward native-born patterns with time and across generations. In France, for example, completed fertility among daughters of immigrants was 1.9, the same as among women with native-born parents, compared with 2.3 among immigrant women. Immigration props up a national population while leaving the host country's low-fertility conditions in place. At the global level, it moves people rather than creating them.
+These are serious answers to real problems, and later chapters will treat them that way. They mostly answer a different question, though. They help a country adapt to having fewer locally born young people. They do not necessarily change the conditions that made fertility low in the first place.
 
-At a hundred-year horizon, a country can still rely on technology, accumulated capital, and institutions built by larger generations. At a thousand-year horizon—roughly forty generations—the question looks different. If human beings are to maintain a capable civilization on Earth, protect it from rare catastrophes, and establish self-sustaining communities among the stars, they will need demographic renewal over and over again. A population can be smaller and still do magnificent things. A population that contracts every generation eventually loses the scale to attempt them.
+Immigration shows the distinction clearly. It can replenish a national workforce, but at the global level it moves a person from one country to another. The [OECD's review of migrant family formation](https://www.oecd.org/en/publications/international-migration-outlook-2023_b0f40584-en/full-report/component-8.html) also finds that immigrant fertility tends to move toward native-born patterns over time and across generations. A country can use migration very successfully while its underlying family-formation problem remains intact.
 
-I don't know where that threshold lies. There probably isn't one clean number. The practical question is whether we can make family formation compatible with modern freedom and prosperity while learning to live well through the demographic transition already underway. I think we have to reverse the decline. The long future contains too much that is good, strange, and still unbuilt to meet it with fewer people in every generation.
+Technology has a similar limit. A machine can let one worker supervise what once required five. It can provide companionship, lift a patient, write code, drive a truck, or keep a factory running overnight. That is an enormous gain. It does not produce the next generation that inherits the factory, the law, the language, the family stories, or the obligation to decide what any of those things are for.
+
+## The long view
+
+At a fifty-year horizon, demographic decline is mostly about aging, labor, housing, migration, schools, and public finance. At a hundred-year horizon, it becomes a question of whether one smaller generation has become several. At a thousand-year horizon, assuming humanity is fortunate enough to get one, the issue is no longer a pension ratio. It is whether civilization repeatedly renews the people needed to carry it forward.
+
+I don't know where a population becomes too small to sustain a complex modern civilization. There probably is no clean threshold, and any number would depend on technology, geography, institutions, trade, health, and the kind of civilization people are trying to maintain. Nor do I think humanity has to grow forever on one finite planet.
+
+I do think permanent generational contraction is a bad default. A civilization should be able to receive an inheritance without merely drawing it down. It should be able to care for the old without giving up on the young, preserve what is worth preserving, repair what is broken, and still have enough spare capacity to try difficult things whose benefits lie beyond one lifetime.
+
+That is why the horizon of this book eventually reaches beyond Earth. A society can shrink for decades and still launch brilliant spacecraft. It can probably shrink for much longer and remain wealthy. Settlement is different. Any civilization that hopes one day to establish self-sustaining communities beyond this planet will need not only machines and explorers, but families, children, teachers, builders, and generations willing to continue a project they did not begin.
+
+The future contains too much that is good, strange, and still unbuilt for permanent decline to feel like an acceptable destination. The practical question is whether we can preserve modern freedom and prosperity while making family formation attainable enough that each generation is not automatically smaller than the last.
+
+That is the question the rest of this book tries to answer.
 
 <div class="citation">
 
 **Citations**
 
 1. [*World Population Prospects 2024: Summary of Results*](https://www.un.org/development/desa/pd/content/world-population-prospects-2024-summary-results-0), United Nations Department of Economic and Social Affairs, Population Division, 2024.
-2. [Ageing](https://www.un.org/development/desa/pd/content/ageing-1), United Nations Department of Economic and Social Affairs, Population Division.
-3. [Ageing](https://www.un.org/en/global-issues/ageing), United Nations.
-4. [*World Social Report 2023: Leaving No One Behind in an Ageing World*](https://desapublications.un.org/publications/world-social-report-2023-leaving-no-one-behind-ageing-world), United Nations Department of Economic and Social Affairs, 2023.
+2. [Ageing](https://www.un.org/en/global-issues/ageing), United Nations.
+3. [*World Social Report 2023: Leaving No One Behind in an Ageing World*](https://desapublications.un.org/publications/world-social-report-2023-leaving-no-one-behind-ageing-world), United Nations Department of Economic and Social Affairs, 2023.
+4. [*State of World Population 2025: The Real Fertility Crisis*](https://www.unfpa.org/swp2025), United Nations Population Fund, 2025.
 5. [*Climate Change 2022: Mitigation of Climate Change*, Chapter 2](https://www.ipcc.ch/report/ar6/wg3/chapter/chapter-2/), Intergovernmental Panel on Climate Change, 2022.
-6. [*State of World Population 2025: The Real Fertility Crisis*](https://www.unfpa.org/swp2025), United Nations Population Fund, 2025.
-7. [“Migrant family building: Recent evidence and implications”](https://www.oecd.org/en/publications/international-migration-outlook-2023_b0f40584-en/full-report/component-8.html), in *International Migration Outlook 2023*, Organisation for Economic Co-operation and Development, 2023.
+6. [“Migrant family building: Recent evidence and implications”](https://www.oecd.org/en/publications/international-migration-outlook-2023_b0f40584-en/full-report/component-8.html), in *International Migration Outlook 2023*, Organisation for Economic Co-operation and Development, 2023.
 </div>
