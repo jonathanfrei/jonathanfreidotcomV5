@@ -13,7 +13,10 @@ I will start with the fears of scarcity that rapid growth produced, then trace t
 
 The aim is orientation with a purpose. Before considering causes or remedies, we need to know what the measures mean, what they leave out, and why a world that is still growing has already entered a demographic turn. Slow disasters are merciful in one respect: they give us time to see them coming. We should use it.
 
+<div class="citation">
+
 **Citations**
 
 1. United Nations, Department of Economic and Social Affairs, Population Division, [*World Population Prospects 2024*](https://www.un.org/development/desa/pd/world-population-prospects-2024).
 2. Scott Adams, [“Episode 3059 CWSA 01/01/26”](https://www.scottadamsphilosophy.com/segments/38777), Scott Adams Philosophy, January 1, 2026.
+</div>

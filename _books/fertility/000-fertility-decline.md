@@ -1,7 +1,6 @@
 ---
-title: Fertility Decline
+title: Fertility
+deck: The decline or rise of civilization 
 ---
 
-Cover page for the book. 
-
-Will lead to the introduction. 
+Start below. Chapters one and two are drafted. The rest is to come. 

@@ -40,9 +40,23 @@ Quick test: **Would an intelligent person naturally say this over dinner?** If n
 
 Do not edit every sentence toward maximum confidence. Mild qualification—“I think,” “it seems,” “probably,” “I feel like”—can be part of the voice when it reflects genuine uncertainty or a thought still being worked through. Preserve honest epistemic texture; remove only qualifications that are evasive, repetitive, or make a clear claim needlessly mushy.
 
+### State the claim before defending it
+
+Prefer a direct affirmative sentence when the evidence supports one. Do not automatically open with “X does not explain everything,” “X is not a complete substitute,” or another disclaimer before saying what X does. Add a limit after the claim only when the limit changes the reader's understanding. Words such as *partly*, *still*, *generally*, *plausible*, and *necessarily* should earn their place rather than function as reflexive caution.
+
+### Name the actor and the scale
+
+Avoid using *institutions*, *systems*, or *society* when the sentence really means employers, families, governments, schools, churches, markets, or cultural expectations. Distinguish what law can require from what policy can support and what culture can honor. Use the broad term only when the claim genuinely operates at that broad scale.
+
+### Prefer relative cross-references
+
+In continuous manuscript prose, prefer “the previous chapter,” “the next section,” or a natural restatement of the earlier idea to internal production labels such as “Chapter 001.” Use a numbered chapter reference only when readers need to locate a nonadjacent discussion.
+
 ### Do not polish away ordinary speech
 
 Contractions, mild intensifiers, parenthetical asides, casual vocabulary, and other everyday speech patterns are legitimate parts of the voice when they occur naturally. Remove them for clutter, repetition, or imprecision—not merely because a more economical or elevated formulation exists. The goal is better writing that still sounds lived-in rather than writing optimized to display craft.
+
+An occasional familiar phrase—“find yourself,” “feel ready,” “off the books”—can make an abstract social change concrete. Use quotation marks only when they identify a recognizable phrase or reveal the pressure of a cultural script, not as decoration or sneer quotes.
 
 ### Avoid synthetic balance and repetition
 

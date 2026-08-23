@@ -41,6 +41,8 @@ I will therefore use projections to reveal pressure, timing, and plausible scale
 
 The same discipline applies to the larger questions in this book. Data can estimate the number of workers, retirees, births, deaths, or migrants under stated assumptions. It cannot directly measure confidence in the future, the strength of a family, the resilience of an institution, or the value of a life that has not yet begun. Those goods are harder to count, but they are not less real. The task is to use measurement without mistaking it for the whole of what we are trying to understand.
 
+<div class="citation">
+
 **Citations**
 
 1. [*Demographic Trends in the EU Regions*](https://ec.europa.eu/eurostat/documents/3433488/5585916/KS-SF-13-013-EN.PDF/a812b080-7ede-41a4-97ef-589ee767c581), Eurostat, 2013.
@@ -48,3 +50,4 @@ The same discipline applies to the larger questions in this book. Data can estim
 3. [*State of World Population 2025: The Real Fertility Crisis*](https://www.unfpa.org/swp2025), United Nations Population Fund, 2025.
 4. [*World Population Prospects 2024: Methodology Report*](https://www.un.org/development/desa/pd/content/world-population-prospects-2024-methodology-report), United Nations Department of Economic and Social Affairs, Population Division, 2024.
 5. [*World Population Prospects 2024: Summary of Results*](https://www.un.org/development/desa/pd/content/world-population-prospects-2024-summary-results-0), United Nations Department of Economic and Social Affairs, Population Division, 2024.
+</div>
