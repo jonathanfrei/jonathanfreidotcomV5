@@ -7,11 +7,36 @@ eyebrow: The fertility decline
 The human population is still growing, but the direction beneath that growth has changed. The [United Nations now projects](https://www.un.org/development/desa/pd/content/world-population-prospects-2024-summary-results-0) a global peak within this century, and one quarter of the world's people already live in countries whose populations have peaked. In much of the world, the familiar fear that there will always be more people is giving way to a more urgent question: how do we reverse a decline that, left long enough, narrows the future of civilization itself?
 {: .lede}
 
+![World population 1800–2100 with UN medium-fertility projections](https://upload.wikimedia.org/wikipedia/commons/a/ae/2024_Our_World_In_Data_Population%2C_1800_to_2100_chart_with_future_projections_based_on_UN%27s_medium-fertility_scenario.png)
+
+**World population projections to 2100** Chart from Our World in Data showing historical population growth and United Nations medium-fertility scenario projections that peak within this century. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:2024_Our_World_In_Data_Population,_1800_to_2100_chart_with_future_projections_based_on_UN%27s_medium-fertility_scenario.png)*
+{: .caption}
+
 I began with that question because fertility decline reaches into nearly every part of life while remaining easy to see as somebody else's problem. A falling rate becomes an empty desk in a school or an adult child caring for two parents. One generation later, there are fewer potential parents. Five generations later, a modest annual decline has become a different society. Over centuries, it can determine whether humanity has the people and confidence to preserve what it has built and carry life beyond Earth.
 
 Slower population growth can reduce pressure on land, resources, and the climate. Longer lives are an achievement, not a burden to regret. Smaller societies may remain prosperous, humane, and inventive for a long time. These are real goods. Repeated generational contraction remains dangerous, and fertility below replacement across most of the developed world deserves more than indifference.
 
 Elon Musk has called low birth rates [one of the greatest risks to civilization](https://elonmuskarchive.org/video/wsj-ceo-council-summit-2021-12-06). Pope Francis has called the low birth rate a [“demographic winter”](https://www.vatican.va/content/francesco/en/speeches/2021/may/documents/papa-francesco_20210514_statigenerali-natalita.html). Japan's prime minister warned in 2023 that the country was nearing the point where it could no longer [maintain basic social functions](https://japan.kantei.go.jp/101_kishida/statement/202301/_00012.html). They arrive from rather different directions. The convergence is worth noticing.
+
+![Elon Musk at the Royal Society, 2018](https://upload.wikimedia.org/wikipedia/commons/e/ed/Elon_Musk_Royal_Society.jpg)
+
+**Elon Musk** Photograph of the entrepreneur who has repeatedly warned that low birth rates pose one of the greatest risks to civilization. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Elon_Musk_Royal_Society.jpg)*
+{: .caption}
+
+![Portrait of Pope Francis, 2021](https://upload.wikimedia.org/wikipedia/commons/6/6c/Portrait_of_Pope_Francis_%282021%29.jpg)
+
+**Pope Francis** Official portrait of the pontiff who has described falling birth rates as a “demographic winter.” *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Portrait_of_Pope_Francis_(2021).jpg)*
+{: .caption}
+
+![Japanese elementary school classroom](https://upload.wikimedia.org/wikipedia/commons/7/77/JapaneseClassroom.jpg)
+
+**Japanese elementary classroom** A typical classroom scene that evokes the empty desks and shrinking cohorts already visible in low-fertility societies such as Japan. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:JapaneseClassroom.jpg)*
+{: .caption}
+
+![Official portrait of Fumio Kishida](https://upload.wikimedia.org/wikipedia/commons/6/6f/Fumio_Kishida_20211005.jpg)
+
+**Fumio Kishida** Official portrait of Japan’s prime minister, who warned that the country risks losing the ability to maintain basic social functions amid demographic decline. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Fumio_Kishida_20211005.jpg)*
+{: .caption}
 
 The hopeful counterpoint comes from Scott Adams's [Law of Slow-Moving Disasters](https://www.scottadamsphilosophy.com/segments/38777): when people can see a grave problem coming from far enough away, they tend to find ways around it. It isn't a scientific law, and history gives us no guarantee. I like the posture anyway. Fertility decline is slow enough to understand and slow enough to reverse, if we stop treating each year's lower number as background noise.
 
