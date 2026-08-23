@@ -1021,7 +1021,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 }
 
 .citation {
-    font-family: var(--font-mono);
+    font-family: var(--font-ui);
     font-size: var(--type-sm);
 }
 
