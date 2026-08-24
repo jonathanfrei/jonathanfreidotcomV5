@@ -10,6 +10,8 @@ For two centuries, the great population fear was that humanity would become too 
 
 The danger moves slowly enough to understand. That is part of what makes it easy to ignore, and also why I am hopeful. Families, employers, cities, churches, and governments still have time to change the conditions in which people meet, marry, raise children, care for one another, and hand a civilization forward. The pages that follow are an attempt to understand what that would require.
 
+![](https://media.jonathanfrei.com/assets/img/2026-08-24-20260824103221-01786.jpg)
+
 ## Summary
 
 *The Fertility Decline* traces the shift from the population explosion to a world in which more than half of countries are already below replacement fertility. It follows the causes of falling births through delayed family formation, work, housing, reproductive control, culture, and biology; then follows the consequences through families, aging, public finances, institutions, and the longer future. The book asks what governments can fix, what lies beyond policy, how different low-fertility futures might unfold, and what demographic renewal would mean for a civilization that hopes not merely to survive but to keep building. Its argument is for renewal without coercion: help people form the families they want, adapt humanely to the aging already underway, and leave the future open to successors.
