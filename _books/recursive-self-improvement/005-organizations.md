@@ -1,10 +1,12 @@
 ---
-title: Organizations and Complex Adaptive Systems
+title: "When Companies Learn"
+deck: "How experience survives incentives, turnover, and institutional memory"
+eyebrow: "Organizations"
 ---
 
-After a serious outage, a company gathers everyone who touched the system. The timeline is reconstructed, action items are assigned, and a careful document is filed. Six months later, another outage follows the same shape. The first meeting produced a report. It did not necessarily produce an organization that learns.
+After a serious outage, a company gathers everyone who touched the system. The team reconstructs the timeline, assigns action items, and files a careful report. Six months later, another outage follows the same shape. The company remembered the meeting. It did not learn from it.
 
-An organization improves recursively when experience changes the machinery of collective improvement: who receives information, how decisions are reviewed, which experiments are permitted, and how lessons survive the people who learned them. This is harder than changing software because the “system” is made of people who interpret the rules and adapt to being measured.
+An organization improves recursively when experience changes the machinery of collective improvement: who receives information, how decisions are reviewed, which experiments are permitted, and how lessons survive the people who learned them. This is harder than changing software because the "system" is made of people who interpret the rules and adapt to being measured.
 {: .lede}
 
 ![Colleagues working together around a long office table](https://images.unsplash.com/photo-1612296727716-d6c69d2a2cbb?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600)
@@ -13,7 +15,7 @@ An organization improves recursively when experience changes the machinery of co
 **Learning has to travel.** An organization's lesson is only as durable as the practices, incentives, and relationships that carry it. *[Photo by Compagnons on Unsplash](https://unsplash.com/photos/zBfBXHCaLmk?utm_source=jonathanfrei.com&utm_medium=referral)*
 {: .caption}
 
-## Many minds, several objectives
+## The people inside the process
 
 Software components don't usually care whether a patch makes them look bad. Employees do. Teams have local goals, managers have budgets, executives have time horizons, and customers experience consequences that may never appear on an internal dashboard. A change that helps one part of the company can impose a cost elsewhere. By the time the cost becomes visible, the decision makers may have moved on.
 
@@ -37,4 +39,6 @@ Healthy recursive improvement therefore needs deletion as well as accumulation. 
 
 No organization sees itself completely. Reports compress reality; incentives alter what gets reported; delayed outcomes blur cause and effect. The best it can do is build several paths for inconvenient information to travel, make reversible changes where possible, and protect the people who reveal that a favored improvement isn't working.
 
-The company that learns isn't the one with the longest handbook or the busiest retrospective calendar. It is the one whose people can turn experience into changed practice, then question that practice without having to deny the lesson that created it.
+A company learns when experience changes practice and when people remain free to question the changed practice later. That second freedom is fragile. A rule can outlive the failure that created it, and a metric can survive long after employees discover how to satisfy it without serving its purpose.
+
+Organizations at least have meeting rooms, reporting lines, and named decision makers. Markets are stranger. Their intelligence is spread across people who may never meet, and every successful move changes the information facing everyone else.
