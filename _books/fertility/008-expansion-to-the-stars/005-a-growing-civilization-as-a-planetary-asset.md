@@ -1,31 +1,29 @@
 ---
 title: A growing civilization as a planetary asset
-deck: More human capacity can protect Earth while creating room beyond it
+deck: Human capacity can protect Earth while creating the surplus needed to build beyond it
 eyebrow: Defending the home world
 ---
 
-In September 2022, a spacecraft struck a small asteroid moonlet about seven million miles from Earth. The collision changed its orbital period by thirty-three minutes. DART was a controlled test against an object that posed no threat, and it demonstrated that human beings can alter the path of a celestial body before it reaches us.
+In September 2022, a spacecraft struck a small asteroid moonlet about seven million miles from Earth. The collision changed its orbital period by thirty-three minutes. DART was a controlled test against an object that posed no threat, and it showed that human beings can alter the path of a celestial body before it reaches us.
 {: .lede}
 
-[NASA's analysis of DART](https://www.nasa.gov/science-research/planetary-science/nasas-dart-data-validates-kinetic-impact-as-planetary-defense-method/) is a compact answer to the idea that humanity is only a burden on the planet. Nature produced the hazard. Human observation found it, and human engineering developed a possible defense. We can damage the world badly. We are also the only known creatures capable of noticing a threat decades away and deciding to protect every species in its path.
+[NASA's analysis of DART](https://www.nasa.gov/science-research/planetary-science/nasas-dart-data-validates-kinetic-impact-as-planetary-defense-method/) offers a useful correction to the idea that humanity is only a burden on the planet. Nature produced the hazard. Human beings found it early enough to experiment with a defense. We can damage the world badly. We are also the only known creatures capable of noticing a threat decades in advance and deliberately protecting everything in its path.
 
-## More eyes on the problem
+Planetary defense depends on spare capacity. Telescopes have to watch the sky before there is an emergency. Engineers have to test a deflection method against a harmless target. Governments have to spend money on a danger voters may never see. That surplus of attention is easy to call wasteful until the day it is needed.
 
-Planetary defense starts with telescopes finding an object early enough for a small deflection to work. DART's result was measured through an international observing campaign. The defense depends on scientists and equipment maintained between rare emergencies.
+A larger population can support more of this work when its people are prosperous, educated, and free enough to use their talent. Growth guarantees none of those conditions. It simply increases the pool of people from whom another astronomer, machinist, or stubborn researcher can appear.
 
-A larger population can support more of that web if it is prosperous and well educated. It can afford people whose daily work appears unnecessary until a strange orbit is detected. Growth gives no guarantee of wisdom; more people can create larger harms too. The asset is human capacity joined to institutions capable of correction and cooperation.
+## More than one design
 
-The same capacity addresses environmental strain. A crowded, wealthy world may consume more, and the physical costs are real. It also has stronger incentives to produce food with less land and recover scarce material instead of discarding it. Closed-loop water and air systems developed for space can return to Earth. The relationship can run in both directions: protecting a settlement teaches us how to use this planet more carefully.
+The same surplus permits redundancy. A civilization barely maintaining one technical system has strong reasons to optimize it tightly. A richer and deeper civilization can afford two designs, including the unfashionable one that survives when the preferred design fails.
 
-## A second branch
+Space settlement eventually extends that redundancy beyond Earth. Two self-sustaining populations would face different local risks. At first the connection between them would remain a strength, allowing knowledge and material to move both ways. Over time each branch could preserve skills or institutions the other lost.
 
-Settlement beyond Earth eventually adds a different kind of resilience. Two self-sustaining populations would face different local dangers. A catastrophe on one world could leave the other alive. At first the connection would remain a strength, allowing knowledge and material to move between them. Over time each branch could preserve what the other lost.
+Distance creates political risk too. A settlement can become hostile or oppressive, and early control of transport and life support will make exit difficult. Multiple communities offer better odds of experimentation and escape than one centrally designed colony, though building the second option is expensive. Population depth makes pluralism easier to afford.
 
-Distance also creates new risks. A settlement can become hostile, and its rulers may use control of transport or life support cruelly. Independence leaves liberty uncertain. Multiple communities with different sponsors may offer better chances for experimentation and escape than one centrally designed colony, though the early economics may push toward concentration.
+The traffic of ideas can also return home. Closed-loop water, air, food, and recycling systems developed for settlements have obvious uses on a planet where resources are finite and environmental damage is real. Expansion does not excuse poor stewardship. It gives human ingenuity another reason to become better at it.
 
-This is another reason population depth matters. Redundancy is expensive. A civilization barely maintaining one technical base will optimize it tightly and fear alternatives. A growing civilization has more room for two designs, including the odd one that survives when the favored design fails.
-
-The planetary asset is another generation capable of learning what DART's builders learned, then applying it to a danger they cannot yet name. Fewer people can be exceptionally capable. More capable people give Earth more chances.
+The planetary asset is not population as a raw number. It is another generation capable of receiving what DART's builders learned and applying it to a danger they cannot yet name. More capable people give Earth more chances.
 
 <div class="citation">
 
