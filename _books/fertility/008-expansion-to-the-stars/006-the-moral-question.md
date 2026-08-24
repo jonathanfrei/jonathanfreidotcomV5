@@ -4,26 +4,24 @@ deck: Future people have a claim on our care without becoming instruments of our
 eyebrow: Freedom and inheritance
 ---
 
-Future generations cannot consent to the world we leave them. They will receive its climate and debts, along with whatever knowledge and freedom survive us. They may also receive a civilization that has kept open the path beyond Earth—or one that slowly decided the path was too difficult to maintain.
+Future generations cannot consent to the world we leave them. They will inherit its climate, debts, laws, and technical capacity. They may also inherit a civilization that kept open the path beyond Earth—or one that slowly spent the margin required to attempt it.
 {: .lede}
 
-Responsibility to these people is a familiar moral idea. UNESCO's [1997 declaration on future generations](https://www.unesco.org/en/legal-affairs/declaration-responsibilities-present-generations-towards-future-generations) joins the maintenance of humankind to respect for human dignity. The pairing is right. Continuity purchased by treating present people as reproductive material would betray the civilization being continued.
+UNESCO's [1997 declaration on future generations](https://www.unesco.org/en/legal-affairs/declaration-responsibilities-present-generations-towards-future-generations) joins the maintenance of humankind to respect for human dignity. The pairing is right. Continuity purchased by treating present people as reproductive material would betray the civilization being continued.
 
-The decision to have a child remains personal. Every Mars plan must respect a woman's freedom from reproductive control by a government or company. The dangers become sharper in a small settlement, where every birth affects survival. A model may tell leaders that a certain number of children should be born this year. It cannot make coercion just.
+The off-world case makes the danger especially clear. A very small settlement may know exactly how many births would improve its age structure or genetic resilience. That knowledge gives its leaders no ownership of anyone's body. A woman born on Mars is not a reproductive asset owed to mission control.
 
-This will be difficult. A tiny population has to think about reproduction, and shared medical capacity will narrow privacy. The best protection is enough population and material margin that an individual's refusal does not threaten everyone. Scale can protect freedom.
+Small scale does make freedom harder. When one person's pregnancy, occupation, or refusal can materially affect everyone else, planners will be tempted to turn necessity into authority. The best defense is margin: enough people, capacity, and competing institutions that one person's choice does not threaten the whole settlement. Scale can protect liberty because it allows some inefficiency, dissent, and exit.
 
 ## What we owe forward
 
-Our obligation includes a full human life. Future people should inherit the ability to choose goods we did not choose for them. A technically alive settlement with one permitted occupation and no way to leave has preserved biology while shrinking human life. Family and worship may look inefficient to planners. They are among the reasons for building a world at all.
+A durable settlement should offer more than biological survival. Future people should inherit room to pursue goods the founders did not choose for them. A technically alive colony with one permitted occupation and no meaningful way to leave has preserved bodies while shrinking human life.
 
-The obligation runs backward too. Earth is a home to repair rather than raw material for escape. The dead handed us language and law. Caring for that inheritance includes repairing damage here. Expansion should carry the best of Earth outward while making us better stewards of the original.
+That obligation runs backward too. Earth is a home to repair rather than raw material for escape. Expansion should carry the best of this inheritance outward while making us more careful with the original. Technologies built for closed environments may help, but the deeper discipline is the same: receive a place you did not make and leave it habitable for people you will never meet.
 
-People living now have urgent needs, and a distant settlement will not feed a hungry child this evening. Long projects can become moral vanity when leaders display ambition with somebody else's money. A good space program must bear ordinary scrutiny over cost and power. It should develop capacities with nearer benefits while keeping faith with the longer purpose.
+Long projects can become vanity when leaders spend other people's money on monuments to themselves. Space exploration deserves ordinary scrutiny over cost, risk, and power. It becomes easier to justify when the capabilities it develops also improve life nearer at hand and when the people paying for it remain free to change course.
 
-Slow demographic decline creates a quieter moral temptation. Because no single choice closes the future, every generation can use the remaining margin and assume another will rebuild it. The harm arrives as an option no longer available to descendants whose names we never knew.
-
-We are responsible for handing forward a civilization capable of continuing the journey, with children welcomed freely and knowledge kept alive. Completion belongs to people far beyond us.
+The moral claim is modest. We do not owe descendants Mars. We owe them, as far as we reasonably can, a civilization still capable of choosing it.
 
 <div class="citation">
 
