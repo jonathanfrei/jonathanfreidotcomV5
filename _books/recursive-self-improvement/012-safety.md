@@ -21,14 +21,14 @@ Authority should remain narrower than capability. A system may be able to propos
 
 Recovery completes the structure. Version history, rollback, backups, staged deployment, and preserved baselines keep an experiment from erasing the last known good state. Constitutional, ecological, and reputational changes cannot be cleanly undone, so they require slower thresholds. The system being evaluated should not control every evaluator, and improvement has to move slowly enough for consequences to become visible between iterations.
 
-> A safe system can learn, but it cannot quietly redefine success, hide the evidence, and grant itself more power in the same motion.
+> A safe system can learn, but it cannot redefine success, hide the evidence, and grant itself more power in the same motion.
 {: .pull-quote}
 
 ## Safety is a property of the whole
 
 Software contributes tests and rollback. Individual practice contributes reflection and trusted correction. Organizations contribute governance and institutional memory. Markets show the value of distributed information and the danger of treating price as a moral verdict. Politics shows why rule changes need legitimacy and durable constraints. Evolution shows what powerful adaptation looks like without a final objective. Competition shows that another optimizer can turn a stable plan into an arms race.
 
-No checklist can make every self-modifying system safe. Unknown environments produce unknown failures, and human overseers have their own blind spots and incentives. The right question is often not whether a system is “safe” in the abstract, but safe to change which component, with what evidence, under whose authority, at what speed, and with what path back.
+No checklist can make every self-modifying system safe. Unknown environments produce unknown failures, and human overseers have their own blind spots and incentives. The right question is often not whether a system is "safe" in the abstract, but safe to change which component, with what evidence, under whose authority, at what speed, and with what path back.
 
 **Keep the right to stop**: Oversight is meaningful only if someone can pause the loop before the system's next improvement removes the opportunity.
 {: .aside}
