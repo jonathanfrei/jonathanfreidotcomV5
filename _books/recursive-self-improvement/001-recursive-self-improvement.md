@@ -31,9 +31,9 @@ Any claim of recursive self-improvement should survive three questions. **What i
 
 Those questions keep ordinary repetition from masquerading as recursion. A thermostat acts again and again, but a conventional thermostat doesn't redesign its control rule. A runner repeating the same workout may become fitter, but the training process becomes recursive only when results change how future workouts are selected. Feedback supplies information; learning changes behavior; recursive improvement changes some part of learning or optimization itself.
 
-**A practical test**: After an improvement, ask what the system can now do differently when it next tries to improve. If the honest answer is “nothing,” the process may be useful, adaptive, or repeated, but it isn't recursive in the sense used here.
+**A practical test**: After an improvement, ask what the system can now do differently when it next tries to improve. If the honest answer is "nothing," the process may be useful, adaptive, or repeated, but it isn't recursive in the sense used here.
 {: .aside}
 
-This is also why “better” cannot remain a vague compliment. A system can become faster while growing fragile, more productive while exhausting its people, or more engaging while making its users miserable. Capability and direction are separate. A stronger improvement mechanism can pursue a poor objective more efficiently.
+This is also why "better" cannot remain a vague compliment. A system can become faster while growing fragile, more productive while exhausting its people, or more engaging while making its users miserable. Capability and direction are separate. A stronger improvement mechanism can pursue a poor objective more efficiently.
 
 Recursive self-improvement gives us a way to notice where lessons are stored, who may alter the rules, which signals count as success, and whether a mistake can be undone. The chapters ahead follow that loop as it grows harder to see and harder to govern. Software writes lessons into tests. People carry them in habits. Organizations bury them in incentives. Markets, politics, and evolution add other agents whose responses change the next round. By the time the loop reaches artificial intelligence, the question is no longer only whether a system can get better. It is who still has the standing and the power to say what better means.
