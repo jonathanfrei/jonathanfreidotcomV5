@@ -31,7 +31,7 @@ A birth can disappear from the demographic ledger without anyone ever deciding a
 
 That is why the gap between desired and achieved fertility deserves special attention. If most people freely wanted one child and reliably had one, low fertility would pose one kind of problem. If many people hoped for two or three and ended with one or none because the path to family formation consumed the available years, it poses another.
 
-The distinction does not tell us which policy will work. It does tell us what a humane response should try to preserve: freedom, yes, but also the practical ability to form the families people themselves hoped to have. The next chapters turn from the causes of low fertility to what happens when the smaller generations produced by these choices begin moving through the rest of society.
+The distinction does not tell us which policy will work. It does tell us what a humane response should try to preserve: freedom, yes, but also the practical ability to form the families people themselves hoped to have. The next chapter follows the smaller generations produced by these choices into schools, workplaces, families, and public life.
 
 <div class="citation">
 
