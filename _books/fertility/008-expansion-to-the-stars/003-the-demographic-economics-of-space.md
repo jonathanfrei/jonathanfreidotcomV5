@@ -1,31 +1,31 @@
 ---
 title: The demographic economics of space
-deck: A project measured in centuries must be financed by people willing to build beyond their own return
-eyebrow: Paying for the horizon
+deck: A project becomes durable when cargo gives way to capacity and one generation builds for another
+eyebrow: From supply chain to inheritance
 ---
 
-Space is expensive because almost every necessity must first escape Earth's gravity. A permanent settlement adds a harsher requirement: the flow of equipment has to become a local capacity to repair and eventually reproduce the equipment. Sending a water processor is a mission expense. Building the workshop that can make its failed valve is the beginning of an economy.
+Space is expensive because almost every necessity must first escape Earth's gravity. A permanent settlement adds a harder requirement: imported equipment has to become local capacity. Sending a water processor is a mission expense. Building the workshop that can make its failed valve is the beginning of an economy.
 {: .lede}
 
-The scale is already substantial before settlement begins. NASA's inspector general projected the Artemis campaign would cost $93 billion from fiscal year 2012 through 2025, and [estimated a single Space Launch System rocket under a proposed services contract at $2.5 billion](https://oig.nasa.gov/docs/IG-24-001.pdf). Those figures describe one government architecture. Reusable launch vehicles and competition can lower costs. The current bill still shows how much industry stands behind a few days beyond Earth.
+The scale is already substantial before settlement begins. NASA's inspector general projected the Artemis campaign would cost $93 billion from fiscal year 2012 through 2025, and [estimated a single Space Launch System rocket under a proposed services contract at $2.5 billion](https://oig.nasa.gov/docs/IG-24-001.pdf). Reusable vehicles and competition can lower launch costs. The current bill still shows how much terrestrial industry stands behind a few days beyond Earth.
 
 ## From cargo to capacity
 
-Early bases will import high-value machines and the parts most difficult to make locally. They can use lunar or Martian material for shielding and gradually produce oxygen or fuel. NASA has studied [in-situ resource use on Mars](https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20150016009.pdf) because every kilogram made there reduces what must be carried from Earth.
+Early bases will import complex machines and the parts hardest to make locally. They can use lunar or Martian material for shielding and gradually produce oxygen or fuel. NASA has studied [in-situ resource use on Mars](https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20150016009.pdf) because every kilogram made there is one that does not have to be launched from Earth.
 
-Self-sufficiency recedes as one approaches it. A settlement that prints a pipe may still import the printer and its electronics. Complete independence would require a remarkable industrial ladder, from mining raw material to making precision instruments. Resilience is the useful threshold: a broken shipment should remain a problem rather than become a death sentence.
+Self-sufficiency recedes as one approaches it. A settlement that prints a pipe may still import the printer and its electronics. Complete independence would require a deep industrial ladder, from raw material to precision instruments. The more useful threshold is resilience: a missed shipment should remain an expensive problem rather than become a death sentence.
 
-A large terrestrial economy can support this patient buildout more easily. It supplies taxpayers and customers while absorbing failure. It also creates markets large enough for a company to improve a launch system for many users instead of building a beautiful machine that flies once. A shrinking economy may remain wealthy per person, as the previous chapter explained. Its older voters and tighter public margins will still have good reasons to prefer a hospital today over a refinery on the Moon whose payoff belongs to their grandchildren.
+That buildout is easier for a terrestrial civilization with economic slack. A large economy can absorb failed experiments and support suppliers long enough for a new technology to mature. A shrinking economy may remain wealthy per person, but an older population and tighter public budgets create understandable pressure to spend the margin close to home. A hospital today has a stronger constituency than a lunar machine shop whose payoff belongs to grandchildren.
 
-The present has real claims. Elder care and planetary repair are necessary work. The space project becomes sustainable when it grows from abundance rather than consuming the conditions of ordinary flourishing on Earth.
+The present has real claims. Elder care and repairing damage on Earth are necessary work. Expansion becomes more credible when it grows from abundance rather than competing with ordinary flourishing for the last available dollar.
 
 ## What machines change
 
-Automation should go first. Robots can prepare a landing site before people arrive and keep working through radiation that would limit a crew. Autonomous systems can inspect a leak while the nearest human instruction is minutes away. They reduce the number of people exposed and make each settler more capable.
+Robots should go first. They can prepare a landing site before people arrive and work through conditions that would limit a human crew. Autonomous systems can inspect a leak while the nearest instruction from Earth is minutes away. AI may let a small settlement operate machinery that once required many specialists.
 
-Machines extend the demographic foundation. They have supply chains and designers. An artificial intelligence may diagnose a failed pump, but the settlement still needs authority to decide whether scarce power goes to the repair. When circumstances escape the training data—and they will—human judgment has to carry the consequence.
+That changes the minimum labor force. It does less to change the minimum human society. Machines have supply chains and designers, and an AI that diagnoses a failed pump cannot bear political responsibility for deciding whether scarce power goes to the repair or the hospital. A community still needs people capable of judgment, trust, dissent, and care.
 
-The economics of settlement gradually changes from transport to inheritance. A thriving project eventually outgrows a heroic annual appropriation or one founder's fortune. It needs local production and people who expect the settlement to exist after they are gone. That expectation is economic, though it begins as confidence in a future generation.
+Over time the economics of settlement changes again. Cargo becomes local production; local production becomes capital that one generation maintains for another. A settlement has crossed an important line when its residents invest in things they do not expect to use themselves because they expect their children to remain.
 
 <div class="citation">
 
