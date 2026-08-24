@@ -1,5 +1,7 @@
 ---
-title: 'The Problem of Defining "Better"'
+title: "Better at What?"
+deck: "Why stronger optimization makes the choice of purpose more consequential"
+eyebrow: "Purpose"
 ---
 
 A customer-support team is told to reduce average call time. The number falls. Some agents become clearer and faster. Others transfer difficult callers or close cases that return the next day. The dashboard celebrates while customers repeat the same story to three people.
