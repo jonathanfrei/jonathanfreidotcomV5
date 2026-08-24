@@ -1,6 +1,15 @@
+# Additions needed
+
+- Chapter 6b: extreme measures 
+- Catholic pronatalist worldview 
+- Decline an accident of history or depopulation agenda?
+- Scourge of abortion
+
 
 ## My feedback
 - Angles to add -- Catholic pronatalist view: be fruitful and multiply / fill the earth and subdue it to extend beyond earth. All of creation is our dominion given for our good. There is no limit of space.
+- A trend that can’t continue, won’t
+- All gas, no breaks 
 - Need to plan questions around fertility decline being an accidental side effect (unintended consequence) or part of a depopulation agenda
 - Support for working mothers vs. support for mother no to work
 - (Taxed vs. untaxed labor)
@@ -8,6 +17,9 @@
 - Tax policy of wealth transfers from young to old (social security, property taxes, Medicaid)
 - Abortion as a scourge (society must end it and orient itself around care for the vulnerable. The state can adopt and raise children for roles in government or military or other strategic sectors rather than letting mothers kill them.)
 - Natalism: pro-natalism v anti-natalism 
+- Humanity still at the first spawn point in an infinite universe 
+- Examples from pro-Natalist sci-fi (the expanse, foundation, Enders game)
+- need pronatalist messaging in government, media, schools, and churches. (Fifth generation warfare)
 
 ## From grok reading 
 The two-path book is already in the draft. It is just in the wrong proportions: six chapters of present-day diagnosis, then space as a late coda, with a middle “managed decline” scenario that blurs the choice. The long view, the unpopular remedies, and the pronatalist hope should become the spine, not an epilogue.
