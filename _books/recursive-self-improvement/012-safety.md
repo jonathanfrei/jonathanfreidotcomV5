@@ -1,5 +1,7 @@
 ---
-title: Can a System Safely Improve Itself?
+title: "Keeping the Right to Stop"
+deck: "The conditions that keep self-improvement observable, bounded, and reversible"
+eyebrow: "Safety"
 ---
 
 A team testing new flight-control software does not begin by handing it an aircraft full of passengers and hoping the feedback is educational. It uses simulation, constrained test ranges, independent checks, staged authority, and procedures for returning to a known state. The system may be designed to adapt, but the conditions of adaptation are designed too.
