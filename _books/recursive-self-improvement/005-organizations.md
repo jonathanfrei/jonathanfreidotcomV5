@@ -4,7 +4,7 @@ title: Organizations and Complex Adaptive Systems
 
 After a serious outage, a company gathers everyone who touched the system. The team reconstructs the timeline, assigns action items, and files a careful report. Six months later, another outage follows the same shape. The company remembered the meeting. It did not learn from it.
 
-An organization improves recursively when experience changes the machinery of collective improvement: who receives information, how decisions are reviewed, which experiments are permitted, and how lessons survive the people who learned them. This is harder than changing software because the “system” is made of people who interpret the rules and adapt to being measured.
+An organization improves recursively when experience changes the machinery of collective improvement: who receives information, how decisions are reviewed, which experiments are permitted, and how lessons survive the people who learned them. This is harder than changing software because the "system" is made of people who interpret the rules and adapt to being measured.
 {: .lede}
 
 ![Colleagues working together around a long office table](https://images.unsplash.com/photo-1612296727716-d6c69d2a2cbb?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600)
