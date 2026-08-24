@@ -1,27 +1,27 @@
 ---
 title: North America
-deck: Low fertility now extends across the continent, while migration keeps national totals on different paths
+deck: Low fertility can hide beneath a growing population
 eyebrow: Growth without replacement
 ---
 
-North America once looked like an exception to the low-fertility pattern of other wealthy regions. The United States had comparatively high fertility, Canada drew strength from immigration, and Mexico remained younger. That picture has faded.
+The United States still grows. So does Canada. That makes North America a useful reminder that population growth and replacement fertility are not the same thing.
 {: .lede}
 
-The United States has remained below replacement since 2007. Final federal data put its 2024 total fertility rate at about 1.63. The number of births rose slightly that year, but the longer movement is toward later motherhood and fewer births. Large differences by state and social group remain, yet fertility has generally converged downward across groups.
+The United States has remained below replacement since 2007. Final federal data put its 2024 total fertility rate at about 1.63. Births rose slightly that year, but Americans continue to become parents later and have fewer children than they did a generation ago.
 
-Canada reached a record-low TFR of 1.25 in 2024. Immigration has nevertheless produced periods of rapid population growth and a younger population than fertility alone would imply. Migration can offset natural decrease while the native-born population continues to age and growth shifts toward particular cities. It also draws young adults away from the countries that raised them.
+Canada has moved further. Its TFR reached a record-low 1.25 in 2024. The country nevertheless experienced rapid population growth because immigration added large numbers of mostly younger adults. A population can therefore become larger while the family pattern underneath it remains far below replacement.
 
-Mexico's transition has been quicker than the older north-south story suggests. INEGI's 2023 demographic survey estimated fertility at 1.6, down from 2.07 in its 2018 survey. Mexico remains younger than the United States or Canada, so momentum can sustain growth after fertility passes replacement. But the direction changes the continent's long-run migration and age structure.
+Mexico completes the continental turn. INEGI's 2023 demographic survey estimated fertility at 1.6, down from 2.07 in its 2018 survey. Mexico is younger than either the United States or Canada, so it can continue growing through demographic momentum even after fertility falls below replacement.
 
-The same movement extends through much of Latin America. Countries that were associated with large young families now report fertility near or below replacement. Their institutional challenge differs from Canada's or the United States': aging may advance while pension coverage and formal employment remain less complete.
+The old North American gradient—low fertility in Canada, comparatively high fertility in the United States, larger families in Mexico—has largely disappeared. All three countries now sit below replacement by their national measures. What differs is the age structure they inherited and the number of people crossing their borders.
 
-## Three demographic balances
+## What immigration can and cannot do
 
-North American population change is the balance of births, deaths, and migration. The United States can grow slowly with below-replacement fertility because immigration and a somewhat younger age structure compensate. Canada's recent growth has depended even more heavily on migration. Mexico may continue growing for a time because its large younger cohorts still produce many births, even at smaller family sizes.
+Immigration changes national demographics quickly because migrants are disproportionately young adults. They can fill jobs now and have children later. For an aging country, that can be enormously valuable.
 
-Immigration does not repair fertility. The [OECD's review of migrant family building](https://www.oecd.org/en/publications/international-migration-outlook-2023_b0f40584-en/full-report/component-8.html) finds adaptation within the first generation and broad convergence toward host-country fertility across later generations, with variation by origin and age at arrival. U.S. research on Mexican migration likewise finds fertility declining within and across generations. The second generation moves much of the way toward the native pattern. Immigration can prop up one country's head count and labor force; at the global level, it has only shuffled people across a border.
+It is still a transfer rather than a global fertility solution. The young adult who moves to Toronto or Dallas no longer lives in the country that raised him. And migrant fertility tends to move toward the host-country pattern over time. The [OECD's review of migrant family building](https://www.oecd.org/en/publications/international-migration-outlook-2023_b0f40584-en/full-report/component-8.html) finds broad convergence across generations, with plenty of variation in the path.
 
-Those differences are politically important, but they should not conceal the continental turn. All three countries now have fertility below replacement by their national measures. The remaining variation lies less in whether fertility has fallen than in how age structure and migration translate that fall into population change.
+North America can therefore postpone some visible consequences of low fertility longer than countries with little immigration. That is a real advantage, not an illusion. It can also make the demographic turn easier to miss. A rising national head count does not mean each generation is replacing itself.
 
 <div class="citation">
 
