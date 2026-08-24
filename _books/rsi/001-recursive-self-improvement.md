@@ -2,6 +2,7 @@
 title: "The Loop Turns Inward"
 deck: "When improvement begins to change the machinery that produces it"
 eyebrow: "First Principles"
+description: "An exploration of what happens when a person, organization, market, political system, or machine begins improving not only its results, but the process that produces them. Moving from software tests and study habits to evolution, competition, and artificial intelligence, the book examines how systems preserve lessons, adapt to changing conditions, and sometimes become dangerously good at pursuing the wrong goal. It argues that greater capability makes human judgment more necessary, because no improvement process can decide for itself what “better” should mean."
 ---
 
 A programmer fixes a bug before lunch. By the afternoon, the same class of error has appeared somewhere else. She can fix that one too, or she can change the development process so the next version of the mistake is caught before it reaches a customer. The first repair makes the program better. The second leaves behind a better way of making programs.

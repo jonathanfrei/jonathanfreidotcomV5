@@ -10,7 +10,7 @@ For two centuries, the great population fear was that humanity would become too 
 
 The danger moves slowly enough to understand. That is part of what makes it easy to ignore, and also why I am hopeful. Families, employers, cities, churches, and governments still have time to change the conditions in which people meet, marry, raise children, care for one another, and hand a civilization forward. The pages that follow are an attempt to understand what that would require.
 
-![](https://media.jonathanfrei.com/assets/img/2026-08-24-20260824103221-01786.jpg)
+![](https://media.jonathanfrei.com/assets/img/2026-08-24-20260824104149-74759.jpg)
 
 ## Summary
 
