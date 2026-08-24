@@ -4,7 +4,7 @@ deck: Choosing whether humanity will continue to grow
 eyebrow: The fertility decline
 ---
 
-Fertility decline asks us to care for people living through an age structure that cannot quickly change while deciding whether that structure should deepen into permanent contraction. Adaptation is already necessary. Renewal remains possible.
+Nearly every adult alive inherited a world built by people who decided, usually without thinking in demographic terms, that another person should exist. We inherited languages we did not invent, schools we did not build, family stories that began before us, and institutions founded by people whose names we have forgotten. The fertility decline asks whether we intend to keep making heirs for that inheritance.
 {: .lede}
 
-The choice is urgent without being hopeless. The forces described in this book move slowly enough for institutions and culture to change, though every year becomes part of the inheritance. We begin with the demographic reality: much of the near future has already been born.
+Much of the next few decades cannot be changed quickly. The people who will retire in the 2040s are already alive, as are most of the workers who will support them. We owe them a humane adjustment to an older world. What comes after is less settled. The choice is not between adaptation and renewal. We have to do both: care for the age structure we inherited while deciding whether to hand permanent contraction to the generations after us.

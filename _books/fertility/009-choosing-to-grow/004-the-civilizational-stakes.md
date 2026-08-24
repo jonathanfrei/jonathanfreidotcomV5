@@ -4,24 +4,22 @@ deck: The object is human flourishing carried forward through generations
 eyebrow: Conclusion
 ---
 
-The goal cannot be the largest possible number on a population chart. A civilization exists for persons. Its demographic health matters because persons need one another, and because a human world must be renewed before it can be inherited.
+Civilization is a relay conducted mostly among people who never meet. We receive languages, laws, machines, stories, scientific knowledge, debts, habits, buildings, and mistakes from the dead. Most of what we pass on will go to people whose names we will never know.
 {: .lede}
 
-Birth maximization would be a coarse and dangerous standard. It could praise conditions in which women have many children because they lack education, security, or control over sex. It could treat a mother as an instrument of the state and a child as a future taxpayer. The argument of this book points elsewhere. People should be able to form the families they want, mothers and fathers should be honored for the work they do, and children should arrive in a culture glad to receive them.
+That inheritance makes each generation both recipient and trustee. A teacher receives a subject from teachers she never knew and gives it to students who will take it somewhere she cannot predict. Parents teach children words they did not invent. An engineer may spend a career improving a system that will do its most useful work after he is gone. None of this requires a grand theory of history. It is how ordinary continuity works.
 
-That culture also owes dignity to people who never become parents. They remain bound to others and to the common life, giving care that no fertility statistic records. A society confident in family life does not need to demean them. It can speak plainly about the public value of children because it understands value as richer than a contest for status.
+The relay needs another runner. Demographic health matters because persons need one another and because a human world has to be renewed before it can be inherited. The goal is not the largest possible population. Birth maximization could praise conditions in which women have many children because they lack education, security, or control over their own lives. A child is not a future taxpayer with a face attached. She owns her life.
 
-The demographic stakes emerge from continuity. Every institution depends on people who did not found it. A language survives because children learn it imperfectly and make it their own. A constitutional order survives because new citizens accept duties toward strangers and the unborn. Science advances because another student enters a field whose hardest questions outlived the last professor. Civilization is a relay conducted mostly among people who never meet.
+The case for renewal is simpler. Human life is good. Family, friendship, work, discovery, worship, art, and care are goods that exist only because particular people are here to practice them. People who never become parents participate fully in that common life and often carry large parts of the inheritance themselves. A society confident enough to honor parenthood does not need to diminish anyone else to do it.
 
-Look one generation ahead and the issue is intimate: who will be present at the table and beside an aging bed? Over a millennium, it becomes harder to picture and more serious. Hundreds of billions of possible lives may lie within humanity's reach if our descendants endure and spread beyond one vulnerable planet. Their exact cultures and loyalties are unknowable. Their capacity for love and discovery is enough to give their possibility moral weight.
+Look one generation ahead and the relay is easy to picture: someone beside an aging bed, someone learning a trade, someone teaching a child. Over centuries, the names disappear but the structure remains. Projects larger than one lifetime depend on successors who can receive them, criticize them, and sometimes decide that the previous generation was wrong.
 
-This long view changes the meaning of a birth today without assigning a mission to the child. She does not owe the state a tax payment or humanity a starship. She owns her life. Yet her existence joins a chain through which projects larger than one lifetime become possible. Enough broken links eventually end the chain.
+That is one reason I do not think managed contraction is an adequate final ambition. A smaller population can be rich, free, inventive, and decent. Persistent contraction still leaves fewer successors each generation and asks more of each one merely to carry what already exists. Renewal preserves room for correction as much as continuity. It gives the future more people capable of noticing what we missed.
 
-The case for renewal therefore rests on freedom joined to obligation. Present adults should have room to choose family life, and institutions should stop making that choice needlessly punishing. We also inherit a world that we did not create. Receiving such an inheritance carries some duty to pass forward more than ruins and instructions for orderly retreat.
+Human expansion beyond Earth makes the principle unusually visible, but it is not the reason to have children. A settlement on another world would simply expose what has always been true at home: civilization continues when people build things they expect someone else to inherit.
 
-Humanity's expansion to the stars makes the scale visible, though the principle begins at home. A settlement beyond Earth would require dense cooperation across generations, and no machine can supply the human purpose for which such a settlement exists. A permanently shrinking species may still launch extraordinary missions. Its horizon will contract as its people do.
-
-I do not think managed contraction is an adequate final ambition for humanity. Near-replacement fertility is no magic number, and growth alone guarantees neither virtue nor wisdom. Still, a civilization capable of renewing itself gains time to correct its failures and people who can attempt the correction. It preserves the possibility of better descendants. That possibility is the stake.
+We received an unfinished world. I think we should leave one unfinished too, with people still arriving who can decide what to keep, what to repair, and what to build next.
 
 <div class="citation">
 
