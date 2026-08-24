@@ -4,28 +4,34 @@ deck: The world's largest families often live where resources are thinnest, whic
 eyebrow: The difficult comparison
 ---
 
-Many of the world's poorest and least productive societies have the largest families. That fact does not prove that housing, childcare, or wages are irrelevant in rich countries. It does prove that low income alone does not prevent high fertility. People have children under material conditions far harsher than those usually described as making children “unaffordable” in the developed world.
+Many of the world's poorest societies still have the largest families. That does not make housing, childcare, or wages irrelevant in rich countries. It does show that low income by itself cannot explain low fertility. People have children under material conditions far harsher than those usually described as making children “unaffordable” in wealthy countries.
 {: .lede}
 
-High fertility is now concentrated mainly in sub-Saharan Africa. In 2024, [13 percent of countries and areas](https://desapublications.un.org/policy-briefs/un-desa-policy-brief-no-172-new-landscape-fertility-and-family-planning-30-years) still had fertility of four or more children per woman, mostly in that region. Their populations are young, childbearing begins earlier, and a long span of reproductive exposure makes several births possible without deliberate planning for a large family.
+High fertility is now concentrated mainly in sub-Saharan Africa. In 2024, [13 percent of countries and areas](https://desapublications.un.org/policy-briefs/un-desa-policy-brief-no-172-new-landscape-fertility-and-family-planning-30-years) still had fertility of four or more children per woman, mostly in that region. Their populations are young, marriage and childbearing begin earlier, and many women spend more of their reproductive years exposed to the possibility of pregnancy.
 
-Early marriage is central. Globally, 76 percent of first births to mothers under eighteen occur within marriage, though regional patterns differ. In 2024, eighteen countries—all in sub-Saharan Africa—had adolescent birth rates above one hundred births per thousand girls and young women ages fifteen to nineteen. Earlier first births leave time for more births and often interrupt education that would have changed both opportunity costs and family preferences.
+Earlier marriage is part of the difference. So is lower contraceptive use. Among women in sub-Saharan Africa who wanted to avoid pregnancy, modern-method use rose from 29 percent in 1994 to 57 percent in 2024. That is a large increase, but it still leaves a wider gap than in most wealthy regions. Some women want large families. Others would prefer to delay or avoid particular births.
 
-Lower contraceptive use matters directly. Among women in sub-Saharan Africa who wanted to avoid pregnancy, modern-method use rose from 29 percent in 1994 to 57 percent in 2024. The gain is large; it also leaves a wider gap than in most wealthy regions. Some women want more children. Others face unmet need, partner opposition, or weak services. High fertility therefore combines intended large families with births women would have preferred to delay or avoid.
+## A child has a different economic place
 
-## Why children have a different economic place
+In an agricultural or informal household, a child can eventually contribute work and support parents in old age. Where pensions and savings are unreliable, kin are a form of security. The child remains costly, but the lifetime flow of resources looks very different from a child in an expensive city who requires years of concentrated investment before becoming economically independent.
 
-In an agricultural or informal household, children can contribute work and support parents in old age. They remain costly and dependent for years, but the flow of resources across a lifetime differs from a child in a city who requires two decades of concentrated investment before becoming economically independent. Where pensions and savings are unreliable, kin are a form of security.
+Kin networks change the immediate cost too. Grandparents or older siblings may provide care, and multigenerational living can reduce the need to purchase a separate bedroom and formal childcare for every child. Motherhood may also carry adult status more visibly than it does in a professional culture where achievement is measured elsewhere.
 
-Child mortality also shapes behavior. When survival is uncertain, parents may have additional births partly because they cannot assume every child will live to adulthood. Falling mortality usually precedes falling fertility, creating the rapid growth described in Chapter 001. As survival becomes more reliable, desired family size and the number of “insurance” births can decline, though culture and institutions adjust with a lag.
+None of this makes deprivation admirable. Early marriage can deprive girls of choice. Weak medical care raises risks for mothers and infants. Children may work because the household has no safer alternative. Poor high-fertility countries are not a model to copy.
 
-Kin networks distribute costs differently. Older siblings and grandparents may provide care; multigenerational living reduces the need to purchase a separate bedroom and formal childcare for every child. Motherhood can also bring adult status earlier and more visibly than education or paid work. A large family may signify continuity and standing rather than a failure to optimize consumption.
+They do force a more precise question. A couple in Boston is not poorer than a family in Niger. They face a different structure of costs and expectations. The American couple may need two professional incomes to afford the neighborhood they consider acceptable, then purchase childcare because both adults work, while also believing a good childhood requires expensive schooling and activities. “We cannot afford another child” can be completely sincere without meaning the household lacks food or shelter.
 
-There is nothing romantic about the hardships surrounding some of these births. Early marriage can deprive girls of choice. High fertility combined with weak medical care raises risks for mothers and infants. Children may work because a family has no safe alternative. Old-age dependence on children can burden both generations. The comparison should not turn deprivation into a pronatalist model.
+Affordability is partly a judgment about what must be preserved when a child arrives. Sometimes that standard reflects genuine necessity. Sometimes it reflects a way of life whose prerequisites have grown faster than families can satisfy them.
 
-It should make affluent excuses more precise. A couple in Boston is not poorer than a family in Niger. They face a different arrangement of costs: expensive urban space, high foregone earnings, and weak kin support. Motherhood also brings less status than professional achievement. “We cannot afford children” often means “we cannot have children without giving up the life our society taught us to expect.” Sometimes that sacrifice really is too large. Sometimes the expectation deserves examination.
+## The family imagined and the family achieved
 
-The conditions that permit many births are not necessarily the conditions in which mothers and children flourish. A humane pronatalism should want both: enough confidence and support for families to welcome children, and enough health and material provision for those children to thrive. Poor high-fertility countries show that wealth is not sufficient and poverty is not prohibitive. The social meaning of a child and the network around a mother can outweigh income itself.
+The comparison also helps put the rest of the chapter back together. Low fertility in rich societies rarely has one cause. It emerges from a longer path into partnership, a higher threshold for readiness, reliable ways to postpone pregnancy, and a culture in which postponement often looks responsible. Biology then limits how long the delay can be recovered.
+
+A birth can disappear from the demographic ledger without anyone ever deciding against children in principle. The future parents never meet. They meet but wait to commit. They commit but wait for the house or a stable year at work. The first child arrives later than expected. By the time they consider another, time has narrowed the choice.
+
+That is why the gap between desired and achieved fertility deserves special attention. If most people freely wanted one child and reliably had one, low fertility would pose one kind of problem. If many people hoped for two or three and ended with one or none because the path to family formation consumed the available years, it poses another.
+
+The distinction does not tell us which policy will work. It does tell us what a humane response should try to preserve: freedom, yes, but also the practical ability to form the families people themselves hoped to have. The next chapter follows the smaller generations produced by these choices into schools, workplaces, families, and public life.
 
 <div class="citation">
 
