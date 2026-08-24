@@ -1,27 +1,27 @@
 ---
 title: East Asia
-deck: The region at the leading edge of low fertility shows how quickly age structure can become destiny
-eyebrow: The furthest edge
+deck: The region at the leading edge of low fertility shows how quickly the range of choices can narrow
+eyebrow: The outer edge
 ---
 
-East Asia contains the clearest cases of fertility falling far below replacement and remaining there. Its countries differ in politics and prosperity, yet several have converged on exceptionally few births.
+South Korea recorded a total fertility rate of 0.75 in 2024. The number is so far below replacement that it can be hard to translate into ordinary terms. If 100 women were followed by generations reproducing indefinitely at that rate, they would be followed by roughly 36 daughters, then about 13 granddaughters. Real populations do not reproduce like a spreadsheet, and Korea's fertility can change. The arithmetic shows the scale of the departure.
 {: .lede}
 
-Japan reached this terrain first. Its population has declined for more than a decade; Japan's Statistics Bureau recorded a 550,000 decrease in 2024. Long life and sustained low fertility have produced an age structure with fewer potential mothers and more deaths even before fertility changes again.
+The 2024 rate was actually an improvement. It rose from 0.72 in 2023, and births increased for the first time in nine years. That is good news. It also arrives after years in which the cohorts entering adulthood became much smaller than the ones before them. A fertility recovery now has fewer potential parents to work through.
 
-South Korea has moved further. Its total fertility rate rose slightly to 0.75 in 2024 after reaching 0.72 in 2023, while births rose for the first time in nine years. The change is welcome but small beside the accumulated decline. Cohorts entering adulthood are already much smaller than the cohorts that preceded them.
+Japan reached the demographic turn earlier. Its population has declined for more than a decade; the Statistics Bureau recorded a decrease of 550,000 people in 2024. Long life is part of the story, in the best sense: Japanese people survive to old age at remarkable rates. Combined with decades of low fertility, that success produces many deaths each year and a shrinking pool of younger adults.
 
-China's scale makes its turn globally consequential. The one-child policy accelerated fertility reduction and imposed grave costs, but fertility remained low after the policy was relaxed and then ended. In 2024, China's official statistics recorded 9.54 million births and 10.93 million deaths. Population fell for another year, while more than one fifth was age sixty or older.
+China makes the same turn consequential at a different scale. The one-child policy accelerated fertility decline through coercion and left wounds that cannot be reduced to demographic statistics. Ending the policy did not restore large families. In 2024, China recorded 9.54 million births and 10.93 million deaths. Its population fell again.
 
-Taiwan and Singapore reinforce the regional pattern. All are dense, highly educated, urban societies where marriage is late and births remain closely tied to marriage. Singapore's resident TFR was 0.97 in 2024 despite decades of active family policy.
+Singapore reinforces the pattern without China's coercive history or Japan's scale. Its resident TFR was 0.97 in 2024 despite decades of active family policy. Different governments have arrived at the same stubborn problem.
 
-## A regional pattern
+## When the missing children become missing parents
 
-It is tempting to reduce the region to work hours or housing prices. Each belongs in the account, and later chapters will examine them. Together they remain insufficient to explain why the pattern spans such different economies and governments.
+Later chapters will examine the reasons East Asian fertility is so low. Expensive housing and long work hours are part of the account. So are late marriage and the unusually close tie between marriage and childbearing. The region also asks more of parents in education and more of women who try to combine demanding work with family life.
 
-The shared structure is more useful here. Education and work consume more of early adulthood. Urban housing is expensive. Parents invest heavily in a small number of children. Women's opportunities outside the home have expanded faster than men's contribution within it. Marriage is postponed, and where childbearing outside marriage remains uncommon, fewer marriages mean fewer births.
+For this chapter, the demographic consequence is enough. Policy can make it easier for today's couples to have children. It cannot quickly create the adults who would have been today's couples if more children had been born twenty or thirty years ago.
 
-East Asia also shows why reversal becomes harder with delay. Policies may improve the conditions for each potential family, but they cannot quickly recreate adults who were never born. Low fertility changes behavior first and cohort size later. The range of near-term possibilities then narrows.
+That is how age structure begins to narrow the range of near-term outcomes. Low fertility first changes the maternity ward. A generation later, it changes the number of people who can walk into it as parents.
 
 <div class="citation">
 

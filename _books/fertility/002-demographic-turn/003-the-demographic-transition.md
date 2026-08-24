@@ -4,28 +4,30 @@ deck: Populations grow fastest between falling death rates and falling birth rat
 eyebrow: The hinge
 ---
 
-The population explosion was not caused first by people having more children. It began because fewer people died—especially fewer infants and children—while families continued, for a time, to have many births.
+The population explosion did not begin because people suddenly wanted enormous families. It began because children who once would have died began to live.
 {: .lede}
 
-Demographers describe the broad sequence as the demographic transition. In simplified form, a society moves from high mortality and high fertility to low mortality and low fertility. Death rates  fall first, while birth rates respond more slowly. During that gap, births greatly exceed deaths and population rises.
+Imagine a place where families commonly have six children and only four survive to adulthood. Then clean water, vaccination, and safer childbirth arrive. Five children survive, then nearly all six. For a generation, parents may continue having the number of children that made sense in the world they knew. The result is a population surge produced by survival rather than by rising fertility.
 
-The transition sketches a common sequence rather than a universal timetable. European mortality and fertility declined over generations. In many lower-income countries after the Second World War, public-health measures and imported medical technologies reduced mortality much faster. Similar stages therefore produced very different speeds of growth.
+That simplified story is the demographic transition. A population moves from high mortality and high fertility toward low mortality and low fertility. Death rates usually fall first. Birth rates adjust later. Population grows rapidly in the gap.
 
-## Why mortality falls first
+The sequence matters because the first half is an extraordinary human achievement. The [UN Inter-agency Group for Child Mortality Estimation](https://childmortality.org/reports) documents how sharply deaths before age five have fallen even since 1990. Each avoided death is a child who gets to grow up. Enough of those victories also change the age structure of a country.
 
-Clean water and vaccination reduce premature death, as does safer care around birth. The UN Inter-agency Group for Child Mortality Estimation documents the dramatic fall in mortality before age five since 1990. Each avoided death is first a human good. Together, those gains transform the age structure: more children survive and the number of future parents rises.
+## Families adjust to a different world
 
-Fertility commonly adjusts later because children are embedded in a household economy and a way of life. Where mortality is high, parents may have more births knowing some children will not survive. Children may contribute labor and provide security in old age. As survival becomes reliable and the household cost of children changes, parents generally choose fewer births.
+Birth rates tend to fall later because family size is tied to ordinary expectations about survival and adulthood. When children reliably reach adulthood, parents don't need as many births to end up with the family they expected. As economies change, children also spend longer in school and generally cost more to raise before they become independent.
 
-Women's education and control over timing matter greatly. Urbanization can make children more costly within the household. Formal schooling extends dependence. Pensions can reduce reliance on adult children. Contraception prevents births that would otherwise occur, abortion prevents pregnancies from ending in live births, and later marriage shortens the years available for childbearing. Moving women's prime reproductive years into education and paid work changes timing and raises the cost of having several children. These mechanisms are obvious even though their relative weight differs by country and period.
+Control over timing makes the adjustment easier. Contraception prevents pregnancies that would otherwise occur. Later marriage reduces the years couples are likely to have children. Education and paid work can push family formation later still. The weight of each mechanism differs across countries, but together they help explain why the fall in mortality is eventually followed by a fall in fertility.
 
-## The transition does not stop at two
+Europe moved through this transition over generations. Many poorer countries after the Second World War did not have to rediscover the sanitation, vaccines, and medical knowledge that had accumulated elsewhere. Mortality could fall much faster. Fertility then fell faster too, compressing a century of demographic change into a few decades.
 
-Early versions of the model could be read as if fertility would settle near replacement once mortality became low. Experience has not been so tidy. Many affluent societies passed through replacement and continued downward. Middle-income countries have  followed faster than Europe did, sometimes reaching very low fertility before they became comparably wealthy.
+## The transition kept going
 
-The classic transition explains the great burst of growth: mortality fell before fertility. Persistent low fertility and the divergence among similar economies require a further account. Those are questions for later chapters.
+The older model was good at explaining why population growth accelerated and then slowed. It was less prepared for what came next. Fertility in many affluent countries did not settle near replacement. It passed through it and kept falling. Middle-income countries followed, sometimes reaching very low fertility at income levels well below those of Europe when its transition began.
 
-For now, it supplies the basic chronology. Growth accelerates because survival improves. It slows after births adjust. It may turn negative if low fertility persists and migration does not offset the gap between births and deaths. Before mapping where that process stands, we need to be precise about what fertility measures tell us and where their limits begin.
+That overshoot changes the problem. Falling mortality explains the population explosion. Falling fertility explains why it ended. Persistent fertility far below replacement requires another account, which the later chapters will develop.
+
+For now, the chronology is enough. Better survival creates a large young generation. Smaller families eventually slow its growth. If those smaller families persist, the age structure turns over and the same country begins aging. Before looking at where that process has gone furthest, we need only a few measures to read the map correctly.
 
 <div class="citation">
 

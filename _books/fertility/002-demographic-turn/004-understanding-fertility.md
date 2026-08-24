@@ -1,31 +1,21 @@
 ---
 title: Understanding fertility
-deck: The headline number is useful, but it is neither a forecast nor a completed family size
+deck: Four ideas are enough to read the demographic map
 eyebrow: Reading the measures
 ---
 
-Fertility statistics compress millions of lives into a few numbers. That compression lets us compare countries and years, but it can make a provisional measure look more certain than it is.
+A fertility rate compresses millions of births into one decimal. For the regional comparisons ahead, four ideas do most of the work.
 {: .lede}
 
-The total fertility rate is the measure used most commonly in this book. It adds the age-specific birth rates observed in a particular year and asks how many children a hypothetical woman would have if she experienced those rates throughout her reproductive life. A TFR of 1.5 does not mean that the average woman alive has 1.5 children. It describes the pattern of births occurring now.
+The total fertility rate, or TFR, describes births occurring now. It combines the age-specific birth rates in a particular year and estimates how many children a hypothetical woman would have if those rates continued throughout her reproductive life. A TFR of 1.5 does not mean the average woman alive has 1.5 children.
 
-Completed cohort fertility follows women born in the same period until their childbearing years are largely complete. This is closer to actual lifetime family size, but it arrives too late to describe the present. Period TFR is timely; cohort fertility is conclusive. I will use each for the question it can answer.
+Replacement fertility is the level at which one generation replaces itself in the long run. In low-mortality countries it is roughly 2.1 children per woman. Staying below that level does not make population decline immediately. A country with many young adults can keep growing for years because a large number of women are entering childbearing age.
 
-## Timing can move the headline
+Timing can also move the annual number. If women postpone births, TFR can fall even when some of those births occur later. South Korea's increase from 0.72 in 2023 to 0.75 in 2024 is therefore worth noticing without calling it a reversal. Completed cohort fertility, measured after a generation has largely finished having children, tells us more about lifetime family size but arrives much later.
 
-When births are postponed to older ages, period TFR can fall even if many later occur. Demographers call this a tempo effect. If the age of motherhood stops rising, the period measure may recover without a corresponding change in the number of children women ultimately have. Conversely, persistent postponement can become permanent childlessness or a smaller family when time or circumstance closes the gap.
+Finally, migration changes national population without changing the global number. A low-fertility country can keep growing by attracting young adults from elsewhere. That may be economically valuable and can alter its age structure quickly. It does not create additional people at the world level.
 
-This is why a one-year movement deserves restraint. South Korea's TFR rose from 0.72 in 2023 to 0.75 in 2024. That is a real change in the annual measure, but not yet evidence of a durable reversal. The same caution applies to a sudden decline.
-
-The crude birth rate is different again: births in a year per thousand people in the total population. Because its denominator includes children, men, and older adults, it is strongly affected by age structure. Two countries can have the same TFR and different crude birth rates if one has many more women in the usual childbearing ages.
-
-## Replacement is a benchmark
-
-Replacement-level fertility is the rate at which a generation of women is, in the long run, replaced by daughters. In low-mortality populations it is commonly approximated as 2.1 children per woman rather than exactly two, allowing for mortality before the end of the reproductive years and the sex ratio at birth. Where mortality is higher, replacement level is also higher.
-
-Crossing below replacement does not make population fall immediately. A youthful population can keep growing because a large cohort is entering its childbearing years. An older population can shrink even after fertility improves because the cohort having children is already small. Migration may dominate both effects nationally.
-
-No one measure tells the whole story. I will usually pair fertility with births, age structure, and migration, and distinguish an observation from a projection. These habits are less dramatic than treating every release as a turning point. They are also the only reliable way to see the demographic turn as it unfolds.
+Those distinctions are enough for what follows. Fertility tells us how intensely people are having children now. Age structure tells us how many potential parents there are. Migration can change the national result. Read together, they explain why countries with similarly small families can have very different population trajectories.
 
 <div class="citation">
 

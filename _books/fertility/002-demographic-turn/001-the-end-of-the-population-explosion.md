@@ -4,24 +4,24 @@ deck: The demographic pattern that defined the modern age is giving way to somet
 eyebrow: The great reversal
 ---
 
-Historically, population changed slowly. Then, within a few lifetimes, the number of people alive rose at a speed without precedent. We learned to treat that acceleration as the natural direction of history. It was not.
+For most of human history, population barely moved. Then it did something extraordinary. The United Nations estimates that humanity reached one billion people around 1800, two billion in 1927, and eight billion in 2022. We learned to treat that acceleration as the natural direction of history. It was not.
 {: .lede}
 
-The population explosion was real. The United Nations estimates that the world reached one billion people around 1800, two billion in 1927, and eight billion in 2022. Vaccination and safer childbirth allowed many more children to survive, while adults lived longer too. Birth rates did not fall at once, so populations expanded rapidly.
+The population explosion began with a human victory. More babies survived childhood. Adults lived longer. Birth rates remained high for a time, so the distance between births and deaths widened and populations grew at a speed no earlier society had experienced.
 
-That sequence shaped the public systems and imagination of the modern world. Cities were built outward. Pension systems assumed large cohorts would follow smaller ones. Political debate centered on whether the earth could support still more people. Even as fertility began falling, the age structure created by earlier high fertility kept the total rising.
+The institutions of the twentieth century grew up inside that expansion. New suburbs filled with young families. Governments built schools for larger cohorts and pension systems that expected plenty of workers behind each generation of retirees. Political arguments about population naturally focused on whether the earth could absorb the next billion people.
 
-The rate of growth has been slowing for decades. According to the UN's [World Population Prospects 2024](https://www.un.org/development/desa/pd/world-population-prospects-2024), annual global population growth peaked in the early 1960s. The population is still increasing, but more of the world has entered low fertility and more countries have reached, or passed, their population peak.
+The growth rate itself peaked in the early 1960s. The world continued adding billions because population has momentum: a large generation can produce many births even after each woman begins having fewer children. Longer lives add momentum of their own. The headline total therefore kept rising while the engine underneath it was already slowing.
 
-## A change in direction
+## When growth stops telling the story
 
-There is a basic difference between slower growth and decline. A growing population can add fewer people each year and still become larger. A declining population has crossed another threshold: deaths, adjusted for migration, exceed births. The world as a whole has not crossed it. Many countries already have.
+Slower growth and decline are different conditions. A population can add fewer people each year and still become larger. It begins shrinking when deaths exceed births and migration does not make up the difference. Many countries have crossed that line even though the world has not.
 
-This turn can be hard to see because global totals combine societies at different stages. Growth in parts of Africa and South Asia can coexist with contraction in East Asia and Europe. A national population can also grow through immigration while births remain below deaths. The headline may look stable while the composition underneath it changes substantially.
+This is why the global number now obscures as much as it reveals. Rapid growth in parts of Africa can coexist with falling populations in East Asia. Immigration can keep a European or North American country growing while births remain below deaths. Two countries with similar fertility can move in opposite directions for years because their age structures differ.
 
-When low fertility persists, smaller birth cohorts eventually become smaller cohorts of potential parents. Births can then fall even if the average number of children per woman stops falling. A society formed by repeated expansion begins to encounter repeated contraction.
+Low fertility eventually changes the arithmetic again. Smaller birth cohorts become smaller cohorts of potential parents. Even if the fertility rate stops falling, fewer potential mothers can mean fewer births. The momentum that once magnified growth begins to magnify contraction.
 
-Population does not move along a fixed track. Fertility can rise, migration can alter national trajectories, and forecasts become less certain with distance. The narrower point is enough: the population explosion is no longer a useful default model for the century ahead. To see why, we first need to recover the fears it created—and the transition that eventually slowed it.
+None of this fixes the future on a track. Fertility can rise and migration can change national trajectories. The narrower claim is already enough: the population explosion is no longer a useful default model for the century ahead. To understand how thoroughly it shaped our expectations, it helps to go back to the fear that preceded it.
 
 <div class="citation">
 
