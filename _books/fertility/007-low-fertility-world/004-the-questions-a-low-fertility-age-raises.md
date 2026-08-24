@@ -1,35 +1,27 @@
 ---
 title: The questions a low-fertility age raises
-deck: A humane response needs a goal, a limit on power, and an honest measure of success
+deck: Renewal needs a goal without turning people into instruments of it
 eyebrow: Choosing a direction
 ---
 
-The three scenarios expose a disagreement hidden inside the phrase “solve low fertility.” One person wants more babies next year. Another wants every adult to achieve the family he or she desires. A finance minister wants enough workers to fund pensions. These goals overlap, but they can point to different policies and declare success at different times.
+The three futures can all be called successful depending on what we are trying to accomplish. A finance minister may be satisfied if automation and immigration keep pensions funded. A mayor may be satisfied if a smaller town still has good services. Parents may care most about whether the family they hoped for was actually possible. Those goals overlap, but they aren't the same.
 {: .lede}
 
-I think the long-run goal should be demographic renewal near replacement. A civilization should ordinarily raise a generation capable of succeeding it. The immediate work is more personal: help men and women form families early enough to have the children they hope for, while treating every child and every adult as a person rather than an input to a projection.
+I think the long-run direction should be demographic renewal near replacement. A civilization should ordinarily raise a generation capable of succeeding it. The nearer goal is more personal: make it easier for men and women to form durable families early enough to have the children they hope for.
 
-Closing the gap between desired and achieved family size is therefore a decent first measure. It relieves a real grief without asking the state to assign anyone a reproductive duty. It may not produce replacement fertility. Preferences themselves are shaped by employers and the culture people absorb at home. A society can satisfy every stated intention after it has trained most people to want very little from family life.
+Closing the gap between desired and achieved family size is a decent first measure. The [United Nations Population Fund's 2025 report](https://www.unfpa.org/swp2025) emphasizes the barriers that keep people from realizing their fertility intentions. Removing those barriers respects the person rather than treating a birth as an input to a pension model. It may not by itself produce replacement fertility. Desires also change with the lives people think are available to them.
 
-Adaptation belongs in the goal too. The older population is already here, and the missing workers of 2040 cannot be conceived in time to arrive as adults. Governments should make smaller places function well. That duty does not turn managed decline into a sufficient civilizational destination.
+The boundary is equally clear. A population target gives the state no claim over a woman's body or a couple's decision to have a child. The history of coercive fertility policy is enough reason to keep that power out of government hands. Law can make marriage and parenthood easier or harder; public policy can support families; communities can supply care and expectations that national programs cannot. The final choice remains with the people whose lives will be changed by it.
 
-## Authority close to the person
-
-The decision to have a child belongs first to the man and woman whose lives will be changed by the child. Their freedom protects human dignity and guards against the abuses described earlier in the book. A population target gives the state no title to a woman's body, and a future citizen cannot be created by administrative command without violating the goods renewal is supposed to preserve.
-
-Freedom isn't the only interest present. A spouse may bear costs the other ignores, and neighbors live with the consequences of family choices. Future people receive our debts and institutions without casting a vote on them. Their interests are real even though no agency can represent them perfectly.
-
-This is a reason to divide responsibility rather than centralize it. Law can remove penalties on marriage and protect parents from obvious discrimination. Local communities can supply knowledge and care that a national program cannot see. Families can teach that freedom matures through obligations freely accepted. None of these actors is trustworthy enough to own the whole question.
-
-There will be hard boundaries. Coercive birth policy should remain outside them. Government should also stop claiming neutrality while tax and housing rules make one form of life much easier than another. Public power inevitably shapes the ground on which private choices are made. It should shape that ground toward family formation while leaving the final choice with persons.
+Adaptation is part of the work because the older population is already here. The missing workers of 2040 cannot be conceived in time to arrive as adults. Smaller places should still function well, and older people should not be treated as a demographic mistake. Managing that inheritance is compatible with trying to change the direction for generations that come later.
 
 ## What to count
 
-A rising annual fertility rate is encouraging. A stronger measure follows birth cohorts long enough to learn whether people are actually completing larger families rather than merely shifting births between years. The age at first birth helps show whether recovery is becoming biologically easier or leaning harder on late catch-up.
+Annual fertility rates tell us quickly when births move. Cohort measures eventually tell us more: whether women are actually completing larger families rather than shifting births from one year to another. Age at first birth helps show whether recovery is occurring earlier or depending on increasingly difficult late catch-up.
 
-Numbers nearer the household belong beside those rates. Stable marriages and healthy children tell us whether renewal is serving families rather than using them. A fertility policy that raises births by making family life harsher has failed its proper end. So has an adaptation that balances the pension fund by loading the bill onto the young adults we hope will raise the next generation.
+The household belongs beside the demographic measures. Are more people marrying when they want to? Are parents able to have the second or third child they had hoped for? Are children and marriages doing well? A policy that raises births while making family life harsher has missed the point. So has an adaptation that balances public finances by placing so much of the cost on young adults that forming the next generation becomes harder.
 
-Success would look a little untidy. More people would have the children they wanted, fertility would approach renewal, and smaller cohorts already born would be cared for through the transition. Some towns would still close a school. Some adults would choose no children. The direction would be clear even while the settlement remained imperfect: freedom ordered toward a future that can continue.
+Success would be untidy. Some adults would choose no children. Some towns would still close schools because their missing cohorts are already missing. A country could remain smaller for decades even while fertility recovered. The direction would nevertheless be different: more people able to form the families they wanted, and generations moving again toward renewal without being compelled to do it.
 
 <div class="citation">
 
