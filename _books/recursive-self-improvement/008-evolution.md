@@ -1,5 +1,7 @@
 ---
-title: "Evolution: Recursive Improvement Without Intelligence"
+title: "What Selection Remembers"
+deck: "How evolution accumulates adaptation without intention or a final aim"
+eyebrow: "Evolution"
 ---
 
 A course of antibiotics kills susceptible bacteria and leaves resistant variants with less competition. The surviving population does not understand what happened. No bacterium chose a strategy for its descendants. Yet the next generation meets the same drug differently because the previous encounter changed what was carried forward.
