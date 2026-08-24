@@ -1,14 +1,16 @@
 ---
 title: Why Are People Having Fewer Children?
-deck: Fertility decline is the combined result of relationships, institutions, technology, culture, and time
+deck: Fertility decline is often the result of reasonable delays accumulating until the family becomes smaller than intended
 eyebrow: The causes
 ---
 
-Chapter previous chapter showed where fertility fell and how below-replacement generations compound. The cause is not hidden inside the rate. Fewer people marry, they marry later, children require more purchased care and forgone work, women spend their most fertile years in education and careers, contraception prevents conception, abortion prevents births, and delayed attempts run into biological limits. Culture and technology shape every step.
+A woman can finish school at twenty-four, establish herself at work, meet someone at twenty-eight, marry at thirty-one, settle into a stable home at thirty-two, and begin trying for a first child at thirty-three. Nothing in that sequence looks anti-family. Most of it looks responsible. But a couple who once imagined three children has compressed nearly all of its childbearing into a handful of years.
 {: .lede}
 
-No single cause is sufficient. Remove housing costs and some couples will have a child sooner, while others will still lack a partner. Make childcare free and work may fit family life better, while the ideal family size continues to fall. Improve fertility treatment and it will help real families without restoring the years lost before treatment began.
+That is the pattern I want to follow in this chapter. Modern fertility decline often does not begin with a dramatic decision against children. It begins with postponement. Partnership comes later. Housing and work take longer to settle. Contraception makes waiting easier. The standard for being “ready” rises. Then biology turns some of that delay into a smaller family.
 
-The causes also interact. Education delays marriage; delayed marriage shortens the biological window; reliable contraception makes the delay possible; an expensive city and demanding job make it reasonable; a culture of intensive parenting raises the price of the eventual child. Each decision can make sense on its own. Added across millions of lives, the result is a generation too small to replace the last.
+The previous chapter showed how low fertility spreads through populations. Here the scale narrows to ordinary life. Before a birth disappears from a national total, there was usually a person who never met the right partner, a couple who waited another year, or a family that stopped at one child because the second no longer fit the time and life they had left.
 
-I want to look at that sequence without pretending every gain was a mistake or every constraint was freely chosen. Modern adults have more control over sex, work, marriage, and parenthood than their ancestors did. They also live inside a society that make permanent commitment unusually difficult and postponement unusually easy. Understanding that combination is the first step toward reversing it without giving up the genuine freedoms modern life has made possible.
+I do not think every delay is a mistake. More education, better work, greater control over reproduction, and the freedom to leave a bad relationship are real goods. Nor is every small family evidence of frustration. Some people want one child or none at all. The harder question is why so many adults who say they wanted children, or wanted more of them, end up with fewer than they expected.
+
+That gap between the family imagined and the family achieved is where several causes meet. The path into adulthood has grown longer while the reproductive window has not. Modern life gives people more control over when to begin a family, but it also gives postponement more places to hide. By the time the decision finally becomes urgent, some of the available choices have already disappeared.
