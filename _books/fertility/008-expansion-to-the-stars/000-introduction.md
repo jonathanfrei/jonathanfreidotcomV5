@@ -1,10 +1,12 @@
 ---
 title: Humanity's Expansion to the Stars
-deck: Demographic renewal keeps open the longest human project
+deck: A mission becomes a civilization only when people expect the place to outlive them
 eyebrow: The outward future
 ---
 
-The previous chapter ended with a civilization trying to keep enough room for the future. This chapter asks what that room might eventually be used for. Humanity can remain confined to its birthplace, or it can begin the long work of establishing durable homes beyond Earth.
+The decisive moment in human settlement beyond Earth may not be the first landing. It may be the first child who expects to stay. An astronaut can return home after the mission. A child born there needs a school, a doctor, a legal status, and adults who expect the settlement to survive long enough for her to grow old.
 {: .lede}
 
-The stars are not a near-term forecast. Even the first independent settlement elsewhere in our solar system lies beyond anything we have built. Following the path seriously reveals why population matters: exploration can be performed by a crew, while expansion requires generations. We begin with the reason to attempt it at all.
+That is where spaceflight becomes a demographic question. A crew can explore. An outpost can depend on Earth. A settlement has to survive interruption. A home has to reproduce itself across generations.
+
+The stars are still a direction rather than a near-term forecast. Even an independent settlement somewhere in our solar system lies beyond anything we have built. Following the path seriously is useful anyway because it strips away an assumption that is easy to miss on Earth: civilization is not just infrastructure and knowledge. It is people receiving both, caring for them, and handing them forward.
