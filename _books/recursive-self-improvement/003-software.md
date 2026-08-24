@@ -1,5 +1,7 @@
 ---
-title: "Software: The Engineered Feedback Loop"
+title: "Lessons That Execute"
+deck: "How software turns past failures into safeguards for future changes"
+eyebrow: "Software"
 ---
 
 A developer changes six lines of code and opens a pull request. Before another person reads it, software formats the change, compiles it, runs thousands of tests, checks for familiar security mistakes, and builds a disposable copy of the application. The proposed future has already been compared with a long record of what the team learned to fear.
