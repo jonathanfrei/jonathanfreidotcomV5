@@ -2,9 +2,9 @@
 title: What Is Recursive Self-Improvement?
 ---
 
-Imagine two programmers responding to the same production failure. The first traces the error, changes a line of code, and deploys the fix. The second does that too, then asks why the defect escaped. She adds a regression test, adjusts the review checklist, and makes sure future incidents of this kind automatically create a test case. The first programmer improved the software once. The second improved part of the system that improves the software.
+The definition becomes harder at the edges. A student changes her answer after seeing the solution. A thermostat changes the temperature after reading a sensor. A company changes a target after missing it. All three respond to feedback, but only one may have changed the way later changes will be found and judged.
 
-That inward turn is recursive self-improvement. A system changes the process, rules, representations, or capabilities through which it will produce later changes. The result may be modest—a better checklist—or profound—a learning system that discovers a more effective way to learn. Recursion describes the relationship between the change and future changes, not the speed or intelligence of the system.
+Recursive self-improvement describes that deeper change. A system alters the rules, representations, capabilities, or habits through which it will produce later improvements. The result can be as ordinary as a better study routine or as consequential as a learning system that discovers a better way to learn. Recursion names the relationship between one change and the next. It says nothing by itself about speed, intelligence, or wisdom.
 {: .lede}
 
 ![An infinite spiral staircase seen from above](https://images.unsplash.com/photo-1448454050639-2f8d4bf26975?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600)
@@ -13,7 +13,7 @@ That inward turn is recursive self-improvement. A system changes the process, ru
 **A repeated pattern is not enough.** Recursion begins when one turn changes how the next turn can happen. *[Photo by Ludde Lorentz on Unsplash](https://unsplash.com/photos/YfCVCPMNd38?utm_source=jonathanfrei.com&utm_medium=referral)*
 {: .caption}
 
-## Four depths of change
+## How deep did the change go?
 
 It helps to picture improvement at four rough levels. These aren't a rigid scientific taxonomy; they are a practical way to ask what changed.
 
@@ -37,6 +37,6 @@ This distinction also prevents a thermostat from doing too much conceptual work.
 
 Computer science gives the cleanest examples because code, tests, and evaluation rules can be inspected. People add reflection and purpose. Organizations add conflicting incentives and institutional memory. Political systems can change the procedures by which collective decisions are made. Biological evolution produces cumulative adaptation through variation, inheritance, and selection, though it has no unified self intentionally rewriting its method.
 
-The analogy weakens if those differences are ignored. Recursive self-improvement doesn't require consciousness, but calling every adaptive process “self-improvement” can smuggle in a self that isn't there. It doesn't require a dramatic intelligence explosion either. Most examples are slow, partial, and constrained by their environments.
+The analogy weakens if those differences are ignored. Recursive self-improvement doesn't require consciousness, but calling every adaptive process "self-improvement" can smuggle in a self that isn't there. It doesn't require a dramatic intelligence explosion either. Most examples are slow, partial, and constrained by their environments.
 
-The practical question is simple: after the change, is the system differently equipped to discover, judge, or implement the next change? If so, some part of improvement has become recursive. Then a harder question immediately follows. The system must decide what counts as better, and the mechanism making that judgment may now be changing too.
+The practical test is whether the system is differently equipped to discover, judge, or carry out the next change. That test is more demanding than it first appears. A score can rise because the task became easier, more resources were spent, or the system learned to satisfy the measurement. The next chapter looks at the evidence we would need before saying that a machine—or a person—has become better at learning rather than merely better at one task.

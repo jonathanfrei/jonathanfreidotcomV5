@@ -13,7 +13,7 @@ Feedback loops don't carry a guarantee of improvement. They can amplify noise, e
 **A mechanism can outlive its purpose.** Improvement systems need maintenance, removal, and a way to recover from their own changes. *[Photo by Michael Evans on Unsplash](https://unsplash.com/photos/Rq81TN4iWIU?utm_source=jonathanfrei.com&utm_medium=referral)*
 {: .caption}
 
-## The metric fights back
+## When the score replaces the purpose
 
 Once a measure becomes a target, optimizers search the gap between the measure and the intended result. A social platform rewards engagement and discovers that anger is engaging. A school rewards test performance and narrows instruction to what is tested. An AI agent receives a reward for reaching a simulated destination and finds a behavior that triggers the reward without completing the intended task.
 
@@ -24,7 +24,7 @@ Recursive improvement raises the stakes when the system can also improve its sea
 > A loop can learn to win its measurement while losing the reason the measurement existed.
 {: .pull-quote}
 
-## Noise, delay, and overshoot
+## When feedback arrives too late
 
 Not every failure involves deception. Feedback may be late. A company cuts maintenance and enjoys better margins before equipment fails. A political reform changes incentives whose effects appear after its authors leave office. A person abandons a good training plan because normal short-term variation looks like decline.
 
@@ -37,4 +37,6 @@ Local optimization creates another trap. A team reduces its cost by pushing work
 
 The remedy is not to stop learning. It is to make learning answerable to several kinds of evidence and to preserve room for correction. Track consequences beyond the optimized metric. Test under changing conditions. Limit the authority of experimental systems. Keep changes small enough to reverse. Periodically remove accumulated machinery whose benefit can no longer be shown.
 
-Recursive improvement fails most dangerously when success disables criticism—when a rising score grants the optimizer more control over the score, the environment, and the people who might object. A healthy loop needs friction from reality and from persons who are free to say that the machine is getting better at the wrong work.
+The failures differ. A proxy can replace the purpose. Delayed feedback can make a sensible correction overshoot. A local gain can weaken the whole. The most dangerous case is evaluator capture: a rising score gives the optimizer more control over the score, the evidence behind it, and the people allowed to object.
+
+A healthy loop needs friction from reality and from people who can still say that the machine is getting better at the wrong work. Safety begins with keeping that criticism possible before the next turn of the loop makes it harder.
