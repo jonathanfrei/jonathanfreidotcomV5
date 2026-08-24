@@ -1,33 +1,35 @@
 ---
 title: "Scenario two: fertility stabilizes below replacement"
-deck: A smaller society can remain rich and humane if it learns to shrink deliberately
-eyebrow: Managed decline
+deck: A smaller society can remain rich and humane while repeatedly deciding what to close
+eyebrow: Consolidate
 ---
 
-The likeliest near-term future for many wealthy countries may sit between recovery and collapse. Fertility settles somewhere below replacement. Population declines after its inherited momentum runs out, and governments become reasonably good at managing the contraction. Life remains comfortable. A town gets smaller without becoming a ruin.
+A country can get smaller without becoming miserable. Its cities may be cleaner and less crowded. Housing can become cheaper in places where demand has eased. Scarce workers earn more, machines take over unpleasant jobs, and older adults remain healthy enough to work longer if they want to. I can imagine this being a very good place to live.
 {: .lede}
 
-This future asks for a skill modern governments rarely practice: stopping. A water network built for 100,000 residents still leaks when only 70,000 remain to pay for it. The sensible response may be to retire a distant line and help its remaining households move closer to the center. Nobody likes being told that the road, school, or village inherited from a grandparent has become too expensive to maintain. Avoiding the decision leaves fewer people paying more for a worse service.
+The trouble is that below-replacement fertility does not produce a smaller population and then stop. It produces another smaller generation. If fertility settles at 1.7, the rate may look almost normal compared with 1.0 or 1.2, but without enough migration each generation remains smaller than the one before it. The society has not reached a new size. It has become good at contraction.
 
-The [OECD's recent work on shrinking regions](https://www.oecd.org/en/publications/shrinking-smartly-and-sustainably_f91693e3-en.html) describes the practical shape of adaptation. Land-use plans stop assuming outward growth. New homes and public services are concentrated in places that can support them. The practical aim is an ambulance within reach while the map contracts.
+The practical skill is consolidation. A water network built for 100,000 residents still leaks when only 70,000 remain to pay for it. A government can keep raising rates on the remaining households, or retire a distant line and concentrate service closer to the center. The [OECD's work on shrinking regions](https://www.oecd.org/en/publications/shrinking-smartly-and-sustainably_f91693e3-en.html) describes this kind of adaptation: land-use plans stop assuming outward growth, and public services move toward places that can support them.
 
-## A country of stronger centers
+## Deciding what to keep
 
-Managed decline will be spatially uneven. Large cities can keep attracting young adults long after the national population begins to fall. Remote districts lose them first, then lose the births those young adults would have had. Between 2001 and 2021, [nearly 40 percent of remote OECD regions shrank](https://www.oecd.org/en/publications/oecd-regional-outlook-2023_92cd40a0-en/full-report/component-4.html). The national average concealed a local future already underway.
+The choices arrive locally. A school combines grades. Years later it closes and children ride farther to another one. A maternity ward follows births toward the regional center. The rail branch with too few passengers loses service. None of these decisions has to be foolish or cruel. Often the alternative is fewer people paying more to maintain a worse version of what used to be there.
 
-Some settlements will endure by becoming denser and better connected. Others will lose a school, and the businesses that depended on it may follow. There is no fair formula that preserves every place. National governments can spread part of the cost, but equalization cannot supply a teacher to every half-empty building. Local officials should have room to decide where residents can still reach a decent service and where moving is the kinder answer.
+The contraction will be uneven. Large cities can keep attracting young adults long after the national population begins to fall. Remote districts lose them first, then lose the births those young adults would have had. Between 2001 and 2021, [nearly 40 percent of remote OECD regions shrank](https://www.oecd.org/en/publications/oecd-regional-outlook-2023_92cd40a0-en/full-report/component-4.html). A national population that looks almost stable can contain towns already living several decades into this scenario.
 
-Immigration can soften the descent where newcomers want to live. Automation can let one worker monitor a facility that once required three. Both adaptations concentrate opportunity as easily as they distribute it. A migrant usually chooses the growing city, and expensive machines go where demand justifies them. The remote town may still be asked to surrender first.
+Some places will adapt beautifully. Smaller settlements can become denser and better connected, with autonomous transport or telemedicine keeping services within reach. Immigration can slow decline where newcomers want to live. Automation can let one worker run a facility that once required three. These tools tend to strengthen viable centers more easily than marginal places. The town already losing young adults is usually the one asked to consolidate first.
 
-## Prosperity without expansion
+## Prosperity while shrinking
 
-A shrinking economy can become wealthier per person. Labor scarcity may raise wages and induce employers to automate dull work. A [2026 NBER working paper](https://www.nber.org/papers/w35401) found lower birth rates associated with faster growth in output per working-age adult and more labor-saving patents across the settings it studied. That result should complicate any easy story in which fewer births automatically make everyone poorer.
+Economic life can also remain surprisingly strong. Labor scarcity may raise wages and induce employers to automate routine work. A [2026 NBER working paper](https://www.nber.org/papers/w35401) found lower birth rates associated with faster growth in output per working-age adult and more labor-saving patents across the settings it studied. Fewer births do not automatically make the people who remain poorer.
 
-It doesn't make aggregate size irrelevant. A company can improve output per worker while losing customers. A government can report rising income per person while collecting less total revenue and supporting more retirees from each worker's production. Distribution becomes the argument. If the gains from automation belong mainly to owners while taxes on young families rise, the economy may look efficient and become less capable of renewal.
+A government can therefore report rising income per person while the population falls. A company can produce more with each employee while selling into a smaller home market. Healthy older adults can retire later, and AI may let a much smaller workforce maintain services that once required more people. If productivity rises quickly enough, material life could improve for decades.
 
-A stable below-replacement society can probably manage this tension for a long time. It can raise retirement ages as healthy life expands and make public promises fit the tax base that actually exists. It may enjoy less congestion, cheaper land in some places, and more capital per worker. I can imagine it being a good place to live.
+That success may make the direction easier to accept. Adaptation removes some of the immediate pressure to recover fertility. The school closes, but the remaining school is excellent. The clinic disappears, but an autonomous vehicle reaches the hospital quickly. Each loss is compensated for well enough that there is little reason to call the whole arrangement a crisis.
 
-Stability below replacement is stable only as a rate. Unless migration offsets the gap, each generation is smaller. The country becomes skilled at adapting to a direction that never arrives at rest. That may be a workable settlement for one lifetime. Over ten generations, the recurring decision about what to close begins to define the civilization.
+Then another generation arrives smaller. The next consolidation begins from a reduced base. At a constant 1.7 births per woman, an illustrative cohort of 100 women would be followed by about 81 daughters, then roughly 69 granddaughters, before accounting for migration or mortality. The exact path of a real population is more complicated. The direction isn't.
+
+Managed decline can be humane, prosperous, and rational for a long time. Its unresolved question is where the managing ends. Over one lifetime, closing the least-used school may simply be good government. Over many generations, the recurring decision about what to stop maintaining can become one of the civilization's ordinary habits.
 
 <div class="citation">
 
