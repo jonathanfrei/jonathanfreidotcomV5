@@ -1,5 +1,7 @@
 ---
-title: "Politics: A System That Can Change Its Own Rules"
+title: "Rules for Changing the Rules"
+deck: "How political systems correct themselves without starting over"
+eyebrow: "Politics"
 ---
 
 The United States Constitution contains instructions for changing itself. Article V allows Congress and the states to propose and ratify amendments, using the document's existing authority to alter the document that grants that authority. The rule-making system can make rules about its own future.
