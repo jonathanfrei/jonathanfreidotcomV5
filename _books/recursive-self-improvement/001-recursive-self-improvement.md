@@ -3,9 +3,9 @@ title: Recursive Self-Improvement
 description: "Recursive self-improvement begins when a system’s effort to get better reaches back into the machinery that produces improvement. The system doesn’t merely produce a better answer, product, habit, or policy. It alters how future answers are found, how future mistakes are noticed, or how future changes are chosen."
 ---
 
-A programmer can spend an afternoon fixing a bug and leave the software better than it was that morning. Or she can spend the afternoon building a test that catches the same kind of bug before it reaches a customer. Both are improvements, but they operate at different depths. The fix changes the program. The test changes part of the process by which the program will be changed tomorrow.
+A programmer fixes a bug before lunch. By the afternoon, the same class of error has appeared somewhere else. She can fix that one too, or she can change the development process so the next version of the mistake is caught before it reaches a customer. The first repair makes the program better. The second leaves behind a better way of making programs.
 
-That second move is the subject of this book. Recursive self-improvement begins when a system's effort to get better reaches back into the machinery that produces improvement. The system doesn't merely produce a better answer, product, habit, or policy. It alters how future answers are found, how future mistakes are noticed, or how future changes are chosen.
+That inward turn is the subject of this book. Recursive self-improvement begins when an effort to improve reaches back into the machinery that produces improvement. The system changes how later answers will be found, how later mistakes will be noticed, or how later changes will be chosen. Once that machinery can change, a second problem follows close behind: the method used to judge improvement may also be inside the loop.
 {: .lede}
 
 ![A woman climbing a white spiral staircase viewed from above](https://images.unsplash.com/photo-1495744839812-9d3394170cd1?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600)
@@ -18,7 +18,7 @@ That second move is the subject of this book. Recursive self-improvement begins 
 
 The phrase is often attached to artificial intelligence, usually alongside visions of a machine rewriting its own code and rapidly becoming more capable. That is one possible case, but it is too narrow a place to begin. People revise their study methods. Companies change how they run experiments. Democracies amend the rules under which they make rules. Markets fill with competitors who adapt to one another. Evolution changes populations without any organism understanding the process.
 
-These examples aren't identical, and forcing them into one mold would conceal more than it reveals. A person has purposes and can reflect on them. A market has no single mind. Evolution has neither a plan nor a unified self. Still, each domain lets us examine some part of the same pattern: variation, evaluation, retention, and a mechanism that can itself be altered by what happens.
+The resemblance is real, though it only goes so far. A person has purposes and can reflect on them. A market has no single mind. Evolution has neither a plan nor a unified self. Each case isolates a different part of the pattern: changes are tried, consequences are judged, lessons are retained, and sometimes the machinery carrying out those steps is changed in turn.
 
 The comparison is useful because engineered systems make some features easy to see while human and social systems expose the complications. Software has explicit tests, but the tests can be incomplete. A person can change a habit, but self-knowledge is noisy. An organization can conduct a postmortem, but its incentives may reward a tidy story instead of an honest one. A constitution can be amended, but only through procedures the constitution already authorizes.
 
@@ -36,4 +36,4 @@ Those questions keep ordinary repetition from masquerading as recursion. A therm
 
 This is also why “better” cannot remain a vague compliment. A system can become faster while growing fragile, more productive while exhausting its people, or more engaging while making its users miserable. Capability and direction are separate. A stronger improvement mechanism can pursue a poor objective more efficiently.
 
-Recursive self-improvement is therefore less a promise than a lens. It helps us notice where a system stores lessons, who may alter its rules, which signals count as success, and whether mistakes can be reversed. Once the mechanism of improvement is inside the field of improvement, no evaluator gets to stand entirely outside the loop.
+Recursive self-improvement gives us a way to notice where lessons are stored, who may alter the rules, which signals count as success, and whether a mistake can be undone. The chapters ahead follow that loop as it grows harder to see and harder to govern. Software writes lessons into tests. People carry them in habits. Organizations bury them in incentives. Markets, politics, and evolution add other agents whose responses change the next round. By the time the loop reaches artificial intelligence, the question is no longer only whether a system can get better. It is who still has the standing and the power to say what better means.
