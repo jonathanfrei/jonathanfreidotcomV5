@@ -4,34 +4,32 @@ deck: People are more willing to bear the cost of children when parenthood is ho
 eyebrow: A future worth entering
 ---
 
-No one has a child for the fertility rate. People have children because they love someone, because family belongs to their picture of adulthood, or because a life larger than their own seems worth serving. Culture works at that level. It teaches which sacrifices look admirable and which look like avoidable mistakes.
+No one has a child for the fertility rate. People have children because family belongs to their picture of adulthood and because a life larger than their own seems worth serving. Culture works at that level. It helps decide which sacrifices look admirable and which look like avoidable mistakes.
 {: .lede}
 
-Modern culture is generous with warnings about parenthood. The warnings are true enough. Children interrupt sleep, strain a marriage, and narrow freedom for years. Parents in a 2023 Pew survey commonly said the work was harder than expected. Most also described it as rewarding and enjoyable most of the time. Difficulty and goodness live together in the same household; our public language has become better at describing the first.
+Parents know that children are costly in the broadest sense. They interrupt sleep, strain a marriage, and narrow freedom for years. In a 2023 Pew survey, parents commonly said the work was harder than expected. Most also described it as rewarding and enjoyable most of the time. Public language has become better at describing the loss of freedom than the enlargement of life that many parents report alongside it.
 
-Adulthood was once publicly associated with accepting obligations. Now its milestones are more likely to be financial independence and enjoyable work. In the same Pew survey, about nine in ten American parents said those outcomes were important for their children as adults. Only about one in five placed similar importance on marriage or children. Parents who find their own children deeply rewarding are still reluctant to tell those children that family formation is a good worth pursuing.
+The same survey found that American parents overwhelmingly wanted their children to become financially independent and find enjoyable work. Far fewer placed comparable importance on marriage or children. Some of that reluctance is kindness. A parent does not want to pressure a daughter who may be infertile or a son who has not found a spouse. It can also leave young adults with a strange message: family was good enough to organize their parents' lives around, but too private a good to recommend.
 
-That reluctance comes from kindness. A parent does not want to pressure a daughter who may be infertile or a son who has not found a spouse. It also reflects a thin account of freedom in which naming a good is confused with controlling the choice. We tell young people that health and friendship are worth seeking without despising the ill or lonely. Marriage and parenthood deserve the same honest confidence.
+Naming a good is not the same as compelling it. We tell young people that friendship and health are worth seeking without despising people who are lonely or ill. Marriage and parenthood can be spoken of with the same confidence.
 
 ## Honor changes the calculation
 
-Money reduces a cost. Honor changes what a person is willing to pay. A woman who leaves paid work to raise three children gives up income and professional status in a culture that can measure both. If the culture calls her “not working,” it makes the sacrifice look like disappearance. She is doing some of the most consequential work a civilization has, usually in clothes that will be stained before lunch.
+Money reduces a cost. Honor changes what a person is willing to pay. A woman who steps away from paid work to raise three children gives up income and professional status that the culture knows how to measure. Calling her “not working” makes the labor inside the home disappear from view.
 
-Motherhood should be aspirational without becoming compulsory. Public honor can be quite ordinary: a workplace that treats the returning mother as experienced, or stories in which a good mother has an interior life and genuine competence. Fathers need more than praise for showing up. A man who orders his ambitions around his wife and children should look successful, even if the choice costs him a promotion.
+Public honor can be ordinary. An employer can treat a returning mother as an experienced adult rather than a stalled employee. A father who turns down a promotion because he wants to remain present to his wife and children can still look successful. Stories can portray good parents as competent people with interior lives rather than as exhausted warnings to everyone behind them.
 
-Ritual makes honor visible. Weddings announce that a private promise has witnesses. A baptism or meal after a birth tells parents that the community sees a family beginning and intends to remain. A pronatalist poster designed by a ministry cannot do this. Propaganda flatters an abstraction called “the family”; ritual knows the child's name.
+Ritual makes the judgment visible. Weddings announce that a private promise has witnesses. A baptism or meal after a birth tells parents that the people around them see a family beginning and intend to remain. A government campaign can praise an abstraction called “the family.” A ritual knows the child's name.
 
-There will be adults who do not marry or have children. Some choose that life, some receive it unwillingly, and many serve the next generation through teaching or kinship. A culture confident about parenthood has no need to humiliate them. Contempt would corrupt the very good being defended by treating a person's worth as demographic output.
+Adults who do not marry or have children do not become less valuable. Some choose that life, some receive it unwillingly, and many serve the next generation through teaching, friendship, or kinship. A culture confident about parenthood has no need to humiliate them. Contempt would corrupt the good being defended by reducing human worth to demographic output.
 
 ## Confidence without denial
 
-Children tie a parent to a future he will not control. Economic pessimism can therefore affect births before income falls. Political disorder and technological change add to the sense that the world may be unrecognizable by the time a child becomes an adult.
+Children tie a parent to a future he will not control. Economic pessimism can therefore affect births before income actually falls. Climate anxiety makes the fear explicit. Research in three European countries found that intense climate worry was associated with a higher likelihood of intending no children rather than two.
 
-Climate anxiety makes the fear unusually explicit. Research in three European countries found that intense climate worry was associated with a higher likelihood of intending no children rather than two. Concern for the planet is reasonable. The inference that fewer future people will care for it is much less secure. Every damaged inheritance has been repaired, when it was repaired at all, by people who received it.
+Concern for the future is reasonable. Confidence does not require believing the future will be easy. It means believing that courage, skill, and love will remain useful in an imperfect world. Previous generations did not receive guarantees either. We have better reason than most of them did to expect children to survive childhood, become educated, and live long lives.
 
-Optimism here is not a forecast that everything will work out. It is the decision to act as though courage, skill, and love will remain useful in an imperfect world. Our ancestors had children through war and disease because the future was never offered with a guarantee. We have better reason than most of them did to expect children to live long lives.
-
-A culture can become falsely cheerful and cruel to people whose circumstances are hard. It can also become so practiced at naming risk that hope sounds unsophisticated. The healthier voice tells the truth about the cost, then gives parents reason to believe the sacrifice belongs to a good life. Children should grow up hearing that their arrival enlarged one.
+The healthier cultural voice does not deny cost or uncertainty. It tells the truth about both and still leaves room to say that marriage, motherhood, fatherhood, and the work of raising children belong to a good life. Children should grow up hearing that their arrival did more than complicate one.
 
 <div class="citation">
 

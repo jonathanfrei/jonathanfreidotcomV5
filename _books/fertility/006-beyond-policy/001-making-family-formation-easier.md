@@ -4,36 +4,30 @@ deck: Young adults need a workable path from dependence to a home, a marriage, a
 eyebrow: Room to begin
 ---
 
-Family formation has acquired a long entrance ramp. A young adult is expected to finish school and establish a career before securing the home where marriage and children become prudent. Each expectation makes sense on its own. Together they consume the years in which forming a family is easiest.
+Family formation has acquired a long entrance ramp. A young adult is expected to finish school, establish a career, and secure a suitable home before marriage and children feel prudent. Each expectation can be reasonable. Together they consume the years in which forming a family is easiest.
 {: .lede}
 
-The previous chapters described these pressures as causes and tested the programs governments have used against them. The social question is more basic. Can an ordinary young couple begin before every part of life is settled?
+The practical question is whether an ordinary couple can begin before every part of life is settled. A twenty-five-year-old who wants marriage and children should not have to feel irresponsible for starting before the résumé, mortgage, and retirement account are all in place. They never will be.
 
-Housing supplies a literal answer. A studio can hold two adults for a while; it is a poor plan for the second child. Family-sized homes near jobs are scarce in many prosperous cities because building is restricted and existing owners benefit from scarcity. Young people with family money buy earlier. Renters wait, move farther out, or decide that the next child requires a financial risk they cannot carry.
+Housing supplies the most literal constraint. A studio can hold two adults for a while; it is a poor plan for the second child. Family-sized homes near jobs are scarce in many prosperous cities because building is restricted and existing owners benefit from scarcity. Lisa Dettling and Melissa Kearney found that rising house prices had opposite short-run effects in the United States: births fell among nonowners and rose among owners whose equity increased. The same market made one couple feel less able to begin and another more secure.
 
-Homeownership itself is not the demographic cure. Lisa Dettling and Melissa Kearney found that rising house prices had opposite short-run effects in the United States: births fell among nonowners and rose among owners whose equity increased. The same price made one household feel poorer and another richer. Building more homes where people want to live is less glamorous than a baby bonus, but it keeps a local shortage from deciding which couples have room for children.
-
-Geographic mobility complicates that gain. Moving to a cheaper city may put a bedroom within reach and grandparents six hours away. Moving toward a strong job market can increase income while leaving both parents alone when a child is sick. The useful home sits inside a web of work and kin. Price per square foot cannot tell us whether the whole arrangement works.
+Building more homes where people want to live helps, though location matters as much as square footage. A cheaper house three states away may provide another bedroom and remove the grandparents who could have made that bedroom usable. The useful home sits inside a web of work and kin.
 
 ## Work that leaves a life
 
-A family can plan around hard work. It struggles to plan around a schedule posted three days ahead. Predictable hours let parents arrange care and eat together. Job security lets a couple treat next year as a place where a child can arrive instead of another probationary period.
+A family can plan around hard work. It struggles to plan around a schedule posted three days ahead. Predictable hours let parents arrange care and make promises about next week. Job security lets a couple imagine that next year has room for another person.
 
-Flexibility has become a concrete test. A 2026 study using international and U.S. survey data found that recent births and planned fertility were higher among people who worked from home at least one day a week. When both partners did so, estimated lifetime fertility was 0.32 children higher than among couples where neither worked from home. The study cannot turn every difference between those workers into a causal effect. It identifies something recognizable anyway: eliminating a commute can return the hour in which dinner, pickup, or an exhausted conversation has to happen.
+A 2026 study using international and U.S. survey data found that recent births and planned fertility were higher among people who worked from home at least one day a week. When both partners did so, estimated lifetime fertility was 0.32 children higher than among couples where neither worked from home. The study cannot turn every difference between those workers into a causal effect. It does show how a mundane hour can matter. Losing a commute may mean being home for pickup, dinner, or the exhausted conversation in which two people decide whether they could manage another child.
 
-Flexible work should mean more than taking video calls beside a toddler. A nurse or machinist cannot bring the job home. Those parents need stable shifts, enough notice, and managers who do not treat every family obligation as weak commitment. Employers often discover that predictable work also reduces turnover. The accommodation is part of organizing work around human beings who have lives long enough to include dependency at both ends.
-
-Career penalties begin partly in expectations. A firm that assumes a serious employee will be continuously available through her twenties and thirties makes motherhood an exception to the normal career. A firm that evaluates good work over a longer life can tolerate seasons of reduced hours. Men need permission to inhabit those seasons too, or flexibility for women becomes a quieter maternal track.
+Remote work is not available to a nurse or machinist. Those parents need predictable shifts and managers who do not treat family obligations as weak commitment. The deeper issue is whether employers assume that a serious adult will be continuously available through the very years when family life asks the most. A career can last forty years. It should be able to survive a few uneven ones.
 
 ## Ending school sometime
 
-Education once marked a path into adulthood. It can now postpone adulthood through a chain of credentials that never quite proves a person is ready. The U.S. Census Bureau found that adults ages twenty-five to thirty-four were more likely in 2023 than in 2005 to have completed school and entered the labor force, while fewer were married or living with a child. Economic milestones advanced as family milestones receded.
+Education can create the same delay. The U.S. Census Bureau found that adults ages twenty-five to thirty-four were more likely in 2023 than in 2005 to have completed school and entered the labor force, while fewer were married or living with a child. Economic milestones advanced as family milestones receded.
 
-The answer is earlier competence. Apprenticeships and less reflexive degree screening can let a nineteen-year-old begin earning without guessing which expensive credential a job will eventually require. Colleges can stop arranging every serious ambition as a narrow race whose decisive laps occur at the same ages as family formation.
+Long training is necessary for some work. Much credentialing is less obviously necessary. Apprenticeships and less reflexive degree screening can let a young adult begin earning without spending most of the twenties proving readiness for the next gate. Student debt then matters less because fewer people begin adult life with a large claim already attached to future income.
 
-Student debt adds a claim on future income before that income exists. Evidence about its independent effect on births is difficult because borrowers differ from nonborrowers in many ways. The simpler reform is to make credentials earn their cost and to restore routes into honorable work that do not require four or six years away from full adult life.
-
-Earlier independence will look uneven. Some people need long training; others mature slowly; a multigenerational home may be a source of strength rather than delay. The aim is a society in which a twenty-five-year-old who wants marriage and children does not feel foolish for beginning before everything is finished. It never is.
+The goal is not earlier marriage for its own sake or a return to one model of adulthood. Some people mature slowly. Others need years of training. Multigenerational living can be a source of strength rather than delayed independence. The aim is simply to shorten the distance between wanting a family and being allowed by ordinary life to begin one.
 
 <div class="citation">
 
