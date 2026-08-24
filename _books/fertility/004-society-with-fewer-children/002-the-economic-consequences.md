@@ -1,45 +1,43 @@
 ---
 title: The economic consequences
-deck: Scarce labor can reward workers while a shrinking market strains growth and renewal
+deck: Scarce labor can reward workers while more effort shifts toward maintaining what already exists
 eyebrow: Fewer hands at work
 ---
 
-When a small birth cohort enters the labor market two decades later, employers receive fewer applications. The shortage arrives unevenly. A hospital struggles to fill a night shift while a manufacturer keeps an older technician because no apprentice knows the machine.
+When a small birth cohort enters the labor market two decades later, employers receive fewer applications. A hospital struggles to fill a night shift while a manufacturer keeps an older technician because no apprentice knows the machine. The economy has not run out of people. It has begun asking fewer workers to carry more of what earlier generations built.
 {: .lede}
 
-Scarcity can be good for workers. An employer may raise wages or invest in equipment that makes each employee more productive. A country with fewer people can remain rich, and per capita income can rise while total output falls. Low fertility poses an economic problem even as living standards rise.
+Scarcity can be good for workers. Employers may raise wages or buy equipment that makes each employee more productive. A country with fewer people can remain rich, and per capita income can rise while total output falls. I expect many low-fertility countries to remain comfortable for a long time.
 
-Fewer workers must support an economy and maintain capital built for a larger population. Adaptation is possible but carries a cost.
+The pressure appears in what the remaining workers have to maintain. Older people need more care. Roads and water systems do not shrink neatly with the population. Existing businesses still need someone who understands how they work. The more effort goes toward keeping inherited systems running, the less spare capacity remains for expansion and experimentation.
 
 ## Work becomes scarce
 
-A shrinking working-age population first tightens particular labor markets. Care is especially exposed because demand rises with age while the work remains personal and difficult to automate. A factory can install robots; a frail person still needs someone patient enough to help her stand.
+Care is exposed early because demand rises with age while much of the work remains personal. A factory can install robots; a frail person still needs someone patient enough to help her stand.
 
-Higher wages pull additional people into paid work. A flexible job may keep an older adult employed, and better training can bring in workers once screened out. Work made to fit people produces more output while restoring some useful independence.
+Higher wages can pull more people into paid work. Flexible jobs may keep older adults employed, while better training can open work to people employers once screened out. Longer working lives are an obvious part of adaptation when healthy life has lengthened, provided physically worn-out workers are not simply told to endure another five years.
 
-Longer working lives are an obvious part of adaptation. If life after sixty-five has lengthened by years, preserving the same retirement boundary directs more of adult life toward receiving support. Some people arrive at old age in poor health, especially after physically demanding work. A later average retirement age therefore needs jobs they can actually do and protection when they cannot continue.
+Immigration can add workers quickly by moving young adults from one country to another. It may relieve one hospital while worsening a nursing shortage in the country that trained the nurse. For an individual country this can buy substantial time. It does not enlarge the global generation.
 
-Immigration adds workers quickly by reallocating young adults among countries. It may relieve one hospital while worsening a nursing shortage in the country that trained the nurse. The global birth total remains unchanged.
+## Automation buys capacity
 
-## Automation is an adaptation
+Demographic pressure gives firms a reason to substitute machines for scarce labor. Daron Acemoglu and Pascual Restrepo found that countries aging more rapidly [adopted industrial robots more quickly](https://www.nber.org/papers/w23077) and grew at least as well as younger countries. Automation appears to have absorbed part of the shock.
 
-Demographic pressure gives firms a reason to substitute machines for scarce labor. Daron Acemoglu and Pascual Restrepo found that countries aging more rapidly in recent decades [adopted industrial robots more quickly](https://www.nber.org/papers/w23077) and grew at least as well as younger countries. Automation appears to have absorbed part of the shock.
+That is encouraging. A warehouse with autonomous equipment can move more goods with fewer workers, and artificial intelligence may let one engineer handle work that once required a larger team. Productivity is the most promising way for a smaller workforce to maintain a large inherited stock of capital and services.
 
-That is encouraging. A warehouse with autonomous equipment can move more goods with fewer workers. Artificial intelligence may let one engineer or accountant handle work that once required a team. Capital deepening—more or better equipment per worker—can raise wages and output per person.
+The limits appear where responsibility cannot be reduced to a task. A robot can move a box without taking responsibility for the warehouse. Care is harder still. Even a highly automated economy needs people who notice failures, make judgments, and decide what should be built next.
 
-Machines substitute most easily for defined tasks. A robot can move a box without accepting responsibility for the warehouse, much less forming the next household that buys what is inside it. Even a highly automated economy needs people to choose the work and notice failures. We should ask how far productivity can outrun the demographic load in the jobs where substitution is actually possible.
+## Maintenance and renewal
 
-## Growth, ideas, and markets
+Infrastructure exposes the transition because it was built for yesterday's population. A water network keeps nearly the same reach after residents leave, so its maintenance cost is divided among fewer customers. Housing can show the same split: inherited homes lose value in shrinking towns while prosperous cities remain expensive because younger workers keep concentrating there.
 
-Total gross domestic product will grow more slowly or contract when the number of workers and consumers falls, unless productivity rises enough to offset the loss. Per capita GDP may do much better and is often more relevant to daily welfare of the remaining population. The impact on the total scale of economic output reappears when a country has to fund a navy or another project that requires many people and a large tax base.
+Innovation raises the longer question. Modern discovery often requires large teams. Research by Nicholas Bloom, Charles Jones, John Van Reenen, and Michael Webb found that the number of researchers needed to sustain Moore's Law was [more than eighteen times larger than in the early 1970s](https://www.nber.org/papers/w23782). Across their cases, rising research effort offset declining research productivity. Artificial intelligence may change that equation, perhaps dramatically. A smaller generation still begins with fewer potential researchers to train.
 
-Innovation is performed by people, though head count alone does not produce it. A smaller open country can draw ideas from the world and educate its people well. But modern discovery often requires larger teams. Research by Nicholas Bloom, Charles Jones, John Van Reenen, and Michael Webb found that the number of researchers needed to sustain Moore's Law was [more than eighteen times larger than in the early 1970s](https://www.nber.org/papers/w23782). Across their cases, rising research effort offset declining research productivity. A smaller generation begins with fewer potential researchers to equip.
+None of this implies that GDP per person must fall. The problem is the margin left after care and maintenance. A productive society can keep inherited systems running with fewer people for decades. If every generation is smaller, it has to repeat the achievement with fewer hands again.
 
-Housing makes the transition visible. Fewer households reduce demand nationally, while prosperous cities can remain expensive because people keep concentrating in them. Prices may fall in shrinking towns where no one wants the inherited house and rise in the few cities still attracting workers. An aging owner may hold an asset whose paper value depends on a future buyer from a smaller cohort.
+There is a feedback risk here too. Scarce younger workers may face intense career demand just as they are trying to form families. Taxes and care obligations can take more of their income and time. Adaptation that protects today's standard of living can make the next generation harder to raise unless governments, employers, and families notice the trade.
 
-Infrastructure is less flexible than population. A water network keeps nearly the same reach after residents leave, so its maintenance cost is divided among fewer customers. Local tax receipts then fall with the businesses those customers once supported. Decline can feed on itself even while the national average looks manageable.
-
-A low-fertility economy may be productive and comfortable for a long time. I expect many will be. The danger is a narrowing margin after care and maintenance consume more of what the economy produces. There may also be fewer attempts at the strange new idea that might have worked. Productivity can buy enormous time while the missing generation continues to shape what is possible.
+Productivity can buy enormous time. What it cannot do by itself is produce the successors who decide how to use it.
 
 <div class="citation">
 
