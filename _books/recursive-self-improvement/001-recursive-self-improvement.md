@@ -1,6 +1,7 @@
 ---
-title: Recursive Self-Improvement
-description: "Recursive self-improvement begins when a system’s effort to get better reaches back into the machinery that produces improvement. The system doesn’t merely produce a better answer, product, habit, or policy. It alters how future answers are found, how future mistakes are noticed, or how future changes are chosen."
+title: "The Loop Turns Inward"
+deck: "When improvement begins to change the machinery that produces it"
+eyebrow: "First Principles"
 ---
 
 A programmer fixes a bug before lunch. By the afternoon, the same class of error has appeared somewhere else. She can fix that one too, or she can change the development process so the next version of the mistake is caught before it reaches a customer. The first repair makes the program better. The second leaves behind a better way of making programs.
