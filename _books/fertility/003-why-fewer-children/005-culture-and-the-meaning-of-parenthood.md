@@ -1,35 +1,33 @@
 ---
 title: Culture and the meaning of parenthood
-deck: Fertility falls when children move from the expected shape of adulthood to an optional and exacting personal project
+deck: Fertility falls when adulthood is organized around keeping options open and parenthood is postponed until everything else is settled
 eyebrow: What a life is for
 ---
 
-Economics explains why a couple may delay a child. Culture helps explain why delaying feels normal, why the standard for readiness keeps rising, and why some adults no longer imagine having children at all. People have children within a story about what adulthood is for. The story has changed.
+Modern culture rarely tells people never to have children. It more often tells them to have children later—after school, after the career is established, after travel, after the right house, after the relationship feels completely secure, after they have “found themselves.” Parenthood becomes the reward at the end of adulthood's preparation rather than one of the ways adulthood is formed.
 {: .lede}
 
-Autonomy is one of modernity's great goods. An adult may choose a career, spouse, and way of life with less obligation to family or tribe. Travel and leisure are accessible beyond a small elite. Women are not forced to marry for economic survival. People unsuited to parenthood face less pressure to become parents.
+There are good reasons behind some of that advice. Autonomy protects people from marriages they do not want and gives women lives beyond economic dependence. Education and work can enlarge a person's abilities and choices. The problem begins when readiness becomes a horizon that keeps moving.
 
-The cost is that freedom can lose direction. Children once arrived in a fairly settled progression of adulthood: marry, form a household, have kids. Now parenthood competes with an open field of self-development, of “finding yourself”. Parenthood closes options and makes demands that cannot be paused when a better invitation appears. A culture trained to keep every option open will have fewer children, because a child is an irrevocable claim on the future.
+Children close options. They require money, time, compromise, and attention at inconvenient hours. A culture organized around self-direction therefore has to explain why anyone should accept an obligation that cannot be paused when a better opportunity appears. If it has no good answer, delay feels less like avoidance than prudence.
 
 ## The perfect parent
 
-Parenthood has become both more voluntary and more demanding at once. The expected parent researches every risk, manages schooling, and prepares a child for intense competition. The child is loved, but also managed as a high-stakes project.
+Parenthood has also become more demanding at the same time it became more optional. The expected parent researches every risk, manages schooling closely, and treats childhood as a project whose outcome reflects on the adults running it.
 
-This “intensive parenting” makes an ordinary family feel negligent. Adults wait until they possess the right home, relationship, and temperament. Earlier parents were not necessarily wiser. They were more willing to begin without feeling “ready”, sometimes because they didn’t have a choice.
+That standard raises the entrance requirement. A couple may feel they need the right home, enough money, a strong marriage, and unusual emotional competence before beginning. Earlier parents were not necessarily wiser or more prepared. They often began before they felt ready because adulthood itself assumed children would be part of the life they were building.
 
-Environmental and political pessimism adds another argument for waiting. Some people fear bringing a child into a world facing climate change and political instability. The concerns are not invented. I think the conclusion is backward. A damaged world needs capable people who can fix it and love it enough to make it a valuable inheritance. Refusing the future its people is not a way to protect it.
+Environmental and political pessimism can add another reason to wait. Some adults worry about bringing children into a world shaped by climate change or instability. The fear is understandable. I think the conclusion points in the wrong direction. A damaged world will still need people capable of repairing it and loving it enough to make it worth inheriting.
 
-## Communities that still expect children
+## Communities that expect children
 
-Religious practice remains associated with larger families. In Pew's [2023–2024 Religious Landscape Study](https://www.pewresearch.org/religion/2025/02/26/religion-fertility-and-child-rearing/), American Christians ages forty to fifty-nine reported 2.2 children on average, compared with 1.8 among the religiously unaffiliated. Atheists reported 1.5 and agnostics 1.4. Affiliation is entangled with marriage, age, and selection, so the figures are not a clean causal estimate.
+Religious practice remains associated with larger families. In Pew's [2023–2024 Religious Landscape Study](https://www.pewresearch.org/religion/2025/02/26/religion-fertility-and-child-rearing/), American Christians ages forty to fifty-nine reported 2.2 children on average, compared with 1.8 among the religiously unaffiliated. Atheists reported 1.5 and agnostics 1.4. Those differences are entangled with marriage, age, and selection, so they are not a clean causal estimate.
 
-Religious communities do several things at once. They teach that children are blessings rather than lifestyle accessories, place family within obligations beyond individual preference and surround parents with people who have made similar sacrifices. High-fertility subcultures show that norms can persist inside the same economy and legal system.
+What religious communities often retain is a different order of adulthood. Marriage and children are not postponed until the self is finished. They are among the commitments through which a life acquires shape. Children are described as blessings before they are described as costs, and parents are surrounded by other adults who have made similar sacrifices.
 
-They also show the limits of inheritance. Children do not automatically keep their parents' faith, and migrant fertility often converges toward the host society. A community has to transmit its convictions, not merely reproduce its membership.
+That kind of culture cannot simply be legislated into existence. It also does not require sneering at people who remain childless. It requires making motherhood and fatherhood visible as serious forms of achievement rather than pleasant private hobbies that fit around the work considered socially important.
 
-Popular culture participates in that transmission. Depiction is not endorsement, and a difficult fictional parent may tell the truth about family life. Repetition still trains the imagination. When adulthood appears as travel, career, and friendship, while children appear mostly as chaos or lost identity, the absence becomes normal. Motherhood in particular is praised sentimentally and assigned little status.
-
-A pronatalist culture would not sneer at the childless or turn women into instruments. It would make motherhood and fatherhood visible as admired forms of achievement. It would show that sacrifice can enlarge a life, that dependence is not failure, and that receiving and raising another person is serious work. Money can reduce a barrier. Honor changes what the barrier is crossed for.
+Money can lower a barrier. Culture helps decide whether crossing it looks like losing a life or beginning one.
 
 <div class="citation">
 
