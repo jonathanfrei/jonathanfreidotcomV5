@@ -11,4 +11,4 @@ That is where spaceflight becomes a demographic question. A crew can explore. An
 
 The stars are still a direction rather than a near-term forecast. Even an independent settlement somewhere in our solar system lies beyond anything we have built. Following the path seriously is useful anyway because it strips away an assumption that is easy to miss on Earth: civilization is not just infrastructure and knowledge. It is people receiving both, caring for them, and handing them forward.
 
-![](https://media.jonathanfrei.com/assets/img/2026-08-24-20260824103310-88554.jpg)
+![](https://media.jonathanfrei.com/assets/img/2026-08-24-20260824104003-02477.jpg)
