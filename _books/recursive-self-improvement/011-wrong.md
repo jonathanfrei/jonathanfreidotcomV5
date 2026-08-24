@@ -1,5 +1,7 @@
 ---
-title: When Recursive Improvement Goes Wrong
+title: "When the Score Wins"
+deck: "How improvement loops amplify bad measures, late feedback, and local gains"
+eyebrow: "Failure"
 ---
 
 A build system begins with a few useful checks. Each failure adds another. Years later, a small change waits an hour for a brittle pipeline whose warnings are routinely ignored. The machinery created to make software safer has become a source of delay and uncertainty, but removing any check feels reckless because nobody remembers which old disaster put it there.
