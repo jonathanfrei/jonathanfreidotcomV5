@@ -4,38 +4,32 @@ deck: Demographic weight changes who votes at home and which countries can act a
 eyebrow: Power between generations
 ---
 
-Democracy counts the citizens who are present. Future citizens receive the results but cast no ballots, and a small generation receives fewer votes than a large one. As the electorate ages, political attention naturally follows the people who turn out now.
+Democracy counts the citizens who are present. Future citizens receive the results but cast no ballots, and a small generation receives fewer votes than a large one. As the electorate ages, politics acquires a built-in temptation to protect what current voters already have.
 {: .lede}
 
-A retired renter and a wealthy homeowner may disagree about nearly everything, so age produces a varied electorate. Older adults generally vote at higher rates than younger adults, and their share of eligible voters is growing. The [OECD has warned](https://www.oecd.org/en/publications/governance-for-youth-trust-and-intergenerational-justice_c3e5cb8a-en/full-report/component-10.html) that young people risk losing political weight both in the electorate and in public decision-making.
+Older adults are not a political bloc. A retired renter and a wealthy homeowner may disagree about nearly everything. They do generally vote at higher rates than younger adults, while their share of eligible voters is growing. The [OECD has warned](https://www.oecd.org/en/publications/governance-for-youth-trust-and-intergenerational-justice_c3e5cb8a-en/full-report/component-10.html) that young people risk losing political weight in public decision-making.
 
-The resulting bias comes from ordinary political attention. A pension check due next month is concrete. The child who might be born five years from now has no constituency. Parties learn to protect current benefits before making distant investments whose beneficiaries cannot punish them at the next election.
+The asymmetry is temporal as much as generational. A pension check due next month is concrete. A child who might be born five years from now has no constituency. Governments can therefore protect current consumption while sending debt or deferred maintenance to people who cannot yet object.
 
-Housing makes the conflict unusually visible. Older owners benefit when scarcity raises the value of their homes; young families need more housing to make room for children. Local rules that block building can preserve a neighborhood as current residents like it and close that neighborhood to the next generation. Each vote may be understandable. The accumulated choice tells young adults that an inherited view matters more than their household.
+Housing makes the conflict visible. An older homeowner may reasonably want her neighborhood to remain as it is. A young family needs somewhere to live. When local rules preserve scarcity year after year, the accumulated choice can turn an inherited neighborhood into an asset the next generation cannot afford to enter.
 
 ## Immigration under demographic pressure
 
-An older country needs workers, and a younger country has them. That creates a strong economic pull toward migration. A migrant may fill a care job and give the destination country time to adapt. She may also support a family across the border she crossed.
+An older country needs workers, and a younger country has them. That creates a strong pull toward migration. A migrant may fill a care job and give the destination country time to adapt. The origin country may lose the nurse it paid to train.
 
-The politics turns on whether newcomers and existing citizens can build trust under the actual pace of arrival. A common public language helps. When governments treat immigration as an accounting fix for an age ratio, they ignore the migrant's full humanity and the receiving population's attachments. Backlash then becomes easier to dismiss than to understand.
-
-The origin country pays costs too. Recruiting a nurse from a country with a worse care shortage improves one balance sheet by weakening another. Competition for migrants will intensify as more destinations age and the number of youthful countries narrows. Diasporas may connect economies, but transnational families also live with years of separation.
-
-Immigration belongs in demographic adaptation, within the limits established earlier. Countries will compete more intensely over a mobile pool of young adults. They will also have to earn the loyalty that turns arrival into shared citizenship.
+Immigration is therefore a powerful national adaptation with global limits. More aging countries will compete for a mobile pool of young adults as the number of youthful countries narrows. Receiving countries also have to do more than balance an age ratio. They have to turn arrival into shared citizenship, which requires enough trust for newcomers and existing citizens to imagine a common future.
 
 ## The map of power moves
 
-Population supplies part of a country's capacity to act abroad. Wealth and competent government can let a smaller country exercise great influence, but taxes and military recruits are drawn from people.
+The same demographic inheritance appears between countries. Wealth, technology, and competent government can let a smaller country exercise great influence, but taxes, workers, and military recruits ultimately come from people.
 
-The United Nations' medium projection shows the distribution moving sharply during this century. China falls from about [1.42 billion people in 2024 to 633 million in 2100](https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/wpp2024_summary_of_results_final_web.pdf), while India remains near 1.5 billion. Nigeria is projected to exceed the United States by century's end. The numbers are conditional projections, but their direction makes it hard to assume geopolitical weight will remain where the twentieth century left it.
+The United Nations' medium projection shows how far the map could move. China falls from about [1.42 billion people in 2024 to 633 million in 2100](https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/wpp2024_summary_of_results_final_web.pdf), while India remains near 1.5 billion. Nigeria is projected to exceed the United States by century's end. These are conditional projections, not appointments with fate. They are enough to make the twentieth-century distribution of demographic weight look temporary.
 
-A youthful population becomes power when people can learn and find productive work. Otherwise a large cohort may experience unemployment rather than produce national strength. An aging rich country begins with immense capital and fewer people to sustain it. The young country has to develop its people quickly; the old one has to renew them.
+A youthful population becomes power only when people can learn and find productive work. An aging rich country begins with immense accumulated capital and fewer people to sustain it. The young country has to develop its people; the old one has to renew them.
 
-Military power exposes the same constraint. Modern weapons let a smaller force do more and create demand for specialists who can maintain them. A U.S. national commission reported that [71 percent of Americans ages seventeen to twenty-four could not join without a waiver](https://media.defense.gov/2024/Aug/08/2003520328/-1/-1/1/INSPIRED%20TO%20SERVE%20-%20FINAL%20REPORT%20OF%20THE%20NATIONAL%20COMMISSION%20ON%20MILITARY%20NATIONAL%20AND%20PUBLIC%20SERVICE.PDF) under the standards it reviewed. A smaller youth cohort makes every further restriction on the recruiting pool more consequential.
+Modern weapons and automation can reduce the number of people required for some forms of national power. They also increase the value of scarce technical skill and industrial capacity. Over one generation, rich aging states can draw on enormous inherited advantages. Over a century, countries that successfully educate growing populations gain more room to act.
 
-An older electorate may also prefer domestic care to defense spending or become more cautious about casualties. Caution can be wisdom. It can also invite pressure if rivals do not age at the same speed. Technology-intensive warfare reduces the number of soldiers needed for some missions while raising the need for rare skills and resilient industrial supply.
-
-Demographic change rearranges power slowly. Over one generation, rich aging states can draw on accumulated advantages. Over a century, countries that educate growing populations gain room to act. Young countries deserve to be seen as more than reservoirs of labor or future enemies. Power follows people eventually, and a civilization unwilling to renew its population should expect its inherited share of the world to change.
+Demographic change rearranges power slowly enough to be easy to discount. It also compounds long enough to change which countries have the people to fill laboratories, factories, armies, and eventually the institutions that set international rules. A civilization unwilling to renew its population should expect its inherited share of the world to change.
 
 <div class="citation">
 
