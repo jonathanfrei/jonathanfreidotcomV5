@@ -1,5 +1,7 @@
 ---
-title: What Is Recursive Self-Improvement?
+title: "Four Depths of Improvement"
+deck: "A practical test for separating better results from better ways of learning"
+eyebrow: "Definitions"
 ---
 
 The definition becomes harder at the edges. A student changes her answer after seeing the solution. A thermostat changes the temperature after reading a sensor. A company changes a target after missing it. All three respond to feedback, but only one may have changed the way later changes will be found and judged.

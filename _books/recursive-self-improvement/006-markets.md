@@ -1,5 +1,7 @@
 ---
-title: "Markets: Optimization Against Optimizers"
+title: "When the Target Moves"
+deck: "How markets coordinate people who are learning from one another"
+eyebrow: "Markets"
 ---
 
 A shop lowers its price and attracts customers. The store across the street matches it and changes the product bundle. The first shop offers faster delivery. A supplier then raises a fee to capture part of the new margin. No improvement remains private for long. Each move changes the conditions under which everyone else's next move will be judged.

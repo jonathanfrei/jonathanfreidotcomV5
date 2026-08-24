@@ -1,5 +1,7 @@
 ---
-title: When Adaptive Systems Compete
+title: "Improving the Player, Changing the Game"
+deck: "How adaptive rivals create progress, escalation, and new rules"
+eyebrow: "Competition"
 ---
 
 A security team closes a vulnerability. Attackers study the patch, change their tools, and search the boundary it revealed. Defenders add detection. Attackers change how they move. Each local improvement is real, but the contest does not settle into safety. It produces another round.

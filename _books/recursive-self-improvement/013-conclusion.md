@@ -1,5 +1,7 @@
 ---
-title: Conclusion
+title: "What Improvement Cannot Choose"
+deck: "Capability can enlarge human action without deciding what human action is for"
+eyebrow: "Judgment"
 ---
 
 The book began with a bug that could be fixed twice. One repair changed the program. The other changed what the development process would notice the next time. That modest difference opened onto a larger problem. Once the machinery of improvement can itself be changed, the rules, evidence, and people judging the change are no longer safely outside the loop.
