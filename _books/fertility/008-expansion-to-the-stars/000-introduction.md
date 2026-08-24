@@ -10,3 +10,5 @@ The decisive moment in human settlement beyond Earth may not be the first landin
 That is where spaceflight becomes a demographic question. A crew can explore. An outpost can depend on Earth. A settlement has to survive interruption. A home has to reproduce itself across generations.
 
 The stars are still a direction rather than a near-term forecast. Even an independent settlement somewhere in our solar system lies beyond anything we have built. Following the path seriously is useful anyway because it strips away an assumption that is easy to miss on Earth: civilization is not just infrastructure and knowledge. It is people receiving both, caring for them, and handing them forward.
+
+![](https://media.jonathanfrei.com/assets/img/2026-08-24-20260824103310-88554.jpg)
