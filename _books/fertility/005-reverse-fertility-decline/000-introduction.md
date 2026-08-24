@@ -1,12 +1,14 @@
 ---
 title: Can Fertility Decline Be Reversed?
-deck: Policy can help families and buy time, but renewal begins deeper than a benefit or machine
+deck: Governments learned to suppress births faster than they have learned to restore them
 eyebrow: The search for a turn
 ---
 
-Fertility decline can be reversed. Human behavior is not a physical constant, and the future has repeatedly escaped a straight-line forecast. The harder truth is that no modern country has yet demonstrated a durable path from very low fertility back to replacement. We know much more about stopping births than restoring the conditions in which people welcome them.
+China spent decades telling families that a second child was one too many. It ended the one-child regime in 2016, later allowed three children, and began offering support for families instead. The rule changed. Births kept falling. A government that had proved brutally capable of preventing births discovered that permission and money could not summon them back.
 {: .lede}
 
-That asymmetry should sharpen the search. Governments have spent decades testing family benefits and ways to adapt around the missing births. Some measures raised fertility at the margin; others made aging easier to bear. Their record also shows why a national budget cannot substitute for marriages formed in time or a culture that treats motherhood and fatherhood as honorable ambitions.
+That reversal captures the problem this chapter has to solve. Fertility is human behavior, not a physical constant, and there is no reason to assume today's rates must persist forever. Yet no modern country has demonstrated a durable path from very low fertility back to replacement. We know much more about stopping a birth than restoring the chain of events that produces one.
 
-The chapter begins with an uncomfortable part of that record. Before asking what governments can do for fertility, we should remember what governments did against it—and why the damage was so much faster to inflict than to repair.
+The asymmetry runs through the policy record. A law can prohibit a pregnancy or make contraception easier to obtain. Helping a wanted child arrive is slower. Two people have to meet, commit in time, find room in their lives, conceive, and decide that another child is worth the cost. Governments can make parts of that sequence easier. They can also help an aging country live with the births that never happened.
+
+Those are different jobs. The first half of this chapter asks what policy has actually done to fertility, first downward and then upward. The second looks at immigration and technology, which can buy a smaller generation time without making it larger. The gap between those two tasks points toward a harder possibility: conventional family policy may be arriving too late in the story.
