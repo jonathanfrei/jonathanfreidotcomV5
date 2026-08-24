@@ -1,27 +1,33 @@
 ---
 title: How fast can population decline?
-deck: The pace depends on more than fertility, and it can change sharply once large cohorts reach old age
+deck: The momentum that once accelerated growth eventually works in reverse
 eyebrow: From plateau to contraction
 ---
 
-Population decline begins quietly. Growth slows, the total reaches a plateau, and annual changes remain small. The underlying age structure may nevertheless be preparing a much faster contraction.
+Demographic momentum helped create the population explosion. A large young generation kept producing more births even as family size fell. Eventually the same force runs in reverse.
 {: .lede}
 
-Four forces determine the pace: births, deaths, immigration, and emigration. Fertility affects births per woman, but the number of births also depends on how many women are at childbearing ages. Mortality affects both the number and timing of deaths. Migration can offset natural decrease or accelerate it. Age structure carries the history of all three forward.
+Population decline usually begins without much drama. Growth slows, the total flattens, and annual losses may remain small. Underneath that calm surface, the age structure can already be preparing a faster contraction.
 
-A country with fertility modestly below replacement and a balanced age structure may stabilize gradually. A country with very low fertility, few young adults, and a large elderly population can decline faster as deaths rise and births remain few. The same TFR can produce very different annual population changes.
+Fertility is only part of the pace. The number of births also depends on how many women are at childbearing ages. A country with moderately low fertility and plenty of young adults can remain stable for a long time. A country with very low fertility and few young adults can lose population much faster as a large older generation reaches the end of life.
 
-Migration changes the national arithmetic most quickly. It can add working-age adults directly and, because migrants are usually younger, add future births as well. It cannot make every country grow at once: international migration redistributes population rather than creating it. As immigrants and their children adapt to the host country's family pattern, their fertility tends to converge too. A stable national total can conceal both an unrepaired birth deficit and a loss of young people somewhere else.
+This is why the same fertility rate can produce different futures. Japan enters each year with an age structure built by decades of low fertility. India enters with much larger younger cohorts. Set the same TFR in both countries tomorrow and their populations would still move differently for years.
 
-## National turns precede the global turn
+Migration can alter the national path quickly by adding young adults. It cannot make every country grow at once. At the world level, migration moves people rather than creating them.
 
-Countries cross from growth to decline at different times. The UN groups the world accordingly: some populations have already peaked, others are likely to peak in coming decades, and a smaller set is projected to grow through 2054. The continued growth of the latter can outweigh decline elsewhere in the global sum.
+## Momentum in reverse
 
-This produces a long period in which national contraction and global growth coexist. China, Japan, and several European countries can lose population while sub-Saharan African countries add many more people. The global peak arrives only when the combined losses exceed the combined gains.
+The UN expects national population peaks to arrive at different times. Some countries have already passed theirs. Others will peak over the next few decades, while a smaller group—many of them in sub-Saharan Africa—will keep growing longer. Global population can therefore rise while China, Japan, and parts of Europe shrink.
 
-After a peak, decline need not proceed at a constant percentage. It may accelerate as large cohorts enter ages of high mortality and small cohorts reach parenthood. It may slow if fertility recovers, longevity rises, or migration changes. War and economic crises can disturb the path, sometimes for years.
+After a national peak, decline does not have to proceed at a steady rate. It can accelerate when a large older cohort reaches ages of high mortality at the same time that a much smaller generation is having children. Fertility may then improve without producing an immediate recovery in births, because the missing babies of thirty years ago are now missing potential parents.
 
-Forecasts are conditional trajectories. They show what current age structure and plausible assumptions imply; they cannot assign a date to an unavoidable future. The near term is constrained by people already alive. The distant pace depends increasingly on choices and conditions we cannot yet observe.
+That is the awkward symmetry of demographic momentum. On the way up, falling fertility can take decades to stop population growth. On the way down, rising fertility can take decades to stop population decline.
+
+Forecasts remain conditional. Fertility can change. Longevity can improve, and migration can substantially alter a country's path. The farther we look, the less confidence we should place in a particular population number. The next twenty or thirty years are different. Most of the people who will be alive then have already been born, which gives age structure unusual predictive power.
+
+The population explosion trained us to think of momentum as a force for growth. We are beginning to encounter it in the other direction. Low fertility changes births immediately and population slowly. By the time a country begins shrinking, much of the generation that will shape its next few decades is already here—or is missing.
+
+The next part of the book turns from the arithmetic to the harder question: why did so many people, in so many different societies, begin having fewer children in the first place?
 
 <div class="citation">
 
