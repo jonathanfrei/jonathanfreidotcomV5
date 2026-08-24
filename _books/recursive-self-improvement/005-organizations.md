@@ -1,5 +1,7 @@
 ---
-title: Organizations and Complex Adaptive Systems
+title: "When Companies Learn"
+deck: "How experience survives incentives, turnover, and institutional memory"
+eyebrow: "Organizations"
 ---
 
 After a serious outage, a company gathers everyone who touched the system. The team reconstructs the timeline, assigns action items, and files a careful report. Six months later, another outage follows the same shape. The company remembered the meeting. It did not learn from it.

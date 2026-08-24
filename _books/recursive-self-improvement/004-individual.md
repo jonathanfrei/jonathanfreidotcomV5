@@ -1,5 +1,7 @@
 ---
-title: "The Individual: A Self-Modifying System"
+title: "The Person Watching the Person"
+deck: "How habits, environments, and other people help us improve how we improve"
+eyebrow: "Self-Knowledge"
 ---
 
 A student spends an evening rereading a chapter and closes the book with the pleasant sense that she knows it. The next morning, a blank page tells her otherwise. Reading the chapter again would feel productive in exactly the same way. Testing herself from memory would feel worse, but the missed questions would show her what to study next.
