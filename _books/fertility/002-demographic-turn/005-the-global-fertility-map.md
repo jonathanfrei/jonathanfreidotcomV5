@@ -4,22 +4,20 @@ deck: Nearly every region is moving in the same direction, but they are not movi
 eyebrow: One trend, many stages
 ---
 
-A map of fertility no longer divides neatly into a low-fertility rich world and a high-fertility poor world. The broad relationship with development remains, but the boundary has moved and fractured.
+The old demographic map was easy to picture: small families in rich countries, large families in poor ones. The relationship with development has not disappeared, but the map has broken apart.
 {: .lede}
 
-Most of Europe, East Asia, and the Americas is below replacement. Much of South and Southeast Asia has crossed the same line or is close to it. The highest fertility is now concentrated in sub-Saharan Africa and a smaller group of countries elsewhere. Even there, the general direction is downward.
+Most of Europe, East Asia, and the Americas is below replacement. Much of South and Southeast Asia has reached the same territory or is close to it. High fertility is increasingly concentrated in sub-Saharan Africa. Even there, fertility is generally falling.
 
-National averages conceal much of the story. Fertility can differ between cities and rural districts, or between religious and economic groups. A country near replacement may contain a capital city with very low fertility and provinces where families remain larger. The national number describes the combined result, not a uniform culture.
+The speed of the change is as striking as its spread. Europe's transition unfolded over a long period. Latin America moved from high fertility to below replacement within a few generations. Several Asian countries moved faster still. Public-health knowledge and contraception can cross borders without waiting for every country to repeat Europe's economic history.
 
-## The transition is spreading and compressing
+This compression creates a new problem. Countries can begin aging before they have accumulated the wealth or built the pension systems that older European countries had when they reached the same demographic stage. A young population can become an old one faster than its government can prepare for it.
 
-Europe's decline unfolded over a long period. Later transitions have been much faster. Public health, contraception, and new expectations can spread without each country retracing the same economic history. Latin America moved from high fertility to below replacement within a few generations. Several Asian countries moved faster still.
+National averages also hide local differences. A capital city may have very low fertility while rural families remain larger. Migration can make the national population grow even after fertility falls below replacement. The regional sketches ahead are therefore not a ranking of decimal points. Each shows a different part of the same turn.
 
-This compression creates a different challenge from the one older countries faced. A society can begin aging before it has built mature pension and health systems. The phrase “getting old before getting rich” is imperfect, but it names a real tension: the institutions that support a long old age take time and resources to build.
+Europe shows persistence: low fertility can survive large differences in welfare policy and culture. East Asia shows the outer edge, where fertility has fallen far below replacement. North America shows how migration can postpone population decline. Much of the developing world shows how quickly the old geography of high fertility is disappearing.
 
-The map also depends on the measure and year chosen. A period TFR can be depressed by delayed births; borders can obscure migration; survey estimates may differ from registration data. Small populations can move sharply from year to year. For this reason, the regional sketches that follow are orientations rather than rankings.
-
-Their common feature is more important than any single decimal. Low fertility is no longer an exception confined to a few wealthy societies. It is a widespread stage of the demographic transition, reached through different histories and producing different population outcomes. Europe arrived early and East Asia moved furthest. Much of the developing world is changing faster than its older image suggests.
+The direction is becoming common. The timing is not.
 
 <div class="citation">
 
