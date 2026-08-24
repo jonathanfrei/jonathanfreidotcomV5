@@ -4,7 +4,7 @@ title: "Evolution: Recursive Improvement Without Intelligence"
 
 A course of antibiotics kills susceptible bacteria and leaves resistant variants with less competition. The surviving population does not understand what happened. No bacterium chose a strategy for its descendants. Yet the next generation meets the same drug differently because the previous encounter changed what was carried forward.
 
-Evolution stretches the idea of recursive improvement to its limit. It shows how variation, selection, and inheritance can retain successful changes across generations. It also warns us not to invent an intentional “self” where none exists.
+Evolution stretches the idea of recursive improvement to its limit. It shows how variation, selection, and inheritance can retain successful changes across generations. It also warns us not to invent an intentional "self" where none exists.
 {: .lede}
 
 ![Two researchers working together at a laboratory bench](https://images.unsplash.com/photo-1576089275954-40cd98bfcfdb?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600)
@@ -17,9 +17,9 @@ Evolution stretches the idea of recursive improvement to its limit. It shows how
 
 Darwin's argument joined several ordinary observations: organisms vary, some variation is inherited, and more offspring are produced than can survive and reproduce. The [Darwin Correspondence Project's introduction to natural selection](https://www.darwinproject.ac.uk/commentary/evolution/natural-selection) traces how those conditions yield differential reproductive success. Over many generations, traits that work in a given environment tend to become more common.
 
-There is feedback in a broad systems sense, but no score arrives in an organism's inbox. Selection is the consequence of reproduction in an environment. A trait can spread because it improves camouflage, attracts mates, exploits a temporary niche, or simply travels with another advantageous trait. “Better” means better at leaving descendants under particular conditions, not morally better, more complex, or destined for a fixed summit.
+There is feedback in a broad systems sense, but no score arrives in an organism's inbox. Selection is the consequence of reproduction in an environment. A trait can spread because it improves camouflage, attracts mates, exploits a temporary niche, or simply travels with another advantageous trait. "Better" means better at leaving descendants under particular conditions, not morally better, more complex, or destined for a fixed summit.
 
-This makes evolutionary language easy to misuse. Species don't generally evolve because they need a trait. Individual organisms don't rewrite their genes in order to improve their descendants. Populations change as inherited variation meets selection, drift, migration, and other processes. Purposeful language can make the account easier to tell while quietly reversing its causality.
+This makes evolutionary language easy to misuse. Species don't generally evolve because they need a trait. Individual organisms don't rewrite their genes in order to improve their descendants. Populations change as inherited variation meets selection, drift, migration, and other processes. Purposeful language can make the account easier to tell while reversing its causality.
 
 > Evolution retains successful variations, but success is local to an environment that is also changing.
 {: .pull-quote}
