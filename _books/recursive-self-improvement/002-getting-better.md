@@ -1,5 +1,7 @@
 ---
 title: "Learning How to Learn"
+deck: "How transfer, meta-learning, and AI move improvement into the loop"
+eyebrow: "Meta-Learning"
 ---
 
 A model masters one task after seeing millions of examples. Another reaches similar performance on a new task after seeing only a handful. The second result may look smaller on a leaderboard, but it suggests a more consequential change: earlier training has altered how readily the model can learn what comes next.
