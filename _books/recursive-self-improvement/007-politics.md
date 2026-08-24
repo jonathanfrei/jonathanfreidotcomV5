@@ -1,8 +1,10 @@
 ---
-title: "Politics: A System That Can Change Its Own Rules"
+title: "Rules for Changing the Rules"
+deck: "How political systems correct themselves without starting over"
+eyebrow: "Politics"
 ---
 
-The United States Constitution contains instructions for changing the United States Constitution. Article V gives Congress and the states a procedure for proposing and ratifying amendments, which means the document's existing authority is used to alter the document that grants that authority. The rule-making system can make rules about its future rule-making.
+The United States Constitution contains instructions for changing itself. Article V allows Congress and the states to propose and ratify amendments, using the document's existing authority to alter the document that grants that authority. The rule-making system can make rules about its own future.
 
 That is a political form of recursive self-modification. A democracy doesn't only choose policies. It can revise electoral procedures, legislative powers, institutional boundaries, and the terms under which later choices will be made.
 {: .lede}
@@ -13,7 +15,7 @@ That is a political form of recursive self-modification. A democracy doesn't onl
 **The room has rules.** Political decisions occur inside institutions that earlier political decisions built. *[Photo by Gerda on Unsplash](https://unsplash.com/photos/4dhRzMdU_5I?utm_source=jonathanfrei.com&utm_medium=referral)*
 {: .caption}
 
-## Using the old rules to choose new ones
+## Change without starting over
 
 The [Constitution Annotated account of Article V](https://constitution.congress.gov/constitution/article-5/) shows a deliberately demanding process: proposal by two-thirds of both houses of Congress or a convention called by two-thirds of state legislatures, followed by ratification from three-fourths of the states. The threshold allows change while making it harder for a temporary majority to rewrite the mechanism in its immediate interest.
 
@@ -37,4 +39,6 @@ Courts add another kind of feedback. A law written in general language encounter
 
 Politics also shows why recursive improvement requires restraint. A more efficient state can deliver services better, but it can also enforce a bad policy more thoroughly. A more responsive election system can represent voters more accurately, or become so sensitive to immediate opinion that it cannot keep long promises. Institutional capability and political goodness are separate achievements.
 
-The best political self-modification is usually neither worship of inherited procedure nor impatience with every friction. It asks what a rule protects, whom it burdens, what knowledge it encodes, and how it can be corrected without destroying the trust that lets rules govern at all. A free people needs the power to amend its common life and enough humility to make some amendments difficult.
+Political self-correction has to hold two risks at once. An inherited rule may preserve an injustice. A convenient reform may remove the restraint that tomorrow's loser will need. The minority test brings the problem down to human size: would the winners still call the rule fair if they had to live under it after losing?
+
+A free people needs lawful ways to correct its common life and enough humility to make some corrections difficult. Evolution reaches a similar pattern by a route with no lawgiver, vote, or shared purpose at all.

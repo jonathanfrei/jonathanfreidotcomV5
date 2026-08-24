@@ -1,10 +1,10 @@
 ---
-title: Conclusion
+title: "What Improvement Cannot Choose"
+deck: "Capability can enlarge human action without deciding what human action is for"
+eyebrow: "Judgment"
 ---
 
-We began with a programmer fixing a bug. The code became better. Then the programmer added a test, and the process that would shape tomorrow's code became better too. That small movement—from changing a result to changing how later results are changed—turned out to appear in study habits, companies, markets, constitutions, evolution, competition, and artificial intelligence.
-
-The resemblance among those systems is real, but partial. Treating the differences carefully leaves us with a more useful idea of recursive self-improvement than the familiar story of a machine rewriting itself at impossible speed.
+The book began with a bug that could be fixed twice. One repair changed the program. The other changed what the development process would notice the next time. That modest difference opened onto a larger problem. Once the machinery of improvement can itself be changed, the rules, evidence, and people judging the change are no longer safely outside the loop.
 {: .lede}
 
 ![A person photographing the sunset at the edge of the sea](https://images.unsplash.com/photo-1687149684845-3650ed97bc70?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600)
@@ -13,32 +13,22 @@ The resemblance among those systems is real, but partial. Treating the differenc
 **A horizon is a direction, not a score.** Capability helps us travel; judgment still chooses what is worth moving toward. *[Photo by Alex Gruber on Unsplash](https://unsplash.com/photos/BMMc2jWn_rc?utm_source=jonathanfrei.com&utm_medium=referral)*
 {: .caption}
 
-## What the comparison revealed
+Software made the loop easy to see. A failure can become a test that runs tomorrow. Version control preserves the old state, and rollback keeps one bad change from becoming permanent. The same pattern becomes less legible in a person, where the observer has pride and blind spots, and still less legible in an organization, where incentives shape which failures are reported at all.
 
-Software showed the cleanest engineered loop. Tests, version control, review, telemetry, and rollback can turn experience into executable memory. It also showed that improvement machinery creates new complexity. A test can preserve a mistaken expectation as faithfully as a good one.
+Markets, politics, evolution, and competition removed the comfort of a fixed environment. Other people learn too. They respond to a price, a rule, a defense, or an adaptation, and their response changes the next round. Improvement becomes relational. A participant can become more capable while the shared game becomes more wasteful or cruel.
 
-Individuals showed that the observer belongs to the system. We can reflect on practice and reshape our environments, but self-knowledge is noisy. Teachers, friends, communities, and inherited practices correct part of what introspection misses.
+Those comparisons leave three questions worth keeping. What changed? What evidence says it was better? What will carry forward into the next attempt? The questions are simple enough to use on a study routine, a company process, or an AI system. Honest answers are often difficult because the people answering them helped choose the objective and may benefit from the result.
 
-Organizations added many agents with different incentives. A lesson must travel through procedures, tools, and relationships, while the people being measured adapt to the measure. Organizational learning requires the freedom to question the process without forgetting why it was created.
-
-Markets and competition made the environment move. One optimizer's improvement becomes another optimizer's new problem. Distributed adaptation can discover remarkable solutions, but local success can create an arms race or push costs beyond the measured boundary.
-
-Politics put the rule-changing mechanism inside the rules. A free society needs lawful correction and durable restraint. Evolution then removed the planner altogether, demonstrating cumulative adaptation without supplying a universal meaning of “better.”
-
-> Recursive improvement increases the importance of judgment because the system is no longer changing only its answer. It is changing how later answers will be found and believed.
+> Recursive improvement increases the need for judgment because the system is changing how later answers will be found and believed.
 {: .pull-quote}
 
-## The questions that remain
+The safeguards developed in the previous chapter are forms of practical humility. Use more than one kind of evidence. Keep authority narrower than capability. Make changes visible. Preserve a way back. Let someone outside the immediate loop object, and make sure the objection can still stop the next turn.
 
-Three questions survived every domain. **What changed?** Better output, better behavior, and a better improvement mechanism are different achievements. **What evaluates the change?** Feedback is never the whole of reality, and a metric is never identical to the good it represents. **What carries forward?** A lesson compounds only when it alters future practice, memory, or capacity.
+None of this supplies a final definition of the good. Efficiency, prediction, scale, and control are powers. They can support health, learning, friendship, craftsmanship, public order, and other goods, but they cannot choose among them. A system may become extraordinarily good at reaching the target placed before it. The tighter group does not prove the target was worth choosing.
 
-Several conditions repeatedly made the loop healthier: multiple sources of evidence, limited authority, visible changes, independent correction, and reversibility. None guarantees safety. Together they keep an optimizer in contact with a world it does not fully understand.
-
-**The human boundary**: Not every good should be turned into a target. Friendship, craftsmanship, courage, faith, and care grow through practice and correction, but they are diminished when treated only as scores to maximize.
+**The human boundary**: Friendship, courage, faith, care, and craftsmanship grow through practice and correction. Treating them only as scores to maximize can damage the goods the measurements were meant to serve.
 {: .aside}
 
-This is the quiet risk behind a great deal of talk about self-improvement. The method becomes more elaborate, the dashboard becomes more precise, and the person or institution gradually forgets what the machinery was meant to serve. Becoming better at becoming better cannot decide the end toward which becoming is directed.
+The best improvement processes remain open to truths they did not generate. They preserve experience without making old rules unquestionable. They allow experiments without asking other people to bear unlimited risk. They enlarge human agency while leaving human beings responsible for where that agency is directed.
 
-The best recursive systems remain open to truths they did not generate. They preserve lessons without making the past unquestionable. They make experiments possible without making other people bear unlimited risk. They expand capability while leaving someone responsible for its use.
-
-A better test suite, study method, company, market, constitution, or learning machine can enlarge the field of human action. That is worth doing. But the final measure of improvement is not how quickly the loop turns. It is whether the people living within its consequences are more able to recognize and pursue what is good.
+A better test suite, study method, company, market, constitution, or learning machine can give people more room to act. That is a real good. It is still a means. The final judgment belongs with the people who must decide what kind of life the improved machinery is helping them build.
