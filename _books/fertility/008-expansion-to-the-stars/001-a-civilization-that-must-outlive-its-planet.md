@@ -1,31 +1,31 @@
 ---
 title: A civilization that must outlive its planet
-deck: Earth is our first home, and a civilization with a long future will eventually need another
+deck: Earth is our first home, but a civilization with a long future cannot keep every hope in one place
 eyebrow: Beyond the birthplace
 ---
 
-Earth is irreplaceable. It is the only world known to hold oceans, children, and the accumulated life of a civilization. Expanding beyond it should deepen our care for this home. It should also begin with a plain fact: Earth's habitability has an end.
+Earth is irreplaceable. It is the only world known to hold oceans, children, and the accumulated life of a civilization. Expanding beyond it should deepen our care for this home, not weaken it. It also follows from a simple fact: every civilization confined to one planet has one point of failure.
 {: .lede}
 
-The ultimate limit is very far away. In roughly five billion years, [the Sun is expected to swell into a red giant](https://science.nasa.gov/universe/search-for-life/finding-life-beyond-earth-what-comes-next/), perhaps engulfing Earth. This horizon is too remote to guide next year's budget, though it clarifies the destination. A civilization that survives long enough must leave its birthplace.
+The ultimate astronomical limit is unimaginably far away. In roughly five billion years, [the Sun is expected to swell into a red giant](https://science.nasa.gov/universe/search-for-life/finding-life-beyond-earth-what-comes-next/). That horizon should not guide next year's budget. It only makes the long direction obvious: a civilization that survives long enough will eventually need another home.
 
-Nearer dangers supply more immediate reasons to spread out. A second self-sustaining human home would prevent one planetary catastrophe from ending every human story. A settlement dependent on weekly cargo remains another room of the same house, connected by a very long hallway.
+Nearer risks make the same case without requiring a five-billion-year forecast. A second self-sustaining human population would prevent one planetary catastrophe from ending every human story. A base that depends on constant cargo from Earth does not yet provide that protection. It is still another room of the same house, connected by a very long hallway.
 
 ## The distance is real
 
-The Moon is days away. Mars is months away when the planets are favorably placed. The nearest star, Proxima Centauri, is [about 4.25 light-years from Earth](https://science.nasa.gov/exoplanets/other-stars-other-worlds/our-nearest-celestial-neighbor-an-exotic-3-star-system/). No existing propulsion system makes that a human journey. [Voyager 1 is moving away from the Sun at about 3.5 astronomical units per year](https://science.nasa.gov/mission/voyager/voyager-1/); Proxima is roughly 265,000 astronomical units away. Straight-line arithmetic at that speed gives a trip lasting tens of thousands of years, and Voyager isn't headed there.
+The Moon is days away. Mars is months away when the planets are favorably placed. The nearest star, Proxima Centauri, is [about 4.25 light-years from Earth](https://science.nasa.gov/exoplanets/other-stars-other-worlds/our-nearest-celestial-neighbor-an-exotic-3-star-system/). No existing propulsion system makes that a human journey. [Voyager 1 is moving away from the Sun at about 3.5 astronomical units per year](https://science.nasa.gov/mission/voyager/voyager-1/); at that speed, a trip across the distance to Proxima would take tens of thousands of years.
 
-So “the stars” names a direction and a scale of ambition. The practical work begins nearby. NASA's current [Moon to Mars architecture](https://www.nasa.gov/moontomarsarchitecture-strategyandobjectives/) aims at sustained operations on the Moon and initial human exploration of Mars. It is an exploration plan, updated as engineering and policy change. Independent cities lie much further ahead.
+So “the stars” names a direction and a scale of ambition. The practical work begins nearby. NASA's current [Moon to Mars architecture](https://www.nasa.gov/moontomarsarchitecture-strategyandobjectives/) aims at sustained lunar operations and eventual human exploration of Mars. Those are exploration plans. An independent city is a much harder thing.
 
-That difference gives the long project its shape. One generation learns to live away from Earth for longer periods. Later generations produce more of what they need locally and build settlements capable of surviving a missed ship. At some point a child is born there, grows up, and accepts responsibility for a place her parents began. Expansion then stops being a sequence of visits.
+The difference appears when the first generation is no longer temporary. Explorers tolerate danger because they expect to go home. Settlers eventually have to produce more of what they need locally, recover from a missed ship, raise children, and bury people who never return to Earth. The first child born there would inherit the place rather than volunteer for it.
 
 ## More than insurance
 
-Survival is the sternest reason to expand. Another world also offers discoveries that remote instruments may never make. A frontier can create room for different communities, provided the settlers retain the rights of persons rather than becoming property of the sponsor who paid their fare.
+Survival is the sternest reason to expand, but not the only one. Another world would offer discoveries that remote instruments may never make and room for communities whose institutions develop differently from those on Earth. That freedom will depend on settlers remaining citizens rather than property of the government or company that financed their passage.
 
-The strongest case is simply that life is good and human possibility is not exhausted. We do not know what music would be written under another sky or what a child raised on Mars would notice about Earth that we have missed. These are not measurable returns in a project plan. They are part of what the plan is for.
+The stronger case is more ordinary. Life is good, and human possibility is not exhausted. We do not know what music would be written under another sky or what a child raised on Mars would notice about Earth that we have missed. Those are not returns that fit neatly into a project plan. They are part of what the project is for.
 
-The project may take centuries and follow a route nobody now imagines. Nothing about population growth guarantees it. A civilization that no longer replaces itself makes the attempt harder before it has really begun.
+Nothing about population growth guarantees this future. A civilization that no longer replaces itself simply reaches it with less margin and fewer successors.
 
 <div class="citation">
 
