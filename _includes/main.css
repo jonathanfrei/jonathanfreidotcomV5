@@ -949,7 +949,7 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 }
 
 .prose .caption strong {
-  font-family: var(--font-mono);
+  font-family: var(--font-ui);
   font-weight: 700;
   font-style: normal;
   color: var(--color-fg);
@@ -959,11 +959,10 @@ html:not([data-theme]) .theme-toggle__icon--sun {
 
 .prose .caption em,
 .prose .caption i {
-  font-family: var(--font-mono);
-  font-weight: 200;
+  font-family: var(--font-ui);
+  font-weight: 300;
   font-style: normal;
   color: var(--color-muted);
-  margin-left: 0.5em;
 }
 
 .prose .caption a {
