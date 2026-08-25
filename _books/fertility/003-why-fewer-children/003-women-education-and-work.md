@@ -9,6 +9,11 @@ Modern education and work opened choices to women that earlier generations often
 
 In the United States, women's labor-force participation rose from [32.7 percent in 1948](https://www.bls.gov/opub/reports/womens-databook/2023/home.htm) to a peak of 60 percent in 1999 and stood at 57.3 percent in 2023, while college and professional training expanded at the same time. A woman who finishes graduate school in her late twenties and then spends several years establishing herself at work can arrive at marriage and a first attempt to conceive much later than she once imagined.
 
+![Woman operating a turret lathe at the Consolidated Aircraft plant, Fort Worth, 1942](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/WomanFactory1940s.jpg/960px-WomanFactory1940s.jpg)
+
+**Paid work as a normal adult life** A turret-lathe operator machining parts for transport planes in Fort Worth, 1942. The later rise in women's employment and education was a real expansion of freedom; it also placed family formation on a clock built for a different body. *[via Library of Congress / Wikimedia Commons](https://commons.wikimedia.org/wiki/File:WomanFactory1940s.jpg)*
+{: .caption}
+
 The legal changes that opened employment were responses to real injustice. The Equal Pay Act of 1963 prohibited sex-based pay discrimination for substantially equal work; Title VII of the Civil Rights Act of 1964 prohibited sex discrimination in employment; the Pregnancy Discrimination Act of 1978 made clear that an employer could not penalize a woman because she was pregnant.
 
 What law did not change was reproductive biology. Professional tracks had been built around continuous availability through the twenties and thirties because that model fit male careers reasonably well, and women entered those tracks without receiving extra years in which to become educated, establish themselves, find a spouse, and have several children.

@@ -27,6 +27,11 @@ Demographic strength can enlarge a country's power, but power is not the purpose
 
 The United Nations' medium projection shows how far the map could move. China falls from about [1.42 billion people in 2024 to 633 million in 2100](https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/wpp2024_summary_of_results_final_web.pdf), while India remains near 1.5 billion and Nigeria is projected to exceed the United States by century's end. These are conditional projections, not appointments with fate. They are enough to make the twentieth-century distribution of demographic weight look temporary.
 
+![Projected population of major countries, 1800 to 2100, UN medium scenario](https://ourworldindata.org/grapher/population-long-run-with-projections.png)
+
+**Who will have the people** UN medium-variant projections through 2100. China falls; India remains large; Nigeria is projected to overtake the United States. These are conditional forecasts, not appointments with fate. *[Our World in Data](https://ourworldindata.org/grapher/population-long-run-with-projections)*
+{: .caption}
+
 A youthful population becomes power only when people can learn and find productive work. An aging rich country begins with immense accumulated capital and fewer people to sustain it. The young country has to develop its people; the old one has to renew them.
 
 Modern weapons and automation can reduce the number of people required for some forms of national power. They also increase the value of scarce technical skill and industrial capacity. Over one generation, rich aging states can draw on enormous inherited advantages. Over a century, countries that successfully educate growing populations gain more room to act.

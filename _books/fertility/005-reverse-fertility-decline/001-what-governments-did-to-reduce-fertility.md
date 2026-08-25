@@ -17,6 +17,11 @@ The damage outlasted the rule. Son preference under a strict birth limit contrib
 
 The United States pursued a narrower version of reproductive control during the twentieth century. More than thirty states adopted eugenic sterilization laws. In *Buck v. Bell* in 1927, the Supreme Court allowed Virginia to sterilize Carrie Buck, and tens of thousands of Americans were eventually sterilized under such programs. The state claimed authority not merely over how many children should exist, but over whose descendants should exist.
 
+![Carrie Buck and her mother Emma at the Virginia Colony, 1924](https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Carrie_and_Emma_Buck%2C_1924.jpg/960px-Carrie_and_Emma_Buck%2C_1924.jpg)
+
+**Carrie Buck, Virginia, 1924** Carrie Buck (left) and her mother Emma at the Virginia Colony for Epileptics and Feebleminded, photographed before *Buck v. Bell*. The Supreme Court allowed Virginia to sterilize her in 1927. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Carrie_and_Emma_Buck,_1924.jpg)*
+{: .caption}
+
 Population control later became part of international development policy. American foreign aid financed family-planning programs abroad while governments and large institutions treated rapid population growth as an obstacle to development. Numerical targets create dangerous incentives: pressure can move from donor to ministry to clinic until a nominally voluntary program no longer feels voluntary to the person in the examination room. Later U.S. policy formally rejected coercion and acceptor targets after abuses made the danger hard to ignore.
 
 Coercion is not the only policy question. A government can refrain from forcing anyone to avoid pregnancy and still influence fertility by funding, promoting, or normalizing the means of preventing conception or ending pregnancy. Voluntary use and state sponsorship are not the same category. Neither is voluntariness the same as moral neutrality. Contraception still separates sex from its procreative meaning, and abortion still takes an unborn life. State coercion adds another wrong; its absence does not settle the morality of what the state funds or facilitates.

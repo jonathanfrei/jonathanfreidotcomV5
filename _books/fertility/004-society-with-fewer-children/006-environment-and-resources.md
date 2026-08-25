@@ -15,6 +15,11 @@ The more difficult question is what depopulation actually does to places, and wh
 
 When farming or settlement retreats, forest may return and wildlife may recover; in crowded regions, that room can be valuable. Deliberate restoration can turn demographic decline into a genuine ecological gain.
 
+![Overgrown vacant house in Kamakura, Japan, November 2024](https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Abandoned_house_in_Kamakura.jpg/960px-Abandoned_house_in_Kamakura.jpg)
+
+**Nature takes the house, Kamakura, 2024** A vacant house overtaken by vegetation. When people leave, forest and wildlife may return; abandonment is not the same as restoration, and unmanaged growth is not a conservation plan. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Abandoned_house_in_Kamakura.jpg)*
+{: .caption}
+
 Abandonment is not the same as restoration. Some open habitats depend on grazing; when it ends, scrub can replace species-rich grassland and unmanaged fuel can raise fire risk. The [European Environment Agency counts land abandonment](https://www.eea.europa.eu/en/topics/at-a-glance/nature/state-of-nature-in-europe-a-health-check) among the pressures on habitats and species.
 
 Population can also decline while development keeps spreading. Smaller households may consume more land per person around prosperous cities even as remote towns empty, and the European Environment Agency has found that [urban area grew faster than population](https://www.eea.europa.eu/en/analysis/publications/environmental-indicator-report-2012/environmental-indicator-report-2012-ecosystem/part3.xhtml). A national population total does not decide whether a particular meadow becomes forest, suburb, or restored habitat. People do.

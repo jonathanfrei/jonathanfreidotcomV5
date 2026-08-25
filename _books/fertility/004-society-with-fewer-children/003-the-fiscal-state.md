@@ -23,6 +23,11 @@ That burden lands during the same years in which younger adults are trying to bu
 
 A pension can be transferred electronically. Help with bathing or eating requires someone to show up.
 
+![A home-care worker with an older patient in New Delhi, 2025](https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Home_Care_Services_in_New_Delhi.jpg/960px-Home_Care_Services_in_New_Delhi.jpg)
+
+**Someone has to show up, New Delhi, 2025** A home-care worker with an older patient. Public and private provision divide payment; they do not eliminate the work of being there. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Home_Care_Services_in_New_Delhi.jpg)*
+{: .caption}
+
 OECD long-term-care spending [almost doubled as a share of GDP between 2000 and 2022](https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/10/ageing-populations-their-fiscal-implications-and-policy-responses_be4bd619/6aec03b3-en.pdf), while the European Commission's baseline projects public long-term-care spending in the European Union rising from 1.7 percent of GDP in 2022 to 2.4 percent in 2070. Better health in old age can change that bill substantially.
 
 Public and private provision divide payment, but they do not eliminate the work. If the state does not finance a home-care worker, an adult daughter may reduce her paid hours instead. A fiscal reform that pushes care back into a thinner family can make the accounts look better while making life worse.

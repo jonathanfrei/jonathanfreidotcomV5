@@ -1,6 +1,6 @@
 # The Fertility Decline
 
-This outline reflects the current manuscript structure in `_books/fertility`, chapters 001 through 009 and the provisional Chapter 006A. Completed chapters are described as they stand; Chapter 006A remains a research and drafting plan.
+This outline reflects the current manuscript structure, chapters 001 through 010. Completed chapters are described as they stand; Chapter 7, Getting Serious, remains a research and drafting plan. The chapter plan and sources live in `007-getting-serious/ref.md`.
 
 ## 1. The Stakes
 
@@ -244,56 +244,58 @@ This outline reflects the current manuscript structure in `_books/fertility`, ch
 
 ---
 
-## 6A. Getting Serious
+## 7. Getting Serious
 
 1. Introduction
-   1. Why ordinary pronatalist policy may be too small for persistent demographic contraction.
-   2. The chapter as a bounded thought experiment rather than a program or recommendation.
-   3. The distinction among possibility, effectiveness, legality, morality, and desirability.
-   4. Why demographic urgency cannot turn persons into instruments.
+   1. Why ordinary pronatalist policy is too small for persistent demographic contraction.
+   2. Why cultural repair is probably the real lever and is slow.
+   3. Cold open: the kidnapping of the Sabine women as Romulus's answer to a fertility crisis.
+   4. The chapter as a bounded thought experiment rather than a program. Inclusion is not endorsement.
+   5. The distinction among possibility, effectiveness, legality, morality, and desirability, stated once after the legend.
 2. The old answers
-   1. The kidnapping of the Sabine women as foundation myth rather than simple historical precedent.
-   2. Colonial Paraguay, including settlement, marriage, hierarchy, exploitation, and population growth.
-   3. Germany before and during the Second World War: family incentives, motherhood policy, abortion, sterilization, eugenics, and racial hierarchy.
-   4. A common test for historical cases: consent, cost, power, exclusion, and the definition of family.
+   1. The Sabine episode as foundation myth: Livy, reception, *raptus*, necessity as a story that blesses seizure.
+   2. Germany before and during the Second World War: marriage loans, motherhood honors, restrictions on women's work, abortion, sterilization, eugenics, and racial hierarchy.
+   3. A common test: consent, cost, power, exclusion, and the definition of family.
 3. The surviving exceptions
-   1. Israel as a national case requiring disaggregation by religion, ethnicity, income, education, and family size.
+   1. Israel disaggregated by religion, ethnicity, income, education, and family size, as evidence of magnitude rather than a recommended model.
    2. High-fertility religious subcultures with durable institutions across generations.
    3. Marriage, worship, education, mutual aid, matchmaking, geographic concentration, status, and sacrifice as a reinforcing ecology.
    4. Selection, retention, exit, and the boundary between community support and community pressure.
-   5. Why features sustained inside voluntary communities may become coercive when imposed by a state.
-4. A catalog of extreme remedies
+   5. Why features sustained inside a voluntary community may become coercive when imposed by a state.
+4. Status, desire, and example
+   1. Desire as socially contagious: seeing babies, admired public figures, supportive friends.
+   2. Pronatalist messaging in government, media, schools, and churches.
+   3. Status as ordinal: raising parenthood, including by lowering other lives.
+   4. Shame, comedy, sumptuary signals, and state pathologizing of childlessness.
+5. Work, education, and the household
+   1. The overlap of education, continuous paid work, and peak fertility.
+   2. Unfashionable remedies: employment bans, sending women home, keeping daughters out of residential university.
+   3. Neighboring experiments: one-earner economics, career seasons, what education is for, tax treatment of household production.
+6. A catalog of extreme remedies
    1. Radical redistribution toward families through income, housing, debt, tax, pension, education, and care policy.
-   2. Reordering education, work, mobility, and the sequence of adulthood.
-   3. Cultural and institutional pressure favoring marriage and parenthood.
+   2. Sticks and privileges: childless taxes, parent-priority queues, parent-only franchise, higher-parity targeting.
+   3. Reordering education, work, mobility, and the sequence of adulthood.
    4. Restrictions involving abortion, contraception, sterilization, divorce, and reproductive technology.
    5. Direct demographic control, including compulsory marriage, reproductive quotas, eugenics, kidnapping, and sexual violence.
    6. Technological proposals such as artificial gestation, in-vitro gametogenesis, embryo selection, cloning, AI matchmaking, and intimate surveillance.
    7. Evaluation by mechanism, magnitude, time horizon, reversibility, administrative power, distribution of costs, and effect on persons and families.
-5. Permission and power
-   1. The difference between unpopular sacrifice and intrinsic violations of human dignity.
+7. Permission and power
+   1. The difference among unpopular, unrealistic, and impermissible, after the tour rather than before it.
    2. Moral limits that demographic emergency cannot erase.
    3. Children as persons to receive rather than products to manufacture or units to assign.
-   4. The harder cases of formally voluntary pressure, costly exit, unequal subsidy, and intrusive administration.
+   4. Harder cases: costly exit, humiliation taxes, employment bans, pathologizing the childless, industrial reproduction.
    5. The proper roles of law, spouses, families, churches, employers, cities, voluntary communities, and the state.
-   6. Subsidiarity and solidarity as limits on both centralized power and social abandonment.
-6. Abundance changes the bargain
+8. Abundance and the cost of decline
    1. Energy, housing, automation, healthcare, education, transport, remote work, and social wealth as constraints that may become less binding.
-   2. Recovering useful mechanisms from bad proposals without preserving coercion, exclusion, or instrumental reproduction.
+   2. Recovering useful mechanisms from bad proposals without preserving coercion.
    3. Whether material abundance strengthens family life or merely makes low-fertility individualism easier to sustain.
-   4. Voluntary and plural experiments that people can enter, leave, imitate, or reject.
-7. What is worse than decline?
-   1. The real human and civilizational costs of managed contraction.
-   2. Concentrated harms imposed by remedies versus diffuse harms imposed by decline.
-   3. Reversible adjustment versus irreversible loss.
-   4. Politically unpopular tradeoffs that may be preferable to permanent contraction.
-   5. Institutions that should be allowed to disappear rather than preserved through immoral means.
-   6. The possibility that civilization can be lost through passivity or corrupted by the means chosen to save it.
-   7. A conclusion that demands greater seriousness without endorsing an extreme program.
+   4. The real human and civilizational costs of managed contraction.
+   5. Concentrated harms of a remedy versus diffuse harms of decline; passivity as a possible injustice; means that would lose the civilization being saved.
+   6. A landing that demands greater seriousness without endorsing a program, then hands the reader to the two paths.
 
 ---
 
-## 7. Contraction or Renewal
+## 8. Contraction or Renewal
 
 1. Introduction
    1. Moving from diagnosis and intervention to two demographic paths.
@@ -322,7 +324,7 @@ This outline reflects the current manuscript structure in `_books/fertility`, ch
 
 ---
 
-## 8. Expansion to the Stars
+## 9. Expansion to the Stars
 
 1. Introduction
    1. The demographic argument widened from the future of individual societies to the long-term trajectory of humanity.
@@ -357,7 +359,7 @@ This outline reflects the current manuscript structure in `_books/fertility`, ch
 
 ---
 
-## 9. Choosing to Grow
+## 10. Choosing to Grow
 
 1. Introduction
    1. Returning from the book's longest time horizon to the choices available in the present.

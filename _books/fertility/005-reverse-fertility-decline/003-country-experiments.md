@@ -7,6 +7,11 @@ eyebrow: The record in practice
 Pronatalist policy has run long enough to leave a record. Governments have helped parents and sometimes raised fertility, but none of the wealthy countries most committed to the effort has secured a durable return from very low fertility to replacement.
 {: .lede}
 
+![Fertility rates in France, Hungary, Finland, Japan, and South Korea, 1950–2023](https://ourworldindata.org/grapher/children-per-woman.png?tab=chart&time=1950..latest&country=FRA~HUN~KOR~FIN~JPN)
+
+**The record in five countries** Births per woman, UN estimates through 2023. France stayed higher for years, then fell; Hungary's rise after 2011 is visible and incomplete; South Korea dropped far below one. *[Our World in Data](https://ourworldindata.org/grapher/children-per-woman)*
+{: .caption}
+
 France shows what sustained support can preserve. Family allowances, paid leave, and publicly supported childcare made the cost of children a continuing public concern rather than a private emergency. For a new parent, that support is not an abstract line in a budget; it is the difference between finding a childcare place and scrambling for one, between taking leave and wondering whether the household can absorb it. For years France maintained one of Europe's highest fertility rates.
 
 Then the number kept falling. France's TFR declined from 2.02 in 2010 to 1.56 in 2025, the lowest French level since the end of the First World War, and that year deaths exceeded births for the first time since the Second World War. The support may have kept fertility higher than it otherwise would have been and certainly made family life easier, but it did not hold the rate near replacement as age at first birth and family expectations continued to change. The Nordic countries reached a similar limit after building generous leave and childcare around high maternal employment; Finland's TFR fell to 1.25 in 2024.
@@ -24,6 +29,11 @@ A tax benefit can change the arithmetic for a couple already discussing a second
 ## South Korea reached the upstream problem
 
 South Korea has spent heavily against the lowest fertility in the world, expanding childcare and parental leave since 2006 while adding financial and housing support. Some individual reforms worked: a childcare subsidy increased pregnancies among affected women, and higher leave benefits increased the probability of birth for eligible workers. The national TFR was still 0.75 in 2024.
+
+![Apartment complex in Seoul](https://upload.wikimedia.org/wikipedia/commons/f/ff/Koreatyp04.jpg)
+
+**Housing before the benefit applies** An apartment tower in Seoul. Parental leave and childcare reach a couple only after they have formed a household; expensive housing is one of the earlier bottlenecks. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Koreatyp04.jpg)*
+{: .caption}
 
 Parental leave becomes useful only after a couple has formed, married or otherwise committed, conceived a child, and reached an employer where the benefit applies. Many adults are getting stuck earlier, during years shaped by long work hours, expensive housing, and delayed partnership.
 

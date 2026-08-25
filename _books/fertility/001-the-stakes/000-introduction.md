@@ -7,6 +7,11 @@ eyebrow: The fertility decline
 A classroom does not disappear all at once. One year there are thirty children in the first grade; a few years later there are twenty-four, then twenty. Eventually the district combines grades, closes a building, and sends the remaining students farther down the road. Nothing dramatic happened on the day the first smaller class arrived. The change only became obvious after the missing children had worked their way through the school.
 {: .lede}
 
+![Students in a middle school classroom, August 22, 2006](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/USMC-04295.jpg/960px-USMC-04295.jpg)
+
+**A class that is still here** Students in a language arts class, August 22, 2006. Demographic decline begins with births and then moves through the places built around the expectation that another generation will arrive. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:USMC-04295.jpg)*
+{: .caption}
+
 Demographic decline works like that. It begins with births and then moves outward into the places built around the expectation that another generation will arrive: a smaller class becomes a smaller workforce, and later the same missing cohort shows up in hospitals, families, and public finances. The effects come slowly enough that each year's change can look manageable. By the time the pattern is unmistakable, much of it has already been set in motion.
 
 The book follows two paths from that change. On one, each smaller generation becomes the base for another, care and maintenance claim more of the available labor, and a competent society learns to live within a future that keeps narrowing. On the other, family formation becomes ordinary and attainable again, generations return toward replacement, and the work of caring for today's older population remains pointed toward renewal. That path preserves the human surplus for projects that may take generations to complete.

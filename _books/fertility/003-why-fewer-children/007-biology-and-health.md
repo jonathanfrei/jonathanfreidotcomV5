@@ -9,6 +9,11 @@ Most of the causes in this chapter operate by changing choices, timing, or circu
 
 Female fertility is highest in the late teens and twenties, begins declining around thirty, and falls more rapidly in the later thirties. The American Society for Reproductive Medicine calls female age the [single most important predictor of fecundity](https://integration.asrm.org/practice-guidance/practice-committee-documents/fertility-evaluation-of-infertile-women-a-committee-opinion-2021/), with clinical guidance recommending infertility evaluation after twelve months of trying below age thirty-five, after six months at thirty-five or older, and more immediately above forty.
 
+![Age and female fertility: subfertility, sterility, cycle irregularity, and menopause](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Age_and_female_fertility.svg/960px-Age_and_female_fertility.svg.png)
+
+**The window that did not move** Cumulative share of women affected by subfertility, sterility, cycle irregularity, and menopause, by age. Social timetables moved later; ovarian aging did not. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Age_and_female_fertility.svg)*
+{: .caption}
+
 Those are population patterns, not a cliff at one birthday. Many women conceive easily after thirty-five, and some younger couples face infertility; the practical issue is family size. A couple hoping for one child can begin later than a couple hoping for three and still have a similar chance of reaching its goal. Delaying the first attempt from twenty-seven to thirty-seven changes more than the odds of that first birth. It removes much of the time available for another.
 
 Men age reproductively too. Sperm production continues, but semen quality and sexual function can change, and advanced paternal age is associated with some pregnancy and offspring risks. The age effect is less abrupt than ovarian aging, but partnership still requires two people arriving at the same decision in time.

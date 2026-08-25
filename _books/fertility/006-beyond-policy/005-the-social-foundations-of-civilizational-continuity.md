@@ -15,6 +15,11 @@ Family transmission can carry vice as faithfully as skill. Cruelty and fear move
 
 The family nevertheless has a priority that schools, markets, and governments do not. It is the first community most people enter and the place where dependence is least surprising: a baby contributes nothing to the household budget and still belongs completely. The [Compendium calls the family the first natural society](https://www.vatican.va/roman_curia/pontifical_councils/justpeace/documents/rc_pc_justpeace_doc_20060526_compendio-dott-soc_en.html#CHAPTER%20FIVE). That priority sets a limit on public power. Government should protect and assist families when they cannot carry a burden alone, but it should not absorb the responsibilities that parents, relatives, and local communities can fulfill themselves.
 
+![A family at an infant baptism, 2019](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Infant_Baptism_Nov_2019_-_Flickr_-_Johnragai-Moment_Catcher.jpg/960px-Infant_Baptism_Nov_2019_-_Flickr_-_Johnragai-Moment_Catcher.jpg)
+
+**The first community** A family at an infant baptism, 2019. A baby contributes nothing to the household budget and still belongs completely; the people present intend to remain. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Infant_Baptism_Nov_2019_-_Flickr_-_Johnragai-Moment_Catcher.jpg)*
+{: .caption}
+
 ## Freedom receives a world
 
 Reproductive freedom protects a deeply personal part of human life from coercion. A woman's dignity precedes every population target, and a child is not a unit owed to the state. The damage caused by coercive population policy should make any proposed reversal suspicious of centralized power.

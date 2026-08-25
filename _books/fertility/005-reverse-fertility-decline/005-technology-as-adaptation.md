@@ -11,6 +11,11 @@ Automation is especially valuable where workers are scarce and the task can be s
 
 Care gives the technology a more human test. Better lifting equipment can keep a nurse healthy, a monitoring system can let an older person remain safely at home, and a machine may eventually handle much of the physical work involved in bathing a frail parent. None of that eliminates responsibility for the parent. Judgment and trust still belong to people, even when machines make their work lighter.
 
+![PARO therapeutic seal robot used in dementia care](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/PARO_seal_robot_for_dementia%2C_2018_Ryman_prize_explanation.jpg/960px-PARO_seal_robot_for_dementia%2C_2018_Ryman_prize_explanation.jpg)
+
+**A machine for company, not a successor** PARO, a Japanese therapeutic robot used in dementia care. Better equipment can lighten a nurse's work or soothe a patient; it does not take responsibility for a parent or produce the next generation. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:PARO_seal_robot_for_dementia,_2018_Ryman_prize_explanation.jpg)*
+{: .caption}
+
 This is why automation is worth pursuing rather than fearing as a demographic response. It can give younger adults back time and reduce the amount of inherited maintenance each worker must carry, perhaps making a shrinking population feel surprisingly prosperous for decades. That success should not be confused with renewal. Machines multiply human capacity; they do not create another generation.
 
 ## Medicine can recover some wanted births

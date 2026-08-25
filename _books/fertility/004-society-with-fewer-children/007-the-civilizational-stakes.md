@@ -27,6 +27,11 @@ One generation of contraction can be absorbed through wealth and automation. Aft
 
 The thousand-year horizon becomes concrete if humanity ever settles beyond Earth. A settlement has to raise children and repair its machinery after the founding specialists are dead. A few astronauts can begin a mission. Only successors can turn it into a civilization.
 
+![NASA astronaut Tracy Caldwell Dyson looking at Earth from the ISS Cupola, 2010](https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tracy_Caldwell_Dyson_in_Cupola_ISS.jpg/960px-Tracy_Caldwell_Dyson_in_Cupola_ISS.jpg)
+
+**Looking back at Earth, 2010** NASA astronaut Tracy Caldwell Dyson in the International Space Station's Cupola. A few specialists can begin a mission; only successors can keep the machinery—and the civilization—running. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tracy_Caldwell_Dyson_in_Cupola_ISS.jpg)*
+{: .caption}
+
 ## Adaptation and direction
 
 We should adapt. The age structure of the next few decades is largely set, and older people deserve security. Healthier aging and automation can make the transition far more humane. Refusing useful adaptations to make demographic decline look worse would be cruel.

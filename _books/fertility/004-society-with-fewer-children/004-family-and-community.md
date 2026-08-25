@@ -19,11 +19,21 @@ The 4-2-1 family gives the strain a memorable shape—four grandparents, two par
 
 Childlessness makes the problem sharper. Friends can provide real affection and paid aides excellent support, but older adults without a spouse or children begin with a thinner reserve. A U.S. Health and Retirement Study analysis found [5.5 percent of adults over fifty-five lacked a spouse or partner and children of any kind](https://pmc.ncbi.nlm.nih.gov/articles/PMC5927096/); an international study found that the share of adults over sixty-five without a partner and children ranged from roughly 2 percent to [more than 8 percent across twenty-seven countries](https://pmc.ncbi.nlm.nih.gov/articles/PMC11662209/).
 
+![Two elderly women in a retirement home in St. Johann, Italy](https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/I%27ll_always_protect_you_-_%28Unsplash%29.jpg/960px-I%27ll_always_protect_you_-_%28Unsplash%29.jpg)
+
+**Companionship in later life** Two residents of a retirement home in St. Johann, Italy, 2017. Friends and aides can provide real affection; older adults without a spouse or children still begin with a thinner reserve. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:I%27ll_always_protect_you_-_(Unsplash).jpg)*
+{: .caption}
+
 Technology can make care lighter. A sensor can detect a fall; a lifting machine can help an aide move someone safely. Neither knows a parent well enough to decide what she would have wanted when she can no longer say.
 
 ## When a town loses its meeting places
 
 A shrinking town often announces itself quietly. The elementary school still stands, but one wing is no longer used. A bus route drops its evening run and later its Saturdays; the clinic reduces its hours; the last grocery becomes a longer drive away.
+
+![Abandoned hamlet of Los Morenos in the Sierra de Segura, Spain, 2017](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Abandoned_village_Los-Morenos.jpg/960px-Abandoned_village_Los-Morenos.jpg)
+
+**After the residents leave** The abandoned hamlet of Los Morenos in Spain's Sierra de Segura, 2017. Shrinking is rarely even: some villages lose shops and services while regional centers still grow. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Abandoned_village_Los-Morenos.jpg)*
+{: .caption}
 
 The [OECD's work on shrinking regions](https://www.oecd.org/en/publications/shrinking-smartly-and-sustainably_f91693e3-en.html) treats consolidation as a practical necessity rather than a policy failure. Services move toward places that can sustain them. The cost shows up in distance: farther to a doctor, a shop, a gathering, or the neighbor one used to meet on the way.
 
