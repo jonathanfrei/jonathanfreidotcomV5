@@ -4,18 +4,23 @@ deck: Today's growth and decline are propelled by the age structure inherited fr
 eyebrow: The demographic echo
 ---
 
-If every family suddenly had exactly enough children to replace itself, population would not immediately become stable. It could keep growing for decades—or continue shrinking. The reason is population momentum.
+If every family suddenly had exactly enough children to replace itself, population would not immediately become stable; it could keep growing for decades—or continue shrinking. The reason is population momentum.
 {: .lede}
 
-Imagine two countries with identical fertility and mortality. In the first, a large share of the population is young and entering the childbearing years. In the second, the largest cohorts are old. The first will have more births than deaths; the second may have more deaths than births. The rates are the same, but the number of people exposed to them is different.
+Imagine two countries with identical fertility and mortality. In the first, a large share of the population is young and entering the childbearing years; in the second, the largest cohorts are old. The first will have more births than deaths while the second may have more deaths than births. The rates are the same, but the number of people exposed to them is different.
 
-Positive momentum is the afterlife of earlier high fertility. Large generations produce many births even when each person has a smaller family. This helps explain why India and much of sub-Saharan Africa can keep growing as fertility falls. A 2017 UN exercise estimated that, under immediate replacement fertility, constant mortality, and zero migration, the world's youthful age structure would still have carried population upward for decades.
+![World population by age and sex, 1950 to 2100](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Global_Population-Pyramid-1950-to-2100.jpg/960px-Global_Population-Pyramid-1950-to-2100.jpg)
 
-Negative momentum is the mirror image. After a long period of low fertility, the generation of potential parents is small. Even a recovery in births per woman may yield fewer births in total than a previous, lower rate applied to a larger cohort. Meanwhile, numerous older cohorts produce more deaths.
+**An inherited age structure** The world's population by age and sex from 1950 through a UN medium-variant projection to 2100. Large young cohorts keep the total growing even after fertility falls; those same cohorts later fill the older ages. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Global_Population-Pyramid-1950-to-2100.jpg)*
+{: .caption}
+
+Positive momentum is the afterlife of earlier high fertility. Large generations produce many births even when each person has a smaller family, which helps explain why India and much of sub-Saharan Africa can keep growing as fertility falls. A 2017 UN exercise estimated that, under immediate replacement fertility, constant mortality, and zero migration, the world's youthful age structure would still have carried population upward for decades.
+
+Negative momentum is the mirror image. After a long period of low fertility, the generation of potential parents is small, so even a recovery in births per woman may yield fewer births in total than a previous, lower rate applied to a larger cohort. Meanwhile, numerous older cohorts produce more deaths.
 
 ## The lag is part of the phenomenon
 
-Momentum separates a change in family behavior from its full population effect. A drop in fertility reduces births immediately. Roughly a generation later, it reduces the number of potential parents. Later still, it alters the number entering old age. One year's fertility moves through the population as a sequence of echoes.
+Momentum separates a change in family behavior from its full population effect. A drop in fertility reduces births immediately; roughly a generation later, it reduces the number of potential parents, and later still it alters the number entering old age. One year's fertility moves through the population as a sequence of echoes.
 
 This lag creates two common errors. One is to see continued growth after fertility falls and conclude that the decline did not matter. The other is to see a small annual population loss and assume future decline will remain small. Both confuse the current total with the age structure producing it.
 

@@ -4,26 +4,31 @@ deck: The momentum that once accelerated growth eventually works in reverse
 eyebrow: From plateau to contraction
 ---
 
-Demographic momentum helped create the population explosion. A large young generation kept producing more births even as family size fell. Eventually the same force runs in reverse.
+Demographic momentum helped create the population explosion: a large young generation kept producing more births even as family size fell. Eventually the same force runs in reverse.
 {: .lede}
 
-Population decline usually begins without much drama. Growth slows, the total flattens, and annual losses may remain small. Underneath that calm surface, the age structure can already be preparing a faster contraction.
+Population decline usually begins without much drama. Growth slows, the total flattens, and annual losses may remain small even while the age structure underneath that calm surface is preparing a faster contraction.
 
-Fertility is only part of the pace. The number of births also depends on how many women are at childbearing ages. A country with moderately low fertility and plenty of young adults can remain stable for a long time. A country with very low fertility and few young adults can lose population much faster as a large older generation reaches the end of life.
+Fertility is only part of the pace because the number of births also depends on how many women are at childbearing ages. A country with moderately low fertility and plenty of young adults can remain stable for a long time; one with very low fertility and few young adults can lose population much faster as a large older generation reaches the end of life.
 
-This is why the same fertility rate can produce different futures. Japan enters each year with an age structure built by decades of low fertility. India enters with much larger younger cohorts. Set the same TFR in both countries tomorrow and their populations would still move differently for years.
+This is why the same fertility rate can produce different futures. Japan enters each year with an age structure built by decades of low fertility, while India enters with much larger younger cohorts. Set the same TFR in both countries tomorrow and their populations would still move differently for years.
+
+![Japan population pyramid, October 2023](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Japan_Population_Pyramid.svg/960px-Japan_Population_Pyramid.svg.png)
+
+**Fewer young adults, more old age** Japan's population by age and sex, October 2023. The large cohorts now in their fifties and older were born when families were bigger; the base is already much smaller. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Japan_Population_Pyramid.svg)*
+{: .caption}
 
 Migration can alter the national path quickly by adding young adults. It cannot make every country grow at once. At the world level, migration moves people rather than creating them.
 
 ## Momentum in reverse
 
-The UN expects national population peaks to arrive at different times. Some countries have already passed theirs. Others will peak over the next few decades, while a smaller group—many of them in sub-Saharan Africa—will keep growing longer. Global population can therefore rise while China, Japan, and parts of Europe shrink.
+The UN expects national population peaks to arrive at different times. Some countries have already passed theirs; others will peak over the next few decades, while a smaller group—many of them in sub-Saharan Africa—will keep growing longer. Global population can therefore rise while China, Japan, and parts of Europe shrink.
 
 After a national peak, decline does not have to proceed at a steady rate. It can accelerate when a large older cohort reaches ages of high mortality at the same time that a much smaller generation is having children. Fertility may then improve without producing an immediate recovery in births, because the missing babies of thirty years ago are now missing potential parents.
 
 That is the awkward symmetry of demographic momentum. On the way up, falling fertility can take decades to stop population growth. On the way down, rising fertility can take decades to stop population decline.
 
-Forecasts remain conditional. Fertility can change. Longevity can improve, and migration can substantially alter a country's path. The farther we look, the less confidence we should place in a particular population number. The next twenty or thirty years are different. Most of the people who will be alive then have already been born, which gives age structure unusual predictive power.
+Forecasts remain conditional. Fertility can change, longevity can improve, and migration can substantially alter a country's path, so the farther we look, the less confidence we should place in a particular population number. The next twenty or thirty years are different: most of the people who will be alive then have already been born, which gives age structure unusual predictive power.
 
 The population explosion trained us to think of momentum as a force for growth. We are beginning to encounter it in the other direction. Low fertility changes births immediately and population slowly. By the time a country begins shrinking, much of the generation that will shape its next few decades is already here—or is missing.
 

@@ -1,19 +1,19 @@
 ---
-title: The questions a low-fertility age raises
+title: The choice inside adaptation
 deck: Renewal needs a goal without turning people into instruments of it
 eyebrow: Choosing a direction
 ---
 
-The three futures can all be called successful depending on what we are trying to accomplish. A finance minister may be satisfied if automation and immigration keep pensions funded. A mayor may be satisfied if a smaller town still has good services. Parents may care most about whether the family they hoped for was actually possible. Those goals overlap, but they aren't the same.
+The long-run direction should be demographic renewal near replacement. A civilization should ordinarily raise a generation capable of succeeding it; adaptation can keep pensions funded and smaller towns functional, and those are real achievements, especially for people living through an age structure they did not choose. They do not answer whether another smaller generation should inherit the same problem.
 {: .lede}
 
-I think the long-run direction should be demographic renewal near replacement. A civilization should ordinarily raise a generation capable of succeeding it. The nearer goal is more personal: make it easier for men and women to form durable families early enough to have the children they hope for.
+The nearer goal is more personal: make it easier for men and women to form durable families early enough to have the children they hope for.
 
-Closing the gap between desired and achieved family size is a decent first measure. The [United Nations Population Fund's 2025 report](https://www.unfpa.org/swp2025) emphasizes the barriers that keep people from realizing their fertility intentions. Removing those barriers respects the person rather than treating a birth as an input to a pension model. It may not by itself produce replacement fertility. Desires also change with the lives people think are available to them.
+Closing the gap between desired and achieved family size is a decent first measure. The [United Nations Population Fund's 2025 report](https://www.unfpa.org/swp2025) emphasizes the barriers that keep people from realizing their fertility intentions. Removing those barriers respects the person rather than treating a birth as an input to a pension model, though it may not by itself produce replacement fertility. Desires also change with the lives people think are available to them.
 
-The boundary is equally clear. A population target gives the state no claim over a woman's body or a couple's decision to have a child. The history of coercive fertility policy is enough reason to keep that power out of government hands. Law can make marriage and parenthood easier or harder; public policy can support families; communities can supply care and expectations that national programs cannot. The final choice remains with the people whose lives will be changed by it.
+The boundary is equally clear. A population target gives the state no authority to assign pregnancies or children, and the history of coercive fertility policy is enough reason to keep that power out of government hands. Law can make marriage and parenthood easier or harder; public policy can support families; communities can supply care and expectations that national programs cannot. The responsibility belongs first to the spouses whose family will be changed. They should remain free from demographic coercion while exercising that freedom within obligations to one another, to children already born, and to the life they may conceive.
 
-Adaptation is part of the work because the older population is already here. The missing workers of 2040 cannot be conceived in time to arrive as adults. Smaller places should still function well, and older people should not be treated as a demographic mistake. Managing that inheritance is compatible with trying to change the direction for generations that come later.
+Adaptation is part of both paths because the older population is already here. The missing workers of 2040 cannot be conceived in time to arrive as adults, so smaller places should still function well and older people should not be treated as a demographic mistake. The choice lies in whether managing that inheritance becomes an end in itself or preserves room to change the direction for generations that come later.
 
 ## What to count
 

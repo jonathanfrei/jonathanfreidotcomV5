@@ -4,18 +4,18 @@ deck: Demographic weight changes who votes at home and which countries can act a
 eyebrow: Power between generations
 ---
 
-Democracy counts the citizens who are present. Future citizens receive the results but cast no ballots, and a small generation receives fewer votes than a large one. As the electorate ages, politics acquires a built-in temptation to protect what current voters already have.
+Democracy counts the citizens who are present. Future citizens receive the results but cast no ballots, and a small generation receives fewer votes than a large one; as the electorate ages, politics acquires a built-in temptation to protect what current voters already have.
 {: .lede}
 
-Older adults are not a political bloc. A retired renter and a wealthy homeowner may disagree about nearly everything. They do generally vote at higher rates than younger adults, while their share of eligible voters is growing. The [OECD has warned](https://www.oecd.org/en/publications/governance-for-youth-trust-and-intergenerational-justice_c3e5cb8a-en/full-report/component-10.html) that young people risk losing political weight in public decision-making.
+Older adults are not a political bloc. A retired renter and a wealthy homeowner may disagree about nearly everything, but older adults generally vote at higher rates than younger ones while their share of eligible voters is growing. The [OECD has warned](https://www.oecd.org/en/publications/governance-for-youth-trust-and-intergenerational-justice_c3e5cb8a-en/full-report/component-10.html) that young people risk losing political weight in public decision-making.
 
-The asymmetry is temporal as much as generational. A pension check due next month is concrete. A child who might be born five years from now has no constituency. Governments can therefore protect current consumption while sending debt or deferred maintenance to people who cannot yet object.
+The asymmetry is temporal as much as generational. A pension check due next month is concrete; a child who might be born five years from now has no constituency. Governments can therefore protect current consumption while sending debt or deferred maintenance to people who cannot yet object.
 
-Housing makes the conflict visible. An older homeowner may reasonably want her neighborhood to remain as it is. A young family needs somewhere to live. When local rules preserve scarcity year after year, the accumulated choice can turn an inherited neighborhood into an asset the next generation cannot afford to enter.
+Housing makes the conflict visible. An older homeowner may reasonably want her neighborhood to remain as it is, while a young family needs somewhere to live. When local rules preserve scarcity year after year, the accumulated choice can turn an inherited neighborhood into an asset the next generation cannot afford to enter.
 
 ## Immigration under demographic pressure
 
-An older country needs workers, and a younger country has them. That creates a strong pull toward migration. A migrant may fill a care job and give the destination country time to adapt. The origin country may lose the nurse it paid to train.
+An older country needs workers, and a younger country has them. That creates a strong pull toward migration: a migrant may fill a care job and give the destination country time to adapt, while the origin country may lose the nurse it paid to train.
 
 Immigration is therefore a powerful national adaptation with global limits. More aging countries will compete for a mobile pool of young adults as the number of youthful countries narrows. Receiving countries also have to do more than balance an age ratio. They have to turn arrival into shared citizenship, which requires enough trust for newcomers and existing citizens to imagine a common future.
 
@@ -23,7 +23,9 @@ Immigration is therefore a powerful national adaptation with global limits. More
 
 The same demographic inheritance appears between countries. Wealth, technology, and competent government can let a smaller country exercise great influence, but taxes, workers, and military recruits ultimately come from people.
 
-The United Nations' medium projection shows how far the map could move. China falls from about [1.42 billion people in 2024 to 633 million in 2100](https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/wpp2024_summary_of_results_final_web.pdf), while India remains near 1.5 billion. Nigeria is projected to exceed the United States by century's end. These are conditional projections, not appointments with fate. They are enough to make the twentieth-century distribution of demographic weight look temporary.
+Demographic strength can enlarge a country's power, but power is not the purpose of a population. A government that values children principally as future soldiers, workers, or instruments of national competition repeats the error of the state that treats births as quotas. National capacity is worth preserving because it can protect a common life and contribute beyond its borders, not because a larger population gives its rulers more weight to throw around.
+
+The United Nations' medium projection shows how far the map could move. China falls from about [1.42 billion people in 2024 to 633 million in 2100](https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/wpp2024_summary_of_results_final_web.pdf), while India remains near 1.5 billion and Nigeria is projected to exceed the United States by century's end. These are conditional projections, not appointments with fate. They are enough to make the twentieth-century distribution of demographic weight look temporary.
 
 A youthful population becomes power only when people can learn and find productive work. An aging rich country begins with immense accumulated capital and fewer people to sustain it. The young country has to develop its people; the old one has to renew them.
 

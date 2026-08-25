@@ -4,18 +4,18 @@ deck: Digital life can widen the search for connection while making solitude eas
 eyebrow: Connected apart
 ---
 
-Technology probably does not explain fertility decline on its own. Its more plausible role is earlier in the chain: it changes how people meet, how they spend time alone, and how long they can postpone the difficult work of building an intimate life with another person.
+Technology changes the path into family life—how people meet, how they spend time alone, and how long they can postpone the difficult work of building an intimate life with another person. It is unlikely to explain fertility decline on its own, but its effects arrive early in the chain.
 {: .lede}
 
-Online dating shows both sides. It lets people search far beyond a neighborhood, church, school, or workplace, which can be life-changing for someone with a thin local marriage market. Thirty percent of American adults had used online dating by 2022. Plenty of marriages now begin that way.
+Online dating shows both sides. It lets people search far beyond a neighborhood, church, school, or workplace, which can be life-changing for someone with a thin local marriage market; thirty percent of American adults had used online dating by 2022, and plenty of marriages now begin that way.
 
 The same design can keep choice provisional. A stream of potential partners makes it easy to compare the imperfect person in front of you with people you have not met. The platform is very good at producing another option. It cannot make the user trust one person enough to stop searching.
 
 ## Solitude with fewer rough edges
 
-Digital entertainment also makes a solitary evening easier to fill. Streaming, games, social media, and pornography can occupy hours that previous generations had fewer ways to spend alone. None of that means a person watching Netflix would otherwise have been courting a spouse. It does mean solitude now carries less boredom and therefore less pressure to leave the house, join a group, or tolerate awkward social encounters.
+Digital entertainment also makes a solitary evening easier to fill. Streaming, games, social media, and pornography can occupy hours that previous generations had fewer ways to spend alone. None of that means a person watching Netflix would otherwise have been courting a spouse, but solitude now carries less boredom and therefore less pressure to leave the house, join a group, or tolerate awkward social encounters.
 
-The U.S. Surgeon General's [2023 advisory on social connection](https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf) documented declines in several forms of in-person connection and treated loneliness and isolation as public-health problems. A lonely person may want marriage intensely. But fewer friendships and fewer recurring places to meet people mean fewer routes through which a future spouse appears.
+The U.S. Surgeon General's [2023 advisory on social connection](https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf) documented declines in several forms of in-person connection and treated loneliness and isolation as public-health problems. A lonely person may want marriage intensely, yet fewer friendships and fewer recurring places to meet people mean fewer routes through which a future spouse appears.
 
 Sex itself has declined among some young adults. Analysis of the General Social Survey found that in 2016–2018, [30.9 percent of men and 19.1 percent of women ages eighteen to twenty-four](https://pmc.ncbi.nlm.nih.gov/articles/PMC7293001/) reported no sexual activity in the previous year. The increase was concentrated mainly among unmarried men and was associated with student status and, for men, weaker employment. Those findings do not isolate technology as the cause. They do show that a growing share of young adults is spending early adulthood without the relationships through which children usually arrive.
 

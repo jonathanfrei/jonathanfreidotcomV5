@@ -4,6 +4,7 @@
 - Catholic pronatalist worldview 
 - Decline an accident of history or depopulation agenda?
 - Scourge of abortion
+- Appendix ideas: depopulation agenda, conspiracy theory about world population being far smaller than reported (all the incentives aligned around over reporting population)
 
 
 ## My feedback

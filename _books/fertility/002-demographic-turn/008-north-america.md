@@ -4,20 +4,25 @@ deck: Low fertility can hide beneath a growing population
 eyebrow: Growth without replacement
 ---
 
-The United States still grows. So does Canada. That makes North America a useful reminder that population growth and replacement fertility are not the same thing.
+The United States still grows, and so does Canada. That makes North America a useful reminder that population growth and replacement fertility are not the same thing.
 {: .lede}
 
-The United States has remained below replacement since 2007. Final federal data put its 2024 total fertility rate at about 1.63. Births rose slightly that year, but Americans continue to become parents later and have fewer children than they did a generation ago.
+The United States has remained below replacement since 2007. Final federal data put its 2024 total fertility rate at about 1.63; births rose slightly that year, but Americans continue to become parents later and have fewer children than they did a generation ago.
 
-Canada has moved further. Its TFR reached a record-low 1.25 in 2024. The country nevertheless experienced rapid population growth because immigration added large numbers of mostly younger adults. A population can therefore become larger while the family pattern underneath it remains far below replacement.
+Canada has moved further. Its TFR reached a record-low 1.25 in 2024, yet the country experienced rapid population growth because immigration added large numbers of mostly younger adults. A population can become larger while the family pattern underneath it remains far below replacement.
 
-Mexico completes the continental turn. INEGI's 2023 demographic survey estimated fertility at 1.6, down from 2.07 in its 2018 survey. Mexico is younger than either the United States or Canada, so it can continue growing through demographic momentum even after fertility falls below replacement.
+Mexico completes the continental turn. INEGI's 2023 demographic survey estimated fertility at 1.6, down from 2.07 in its 2018 survey. Mexico is younger than either the United States or Canada, which means demographic momentum can keep its population growing even after fertility falls below replacement.
 
-The old North American gradient—low fertility in Canada, comparatively high fertility in the United States, larger families in Mexico—has largely disappeared. All three countries now sit below replacement by their national measures. What differs is the age structure they inherited and the number of people crossing their borders.
+The old North American gradient—low fertility in Canada, comparatively high fertility in the United States, larger families in Mexico—has largely disappeared. All three countries now sit below replacement by their national measures; what differs is the age structure they inherited and the number of people crossing their borders.
 
 ## What immigration can and cannot do
 
 Immigration changes national demographics quickly because migrants are disproportionately young adults. They can fill jobs now and have children later. For an aging country, that can be enormously valuable.
+
+![U.S. population projections under alternative immigration assumptions](https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/U.S._Population_1900%E2%80%932016%2C_Population_Projections_2017%E2%80%932060_by_Immigration_Scenario_%28cropped%29.jpg/960px-U.S._Population_1900%E2%80%932016%2C_Population_Projections_2017%E2%80%932060_by_Immigration_Scenario_%28cropped%29.jpg)
+
+**Growth that depends on who arrives** U.S. Census Bureau projections to 2060 under high, main, low, and zero immigration. With no immigration, the population would peak and then fall even if fertility and mortality stayed as assumed. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:U.S._Population_1900%E2%80%932016,_Population_Projections_2017%E2%80%932060_by_Immigration_Scenario_(cropped).jpg)*
+{: .caption}
 
 It is still a transfer rather than a global fertility solution. The young adult who moves to Toronto or Dallas no longer lives in the country that raised him. And migrant fertility tends to move toward the host-country pattern over time. The [OECD's review of migrant family building](https://www.oecd.org/en/publications/international-migration-outlook-2023_b0f40584-en/full-report/component-8.html) finds broad convergence across generations, with plenty of variation in the path.
 
