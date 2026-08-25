@@ -2,8 +2,6 @@
 
 Working file for material that does not belong in any one section shell. Not manuscript prose. Not a recommendation. Update this file when a source is confirmed or dropped. Section files hold local outline notes; this file holds the chapter contract, cross-cutting research, and the source list.
 
-Paraguay is out. Do not restore it.
-
 ---
 
 ## Contract with the reader
@@ -40,19 +38,20 @@ Duplication rules: do not rebuild chapter 3's LFP tables, chapter 5's country st
 | File | Job |
 |---|---|
 | `000-introduction.md` | Three beats plus contract. Draft last. |
-| `001-the-old-answers.md` | Sabines; Nazi natalism. No Paraguay. |
+| `001-the-old-answers.md` | Sabines; Nazi natalism. |
 | `002-the-surviving-exceptions.md` | Israel disaggregated; Haredi; Amish; LDS with the narrowed advantage. Magnitude, not a model. |
 | `003-status-desire-and-example.md` | IFS contagion; propaganda; shame; Russia. |
 | `004-work-education-and-the-household.md` | Stop hiring women; university delay; one-earner economics. |
 | `005-a-catalog-of-extreme-remedies.md` | Taxes, franchise, Singapore, pensions, restrictions, quotas, tech. |
 | `006-permission-and-power.md` | Sorting. |
 | `007-abundance-and-the-cost-of-decline.md` | Abundance cousins; cost of decline; landing. |
+| `research/` | Per-section source cards, quotes, and evidence order for drafting. Start at `research/README.md`. |
 
 ---
 
-## Research notes
+## Research notes (index)
 
-Figures below are for drafting, not for pasting un-checked. Verify vintage, geography, and definition (TFR vs completed fertility vs desired fertility) at prose time.
+Full cards: [`research/`](research/README.md). Figures below are reminders. Verify vintage, geography, and definition at prose time. The Chesterton line is from **“Social Reform versus Birth Control” (1927)**, not *What’s Wrong with the World*. Singapore 2030 childcare fees (**S$150 / S$300**) are confirmed on population.gov.sg. Russian psychologist-referral remains press-only.
 
 ### Sabines
 
@@ -157,4 +156,3 @@ Figures below are for drafting, not for pasting un-checked. Verify vintage, geog
 - A repeat of chapter 5's policy record.
 - A veto on thinking issued in advance by chapters 1 and 6.
 - A restoration of 1955.
-- A Paraguay research project.

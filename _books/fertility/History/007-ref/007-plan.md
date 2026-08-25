@@ -1,4 +1,6 @@
-# Chapter 6A: Getting Serious — content plan
+# Chapter 007: Getting Serious — content plan
+
+> Working title is now **Chapter 7**. Drafting research is in `research/`. This file is the narrative plan; `ref.md` is the contract.
 
 This plan reviews the drafted manuscript and proposes a chapter that is slightly out of character: a deadpan thought experiment that walks the full range of remedies, including ones earlier chapters would call objectionable. Inclusion is not endorsement. The joke, such as it is, is the book’s calm voice applied to ideas the rest of the book has been too well-behaved to entertain.
 
@@ -50,7 +52,7 @@ The thought-experiment disclaimer belongs immediately after that turn, once. The
 
 **After the intro:**
 
-1. **The old answers** — finish the Sabines as myth and reception; Paraguay; Nazi natalism. Historical extremes, same rubric as a baby bonus.
+1. **The old answers** — finish the Sabines as myth and reception; Nazi natalism. Historical extremes, same rubric as a baby bonus.
 2. **The surviving exceptions** — *not* hope first, and *not* a recommended model. Evidence that packages far from the liberal mainstream (early marriage, high cost of exit, a whole way of life) actually produce replacement-and-above fertility. Extremes can have an effect.
 3. **The contemporary unfashionable conversation** — status, shame, propaganda, women’s work and education, the X material, treated as thought experiments.
 4. **The full catalog** — remaining sticks, privileges, restrictions, direct control, technology.
@@ -103,7 +105,7 @@ All of these stay in the catalog. A childless tax, parent-only franchise, parent
 
 ### E. Historical and coercive extremes
 
-Sabines are the cold open, then a developed case in “the old answers,” not a catalog footnote. Paraguay and Nazi natalism follow there. Birth quotas, compulsory marriage, assigned partners, eugenics, kidnapping, forced pregnancy, industrial reproduction, and intimate surveillance stay on the board in the catalog. Treat all of them with the same analytical patience as a tax credit.
+Sabines are the cold open, then a developed case in “the old answers,” not a catalog footnote. Nazi natalism follow there. Birth quotas, compulsory marriage, assigned partners, eugenics, kidnapping, forced pregnancy, industrial reproduction, and intimate surveillance stay on the board in the catalog. Treat all of them with the same analytical patience as a tax credit.
 
 ---
 
@@ -114,7 +116,7 @@ Eight files. Intro drafted last, per `Agents.md`, except that the Sabine cold op
 | File | Role |
 |---|---|
 | `000-introduction.md` | Policy too small → culture too slow → cold open on the Sabine women → thought-experiment contract, once. Draft last, but the Sabine turn is the chapter’s first image. |
-| `001-the-old-answers.md` | Keep. Develop Sabines as myth and reception; Paraguay if it sources; Nazi natalism as policy. Same rubric as a baby bonus. |
+| `001-the-old-answers.md` | Keep. Develop Sabines as myth and reception; Nazi natalism as policy. Same rubric as a baby bonus. |
 | `002-the-surviving-exceptions.md` | Relocated. Not hope, not a program. Evidence that extreme (or totalizing) packages produce large fertility effects. |
 | `003-status-desire-and-example.md` | Status, propaganda, seeing babies, beauty, *and* status degradation, girlboss-as-cringe, psychologist referrals. Steelman the whole cluster. |
 | `004-work-education-and-the-household.md` | The Eriksen conversation taken seriously: employment, education, the home, the one-earner bargain, fathers as providers. Follow the extreme versions to their ends; include the milder redesigns as adjacent cases. |
@@ -149,7 +151,6 @@ Do not open with a rhetorical question. Do not bury the Sabines after a long thr
 The cold open was a glimpse. This section stays with historical extremes long enough to learn from them.
 
 - **Sabines:** myth versus whatever history can be recovered; what the story assumes about women, marriage, conquest, assimilation; why demographic necessity is presented as capable of turning violence into a people.
-- **Colonial Paraguay:** only if settlement, marriage, hierarchy, and population growth can be sourced. Otherwise a short pass or omit.
 - **Germany before and during the Second World War:** marriage loans, motherhood honors, restrictions on women’s work, abortion, sterilization, racial hierarchy. A policy can raise some births while defining which lives count.
 - Shared test: who chose, who paid, which lives counted, what was called a family, whether the result can be detached from violence or exclusion.
 
@@ -253,7 +254,7 @@ This section can still say that some means would lose the civilization being sav
 - Pension systems that already credit childrearing.
 - Female education vs fertility: incarceration effect of schooling versus preference change after graduation.
 - Russia’s actual childfree/psychologist policy text.
-- Historical, for the cold open and `001`: Livy (and preferably one other Roman source) on the Sabine women; later reception; Nazi marriage loans and motherhood honors as *policy*; Paraguay only if a demographic claim survives primary sources.
+- Historical, for the cold open and `001`: Livy (and preferably one other Roman source) on the Sabine women; later reception; Nazi marriage loans and motherhood honors as *policy*.
 - Historical bachelor taxes, marriage subsidies, and sumptuary/status rules (light, for the catalog’s “this already existed” function).
 
 ---

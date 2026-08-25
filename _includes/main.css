@@ -199,7 +199,7 @@ html[data-theme="dark"] {
     --brand-primary-20: #1A2A34;
     --brand-sand: #1E2A32;
     --brand-seafoam: #3DCFC0;
-    --brand-ochre: #E0A84A;
+    --brand-ochre: #E0A84A;      /* consider updating brand color to #8F5F0B; for accessibility */
     --brand-terracotta: #E89284;
     --brand-lavender: #B5A8E0;
 

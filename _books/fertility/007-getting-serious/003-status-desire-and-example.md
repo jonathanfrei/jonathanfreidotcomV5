@@ -4,37 +4,36 @@ deck: People copy the lives they are taught to envy
 eyebrow: What a culture puts on the poster
 ---
 
-No one has a child for the fertility rate. People have children because family belongs to their picture of a successful life. Culture works at that level, including when it is willing to raise some lives and lower others.
+No one has a child for the fertility rate. People have children because family belongs to their picture of a successful life. Culture works at that level, long before a couple discusses whether they can afford another bedroom.
 {: .lede}
 
-## Drafting notes (not yet prose)
+A baby seen at a friend's house can do more to make parenthood imaginable than a government advertisement. The [2026 State of Fertility Report](https://ifstudies.org/report-brief/the-demographic-dead-end-2026-state-of-fertility-report), based on a survey of roughly 4,700 Americans, found large differences in desired family size among young adults depending on whether their friends supported having children. It also reported an association between the number of children born to an admired public figure and the number respondents said they wanted themselves. These effects appeared more clearly in desires than in concrete intentions, which is where culture would be expected to arrive first.
 
-Go further than chapter 6, including the parts chapter 6 declined. Description first. Sorting waits for permission. Steelman the whole cluster, including shame.
+Desire is partly imitative. A young woman who rarely sees a baby may know parenthood mainly through warnings about sleep, money, and lost freedom. A young man whose admired older friends marry and remain close to their children encounters another script. Neither person is ordered to copy the example. The example changes what a good life looks like before choice begins.
 
-### Seeing and contagion
+Famous people matter for the same reason, though the idea becomes silly quickly. Pregnancy can be presented as a professional inconvenience concealed beneath careful clothing, or as a visible accomplishment carried without apology. Celebrity intervention sounds unserious beside paid leave, but celebrities exist precisely because attention and imitation have value. A culture that pays people to display shoes should not be baffled when their displayed families also shape desire.
 
-- Desire is socially contagious. Institute for Family Studies, *The Demographic Dead End: 2026 State of Fertility Report* (Lyman Stone and Peter Foreshaw Brookes): survey of about 4,700 Americans.
-  - Each additional child born to an admired public figure associated with up to about 0.15 more desired children for the respondent; larger and more credible for women; comparable in size to the sibling effect.
-  - Supportive friends: under-30s with the most supportive friends wanted about 2.8 children vs 1.7 among the least supportive.
-  - Catch, reported in secondary write-ups: celebrity/peer effects show up more in *desires* than in concrete intentions. Verify in the report before drafting.
-- Andrew Torba's simpler version: baby fever is real; many young women rarely see babies; bring children into ordinary public life (coffee shops, campuses, games).
-- Visible pregnancy as accomplishment rather than apology (Mandel / Usha Vance wardrobe as a mechanism-of-image example, not a fashion column).
+## The status ladder
 
-### Propaganda as culture already running
+Government campaigns, schools, churches, and entertainment already teach reproductive norms. For decades, much of elite culture associated adulthood with mobility, career achievement, travel, and the keeping open of options. Parenthood appeared after the real life was established, if it appeared at all. Pronatalist messaging would reverse some of that training. It would put the full dinner table back on the poster.
 
-- Lauren Chen: motherhood as status symbol; messaging in government, media, schools, churches.
-- A culture already runs a PR campaign. For decades it sold autonomy, delayed adulthood, and motherhood as a trap. Pronatalist "propaganda" is whether schools, shows, churches, and famous people treat a full table as winning.
-- justalexoki: "we need more pronatalist propaganda," attached to a wholesome family image.
+Status is ordinal. To raise one way of life is often to lower another. Some recent pronatalist arguments say this plainly: praise the mother of five, laugh at the “girlboss,” make chosen childlessness embarrassing, and give parents small public privileges. The proposal is an attempt to change the ranking young people perceive.
 
-### Status is ordinal
+There is a mechanism here. Shame alters behavior because belonging matters. Bachelor taxes and motherhood medals historically combined material incentives with a public judgment about adulthood. Russia's [2024 ban on advocacy of a “childfree lifestyle”](http://publication.pravo.gov.ru/document/0001202411230001) applies the same logic through law: the state restricts public speech that presents refusal of children favorably.
 
-- Raising mothers may imply lowering someone else.
-- Molson Hart: raise the status of mothers and fathers *and* decrease the status of people who choose not to have children; culture beats a baby bonus.
-- Brian Sauvé: cheer the homemaker with 5+ children; make the girlboss feel low-status.
-- Blowback already in the Sauvé thread: "go make a sandwich" mocked homemakers rather than elevating them. That is evidence about *design*, not a reason to skip shame as a tool.
-- Historical analogues: bachelor stigma; sumptuary rules; motherhood honors; Nazi Honour Cards asking shops to let mothers jump the queue (also belongs in old answers).
-- Russia: 2024 Duma ban on "childfree propaganda"; March 2026 reporting that health-ministry guidelines would refer women who do not want children to psychologists. Pathologizing childlessness is the state version of status degradation. Primary ministry text still needs to be located; do not treat viral summaries as the statute.
+The difficulty begins with the target. A stranger cannot see whether a childless woman is twenty-four and undecided, forty-two after years of infertility treatment, caring for disabled parents, unmarried despite wanting marriage, or simply certain she does not want children. A culture can make a category low-status only by flattening the people inside it. Comedy is a blunt administrative instrument.
 
-### Chesterton
+It can also misfire. Mocking professional women does not automatically honor the mother at home. Often it tells both women that their lives will be used as props in someone else's status fight. A serious pronatalism needs models of admiration strong enough to draw imitation without depending entirely on contempt.
 
-- "Feminism is mixed up with a muddled idea that women are free when they serve their employers but slaves when they help their husbands." Use as analysis of status, not as a dunk. May also serve the work/education section; do not quote it twice at length.
+I still think honor has been neglected because it makes polite policy analysis uncomfortable. Money changes what a family can do. Honor changes which costs seem worth bearing. People accept exhausting training, remote assignments, and years of low pay when a culture treats the destination as admirable. Raising children asks at least as much and is frequently described as a private consumption choice.
+
+The stronger case for status begins with visibility: children present in ordinary public life, employers celebrating births without quietly penalizing parents, accomplished people speaking as though family were part of accomplishment. A harsher society can go further into stigma and censorship. Those tools may move behavior. They also give whoever controls the status ladder power to declare which lives deserve public respect.
+
+<div class="citation">
+
+**Citations**
+
+1. Lyman Stone and Peter Foreshaw Brookes, [*The Demographic Dead End: 2026 State of Fertility Report*](https://ifstudies.org/report-brief/the-demographic-dead-end-2026-state-of-fertility-report), Institute for Family Studies, 2026.
+2. Russian Federation, [Federal Law No. 401-FZ](http://publication.pravo.gov.ru/document/0001202411230001), November 23, 2024.
+3. G. K. Chesterton, [“Social Reform versus Birth Control”](https://www.gkc.org.uk/gkc/books/Social_Reform_B.C.html), 1927.
+</div>

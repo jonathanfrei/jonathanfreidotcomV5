@@ -1,42 +1,43 @@
 ---
 title: The surviving exceptions
-deck: Some communities still replace themselves; that is evidence of magnitude, not a recommended program
-eyebrow: What still works
+deck: A few modern communities still make large families ordinary across generations
+eyebrow: Evidence of magnitude
 ---
 
-The most useful contemporary cases are not single policies. They are societies and subcultures in which marriage, children, obligation, worship, education, housing, and mutual aid reinforce one another. Their fertility cannot be copied by extracting one benefit from the package.
+The cleanest evidence that very high fertility remains possible in a rich modern country is not a clever subsidy. It is a community in which marriage, worship, schooling, work, and family all point in roughly the same direction. These communities are not policy models. They are evidence about magnitude.
 {: .lede}
 
-## Drafting notes (not yet prose)
+Israel is the national exception usually offered first. Its fertility rate has remained near three children per woman while most other wealthy countries have fallen well below replacement. The national average hides the argument, however. Israel contains several demographic worlds living beside one another.
 
-This section is not the chapter's comfort object and not a recommendation. It is evidence that packages far from the low-fertility mainstream can produce large, durable fertility effects. Place it after the old answers: societies have already reached for extreme tools, and some living groups still run a totalizing ecology.
+[Israeli data separated by religious observance](https://jppi.org.il/en/%D7%94%D7%A2%D7%A8%D7%9B%D7%94-%D7%A9%D7%A0%D7%AA%D7%99%D7%AA-2023/s/5.4/) put Haredi fertility around six and a half children per woman in the reported period, religious Jewish fertility near four, and secular Jewish fertility near two. Muslim fertility, once extraordinarily high, has fallen toward three. Even the secular Jewish figure remains high beside most secular populations in Europe or East Asia.
 
-### Israel
+That spread rules out a simple Israeli policy effect. The same national child allowances and health system surround groups with very different family sizes. Israel's security history, collective memory, and national confidence may lift fertility across the population. Within that setting, religious practice and community life still create an enormous gradient.
 
-- National TFR near 3 is not one number. Disaggregate by religiosity and ethnicity.
-- Working figures to verify at draft time (see `ref.md`): Haredi on the order of 6–6.5; religious (dati) near 4; traditional higher than replacement; secular Jewish near 2.0, still high for the OECD; Arab/Muslim rates have fallen toward or below 3.
-- Family policy exists. The high-fertility engine is still a way of life: early marriage, meaning, mutual aid, children as collective continuity.
-- Interaction of security, national history, religious tradition, social expectation, and confidence in collective continuity.
-- Distinguish support that reduces the cost of children from culture that makes children central to adult life.
-- Ask which features depend on Israel's unusual history and which could travel.
-- Note recent reports of some decline in Haredi TFR from very high levels; do not freeze a vintage.
+Haredi fertility has declined from its early-2000s peak. The [Israel Democracy Institute reports](https://en.idi.org.il/haredi/2025/?chapter=63076) a fall from about 7.5 in 2003–2005 to 6.5 in 2021–2023. A decline of one birth per woman would be a demographic crisis in many countries; here it leaves fertility three times the level found in much of Europe. Extremely high fertility can soften without immediately dissolving.
 
-### High-fertility religious subcultures
+## A whole ecology
 
-- Cases with durable fertility across more than one generation:
-  - Haredi Jews (Israel and diaspora).
-  - Amish: TFR just over 6 in recent ACS/registry work (Stone, *Demographic Research* 2025); very low non-marital fertility; high retention in many settlements, variable by affiliation.
-  - Some Latter-day Saint populations: still above the U.S. mean, but the LDS fertility advantage has narrowed sharply; Utah TFR is no longer an outlier on the old scale.
-  - Some traditional Catholic and other high-practice Christian pockets: use only if the data are clean; do not treat "Catholic" as high-fertility.
-- Compare theologies, marriage timing, education, women's work, geographic concentration, matchmaking, and degrees of separation from the wider culture.
-- Dense institutions: schools, congregations, matchmaking, mutual aid, family businesses, multigenerational proximity, ritual, and status inside the group.
-- Test the claim that religious minorities in high-cost cities without pronatalist economic benefits still have large families.
+The Amish provide an unusually clean American comparison. A [2025 study in *Demographic Research*](https://www.demographic-research.org/articles/volume/52/26) estimated fertility using both American Community Survey markers and Amish population registries. The two methods converged on a total fertility rate just above six, with births concentrated in the twenties and very little childbearing outside marriage.
 
-### What the exceptions demonstrate
+No single Amish institution produces that number. Young people encounter a dense marriage market, family work remains visible, and children arrive into households surrounded by other large households. Churches set expectations and communities supply practical help. Geographic concentration keeps kin nearby. The sacrifice of another child is interpreted among people making a similar sacrifice.
 
-- Fertility is embedded in an ecology rather than produced by a payment.
-- Shared meaning can change which sacrifices appear reasonable.
-- Community support and community pressure can be difficult to separate.
-- Selection, retention, exit, conversion.
-- A high-fertility equilibrium may require institutions that shape desire long before a couple decides about another child.
-- Features that work inside a voluntary community may become coercive when imposed by a state. That distinction is used later in the catalog and in permission.
+This is not an idyll. Communities with strong boundaries also impose costs on people who doubt, leave, or do not fit. Formal freedom to exit can coexist with the loss of family, work, language, and nearly every familiar relationship. Selection matters too: the people who remain are partly those able to live within the community's demands.
+
+The Latter-day Saint experience shows that such an advantage can narrow. Church members still tend to have more children than the American average, but Utah no longer sits at the old distance from the rest of the country. In October 2025, church president Dallin H. Oaks publicly noted that birth rates among members had fallen significantly. Wider patterns of delayed marriage, expensive housing, and professional life can enter a strong religious culture rather than stopping at its boundary.
+
+The surviving exceptions carry their force through a pattern. Worship gives family a meaning. Schools and courtship help young adults find spouses who share it. Mutual aid makes the costs bearable, while honor makes them intelligible. Earlier marriage preserves time for several births. Each part reinforces the others.
+
+A government can copy a payment. It cannot photocopy that ecology, and an attempt to impose the whole arrangement would change its character. A demanding community entered and sustained through membership has claims on its members that a tax office does not. Even there, pressure and support can be difficult to separate. The state reaches coercion much sooner because citizens cannot ordinarily leave it without leaving their country.
+
+The exceptions therefore offer neither reassurance nor a ready program. They show that fertility near six is compatible with modern medicine and life inside a wealthy nation. They also show how far a culture would have to move from the individual, mobile, credentialed life that low-fertility societies now treat as normal.
+
+<div class="citation">
+
+**Citations**
+
+1. Israel Central Bureau of Statistics, [*Fertility of Jewish and Other Women in Israel, by Level of Religiosity, 1979–2022*](https://www.cbs.gov.il/en/publications/Pages/2023/Fertility-of-Jewish-and-Other-Women-in-Israel-by-Level-of-Religiosity-1979%E2%80%932022.aspx), 2023.
+2. Jewish People Policy Institute, [“Fertility Rates by Religion and Religiosity in Israel”](https://jppi.org.il/en/%D7%94%D7%A2%D7%A8%D7%9B%D7%94-%D7%A9%D7%A0%D7%AA%D7%99%D7%AA-2023/s/5.4/), 2023.
+3. Israel Democracy Institute, [*Statistical Report on Ultra-Orthodox Society in Israel 2024*](https://en.idi.org.il/haredi/2025/?chapter=63076), 2024.
+4. Lyman Stone, Cory Anderson, and Stephanie Thiehoff, [“Amish fertility in the United States”](https://www.demographic-research.org/articles/volume/52/26), *Demographic Research* 52, art. 26 (2025): 869–886.
+5. Dallin H. Oaks, [“The Family-Centered Gospel of Jesus Christ”](https://www.churchofjesuschrist.org/study/general-conference/2025/10/18oaks), October 2025.
+</div>
