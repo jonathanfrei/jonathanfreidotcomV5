@@ -15,6 +15,11 @@ The earlier discussion of [*Buck v. Bell*](https://tile.loc.gov/storage-services
 
 Children also set a limit. A child is not principally a future taxpayer, soldier, caregiver, or settler. Medicine may heal infertility and protect a premature infant. A production system that creates embryos to specification, discards those outside the design, and assigns the survivors a social purpose has crossed from healing persons to manufacturing them. Technical sophistication does not soften the change in ends.
 
+![A father carrying his child at the Blue Mosque in Mazar-e-Sharif, 2012](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/An_Afghan_father_carries_his_child_at_the_Blue_Mosque.jpg/960px-An_Afghan_father_carries_his_child_at_the_Blue_Mosque.jpg)
+
+**A person, not a quota** A father carrying his child at the Blue Mosque in Mazar-e-Sharif, Afghanistan, April 3, 2012. A child is not principally a future taxpayer, soldier, or caregiver. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:An_Afghan_father_carries_his_child_at_the_Blue_Mosque.jpg)*
+{: .caption}
+
 ## The harder line
 
 Most serious disputes sit before that boundary. A high-fertility religious community may be legally voluntary while making exit terribly costly. Losing one's faith can mean losing parents, work, and the only social world one knows. The state should protect genuine exit and ordinary civil rights. It should be slower to dissolve every demanding community merely because membership asks sacrifices that mobile individualism does not.

@@ -7,6 +7,11 @@ eyebrow: Beyond the respectable range
 Livy's Rome had soldiers, walls, and enough strength to face its neighbors. It did not have a second generation. The new city was overwhelmingly male, neighboring peoples refused intermarriage, and Rome's greatness, Livy wrote, seemed likely to last for only one lifetime.
 {: .lede}
 
+![The Capitoline Wolf with Romulus and Remus](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Lupa_Capitolina%2C_Rome.jpg/960px-Lupa_Capitolina%2C_Rome.jpg)
+
+**Rome's first generation** The Capitoline Wolf. The bronze she-wolf is medieval; the twins, added in the late fifteenth century, are Romulus and Remus. Livy's Rome still needed a second generation after the founding. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Lupa_Capitolina,_Rome.jpg)*
+{: .caption}
+
 Romulus first sent ambassadors to ask for wives. When they were refused, he announced games in honor of Consus and invited the surrounding peoples to watch. At a prearranged signal, the Roman men rushed into the crowd and seized the young women. The act remembered in English as the rape of the Sabine women began, in Livy's telling, as a solution to a demographic problem.
 
 Romulus then told the captives that their parents' pride had caused the seizure. He promised honorable marriage, property, civic rights, and the status of mothers of free people. The defense is startlingly complete. Rome needed children; peaceful access to marriage had failed; the women would receive a place in the civilization their children made possible. Necessity supplied the permission.

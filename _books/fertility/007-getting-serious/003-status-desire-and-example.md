@@ -17,6 +17,11 @@ Famous people matter for the same reason, though the idea becomes silly quickly.
 
 Government campaigns, schools, churches, and entertainment already teach reproductive norms. For decades, much of elite culture associated adulthood with mobility, career achievement, travel, and the keeping open of options. Parenthood appeared after the real life was established, if it appeared at all. Pronatalist messaging would reverse some of that training. It would put the full dinner table back on the poster.
 
+![Office of War Information poster Freedom from Want, 1943](https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Ours--to_fight_for_-_freedom_from_want_-_DPLA_-_b70f56f3eff5f97c23c0c3bab126c026.jpg/960px-Ours--to_fight_for_-_freedom_from_want_-_DPLA_-_b70f56f3eff5f97c23c0c3bab126c026.jpg)
+
+**The dinner table on the poster** U.S. Office of War Information poster no. 44, 1943, after Norman Rockwell's *Freedom from Want*. A culture already knows how to put a picture of a successful life on the wall. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Ours--to_fight_for_-_freedom_from_want_-_DPLA_-_b70f56f3eff5f97c23c0c3bab126c026.jpg)*
+{: .caption}
+
 Status is ordinal. To raise one way of life is often to lower another. Some recent pronatalist arguments say this plainly: praise the mother of five, laugh at the “girlboss,” make chosen childlessness embarrassing, and give parents small public privileges. The proposal is an attempt to change the ranking young people perceive.
 
 There is a mechanism here. Shame alters behavior because belonging matters. Bachelor taxes and motherhood medals historically combined material incentives with a public judgment about adulthood. Russia's [2024 ban on advocacy of a “childfree lifestyle”](http://publication.pravo.gov.ru/document/0001202411230001) applies the same logic through law: the state restricts public speech that presents refusal of children favorably.

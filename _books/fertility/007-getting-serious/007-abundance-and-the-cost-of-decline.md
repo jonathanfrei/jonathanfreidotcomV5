@@ -9,6 +9,11 @@ Many extreme proposals begin from a real constraint and answer it badly. Housing
 
 Housing shows the difference between a material constraint and a slogan. [Research on house prices and births](https://www.nber.org/papers/w17485) found that rising prices reduced births among renters while raising them among owners through increased housing wealth. The same market price made another child harder for one couple and easier for another. Building a great deal more family-sized housing would not compel either family. It would enlarge the room in which they choose.
 
+![Kyle and Erica Dosedo and their children at their self-built home, Zuni Pueblo, 2019](https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Hard_Work_%3D_Home_Ownership_at_Zuni_Pueblo%2C_NM_%2820190909-OPPE-LSC-1380%29.jpg/960px-Hard_Work_%3D_Home_Ownership_at_Zuni_Pueblo%2C_NM_%2820190909-OPPE-LSC-1380%29.jpg)
+
+**Room a family can use** Kyle and Erica Dosedo with two of their children at a house they helped build through a USDA self-help housing program, Zuni Pueblo, New Mexico, September 9, 2019. More family-sized housing does not compel another child. It enlarges the room in which a family chooses. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hard_Work_=_Home_Ownership_at_Zuni_Pueblo,_NM_(20190909-OPPE-LSC-1380).jpg)*
+{: .caption}
+
 The same logic applies to time. Automation could shorten necessary paid work instead of merely removing workers. Remote work can return commuting hours to a household and make it easier to live near grandparents. A [2026 study of work from home and fertility](https://www.nber.org/papers/w34963) found higher recent births and planned family size among people working from home at least one day a week, with the strongest association when both partners did so. The study does not establish a clean causal effect. It does identify time at home as a resource families seem able to use.
 
 Cheap energy and automated construction could lower the price of space. Better medicine could heal infertility and protect pregnancy without turning children into designed products. Education delivered in shorter, less expensive blocks could coexist with earlier marriage. None of this requires sending women home by law. It recovers the household room that made the proposal attractive to its advocates.

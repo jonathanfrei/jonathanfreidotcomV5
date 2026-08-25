@@ -19,6 +19,11 @@ Education affects fertility through several channels. Being enrolled delays marr
 
 The modern economy counts paid childcare as production and the same care by a parent as absence from the labor force. Tax rules collect revenue from market wages, then families use after-tax income to buy services that replace work once performed inside the household. This accounting can make a two-earner household look productive even when the second income barely covers childcare, commuting, and the loss of time at home.
 
+![A mother canning preserves with a toddler on her hip, 1980](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Mother_and_child_canning.jpg/960px-Mother_and_child_canning.jpg)
+
+**Work the accounts miss** A mother putting a lid on a jar of preserves with a toddler on her hip, 1980. The same hours of care and household production count as absence from the labor force. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Mother_and_child_canning.jpg)*
+{: .caption}
+
 Claudia Goldin calls the most demanding, highly rewarded positions “greedy work.” They pay a premium for long and unpredictable availability. A couple with children usually needs somebody to be available in the other direction—for a fever at school, dinner, or the ordinary hour when a child wants to talk. Two adults cannot both promise first claim on their time to an employer without buying or borrowing someone else's time at home.
 
 One response is to make third-party care cheap enough that both parents remain continuously employed. That has real value for mothers who want or need paid work. It also embeds a preference: purchased care receives subsidy and professional continuity, while a parent providing the same hours at home absorbs lost wages, pension accrual, and status. Freedom should include the mother who wants to remain with a young child, not only the mother who wants a shorter interruption before returning to work.

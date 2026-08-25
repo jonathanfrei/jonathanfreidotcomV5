@@ -9,6 +9,11 @@ The cleanest evidence that very high fertility remains possible in a rich modern
 
 Israel is the national exception usually offered first. Its fertility rate has remained near three children per woman while most other wealthy countries have fallen well below replacement. The national average hides the argument, however. Israel contains several demographic worlds living beside one another.
 
+![A Haredi father and child at the Western Wall with Israeli soldiers nearby, 2011](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Orthodox_Father_and_Child_with_Soldiers_-_Western_Wall_-_Jerusalem_%285676149883%29.jpg/960px-Orthodox_Father_and_Child_with_Soldiers_-_Western_Wall_-_Jerusalem_%285676149883%29.jpg)
+
+**Several worlds in one frame** A Haredi father and child at the Western Wall in Jerusalem, May 1, 2011, with Israeli soldiers nearby. The same child allowances surround groups with very different family sizes. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Orthodox_Father_and_Child_with_Soldiers_-_Western_Wall_-_Jerusalem_(5676149883).jpg)*
+{: .caption}
+
 [Israeli data separated by religious observance](https://jppi.org.il/en/%D7%94%D7%A2%D7%A8%D7%9B%D7%94-%D7%A9%D7%A0%D7%AA%D7%99%D7%AA-2023/s/5.4/) put Haredi fertility around six and a half children per woman in the reported period, religious Jewish fertility near four, and secular Jewish fertility near two. Muslim fertility, once extraordinarily high, has fallen toward three. Even the secular Jewish figure remains high beside most secular populations in Europe or East Asia.
 
 That spread rules out a simple Israeli policy effect. The same national child allowances and health system surround groups with very different family sizes. Israel's security history, collective memory, and national confidence may lift fertility across the population. Within that setting, religious practice and community life still create an enormous gradient.
@@ -18,6 +23,11 @@ Haredi fertility has declined from its early-2000s peak. The [Israel Democracy I
 ## A whole ecology
 
 The Amish provide an unusually clean American comparison. A [2025 study in *Demographic Research*](https://www.demographic-research.org/articles/volume/52/26) estimated fertility using both American Community Survey markers and Amish population registries. The two methods converged on a total fertility rate just above six, with births concentrated in the twenties and very little childbearing outside marriage.
+
+![Amish children walking to school, 2006](https://upload.wikimedia.org/wikipedia/commons/1/16/Amish_-_On_the_way_to_school_by_Gadjoboy-crop.jpg)
+
+**An ecology, not a subsidy** Amish children on the way to school, 2006. No single payment produces a fertility rate near six. Young people encounter a dense marriage market, visible family work, and households surrounded by other large households. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Amish_-_On_the_way_to_school_by_Gadjoboy-crop.jpg)*
+{: .caption}
 
 No single Amish institution produces that number. Young people encounter a dense marriage market, family work remains visible, and children arrive into households surrounded by other large households. Churches set expectations and communities supply practical help. Geographic concentration keeps kin nearby. The sacrifice of another child is interpreted among people making a similar sacrifice.
 
