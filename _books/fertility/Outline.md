@@ -1,6 +1,6 @@
 # The Fertility Decline
 
-This outline reflects the current manuscript structure in `_books/fertility`, chapters 001 through 009. It is descriptive of the book as it stands rather than a planning document for unwritten material.
+This outline reflects the current manuscript structure in `_books/fertility`, chapters 001 through 009 and the provisional Chapter 006A. Completed chapters are described as they stand; Chapter 006A remains a research and drafting plan.
 
 ## 1. The Stakes
 
@@ -244,30 +244,81 @@ This outline reflects the current manuscript structure in `_books/fertility`, ch
 
 ---
 
-## 7. The Low-Fertility World
+## 6A. Getting Serious
 
 1. Introduction
-   1. Moving from diagnosis and intervention to possible demographic futures.
-2. Scenario one: fertility recovers
+   1. Why ordinary pronatalist policy may be too small for persistent demographic contraction.
+   2. The chapter as a bounded thought experiment rather than a program or recommendation.
+   3. The distinction among possibility, effectiveness, legality, morality, and desirability.
+   4. Why demographic urgency cannot turn persons into instruments.
+2. The old answers
+   1. The kidnapping of the Sabine women as foundation myth rather than simple historical precedent.
+   2. Colonial Paraguay, including settlement, marriage, hierarchy, exploitation, and population growth.
+   3. Germany before and during the Second World War: family incentives, motherhood policy, abortion, sterilization, eugenics, and racial hierarchy.
+   4. A common test for historical cases: consent, cost, power, exclusion, and the definition of family.
+3. The surviving exceptions
+   1. Israel as a national case requiring disaggregation by religion, ethnicity, income, education, and family size.
+   2. High-fertility religious subcultures with durable institutions across generations.
+   3. Marriage, worship, education, mutual aid, matchmaking, geographic concentration, status, and sacrifice as a reinforcing ecology.
+   4. Selection, retention, exit, and the boundary between community support and community pressure.
+   5. Why features sustained inside voluntary communities may become coercive when imposed by a state.
+4. A catalog of extreme remedies
+   1. Radical redistribution toward families through income, housing, debt, tax, pension, education, and care policy.
+   2. Reordering education, work, mobility, and the sequence of adulthood.
+   3. Cultural and institutional pressure favoring marriage and parenthood.
+   4. Restrictions involving abortion, contraception, sterilization, divorce, and reproductive technology.
+   5. Direct demographic control, including compulsory marriage, reproductive quotas, eugenics, kidnapping, and sexual violence.
+   6. Technological proposals such as artificial gestation, in-vitro gametogenesis, embryo selection, cloning, AI matchmaking, and intimate surveillance.
+   7. Evaluation by mechanism, magnitude, time horizon, reversibility, administrative power, distribution of costs, and effect on persons and families.
+5. Permission and power
+   1. The difference between unpopular sacrifice and intrinsic violations of human dignity.
+   2. Moral limits that demographic emergency cannot erase.
+   3. Children as persons to receive rather than products to manufacture or units to assign.
+   4. The harder cases of formally voluntary pressure, costly exit, unequal subsidy, and intrusive administration.
+   5. The proper roles of law, spouses, families, churches, employers, cities, voluntary communities, and the state.
+   6. Subsidiarity and solidarity as limits on both centralized power and social abandonment.
+6. Abundance changes the bargain
+   1. Energy, housing, automation, healthcare, education, transport, remote work, and social wealth as constraints that may become less binding.
+   2. Recovering useful mechanisms from bad proposals without preserving coercion, exclusion, or instrumental reproduction.
+   3. Whether material abundance strengthens family life or merely makes low-fertility individualism easier to sustain.
+   4. Voluntary and plural experiments that people can enter, leave, imitate, or reject.
+7. What is worse than decline?
+   1. The real human and civilizational costs of managed contraction.
+   2. Concentrated harms imposed by remedies versus diffuse harms imposed by decline.
+   3. Reversible adjustment versus irreversible loss.
+   4. Politically unpopular tradeoffs that may be preferable to permanent contraction.
+   5. Institutions that should be allowed to disappear rather than preserved through immoral means.
+   6. The possibility that civilization can be lost through passivity or corrupted by the means chosen to save it.
+   7. A conclusion that demands greater seriousness without endorsing an extreme program.
+
+---
+
+## 7. Contraction or Renewal
+
+1. Introduction
+   1. Moving from diagnosis and intervention to two demographic paths.
+   2. Adaptation as the common starting point rather than a third destination.
+2. The path of renewal
    1. A return toward replacement fertility.
    2. The lag created by population momentum even after recovery.
    3. The institutional conditions that might make recovery durable.
-3. Scenario two: fertility stabilizes below replacement
+3. The comfortable beginning of contraction
    1. Persistent but moderate population contraction.
    2. Adaptation through productivity, migration, institutional reform, and technological substitution.
    3. The possibility of a smaller but still prosperous civilization.
-4. Scenario three: ultra-low fertility persists
+   4. Managed decline as the first stage of a path rather than a stable equilibrium.
+4. When contraction becomes self-reinforcing
    1. Compounding generational contraction.
    2. Shrinking labor pools, families, communities, markets, and institutional capacity.
-   3. The risk that demographic decline becomes self-reinforcing.
-5. The questions a low-fertility age raises
+   3. Continual selection of which parts of the inheritance still receive successors.
+5. The choice inside adaptation
    1. What constitutes successful adaptation.
    2. Whether prosperity per person is enough if the civilization producing it steadily contracts.
-   3. The tension between individual choices and aggregate outcomes.
-6. The civilizational threshold
+   3. Renewal near replacement without demographic coercion.
+6. The threshold between paths
    1. The point at which demographic contraction becomes more than an economic adjustment.
    2. Population scale, complexity, resilience, and long-term ambition.
-   3. Whether humanity remains capable of maintaining and extending a technologically advanced civilization.
+   3. Whether humanity retains the surplus to maintain and extend a technologically advanced civilization.
 
 ---
 

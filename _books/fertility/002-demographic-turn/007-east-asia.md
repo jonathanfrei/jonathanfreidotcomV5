@@ -4,20 +4,25 @@ deck: The region at the leading edge of low fertility shows how quickly the rang
 eyebrow: The outer edge
 ---
 
-South Korea recorded a total fertility rate of 0.75 in 2024. The number is so far below replacement that it can be hard to translate into ordinary terms. If 100 women were followed by generations reproducing indefinitely at that rate, they would be followed by roughly 36 daughters, then about 13 granddaughters. Real populations do not reproduce like a spreadsheet, and Korea's fertility can change. The arithmetic shows the scale of the departure.
+South Korea recorded a total fertility rate of 0.75 in 2024, a number so far below replacement that it can be hard to translate into ordinary terms. If 100 women were followed by generations reproducing indefinitely at that rate, they would be followed by roughly 36 daughters and then about 13 granddaughters. Real populations do not reproduce like a spreadsheet, and Korea's fertility can change. The arithmetic shows the scale of the departure.
 {: .lede}
 
-The 2024 rate was actually an improvement. It rose from 0.72 in 2023, and births increased for the first time in nine years. That is good news. It also arrives after years in which the cohorts entering adulthood became much smaller than the ones before them. A fertility recovery now has fewer potential parents to work through.
+The 2024 rate was actually an improvement: it rose from 0.72 in 2023, and births increased for the first time in nine years. That is good news, but it arrives after years in which the cohorts entering adulthood became much smaller than the ones before them. A fertility recovery now has fewer potential parents to work through.
 
-Japan reached the demographic turn earlier. Its population has declined for more than a decade; the Statistics Bureau recorded a decrease of 550,000 people in 2024. Long life is part of the story, in the best sense: Japanese people survive to old age at remarkable rates. Combined with decades of low fertility, that success produces many deaths each year and a shrinking pool of younger adults.
+![South Korea population pyramid, mid-2024](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/South_Korea_Population_Pyramid.svg/960px-South_Korea_Population_Pyramid.svg.png)
 
-China makes the same turn consequential at a different scale. The one-child policy accelerated fertility decline through coercion and left wounds that cannot be reduced to demographic statistics. Ending the policy did not restore large families. In 2024, China recorded 9.54 million births and 10.93 million deaths. Its population fell again.
+**The missing children are already visible** South Korea's population by age and sex, mid-2024. The narrowing base is the generation that will supply the next round of parents. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:South_Korea_Population_Pyramid.svg)*
+{: .caption}
+
+Japan reached the demographic turn earlier. Its population has declined for more than a decade, and the Statistics Bureau recorded a decrease of 550,000 people in 2024. Long life is part of the story, in the best sense; Japanese people survive to old age at remarkable rates, but combined with decades of low fertility, that success produces many deaths each year and a shrinking pool of younger adults.
+
+China makes the same turn consequential at a different scale. The one-child policy accelerated fertility decline through coercion and left wounds that cannot be reduced to demographic statistics, yet ending the policy did not restore large families. In 2024, China recorded 9.54 million births and 10.93 million deaths. Its population fell again.
 
 Singapore reinforces the pattern without China's coercive history or Japan's scale. Its resident TFR was 0.97 in 2024 despite decades of active family policy. Different governments have arrived at the same stubborn problem.
 
 ## When the missing children become missing parents
 
-Later chapters will examine the reasons East Asian fertility is so low. Expensive housing and long work hours are part of the account. So are late marriage and the unusually close tie between marriage and childbearing. The region also asks more of parents in education and more of women who try to combine demanding work with family life.
+Later chapters will examine the reasons East Asian fertility is so low. Expensive housing and long work hours are part of the account, along with late marriage, the unusually close tie between marriage and childbearing, intense educational expectations, and the burden placed on women who try to combine demanding work with family life.
 
 For this chapter, the demographic consequence is enough. Policy can make it easier for today's couples to have children. It cannot quickly create the adults who would have been today's couples if more children had been born twenty or thirty years ago.
 

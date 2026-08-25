@@ -1,21 +1,21 @@
 ---
-title: The civilizational threshold
+title: The threshold between paths
 deck: The danger begins when maintaining the inheritance consumes the margin needed to build beyond it
 eyebrow: Beyond adjustment
 ---
 
-There is probably no fertility rate at which a civilization suddenly crosses from manageable decline into irreversible failure. I would look instead for a change in what its people can afford to attempt. A society can keep the lights on, care for the old, repair its roads, and remain quite rich while gradually losing the spare capacity to build what comes next.
+There is probably no fertility rate at which a civilization suddenly crosses from manageable decline into irreversible failure. I would look instead for a change in what its people can afford to attempt: a society can keep the lights on, care for the old, repair its roads, and remain quite rich while gradually losing the spare capacity to build what comes next.
 {: .lede}
 
-A hospital makes the idea concrete. If every nurse is needed for every scheduled shift, the staffing plan looks wonderfully efficient until two nurses get sick. The same hospital keeps a backup generator that sits idle most of the year because ordinary efficiency is not its only purpose. Some unused capacity is what lets an institution absorb surprise.
+A hospital makes the idea concrete. If every nurse is needed for every scheduled shift, the staffing plan looks wonderfully efficient until two nurses get sick; the same hospital keeps a backup generator that sits idle most of the year because ordinary efficiency is not its only purpose. Some unused capacity is what lets an institution absorb surprise.
 
-Civilizations need a similar margin. Research requires people to pursue ideas that fail. New companies consume labor and capital before anyone knows whether they will work. A new town or an ambitious engineering project can be expensive for years before it becomes useful. A society occupied almost entirely with maintaining essential functions may perform those functions well and still become less capable of trying anything uncertain.
+Civilizations need a similar margin. Research requires people to pursue ideas that fail, new companies consume labor and capital before anyone knows whether they will work, and a new town or ambitious engineering project can be expensive for years before it becomes useful. A society occupied almost entirely with maintaining essential functions may perform those functions well and still become less capable of trying anything uncertain.
 
-Population is not the same as this margin. A smaller free and technically capable country can accomplish far more than a larger badly governed one. AI may multiply what each researcher, engineer, doctor, or teacher can do. Michael Kremer's historical study found that [larger populations were associated with faster technological change](https://doi.org/10.2307/2118405), including among populations isolated from one another, but modern innovation is not ancient innovation. The safer claim is simpler: another capable person is another independent attempt, and technology has to become extraordinarily powerful before additional human judgment has no value.
+Population is not the same as this margin. A smaller free and technically capable country can accomplish far more than a larger badly governed one, and AI may multiply what each researcher, engineer, doctor, or teacher can do. Michael Kremer's historical study found that [larger populations were associated with faster technological change](https://doi.org/10.2307/2118405), including among populations isolated from one another, but modern innovation is not ancient innovation. The safer claim is simpler: another capable person is another independent attempt, and technology has to become extraordinarily powerful before additional human judgment has no value.
 
 ## When maintenance takes the margin
 
-An aging country can automate routine work and keep living standards high while population falls. The danger grows when the gains are repeatedly absorbed by elder care, debt service, and infrastructure built for a larger population. The hospital remains staffed. The bridge remains safe. The uncertain laboratory expansion waits another year.
+An aging country can automate routine work and keep living standards high while population falls. The danger grows when the gains are repeatedly absorbed by elder care, debt service, and infrastructure built for a larger population: the hospital remains staffed, the bridge remains safe, and the uncertain laboratory expansion waits another year.
 
 Low fertility can tighten that margin from both sides. A smaller working-age generation inherits more obligations, while the taxes, care work, and career pressure required to meet them can make family formation harder. Governments have strong reasons to honor promises to voters who are already old. The next cohort arrives smaller and inherits the revised settlement. No legislature ever needs to vote for permanent contraction. A long sequence of defensible budgets can produce it.
 
@@ -31,9 +31,9 @@ Forty generations is roughly a millennium. No demographic projection deserves co
 
 That exposes something easy to overlook while living inside an old civilization. Earth gives us an enormous inheritance for free: cities, farms, languages, institutions, accumulated knowledge, and billions of other people. We can draw down parts of that inheritance for a surprisingly long time and still live well. A new world offers no such demographic cushion.
 
-Slow decline gives us time to change, which is one reason I remain optimistic about it. It also lets each generation leave the turn to the next one because most ordinary life still works. The threshold may never announce itself. We may notice only that we have become excellent at preserving a smaller inheritance and less practiced at beginning anything larger.
+Slow decline gives us time to change, which is one reason I remain optimistic about it. It also lets each generation leave the turn to the next one because most ordinary life still works. The threshold between the paths may never announce itself. We may notice only that adaptation has stopped buying time for renewal, leaving us excellent at preserving a smaller inheritance and less practiced at beginning anything larger.
 
-A civilization on Earth can survive for a long time by consolidating places and asking machines to do more. Expansion asks for something different. A settlement beyond Earth needs people willing not merely to preserve a world, but to begin another one.
+A civilization on Earth can survive for a long time by consolidating places and asking machines to do more. The renewal path asks what that preserved capacity is for. At its farthest horizon, expansion requires people willing not merely to maintain an inherited world, but to begin another one.
 
 <div class="citation">
 

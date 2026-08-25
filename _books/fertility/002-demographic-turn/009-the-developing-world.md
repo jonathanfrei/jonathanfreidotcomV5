@@ -4,20 +4,25 @@ deck: The old link between poverty and high fertility is breaking faster than th
 eyebrow: A narrowing exception
 ---
 
-“The developing world” is too broad to describe one demographic condition. India and Niger no longer belong in the same fertility category simply because both are poorer than Western Europe. The old assumption that low income means large families is breaking down.
+“The developing world” is too broad to describe one demographic condition. India and Niger no longer belong in the same fertility category simply because both are poorer than Western Europe; the old assumption that low income means large families is breaking down.
 {: .lede}
 
-India is the clearest example. National fertility has fallen to around replacement, with large differences among states. Because the country still has a huge young population, it can continue adding people for decades after the average family becomes smaller. Momentum makes yesterday's fertility visible in today's population growth.
+India is the clearest example. National fertility has fallen to around replacement, with large differences among states, yet the country can continue adding people for decades because it still has a huge young population. Momentum makes yesterday's fertility visible in today's population growth.
 
-Latin America has moved faster than its old demographic image suggests. Brazil and Colombia are below replacement, and Mexico has joined them by recent national estimates. Countries once associated with young populations and large families are beginning to age without having accumulated the wealth of Western Europe first.
+Latin America has moved faster than its old demographic image suggests. Brazil and Colombia are below replacement, and Mexico has joined them by recent national estimates, so countries once associated with young populations and large families are beginning to age without having accumulated the wealth of Western Europe first.
 
-The transition is uneven across Northern Africa and Western Asia, but the same simple categories fail there too. Iran's fertility has fallen sharply. So has Turkey's. Religion and income alone do not produce a fixed family size.
+The transition is uneven across Northern Africa and Western Asia, but the same simple categories fail there too. Iran's fertility has fallen sharply, as has Turkey's. Religion and income alone do not produce a fixed family size.
 
 ## Where high fertility remains
 
 Sub-Saharan Africa now contains most of the countries with fertility above four births per woman. Populations are exceptionally young, mortality has fallen, and family size remains large enough to produce rapid growth. Much of the world's population increase over the next few decades will come from this region.
 
-The contrast with wealthy low-fertility countries complicates a common explanation for falling births. People in rich countries often say children are too expensive, and those costs are real. But families with far less money continue to have more children. Absolute income cannot be the whole meaning of affordability.
+![Population pyramid of Niger, 2020](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Niger_single_age_population_pyramid_2020.png/960px-Niger_single_age_population_pyramid_2020.png)
+
+**A still-young age structure** Niger's population by single year of age in 2020. High fertility and falling child mortality produce a wide base: many children, and many future parents. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Niger_single_age_population_pyramid_2020.png)*
+{: .caption}
+
+The contrast with wealthy low-fertility countries complicates a common explanation for falling births. People in rich countries often say children are too expensive, and those costs are real, but families with far less money continue to have more children. Absolute income cannot be the whole meaning of affordability.
 
 A child occupies a different economic and social place in different settings. In poorer agricultural communities, children may contribute to household work and adult children may provide old-age security. In rich cities, parents may expect to finance years of education and intensive care while giving up substantial earnings to do it. Later chapters will examine those differences. Here the comparison simply warns us against treating wealth as a straightforward predictor of fertility.
 

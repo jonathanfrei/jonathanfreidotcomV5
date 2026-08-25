@@ -44,9 +44,17 @@
                                              |
                                              v
                                +---------------------------+
-                               |  007. LOW-FERTILITY WORLD |
-                               |  What futures are         |
-                               |  available?               |
+                               |  006A. GETTING SERIOUS    |
+                               |  What else is possible,   |
+                               |  and what is permissible? |
+                               +---------------------------+
+                                             |
+                                             v
+                               +---------------------------+
+                               |  007. CONTRACTION OR      |
+                               |       RENEWAL             |
+                                |  Which path follows:      |
+                               |  contraction or renewal?  |
                                +---------------------------+
                                              |
                                              v
@@ -72,13 +80,13 @@
 
      ACT II: CONSEQUENCES AND RESPONSE
      -------------------------------------------------------------
-     Consequences  ->  Policy  ->  Institutions / Culture
-          004           005              006
+     Consequences  ->  Policy  ->  Institutions / Culture  ->  Limits
+          004           005              006                    006A
 
 
      ACT III: WIDEN THE TIME HORIZON
      -------------------------------------------------------------
-     Possible futures  ->  Expanded frontier  ->  Choice
+     Two paths  ->  Expanded frontier  ->  Choice
            007                  008              009
 
 
@@ -131,7 +139,7 @@
      or around rebuilding the capacity for renewal and expansion?
 ```
 
-The nine chapters form a deliberate widening of the lens: **from the demographic fact, to its causes, to its consequences, to possible responses, and finally to a much larger argument about civilization and the future.**
+The ten chapters, including the provisional Chapter 6A, form a deliberate widening of the lens: **from the demographic fact, to its causes, to its consequences, to possible responses, and finally to a much larger argument about civilization and the future.**
 
 At the highest level, I would describe it as a **three-act book**.
 
@@ -173,9 +181,11 @@ The implied argument becomes stronger than “we need better pronatalist policy.
 
 And therefore its solution cannot be entirely governmental.
 
+Chapter 6A, **Getting Serious**, extends that hinge into uncomfortable territory. If ordinary policy and voluntary institutional repair cannot change the trajectory, the reader has to ask what else is possible. The chapter ranges from myth and authoritarian history to contemporary high-fertility societies, then maps extreme remedies without confusing description with endorsement. Its structural purpose is to establish the outer boundary of response: which sacrifices might become thinkable, which mechanisms could be rebuilt under abundance, and which means would destroy the human goods demographic renewal is supposed to preserve.
+
 That makes Act II:
 
-**Here are the consequences → here is what governments have tried → policy alone cannot rebuild what disappeared.**
+**Here are the consequences → here is what governments have tried → policy alone cannot rebuild what disappeared → seriousness requires testing both the limits of possibility and the limits of permission.**
 
 ---
 
@@ -183,7 +193,7 @@ That makes Act II:
 
 This is where the book stops being primarily a demographics book.
 
-**Chapter 7, The Low-Fertility World**, asks the reader to imagine the possible equilibria rather than simply extrapolate today's statistics. The alternatives are roughly different civilizational responses to persistent low fertility: adaptation, consolidation, technological substitution, selective high-fertility communities, institutional rebuilding, and potentially renewed growth.
+**Chapter 7, Contraction or Renewal**, turns the book's alternatives into two paths rather than three peer scenarios. Renewal uses the difficult years of adaptation to rebuild generational balance. Contraction begins with humane, competent consolidation and becomes self-reinforcing as each reduced generation inherits the next round of choices. Adaptation, migration, productivity, and technological substitution remain important, but they are means used on either path rather than a destination of their own.
 
 The question has subtly changed from **“How do we fix fertility?”** to **“What kind of civilization emerges from this?”**
 
@@ -203,7 +213,7 @@ That retroactively changes the meaning of the Malthus material in Chapter 2. Mal
 
 That gives Act III its progression:
 
-**We have choices about the low-fertility future → humanity does not necessarily face fixed limits → growth is ultimately a choice about what kind of future we want.**
+**The future divides between contraction and renewal → renewal preserves the capacity to expand human possibility → growth is ultimately a choice about what kind of future we want.**
 
 ---
 
@@ -251,8 +261,11 @@ So in compressed form, I would map the entire book like this:
 **006 Beyond Policy**
 *What would actually make family formation easier again?*
 ↓
-**007 Low-Fertility World**
-*What futures are available if fertility remains low?*
+**006A Getting Serious**
+*What else is possible, and what would remain impermissible?*
+↓
+**007 Contraction or Renewal**
+*Will adaptation settle into contraction or buy time for renewal?*
 ↓
 **008 Expansion to the Stars**
 *Must humanity ultimately choose between growth and finite limits?*

@@ -4,32 +4,34 @@ deck: The countries that tried hardest show both the value and the limits of fam
 eyebrow: The record in practice
 ---
 
-Pronatalist policy has run long enough to leave a record. Governments have helped parents and sometimes raised fertility. None of the wealthy countries most committed to the effort has secured a durable return from very low fertility to replacement. Their partial successes are more instructive than a simple verdict of success or failure.
+Pronatalist policy has run long enough to leave a record. Governments have helped parents and sometimes raised fertility, but none of the wealthy countries most committed to the effort has secured a durable return from very low fertility to replacement.
 {: .lede}
 
-France shows what sustained support can preserve. Family allowances, paid leave, and publicly supported childcare made the cost of children a continuing public concern rather than a private emergency. For years France maintained one of Europe's highest fertility rates. Its TFR nevertheless fell from 2.02 in 2010 to 1.56 in 2025, the lowest French level since the end of the First World War. That year deaths exceeded births for the first time since the Second World War.
+France shows what sustained support can preserve. Family allowances, paid leave, and publicly supported childcare made the cost of children a continuing public concern rather than a private emergency. For a new parent, that support is not an abstract line in a budget; it is the difference between finding a childcare place and scrambling for one, between taking leave and wondering whether the household can absorb it. For years France maintained one of Europe's highest fertility rates.
 
-The support may well have kept French fertility higher than it otherwise would have been. It could not hold the rate near replacement while age at first birth and family expectations continued to change. The Nordic countries reached a similar limit after building generous leave and childcare around high maternal employment. Finland's TFR fell to 1.25 in 2024. Making work and children more compatible helps. Compatibility alone has not restored the older family pattern.
+Then the number kept falling. France's TFR declined from 2.02 in 2010 to 1.56 in 2025, the lowest French level since the end of the First World War, and that year deaths exceeded births for the first time since the Second World War. The support may have kept fertility higher than it otherwise would have been and certainly made family life easier, but it did not hold the rate near replacement as age at first birth and family expectations continued to change. The Nordic countries reached a similar limit after building generous leave and childcare around high maternal employment; Finland's TFR fell to 1.25 in 2024.
+
+Compatibility helps families. It has not restored the older family pattern.
 
 ## Hungary moved the number
 
-Hungary made family formation a central political project and attached substantial money to it. Subsidized loans become more favorable with additional children, and mothers receive large tax advantages. Family spending exceeds 3 percent of GDP by the OECD's measure. The TFR rose from about 1.23 in 2011 to 1.59 in 2021.
+Hungary went further by making family formation a central political project and attaching substantial money to it. The policy becomes concrete when a married couple sits down to decide whether another child changes what they can afford: subsidized loans become more favorable with additional children, mothers receive large tax advantages, and family spending exceeds 3 percent of GDP by the OECD's measure. The TFR rose from about 1.23 in 2011 to 1.59 in 2021.
 
-A rise of that size is hard to dismiss. It lasted longer than the temporary bump that can follow a one-time bonus. It was also expensive, stopped well short of replacement, and later reversed direction. Some of the most generous programs favor married households with stable employment and enough income to borrow. They can make another child easier for an established couple while doing less for adults who have not formed a household at all.
+A rise of that size is hard to dismiss. It lasted longer than the temporary bump that can follow a one-time bonus, although it was expensive, stopped well short of replacement, and later reversed direction. Some of the most generous programs favor married households with stable employment and enough income to borrow, which means they can make another child easier for an established couple while doing much less for adults who have not formed a household at all.
 
-Hungary therefore offers a real success without a complete solution. Taxes and credit can tell families that children are welcome and move behavior by a few tenths. They cannot by themselves create the aspiration or relationships on which the benefit depends.
+A tax benefit can change the arithmetic for a couple already discussing a second or third child. It cannot introduce two people who have not met, repair a relationship that will not last, or give a thirty-five-year-old back the years in which family formation kept being postponed.
 
 ## South Korea reached the upstream problem
 
-South Korea has spent heavily against the lowest fertility in the world. Since 2006 it has expanded childcare and parental leave while offering financial and housing support. Individual reforms have worked. A childcare subsidy increased pregnancies among affected women, and higher leave benefits increased the probability of birth for eligible workers. The national TFR was still 0.75 in 2024.
+South Korea has spent heavily against the lowest fertility in the world, expanding childcare and parental leave since 2006 while adding financial and housing support. Some individual reforms worked: a childcare subsidy increased pregnancies among affected women, and higher leave benefits increased the probability of birth for eligible workers. The national TFR was still 0.75 in 2024.
 
-The programs are reaching real families. They are also reaching them after much of the decline has already happened. Marriage remains closely tied to births in Korea, while long work hours and expensive housing delay household formation. By the time a couple is eligible for parental leave, they have crossed barriers that many of their peers never cross.
+Parental leave becomes useful only after a couple has formed, married or otherwise committed, conceived a child, and reached an employer where the benefit applies. Many adults are getting stuck earlier, during years shaped by long work hours, expensive housing, and delayed partnership.
 
-Japan adds another difficulty: time. Decades of low fertility have reduced the number of women entering prime childbearing ages. Better childcare or leave now applies to a smaller pool of possible mothers than the same reform would have reached twenty years ago. Policy is trying to improve the birth rate while demographic momentum steadily reduces the number of potential births underneath it.
+Japan adds time to the problem. Decades of low fertility have reduced the number of women entering prime childbearing ages, so better childcare or leave now applies to a smaller pool of possible mothers than the same reform would have reached twenty years ago.
 
-The country experiments point in one direction. Family benefits can recover births at the edge and make parenthood less punishing. They can also be good policy for reasons that have nothing to do with TFR. Their limits become clearest where family formation itself has weakened. A government can help parents much more readily than it can turn non-parents into parents.
+Family benefits can recover some births at the edge and make parenthood less punishing. Governments are much better at helping parents than at creating the relationships, timing, confidence, and desire that make people parents in the first place.
 
-That leaves two ways to postpone the consequences while the harder work continues. A country can bring in people who were born somewhere else, or it can use machines to help fewer people do more. Both can be valuable. Neither is the same as reversing fertility decline.
+That leaves two ways to postpone the consequences while the harder work continues: bring in people who were born somewhere else, or use machines to help fewer people do more. Both can be valuable. Neither reverses fertility decline.
 
 <div class="citation">
 

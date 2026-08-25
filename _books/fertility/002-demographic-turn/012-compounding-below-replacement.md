@@ -4,16 +4,23 @@ deck: Small differences in fertility become large differences when they repeat a
 eyebrow: The generational arithmetic
 ---
 
-Below-replacement fertility is described as a gap from 2.1. The more revealing comparison is between generations. A modest gap repeated many times can reshape a population; a large gap can do so with surprising speed.
+Below-replacement fertility is usually described as a gap from 2.1, but the more revealing comparison is between generations. A modest gap repeated many times can reshape a population; a large gap can do so with surprising speed.
 {: .lede}
 
-Consider a deliberately simple illustration. Assume no migration, unchanged mortality, and a constant fertility rate. Divide each rate by a replacement benchmark of 2.1 to approximate the size of one generation relative to the one before it. This is not a population forecast. It isolates the compounding effect.
+Consider a deliberately simple illustration: assume no migration, unchanged mortality, and a constant fertility rate, then divide each rate by a replacement benchmark of 2.1 to approximate the size of one generation relative to the one before it. This is not a population forecast. It isolates the compounding effect.
 
 At a TFR of 1.8, the next generation is about 86 percent as large. After five generations, it is 46 percent; after ten, 21 percent. At 1.5, the corresponding figures are 71 percent for one generation, 19 percent for five, and 3 percent for ten. At 1.2, one generation is 57 percent as large, five generations 6 percent, and ten generations less than half of 1 percent. At 0.9, one generation is about 43 percent as large and five generations about 1.4 percent.
 
-Now extend the same deliberately unrealistic line for a thousand years, roughly forty generations. Even the mildest rate in the example, 1.8, leaves a descendant generation about two-tenths of 1 percent the original size. I don't expect any fertility rate to remain fixed for a millennium. That is exactly the point: decline must reverse somewhere along the way. A civilization that hopes to cross the stars has to think in centuries, and a species that hopes to remain among them has to think longer still.
+Now extend the same deliberately unrealistic line for a thousand years, roughly forty generations. Even the mildest rate in the example, 1.8, leaves a descendant generation about two-tenths of 1 percent the original size. I don't expect any fertility rate to remain fixed for a millennium; that is exactly the point. Decline must reverse somewhere along the way. A civilization that hopes to cross the stars has to think in centuries, and a species that hopes to remain among them has to think longer still.
 
-Real populations do not obey this stripped-down arithmetic. People migrate. Mortality changes. Fertility moves. Generations overlap, and the starting age structure can delay or accelerate the result. The calculation clarifies why the difference between 1.8 and 1.2 reaches far beyond six-tenths of a child. Repeated over time, it describes very different scales of contraction.
+The arithmetic runs the other way too. A civilization that renews its generations keeps producing descendants who can inherit long projects, including the possibility of making a home beyond one world.
+
+Real populations do not obey this stripped-down arithmetic. People migrate, mortality changes, fertility moves, generations overlap, and the starting age structure can delay or accelerate the result. The calculation clarifies why the difference between 1.8 and 1.2 reaches far beyond six-tenths of a child: repeated over time, it describes very different scales of contraction.
+
+![Japan's population by age group, historic and projected](https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Population_Trends_in_Japan%2C_by_Age.svg/960px-Population_Trends_in_Japan%2C_by_Age.svg.png)
+
+**The same population, remade by age** Japan's population by age group, historic and projected. The under-20 bar shrinks while the oldest groups expand—the compounding of decades below replacement, not a one-year drop. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Population_Trends_in_Japan,_by_Age.svg)*
+{: .caption}
 
 ## What projections can say
 
