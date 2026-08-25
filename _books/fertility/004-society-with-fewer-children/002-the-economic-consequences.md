@@ -23,6 +23,11 @@ Immigration can add workers quickly by moving young adults from one country to a
 
 Demographic pressure gives firms a reason to substitute machines for scarce labor. Daron Acemoglu and Pascual Restrepo found that countries aging more rapidly [adopted industrial robots more quickly](https://www.nber.org/papers/w23077) and grew at least as well as younger countries, suggesting that automation absorbed part of the shock.
 
+![Industrial robots installing a glass roof at Tesla's Fremont factory, 2011](https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Tesla_auto_bots.jpg/960px-Tesla_auto_bots.jpg)
+
+**Machines take a task, 2011** A robot installs a laminated glass roof at Tesla's factory in Fremont, California. Aging countries have adopted industrial robots more quickly; the limits appear where judgment and responsibility cannot be reduced to a task. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tesla_auto_bots.jpg)*
+{: .caption}
+
 That is encouraging. A warehouse with autonomous equipment can move more goods with fewer workers, and artificial intelligence may let one engineer handle work that once required a larger team. Productivity is the most promising way for a smaller workforce to maintain a large inherited stock of capital and services.
 
 The limits appear where responsibility cannot be reduced to a task. A robot can move a box without taking responsibility for the warehouse; care is harder still. Even a highly automated economy needs people who notice failures, make judgments, and decide what should be built next.

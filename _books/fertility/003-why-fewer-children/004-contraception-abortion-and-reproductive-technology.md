@@ -9,6 +9,11 @@ Modern reproductive technology changed fertility in two opposite directions: con
 
 Reliable contraception separated sex from childbearing more completely than earlier generations could have imagined. In 2022–2023, [54.3 percent of American females ages fifteen to forty-nine](https://www.cdc.gov/nchs/products/databriefs/db539.htm) were currently using contraception; globally, [77.6 percent of women who wanted to avoid pregnancy](https://unstats.un.org/sdgs/report/2024/Goal-03/) had that need satisfied by a modern method in 2024.
 
+![Bottle of Enovid, the first oral contraceptive sold in the United States](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Bottle_for_Enovid_10_mg_Oral_Contraceptive_-_DPLA_-_0cc9d42b69b6fd3d586205f5831cade0.jpg/960px-Bottle_for_Enovid_10_mg_Oral_Contraceptive_-_DPLA_-_0cc9d42b69b6fd3d586205f5831cade0.jpg)
+
+**Enovid** The first combined oral contraceptive sold in the United States, introduced for contraceptive use in 1960. Waiting no longer required abstinence, or much risk of an unintended child forcing the timetable forward. *[via Science History Institute / Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bottle_for_Enovid_10_mg_Oral_Contraceptive_-_DPLA_-_0cc9d42b69b6fd3d586205f5831cade0.jpg)*
+{: .caption}
+
 Couples can have serious reasons to postpone another pregnancy: illness, financial instability, exhaustion, or obligations to children already born. The reason and the means are separate moral questions. Periodic abstinence asks a couple to govern sexual desire around the body's fertile rhythms. Contraception changes the act itself so that sex can continue while its procreative capacity is deliberately blocked. [*Humanae Vitae* makes this distinction in its account of responsible parenthood](https://www.vatican.va/content/paul-vi/en/encyclicals/documents/hf_p-vi_enc_25071968_humanae-vitae.html#_The_Observance_of), allowing spouses to avoid a birth for serious reasons while rejecting acts intended to make conception impossible.
 
 The difference reaches beyond one technique. Once reliable contraception becomes the default setting of adult sexual life, pregnancy becomes something that normally happens only after an affirmative decision to stop preventing it. A couple can spend years in a sexual relationship while postponing parenthood with high confidence; waiting no longer requires abstinence or much risk of an unintended child forcing the timetable forward.
@@ -28,6 +33,11 @@ American law changed sharply with *Roe* in 1973 and again when *Dobbs v. Jackson
 ## Trying to recover time
 
 Assisted reproductive technology works in the other direction. In 2022, U.S. clinics reported [435,426 ART cycles and 94,039 live-birth deliveries](https://www.cdc.gov/art/php/national-summary/index.html). Every child conceived through treatment is fully equal in dignity and can be received with the same astonishment and love as any other child. The goodness of the child does not settle the morality of the method that produced him.
+
+![Intracytoplasmic sperm injection of an oocyte](https://upload.wikimedia.org/wikipedia/commons/7/79/Icsi.JPG)
+
+**A technique that cannot restore lost years** Intracytoplasmic sperm injection, one of the methods used in IVF laboratories. Treatment can help many infertile couples; success still falls sharply with the woman's age. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Icsi.JPG)*
+{: .caption}
 
 What treatment cannot reliably restore is the reproductive time that passed before treatment began. In CDC's 2021 national table, intended egg-retrieval cycles using a patient's own eggs led to live birth in 50.8 percent of cases under age thirty-five, 36.4 percent at thirty-five to thirty-seven, 23.4 percent at thirty-eight to forty, and 7.9 percent over forty. Those are cycle-level figures rather than guarantees for a patient; the age pattern is hard to miss.
 

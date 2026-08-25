@@ -29,6 +29,11 @@ Every working-age immigrant was a child somewhere. When a rich country recruits 
 
 None of this makes migration a wrong. A person should be able to leave a place where war, persecution, or poverty denies a decent life, and receiving countries can gain talent and energy from people who choose to join them. The right to regulate borders is real, but it is not the only right in the argument. Migrants retain claims to humane treatment, meaningful work, religious and civic life, and unity with their families. The [Church's instruction on migration describes policy as a balance between the rights of migrants and the legitimate needs of receiving societies](https://www.vatican.va/roman_curia/pontifical_councils/migrants/documents/rc_pc_migrants_doc_20040514_erga-migrantes-caritas-christi_en.html). That balance begins by refusing to treat a person as imported labor with the inconvenient parts left behind.
 
+![New citizens taking the oath of allegiance, September 2025](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/2025_Naturalization_Ceremony-_Oath_of_Citizenship_%2854812455082%29.jpg/960px-2025_Naturalization_Ceremony-_Oath_of_Citizenship_%2854812455082%29.jpg)
+
+**Arrival into a common future** New citizens taking the oath of allegiance at a National Park Service naturalization ceremony, September 2025. Immigration can add young adults quickly; it still requires enough trust to imagine a shared civic life. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:2025_Naturalization_Ceremony-_Oath_of_Citizenship_(54812455082).jpg)*
+{: .caption}
+
 The demographic point is narrower: migration moves people across a border. It does not create additional people for the world.
 
 That limit becomes more binding as fertility falls in the countries that now supply migrants. Much of Latin America is already below replacement, and India is near it nationally. The decline is underway in sub-Saharan Africa as well. A century from now, today's aging countries may be competing for migrants from countries that have begun aging themselves. At the global level there is nowhere else to recruit from.

@@ -7,6 +7,11 @@ eyebrow: The inquiry
 Fertility decline does not have one cause, and I don't expect this book to find one. People have fewer children for different reasons in different places; some changes are deliberate, while others emerge from ordinary decisions that only look demographic when millions of people make them at once.
 {: .lede}
 
+![Three people talking at an outdoor table](https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Talking_%28Unsplash%29.jpg/960px-Talking_%28Unsplash%29.jpg)
+
+**Ordinary decisions, accumulated** Three people at a table. People have fewer children for different reasons in different places; the pattern appears when ordinary decisions accumulate. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Talking_(Unsplash).jpg)*
+{: .caption}
+
 The book follows that accumulation from the household outward, asking how family formation became later and harder in many rich societies, how contraception and abortion changed the number of births, and what happens when those choices compound across generations. No single mechanism explains every country. The point is to understand how the main ones combine, where the evidence is strong, and which constraints people might actually be able to change.
 
 ## Why fertility fell

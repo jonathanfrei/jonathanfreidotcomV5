@@ -11,6 +11,11 @@ A couple can spend years living just short of that threshold. They renew the lea
 
 Housing often comes first. Couples wait to move out of a shared apartment, leave their parents' home, or buy in a neighborhood where they would feel comfortable raising children. The [OECD's 2024 review](https://www.oecd.org/en/publications/society-at-a-glance-2024_918d8db3-en/full-report/fertility-trends-across-the-oecd-underlying-drivers-and-the-role-for-policy_770679b8.html) found rising housing expenditure associated with lower fertility across member countries, and Southern Europe combines expensive housing, late household formation, and very low fertility.
 
+![Dense apartment towers in Quarry Bay, Hong Kong](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Quarry_Bay_apartments_%28Unsplash%29.jpg/960px-Quarry_Bay_apartments_%28Unsplash%29.jpg)
+
+**The first expensive threshold** Apartment towers in Quarry Bay, Hong Kong. An independent home now sits in front of family formation in a way it did not for earlier generations, and the cost of space is part of why a second child can feel reckless. *[via Unsplash / Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Quarry_Bay_apartments_(Unsplash).jpg)*
+{: .caption}
+
 Childcare adds another threshold after the first birth, especially when both incomes matter partly because housing and formal care are already expensive. A scarce slot or unreliable schedule can turn a second child from something desired into something that feels financially reckless. Countries with a smoother bridge from parental leave into affordable childcare generally make work and family easier to combine, though recent declines in high-support countries show how much remains after that barrier is removed.
 
 The decision often arrives in ordinary arithmetic at the kitchen table. One parent can picture the second crib; the other is looking at the monthly childcare charge, the mortgage, the commute, and the number of days already spent covering a sick child.

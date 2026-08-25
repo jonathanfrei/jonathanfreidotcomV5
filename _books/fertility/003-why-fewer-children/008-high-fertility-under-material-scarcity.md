@@ -7,6 +7,11 @@ eyebrow: The difficult comparison
 Many of the world's poorest societies still have the largest families, which shows that low income by itself cannot explain low fertility. Housing, childcare, and wages still matter in rich countries, but people have children under material conditions far harsher than those usually described as making children “unaffordable” in wealthy countries.
 {: .lede}
 
+![A family in Tanzania](https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/A_happy_family_in_Tanzania_-_20160209.png/960px-A_happy_family_in_Tanzania_-_20160209.png)
+
+**A different structure of costs** A family in Tanzania, 2016. Large families persist where a child occupies a different economic and social place than in an expensive city that requires years of concentrated investment before independence. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:A_happy_family_in_Tanzania_-_20160209.png)*
+{: .caption}
+
 High fertility is now concentrated mainly in sub-Saharan Africa. In 2024, [13 percent of countries and areas](https://desapublications.un.org/policy-briefs/un-desa-policy-brief-no-172-new-landscape-fertility-and-family-planning-30-years) still had fertility of four or more children per woman, mostly in that region, where populations are young, marriage and childbearing begin earlier, and many women spend more of their reproductive years exposed to the possibility of pregnancy.
 
 Earlier marriage is part of the difference, as is lower contraceptive use. Among women in sub-Saharan Africa who wanted to avoid pregnancy, modern-method use rose from 29 percent in 1994 to 57 percent in 2024—a large increase that still leaves a wider gap than in most wealthy regions. Some women want large families. Others would prefer to delay or avoid particular births.

@@ -7,6 +7,11 @@ eyebrow: The consequences
 Japan counted just over [nine million vacant dwellings in 2023](https://www.stat.go.jp/english/info/news/20241030.html), 13.8 percent of its housing stock. Some were second homes or apartments waiting for tenants; others stood in neighborhoods built for households that were no longer there. The structure remained after the demand around it had changed.
 {: .lede}
 
+![Vacant house in Mikasa, Hokkaido, April 2023](https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Abandoned_house_in_Mikasa%2C_Hokkaido%2C_April_2023.jpg/960px-Abandoned_house_in_Mikasa%2C_Hokkaido%2C_April_2023.jpg)
+
+**Vacant house, Hokkaido, 2023** An empty dwelling in Mikasa, a former coal town. Japan's 2023 housing survey counted just over nine million vacant units; some wait for tenants, others remain after the households around them have gone. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Abandoned_house_in_Mikasa,_Hokkaido,_April_2023.jpg)*
+{: .caption}
+
 Houses make the lag visible in a different way from a birth rate. Roads, water lines, shops, pension promises, and hospitals can outlast the population that once supported them, leaving a smaller generation to receive all of it at once: useful wealth, accumulated obligations, and places that may no longer have enough people nearby to work as designed.
 
 A smaller population can remain wealthy, peaceful, and humane. Longer healthy lives can keep people working and caring for one another while scarce labor gives employers a reason to automate, and those gains can absorb a modest decline for quite a while.

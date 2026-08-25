@@ -9,7 +9,7 @@ The manuscript is designed for incremental drafting. Each chapter has a director
 - `/Outline.md` is the canonical book outline. It defines the chapter sequence, section sequence, and intended coverage.
 - `/000-fertility-decline.md` is the book-level entry point and cover-page placeholder.
 - `/000-introduction/` contains the book introduction.
-- `/001-.../` through `/008-.../` contain the numbered chapters and conclusion. Each directory begins with `000-introduction.md`; the remaining numbered files are chapter sections.
+- `/001-.../` through `/010-.../` contain the numbered chapters and conclusion. Each directory begins with `000-introduction.md`; the remaining numbered files are chapter sections. Chapter 7 also holds `ref.md`, a working file for the chapter plan and research notes.
 - `Style/` contains the editorial system for the project.
 - `Agents.md` gives AI agents the repository-specific workflow for researching, drafting, revising, and validating manuscript sections.
 

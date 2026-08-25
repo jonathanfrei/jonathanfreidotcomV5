@@ -15,6 +15,11 @@ The same design can keep choice provisional. A stream of potential partners make
 
 Digital entertainment also makes a solitary evening easier to fill. Streaming, games, social media, and pornography can occupy hours that previous generations had fewer ways to spend alone. None of that means a person watching Netflix would otherwise have been courting a spouse, but solitude now carries less boredom and therefore less pressure to leave the house, join a group, or tolerate awkward social encounters.
 
+![A person photographing a city at night on a smartphone](https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Nighttime_iPhone_photo_%28Unsplash%29.jpg/960px-Nighttime_iPhone_photo_%28Unsplash%29.jpg)
+
+**An evening that no longer needs anyone else** A smartphone filling a night. Digital life can help people find one another; it can also make the interval before they do more comfortable. *[via Unsplash / Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Nighttime_iPhone_photo_(Unsplash).jpg)*
+{: .caption}
+
 The U.S. Surgeon General's [2023 advisory on social connection](https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf) documented declines in several forms of in-person connection and treated loneliness and isolation as public-health problems. A lonely person may want marriage intensely, yet fewer friendships and fewer recurring places to meet people mean fewer routes through which a future spouse appears.
 
 Sex itself has declined among some young adults. Analysis of the General Social Survey found that in 2016–2018, [30.9 percent of men and 19.1 percent of women ages eighteen to twenty-four](https://pmc.ncbi.nlm.nih.gov/articles/PMC7293001/) reported no sexual activity in the previous year. The increase was concentrated mainly among unmarried men and was associated with student status and, for men, weaker employment. Those findings do not isolate technology as the cause. They do show that a growing share of young adults is spending early adulthood without the relationships through which children usually arrive.

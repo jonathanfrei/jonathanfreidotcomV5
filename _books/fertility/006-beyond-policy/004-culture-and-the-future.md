@@ -25,6 +25,11 @@ This kind of counter-signal need not denigrate other lives. It does require aban
 
 Ritual makes the judgment visible. Weddings announce that a private promise has witnesses. A baptism or meal after a birth tells parents that the people around them see a family beginning and intend to remain. A government campaign can praise an abstraction called “the family.” A ritual knows the child's name.
 
+![Bride and groom at a wedding Mass](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Bless_the_bride_and_groom_%28Unsplash%29.jpg/960px-Bless_the_bride_and_groom_%28Unsplash%29.jpg)
+
+**A private promise with witnesses** A wedding Mass in Fort Collins, Colorado, 2016. Ritual makes the judgment visible: the people present see a family beginning and intend to remain. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bless_the_bride_and_groom_(Unsplash).jpg)*
+{: .caption}
+
 Adults who do not marry or have children do not become less valuable. Some choose that life, some receive it unwillingly, and many serve the next generation through teaching, friendship, or kinship. A culture confident about parenthood has no need to humiliate them. Contempt would corrupt the good being defended by reducing human worth to demographic output.
 
 ## Confidence without denial

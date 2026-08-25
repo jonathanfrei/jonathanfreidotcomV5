@@ -11,6 +11,11 @@ The sequence can look perfectly sensible while it is happening: finish school, f
 
 In the United States, the [median age at first marriage in 2025](https://www.census.gov/newsroom/press-releases/2025/families-and-living-arrangements.html) was 30.8 for men and 28.4 for women, up from 23.5 and 21.1 in 1975. The change brought real gains—less pressure to marry young, more independence, more room to leave a bad match—while moving marriage deeper into the years when couples who want several children have less time to have them.
 
+![Median age at first marriage in the United States, 1890 to the present](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/1890-_Age_at_first_marriage_-_by_gender.svg/960px-1890-_Age_at_first_marriage_-_by_gender.svg.png)
+
+**Marriage moved into the thirties** Median age at first marriage in the United States, from Census Bureau historical tables. The postwar dip reversed after 1970; the climb has not. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:1890-_Age_at_first_marriage_-_by_gender.svg)*
+{: .caption}
+
 Marriage is also less common. Married couples made up 47 percent of American households in 2025, down from 66 percent fifty years earlier, though cohabitation has replaced part of the decline and childbearing outside marriage is common enough that marriage statistics alone no longer describe family formation. Roughly half of first births reported in the [2015–2019 National Survey of Family Growth](https://stacks.cdc.gov/view/cdc/122080) occurred before marriage; about half of those premarital births occurred within cohabiting unions.
 
 What has become less predictable is durable partnership. Some cohabiting couples share years of affection, sacrifice, and daily life without making the public and permanent promise that distinguishes marriage from an arrangement sustained by present consent; others are still testing whether the relationship will last. A household that may dissolve next year is a harder place to plan a second or third child, even if a first child has already arrived.

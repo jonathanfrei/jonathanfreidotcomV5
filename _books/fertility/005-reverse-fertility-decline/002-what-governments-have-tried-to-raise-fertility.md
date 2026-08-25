@@ -17,6 +17,11 @@ Housing reaches the family earlier. A couple that cannot afford an independent h
 
 Childcare reaches a later bottleneck. Once children exist, reliable care can make another birth feasible for parents who need or want two jobs. Across OECD countries, spending on early-childhood care is more consistently associated with higher fertility than a ceremonial check at birth, and it helps parents even when no additional child follows.
 
+![Bidibulle multi-accueil crèche in Fouesnant, France, 2024](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Bidibulle-multi-accueil-Fouesnant-byRundvald.jpg/960px-Bidibulle-multi-accueil-Fouesnant-byRundvald.jpg)
+
+**A childcare place, Fouesnant, 2024** A publicly supported crèche in Brittany. Across the OECD, spending on early-childhood care is more consistently associated with higher fertility than a ceremonial check at birth. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bidibulle-multi-accueil-Fouesnant-byRundvald.jpg)*
+{: .caption}
+
 Public support should not quietly prescribe where care happens. A childcare place may be exactly what one family needs; another would rather use the same resources to let a parent remain home for several years. Treating purchased care as the only productive arrangement turns family policy into employment policy and can leave the actual preference untouched.
 
 ## Time when the child arrives

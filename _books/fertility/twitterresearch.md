@@ -11,17 +11,17 @@ https://x.com/CatholicFQ/status/2091783035716821162
 https://x.com/Brian_Sauve/status/2091888078227124322
 https://x.com/BasedTorba/status/2049917328565887300
 https://x.com/simonsarris/status/1855447180439351773
-https://x.com/LisaBritton/status/2035347511003566292?s=20
-https://x.com/TheLaurenChen/status/1969760564147831101?s=20
-https://x.com/justalexoki/status/1968562112537546923?s=20
-https://x.com/bethanyshondark/status/2074649487809618399?s=20
-https://x.com/TradAdvocate/status/2089366731383017797?s=20
+https://x.com/LisaBritton/status/2035347511003566292
+https://x.com/TheLaurenChen/status/1969760564147831101
+https://x.com/justalexoki/status/1968562112537546923
+https://x.com/bethanyshondark/status/2074649487809618399
+https://x.com/TradAdvocate/status/2089366731383017797
 
 
 Abortion magnatude: 
 https://x.com/kevinnbass/status/2091885133439586766
 https://x.com/kevinnbass/status/2091570198729883744
-https://x.com/BowTiedOx/status/2089085835320713611?s=20
+https://x.com/BowTiedOx/status/2089085835320713611
 
 
 Comments on the fertility crisis: 
@@ -41,4 +41,4 @@ https://x.com/jakozloski/status/2092064919864938873
 
 
 Optomistic future
-https://x.com/jaynitx/status/2088589557503852745?s=20 
+https://x.com/jaynitx/status/2088589557503852745 

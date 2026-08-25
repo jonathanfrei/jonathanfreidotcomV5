@@ -44,29 +44,29 @@
                                              |
                                              v
                                +---------------------------+
-                               |  006A. GETTING SERIOUS    |
+                               |  007. GETTING SERIOUS     |
                                |  What else is possible,   |
                                |  and what is permissible? |
                                +---------------------------+
                                              |
                                              v
                                +---------------------------+
-                               |  007. CONTRACTION OR      |
+                               |  008. CONTRACTION OR      |
                                |       RENEWAL             |
-                                |  Which path follows:      |
+                               |  Which path follows:      |
                                |  contraction or renewal?  |
                                +---------------------------+
                                              |
                                              v
                                +---------------------------+
-                               |  008. EXPANSION TO        |
+                               |  009. EXPANSION TO        |
                                |  THE STARS                |
                                |  Are human limits fixed?  |
                                +---------------------------+
                                              |
                                              v
                                +---------------------------+
-                               |  009. CHOOSING TO GROW    |
+                               |  010. CHOOSING TO GROW    |
                                |  What future should       |
                                |  humanity choose?         |
                                +---------------------------+
@@ -81,13 +81,13 @@
      ACT II: CONSEQUENCES AND RESPONSE
      -------------------------------------------------------------
      Consequences  ->  Policy  ->  Institutions / Culture  ->  Limits
-          004           005              006                    006A
+          004           005              006                    007
 
 
      ACT III: WIDEN THE TIME HORIZON
      -------------------------------------------------------------
      Two paths  ->  Expanded frontier  ->  Choice
-           007                  008              009
+           008                  009              010
 
 
      THREE MOVEMENTS RUN THROUGH THE WHOLE BOOK
@@ -139,7 +139,7 @@
      or around rebuilding the capacity for renewal and expansion?
 ```
 
-The ten chapters, including the provisional Chapter 6A, form a deliberate widening of the lens: **from the demographic fact, to its causes, to its consequences, to possible responses, and finally to a much larger argument about civilization and the future.**
+The eleven chapters form a deliberate widening of the lens: **from the demographic fact, to its causes, to its consequences, to possible responses, and finally to a much larger argument about civilization and the future.**
 
 At the highest level, I would describe it as a **three-act book**.
 
@@ -159,7 +159,7 @@ So Act I follows a clean progression:
 
 ---
 
-### Act II — Follow the consequences and ask what can be done: 004–006
+### Act II — Follow the consequences and ask what can be done: 004–007
 
 **Chapter 4, Society With Fewer Children**, turns the causal arrow around. Chapter 3 asks what modern society has done to fertility; Chapter 4 asks what low fertility subsequently does to modern society.
 
@@ -181,7 +181,7 @@ The implied argument becomes stronger than “we need better pronatalist policy.
 
 And therefore its solution cannot be entirely governmental.
 
-Chapter 6A, **Getting Serious**, extends that hinge into uncomfortable territory. If ordinary policy and voluntary institutional repair cannot change the trajectory, the reader has to ask what else is possible. The chapter ranges from myth and authoritarian history to contemporary high-fertility societies, then maps extreme remedies without confusing description with endorsement. Its structural purpose is to establish the outer boundary of response: which sacrifices might become thinkable, which mechanisms could be rebuilt under abundance, and which means would destroy the human goods demographic renewal is supposed to preserve.
+Chapter 7, **Getting Serious**, extends that hinge into uncomfortable territory. If ordinary policy and voluntary institutional repair cannot change the trajectory, the reader has to ask what else is possible. The chapter is a bounded thought experiment: it opens from the small effects of policy and the slowness of culture into Livy's Sabine legend, then maps historical extremes, living high-fertility packages, unfashionable contemporary proposals, and speculative tools without confusing description with endorsement. Its structural purpose is to show the full board, then sort what is merely unpopular from what would destroy the human goods demographic renewal is supposed to preserve.
 
 That makes Act II:
 
@@ -189,17 +189,17 @@ That makes Act II:
 
 ---
 
-### Act III — Widen the time horizon: 007–009
+### Act III — Widen the time horizon: 008–010
 
 This is where the book stops being primarily a demographics book.
 
-**Chapter 7, Contraction or Renewal**, turns the book's alternatives into two paths rather than three peer scenarios. Renewal uses the difficult years of adaptation to rebuild generational balance. Contraction begins with humane, competent consolidation and becomes self-reinforcing as each reduced generation inherits the next round of choices. Adaptation, migration, productivity, and technological substitution remain important, but they are means used on either path rather than a destination of their own.
+**Chapter 8, Contraction or Renewal**, turns the book's alternatives into two paths rather than three peer scenarios. Renewal uses the difficult years of adaptation to rebuild generational balance. Contraction begins with humane, competent consolidation and becomes self-reinforcing as each reduced generation inherits the next round of choices. Adaptation, migration, productivity, and technological substitution remain important, but they are means used on either path rather than a destination of their own.
 
 The question has subtly changed from **“How do we fix fertility?”** to **“What kind of civilization emerges from this?”**
 
 Then comes the book's biggest change of scale.
 
-**Chapter 8, Expansion to the Stars**, initially looks like a departure from the demographic argument, but structurally it serves as the answer to a problem introduced much earlier in the book. The old population debate assumes a finite Earth and therefore an eventual conflict between population and carrying capacity. Chapter 8 changes the denominator.
+**Chapter 9, Expansion to the Stars**, initially looks like a departure from the demographic argument, but structurally it serves as the answer to a problem introduced much earlier in the book. The old population debate assumes a finite Earth and therefore an eventual conflict between population and carrying capacity. Chapter 9 changes the denominator.
 
 Its progression from **crew → outpost → settlement → home** is especially important. Space exploration alone does not answer the fertility argument. A few astronauts on Mars are still an Earth civilization visiting somewhere else. Families, children, inheritance, permanence, and successive generations transform an expedition into another branch of civilization.
 
@@ -209,7 +209,7 @@ So the book makes a surprisingly large move:
 
 That retroactively changes the meaning of the Malthus material in Chapter 2. Malthus isn't merely historical background anymore. He represents one side of the book's deepest tension: **fixed limits versus expanding human possibility.**
 
-**Chapter 9, Choosing to Grow**, then brings the enormous scale of Chapter 8 back down to human agency. The conclusion moves through inheritance, choice, and action. It avoids turning the argument into either coercion or a demand that every individual maximize fertility. Instead, growth becomes a civilizational preference: whether institutions and people should orient themselves toward continuity, renewal, children, abundance, and a future larger than the present.
+**Chapter 10, Choosing to Grow**, then brings the enormous scale of Chapter 9 back down to human agency. The conclusion moves through inheritance, choice, and action. It avoids turning the argument into either coercion or a demand that every individual maximize fertility. Instead, growth becomes a civilizational preference: whether institutions and people should orient themselves toward continuity, renewal, children, abundance, and a future larger than the present.
 
 That gives Act III its progression:
 
@@ -233,13 +233,13 @@ And a third:
 
 **description → causation → consequence → policy → institutions → adaptation → ambition**
 
-Those three movements converge in Chapters 8–9.
+Those three movements converge in Chapters 9–10.
 
 That is why I don't think the book's actual thesis is simply **“fertility decline is bad.”** The architecture supports a larger thesis:
 
 **Civilization depends on renewal. Fertility decline is the most literal manifestation of a society's capacity—or failure—to reproduce itself, but the underlying question is whether humanity continues building toward a larger future or gradually reorganizes itself around contraction.**
 
-That also explains the unusual bookends. Chapter 2 begins by revisiting a world terrified that humanity would outrun its resources. Chapter 8 imagines a future in which human ingenuity expands those resources and the physical territory available to civilization. Chapter 9 then argues that neither future is automatic.
+That also explains the unusual bookends. Chapter 2 begins by revisiting a world terrified that humanity would outrun its resources. Chapter 9 imagines a future in which human ingenuity expands those resources and the physical territory available to civilization. Chapter 10 then argues that neither future is automatic.
 
 So in compressed form, I would map the entire book like this:
 
@@ -261,19 +261,19 @@ So in compressed form, I would map the entire book like this:
 **006 Beyond Policy**
 *What would actually make family formation easier again?*
 ↓
-**006A Getting Serious**
+**007 Getting Serious**
 *What else is possible, and what would remain impermissible?*
 ↓
-**007 Contraction or Renewal**
+**008 Contraction or Renewal**
 *Will adaptation settle into contraction or buy time for renewal?*
 ↓
-**008 Expansion to the Stars**
+**009 Expansion to the Stars**
 *Must humanity ultimately choose between growth and finite limits?*
 ↓
-**009 Choosing to Grow**
+**010 Choosing to Grow**
 *What future should we choose?*
 
-The strongest architectural feature, in my view, is **the escalation of the question**. You begin by promising a book about falling fertility. By Chapter 9, the reader discovers that fertility has been the vehicle for a much larger argument about whether civilization should think of the future primarily as something to **manage within limits** or something to **build and expand**.
+The strongest architectural feature, in my view, is **the escalation of the question**. You begin by promising a book about falling fertility. By Chapter 10, the reader discovers that fertility has been the vehicle for a much larger argument about whether civilization should think of the future primarily as something to **manage within limits** or something to **build and expand**.
 
 That makes the space chapter much less of an eccentric appendix than it might appear from a table of contents. It is actually the far end of an argument that begins with Malthus. And “Choosing to Grow” works as the conclusion because *grow* has acquired several meanings by then: children, families, communities, economies, civilization, human possibility, and ultimately the physical reach of humanity.
 

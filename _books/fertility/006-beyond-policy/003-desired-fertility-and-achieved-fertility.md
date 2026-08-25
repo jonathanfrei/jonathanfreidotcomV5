@@ -21,6 +21,11 @@ A pronatalist culture does not need to despise people who remain childless in or
 
 The most common obstacle to an intended child in European research is the absence of a suitable partner, which reaches farther upstream than most family policy. Money can help a couple have another child; it cannot make a particular man and woman meet, trust one another, and commit while enough time remains.
 
+![A man and a woman holding hands](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Couple_holding_hands_by_a_wall_%28Unsplash%29.jpg/960px-Couple_holding_hands_by_a_wall_%28Unsplash%29.jpg)
+
+**Before the benefit form exists** A man and a woman, 2017. Money can help a couple have another child; it cannot make two people meet, trust one another, and commit while enough time remains. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Couple_holding_hands_by_a_wall_(Unsplash).jpg)*
+{: .caption}
+
 Intentions change inside relationships too. Someone who wants children “someday” may become more certain after meeting a good partner or discover that the partner does not share the desire; separation can consume the years reserved for a second birth. Men matter here as much as women. A man who will not commit, cannot support a household, or simply never meets a partner who wants children affects two fertility histories, not one.
 
 Time turns soft intentions into hard outcomes without requiring a dramatic decision. A twenty-eight-year-old moves a hoped-for first child two years ahead; a job change adds another year; a breakup consumes two more; conception then takes longer than expected. The family of three children once imagined at twenty-five can become one child at thirty-eight without anyone ever deciding, in a single moment, to reject the other two.

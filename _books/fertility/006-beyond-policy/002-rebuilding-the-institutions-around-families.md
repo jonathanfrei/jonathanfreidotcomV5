@@ -9,6 +9,11 @@ Two parents were never meant to be a complete institution. A newborn exposes the
 
 Grandparents often provide it. Their help may be regular childcare, but its value is larger than the hours recorded. A nearby grandmother is insurance against the call from school at 11:20 on a Tuesday.
 
+![A grandmother braiding her granddaughter's hair](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Grandmother_and_Grandchild.jpg/960px-Grandmother_and_Grandchild.jpg)
+
+**A nearby grandmother, 2024** A grandmother braiding her granddaughter's hair. The help may look too small to count until the day no one else can take a turn. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Grandmother_and_Grandchild.jpg)*
+{: .caption}
+
 The same support can look almost too small to count. A sister leaves dinner on the porch after a birth; a grandfather takes two children for Saturday morning because the parents have not had an uninterrupted conversation all week; someone from church sits with a sick child long enough for a parent to make the meeting that cannot be moved.
 
 Linked Israeli census and population-register data offer an unusually sharp measure: the death of a grandparent reduced an adult child's probability of having a birth during the next five years by about five percentage points. The estimate may include grief as well as the loss of practical support.

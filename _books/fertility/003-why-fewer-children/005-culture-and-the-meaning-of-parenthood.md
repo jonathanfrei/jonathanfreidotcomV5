@@ -31,6 +31,11 @@ What religious communities often retain is a different order of adulthood. Marri
 
 That difference is visible long before anyone has a child. A young adult in a parish sees babies being passed between parents and grandparents after Mass, older children trailing behind siblings, and couples a few years ahead of him who are tired without appearing ruined.
 
+![Congregation at Mass in Jakarta Cathedral](https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Jakarta_Cathedral_During_Mass.jpg/960px-Jakarta_Cathedral_During_Mass.jpg)
+
+**A life already among other families** Mass at Jakarta Cathedral. In communities that still treat children as ordinary, a young adult sees parenthood as a form of adult life rather than a project to be scheduled after everything else is finished. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Jakarta_Cathedral_During_Mass.jpg)*
+{: .caption}
+
 That kind of culture cannot simply be legislated into existence. It also does not require sneering at people who remain childless. It requires making motherhood and fatherhood visible as serious forms of achievement rather than pleasant private hobbies that fit around the work considered socially important.
 
 Money can lower a barrier. Culture helps decide whether crossing it looks like losing a life or beginning one.
