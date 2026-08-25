@@ -9,6 +9,11 @@ A thought experiment becomes evasive if it considers only ideas its author alrea
 
 Singapore's [2026 Marriage and Parenthood package](https://www.population.gov.sg/marriage-parenthood-measures-at-national-day-rally-2026/) sits at the respectable edge. Its new support can reach S$62,000 per citizen child, with cash in the first year, annual payments through age sixteen, education accounts, more leave, and an extra public-housing ballot chance for each child. The baseline is the same at every birth order. This is “make parenthood easier” carried out with unusual administrative competence and considerable money. It is too new to have demonstrated a fertility recovery.
 
+![Public housing flats in Singapore, 2022](https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Singapore%27s_HDB_Flats.jpg/960px-Singapore%27s_HDB_Flats.jpg)
+
+**The respectable edge** Housing and Development Board flats in Singapore, 2022. The 2026 Marriage and Parenthood package adds an extra public-housing ballot chance for each child, along with cash that can reach S$62,000. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore%27s_HDB_Flats.jpg)*
+{: .caption}
+
 A more radical version would shift enough income and housing toward parents to make the transfer impossible to miss. A child could cancel student debt, qualify a family for an apartment, or unlock an account worth a substantial share of a year's pay. Government could cover birth and medical costs while sending a parent an income for care. At some size the benefit stops smoothing a household budget and begins changing the adult life available to the recipient. That is the point.
 
 The distributional conflict would also become plain. Adults without children would finance families with children, poor parents might receive less than wealthy parents through tax deductions, and people unable to conceive could pay for benefits conditioned on a status they cannot attain. Generosity does not remove power. It makes the transfer large enough that the public must defend its purpose.

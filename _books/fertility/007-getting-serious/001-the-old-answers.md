@@ -7,6 +7,11 @@ eyebrow: Founding and force
 The Sabine story does not end with the abduction. It ends with the abducted women standing between two armies, asking their fathers and husbands not to make them widows and orphans at once. Livy says the fighting stopped, the Romans and Sabines became one people, and Rome's population doubled. The victims of the founding violence become the agents who complete the founding.
 {: .lede}
 
+![Jacques-Louis David's The Intervention of the Sabine Women, 1799](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/The_Intervention_of_the_Sabine_Women_-_David_%28Louvre_INV_3691%29.jpg/960px-The_Intervention_of_the_Sabine_Women_-_David_%28Louvre_INV_3691%29.jpg)
+
+**The Sabine ending** Jacques-Louis David, *The Intervention of the Sabine Women*, 1799. Hersilia stands between the armies. Livy says the fighting stopped; later consent still cannot make the first seizure free. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:The_Intervention_of_the_Sabine_Women_-_David_(Louvre_INV_3691).jpg)*
+{: .caption}
+
 That ending is why the story lasted. A mere raid would be a warning. Rome remembered a providential beginning: seizure became marriage, marriage produced children, and the women eventually chose peace between the old people and the new one. Plutarch preserved the defense that the Romans acted from a fixed purpose of joining two peoples rather than from lust. The legend knows the accusation and builds its answer into the plot.
 
 It is a powerful answer, and a dangerous one. Later consent cannot reach backward and make the first seizure free. Children, civic standing, and a shared country can be real goods without turning the means by which they arrived into good means. Foundation myths often ask us to judge an act by the civilization that followed it. The person caught inside the act has to live in the other direction, from the violence into whatever future someone else has chosen for her.
@@ -18,6 +23,11 @@ The Nazi government used less theatrical instruments and kept much better record
 The policy joined three projects. It moved women out of jobs during mass unemployment, made marriage materially easier for approved couples, and rewarded births. Any modern analyst could put the loan into a spreadsheet beside childcare subsidies and tax credits. The crucial line would be the eligibility rule. Loans were screened through the regime's categories of ancestry, hereditary health, and political reliability. The state was subsidizing a particular household because it wanted a particular population.
 
 Status followed money. The [Cross of Honor of the German Mother](https://research.calvin.edu/german-propaganda-archive/ehrenkreuz.htm), created in 1938, came in bronze, silver, and gold for mothers of four, six, and eight children. The medal carried no large financial benefit. Its work was public: the regime told children and shopkeepers how to honor the women wearing it. Motherhood became a visible rank.
+
+![Gold Cross of Honor of the German Mother](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Cross_of_Honour_of_the_German_Mother_in_Gold.jpg/960px-Cross_of_Honour_of_the_German_Mother_in_Gold.jpg)
+
+**A rank, not a kitchen table** The gold Cross of Honor of the German Mother, created in 1938 for mothers of eight children. The medal carried little money. It told the public whom to honor, on the same ledger as compulsory sterilization. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Cross_of_Honour_of_the_German_Mother_in_Gold.jpg)*
+{: .caption}
 
 At the same time, the [Law for the Prevention of Hereditarily Diseased Offspring](https://ghdi.ghi-dc.org/sub_document.cfm?document_id=1521) authorized compulsory sterilization. German hereditary-health courts ultimately ordered hundreds of thousands of people sterilized. Abortion was restricted for women the regime wanted to bear children and permitted within the eugenic program. The medal and the sterilization order were the two columns of the same ledger: approved births on one side, prevented births on the other.
 
