@@ -1,30 +1,30 @@
 ---
-title: Getting serious
-deck: What becomes thinkable when ordinary remedies seem too small
-eyebrow: Beyond the comfortable
+title: Getting Serious
+deck: What a society might consider once ordinary family policy proves too small
+eyebrow: Beyond the respectable range
 ---
 
-There is a point in every slow crisis when the scale of the remedy begins to look smaller than the scale of the problem. Fertility policy has mostly remained on the comfortable side of that line: another tax credit, another month of leave, another childcare subsidy. This chapter will cross the line in thought, not recommendation, and ask what societies have tried, what they might conceivably try, and what no fear of decline could make permissible.
+Livy's Rome had soldiers, walls, and enough strength to face its neighbors. It did not have a second generation. The new city was overwhelmingly male, neighboring peoples refused intermarriage, and Rome's greatness, Livy wrote, seemed likely to last for only one lifetime.
 {: .lede}
 
-## Drafting notes (not yet prose)
+Romulus first sent ambassadors to ask for wives. When they were refused, he announced games in honor of Consus and invited the surrounding peoples to watch. At a prearranged signal, the Roman men rushed into the crowd and seized the young women. The act remembered in English as the rape of the Sabine women began, in Livy's telling, as a solution to a demographic problem.
 
-Do not draft this file until the other sections of the chapter are written. Write the Sabine turn early, though, so the rest of the chapter can match its temperature. `ref.md` holds sources and the chapter plan.
+Romulus then told the captives that their parents' pride had caused the seizure. He promised honorable marriage, property, civic rights, and the status of mothers of free people. The defense is startlingly complete. Rome needed children; peaceful access to marriage had failed; the women would receive a place in the civilization their children made possible. Necessity supplied the permission.
 
-### Motion of the finished introduction
+The story is a foundation myth, not reliable reportage from the eighth century BC. Livy's Latin describes seizure, and he frames the motive as population rather than lust. Neither point softens the act. They make the story useful here because the Romans remembered demographic continuity as a problem serious enough to sit near the beginning of their city.
 
-1. **Policy is too small.** Carry forward chapter 5's record: cash, leave, housing, and childcare recover births at the margin. OECD-scale spending is associated with TFR changes on the order of 1 to 1.6 percent per additional $1,000 per child. Hungary moved the number and later lost it. Korea spent heavily and remained near 0.75. No wealthy country has shown a durable path from very low fertility back to replacement by stacking respectable benefits.
-2. **Culture is too slow.** Honor, nearby people, parishes, and the meaning of adulthood are probably the real lever. They do not reverse in an election cycle. A culture that spent decades attaching prestige to autonomy will not turn because a ministry issues a slogan.
-3. **Cold open: the Sabine women.** Early Rome had a fertility crisis in the only sense that mattered: a city of men without enough women to have a next generation. Livy says Romulus asked neighboring peoples for the right of intermarriage and was refused. He invited them to games in honor of Consus; the Romans seized the Sabine maidens; the parents fled denouncing the violation of hospitality. Romulus told the women their parents' pride had caused it, offered them civic standing, and the story ends with the women throwing themselves between two armies so that two peoples become one and Rome has descendants. Treat this as a case, not a sermon. Mechanism: a people cannot continue without women of childbearing age, and Romulus would not wait for courtship. Magnitude: the city survives in the legend. Cost: the women did not choose the first act. Reception: later Romans told it as origin, not as crime. English "Rape of the Sabine Women" translates *raptus* (seizure). Do not flatten Livy's population motive into a claim about the sexual act, and do not sanitize the coercion.
-4. **The contract, once, after the legend.** This chapter is a thought experiment. Appearing on the map is not a recommendation. Possibility, effectiveness, legality, morality, and desirability are different questions. Then stop hedging.
+Modern governments begin with cash, leave, childcare, and housing. These policies recover births at the margin and can make family life considerably better. The previous discussion found no reliable package that has carried a very low-fertility country back to replacement. Hungary's rise faded. South Korea spent heavily while remaining far below one child per woman. The [OECD's cross-country estimates](https://www.oecd.org/en/publications/fertility-employment-and-family-policy_326844f0-en.html) suggest that another $1,000 per child in family support is associated with an increase of roughly one to 1.6 percent in the total fertility rate. A country at 1.4 needs much more than a few percent.
 
-### Tone
+Culture probably supplies the larger lever. People have children inside a picture of adulthood: whom they meet, which lives they admire, when they marry, and what sacrifices their neighbors consider normal. Culture can move whole children rather than tenths. It is also slow, hard to direct, and capable of applying pressure with little regard for individual circumstances.
 
-Slightly out of character with the rest of the book: the same calm first-person sentences, applied to remedies no white paper will print. Deadpan, not sarcastic. No internet slang in the author's mouth.
+This chapter is a bounded thought experiment. It considers proposals because they illuminate a mechanism, not because I recommend them. Possibility, effectiveness, legality, morality, and desirability are separate questions. I will keep them separate long enough to examine ideas that ordinary policy writing filters out before returning to the question of permission.
 
-### Do not
+That means taking strong communities and ugly histories seriously, asking what status can accomplish, and following the conflict between work and childbearing past the answers that fit comfortably in a white paper. Some proposals will be expensive or strange. Others are wrong. Inclusion on the map is not endorsement, but refusing to look at the map would be its own way of avoiding the scale of the problem.
 
-- Open with a rhetorical question.
-- Open with a disclaimer.
-- Repeat the full Sabine analysis; that continues in the next section.
-- End with a program.
+<div class="citation">
+
+**Citations**
+
+1. Livy, [*History of Rome*, book 1.9](https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0026:book=1:chapter=9), trans. Canon Roberts (1912).
+2. Jonas Fluchtmann, Violetta van Veen, and Willem Adema, [“Fertility, Employment and Family Policy”](https://www.oecd.org/en/publications/fertility-employment-and-family-policy_326844f0-en.html), OECD Social, Employment and Migration Working Papers no. 299, 2023.
+</div>

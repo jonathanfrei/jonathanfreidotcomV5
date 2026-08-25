@@ -1,6 +1,6 @@
 # The Fertility Decline
 
-This outline reflects the current manuscript structure, chapters 001 through 010. Completed chapters are described as they stand; Chapter 7, Getting Serious, remains a research and drafting plan. The chapter plan and sources live in `007-getting-serious/ref.md`.
+This outline reflects the current manuscript structure, chapters 001 through 010. Completed chapters are described as they stand; Chapter 7, Getting Serious, now has a complete first draft. Its archived section stubs, chapter plan, and research live in `007-getting-serious/ref/`.
 
 ## 1. The Stakes
 
