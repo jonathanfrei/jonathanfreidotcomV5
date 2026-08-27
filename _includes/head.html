@@ -119,6 +119,14 @@ window.assetFallback = function (el) {
 <link rel="preconnect" href="https://media.jonathanfrei.com" crossorigin>
 {%- endif -%}
 
+{% comment %}
+  Preload the two custom faces (body serif + UI/mono code). Variable latin
+  WOFF2 from Fontsource; font-display:swap is set in @font-face. (#92, #110)
+  Source Sans 3 dropped — UI shares Source Code Pro with mono.
+{% endcomment %}
+<link rel="preload" href="https://cdn.jsdelivr.net/fontsource/fonts/source-serif-4:vf@5.2.5/latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://cdn.jsdelivr.net/fontsource/fonts/source-code-pro:vf@5.2.5/latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://cdn.jsdelivr.net/fontsource/fonts/source-sans-3:vf@5.3.0/latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 
 {% comment %}
   LCP image preload. When the first content image has a responsive srcset,
