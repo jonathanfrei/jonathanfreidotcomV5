@@ -373,7 +373,7 @@ Before finishing a change that touches build, layouts, or CSS:
 5. [ ] If workflow changed, confirm Actions majors and `paths-ignore` still make sense
 6. [ ] Prefer a green deploy run after merge/push to `main`
 7. [ ] Static HTML drop-ins use `editorial/<slug>.html` → `/editorial/<slug>` (no `index.html` in asset folders)
-8. [ ] Text pages (e.g. `/about`) do not `preconnect` `wsrv.nl` or `media.jonathanfrei.com`, and do not mention `wsrv.nl`. After a production deploy with Cache Everything on, HTML `cf-cache-status` is `HIT` (or the purge secrets are documented as still missing). Image pages use signed `/img/?url=` URLs, not `wsrv.nl`.
+8. [ ] Text pages (e.g. `/about`) do not `preconnect` `wsrv.nl` or `media.jonathanfrei.com`, and do not mention `wsrv.nl`. After a production deploy with Cache Everything on, HTML `cf-cache-status` is `HIT` (or the purge secrets are documented as still missing). Image pages use signed `/img?url=` URLs, not `wsrv.nl`.
 
 ## What not to do
 
