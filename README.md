@@ -120,12 +120,11 @@ Static assets (issue #119) keep their own rule:
 
 ### Early Hints and compression
 
-1. Speed → Settings → Content Optimization → **Early Hints: On**. Cloudflare 103s come from HTTP `Link` headers, not `<link>` tags. GitHub Pages cannot set headers, so add a **Response Header Transform Rule** with **stable** URLs only (not the SHA-pinned `main.css`):
+1. Speed → Settings → Content Optimization → **Early Hints: On**. Cloudflare 103s come from HTTP `Link` headers, not `<link>` tags. GitHub Pages cannot set headers, so add a **Response Header Transform Rule** with **stable** font URLs only (not the fingerprinted `core.css?v=` URL — it changes when CSS changes). Do **not** Early-Hint Source Sans 3 (vendored, unused).
 
    ```http
-   Link: <https://cdn.jsdelivr.net>; rel=preconnect; crossorigin
-   Link: <https://cdn.jsdelivr.net/fontsource/fonts/source-serif-4:vf@5.2.5/latin-wght-normal.woff2>; rel=preload; as=font; type=font/woff2; crossorigin
-   Link: <https://cdn.jsdelivr.net/fontsource/fonts/source-code-pro:vf@5.2.5/latin-wght-normal.woff2>; rel=preload; as=font; type=font/woff2; crossorigin
+   Link: </assets/fonts/source-serif-4-5.2.5-latin-wght-normal.woff2>; rel=preload; as=font; type=font/woff2
+   Link: </assets/fonts/source-code-pro-5.2.5-latin-wght-normal.woff2>; rel=preload; as=font; type=font/woff2
    ```
 
 2. Confirm **Brotli** is On (issue #117). Leave Rocket Loader **off**. Auto Minify is optional.
@@ -134,7 +133,7 @@ Static assets (issue #119) keep their own rule:
 
 Uncheck Chrome DevTools **Disable cache**. That checkbox is what sends request `cache-control: no-cache` / `pragma: no-cache` — the site response is `max-age=600`. Do not add `<link rel="preload" as="document">` for the current page. HTTP/3 is already advertised (`alt-svc: h3=":443"`).
 
-**CSS:** brand design system is `_includes/main.css` (Paper / Ink / Signature Blue `#0077A8`). Production pages load it (and `/assets` JS/favicons) from jsDelivr, pinned to the deploy commit, and fall back to origin `/assets` if the CDN misses. Local `jekyll serve` still uses `/assets/css/core.css`. Feature sheets (code, search, embeds, pagination) load only when the page needs them. Long-form **editorials** live under `editorial/` (Markdown `layout: editorial` or handcrafted HTML) and add the editorial sheet. **Books** (`layout: book`) add `/assets/css/book.css`. Tooling: `/assets/css/main.css`, `/assets/css/editorial.css`, `/assets/css/book.css`.
+**CSS:** brand design system is `_includes/main.css` (Paper / Ink / Signature Blue `#0077A8`). Pages load it (and `/assets` JS/favicons) from origin with a content-hash `?v=` so Cloudflare’s long browser TTL cannot keep a stale sheet. Fonts are self-hosted under `/assets/fonts/` (version in the filename). Feature sheets (code, search, embeds, pagination) load only when the page needs them. Long-form **editorials** live under `editorial/` (Markdown `layout: editorial` or handcrafted HTML) and add the editorial sheet. **Books** (`layout: book`) add `/assets/css/book.css`. Tooling: `/assets/css/main.css`, `/assets/css/editorial.css`, `/assets/css/book.css`.
 
 ## Structure
 
