@@ -107,7 +107,7 @@
   --color-header-bg: var(--brand-paper);
   --color-surface: var(--brand-white);
 
-  --font-body:  "Source Serif 4", Charter, Cambria, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --font-body:  "Source Serif 4", Charter, "Iowan Old Style", "New York", "Sitka Text", Cambria, Georgia, ui-serif, serif;
   --font-ui: "Source Code Pro", system-ui, -apple-system, BlinkMacSystemFont, monospace;
   --font-mono: "Source Code Pro", system-ui, -apple-system, BlinkMacSystemFont, monospace;
 
