@@ -57,7 +57,7 @@ module Jekyll
         "categories" => Array(post.data["categories"]).map(&:to_s)
       }
       img = first_image(site, post)
-      entry["img"] = img if img
+      entry["img"] = proxied_index_image(site, img) if img
       entry
     end
 
@@ -228,6 +228,25 @@ module Jekyll
 
     def gif_src?(src)
       src.to_s.match?(/\.gif(?:\?|#|$)/i)
+    end
+
+    # Bake the signed /img URL so search.js never holds IMG_HMAC or talks to wsrv.
+    def proxied_index_image(site, img)
+      return img unless img.is_a?(Hash)
+
+      src = img["src"].to_s
+      return img if src.empty?
+      return img if gif_src?(src)
+      return img unless defined?(Jekyll::OptimizeContentImages)
+      return img unless Jekyll::OptimizeContentImages.enabled?(site)
+      return img if src.match?(Jekyll::OptimizeContentImages::PROXY_HOST)
+
+      cfg = Jekyll::OptimizeContentImages.config(site)
+      origin = Jekyll::OptimizeContentImages.absolute_origin(site, src)
+      proxied = Jekyll::OptimizeContentImages.optimized_url(
+        cfg, origin, width: 768, format: "webp"
+      )
+      img.merge("src" => proxied, "full" => origin)
     end
 
     def count_map(hash)

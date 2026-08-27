@@ -45,8 +45,9 @@
 </script>
 
 {% comment %}
-  If wsrv.nl cannot fetch a hotlinked original (HTTPS-only hosts, 404),
-  fall back to data-full-src so the image still shows (#203).
+  If /img (or a leftover wsrv URL) cannot fetch a hotlinked original
+  (HTTPS-only hosts, 404), fall back to data-full-src so the image still
+  shows (#203).
 {% endcomment %}
 <script>
 (function () {
@@ -72,14 +73,11 @@
 <link rel="apple-touch-icon" href="{{ '/assets/img/favicon.png' | asset_url }}">
 
 {% comment %}
-  wsrv.nl and the archive media host only when this page will fetch them —
-  unused preconnects open extra TLS sockets and can stall the document.
-  post_render may add a missing host hint after image URLs are rewritten.
+  Transforms are same-origin /img (no preconnect). The archive media host
+  only when this page will fetch originals (GIF / data-full-src). post_render
+  may add a missing host hint after image URLs are rewritten.
 {% endcomment %}
 {%- assign hint_src = content | append: page.lcp_image -%}
-{%- if hint_src contains 'wsrv.nl' or hint_src contains '<img' or hint_src contains '<IMG' or hint_src contains 'data-img-opt' -%}
-<link rel="preconnect" href="https://wsrv.nl" crossorigin>
-{%- endif -%}
 {%- if hint_src contains 'media.jonathanfrei.com' -%}
 <link rel="preconnect" href="https://media.jonathanfrei.com" crossorigin>
 {%- endif -%}
