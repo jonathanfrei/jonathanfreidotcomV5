@@ -4,46 +4,46 @@ deck: Populations grow fastest between falling death rates and falling birth rat
 eyebrow: The hinge
 ---
 
-The population explosion did not begin because people suddenly wanted enormous families. It began because children who once would have died began to live.
+The population explosion did not begin because families suddenly wanted more children. It began because children who once would have died began to live.
 {: .lede}
 
-Imagine a place where families commonly have six children and only four survive to adulthood. Then clean water, vaccination, and safer childbirth arrive; five children survive, then nearly all six. For a generation, parents may continue having the number of children that made sense in the world they knew, so the population surges even though fertility itself has not risen.
+Imagine a place where families commonly have six children and four survive to adulthood. Clean water, vaccination, safer childbirth, and better nutrition arrive; five survive, then nearly all six. Parents may continue having the number of children that made sense in the world they knew. For a time, births greatly exceed deaths, and population surges even though fertility has not increased.
 
-That is the demographic transition in its simplest form: a population moves from high mortality and high fertility toward low mortality and low fertility, with death rates usually falling first and birth rates adjusting later. The fastest growth happens in the gap.
+That is the demographic transition in its simplest form. A population moves from high mortality and high fertility toward low mortality and low fertility, with death rates usually falling first. The fastest growth occurs in the interval.
 
 ![Schematic of the five stages of the demographic transition](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Demographic-TransitionOWID.png/960px-Demographic-TransitionOWID.png)
 
-**The demographic transition** Death rates fall first, birth rates follow, and population surges in the gap. What happens in a possible fifth stage is still an open question. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Demographic-TransitionOWID.png)*
+**The demographic transition** A stylized model in which death rates fall before birth rates. The shape is useful; the timing and any proposed fifth stage differ among countries. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Demographic-TransitionOWID.png)*
 {: .caption}
 
-The first half of that sequence is an extraordinary human achievement. The [UN Inter-agency Group for Child Mortality Estimation](https://childmortality.org/reports) documents how sharply deaths before age five have fallen even since 1990. Each avoided death is a child who gets to grow up; enough of those victories also change the age structure of a country.
+The first movement is an extraordinary achievement. The United Nations Inter-agency Group for Child Mortality Estimation reports that deaths before age five fell from 12.8 million in 1990 to 4.8 million in 2023 even as the number of children exposed to those risks changed. Each avoided death is first a child who gets to grow up. Enough of those lives also alter the age structure of a country.
 
-## Families adjust to a different world
+## Why births followed
 
-Birth rates tend to fall later because family size is tied to ordinary expectations about survival and adulthood. When children reliably reach adulthood, parents don't need as many births to end up with the family they expected, while longer schooling and later economic independence raise the time and money invested in each child.
+Births did not fall everywhere for one reason or on one schedule. Better survival changed how many births were needed for children to reach adulthood. Urbanization moved families away from farms and toward homes where space cost more and children contributed less directly to household production. Industrialization and longer schooling changed the timing and cost of becoming an independent adult. Contraception gave couples greater control over whether and when pregnancies occurred. Women's education and paid work widened their opportunities while making the timing of family formation more consequential.
 
-Control over timing makes the adjustment easier. Contraception prevents pregnancies that would otherwise occur; later marriage shortens the years in which couples are likely to have children; education and paid work can push family formation later still. The weight of each mechanism differs across countries, but together they help explain why falling mortality is eventually followed by falling fertility.
+Those mechanisms are not interchangeable, and their relative importance varies. Several later-transition countries experienced rapid mortality decline after medical and public-health knowledge had become easier to adopt, then moved through fertility change in a few decades. In parts of sub-Saharan Africa, fertility has declined later and more slowly than the classic model led some demographers to expect.
 
-Europe moved through this transition over generations. Many poorer countries after the Second World War did not have to rediscover the sanitation, vaccines, and medical knowledge that had accumulated elsewhere, so mortality could fall much faster and fertility followed. A demographic change that took a century in one place could be compressed into a few decades in another.
+The transition is therefore a framework, not a law of stages that every country must obey. It describes a recurring relationship among survival, births, and age structure. It does not by itself explain why one society settles near two children, another near one, and another remains above four.
 
 ![Birth rates, death rates, and population in five countries, 1820 to 2010](https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Demographic-Transition-5-countries.png/960px-Demographic-Transition-5-countries.png)
 
-**The same sequence, different clocks** Crude birth and death rates, with total population, in Germany, Sweden, Chile, Mauritius, and China. Later transitions compressed into a much shorter period. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Demographic-Transition-5-countries.png)*
+**The same broad movement, different clocks** Crude birth and death rates, with total population, in Germany, Sweden, Chile, Mauritius, and China. Later transitions often occurred over a shorter period. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Demographic-Transition-5-countries.png)*
 {: .caption}
 
 ## The transition kept going
 
-The older model explained well why population growth accelerated and then slowed. It was less prepared for what came next: fertility in many affluent countries passed through replacement instead of settling near it, and middle-income countries followed, sometimes reaching very low fertility at income levels well below those of Europe when its transition began.
+The older model was good at explaining why growth accelerated and later slowed. It was less prepared for fertility to pass through replacement and remain far below it. The United Nations estimates that global fertility fell from 3.3 births per woman in 1990 to 2.3 in 2024. More than half of countries and areas are now below 2.1, and nearly one fifth have fertility below 1.4.
 
-That overshoot changes the problem. Falling mortality explains the population explosion; falling fertility explains why it ended. Persistent fertility far below replacement requires another account, which the later chapters will develop.
+This is not simply the price of progress. Lower mortality, education, urban opportunity, and control over reproduction are goods. The unresolved question is why societies with very different histories and institutions have so often moved beyond smaller families into persistent generational contraction.
 
-For now, the chronology is enough. Better survival creates a large young generation, smaller families eventually slow its growth, and if those smaller families persist the age structure turns over until the same country begins aging. Before looking at where that process has gone furthest, we need only a few measures to read the map correctly.
+Before comparing them, we need a small set of measures. The words sound similar—birth rate, fertility rate, replacement, cohort, momentum—but they answer different questions.
 
 <div class="citation">
 
 **Citations**
 
-1. United Nations Inter-agency Group for Child Mortality Estimation, [*Levels & Trends in Child Mortality 2024*](https://childmortality.org/reports).
-2. United Nations, Department of Economic and Social Affairs, Population Division, [*World Population Prospects 2024: Methodology Report*](https://www.un.org/development/desa/pd/content/world-population-prospects-2024-methodology-report).
-3. United Nations Population Fund, [“Demographic dividend”](https://www.unfpa.org/demographic-dividend).
+1. United Nations Inter-agency Group for Child Mortality Estimation, [*Levels & Trends in Child Mortality 2024*](https://childmortality.org/reports), 2025.
+2. United Nations, Department of Economic and Social Affairs, Population Division, [*World Population Prospects 2024: Methodology Report*](https://www.un.org/development/desa/pd/content/world-population-prospects-2024-methodology-report), 2024.
+3. United Nations, Department of Economic and Social Affairs, Population Division, [*World Fertility 2024*](https://www.un.org/development/desa/pd/content/world-fertility-report-2024), 2025.
 </div>

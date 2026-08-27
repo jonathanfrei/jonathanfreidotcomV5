@@ -7,7 +7,7 @@ eyebrow: The generational ledger
 A pension is a promise between a worker and the government; in a pay-as-you-go system, it is also a claim on the younger population. Today's contributions largely finance today's retirees. The worker earns a legal entitlement, but the future check will be funded from the production and taxes of a generation that may be much smaller.
 {: .lede}
 
-The arrangement was easier when each retirement cohort was followed by a larger working cohort. Low fertility reverses the ratio: across the OECD, the number of people over sixty-five per hundred people ages twenty to sixty-four is projected to rise by more than half between 2025 and 2050. Average public pension spending is projected to increase from [8.8 percent of GDP in 2023–2024 to 10 percent in 2050](https://www.oecd.org/en/publications/pensions-at-a-glance-2025_e40274c1-en/full-report/long-term-projections-of-public-pension-expenditure_af4ed734.html), even after reforms already written into law.
+The arrangement was easier when each retirement cohort was followed by a larger working cohort. Low fertility reverses the ratio. Across the OECD, average public pension spending is projected to increase from [8.8 percent of GDP in 2023–2024 to 10 percent in 2050](https://www.oecd.org/en/publications/pensions-at-a-glance-2025_e40274c1-en/full-report/long-term-projections-of-public-pension-expenditure_af4ed734.html), even after reforms already written into law.
 
 The deeper problem is that one generation made promises under assumptions about the size of the generations behind it that no longer hold. Closing the gap means collecting more from workers, changing what retirees receive, working longer, or producing enough additional wealth to make the arithmetic easier.
 
@@ -28,7 +28,9 @@ A pension can be transferred electronically. Help with bathing or eating require
 **Someone has to show up, New Delhi, 2025** A home-care worker with an older patient. Public and private provision divide payment; they do not eliminate the work of being there. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Home_Care_Services_in_New_Delhi.jpg)*
 {: .caption}
 
-OECD long-term-care spending [almost doubled as a share of GDP between 2000 and 2022](https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/10/ageing-populations-their-fiscal-implications-and-policy-responses_be4bd619/6aec03b3-en.pdf), while the European Commission's baseline projects public long-term-care spending in the European Union rising from 1.7 percent of GDP in 2022 to 2.4 percent in 2070. Better health in old age can change that bill substantially.
+OECD long-term-care spending [almost doubled as a share of GDP between 2000 and 2022](https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/10/ageing-populations-their-fiscal-implications-and-policy-responses_be4bd619/6aec03b3-en.pdf). The European Commission's baseline projects public long-term-care spending in the European Union rising from 1.7 percent of GDP in 2022 to 2.4 percent in 2070.
+
+Those figures are not fate. In the Commission's less favorable scenario, in which additional years of life bring more dependency, spending reaches 2.7 percent instead. Healthier aging removes about a third of that increase. A demographic projection is partly a projection about health, work, policy, and the design of care, not only the number of birthdays.
 
 Public and private provision divide payment, but they do not eliminate the work. If the state does not finance a home-care worker, an adult daughter may reduce her paid hours instead. A fiscal reform that pushes care back into a thinner family can make the accounts look better while making life worse.
 
@@ -40,7 +42,7 @@ Borrowing can spread a temporary demographic shock. A permanent imbalance return
 
 Fiscal policy therefore becomes an argument about inheritance: older citizens are owed security, younger citizens need room to build households without having more of their working lives pledged away, and future citizens cannot vote even though they receive the debt and age structure left behind.
 
-There is more than one defensible way to divide the adjustment. A humane government should protect people who cannot protect themselves and be wary of financing present comfort by reducing the capacity of the generation that follows. Otherwise the fiscal response to low fertility can help reproduce the conditions that caused it.
+There is more than one defensible way to divide the adjustment. Raising a retirement age, changing benefits, broadening taxes, borrowing, supporting family caregivers, and expanding formal care place the cost on different people at different times. A humane government should protect people who cannot protect themselves and be wary of financing present comfort by reducing the capacity of the generation that follows. Otherwise the fiscal response to low fertility can help reproduce the conditions that caused it.
 
 <div class="citation">
 

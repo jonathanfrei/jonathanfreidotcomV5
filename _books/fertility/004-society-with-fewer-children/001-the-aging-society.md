@@ -31,11 +31,13 @@ Medicine may add years to life faster than it adds nurses to a ward. Low fertili
 **Someone has to help her stand, Munich, 1996** A young man in civilian service helping an older woman rise from the bed. Care remains personal work even when machines can move a box. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Altenpflege_03.jpg)*
 {: .caption}
 
-Scarcity creates a moral danger before it creates a budget line. An older person who needs expensive care can begin to hear herself described as a burden and eventually feel an obligation to remove the burden. No dependency ratio can make her life worth less. [*Evangelium Vitae* warns against euthanasia when efficiency and autonomy become the measure of a life](https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_25031995_evangelium-vitae.html#-1O). An aging society has to answer frailty with palliative care, companionship, shared sacrifice, and institutions that do not make death feel like a civic duty.
+Scarcity creates a moral danger before it creates a budget line. An older or disabled person who needs expensive care can begin to hear herself described as a burden and eventually feel an obligation to remove it. No dependency ratio can make her life worth less, and a request to die is not fully autonomous when it grows from untreated pain, isolation, depression, fear, or the belief that care has become too costly.
+
+An aging society should answer frailty with palliative care, companionship, protection against abuse, and institutions that do not make death feel like a civic duty. That judgment does not settle every end-of-life law or every decision to refuse burdensome treatment. It sets a boundary around the demographic argument: scarcity cannot turn another person's dependence into evidence that her life has become a problem to solve.
 
 Retirement ages can move as healthy life expectancy rises, and employers can make work possible for older bodies. Those changes are sensible even if fertility recovers tomorrow because the people who will be old in 2050 are already alive. What policy cannot do is retroactively enlarge the cohorts born thirty years earlier.
 
-One generation can adjust the boundary between work and retirement. Continued contraction changes how many people stand on either side of it. Before that arithmetic reaches a pension office, though, it usually reaches a family.
+One generation can adjust the boundary between work and retirement. Continued contraction changes how many people stand on either side of care. Before that arithmetic reaches a pension office, it usually reaches a family.
 
 <div class="citation">
 
@@ -46,5 +48,4 @@ One generation can adjust the boundary between work and retirement. Continued co
 3. Organisation for Economic Co-operation and Development, [“Life expectancy and healthy life expectancy at older ages”](https://www.oecd.org/en/publications/health-at-a-glance-2025_8f9e3f98-en/full-report/life-expectancy-and-healthy-life-expectancy-at-older-ages_599cf359.html), in *Health at a Glance 2025*, 2025.
 4. World Health Organization, [“Ageing and health”](https://www.who.int/news-room/fact-sheets/detail/ageing-and-health), 2025.
 5. Organisation for Economic Co-operation and Development, [“Demographic trends”](https://www.oecd.org/en/publications/health-at-a-glance-2025_8f9e3f98-en/full-report/demographic-trends_257a22c9.html), in *Health at a Glance 2025*, 2025.
-6. John Paul II, [*Evangelium Vitae*, nos. 64–67](https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_25031995_evangelium-vitae.html#-1O), 1995.
 </div>
