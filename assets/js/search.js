@@ -28,10 +28,9 @@
   function resolveIndexUrl() {
     var base = typeof window.siteBaseurl === "string" ? window.siteBaseurl : "";
     if (base === "/") base = "";
-    // search.json is generated and stays on origin. Do not derive it from the
-    // search.js URL — that script is on jsDelivr in production.
-    // ?v= is the build time so a Cloudflare Cache Everything HIT cannot keep
-    // a pre-deploy index (the #214 categories miss).
+    // search.json is generated and stays at /search.json. Do not derive it
+    // from the search.js URL. ?v= is the build time so a Cloudflare Cache
+    // Everything HIT cannot keep a pre-deploy index (the #214 categories miss).
     var path = (base || "") + "/search.json";
     var rev = window.searchIndexRev == null ? "" : String(window.searchIndexRev);
     return rev ? path + "?v=" + encodeURIComponent(rev) : path;
