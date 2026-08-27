@@ -1,21 +1,39 @@
 ---
-title: Why Are People Having Fewer Children?
-deck: Fertility decline is often the result of reasonable delays accumulating until the family becomes smaller than intended
+title: Why are people having fewer children?
+deck: Low fertility is often built from reasonable choices whose delays accumulate
 eyebrow: The causes
 ---
 
-A woman can finish school at twenty-four, establish herself at work, meet someone at twenty-eight, marry at thirty-one, settle into a stable home at thirty-two, and begin trying for a first child at thirty-three. Nothing in that sequence looks anti-family; most of it looks responsible. But a couple who once imagined three children has compressed nearly all of its childbearing into a handful of years.
+A woman can finish professional training at twenty-seven, establish herself at work, meet someone at thirty, marry at thirty-three, and begin trying for a first child at thirty-four. Nothing in that sequence looks like a decision against family. Most of it looks responsible. A couple who once imagined three children has nevertheless compressed nearly all of its childbearing into a few uncertain years.
 {: .lede}
 
-That is the pattern I want to follow in this chapter. Modern fertility decline often does not begin with a dramatic decision against children but with postponement: partnership comes later, housing and work take longer to settle, contraception makes waiting easier, and the standard for being “ready” rises. Then biology turns some of that delay into a smaller family.
+That is a composite timeline, not a reported biography. Each transition is familiar in the demographic evidence; no one invented person should be made to carry the experience of millions of women and men.
 
-The previous chapter showed how low fertility spreads through populations. Here the scale narrows to ordinary life, because before a birth disappears from a national total there was usually a person who never met the right partner, a couple who waited another year, or a family that stopped at one child because the second no longer fit the time and life they had left.
+Another route begins with a man whose work remains unstable. He puts off commitment until he can offer the kind of household he thinks marriage requires. A third couple begins earlier, has one child, and discovers that housing, care, and two jobs fit together only because one parent absorbs every disruption. The second child remains wanted in the abstract and never becomes possible in practice.
 
-I want more adults to reach the families they hoped to build. That does not require treating every delay as a mistake or every small family as evidence of frustration: more education, better work, greater control over reproduction, and the freedom to leave a bad relationship are real goods, and some people want one child or none at all. The harder question is why so many adults who say they wanted children, or wanted more of them, end up with fewer than they expected.
+Low fertility is made from all of these lives and others unlike them. Some people want no children. Some want one. Some revise what they hoped for and are content. Some never meet the right partner, encounter infertility, or reach the end of their reproductive years with a family smaller than they expected. A national rate places them in one number without making their reasons the same.
 
-![Percentage of American women without children, by age group, 1976 to 2018](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Percentage_of_women_childless_by_age_cohort_in_the_US.svg/960px-Percentage_of_women_childless_by_age_cohort_in_the_US.svg.png)
+The previous chapter ended with a question that the demographic transition could not answer. Falling child mortality, urbanization, education, and reproductive control help explain why families became smaller than they were in agricultural societies. They do not explain why countries with similar prosperity and mortality settle at very different fertility levels, or why decline often continues well below replacement.
 
-**Delay first, then a smaller family** Share of American women without children, by age group. The rise at ages 20–34 is mostly later childbearing; whether that delay becomes a smaller completed family is the question this chapter follows. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Percentage_of_women_childless_by_age_cohort_in_the_US.svg)*
-{: .caption}
+This chapter follows the thresholds through which a possible birth becomes more or less likely:
 
-That gap between the family imagined and the family achieved is where several causes meet. The path into adulthood has grown longer while the reproductive window has not. Modern life gives people more control over when to begin a family, but it also gives postponement more places to hide. By the time the decision finally becomes urgent, some of the available choices have already disappeared.
+`meeting → commitment → readiness → postponement → conception → birth → another child`
+
+The sequence branches. A person may leave it voluntarily, enter it more than once, form a family outside marriage, or never encounter some of its barriers. Its value is not that every life fits one path. It shows how several pressures can accumulate without one master cause.
+
+Partnership can begin later. Housing and work can raise the threshold for feeling ready. Contraception makes postponement more reliable, while abortion prevents some pregnancies from becoming births. Careers and care make competing claims on the same years. Digital life changes how people meet and how easily solitude continues. Biology eventually makes part of the delay irrecoverable, and reproductive technology cannot simply return the time that passed.
+
+Many of those changes contain real goods. Women gained education, financial independence, and greater control over pregnancy. Adults gained more freedom to reject a bad match. Children survive and receive more care and investment. Any causal account that treats those achievements as errors will misunderstand both the history and the people living inside it.
+
+Freedom is not the whole explanation either. A person can choose each step and still dislike where the sequence ends. The United Nations Population Fund's 2025 survey across fourteen countries found that nearly one in five reproductive-age respondents expected not to have the number of children they desired. That measure has limits: desire is not intention, expectation can change, and fourteen countries are not the world. It still reveals that control over avoiding births and the capacity to have a hoped-for family are not the same freedom.
+
+The argument that follows is therefore multicausal and moral without being coercive. It will distinguish a direct mechanism from its population-level magnitude and empirical evidence from judgments about marriage, sex, unborn life, technology, work, and care. No one owes a child to a fertility target. Institutions and choices can still be judged by whether they help people form durable families, honor embodied responsibility, protect vulnerable life, and welcome children as persons rather than projects or demographic instruments.
+
+The first threshold comes before the price of housing or the limits of fertility treatment. We begin with partnership: whether two people meet and make a common future definite enough for a child.
+
+<div class="citation">
+
+**Citations**
+
+1. United Nations Population Fund, [*State of World Population 2025: The Real Fertility Crisis*](https://www.unfpa.org/swp2025), 2025.
+</div>

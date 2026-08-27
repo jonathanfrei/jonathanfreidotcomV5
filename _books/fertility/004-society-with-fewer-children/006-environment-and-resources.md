@@ -7,7 +7,7 @@ eyebrow: A lighter footprint
 A smaller population can consume less than a larger version of the same population. That is a real benefit of fertility decline: fewer households need less land, and fewer consumers produce less waste.
 {: .lede}
 
-The environmental case deserves to be taken seriously because population is part of the pressure humans place on the natural world, though consumption and technology matter too. A wealthy household may use many times the resources of a poor one, while a clean electrical grid can support more people with fewer emissions than a smaller population burning coal. [*Laudato Si'* rejects using population growth to avoid confronting extreme consumption](https://www.vatican.va/content/francesco/en/encyclicals/documents/papa-francesco_20150524_enciclica-laudato-si.html#50). The child of a poor family is not the ecological equivalent of another mansion, flight, or disposable product in a rich one.
+The environmental case deserves to be taken seriously because population is part of the pressure humans place on the natural world. The Intergovernmental Panel on Climate Change identifies both population and income growth as persistent drivers of greenhouse-gas emissions, while finding [large differences in emissions per person across regions and income groups](https://www.ipcc.ch/report/ar6/wg3/chapter/chapter-2/). A wealthy household may use many times the resources of a poor one, while a clean electrical grid can support more people with fewer emissions than a smaller population burning coal. The child of a poor family is not the ecological equivalent of another mansion, flight, or disposable product in a rich one.
 
 The more difficult question is what depopulation actually does to places, and whether a population that stabilizes at a lower level should be treated the same as one that keeps shrinking generation after generation.
 
@@ -30,7 +30,9 @@ A city cannot shrink a sewer pipe each time a resident leaves. Water quality can
 
 Consumption can move abroad as well. An aging rich country may close a polluting factory and import the same goods from a younger one. Its territorial emissions fall while the global environmental burden changes much less.
 
-Lower population therefore makes some environmental goals easier without guaranteeing them. Stewardship still requires workers who manage forests, restore wetlands, maintain clean infrastructure, and build better energy systems.
+Lower population therefore makes some environmental goals easier without guaranteeing them. The United Nations Environment Programme reports that high-income countries [use six times as many materials and generate ten times the climate impacts](https://www.unep.org/news-and-stories/press-release/rich-countries-use-six-times-more-resources-generate-10-times) of low-income countries. Reducing extravagant consumption and cleaning production can matter more than a modest difference in headcount.
+
+Stewardship still requires people who manage forests, restore wetlands, maintain clean infrastructure, and build better energy systems. That work is not evidence that environmental limits disappear. It shows why abandonment and care are different conditions.
 
 ## Stabilization is not endless contraction
 
@@ -38,7 +40,7 @@ There is no reason to deny the appeal of a somewhat smaller human footprint. A p
 
 If each generation is smaller than the one before it, the environmental gain keeps arriving through the disappearance of future people, while over time there are also fewer people available to care for the places left behind. That is a costly and unreliable conservation policy.
 
-The better aim is a flourishing natural world inhabited by people capable of restraint. Technology can reduce damage, and population stabilization can help. Farther out, expansion beyond Earth may enlarge human possibility without requiring every additional person to place the same pressure on this planet. None of that requires pretending that more people are environmentally free. It requires treating human beings as possible stewards as well as consumers.
+The better aim is a flourishing natural world inhabited by people capable of restraint. Technology can reduce damage, and population stabilization can help. None of that makes more people environmentally free. It treats human beings as possible stewards as well as consumers, then judges them by what they actually do to the places entrusted to them.
 
 Fewer people can leave a lighter footprint. Whether the land heals depends on what the people who remain choose to do with it.
 
@@ -46,8 +48,8 @@ Fewer people can leave a lighter footprint. Whether the land heals depends on wh
 
 **Citations**
 
-1. European Environment Agency, [“State of nature in Europe: a health check”](https://www.eea.europa.eu/en/topics/at-a-glance/nature/state-of-nature-in-europe-a-health-check).
-2. European Environment Agency, [*Rethinking Agriculture*](https://www.eea.europa.eu/en/analysis/publications/rethinking-agriculture), 2022.
+1. Intergovernmental Panel on Climate Change, [“Emissions Trends and Drivers”](https://www.ipcc.ch/report/ar6/wg3/chapter/chapter-2/), in *Climate Change 2022: Mitigation of Climate Change*, 2022.
+2. European Environment Agency, [“State of nature in Europe: a health check”](https://www.eea.europa.eu/en/topics/at-a-glance/nature/state-of-nature-in-europe-a-health-check).
 3. European Environment Agency, [*Environmental Indicator Report 2012: Ecosystem Resilience and Resource Efficiency in a Green Economy in Europe*](https://www.eea.europa.eu/en/analysis/publications/environmental-indicator-report-2012/environmental-indicator-report-2012-ecosystem/part3.xhtml), 2012.
-4. Francis, [*Laudato Si'*, no. 50](https://www.vatican.va/content/francesco/en/encyclicals/documents/papa-francesco_20150524_enciclica-laudato-si.html#50), 2015.
+4. United Nations Environment Programme, [“Rich countries use six times more resources, generate 10 times the climate impacts than low-income ones”](https://www.unep.org/news-and-stories/press-release/rich-countries-use-six-times-more-resources-generate-10-times), March 1, 2024.
 </div>

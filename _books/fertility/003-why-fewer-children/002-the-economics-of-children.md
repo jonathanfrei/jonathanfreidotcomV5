@@ -1,47 +1,53 @@
 ---
 title: The economics of children
-deck: Prosperity can make children easier to support while raising the threshold for feeling ready to have them
-eyebrow: Money and time
+deck: Affordability is a threshold made from money, time, security, and expectations
+eyebrow: Becoming ready
 ---
 
-The economic problem is not simply that children cost money. Rich societies have more resources than any generation before them, but adulthood now comes with expensive thresholds before a child feels prudent: an independent home, stable work, enough income to absorb childcare, and enough time to parent according to modern expectations.
+“We cannot afford a child” can describe several different problems. A household may lack enough income for basic needs. It may be able to support a baby but not lose either paycheck. It may have adequate income and no stable lease, childcare place, or confidence that today's job will exist next year. It may also be trying to satisfy a standard of readiness that keeps moving as adulthood becomes more expensive.
 {: .lede}
 
-A couple can spend years living just short of that threshold. They renew the lease because the down payment is not there yet; one job looks promising but still feels temporary; the apartment works for two people, perhaps even for a baby, but a second child would mean another bedroom, another childcare bill, and a daily schedule with almost no slack. Another year simply passes.
+Those are not interchangeable claims. Housing, care, work, and insecurity shape when people begin and whether they have another child. Understanding that effect requires greater precision than the word *cost* usually receives.
 
-Housing often comes first. Couples wait to move out of a shared apartment, leave their parents' home, or buy in a neighborhood where they would feel comfortable raising children. The [OECD's 2024 review](https://www.oecd.org/en/publications/society-at-a-glance-2024_918d8db3-en/full-report/fertility-trends-across-the-oecd-underlying-drivers-and-the-role-for-policy_770679b8.html) found rising housing expenditure associated with lower fertility across member countries, and Southern Europe combines expensive housing, late household formation, and very low fertility.
+## Four meanings of affordability
+
+The first is **absolute resources**: food, shelter, healthcare, clothing, and the other goods a child requires. Poverty can make pregnancy and childhood dangerous even where fertility remains high.
+
+The second is **cash cost after a birth**. Rent may rise when a family needs another bedroom. Formal childcare can consume much of one income. Healthcare, transportation, and schooling vary sharply by country and place. These costs often arrive together rather than one at a time.
+
+The third is **opportunity cost**. Time devoted to care cannot simultaneously be sold as labor, used for training, or spent recovering from work. The loss may appear years later as slower wage growth, missed promotion, or reduced retirement savings. It usually falls more heavily on the parent whose employment bends around care.
+
+The fourth is **risk**. A couple may be able to pay today's bills and still doubt that it could survive a layoff, medical problem, rent increase, or unavailable childcare. Fertility decisions concern years of obligation, so confidence about the future matters alongside current income.
+
+The OECD's 2024 review found a negative association across member countries between fertility and housing costs and unemployment, while employment for both women and men was positively associated with fertility. Those cross-country regressions do not give one household's decision a numerical cause. They fit the more modest claim that stable work and attainable housing help adults cross into family life.
 
 ![Dense apartment towers in Quarry Bay, Hong Kong](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Quarry_Bay_apartments_%28Unsplash%29.jpg/960px-Quarry_Bay_apartments_%28Unsplash%29.jpg)
 
-**The first expensive threshold** Apartment towers in Quarry Bay, Hong Kong. An independent home now sits in front of family formation in a way it did not for earlier generations, and the cost of space is part of why a second child can feel reckless. *[via Unsplash / Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Quarry_Bay_apartments_(Unsplash).jpg)*
+**Space before another child** Apartment towers in Quarry Bay, Hong Kong. Housing cost affects not only whether a couple can establish an independent household but whether another bedroom and another child appear feasible. *[Via Unsplash and Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Quarry_Bay_apartments_(Unsplash).jpg)*
 {: .caption}
 
-Childcare adds another threshold after the first birth, especially when both incomes matter partly because housing and formal care are already expensive. A scarce slot or unreliable schedule can turn a second child from something desired into something that feels financially reckless. Countries with a smoother bridge from parental leave into affordable childcare generally make work and family easier to combine, though recent declines in high-support countries show how much remains after that barrier is removed.
+## A documented household pattern
 
-The decision often arrives in ordinary arithmetic at the kitchen table. One parent can picture the second crib; the other is looking at the monthly childcare charge, the mortgage, the commute, and the number of days already spent covering a sick child.
+Imagine no named couple and no invented dialogue, only a sequence that appears repeatedly in the data. Two adults have enough income to rent a small apartment. Buying near work requires a down payment they do not yet have, while moving farther away would lengthen both commutes. They can fit one crib into the apartment. A second child would require more space and a second childcare place while both incomes remain necessary to cover housing and care.
 
-## The cost off the books
+The first child does not merely add another line to a budget. The birth rearranges work, transport, sleep, household labor, and the margin available for anything to go wrong. A family that once expected two children can become a one-child family without either parent deciding that children are unimportant. The first birth revealed the full price of the second.
 
-The larger economic cost is often time, because an hour spent caring for a child is an hour not spent earning, resting, or advancing at work. As education and wages rise, that trade becomes more expensive.
-
-Mothers still absorb more of the direct care. In the [2024 American Time Use Survey](https://www.bls.gov/news.release/archives/atus_06262025.htm), women living with children under eighteen averaged 1.79 hours a day of primary childcare, compared with 1.11 for men; with a child under six, women spent about three hours and men two. Even those averages miss much of the background labor: the sick-day pickup, the appointment remembered, the schedule rearranged.
-
-A working parent may decline travel or move into a more flexible role, and the cost can surface years later in slower wage growth or retirement savings. It falls most heavily on the parent whose career bends, still usually the mother. Higher earnings therefore pull in both directions: they make diapers and rent easier to pay while making time away from work more expensive, so the path to becoming affluent can consume the same years in which a couple hoped to have several children.
+Childcare demonstrates why cash and opportunity costs cannot be separated cleanly. Formal care allows both parents to remain employed; its price then makes both incomes more necessary. If a place is unavailable or its hours do not cover work, one parent must reduce hours or improvise care. Countries that make leave and childcare easier to combine with employment generally reduce that conflict, though recent low fertility in many high-support countries shows that removing one barrier does not settle every threshold.
 
 ## When enough keeps moving
 
-Parents in wealthy societies also spend more on each child because the standard of a good childhood has risen. A family may feel responsible for the better school district, the organized activity, and eventually college. None of those choices is absurd; together they can turn four affordable children into two expensive ones.
+Prosperity can make children easier to support while raising the standard parents believe they must meet. Education lasts longer. Independent housing becomes a prerequisite rather than something built gradually after marriage. Parents expect to supervise school, activities, health, and development closely. A good childhood can begin to look like a demanding professional project.
 
-Economic insecurity creates delay even when lifetime income is adequate. A couple waits for the permanent job, the lower mortgage rate, or the year that finally feels stable. Waiting can be rational one year at a time and still leave less room for the family they wanted.
+Some of those expectations protect children. Some are positional: access to a particular neighborhood or school matters partly because other families are competing for it too. Some express love through investment. Together they can turn a household that is wealthy by historical standards into one that sincerely experiences another child as financially reckless.
 
-The [OECD evidence](https://www.oecd.org/en/publications/society-at-a-glance-2024_918d8db3-en/full-report/fertility-trends-across-the-oecd-underlying-drivers-and-the-role-for-policy_770679b8.html) reflects that tension: employment can support fertility by providing income and confidence while housing expense and insecurity push it down. “Affordable” is not a fixed number.
+That sincerity should be respected without treating every perceived prerequisite as fixed. Earlier families often began before every condition was settled because marriage and parenthood were part of becoming established rather than the reward for completing the process. Modern adults are commonly asked to finish becoming secure before accepting the obligation through which much of adult life once acquired its shape.
 
-Rich countries should be able to make that threshold lower than they do.
+Economics therefore changes fertility through timing as much as deprivation. Another lease, another contract job, or another year saving for a home can be reasonable. Repeated long enough, the threshold consumes reproductive time. The next page turns from the price attached to children to the institutions that decide whose time and career will absorb it.
 
 <div class="citation">
 
 **Citations**
 
-1. Organisation for Economic Co-operation and Development, [“Fertility trends across the OECD: Underlying drivers and the role for policy”](https://www.oecd.org/en/publications/society-at-a-glance-2024_918d8db3-en/full-report/fertility-trends-across-the-oecd-underlying-drivers-and-the-role-for-policy_770679b8.html), in *Society at a Glance 2024*, 2024.
-2. U.S. Bureau of Labor Statistics, [*American Time Use Survey—2024 Results*](https://www.bls.gov/news.release/archives/atus_06262025.htm), June 26, 2025.
+1. Organisation for Economic Co-operation and Development, [“Fertility Trends Across the OECD: Underlying Drivers and the Role for Policy”](https://www.oecd.org/en/publications/society-at-a-glance-2024_918d8db3-en/full-report/fertility-trends-across-the-oecd-underlying-drivers-and-the-role-for-policy_770679b8.html), in *Society at a Glance 2024*, 2024.
+2. Organisation for Economic Co-operation and Development, [*OECD Family Database*](https://www.oecd.org/en/data/datasets/oecd-family-database.html).
 </div>

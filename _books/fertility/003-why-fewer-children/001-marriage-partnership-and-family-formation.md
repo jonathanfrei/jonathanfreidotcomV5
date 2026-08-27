@@ -1,54 +1,58 @@
 ---
 title: Marriage, partnership, and family formation
-deck: Before a child can be born, two people usually have to build a life in which a child belongs
-eyebrow: The missing household
+deck: The path to a child often narrows before anyone begins trying to conceive
+eyebrow: Meeting and commitment
 ---
 
-Before there is a childcare problem or an IVF problem, there is usually a partnership problem. A child most often arrives after two people meet, decide to stay together, and build a household stable enough to welcome one; each of those steps now happens later, and for more people, not at all.
+Before there is a childcare problem or an infertility problem, two people generally have to meet, choose one another, and build a life in which a child belongs. When that process begins later, takes longer, or never reaches a durable commitment, births disappear before anyone has made a decision about family size.
 {: .lede}
 
-The sequence can look perfectly sensible while it is happening: finish school, find work, move somewhere with better opportunities, date for a while, wait until the relationship feels secure, save enough to live independently. None of those decisions is obviously anti-family. Put together, they can move the beginning of family life several years later than either person once imagined.
+Consider one documented pattern without turning it into an invented person. In the United States, the median age at first marriage in 2025 was 30.8 for men and 28.4 for women. Fifty years earlier it was 23.5 and 21.1. A couple marrying at the newer median has not necessarily rejected children. Both may have spent their twenties doing what adulthood now asks: finishing school, establishing work, moving toward opportunity, and searching carefully for a partner. They begin the same hoped-for family with seven fewer years behind the wedding.
 
-In the United States, the [median age at first marriage in 2025](https://www.census.gov/newsroom/press-releases/2025/families-and-living-arrangements.html) was 30.8 for men and 28.4 for women, up from 23.5 and 21.1 in 1975. The change brought real gains—less pressure to marry young, more independence, more room to leave a bad match—while moving marriage deeper into the years when couples who want several children have less time to have them.
+The gain is real. Later marriage can mean less pressure to accept a bad match, greater financial independence, and more freedom to leave danger or mistreatment. The demographic effect does not require those gains to be mistakes. It begins with time.
 
 ![Median age at first marriage in the United States, 1890 to the present](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/1890-_Age_at_first_marriage_-_by_gender.svg/960px-1890-_Age_at_first_marriage_-_by_gender.svg.png)
 
-**Marriage moved into the thirties** Median age at first marriage in the United States, from Census Bureau historical tables. The postwar dip reversed after 1970; the climb has not. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:1890-_Age_at_first_marriage_-_by_gender.svg)*
+**Marriage moved later** Median age at first marriage in the United States. The postwar dip reversed after 1970, moving commitment deeper into the years when couples who want several children have less room for delay. *[Via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:1890-_Age_at_first_marriage_-_by_gender.svg)*
 {: .caption}
 
-Marriage is also less common. Married couples made up 47 percent of American households in 2025, down from 66 percent fifty years earlier, though cohabitation has replaced part of the decline and childbearing outside marriage is common enough that marriage statistics alone no longer describe family formation. Roughly half of first births reported in the [2015–2019 National Survey of Family Growth](https://stacks.cdc.gov/view/cdc/122080) occurred before marriage; about half of those premarital births occurred within cohabiting unions.
+## Marriage is not the same demographic institution everywhere
 
-What has become less predictable is durable partnership. Some cohabiting couples share years of affection, sacrifice, and daily life without making the public and permanent promise that distinguishes marriage from an arrangement sustained by present consent; others are still testing whether the relationship will last. A household that may dissolve next year is a harder place to plan a second or third child, even if a first child has already arrived.
+Marriage statistics cannot be read alone. In the European Union, 41 percent of births occurred outside marriage in 2024, ranging from 10 percent in Greece to 62 percent in Bulgaria. Cohabiting unions carry much of the childbearing that marriage once contained in parts of Europe. A falling marriage rate there does not translate mechanically into the same fall in births.
 
-## Why partnership begins later
+Korea and Japan sit near the other end of the comparison. In the OECD's 2020 data, fewer than 3 percent of births in each country occurred outside marriage. Where sex, household formation, and childbearing remain strongly organized around marriage, fewer marriages close one of the main routes to parenthood. The same change in legal marital status can therefore have a different demographic effect in France, the United States, and Japan.
 
-A person can want marriage and children very much and still fail to find someone suitable who wants the same life at the same time. The problem may not feel demographic at all. It can feel like another first date that goes nowhere, another relationship that almost becomes serious, another year in which marriage still seems close enough not to worry about.
+The relevant question is not only whether a certificate exists. It is whether adults form a union stable enough to carry pregnancy, care, and the prospect of another child. Cohabiting couples can share affection, sacrifice, property, and years of life. Some intend permanence; others understand the household as provisional. Those differences matter more than a label alone, but they are harder to measure.
 
-The pool itself has changed. Women now earn more college degrees than men while couples still tend to pair with someone of similar education, and steady employment matters too, particularly for men. A [national study of sexual activity](https://pmc.ncbi.nlm.nih.gov/articles/PMC7293001/) found that young men with lower income or part-time or no employment were more likely to report no sexual activity. Weak employment can make a man less confident about commitment and less attractive as a husband at the same time that women have less economic reason than previous generations to accept an unreliable partner.
+In the United States, roughly half of first births reported in the 2015–2019 National Survey of Family Growth occurred before marriage, and about half of those premarital births occurred within cohabiting unions. That is not a story of childbearing simply moving outside relationships. It is a story of family formation occurring through unions with different expectations and degrees of stability.
 
-Expectations placed on a spouse have risen too. Marriage is now asked to provide romance, emotional intimacy, shared purpose, and a fair division of domestic life for decades. Those are good things to want, but together they can turn an ordinary human decision into a search for certainty that never quite arrives.
+## The partnership market
 
-Dating apps widen the pool and sometimes create marriages that would not have happened otherwise; in 2022, [30 percent of American adults](https://www.pewresearch.org/internet/2023/02/02/from-looking-for-love-to-swiping-the-field-online-dating-in-the-u-s/) had used a dating site or app. An apparently endless catalogue can also keep choice provisional. The apps are good at presenting options. They cannot create trust, shared purpose, or the willingness to stop looking.
+A person can want marriage and children and still fail to find someone suitable who wants the same life at the same time. The failure is experienced privately: another relationship that almost became serious, another year in which marriage remained plausible enough not to feel urgent.
 
-## Why the household stays fragile
+Employment matters, especially for men. A national study of sexual activity found that young American men with lower income or part-time or no employment were more likely to report no sexual activity. That association does not prove that a job would produce a marriage. It does show that economic readiness and relationship formation are not separate worlds. Weak employment can delay a man's willingness to commit while also making him a less attractive prospective husband.
 
-Partnership instability reduces completed family size because separation ends a couple's childbearing years together and can consume years before another durable partnership forms. The effect falls especially hard on later births, which require enough confidence in the household to add another dependent person to it. Divorce was not the sole cause of the original postwar fertility decline; it belongs in the chain that turns delayed partnership into fewer births.
+Education has changed the pool as well. Women now earn more university degrees than men in many wealthy societies while people still tend to partner with someone of similar education. The result is not a simple shortage of men or women. It is a problem of matching expectations, location, education, work, age, and willingness to commit at the same moment.
 
-Single adulthood has also become a longer normal stage of life. Some people prefer it, while others drift into it through a sequence of reasonable postponements and continue assuming marriage will happen later. At thirty, another year can feel trivial. At forty, the same year is not the same thing.
+Digital courtship changes how that matching occurs; a later section will examine the evidence. The partnership result belongs here. A larger visible pool does not guarantee a durable union, and more choice can coexist with more adults who remain unpartnered through their prime family-forming years.
 
-I think marriage matters here for reasons larger than demography. It joins a man and woman in a public promise of fidelity and permanence, creating a home open to the children who may come from their union. The promise does not guarantee happiness or prevent every failure, but it gives spouses, children, relatives, and the wider community a clear claim on the couple's intention to remain.
+## What marriage adds
 
-Marriage is therefore more than official recognition of an existing romance. It creates a social reality with duties that survive changes in feeling. The [Compendium of the Social Doctrine of the Church describes the family as the first natural society](https://www.vatican.va/roman_curia/pontifical_councils/justpeace/documents/rc_pc_justpeace_doc_20060526_compendio-dott-soc_en.html#CHAPTER%20FIVE), a judgment that fits the ordinary experience of children: before they encounter a school, market, or state, they receive a name, language, and place in the world from a family. Public policy cannot manufacture that promise, though a culture can make commitment easier to reach and more honorable to keep.
+I think marriage matters for reasons larger than its correlation with births. It asks a man and woman to make their relationship public and durable, to accept obligations that survive changes in mood, and to form a household open to children and connected to kin across generations. The promise can be broken. Marriage can be unsafe, unequal, or unavailable, and no ceremony guarantees a good home. Its failures do not make the promise meaningless.
 
-Before the empty school or shrinking workforce comes the household that never formed.
+A child enters a web of claims that the child did not negotiate. Parents owe care; relatives acquire relationships; each spouse has reason to expect the other to remain when family life becomes inconvenient. Marriage gives that web a recognized center. It is more than official approval of a romance because it changes what the adults owe one another and what others may reasonably expect from them.
+
+That institutional claim should not be confused with a claim that every unmarried person lacks commitment or that every marriage should have children. It explains why societies in which durable union becomes later, rarer, or more fragile can experience fewer births even when many individuals remain positively disposed toward family life.
+
+The first threshold is therefore not the price of a crib. It is whether two people find one another and make a common future definite enough for a child to enter it.
 
 <div class="citation">
 
 **Citations**
 
 1. U.S. Census Bureau, [“Census Bureau Releases New Estimates on America's Families and Living Arrangements”](https://www.census.gov/newsroom/press-releases/2025/families-and-living-arrangements.html), November 2025.
-2. Kimberly Daniels and others, [*Fertility of Men and Women Aged 15–49 in the United States: National Survey of Family Growth, 2015–2019*](https://stacks.cdc.gov/view/cdc/122080), National Center for Health Statistics, 2023.
-3. Peter Ueda and others, [“Trends in Frequency of Sexual Activity and Number of Sexual Partners Among Adults Aged 18 to 44 Years in the US, 2000–2018”](https://pmc.ncbi.nlm.nih.gov/articles/PMC7293001/), *JAMA Network Open* 3, no. 6, 2020.
-4. Colleen McClain and others, [“From Looking for Love to Swiping the Field: Online Dating in the U.S.”](https://www.pewresearch.org/internet/2023/02/02/from-looking-for-love-to-swiping-the-field-online-dating-in-the-u-s/), Pew Research Center, 2023.
-5. Pontifical Council for Justice and Peace, [*Compendium of the Social Doctrine of the Church*, Chapter Five](https://www.vatican.va/roman_curia/pontifical_councils/justpeace/documents/rc_pc_justpeace_doc_20060526_compendio-dott-soc_en.html#CHAPTER%20FIVE), 2004.
+2. Eurostat, [*Demography of Europe—2026 Edition*](https://ec.europa.eu/eurostat/web/interactive-publications/demography-2026), 2026.
+3. Organisation for Economic Co-operation and Development, [*Society at a Glance 2024*](https://www.oecd.org/en/publications/society-at-a-glance-2024_918d8db3-en.html), 2024.
+4. Kimberly Daniels and others, [*Fertility of Men and Women Aged 15–49 in the United States: National Survey of Family Growth, 2015–2019*](https://stacks.cdc.gov/view/cdc/122080), National Center for Health Statistics, 2023.
+5. Peter Ueda and others, [“Trends in Frequency of Sexual Activity and Number of Sexual Partners Among Adults Aged 18 to 44 Years in the US, 2000–2018”](https://pmc.ncbi.nlm.nih.gov/articles/PMC7293001/), *JAMA Network Open* 3, no. 6, 2020.
 </div>
