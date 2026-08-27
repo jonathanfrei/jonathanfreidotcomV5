@@ -1,0 +1,11 @@
+name = "img-proxy"
+main = "src/index.js"
+compatibility_date = "2026-08-27"
+
+# Same-origin mask: only this prefix; HTML still comes from GitHub Pages.
+[[routes]]
+pattern = "jonathanfrei.com/img*"
+zone_name = "jonathanfrei.com"
+
+# Set with: npx wrangler secret put IMG_HMAC
+# Must match the Jekyll/Actions secret IMG_HMAC.

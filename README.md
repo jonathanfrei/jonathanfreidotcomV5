@@ -97,7 +97,7 @@ This zone is on the **Free** plan. Redirect **Then** expressions cannot use `reg
 
 **Cache Rule** so HTML is stored at the nearest Cloudflare PoP. Exclude static extensions so the existing long-TTL asset rule (issue #119) is not shortened to 2 hours.
 
-When: Hostname equals `jonathanfrei.com`, and file extension is not `css` / `js` / `png` / `jpg` / `webp` / `svg` / `ico` / `woff` / `woff2` / `xml` / `json`.
+When: Hostname equals `jonathanfrei.com`, file extension is not `css` / `js` / `png` / `jpg` / `webp` / `svg` / `ico` / `woff` / `woff2` / `xml` / `json`, and URI Path does **not** start with `/img` (the image Worker is a separate rule).
 
 Exclude **`.json`**. `/search.json` changes every publish; if Cache Everything holds it for 2 hours, `/categories?category=` and `/tags?tag=` show “No matching posts” until the edge expires or you purge.
 
@@ -116,7 +116,14 @@ Static assets (issue #119) keep their own rule:
 | Match | Edge TTL | Browser TTL |
 | --- | --- | --- |
 | URI Path matches `*.css` OR `*.js` OR `*.png` OR `*.jpg` OR `*.webp` OR `*.svg` OR `*.ico` OR `*.woff2` OR `*.woff` | 1 month (or longer) | 1 day – 1 week |
+| URI Path starts with `/img` (Worker image proxy; include the query string in the cache key) | 1 month | 1 month |
 | URI Path matches `*.xml` (feeds/sitemaps) | 2 hours | 1 hour |
+
+### Image proxy (`/img`)
+
+Browser-facing transforms are `https://jonathanfrei.com/img/?url=…&w=…&output=webp&q=85&we&s=…`. A Worker on that prefix HMAC-checks `s=` (secret `IMG_HMAC`, same value in Actions and `npx wrangler secret put IMG_HMAC`) then fetches wsrv.nl. Unsigned URLs 403 so this is not an open proxy. GIFs and `data-full-src` originals stay on `media.jonathanfrei.com` (or the hotlink host).
+
+Deploy the Worker from `workers/img-proxy/` after adding a route `jonathanfrei.com/img*` on this zone. Production builds fail without the `IMG_HMAC` repo secret.
 
 ### Early Hints and compression
 
