@@ -124,16 +124,11 @@ archive_media:
     # When true, rewrite http(s) third-party <img> src through the proxy (#116)
     hotlink: true
 
-# Production /assets (CSS, JS, favicons) via jsDelivr's GitHub CDN.
-# Generated /assets/css/core.css maps to _includes/main.css (the file in git).
-# editorial.css / book.css map the same way (see AssetCdn::SOURCE_MAP).
-# Pinned to the build commit so deploys are not stuck on the @main cache.
-# Origin copies still write to _site/assets for local serve. ASSETS_CDN=off
-# forces origin URLs. Local `jekyll serve` stays on /assets.
-assets_cdn:
-  enabled: auto
-  host: "https://cdn.jsdelivr.net"
-  repo: "jonathanfrei/jonathanfreidotcomV5"
+# /assets (CSS, JS, favicons) stay on origin. asset_url appends ?v=<content
+# hash> so Cloudflare's long browser TTL cannot keep a stale design-system
+# file after a CSS/JS change. Generated CSS hashes the include source
+# (see AssetCdn::SOURCE_MAP in _plugins/asset_cdn.rb). Fonts are versioned
+# filenames under /assets/fonts/ and are not fingerprinted.
 
 # Static HTML drop-ins (issue #88): top-level *.html under each root publish at
 # /{root}/{slug} (no trailing slash). Sibling folders hold assets only.
