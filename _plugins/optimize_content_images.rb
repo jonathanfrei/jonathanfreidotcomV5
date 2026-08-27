@@ -70,7 +70,7 @@ module Jekyll
     }.freeze
 
     # Already going through our image CDN/proxy — do not re-proxy.
-    PROXY_HOST = %r{\Ahttps?://(?:wsrv\.nl|images\.weserv\.nl|cdn\.jsdelivr\.net|(?:www\.)?jonathanfrei\.com/img)/}i.freeze
+    PROXY_HOST = %r{\Ahttps?://(?:wsrv\.nl|images\.weserv\.nl|cdn\.jsdelivr\.net|(?:www\.)?jonathanfrei\.com/img(?:/|\?|\z))}i.freeze
 
     # wsrv defaults to http when the scheme is omitted. Some origins
     # (Springer) 404 on that http fetch; force ssl: for those (#203).
@@ -365,7 +365,7 @@ module Jekyll
       inner = strip_protocol(origin_url)
       sig = sign_query(inner, width, format, q)
       query = "url=#{CGI.escape(inner)}&w=#{width}&output=#{format}&q=#{q}&we&s=#{sig}"
-      "#{proxy}/?#{query}"
+      "#{proxy}?#{query}"
     end
 
     def parse_attrs(attr_str)

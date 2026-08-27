@@ -79,6 +79,7 @@ This zone is on the **Free** plan. Redirect **Then** expressions cannot use `reg
    ```txt
    ends_with(http.request.uri.path, "/")
    and http.request.uri.path ne "/"
+   and http.request.uri.path ne "/img/"
    and not http.request.uri.path wildcard "/archive/*/*/"
    and not http.request.uri.path wildcard "*/page/*/"
    ```
@@ -89,7 +90,7 @@ This zone is on the **Free** plan. Redirect **Then** expressions cannot use `reg
    concat("https://jonathanfrei.com", wildcard_replace(http.request.uri.path, "/*/", "/${1}"))
    ```
 
-   `/about/` → `/about`. Leave `/archive/2016/01/` and `/blog/page/2/` alone.
+   `/about/` → `/about`. Leave `/archive/2016/01/`, `/blog/page/2/`, and `/img/` alone.
 
 3. **HSTS** (SSL/TLS → Edge Certificates): on, 6 months. Include subdomains only if `v1` / `v2` / `media` are all HTTPS.
 
@@ -121,7 +122,7 @@ Static assets (issue #119) keep their own rule:
 
 ### Image proxy (`/img`) — do this **before** merging the `/img` PR
 
-Browser-facing transforms are `https://jonathanfrei.com/img/?url=…&w=…&output=webp&q=85&we&s=…`. A Worker on that prefix HMAC-checks `s=` then fetches wsrv.nl. Unsigned URLs 403. GIFs and `data-full-src` originals stay on `media.jonathanfrei.com` (or the hotlink host).
+Browser-facing transforms are `https://jonathanfrei.com/img?url=…&w=…&output=webp&q=85&we&s=…` (no slash after `img` — a trailing `/img/` is 301’d by the existing slash-strip rule). A Worker on that prefix HMAC-checks `s=` then fetches wsrv.nl. Unsigned URLs 403. GIFs and `data-full-src` originals stay on `media.jonathanfrei.com` (or the hotlink host).
 
 There is **no Cloudflare plugin** in the coding agents for this repo. The existing Actions secret `CLOUDFLARE_API_TOKEN` is **Cache Purge only** — it cannot create Workers, routes, or Worker secrets. Do the steps below in GitHub + the Cloudflare dashboard (or Wrangler on your machine).
 
@@ -179,10 +180,16 @@ npx wrangler deploy
 Smoke **before** merge (any random signed URL is not required yet — this only proves the Worker is on the path):
 
 ```bash
-curl -sI "https://jonathanfrei.com/img/?url=example.com/x.jpg&w=768&output=webp&q=85&we"
+curl -sI "https://jonathanfrei.com/img?url=example.com/x.jpg&w=768&output=webp&q=85&we"
 ```
 
-Expect **403** `invalid signature` (or `missing transform params` if you omit fields). **404 from GitHub Pages** means the route is missing. **500 proxy unconfigured** means the Worker secret is missing.
+Use **no slash** after `img` (`/img?url=`, not `/img/?url=`). A slash hits the trailing-slash **301** first; `curl -sI` will stop there and never show the Worker.
+
+Expect **403** `invalid signature` (or `missing transform params` if you omit fields). Headers will **not** include `x-github-request-id`.
+
+- **301** to `/img?…` — you requested `/img/`. Try the URL without the extra slash.
+- **404** with `x-github-request-id` / `via: 1.1 varnish` — the request reached **GitHub Pages**. The Worker route is missing or the pattern is too strict (`jonathanfrei.com/img/*` does **not** match `/img`). Use route `jonathanfrei.com/img*`.
+- **500** `proxy unconfigured` — Worker secret `IMG_HMAC` is missing.
 
 #### 4. Cache Rules (dashboard; Free plan)
 

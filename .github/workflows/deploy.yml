@@ -423,10 +423,10 @@ jobs:
             echo "OK: no wsrv.nl transform URLs in HTML/JSON"
           fi
           if [ -f _site/search.json ]; then
-            if grep -q 'jonathanfrei.com/img/?url=' _site/search.json && grep -q '&s=' _site/search.json; then
+            if grep -q 'jonathanfrei.com/img?url=' _site/search.json && grep -q '&s=' _site/search.json; then
               echo "OK: search.json uses signed /img URLs"
             else
-              echo "::error::search.json should contain signed jonathanfrei.com/img/?url= URLs"
+              echo "::error::search.json should contain signed jonathanfrei.com/img?url= URLs"
               missing=1
             fi
             if grep -q 'https://wsrv.nl/' _site/search.json; then
@@ -460,7 +460,7 @@ jobs:
             else
               echo "OK: /about does not mention wsrv.nl"
             fi
-            if grep -q '/img/?url=' _site/about.html; then
+            if grep -q '/img?url=' _site/about.html || grep -q '/img/?url=' _site/about.html; then
               echo "::error::_site/about.html should not load /img transforms"
               missing=1
             else
