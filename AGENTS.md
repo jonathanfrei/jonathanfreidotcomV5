@@ -15,7 +15,7 @@ This is a personal site and blog: **Jekyll 4.x → GitHub Actions → GitHub Pag
 | Deploy | Push to `main` runs a single full `deploy.yml` (manual `workflow_dispatch` also available). Archive media stays on **S3**, not the Pages artifact. |
 | Archive media | Served from **S3** (`media.jonathanfrei.com/v{2,3}-archive/media/…`). See `archive_media` in `_config.yml` and issues #68 / #170. In-repo media trees may be removed after migration. |
 | New post photos | S3 `https://media.jonathanfrei.com/assets/img/…` via the factory upload worker. Absolute CDN URLs in Markdown. Do **not** commit binaries or use site-relative `/assets/img/` for new photos (that path is favicon/profile on Pages). |
-| Image perf | `_plugins/optimize_content_images.rb` optimizes **all own site images** (archive media + S3 `/assets/img/` + in-repo `/assets/`): dimensions, lazy/LCP hints, responsive WebP via same-origin `/img` (Worker → wsrv.nl; HMAC `IMG_HMAC`). Full-res on `data-full-src`. See issue #90. |
+| Image perf | `_plugins/optimize_content_images.rb` optimizes **all own site images** (archive media + S3 `/assets/img/` + in-repo `/assets/`): dimensions (local files, else fail-soft wsrv JSON), lazy/LCP hints, responsive WebP via same-origin `/img` (Worker → wsrv.nl; HMAC `IMG_HMAC`). Full-res on `data-full-src`. See issue #90. |
 
 ### Directory map
 
@@ -348,7 +348,7 @@ Production depends on external services for media (configured in `_config.yml` `
 | Post chrome (tags, comment mailto, random post) | `_layouts/post.html` tags; `_includes/post-actions.html` (Comment · Edit · Random · Blog on essays and links; random fetches `search.json`, including link posts — #221) |
 | Post metadata (last_modified, reading time) | `_plugins/post_metadata.rb` + `post_metadata` in `_config.yml` (#75) |
 | Search / tag / archive indexes | `_plugins/site_index.rb` + `site_index` in `_config.yml` (#195). `search.json` includes `date_label` and first-image `img` (`src` signed `/img` URL, `alt`, optional `full` original) for stream results (#219). |
-| Image proxy Worker | `workers/img-proxy/` — route `jonathanfrei.com/img*`. Secret `IMG_HMAC` must match Actions. |
+| Image proxy Worker | `workers/img-proxy/` — route `jonathanfrei.com/img*`. Secret `IMG_HMAC` must match Actions. 200s cache 30d; 4xx/5xx `no-store`. Redeploy the Worker after changing `src/index.js` (Pages deploy does not). |
 | Date timezone | `_config.yml` `timezone: America/New_York` (#180) |
 | Drop caps on long posts | `_plugins/drop_cap.rb` + `.prose--drop-cap` in `main.css` (#123) |
 | Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` (thin dump of `site.data.search_index`). URLs: `?q=`, `?tag=`, `?category=`, `?title=`; `?=text` aliases `?q=`. The query string is the source of truth until the user types; an inline seed fills the box on first paint (#211). `search.js` is deferred; `/search` and query URLs reserve result space so the footer does not shift (#212). Result cards reuse the `/blog` stream markup (title, long date, tag chips, excerpt, first image, Read more; link entries hide the title) (#219). Tag, category, and archive lists stay visible below results. |
