@@ -15,7 +15,7 @@ This is a personal site and blog: **Jekyll 4.x → GitHub Actions → GitHub Pag
 | Deploy | Push to `main` runs a single full `deploy.yml` (manual `workflow_dispatch` also available). Archive media stays on **S3**, not the Pages artifact. |
 | Archive media | Served from **S3** (`media.jonathanfrei.com/v{2,3}-archive/media/…`). See `archive_media` in `_config.yml` and issues #68 / #170. In-repo media trees may be removed after migration. |
 | New post photos | S3 `https://media.jonathanfrei.com/assets/img/…` via the factory upload worker. Absolute CDN URLs in Markdown. Do **not** commit binaries or use site-relative `/assets/img/` for new photos (that path is favicon/profile on Pages). |
-| Image perf | `_plugins/optimize_content_images.rb` optimizes **all own site images** (archive media + S3 `/assets/img/` + in-repo `/assets/`): dimensions (local files, else fail-soft wsrv JSON), lazy/LCP hints, responsive WebP via same-origin `/img` (Worker → wsrv.nl; HMAC `IMG_HMAC`). Full-res on `data-full-src`. See issue #90. |
+| Image perf | `_plugins/optimize_content_images.rb` optimizes **all own site images** (archive media + S3 `/assets/img/` + in-repo `/assets/`): width/height from local files when present, lazy/LCP hints, responsive WebP via same-origin `/img` (Worker → wsrv.nl; HMAC `IMG_HMAC`). Full-res on `data-full-src`. Do not fetch wsrv JSON at build time. See issue #90. |
 
 ### Directory map
 
