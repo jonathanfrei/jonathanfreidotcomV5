@@ -1,7 +1,7 @@
 {% comment %}
-  Shared design system on every page. Production loads from jsDelivr;
-  onerror swaps to the origin copy under /assets. Feature sheets stay
-  content-gated in optional-css.html (#165).
+  Shared design system on every page. Fingerprinted origin URL
+  (`/assets/css/core.css?v=`). Feature sheets stay content-gated in
+  optional-css.html (#165).
 {% endcomment %}
 {% include asset-stylesheet.html path="/assets/css/core.css" rel="preload" as="style" %}
 {% include asset-stylesheet.html path="/assets/css/core.css" %}
