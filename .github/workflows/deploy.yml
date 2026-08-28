@@ -48,6 +48,10 @@ jobs:
         # wait at 10 minutes. Full build keeps cascade pages coherent.
         run: |
           set -euo pipefail
+          if [ -z "${IMG_HMAC:-}" ]; then
+            echo "::error::IMG_HMAC secret is required (same value as the img-proxy Worker secret)"
+            exit 1
+          fi
           start=$(date +%s)
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
           end=$(date +%s)
@@ -56,6 +60,8 @@ jobs:
         env:
           JEKYLL_ENV: production
           ARCHIVE_MEDIA_MODE: cdn
+          # HMAC for /img Worker URLs. Must match the Worker secret IMG_HMAC.
+          IMG_HMAC: ${{ secrets.IMG_HMAC }}
           # Match _config.yml timezone so permalinks/bylines stay Eastern (#180).
           TZ: America/New_York
 
@@ -409,7 +415,25 @@ jobs:
             fi
           fi
 
-          # Resource hints: self-hosted fonts; wsrv/media only when the page uses them.
+          # Resource hints: self-hosted fonts; media only when the page uses originals.
+          if grep -RqlF 'https://wsrv.nl/?url=' _site --include='*.html' --include='*.json'; then
+            echo "::error::wsrv.nl transform URLs still present in HTML/JSON"
+            missing=1
+          else
+            echo "OK: no wsrv.nl transform URLs in HTML/JSON"
+          fi
+          if [ -f _site/search.json ]; then
+            if grep -q 'jonathanfrei.com/img?url=' _site/search.json && grep -q '&s=' _site/search.json; then
+              echo "OK: search.json uses signed /img URLs"
+            else
+              echo "::error::search.json should contain signed jonathanfrei.com/img?url= URLs"
+              missing=1
+            fi
+            if grep -q 'https://wsrv.nl/' _site/search.json; then
+              echo "::error::search.json still points at wsrv.nl"
+              missing=1
+            fi
+          fi
           if [ -f _site/about.html ]; then
             if grep -q 'cdn.jsdelivr.net' _site/about.html; then
               echo "::error::_site/about.html should not mention cdn.jsdelivr.net"
@@ -430,11 +454,17 @@ jobs:
             else
               echo "OK: /about does not preload Source Sans 3"
             fi
-            if grep -q 'href="https://wsrv.nl"' _site/about.html; then
-              echo "::error::_site/about.html should not hint wsrv.nl"
+            if grep -q 'wsrv.nl' _site/about.html; then
+              echo "::error::_site/about.html should not mention wsrv.nl"
               missing=1
             else
-              echo "OK: /about does not hint wsrv.nl"
+              echo "OK: /about does not mention wsrv.nl"
+            fi
+            if grep -q '/img?url=' _site/about.html || grep -q '/img/?url=' _site/about.html; then
+              echo "::error::_site/about.html should not load /img transforms"
+              missing=1
+            else
+              echo "OK: /about does not use /img"
             fi
             if grep -q 'href="https://media.jonathanfrei.com"' _site/about.html; then
               echo "::error::_site/about.html should not hint media.jonathanfrei.com"

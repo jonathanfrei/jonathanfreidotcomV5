@@ -87,23 +87,6 @@
     return /\.gif(?:[?#]|$)/i.test(String(src || ""));
   }
 
-  function displayImgSrc(src) {
-    if (!src || isGifSrc(src)) return src;
-    if (/^https?:\/\/(?:wsrv\.nl|images\.weserv\.nl)\//i.test(src)) return src;
-    if (!/^https?:\/\//i.test(src)) return src;
-    var inner;
-    if (/^https:\/\/(?:[^/]+\.)?(?:springernature\.com|springer\.com)\//i.test(src)) {
-      inner = src.replace(/^https:\/\//i, "ssl:");
-    } else {
-      inner = src.replace(/^https?:\/\//i, "");
-    }
-    return (
-      "https://wsrv.nl/?url=" +
-      encodeURIComponent(inner) +
-      "&w=768&output=webp&q=85&we"
-    );
-  }
-
   function renderTags(tags) {
     if (!Array.isArray(tags) || !tags.length) return "";
     var html = '<div class="post-tags"><ul class="post-tags__list">';
@@ -127,16 +110,17 @@
     if (!img) return "";
     var src = typeof img === "string" ? img : img.src;
     var alt = typeof img === "object" && img ? img.alt : "";
-    if (!isSafeSrc(src) || isGifSrc(src)) return "";
-    var display = displayImgSrc(src);
+    var full =
+      typeof img === "object" && img && img.full ? img.full : src;
+    if (!isSafeSrc(src) || isGifSrc(src) || isGifSrc(full)) return "";
     var tag =
       '<img src="' +
-      escapeHtml(display) +
+      escapeHtml(src) +
       '" alt="' +
       escapeHtml(alt || "") +
       '" loading="lazy" decoding="async"';
-    if (display !== src) {
-      tag += ' data-full-src="' + escapeHtml(src) + '"';
+    if (full && full !== src && isSafeSrc(full)) {
+      tag += ' data-full-src="' + escapeHtml(full) + '"';
     }
     tag += ">";
     if (permalink) {
