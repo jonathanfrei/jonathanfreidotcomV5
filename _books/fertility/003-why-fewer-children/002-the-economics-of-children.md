@@ -28,9 +28,9 @@ The OECD's 2024 review found a negative association across member countries betw
 
 ## A documented household pattern
 
-Imagine no named couple and no invented dialogue, only a sequence that appears repeatedly in the data. Two adults have enough income to rent a small apartment. Buying near work requires a down payment they do not yet have, while moving farther away would lengthen both commutes. They can fit one crib into the apartment. A second child would require more space and a second childcare place while both incomes remain necessary to cover housing and care.
+The opening timeline showed how thresholds can delay a first child. Economics adds something the opening could not: the first birth reveals costs that were partly invisible beforehand. A crib may fit in the apartment while a second child requires another bedroom and childcare place, even as both incomes remain necessary to pay for housing and care.
 
-The first child does not merely add another line to a budget. The birth rearranges work, transport, sleep, household labor, and the margin available for anything to go wrong. A family that once expected two children can become a one-child family without either parent deciding that children are unimportant. The first birth revealed the full price of the second.
+The first child does not merely add another line to a budget. The birth rearranges work, transport, sleep, household labor, and the margin available for anything to go wrong. A family that once expected two children can become a one-child family because the first birth revealed the full price of the second.
 
 Childcare demonstrates why cash and opportunity costs cannot be separated cleanly. Formal care allows both parents to remain employed; its price then makes both incomes more necessary. If a place is unavailable or its hours do not cover work, one parent must reduce hours or improvise care. Countries that make leave and childcare easier to combine with employment generally reduce that conflict, though recent low fertility in many high-support countries shows that removing one barrier does not settle every threshold.
 

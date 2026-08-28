@@ -14,19 +14,17 @@ Across the European Union, total fertility fell to 1.34 in 2024, the lowest valu
 **Different countries, no replacement-level case** Total fertility rates in EU member states in 2022. The image predates the bloc's 2024 record low and should be read as a map of variation, not current values. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:2022_EU_total_fertility_rate.svg)*
 {: .caption}
 
-Southern Europe shows how late family formation and insecure entry into adult life can coincide with very low fertility. In 2024, Spain's TFR was 1.10. Italy combined similarly low fertility with a mean age at first birth above 31. Housing, work, and partnership all matter, but those causes belong to the next chapter. The demographic point is that a trough can persist long enough to reduce the size of the cohorts that follow.
+Southern Europe shows the depth of that persistence. In 2024, Spain's TFR was 1.10. Italy combined similarly low fertility with a mean age at first birth above 31. A trough can last long enough to reduce the size of the cohorts that follow.
 
 Northern and western Europe once appeared to offer a durable higher-fertility model. France and several Nordic countries paired family benefits, childcare, and women's employment with rates nearer replacement than southern Europe. Those arrangements still make family life easier and may keep fertility higher than it would otherwise be. Recent declines have narrowed the difference. France remained among the higher-fertility EU members in 2024 at 1.61, still well below replacement.
 
-Central and eastern Europe reveal a different combination. After state socialism, births were postponed during economic upheaval. Emigration then removed many young adults from some countries. Fertility and migration can compound each other: fewer children are born, and some of the people who might have formed families leave.
+Central and eastern Europe add emigration to the pattern. After state socialism, births were postponed during economic upheaval, and many young adults later left some countries. Fewer children were born while part of the population most likely to form families moved elsewhere.
 
 ## A population can grow while births trail deaths
 
-The European Union has recorded more deaths than births since 2012. Its population nevertheless grew in 2023 and 2024 because net migration more than offset natural decrease. That is not statistical trickery. Migration adds people, relationships, work, and often future children to the receiving country. It can sustain national capacity for decades.
+The European Union has recorded more deaths than births since 2012. Its population nevertheless grew in 2023 and 2024 because net migration more than offset natural decrease. Europe contains both sides of that movement: western cities enlarged by migration and eastern or rural places losing young adults. The continental population can grow while its births still trail its deaths.
 
-It does not make the underlying fertility pattern disappear. Nor can every shrinking country draw young adults from somewhere else without changing the countries they leave. Europe contains both sides of that movement: western cities enlarged by migration and eastern or rural places losing young adults.
-
-No European policy model has reliably restored replacement fertility. That conclusion should not be stretched into the claim that policy does nothing. Childcare, leave, housing, and income support can improve lives, reduce unwanted tradeoffs, and affect timing or family size at the margin. Europe establishes a more limited and sobering fact: prosperity, social spending, and a recovery from recession do not automatically end a low-fertility regime once it has become ordinary.
+Childcare, leave, housing, and income support can improve lives and affect timing or family size at the margin. No European policy model has reliably restored replacement fertility. Europe's distinct lesson is persistence: prosperity, social spending, and recovery from recession do not automatically end a low-fertility regime once it has become ordinary.
 
 <div class="citation">
 

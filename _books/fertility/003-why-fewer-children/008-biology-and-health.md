@@ -22,7 +22,7 @@ Men age reproductively too. Sperm production continues, but semen quality and se
 
 The asymmetry still matters. Ovarian aging places a more definite boundary around a woman's years of possible conception with her own eggs. A culture can acknowledge that fact without turning women into reproductive clocks or pretending that men have unlimited time. Partnership requires two people arriving at readiness together.
 
-A second composite timeline shows the accumulated mechanism. A man delays commitment while work is unstable. He meets a woman in her early thirties. They marry after several years, try for a child, experience a miscarriage, and begin evaluation after six months. No one event is extraordinary. The sequence leaves less room for treatment and another birth than either person expected when family remained a future intention.
+The opening timeline already showed how ordinary delays accumulate. Biology adds the constraint involving two people: when partners arrive at commitment together, each brings a different reproductive history and the remaining time is shared. A later marriage, miscarriage, or period of treatment can therefore narrow the chance of another child more quickly than either partner expected when family remained a future intention.
 
 ## Infertility is not one measure
 

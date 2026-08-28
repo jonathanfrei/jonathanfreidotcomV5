@@ -4,7 +4,7 @@ deck: People are more willing to bear the cost of children when parenthood is ho
 eyebrow: A future worth entering
 ---
 
-No one has a child for the fertility rate. People have children because family belongs to their picture of adulthood and because a life larger than their own seems worth serving; culture works at that level, helping decide which sacrifices look admirable and which look like avoidable mistakes.
+The earlier account of causes described how culture makes some adult lives appear normal, admirable, or safely postponable. The institutional question is who gives those judgments a visible form. Employers confer status, families recommend or withhold a model of adulthood, congregations celebrate promises and births, and stories teach young people what success looks like.
 {: .lede}
 
 Parents know that children are costly in the broadest sense. They interrupt sleep, strain a marriage, and narrow freedom for years. In a 2023 Pew survey, parents commonly said the work was harder than expected, yet most also described it as rewarding and enjoyable most of the time. Public language has become better at describing the loss of freedom than the enlargement of life that many parents report alongside it.

@@ -9,9 +9,7 @@ India and Niger do not belong in one demographic category simply because both ar
 
 India shows how quickly the old map can change. Its 2019–21 National Family Health Survey estimated a national TFR of 2.0. The country can continue growing because it has a vast young population, not because current fertility remains high everywhere. The same survey found a range from 3.0 in Bihar to 1.1 in Sikkim. India's demographic future is the sum of transitions already at different stages within one country.
 
-Latin America moved from high fertility to low fertility in a few generations. Mexico's 2023 estimate was 1.6. Brazil, Chile, Colombia, and Uruguay also sit below replacement in the UN's 2024 estimates. The region is younger than Europe, but its window between falling fertility and intensive aging is narrower than Europe's was.
-
-Northern Africa and Western Asia resist one story. Fertility has fallen sharply in Iran and Turkey, while Yemen remained above four in 2024. Income and religion do not fix one family size, and political boundaries group populations with different marriage, education, health, and migration patterns.
+Latin America moved from high fertility to low fertility in a few generations. Mexico, Brazil, Chile, Colombia, and Uruguay now sit below replacement in recent national or UN estimates even though the region remains younger than Europe. Northern Africa and Western Asia contain another wide range: fertility has fallen sharply in Iran and Turkey, while Yemen remained above four in 2024. No income group, religion, or regional label fixes one family size.
 
 ## Where high fertility remains
 
@@ -22,11 +20,9 @@ The largest concentration of high fertility is now in sub-Saharan Africa. Of the
 **A young age structure with growth already built in** Niger's population by single year of age in 2020. Even a substantial fertility decline would work through the large cohorts approaching adulthood. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Niger_single_age_population_pyramid_2020.png)*
 {: .caption}
 
-Sub-Saharan Africa is not moving on one clock. Fertility decline began later and has generally proceeded more slowly than it did in Asia and Latin America, especially in Middle and Western Africa. Eastern and Southern Africa have often moved faster. Desired family size, child survival, women's education, marriage, contraception, urbanization, and the economic role of children differ within the region as they do elsewhere.
+Sub-Saharan Africa is not moving on one clock. Fertility decline began later and has generally proceeded more slowly than it did in Asia and Latin America, especially in Middle and Western Africa; Eastern and Southern Africa have often moved faster.
 
-The contrast with affluent societies also complicates a common claim about affordability. Children cost money everywhere, but absolute income cannot explain why richer societies so often have fewer of them. The relevant costs include housing, time, foregone earnings, schooling expectations, available kin, and the place children occupy in family and economic life. Chapter 3 will follow those differences more closely.
-
-For the next several decades, much of the world's growth will come from countries with young populations, particularly in sub-Saharan Africa, while countries elsewhere shrink. That does not place Africa outside the demographic turn. It shows why the turn is uneven: today's births act through age structures made by yesterday's births.
+For the next several decades, much of the world's growth will come from countries with young populations, particularly in sub-Saharan Africa, while countries elsewhere shrink. Africa is not outside the demographic turn. Its younger cohorts show why the turn appears on different clocks: today's births act through age structures made by yesterday's births.
 
 That interaction is population momentum. It is the mechanism that lets global growth and national contraction occur together—and that can keep a country shrinking after fertility begins to recover.
 

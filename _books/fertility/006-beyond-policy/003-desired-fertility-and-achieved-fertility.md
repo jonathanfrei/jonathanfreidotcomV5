@@ -4,18 +4,14 @@ deck: The distance between the family a person hoped for and the family that arr
 eyebrow: The children people miss
 ---
 
-A fertility rate records births. It cannot tell us whether people got the families they hoped for; that question requires asking what they wanted, then waiting long enough to see what relationships, time, and health allowed.
+A fertility rate records births. It cannot tell us whether people got the families they hoped for. The earlier account of causes distinguished ideals, desires, intentions, expectations, and achieved fertility; the task here is to locate where institutions widen or narrow the distance between them.
 {: .lede}
 
-Answers about an “ideal” number of children are loose. A person may be recalling the family admired in childhood or naming a wish detached from present circumstances. Intentions sit closer to action and change as life changes, while expected fertility reflects some of those constraints already. None of these measures is a promise.
-
-They still reveal a persistent shortfall. The United Nations Population Fund and YouGov surveyed more than 14,000 people in fourteen countries in 2025. Nearly one in five adults of reproductive age believed they would be unable to have the number of children they desired. Among respondents past most childbearing years, 31 percent reported fewer children than they ideally would have chosen and 12 percent reported more. This was an online, cross-national survey, not a representative sample of the whole world. It records what respondents said about their own lives at one point in time.
+The United Nations Population Fund and YouGov surveyed more than 14,000 people in fourteen countries in 2025. Nearly one in five adults of reproductive age believed they would be unable to have the number of children they desired. Among respondents past most childbearing years, 31 percent reported fewer children than they ideally would have chosen and 12 percent reported more. This was an online, cross-national survey, not a representative sample of the whole world, and an ideal is not a promise or fixed plan. The results still identify a substantial group for whom circumstance did some of the choosing.
 
 Helping more people achieve the families they hoped for is a humane first objective for demographic renewal. When large numbers reach the end of childbearing with fewer children than they once wanted, low fertility is not simply the aggregate expression of satisfied individual preferences. That objective rejects coerced pregnancy and does not presume that every childless adult is secretly disappointed.
 
-It is only a first objective because preferences do not arrive untouched by culture. People learn what adulthood is supposed to look like from families, schools, workplaces, entertainment, advertising, religion, and the status signals around them. A culture that spends decades presenting independence, career advancement, and consumption as markers of success while treating marriage and children as private lifestyle choices should not be surprised if desires shift accordingly.
-
-A culture friendly to births does not need to despise people who remain childless in order to say that marriage, motherhood, fatherhood, and larger families are goods worth aspiring to. Equal human dignity does not require silence about which commitments help a society continue. It does require refusing to rank the worth of persons by marital status or number of children.
+It is only a first objective because preferences do not arrive untouched by culture. That mechanism is already part of the causal account. The institutional question is who supplies a different experience of adulthood: families that recommend marriage without treating an unmarried child as a failure, workplaces that do not punish parenthood, schools and congregations that make children ordinary, and public programs that remove barriers without turning a survey answer into a quota.
 
 ## Intention meets another person
 

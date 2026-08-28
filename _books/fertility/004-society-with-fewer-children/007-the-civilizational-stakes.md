@@ -11,11 +11,9 @@ Low fertility removes links from those chains unevenly. A large country can carr
 
 ## Knowledge needs successors
 
-Modern knowledge is cumulative. Each generation begins with more to learn before it can reach the frontier. Benjamin Jones found that inventors have responded to this [growing burden of knowledge](https://www.nber.org/papers/w11360) through narrower specialization and larger teams. That arrangement produces extraordinary results, while making each technical system dependent on more people who understand only part of it.
+Modern knowledge is cumulative. Each generation begins with more to learn before it can reach the frontier. Benjamin Jones found that inventors have responded to this [growing burden of knowledge](https://www.nber.org/papers/w11360) through narrower specialization and larger teams. Better tools can keep those teams productive. The consequence at this stage is succession: more specialized systems create more positions in which losing the only person prepared to take responsibility can break a chain.
 
-Research effort has also had to rise to sustain progress in several fields. The study discussed earlier found sharply declining research productivity in semiconductors and medicine even as the number of researchers increased. Artificial intelligence may reverse some of that decline; I hope it does. A smaller team with better tools may outperform a larger one. People will still have to test errors, choose the problems worth solving, and train successors capable of taking responsibility for the result.
-
-Cultural transmission is more intimate. A recorded language remains alive while someone speaks it. A child learns a recipe beside her grandmother and learns obligation by watching a parent keep one. An archive can preserve the words. It cannot supply the next speaker.
+Cultural practices expose the same shortage without requiring the same scale. A recorded language or documented craft may remain available after the community that practiced it has lost enough possible heirs. Chapter 6 will take up the close work by which a person becomes capable of receiving such an inheritance. The consequence here is simpler: fewer successors leave more practices competing for each one.
 
 ## Resilience requires spare capacity
 
@@ -31,7 +29,7 @@ We should adapt. The age structure of the next few decades is largely set, and o
 
 A country may balance its pension system and automate its factories while each generation remains smaller. That can be sustainable through a forecast period. If contraction persists, another generation inherits the same allocation problem at a different scale.
 
-The previous sections have followed smaller cohorts through families, work, public finance, political power, places, and knowledge. Wealth, migration, automation, healthy aging, consolidation, and careful reform can buffer each pressure, sometimes for a long time. None deserves to be dismissed merely because it does not create a child.
+The consequence chain has distinct stages. Scarce labor tests productivity; public promises become questions of transfers and care; politics allocates costs and power; a lighter environmental footprint supplies a real countervailing good. Succession determines what happens when all of them operate together. Wealth, migration, automation, healthy aging, consolidation, and careful reform can buffer the pressures, sometimes for a long time. The remaining question is how much margin survives after they do.
 
 The remaining question is whether governments can do more than manage the consequences. They have changed fertility before, often through means no humane society should repeat. Modern family support is different in both purpose and method, though much of it begins after the first meeting, commitment, home, or hope from which a child might come. The next chapter examines that record.
 
@@ -40,5 +38,4 @@ The remaining question is whether governments can do more than manage the conseq
 **Citations**
 
 1. Benjamin F. Jones, [“The Burden of Knowledge and the ‘Death of the Renaissance Man’: Is Innovation Getting Harder?”](https://www.nber.org/papers/w11360), *Review of Economic Studies* 76, no. 1, 2009.
-2. Nicholas Bloom, Charles I. Jones, John Van Reenen, and Michael Webb, [“Are Ideas Getting Harder to Find?”](https://www.nber.org/papers/w23782), *American Economic Review* 110, no. 4, 2020.
 </div>

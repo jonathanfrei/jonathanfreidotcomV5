@@ -14,6 +14,8 @@ Imagine that fertility turns upward and keeps going. A decade from now, family-s
 
 This is the path of renewal, and it is not a quick rescue. The missing cohorts remain missing, while a baby born into the recovery will spend roughly two decades consuming care, education, and household income before entering the full-time workforce. Recovery changes the destination before it relieves the journey.
 
+The chapter's dashboard prevents that destination from being confused with one encouraging annual rate. It has an order. Demographic measures must show recovery surviving across cohorts; without that, the other goods may describe a flourishing society, but not generational renewal. Household wellbeing and institutional succession test the human quality of the recovery. The remaining margin for care, stewardship, and new work shows what the recovery preserves.
+
 No government has yet produced a durable return from very low fertility to replacement. The [United Nations found historical rebounds in 39 countries and territories](https://population.un.org/wpp/Publications/Files/WPP2024_Methodology-Report_Final.pdf), though its model does not assume those rebounds continue above replacement. In countries whose populations have already peaked, its central projection reaches only about 1.4 births per woman in 2100. A genuine recovery would therefore be something new enough that we should be careful about declaring one too early.
 
 ## A rebound that lasts
@@ -24,13 +26,13 @@ A durable recovery appears in cohorts: women born in one decade finish their chi
 
 The path needn't reproduce the baby boom. Replacement is a reasonable long-run direction because it lets generations renew themselves without requiring permanent inflows from somewhere else. Moving from 1.2 to 1.7 would still recover a great many births and families. It would also leave each generation smaller than the one before it if the rate stayed there.
 
-## More than a rate
+## Renewal across the dashboard
 
 Renewal is not whatever raises the total fertility rate for a year. A government could produce a brief jump by shifting births forward without changing how many children people eventually have. A country might record more births while marriages became less stable, parents became more exhausted, or children received less care. Those outcomes would improve one measure while damaging the human reality the measure is supposed to represent.
 
 The demographic direction still matters. Cultural creativity, adoption, teaching, friendship, and service can transmit an inheritance, but they cannot by themselves produce the people who will receive it. A renewing society needs births. It also needs homes in which children are welcomed rather than manufactured for a target, parents able to accept durable obligations, and institutions prepared to form successors rather than merely count them.
 
-The first signs would therefore appear in several places. More men and women would form the marriages or durable partnerships they had hoped to form while time for children remained. Fewer intended second and third children would disappear into repeated postponement. Completed family size would rise across cohorts. Parents and children would not pay for that recovery through worsening health, abandonment, or poverty. Schools, congregations, employers, trades, and towns would begin planning on the reasonable expectation that another generation was coming.
+The first signs would therefore appear in sequence. Completed family size would rise across cohorts as more men and women formed the marriages or durable partnerships they had hoped to form while time for children remained. Parents and children would not pay for that recovery through worsening health, abandonment, or poverty. Schools, congregations, employers, trades, and towns would begin planning on the reasonable expectation that another generation was coming. Care and maintenance would leave room for those households and institutions to begin rather than merely endure.
 
 None of these indicators is a moral score for an individual life. People who do not marry or have children remain full members of the common life, and much of its care and creation depends on them. The indicators describe whether a civilization as a whole is becoming more capable of succession.
 
