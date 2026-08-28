@@ -202,8 +202,8 @@ Expect **403** `invalid signature` (or `missing transform params` if you omit fi
 | Name | `/img` Worker transforms |
 | When | Hostname equals `jonathanfrei.com` **and** URI Path starts with `/img` |
 | Eligible for cache | On |
-| Edge TTL | Ignore origin cache-control → **1 month** |
-| Browser TTL | Override → **1 month** (or “Respect origin”; the Worker sends `max-age=2592000`) |
+| Edge TTL | **Respect origin** (do not ignore Cache-Control). The Worker sends `max-age=2592000` on 200s and `no-store` on errors so a Wikimedia 429 is not cached for a month. |
+| Browser TTL | Respect origin |
 | Cache key | Default (host + path + **full query string**). Do not ignore query string — `url`, `w`, and `s` distinguish variants. |
 
 Expression (Edit expression), if you prefer:
