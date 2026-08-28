@@ -1,59 +1,72 @@
 ---
 title: Country experiments
-deck: The countries that tried hardest show both the value and the limits of family policy
+deck: The countries that tried hardest show several kinds of success and no reliable route to replacement
 eyebrow: The record in practice
 ---
 
-Pronatalist policy has run long enough to leave a record. Governments have helped parents and sometimes raised fertility, but none of the wealthy countries most committed to the effort has secured a durable return from very low fertility to replacement.
+Pronatalist policy has run long enough to leave a record. Governments have reduced costs, protected parents, and sometimes moved births. None of the wealthy countries most committed to the effort has demonstrated a durable policy-led return from very low fertility to replacement.
 {: .lede}
 
 ![Fertility rates in France, Hungary, Finland, Japan, and South Korea, 1950–2023](https://ourworldindata.org/grapher/children-per-woman.png?tab=chart&time=1950..latest&country=FRA~HUN~KOR~FIN~JPN)
 
-**The record in five countries** Births per woman, UN estimates through 2023. France stayed higher for years, then fell; Hungary's rise after 2011 is visible and incomplete; South Korea dropped far below one. *[Our World in Data](https://ourworldindata.org/grapher/children-per-woman)*
+**Several policy models, no simple reversal** Births per woman, UN estimates through 2023. The lines show national outcomes, not the isolated effect of any one policy. *[Our World in Data](https://ourworldindata.org/grapher/children-per-woman)*
 {: .caption}
 
-France shows what sustained support can preserve. Family allowances, paid leave, and publicly supported childcare made the cost of children a continuing public concern rather than a private emergency. For a new parent, that support is not an abstract line in a budget; it is the difference between finding a childcare place and scrambling for one, between taking leave and wondering whether the household can absorb it. For years France maintained one of Europe's highest fertility rates.
+A national total fertility rate is the beginning of a comparison, not its verdict. It can rise because births happened earlier, because a policy changed completed family size, because the economy improved, because the population changed, or because several forces moved at once. The cases below test different claims: whether long-running support can preserve a higher floor, whether large targeted incentives can move the number, and whether generous downstream benefits can overcome bottlenecks that arise before parenthood.
 
-Then the number kept falling. France's TFR declined from 2.02 in 2010 to 1.56 in 2025, the lowest French level since the end of the First World War, and that year deaths exceeded births for the first time since the Second World War. The support may have kept fertility higher than it otherwise would have been and certainly made family life easier, but it did not hold the rate near replacement as age at first birth and family expectations continued to change. The Nordic countries reached a similar limit after building generous leave and childcare around high maternal employment; Finland's TFR fell to 1.25 in 2024.
+## France: can durable support preserve a higher floor?
 
-Compatibility helps families. It has not restored the older family pattern.
+France built family support across decades: allowances, paid leave, tax treatment of households, and publicly supported childcare. The package reaches parents at several stages and does more than advertise concern. For a new parent, it can mean finding a childcare place, taking leave without losing the household's income, or having another child without absorbing every cost privately.
 
-## Hungary moved the number
+For years France maintained one of Europe's higher fertility rates. That comparative result is consistent with family policy preserving births that might otherwise have been lost, although no untreated France exists for comparison and the package changed alongside work, migration, partnership, and age at birth.
 
-Hungary went further by making family formation a central political project and attaching substantial money to it. The policy becomes concrete when a married couple sits down to decide whether another child changes what they can afford: subsidized loans become more favorable with additional children, mothers receive large tax advantages, and family spending exceeds 3 percent of GDP by the OECD's measure. The TFR rose from about 1.23 in 2011 to 1.59 in 2021.
+The floor did not hold. France's TFR fell from 2.02 in 2010 to 1.56 in 2025. That was its lowest level since the end of the First World War; deaths also exceeded births for the first time since the Second World War. The average age at childbirth continued to rise, and fertility fell among women below thirty-five.
 
-A rise of that size is hard to dismiss. It lasted longer than the temporary bump that can follow a one-time bonus, although it was expensive, stopped well short of replacement, and later reversed direction. Some of the most generous programs favor married households with stable employment and enough income to borrow, which means they can make another child easier for an established couple while doing much less for adults who have not formed a household at all.
+France is not evidence that family support failed. Parents and children received help, work and care became more compatible, and fertility may have remained higher than under a weaker system. It is evidence that even a mature, broad package did not keep period fertility near replacement when other parts of family formation continued to change.
 
-A tax benefit can change the arithmetic for a couple already discussing a second or third child. It cannot introduce two people who have not met, repair a relationship that will not last, or give a thirty-five-year-old back the years in which family formation kept being postponed.
+The Nordic record tests much the same proposition. Extensive childcare and leave made motherhood more compatible with paid work, yet Finland's TFR reached 1.25 in 2024, its lowest level in records extending to 1776. Compatibility is a real social achievement. It has not proved sufficient for reversal.
 
-## South Korea reached the upstream problem
+## Hungary: can large targeted incentives move the number?
 
-South Korea has spent heavily against the lowest fertility in the world, expanding childcare and parental leave since 2006 while adding financial and housing support. Some individual reforms worked: a childcare subsidy increased pregnancies among affected women, and higher leave benefits increased the probability of birth for eligible workers. The national TFR was still 0.75 in 2024.
+Hungary made family formation a central political project. Subsidized loans became more favorable with additional children, mothers received substantial tax advantages, and public spending favored marriage and established households. The TFR rose from roughly 1.23 in 2011 to 1.59 in 2021.
+
+That increase lasted too long to dismiss as the brief response to a baby bonus. It also stopped far below replacement and later reversed: Hungary's official series reports a TFR of 1.39 in 2024. A full causal judgment has to account for changing birth timing, the number and age of women in the childbearing years, economic conditions, and policies introduced together rather than one at a time.
+
+Distribution is part of the result. Loan and tax programs can make another child easier for a married couple with stable earnings and enough income to borrow. They do less for a young adult who cannot form a household or for a low-income family that receives little value from a tax preference. A policy can move births among the people it reaches while leaving the national bottleneck earlier in adulthood.
+
+Hungary supplies a genuine partial success: a large and sustained policy effort coincided with a substantial rise. It also shows why durability belongs inside the test rather than being appended after it. The rise did not become replacement, and later gains proved vulnerable.
+
+## South Korea and Japan: what if benefits arrive downstream?
+
+South Korea expanded childcare and parental leave after 2006 and later added cash and housing support. Some reforms produced measurable responses among eligible women. National fertility nevertheless fell from 1.21 in 2014 to 0.72 in 2023 before rising slightly to 0.75 in 2024.
 
 ![Apartment complex in Seoul](https://upload.wikimedia.org/wikipedia/commons/f/ff/Koreatyp04.jpg)
 
-**Housing before the benefit applies** An apartment tower in Seoul. Parental leave and childcare reach a couple only after they have formed a household; expensive housing is one of the earlier bottlenecks. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Koreatyp04.jpg)*
+**Housing before the benefit applies** An apartment tower in Seoul. Leave and childcare begin helping after a household has formed; housing and partnership can become constraints earlier. *[Via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Koreatyp04.jpg)*
 {: .caption}
 
-Parental leave becomes useful only after a couple has formed, married or otherwise committed, conceived a child, and reached an employer where the benefit applies. Many adults are getting stuck earlier, during years shaped by long work hours, expensive housing, and delayed partnership.
+A childcare place cannot help adults who have not formed a durable relationship. Leave is useful after conception and mainly to workers covered by the program. South Korea's long hours, housing costs, education pressures, unequal care expectations, and delayed or foregone marriage do not prove that benefits are irrelevant. They help explain how individual programs can work for recipients while the national rate remains extremely low.
 
-Japan adds time to the problem. Decades of low fertility have reduced the number of women entering prime childbearing ages, so better childcare or leave now applies to a smaller pool of possible mothers than the same reform would have reached twenty years ago.
+Japan adds age structure to the test. Decades of low fertility have reduced the number of women entering the ages when most births occur. A policy can raise the probability of birth for an eligible woman while total births keep falling because fewer women are in that population. Period TFR, births, completed fertility, and the size of the parental generation no longer move as one measure.
 
-Family benefits can recover some births at the edge and make parenthood less punishing. Governments are much better at helping parents than at creating the relationships, timing, confidence, and desire that make people parents in the first place.
+## What the experiments establish
 
-That leaves two ways to postpone the consequences while the harder work continues: bring in people who were born somewhere else, or use machines to help fewer people do more. Both can be valuable. Neither reverses fertility decline.
+The strongest case for family policy survives this record. Modest fertility effects matter when repeated across many families, and support can be justified by lower child poverty, healthier parents, secure time with infants, or a fairer distribution of care even when no extra child follows. A country should not make family life unnecessarily punishing merely because benefits have not restored replacement.
+
+The skeptical case survives too. Policies arrive in bundles, people respond by changing timing, governments often act when fertility is already falling, and national rates lack a clean counterfactual. France tests sustained compatibility; Hungary tests large targeted incentives; South Korea tests the limit of downstream support. Each produced something worth understanding. None supplies a dial another government can copy and turn to 2.1.
+
+That leaves two ways to preserve room while the harder work continues: people can move from places with younger populations, and tools can help fewer workers carry more. Both can be valuable. They answer a different question from fertility reversal.
 
 <div class="citation">
 
 **Citations**
 
 1. Institut national de la statistique et des études économiques, [“Bilan démographique 2025”](https://www.insee.fr/fr/statistiques/8719824), 2026.
-2. Organisation for Economic Co-operation and Development, [“Fertility trends across the OECD”](https://www.oecd.org/en/publications/society-at-a-glance-2024_918d8db3-en/full-report/fertility-trends-across-the-oecd-underlying-drivers-and-the-role-for-policy_770679b8.html), 2024.
-3. Statistics Finland, [“Total fertility rate fell to an all-time low in 2024”](https://stat.fi/en/publication/cm1jb9m4a1y5l07w3qzsf7c3l), 2025.
-4. Hungarian Central Statistical Office, [“Live births, total fertility rate”](https://www.ksh.gov.hu/stadat_files/nep/en/nep0006.html).
+2. Organisation for Economic Co-operation and Development, [“Fertility trends across the OECD: Underlying drivers and the role for policy”](https://www.oecd.org/en/publications/society-at-a-glance-2024_918d8db3-en/full-report/fertility-trends-across-the-oecd-underlying-drivers-and-the-role-for-policy_770679b8.html), 2024.
+3. Statistics Finland, [“Birth rate fell to the lowest level in statistical history in 2024”](https://stat.fi/en/publication/cm1kgb0io92hk07w7910ibw3b), 2025.
+4. Hungarian Central Statistical Office, [“Live births, total fertility rate”](https://www.ksh.hu/stadat_files/nep/en/nep0006.html), updated 2026.
 5. Organisation for Economic Co-operation and Development, [*OECD Economic Surveys: Hungary 2026*](https://www.oecd.org/en/publications/oecd-economic-surveys-hungary-2026_1d93d51d-en.html), 2026.
 6. Organisation for Economic Co-operation and Development, [*Korea's Unborn Future*](https://www.oecd.org/en/publications/korea-s-unborn-future_005ce8f7-en.html), 2024.
 7. Statistics Korea, [*Birth Statistics in 2024*](https://kostat.go.kr/boardDownload.es?bid=11773&list_no=436027&seq=1), 2025.
 8. Organisation for Economic Co-operation and Development, [*OECD Economic Surveys: Japan 2024*](https://www.oecd.org/en/publications/oecd-economic-surveys-japan-2024_41e807f9-en.html), 2024.
-9. National Bureau of Statistics of China, [*Statistical Communiqué of the People's Republic of China on the 2025 National Economic and Social Development*](https://www.stats.gov.cn/english/PressRelease/202602/t20260228_1962661.html), 2026.
 </div>

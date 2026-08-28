@@ -4,10 +4,10 @@ deck: Family policy works best when it removes the constraint actually standing 
 eyebrow: Paying against the current
 ---
 
-Governments trying to raise fertility face a more complicated task than governments trying to lower it. A contraceptive can prevent a conception that might have occurred this month; a check cannot create a spouse or restore ten postponed years. Family policy works best when a couple already wants a child and one practical obstacle is keeping that child from arriving.
+Governments trying to raise fertility face a more complicated task than governments trying to lower it. A contraceptive can prevent a conception that might have occurred this month; a check cannot create a spouse or restore ten postponed years. Family policy works best when a couple already wants a child and one practical obstacle is keeping that child from arriving. The useful question is not whether a benefit “works” in the abstract, but which obstacle it removes and which outcome changes afterward.
 {: .lede}
 
-Cash is the simplest example. Quebec's Allowance for Newborn Children, which operated from 1988 to 1997 and paid more for later births, increased fertility among eligible families. Reviews of credible policy experiments generally find the same direction: sufficiently large financial incentives can produce more births, though some births merely happen sooner while others change completed family size. It takes years to know which occurred.
+Cash is the simplest example. Quebec's Allowance for Newborn Children, which operated from 1988 to 1997 and paid more for later births, increased births among eligible families. Reviews of policy experiments generally find that sufficiently large financial incentives can change behavior. Some births happen sooner; some families eventually have another child. A rise in births during the program is therefore not yet the same as a rise in completed family size.
 
 A one-time payment is small beside the cost of raising a child, but it can matter to a couple whose decision is close. If money is the binding constraint, more money can move the decision; if the problem is that the couple met at thirty-five, lives in a one-bedroom apartment, or cannot imagine fitting another baby into two demanding jobs, a bonus is solving something else.
 
@@ -22,7 +22,7 @@ Childcare reaches a later bottleneck. Once children exist, reliable care can mak
 **A childcare place, Fouesnant, 2024** A publicly supported crèche in Brittany. Across the OECD, spending on early-childhood care is more consistently associated with higher fertility than a ceremonial check at birth. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bidibulle-multi-accueil-Fouesnant-byRundvald.jpg)*
 {: .caption}
 
-Public support should not quietly prescribe where care happens. A childcare place may be exactly what one family needs; another would rather use the same resources to let a parent remain home for several years. Treating purchased care as the only productive arrangement turns family policy into employment policy and can leave the actual preference untouched.
+Public support should not quietly prescribe where care happens. A childcare place may be exactly what one family needs; another would rather use the same resources to let a parent remain home for several years. Tax rules and benefits can recognize either arrangement, or favor one without saying so. Treating purchased care as the only productive form of care turns family policy into employment policy and can leave the family's actual preference untouched.
 
 ## Time when the child arrives
 
@@ -32,7 +32,7 @@ Duration involves a real trade-off. Leave that ends too soon can force a mother 
 
 A policy presented as a remedy for low fertility has to be judged partly by whether more wanted children are born. A child allowance that reduces poverty, paid leave that protects a mother's health, or childcare that makes an existing family's week manageable can do real good without moving the birth rate; in that case the policy has helped families but has not solved the demographic problem. Keeping those judgments separate makes both clearer.
 
-The demographic test remains useful because it tells us how much these measures can do. OECD analysis estimates that an additional $1,000 per child in purchasing-power-adjusted spending on leave, childcare, or family allowances is associated with roughly a 1 to 1.6 percent increase in the TFR. That is enough to recover births at the margin. It is nowhere near enough to move a country from 1.4 to replacement by multiplying the appropriation.
+The demographic test remains useful because it tells us how much these measures can do. An OECD panel analysis of twenty-six countries from 2002 through 2019 found positive associations between fertility and spending on leave, early-childhood care, and family allowances. The design compares countries and years; it does not show that a legislature can buy a predictable increase by multiplying an appropriation. Policy tends to work inside the rest of a country's housing market, labor rules, partnership patterns, and expectations about care.
 
 Good family policy clears obstacles from a path people already want to take: it can make a home attainable, protect time with an infant, or keep another child from breaking the household budget. The harder cases are upstream. A childcare subsidy reaches a couple only after they have met, committed, conceived, and decided to become parents. Much of modern fertility decline happens before the application form exists.
 

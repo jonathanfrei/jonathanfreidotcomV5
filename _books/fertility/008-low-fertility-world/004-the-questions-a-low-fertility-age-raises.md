@@ -20,13 +20,27 @@ The boundary is equally clear. A population target gives the state no authority 
 
 Adaptation is part of both paths because the older population is already here. The missing workers of 2040 cannot be conceived in time to arrive as adults, so smaller places should still function well and older people should not be treated as a demographic mistake. The choice lies in whether managing that inheritance becomes an end in itself or preserves room to change the direction for generations that come later.
 
+No parliament chooses either path in one vote. The direction accumulates through household decisions, housing and labor markets, budgets, schools, employers, laws, and expectations. A country may move toward renewal while some regions keep contracting; it may record a fertility rebound that disappears when postponed births are completed. “Choice” names the pattern these decisions compose, not a command issued to the population.
+
 ## What to count
 
 Annual fertility rates tell us quickly when births move. Cohort measures eventually tell us more: whether women are actually completing larger families rather than shifting births from one year to another. Age at first birth helps show whether recovery is occurring earlier or depending on increasingly difficult late catch-up.
 
+Those measures arrive on different clocks. Over the next twenty-five years, age structure, care demand, and the number of adults entering work are mostly inherited. Within one generation, marriage, first births, completed family size, and the burden placed on young households reveal whether renewal is becoming easier. Across several generations, the size and distribution of successor cohorts begin changing schools, kin networks, institutions, and regions. A century is long enough for persistent direction to transform the society, but too long for a responsible forecast of its politics or technology.
+
 The household belongs beside the demographic measures. Are more people marrying when they want to? Are parents able to have the second or third child they had hoped for? Are children and marriages doing well? A policy that raises births while making family life harsher has missed the point. So has an adaptation that balances public finances by placing so much of the cost on young adults that forming the next generation becomes harder.
 
 Success would be untidy. Some adults would choose no children. Some towns would still close schools because their missing cohorts are already missing. A country could remain smaller for decades even while fertility recovered. The direction would nevertheless be different: more people able to form the families they wanted, and generations moving again toward renewal without being compelled to do it.
+
+## A dashboard, not one target
+
+No single number can distinguish the paths early enough. A useful public account would watch four kinds of evidence together.
+
+The first is demographic: period fertility, completed cohort fertility, births by parity, age at first marriage or partnership and first birth, and the size of cohorts entering adulthood. The second is household evidence: whether people can form durable relationships, whether desired children are being realized, and whether parents and children are healthy and secure. The third is institutional succession: whether schools, practices, trades, congregations, associations, and local governments can recruit and form the people who will carry their work. The fourth is capacity: whether care, debt, and inherited infrastructure are consuming a growing share of the time and resources that could support new families and uncertain projects.
+
+The dashboard is not a license to monitor private lives more aggressively. Governments already collect demographic and economic aggregates, and institutions already know whether they can recruit successors. Its purpose is intellectual honesty. A temporary rise in births is not yet cohort recovery. Higher output per worker is not proof that care is available. A balanced pension budget is not renewal if it is achieved by shifting so much cost onto young adults that they cannot form households.
+
+The indicators can disagree. That disagreement is information. A society may become materially richer while its family networks thin, or become more generous to parents without yet seeing completed fertility rise. Renewal is a direction sustained across these measures, not perfection in all of them at once.
 
 <div class="citation">
 

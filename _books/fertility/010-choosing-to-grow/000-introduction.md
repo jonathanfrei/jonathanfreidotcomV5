@@ -1,15 +1,16 @@
 ---
-title: Conclusion
-deck: Choosing whether humanity will continue to grow
+title: Choosing to Grow
+deck: Renewal is a shared direction pursued through different responsibilities and limited powers
 eyebrow: The fertility decline
 ---
 
-Nearly every adult alive inherited a world built by people who decided, usually without thinking in demographic terms, that another person should exist. We inherited languages we did not invent, schools we did not build, family stories that began before us, and institutions founded by people whose names we have forgotten; the fertility decline asks whether we intend to keep making heirs for that inheritance.
+A couple may be the only people who can decide whether to welcome another child. Other people have already helped shape the decision: the employer who sets the schedule, the city that permits or prevents a nearby home, the grandparents who move closer or farther away, the neighbors who become friends or remain strangers, and the government that decides how much of care belongs to a household alone.
 {: .lede}
 
-![A teacher kneeling to work with a young student, 2012](https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/05092012_-_Oyster_class_visit_Teacher_Appreciation_237.jpg/960px-05092012_-_Oyster_class_visit_Teacher_Appreciation_237.jpg)
+No one of them controls the fertility rate. Each holds some part of the world in which a family forms.
 
-**Heirs for what we received** A teacher working with a student, 2012. We inherited schools we did not build; the fertility decline asks whether we intend to keep making heirs for that inheritance. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:05092012_-_Oyster_class_visit_Teacher_Appreciation_237.jpg)*
-{: .caption}
+That is where the book's longest horizon returns to the present. The choice between contraction and renewal will not be made once, by one legislature or one generation. It will emerge from decisions made by people with unequal powers, different duties, and boundaries they should not cross.
 
-The direction should be renewal, even though much of the next few decades cannot be changed quickly. The people who will retire in the 2040s are already alive, as are most of the workers who will support them, and we owe both generations a humane adjustment to an older world. That care belongs inside a larger commitment to rebuild the conditions for family formation rather than hand permanent contraction to the people who come after us.
+Much of the next few decades is already set. The missing cohorts cannot be restored as adults, and a child born into recovery will need years of care before she adds to public capacity. A decent society must adapt to the older world arriving now. It should do so without arranging every institution around the expectation that the next generation will be smaller again.
+
+The direction should be renewal. That judgment is not a command that every person have children, a promise that government can engineer replacement fertility, or an excuse to transfer every cost to families. It is a commitment to use each kind of authority for the work proper to it: make family life more attainable, honor the obligations through which children are welcomed and formed, care for people through contraction, and preserve room for successors to build beyond what we received.

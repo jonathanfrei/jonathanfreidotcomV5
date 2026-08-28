@@ -4,16 +4,39 @@ deck: Governments learned to suppress births faster than they have learned to re
 eyebrow: The search for a turn
 ---
 
-China spent decades telling families that a second child was one too many. It ended the one-child regime in 2016, later allowed three children, and began offering support for families instead; the rule changed, but births kept falling. A government that had proved brutally capable of preventing births discovered that permission and money could not summon them back.
+China spent decades telling families that a second child was one too many. It ended the one-child regime in 2016, later allowed three children, and began offering support for families instead. The rule changed, but births kept falling. A government that had proved brutally capable of preventing births discovered that permission and money could not summon them back.
 {: .lede}
 
 ![Family-planning mural in Chengdu, China, 1988](https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Family_Planning_in_Chengdu%2C_China.jpg/960px-Family_Planning_in_Chengdu%2C_China.jpg)
 
-**A basic national policy, Chengdu, 1988** A mural promoting family planning as "a basic national policy of China," with one child at the center. The quota reached an individual woman's body; ending it did not bring the births back. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Family_Planning_in_Chengdu,_China.jpg)*
+**A basic national policy, Chengdu, 1988** A mural promoting family planning as “a basic national policy of China,” with one child at the center. The quota reached an individual woman's body; ending it did not bring the births back. *[Via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Family_Planning_in_Chengdu,_China.jpg)*
 {: .caption}
 
-That reversal captures the problem this chapter has to solve. No modern country has demonstrated a durable path from very low fertility back to replacement. Fertility is human behavior, not a physical constant, so today's rates are not destiny; the evidence still leaves us knowing much more about stopping a birth than restoring the chain of events that produces one.
+The asymmetry is real, but “reversal” can hide several different achievements. A benefit may improve life for parents and children without changing whether another child is born. It may help people have the child they already wanted, shift a birth into an earlier year, increase births among eligible families, or raise completed family size. Immigration can improve a country's age structure without raising fertility at all. A temporary increase in the total fertility rate is different again from a durable return toward replacement.
 
-The asymmetry runs through the policy record. A law can prohibit a pregnancy or make contraception easier to obtain, while helping a wanted child arrive is slower: two people have to meet, commit in time, find room in their lives, conceive, and decide that another child is worth the cost. Governments can make parts of that sequence easier. They can also help an aging country live with the births that never happened.
+These outcomes form a ladder rather than a single pass-or-fail test:
 
-Those are different jobs. The first half of this chapter asks what policy has actually done to fertility, first downward and then upward; the second looks at immigration and technology, which can help a smaller generation carry its inherited obligations without making the generation larger. The gap between those tasks points toward a harder possibility: conventional family policy may be arriving too late in the story.
+1. Parents and children are materially better off.
+2. More people achieve the family size they say they want.
+3. Births occur earlier, raising a period fertility measure.
+4. Eligible families have additional births.
+5. A cohort completes its reproductive years with more children.
+6. Population or age structure improves through births or migration.
+7. Very low fertility rises durably toward replacement.
+
+A policy can deserve support on the first rung even if it never reaches the seventh. Paid leave may protect a mother's health and time with an infant. Childcare may keep an existing family's week from breaking apart. Those are not consolation prizes. They are human goods that should not depend entirely on a national fertility target.
+
+The higher rungs still matter when a government says it is reversing demographic decline. A baby bonus can move a planned birth forward without changing completed fertility. A national rate can rise while the size of the next generation remains below replacement. It takes years to know whether a policy changed timing, family size, or neither, and no wealthy country has yet demonstrated a reliable policy-led route from very low fertility back to replacement.
+
+That conclusion should not be assumed from the final number. It has to survive the strongest cases. The next sections separate coercive reduction from voluntary family support, examine policies by the constraint they try to remove, and compare countries that sustained broad benefits or spent heavily to raise births. The final sections turn to immigration and technology, which can help a smaller generation carry its obligations and, in the case of reproductive medicine, recover some wanted births.
+
+Governments can reach many parts of family life. The record tells us which parts they reach well, which outcomes they can move, and where the path to a child begins before the usual benefit applies.
+
+<div class="citation">
+
+**Citations**
+
+1. National Bureau of Statistics of China, [*Statistical Communiqué of the People's Republic of China on the 2025 National Economic and Social Development*](https://www.stats.gov.cn/english/PressRelease/202602/t20260228_1962661.html), 2026.
+2. Organisation for Economic Co-operation and Development, [“Fertility trends across the OECD: Underlying drivers and the role for policy”](https://www.oecd.org/en/publications/society-at-a-glance-2024_918d8db3-en/full-report/fertility-trends-across-the-oecd-underlying-drivers-and-the-role-for-policy_770679b8.html), 2024.
+3. Tomáš Sobotka, Anna Matysiak, and Zuzanna Brzozowska, [*Policy Responses to Low Fertility: How Effective Are They?*](https://www.unfpa.org/publications/policy-responses-low-fertility-how-effective-are-they), United Nations Population Fund, 2019.
+</div>

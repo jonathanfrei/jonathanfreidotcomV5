@@ -1,36 +1,32 @@
 ---
-title: The Limits of Reversal
-deck: Government can clear a path to family life, though it cannot walk that path for anyone
-eyebrow: Conclusion
+title: What policy can do
+deck: Government can clear a path to family life without pretending it can walk that path for anyone
+eyebrow: Public responsibility
 ---
 
-Government should make it easier to marry, raise children, and sustain larger families. Helping people overcome barriers to children they already hope for is the clearest place to begin, but it is only one bounded part of a larger cultural task.
+No wealthy country has found a reliable government formula for restoring very low fertility to replacement and keeping it there. That verdict limits what policy can promise. It does not make government irrelevant.
 {: .lede}
-
-A home with room for a child has to be within reach, and work should leave space for pregnancy, infancy, and the disorderly years that follow. Paid leave and reliable childcare can keep another child from becoming a choice between family and economic security. These policies work best when they are durable enough for a couple to build plans around them rather than merely generous enough to make a good announcement.
 
 ![A family-sized house in Arcadia, California](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Cozy_white_house_%28Unsplash%29.jpg/960px-Cozy_white_house_%28Unsplash%29.jpg)
 
-**A home within reach** A house in Arcadia, California, 2016. A home with room for a child has to be attainable; the state cannot introduce a spouse or give back the years that passed while two people waited to feel ready. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Cozy_white_house_(Unsplash).jpg)*
+**Room for an ordinary family** A house in Arcadia, California, 2016. Public choices shape whether a home with room for children is attainable, even though government cannot supply the relationships that make it a family. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Cozy_white_house_(Unsplash).jpg)*
 {: .caption}
 
-The state cannot supply the rest of family life. It cannot introduce a future spouse, make a marriage trustworthy, move grandparents closer, persuade an exhausted mother that the work she is doing is honorable, or give back fertile years that passed while two people waited to feel completely ready. By the time a family applies for a childcare benefit, many of the decisions that determine its eventual size have already been made.
+Housing rules help determine whether a couple can live near work and relatives. Tax and benefit systems decide how much of the cost of raising the next generation remains private even when its benefits are widely shared. Leave, childcare, health care, and the design of schools affect whether pregnancy or a second child threatens a family's economic security. These interventions may recover some births, improve parents' and children's lives, or do both. Their limited record against very low fertility is a reason for honest expectations, not withdrawal.
 
-That is why the choice is distributed among many people. A city decides whether a young couple can afford to live near work and family; an employer decides whether motherhood quietly ends a career; parents decide what picture of adulthood they give their children. Churches and other voluntary communities can become places where unmarried people actually know one another and where new parents have someone to call on Tuesday afternoon, while families make their own judgment about whether proximity is worth more than the highest possible salary somewhere else.
+Durability matters as much as generosity. A couple planning a family cannot build around a temporary bonus or a benefit rewritten after every election. Support has to survive long enough to become part of the world in which people make commitments. It should also reach the years before a child arrives, when housing, education, work, and the opportunity to form a household are already shaping the eventual family.
 
-Government still has a boundary it must not cross. China demonstrated the evil of treating births as production quotas when the one-child policy intruded into marriage and pregnancy through forced abortion, sterilization, fines, and intimidation. Concern about low fertility does not justify conscripting anyone into pregnancy or parenthood. Children should be welcomed as children, not produced for a target.
+Government has powers that families do not. It can remove a rule that suppresses homebuilding, prevent an employer from treating pregnancy as disqualification, spread some costs of care, and keep a declining region's residents within reach of essential services. It can protect people inside households and ensure that dependence does not become license for abuse. A government that celebrates families while leaving avoidable public barriers in place has mistaken rhetoric for policy.
 
-That boundary does not require government to treat every practice affecting fertility as morally interchangeable. Refusing to compel conception is different from deciding what the law should permit, prohibit, fund, or encourage when a practice prevents conception or ends an existing pregnancy; those questions have to be argued on their own moral terms rather than settled by describing them all as reproductive freedom.
+Its limits are just as real. The state cannot introduce a trustworthy spouse, make a marriage good, create affection between relatives, or order citizens to give it children. A population target confers no claim over pregnancy or parenthood. The preceding chapters considered difficult reproductive practices separately; their moral and legal questions do not collapse into one slogan about choice. The common boundary here is narrower: concern for continuity never turns a person into material owned by a demographic project.
 
-UNFPA's 2025 survey across fourteen countries found that one in five respondents expected to miss their desired number of children. That shortfall deserves attention because it identifies people whose family lives were constrained by circumstances they themselves regretted, but it is not the whole pronatalist case. Culture helps form aspirations before they appear in a survey, and a society can honor marriage, motherhood, fatherhood, and larger families without turning fertility into an order or treating people without children as lesser.
+Policy should therefore be judged by a ladder of outcomes rather than one annual rate. Does it reduce a needless burden? Does it help people form stable households or have children they hoped for? Do gains persist in completed family size rather than merely moving births between years? Does it protect children and parents while generations move toward a more durable balance? A measure can be worthwhile on an earlier rung without being sold as demographic reversal.
 
-That is a better standard than asking whether government can engineer a particular birth rate. We should ask whether more people can meet and commit, whether family life can begin before every other ambition has been completed, whether parents can welcome another child without accepting needless poverty or exile from public life, and whether a larger family can again look like a successful life rather than a failure to optimize one. Policy can clear some of that path. Most of the walking happens elsewhere.
+Government can clear part of the path. It can keep that path from running through needless poverty, lost employment, inaccessible housing, or public neglect. It cannot walk the path for anyone, and it should not claim success by counting births while ignoring the freedom and life of the family in which they occur.
 
 <div class="citation">
 
 **Citations**
 
-1. OECD, [“Fertility Trends Across the OECD: Underlying Drivers and the Role for Policy”](https://doi.org/10.1787/770679b8-en), in *Society at a Glance 2024*, 2024.
-2. United Nations Population Fund, [*The Real Fertility Crisis: The Pursuit of Reproductive Agency in a Changing World*](https://www.unfpa.org/swp2025), 2025.
-3. Congressional-Executive Commission on China, [*Annual Report 2016*, “Population Control”](https://www.cecc.gov/publications/annual-reports/2016-annual-report), 2016.
+1. Organisation for Economic Co-operation and Development, [“Fertility Trends Across the OECD: Underlying Drivers and the Role for Policy”](https://doi.org/10.1787/770679b8-en), in *Society at a Glance 2024*, 2024.
 </div>

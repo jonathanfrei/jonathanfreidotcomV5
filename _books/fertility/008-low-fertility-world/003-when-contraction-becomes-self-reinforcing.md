@@ -4,19 +4,19 @@ deck: Repeated contraction leaves fewer successors to decide what can still be c
 eyebrow: Select
 ---
 
-In Italy's most remote inland municipalities, the population [fell 7.7 percent between 2014 and 2024](https://www.istat.it/wp-content/uploads/2026/02/Where-we-live.pdf), more than five times the loss in its cities. Migration and aging contributed alongside low fertility, but the visible result is the same: fewer people are available to keep ordinary roles and businesses going.
+In Italy's most remote inland municipalities, the population [fell 7.7 percent between 2014 and 2024](https://www.istat.it/wp-content/uploads/2026/02/Where-we-live.pdf), more than five times the loss in its cities. Migration and aging contributed alongside low fertility. The figure does not isolate a fertility effect; it shows where several forms of demographic thinning meet and fewer people remain to keep ordinary roles and businesses going.
 {: .lede}
 
-![The abandoned old town of Balestrino, Liguria](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Balestrino-panorama_borgo_vecchio.jpg/960px-Balestrino-panorama_borgo_vecchio.jpg)
+![A prefabricated school building being demolished in Tama New Town, Japan, 2015](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/%E5%A4%9A%E6%91%A9%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%A6%E3%83%B3%E3%81%A7%E5%B0%91%E5%AD%90%E5%8C%96%E3%81%AB%E4%BC%B4%E3%81%84%E8%A7%A3%E4%BD%93%E3%81%95%E3%82%8C%E3%82%8B%E3%83%97%E3%83%AC%E3%83%8F%E3%83%96%E6%A0%A1%E8%88%8E150710.JPG/960px-%E5%A4%9A%E6%91%A9%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%A6%E3%83%B3%E3%81%A7%E5%B0%91%E5%AD%90%E5%8C%96%E3%81%AB%E4%BC%B4%E3%81%84%E8%A7%A3%E4%BD%93%E3%81%95%E3%82%8C%E3%82%8B%E3%83%97%E3%83%AC%E3%83%8F%E3%83%96%E6%A0%A1%E8%88%8E150710.JPG)
 
-**When nobody takes the keys** The abandoned old town of Balestrino, Liguria, 2008. Residents left the unstable hillside; the visible result of an emptying place is the same whether the cause is geology, migration, or a missing generation of children. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Balestrino-panorama_borgo_vecchio.jpg)*
+**A building without another class** A prefabricated school building being demolished in Tama New Town, Japan, July 10, 2015, after declining births reduced the need for classroom space. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:%E5%A4%9A%E6%91%A9%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%A6%E3%83%B3%E3%81%A7%E5%B0%91%E5%AD%90%E5%8C%96%E3%81%AB%E4%BC%B4%E3%81%84%E8%A7%A3%E4%BD%93%E3%81%95%E3%82%8C%E3%82%8B%E3%83%97%E3%83%AC%E3%83%8F%E3%83%96%E6%A0%A1%E8%88%8E150710.JPG)*
 {: .caption}
 
 The arithmetic is easiest to see at street level. A school stays open with fewer classrooms; a doctor covers a wider area; a bakery survives on fewer customers as long as costs stay low enough. For years, each institution adapts, and the town can look surprisingly unchanged. Then the teacher retires, the doctor cannot find a replacement, or the owner's children have built lives somewhere else.
 
 Contraction often becomes visible when somebody needs a successor.
 
-Nearly one fifth of countries and areas had fertility below 1.4 births per woman in 2024, a range the United Nations calls ultra-low. For the 24 countries in that group whose populations had already peaked, the UN [estimated the probability of returning to replacement within thirty years at one tenth of one percent](https://www.un.org/development/desa/pd/sites/www.un.org/development.desa.pd/files/wpp2024_summary_of_results_final_web.pdf).
+Nearly one fifth of countries and areas had fertility below 1.4 births per woman in 2024, a range the United Nations calls ultra-low. Among 24 ultra-low-fertility countries and areas whose populations had already peaked, the UN [estimated the probability of returning to replacement within thirty years](https://population.un.org/wpp/assets/Files/WPP2024_Summary-of-Results.pdf) at 0.1 percent or less for China and South Korea and 1.5 percent for Jamaica. Those are model probabilities, not verdicts. They show how unusual a rapid return would be under the assumptions, not what any country is fated to do.
 
 A larger society leaves behind roads, hospitals, companies, parishes, family obligations, skills, and memories. With each contraction there are fewer possible heirs, and those heirs inherit more choices about what they can still carry.
 
@@ -34,11 +34,17 @@ At very low fertility, institutions begin making the same choice as families: wh
 
 A shrinking civilization does not have to forget everything at once. It edits itself over years and generations, preserving the skills with obvious demand and the places with enough people while knowledge that depends on redundancy, apprenticeship, or a small community of practice becomes easier to lose.
 
+Selection also changes who gets to decide. A capital city can preserve its conservatory by drawing students from the whole country while a provincial music school closes. A national health service can protect a specialist center by asking patients to travel farther. The remaining institutions may be excellent, and the people making these choices may be doing their best. Concentration preserves quality by moving opportunity away from places already losing successors.
+
 AI and automation could make this world much more capable than its population suggests. One person may supervise work that once required ten, while software preserves procedures and makes expertise available almost anywhere; a country may therefore keep excellent hospitals, factories, and public services with far fewer workers. Success at adaptation can also make continued contraction easier to live with, delaying the moment when anyone feels compelled to change direction.
+
+Technology does not have to fail for the demographic question to remain. A clinical system can help one doctor interpret more scans; it cannot visit every lonely patient, become the trusted adult in a classroom, or assume legal responsibility for a child. Even where a machine can perform the task, somebody must decide which task deserves a machine, maintain the surrounding institution, and receive what the institution was for. The scarce good is sometimes labor. At other times it is attention, authority, relationship, or an heir.
 
 There is a moral floor beneath that adaptation. A society cannot balance an aging budget by making the frail feel expendable, ration opportunity according to age, or present assisted death as the generous answer to dependence. The pressure will grow precisely because care remains personal and expensive. That is when the equal dignity of the person has to govern the arithmetic rather than yield to it.
 
 Countries will not age together. For a time, younger regions can supply workers and markets to older ones; as fertility falls in regions that remain young today, that pool narrows too. A wealthy old country may compete successfully for migrants and use machines to compensate for missing workers. A poorer country gains no automatic competence from youth, though it has more potential workers, parents, customers, and recruits if it can educate them and govern well.
+
+Movement can also make the two paths coexist. A growing metropolitan district may open schools while the national cohort contracts because young adults have concentrated there. An immigrant neighborhood may renew local institutions while the migrants' place of origin loses working-age adults. These are not objections to migration, which can enlarge freedom and rescue communities. They are reasons to distinguish a local replenishment from a global generation.
 
 Over one generation, ultra-low fertility looks like an aging problem. Over five, it changes kinship and the national map. Ten generations of repeated contraction would produce a society unlike any modern country we know, selected down through continual choices about which places, skills, and obligations still receive successors. That is illustration, not forecast; people can change course long before then.
 

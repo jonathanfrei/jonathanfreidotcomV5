@@ -1,6 +1,6 @@
 ---
-title: Population as the foundation of expansion
-deck: A crew needs specialists; a civilization needs enough people that specialization can exist at all
+title: The civilization beneath the crew
+deck: Apollo's visible achievement rested on institutions, ordinary competence, and a relay of generations
 eyebrow: More than a crew
 ---
 
@@ -14,13 +14,13 @@ Twelve people walked on the Moon during Apollo; behind them stood about 400,000 
 
 NASA's [account of the Apollo workforce](https://www.nasa.gov/specials/apollo50th/wehackthemoon.html) includes people who calculated trajectories and packed food, but the larger base went far beyond NASA. Someone taught the propulsion engineer algebra years before the engineer had a badge; someone kept the power plant running while the launch team worked through the night. The mission drew from roads, firms, universities, families, and ordinary competence it did not create for itself.
 
-A larger population does not automatically produce more capable people. Education, freedom, health, and good institutions determine how much ability can emerge; population supplies the persons among whom rare combinations of talent and interest can appear. It also supports the division of labor that lets one engineer spend years thinking about propulsion because somebody else knows how to keep the water clean.
+A larger population does not automatically produce more capable people. Education, freedom, health, and good institutions determine whether ability can emerge. Population supplies persons; formation develops their powers; institutions coordinate them; trust lets them depend on work they cannot personally inspect. Division of labor lets one engineer spend years thinking about propulsion because somebody else knows how to keep the water clean.
 
 ## The relay between generations
 
 Space development is already multigenerational. Engineers who began on Apollo trained people who worked on the shuttle and the International Space Station. Some knowledge moved through drawings. Some moved when a senior worker stood beside a younger one after a test failed and explained what the paperwork could not.
 
-A short project can recruit heavily from one cohort; a century of building cannot. It needs young workers arriving as older experts retire, and enough depth that the space program does not solve its labor shortage by stripping hospitals or power plants of the same scarce technical people. Machines can extend each worker, and better education can uncover ability older institutions missed. Eventually the number of possible apprentices still counts.
+A short project can recruit heavily from one cohort; a century of building cannot. It needs apprentices arriving as older experts retire, records that survive their authors, and institutions able to distinguish inherited wisdom from inherited error. It also needs enough depth that a space program does not solve its labor shortage by stripping hospitals or power plants of the same scarce technical people. Machines can extend each worker, and better education can uncover ability older institutions missed. Eventually the number of possible apprentices still counts.
 
 ## A settlement needs ordinary people
 
@@ -28,7 +28,7 @@ Exploration selects narrow crews because every seat is costly. A settlement beco
 
 A crew of six can operate under a commander and a detailed flight plan; a town cannot remain healthy on those terms forever. People need room to disagree, change jobs, choose bad hobbies, join different churches, start competing businesses, and make mistakes that do not threaten the whole settlement. Population depth creates that margin.
 
-The demographic foundation of expansion is not a reservoir of workers waiting to be assigned. It is a large field of free people from whom skill, vocation, friendship, and unexpected competence arise. Spaceflight will use only a small share of them. Their depth gives that small share somewhere to stand.
+Headcount, then, is neither irrelevant nor sufficient. The foundation is a civilization able to form free people, sustain many kinds of competence, permit costly specialization, survive the loss of experts, and renew its institutions. Spaceflight will use only a small share of its people. The depth beneath that small share gives them somewhere to stand—and someone to carry the work after them.
 
 <div class="citation">
 

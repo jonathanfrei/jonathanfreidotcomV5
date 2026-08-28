@@ -11,15 +11,17 @@ At the national level, migration can prevent population loss for decades and imp
 
 The fiscal effect depends on who arrives. A young worker with scarce skills may contribute more in taxes than she receives in services for many years, while a refugee who needs language instruction and help entering the labor market has a different path. Treating both as one demographic unit hides the people and the policy choices inside the average.
 
-Scale eventually changes the answer. In its 2000 study of replacement migration, the United Nations calculated that keeping the European Union's population from falling through 2050 would require average net migration of roughly 950,000 a year under its assumptions; holding the ratio of workers to retirees near its 1995 level required flows on an entirely different scale—hundreds of millions of migrants and descendants. Raising retirement ages was arithmetically much more plausible.
+Scale eventually changes the answer. A United Nations exercise published in 2000 separated three goals that are still often confused: preventing total population decline, preventing decline in the working-age population, and preserving the existing ratio of people ages fifteen to sixty-four to people sixty-five and older. Each required a much larger migration path than the one before it. Under the report's late-1990s assumptions, keeping the European Union's population from falling through 2050 required average net migration of roughly 950,000 a year. Holding its 1995 support ratio required hundreds of millions of migrants and descendants.
 
-The projections are old, but the constraint remains. Migration can stabilize a population at levels many countries can absorb. Trying to use migration to freeze an aging society's worker-to-retiree ratio indefinitely asks migration to do a different job.
+Those figures are scenarios built from an old population projection, not a current forecast or a recommended quota. Their durable lesson is about the denominator. Migration can prevent population loss with flows far smaller than those required to freeze an age ratio while longevity rises. Retirement ages, health, participation, and productivity therefore remain part of any workable response.
 
 ## The host country changes fertility too
 
 Migrants from higher-fertility societies often arrive with higher fertility than the native-born. The difference tends to shrink with years in the destination and across generations.
 
-A 2025 European Bank for Reconstruction and Development analysis across nineteen European destinations found substantial convergence within the first generation, with the gap much smaller still among the second generation. Women grow up or spend years inside the host country's housing market, work schedule, and courtship culture. Their family decisions begin to resemble those of the people around them.
+A 2025 European Bank for Reconstruction and Development analysis used harmonized labor-force surveys from nineteen European destinations between 2008 and 2023. It compared the number of children ages zero to two living with women of the same age and origin region. Childbearing intensity was higher soon after arrival, then moved toward the locally born pattern with time in the destination. Among women from the Middle East, North Africa, and sub-Saharan Africa, the gap was much smaller in the second generation.
+
+That measure is not lifetime fertility, and migration itself can rearrange when births occur. The pattern still bears on policy: women spend years inside the destination's housing market, work schedule, schools, and expectations about family life. The environment that shaped native fertility does not stop at the border.
 
 That creates a limit that no immigration target can solve. If a country makes family formation unusually difficult for the native-born, newcomers eventually encounter much of the same environment. Immigration can replenish a low-fertility country while also extending its low-fertility pattern to another generation.
 
@@ -27,7 +29,7 @@ That creates a limit that no immigration target can solve. If a country makes fa
 
 Every working-age immigrant was a child somewhere. When a rich country recruits a nurse from a poorer country, it receives years of care and education already invested in her; the origin country loses a trained worker and often a daughter who might otherwise have lived near aging parents. Remittances can improve the lives of the family she left. They cannot take her shift at the hospital.
 
-None of this makes migration a wrong. A person should be able to leave a place where war, persecution, or poverty denies a decent life, and receiving countries can gain talent and energy from people who choose to join them. The right to regulate borders is real, but it is not the only right in the argument. Migrants retain claims to humane treatment, meaningful work, religious and civic life, and unity with their families. The [Church's instruction on migration describes policy as a balance between the rights of migrants and the legitimate needs of receiving societies](https://www.vatican.va/roman_curia/pontifical_councils/migrants/documents/rc_pc_migrants_doc_20040514_erga-migrantes-caritas-christi_en.html). That balance begins by refusing to treat a person as imported labor with the inconvenient parts left behind.
+None of this makes migration a wrong. A person should be able to leave a place where war, persecution, or poverty denies a decent life, and receiving countries can gain talent and energy from people who choose to join them. Governments also have obligations to maintain public order, sustain consent, and build the schools, homes, and institutions through which newcomers can enter a common life. Migrants retain claims to humane treatment, meaningful work, religious and civic freedom, and unity with their families. The balance begins by refusing to treat a person as imported labor with the inconvenient parts left behind.
 
 ![New citizens taking the oath of allegiance, September 2025](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/2025_Naturalization_Ceremony-_Oath_of_Citizenship_%2854812455082%29.jpg/960px-2025_Naturalization_Ceremony-_Oath_of_Citizenship_%2854812455082%29.jpg)
 
@@ -50,5 +52,4 @@ A country can welcome immigrants and use the time they buy well. It can build ho
 4. Hill Kulu and others, [“Fertility by Birth Order among the Descendants of Immigrants in Selected European Countries”](https://onlinelibrary.wiley.com/doi/10.1111/padr.12037), *Population and Development Review* 43, no. 1, 2017.
 5. World Health Organization, [*WHO Global Code of Practice on the International Recruitment of Health Personnel*](https://www.who.int/publications/i/item/wha68.32), 2010.
 6. Statistics Canada, [“Fertility and baby names, 2024”](https://www150.statcan.gc.ca/n1/daily-quotidien/250924/dq250924d-eng.htm), 2025.
-7. Pontifical Council for the Pastoral Care of Migrants and Itinerant People, [*Erga Migrantes Caritas Christi*](https://www.vatican.va/roman_curia/pontifical_councils/migrants/documents/rc_pc_migrants_doc_20040514_erga-migrantes-caritas-christi_en.html), 2004.
 </div>
