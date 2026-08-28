@@ -1,38 +1,24 @@
 ---
-title: The Future of the Fertility Decline
-deck: The trend is powerful, but it is made from choices and institutions that can change
-eyebrow: Conclusion
+title: The future of the fertility decline
+deck: The direction is powerful, but it is still made from human decisions
+eyebrow: What remains open
 ---
 
-No one knows the last line of the fertility decline. The United Nations projects that world population will peak during this century, but a projection is a map drawn from present evidence, and people will keep surprising it.
+No one knows whether the fertility decline will deepen, stabilize, or reverse. Projections describe where present evidence and stated assumptions lead. They do not make the decisions that come next.
 {: .lede}
 
-![World population, 1950–2100, UN medium scenario](https://ourworldindata.org/grapher/population-with-un-projections.png?tab=chart&country=~OWID_WRL)
+Uncertainty can excuse passivity: perhaps technology will carry every obligation, fertility will rebound on its own, or a smaller population will settle into an equilibrium that remains rich and free. Any of those outcomes is possible. None is a plan, and repeated contraction makes some losses harder to undo while we wait.
 
-**A map, not a destiny** World population, UN medium scenario through 2100. A projection is drawn from present evidence; people will keep surprising it. *[Our World in Data](https://ourworldindata.org/grapher/population-with-un-projections)*
-{: .caption}
+We know enough to choose a direction. The next few decades require humane adaptation because their age structure is substantially inherited. Governments should reduce barriers and share burdens without claiming authority over pregnancy or family life. Employers and schools should stop organizing success around the absence of care. Families, friends, churches, and local institutions should make commitment less solitary. The work differs because the powers differ.
 
-That uncertainty is not much comfort if it becomes an excuse to wait. Demography gives unusually long warning: a bad housing rule can be changed faster than a generation, an employer can stop treating motherhood as a departure from serious work, and a young adult's picture of a successful life can change before the decision about children becomes final.
+Choosing to grow does not mean that every adult must become a parent or that every family should have the same size. It does not mean targeting the largest population an economy can sustain. It means regarding generational renewal as a good, making family formation more attainable, and refusing to let adaptation harden into the assumption that every cohort will be smaller than the one before it.
 
-We already know enough to begin. Partnership and childbearing are happening later, reliable contraception makes postponement easy, and biology eventually turns some postponement into smaller families; housing, work, and the loss of nearby family can make another child harder than parents expected.
+That preference will create pressure if it is handled badly. Women may be praised for motherhood while expected to absorb its costs alone. Couples facing infertility may hear public celebration as judgment. Unmarried adults and people who do not want children may be treated as problems to solve. Institutions may speak warmly about family after arranging work, housing, and public finance against it.
 
-The work will usually look smaller than a national fertility strategy. A city can allow homes a young family can afford; an employer can build a career path that survives pregnancy and several years of heavier family obligations; grandparents can decide that being close enough to help is worth more than another distant opportunity. A church can become a place where unmarried people actually know one another and where new parents have someone to call.
+The answer is not silence about what renewal requires. It is honesty about where obligations fall. Equal dignity does not make every life identical or every choice equally connected to biological succession. Neither does contribution determine dignity. A parent does not become more human by having children, and a person without children does not owe society compensating service. Public honor should be able to name marriage, motherhood, fatherhood, and the welcome of children as goods without turning anyone into a means.
 
-I would judge early progress by human outcomes before headlines about a quarterly birth rate: whether more people are finding durable spouses, whether family life can begin before every part of adulthood is settled, whether the gap between the children people hoped for and the children they have is getting smaller, and whether motherhood and fatherhood are gaining status rather than losing it. Do couples increasingly see a third or fourth child as an enlargement of a good life rather than an eccentric departure from it?
+Renewal also remains answerable to the world children receive. More people consuming carelessly can intensify environmental damage; fewer people do not automatically produce stewardship. The hopeful claim is not that limits vanish. It is that people can learn, conserve, cultivate, repair, and sometimes enlarge what seemed fixed. Another generation inherits both the damage and the ability to address it.
 
-There will be losses while we wait. Some towns will consolidate services, adults who delayed parenthood under one set of expectations cannot be given their years back, and the larger retiring generation and the smaller generation behind it will have to renegotiate promises neither created alone. Realism requires the management. It does not require accepting that repetition as the permanent direction of travel.
+The distant horizon is open in the same way. Humanity may build homes beyond Earth, or free people may decide the cost is too high. Preserving that possibility is not a reason to produce children for a mission. It is one measure of a civilization still capable of work whose beneficiaries are not yet alive.
 
-The delay leaves room to try bad answers, discard them, and try better ones before the full consequences arrive.
-
-Choosing to grow does not mean choosing a population target or conscripting people into parenthood. It means making room for family formation again, treating generational renewal as a good rather than an embarrassment, and recovering the confidence to recommend marriage, motherhood, fatherhood, and larger families as admirable forms of adulthood. Equal human dignity does not require a culture to pretend that every way of organizing adult life contributes equally to generational renewal.
-
-It also means caring for people through the contraction already underway without mistaking adaptation for the destination. Contraction uses our competence to carry a narrowing inheritance well. Renewal uses it to make family formation ordinary again, restore generations capable of succeeding one another, and recover the surplus to build beyond what we received.
-
-Farther out, renewal preserves possibilities we cannot plan: discoveries, communities, works of art, institutions, perhaps settlements on worlds no one alive will see. Most of those possibilities will arrive in a much less dramatic way. A child will be born into a particular family; someone will teach her words, show her how things work, tell her stories about people who died before she was born, and leave a few problems unfinished. In time, the inheritance will be hers.
-
-<div class="citation">
-
-**Citations**
-
-1. United Nations Department of Economic and Social Affairs, Population Division, [*World Population Prospects 2024: Summary of Results*](https://population.un.org/wpp/assets/Files/WPP2024_Summary-of-Results.pdf), 2024.
-</div>
+Most renewal will never look so dramatic. A child arrives in one household, needing more than she can give. Someone repeats a word until she can say it, shows her where the cups belong, and tells her why an old photograph matters. Years later she will find that some of what she received was broken. Some of it was beautiful. It will be hers to decide what happens next.

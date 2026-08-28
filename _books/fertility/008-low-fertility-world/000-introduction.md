@@ -14,4 +14,8 @@ The people who will be thirty years old in 2056 are beginning to be born now, an
 
 What happens after that is still open, but the choice is clearer than a list of separate scenarios suggests. One path leads toward renewal, as family formation becomes more attainable, births recover, and generations begin moving back toward replacement; the other leads through contraction, as a society becomes very good at getting smaller and then repeats the achievement from a reduced base while ultra-low fertility leaves fewer successors to carry what came before.
 
-These are paths rather than forecasts, and both begin with humane care for the same demographic inheritance. They separate when the work of adjustment either becomes a permanent way of life or supports a recovery in family formation. Renewal comes first. Births recover, and almost nothing gets easier right away.
+No country chooses either path in a single vote. The direction emerges from millions of family decisions and from the homes, workplaces, schools, budgets, laws, and expectations surrounding them. Regions can diverge, recovery can stall, and societies can change direction. These are paths rather than forecasts.
+
+Both begin with humane care for the same demographic inheritance. Older people do not become mistakes because the generation behind them is small, and a town does not lose its claim to decent services because it has fewer residents. Adaptation is unavoidable. The paths separate when adjustment becomes a permanent way of life or preserves room for family formation and generational recovery.
+
+Renewal comes first. Births recover, and almost nothing gets easier right away.

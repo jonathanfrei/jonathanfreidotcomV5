@@ -1,35 +1,27 @@
 ---
-title: The Civilizational Stakes
-deck: The object is human flourishing carried forward through generations
-eyebrow: Conclusion
+title: What it means to grow
+deck: A generation must be born, then welcomed and formed into a world worth enlarging
+eyebrow: The affirmative case
 ---
 
-Civilization is a relay conducted mostly among people who never meet. We receive languages, laws, machines, stories, scientific knowledge, debts, habits, buildings, and mistakes from the dead; most of what we pass on will go to people whose names we will never know.
+Growth begins with another person. Before she contributes to an economy, continues an institution, or cares for anyone else, she is a good in herself. That claim prevents the case for renewal from becoming an argument for the largest possible population. It also explains why a missing generation cannot be replaced by higher output alone.
 {: .lede}
 
 ![Classroom at Bryant Elementary School, about 1908](https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Students_in_Class_at_Bryant_Elementary_School_-_DPLA_-_4936eda497d0a907d8a19362e9175686.jpg/960px-Students_in_Class_at_Bryant_Elementary_School_-_DPLA_-_4936eda497d0a907d8a19362e9175686.jpg)
 
-**A relay among people who never meet** A classroom at Bryant Elementary School, about 1908. A teacher receives a subject from teachers she never knew and gives it to students who will take it somewhere she cannot predict. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Students_in_Class_at_Bryant_Elementary_School_-_DPLA_-_4936eda497d0a907d8a19362e9175686.jpg)*
+**Receiving and changing a tradition** Students at Bryant Elementary School around 1908. Education gives a child knowledge she did not create and equips her to correct, extend, or refuse parts of what she received. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Students_in_Class_at_Bryant_Elementary_School_-_DPLA_-_4936eda497d0a907d8a19362e9175686.jpg)*
 {: .caption}
 
-That inheritance makes each generation both recipient and trustee. A teacher receives a subject from teachers she never knew and gives it to students who will take it somewhere she cannot predict; parents teach children words they did not invent; an engineer may spend a career improving a system that will do its most useful work after he is gone. None of this requires a grand theory of history. It is how ordinary continuity works.
+Demographic growth is the first meaning because biological succession cannot be performed metaphorically. Adoption gives a child a real family; teaching, friendship, art, discovery, religious vocation, and care can transmit a civilization across lines of ancestry. All depend on a generation being born somewhere. A society can honor every person's vocation while speaking truthfully about that dependence.
 
-The relay needs another runner. Demographic health matters because persons need one another and because a human world has to be renewed before it can be inherited, but the goal is not the largest possible population. Birth maximization could praise conditions in which women have many children because they lack education, security, or control over their own lives. A child is not a future taxpayer with a face attached. She owns her life.
+The next meaning is the growth of a family. A child does not merely increase its size. She creates new relationships and changes the old ones: two people may become parents, their parents may become grandparents, and siblings acquire one another. The enlargement brings cost, disorder, vulnerability, and work. It can also bring forms of love and obligation that did not exist before.
 
-The case for renewal is simpler: human life is good before it becomes useful. Family, friendship, work, discovery, worship, art, and care are goods that exist only because particular people are here to practice them. Marriage and parenthood deserve public honor because they receive and form the next generation, not because parents have earned greater dignity; people who never become parents participate fully in the common life and often carry large parts of the inheritance through teaching, service, friendship, adoption, religious vocation, or care for relatives. A society confident enough to honor parenthood does not need to diminish anyone else to do it.
+Institutions grow differently. A school, workshop, congregation, laboratory, or court receives new members and forms them in a practice. Successful transmission is not exact copying. The student should eventually see something the teacher missed; the apprentice may improve the method; the child must be free to repair an injustice carried inside the family story. Continuity without correction preserves too much. Correction without continuity has nothing durable to work on.
 
-Look one generation ahead and the relay is easy to picture: someone beside an aging bed, someone learning a trade, someone teaching a child. Over centuries the names disappear, but the structure remains, and projects larger than one lifetime depend on successors who can receive them, criticize them, and sometimes decide that the previous generation was wrong.
+Material capacity matters because good intentions need room. Reliable energy, productive farms, attainable homes, functioning infrastructure, accumulated capital, and better tools can enlarge the number of people a place supports and the work they can attempt. Growth that exhausts soil, wastes energy, or treats existing communities as obstacles is not cultivation. Stewardship asks people to improve a place while remaining answerable for what their improvement costs.
 
-That is one reason I do not think managed contraction is an adequate final ambition. A smaller population can be rich, free, inventive, and decent; persistent contraction still leaves fewer successors each generation and asks more of each one merely to carry what already exists. Renewal preserves room for correction as much as continuity. It gives the future more people capable of noticing what we missed.
+Finally, growth can describe the horizon of human possibility. Another generation may restore an ecosystem, compose music, cure a disease, found a town, or undertake a project no living person can finish. It may decide that some inherited ambitions were foolish. The point of preserving capacity is not to dictate the project. It is to leave successors able to choose before incapacity chooses for them.
 
-Human expansion beyond Earth makes the principle unusually visible, but it is not the reason to have children. A settlement on another world would simply expose what has always been true at home: civilization continues when people build things they expect someone else to inherit.
+These meanings belong together, but they are not interchangeable. More wealth does not produce a child. More births do not guarantee just institutions. A larger population governed badly may destroy possibilities that a smaller, freer one preserves. The case for growth is an ordered claim: welcome persons, form relationships capable of receiving them, build institutions that let them flourish and correct us, cultivate the material world responsibly, and leave more good work available than we can complete.
 
-We received an unfinished world. I think we should leave one unfinished too, with people still arriving who can decide what to keep, what to repair, and what to build next.
-
-<div class="citation">
-
-**Citations**
-
-1. UNESCO, [*Declaration on the Responsibilities of the Present Generations Towards Future Generations*](https://unesdoc.unesco.org/ark:/48223/pf0000110220), 1997.
-2. William MacAskill, *What We Owe the Future*, Basic Books, 2022.
-</div>
+I do not think permanent contraction is an adequate final ambition. A smaller society may be prosperous, beautiful, inventive, and humane. Repeated contraction still leaves fewer successors and makes maintenance a larger share of what each generation must do. Renewal does not promise endless increase or excuse any means of achieving it. It chooses beginnings often enough that the future remains more than the management of what is disappearing.
