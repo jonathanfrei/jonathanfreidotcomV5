@@ -62,13 +62,22 @@ export default {
     const response = await fetch(upstreamReq, {
       cf: {
         cacheEverything: true,
-        cacheTtl: 2592000,
+        cacheTtlByStatus: {
+          "200-299": 2592000,
+          "400-599": 0,
+        },
       },
     });
 
     const headers = new Headers(response.headers);
     headers.delete("set-cookie");
-    headers.set("Cache-Control", "public, max-age=2592000");
+    if (response.ok) {
+      headers.set("Cache-Control", "public, max-age=2592000");
+    } else {
+      // Wikimedia 429s (and similar) come back as wsrv 404 JSON. Do not
+      // pin that in cache for a month — next request can recover.
+      headers.set("Cache-Control", "no-store");
+    }
     headers.set("X-Content-Type-Options", "nosniff");
 
     return new Response(request.method === "HEAD" ? null : response.body, {
