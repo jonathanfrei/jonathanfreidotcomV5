@@ -12,7 +12,7 @@ Pronatalist policy has run long enough to leave a record. Governments have reduc
 **Several policy models, no simple reversal** Births per woman, UN estimates through 2023. The lines show national outcomes, not the isolated effect of any one policy. *[Our World in Data](https://ourworldindata.org/grapher/children-per-woman)*
 {: .caption}
 
-A national total fertility rate is the beginning of a comparison, not its verdict. It can rise because births happened earlier, because a policy changed completed family size, because the economy improved, because the population changed, or because several forces moved at once. The cases below test different claims: whether long-running support can preserve a higher floor, whether large targeted incentives can move the number, and whether generous downstream benefits can overcome bottlenecks that arise before parenthood.
+Policy, economic conditions, birth timing, and population composition move together in a national fertility rate. The cases below therefore test distinct claims: whether long-running support can preserve a higher floor, whether large targeted incentives can move the number, and whether generous downstream benefits can overcome bottlenecks that arise before parenthood.
 
 ## France: can durable support preserve a higher floor?
 

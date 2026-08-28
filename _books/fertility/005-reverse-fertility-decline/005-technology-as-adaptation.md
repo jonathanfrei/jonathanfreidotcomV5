@@ -20,13 +20,13 @@ Care gives the claim a more human scale. A lift can protect a nurse's back. A mo
 **A tool used in dementia care** PARO, a therapeutic robot developed in Japan. A machine may soothe a patient or lighten a caregiver's work; responsibility for the person remains human. *[Via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:PARO_seal_robot_for_dementia,_2018_Ryman_prize_explanation.jpg)*
 {: .caption}
 
-The limits are not a reason to resist useful tools. Technology can help a smaller working generation sustain high living standards and give adults more time for family life. It is adaptation when it preserves capacity despite an age structure already in place. Its success should be measured in time, health, output, and care—not described as a fertility increase it did not produce.
+These tools could carry a large share of the adjustment for decades. Technology can help a smaller working generation sustain high living standards, protect caregivers' bodies, extend independent life, and return adults time for family. It is adaptation when it preserves capacity despite an age structure already in place. Its success should be measured in time, health, output, and care—not described as a fertility increase it did not produce.
 
-## Medicine that restores reproductive function
+## Medicine and recovery
 
 Reproductive medicine reaches a different problem. Surgery can repair an obstruction; medication can restore ovulation; treatment can address infection, endometriosis, or another disease that interferes with conception. These interventions assist the reproductive system in doing what illness prevented it from doing.
 
-The distinction is practical as well as moral. A treatment that restores function may help conception occur through the couple's sexual relationship. In vitro fertilization retrieves eggs, combines them with sperm outside the body, and transfers an embryo to a uterus. It can result in a wanted birth, but it replaces conception with a laboratory process rather than healing every cause of infertility.
+Chapter 3 distinguished restorative treatment from in vitro fertilization and gave the moral account of embryo creation, selection, donor conception, and surrogacy. The policy question here is narrower: what can access to reproductive medicine recover, for whom, and with what limits?
 
 The desire behind either treatment deserves respect. Infertility is not a failure to contribute to a population target; it can be a grief inside a particular marriage or life. Public policy can improve diagnosis, protect time for treatment, reduce financial barriers, and ensure that patients receive honest information about probabilities and burdens.
 
@@ -38,23 +38,17 @@ Age remains central when a patient uses her own eggs. Egg freezing preserves egg
 
 Technology can also change expectations before treatment begins. The availability of IVF and egg freezing may make postponement feel safer than it is. That does not make a clinic responsible for the work, housing, relationship, or educational pressures that produced delay. It does require clinics, employers, schools, and public campaigns to describe possibility without presenting it as insurance.
 
-## The child and the method
+## Access and regulation
 
-Every child conceived through assisted reproduction has the same dignity as every other child. The goodness of the child does not make every method of conception good, just as criticism of a method is not criticism of the person who exists because of it.
+Coverage can relieve a heavy financial burden and make treatment less dependent on wealth. It can also direct public money toward practices that differ morally and medically. A policy therefore needs more than an undifferentiated promise to cover “fertility treatment.” Diagnosis, surgery, medication, IVF, embryo storage and disposition, donor arrangements, and surrogacy require separate rules and separate measures of outcome.
 
-IVF commonly creates embryos that are not transferred in the first attempt. They may be frozen for later use, donated, selected against, used in research, or discarded. The process places developing human lives under decisions made by adults and institutions after those lives exist. I think creating several embryonic lives as part of a process that anticipates selection, indefinite storage, or destruction crosses a grave boundary. The embryo should not become raw material or inventory merely because it is small, dependent, and outside the body.
-
-The strongest opposing case begins with the couple who cannot conceive and a technique capable of giving them a child. It also points to autonomy, equal access to family creation, the possibility of reducing genetic disease, and the fact that many patients intend to transfer and love the embryos they create. Those goods are real. They do not settle what may be done to embryonic life or whether procreation should be reorganized as production under technical control.
-
-Donor eggs, donor sperm, embryo donation, and surrogacy divide genetic, gestational, legal, and social parenthood. Adults may enter these arrangements generously and voluntarily. The future child still has interests in identity, medical history, kinship, and an origin not designed around the planned absence of one or more biological parents. Commercial surrogacy adds the possibility that wealth differences shape consent and turn gestation and relinquishment into purchased services.
-
-These judgments do not decide every law. Funding a treatment, licensing a clinic, limiting embryo creation, prohibiting a market, protecting a surrogate, resolving parentage, and caring for children already conceived are different legal questions. Policy should begin by naming the practice and the people affected rather than treating technical success as permission.
+The relevant outcomes include restored function, live births, treatment burden, unequal access, multiple births, the number and disposition of embryos created, and the interests of children, donors, and gestational mothers. A higher clinic success rate does not answer all of those questions. Regulation should protect every person involved rather than treating the production of a birth as the sole result that matters.
 
 ## Speculative frontiers
 
 In-vitro gametogenesis aims to derive eggs or sperm from other cells. No human child has been born through the technique, and current stem-cell guidelines prohibit reproductive use while safety and ethical questions remain unresolved. Artificial-gestation research has so far focused on sustaining extremely premature animals at the edge of viability. It is not evidence that full human pregnancy can soon be moved outside a woman's body.
 
-These frontiers may eventually alter infertility treatment, pregnancy, and parenthood. For now they do not belong in a policy balance sheet as available routes to demographic recovery. Their immediate value is to expose the governing question: whether technology serves embodied human goods or gradually teaches us to treat generation as another process to optimize and control.
+These frontiers may eventually alter infertility treatment, pregnancy, and parenthood. For now they do not belong in a policy balance sheet as available routes to demographic recovery. Chapter 7 will ask who could be entrusted with such power and what no demographic emergency can authorize.
 
 The record across this chapter is less discouraging than a verdict of failure and less comforting than a policy formula. Governments can make family life easier and recover births at the margin. Immigration can add people quickly. Automation can extend what a smaller generation can carry. Medicine can heal infertility or help produce births that would not otherwise occur.
 
@@ -69,8 +63,6 @@ Ordinary benefits generally begin once a household exists or a pregnancy is bein
 3. Centers for Disease Control and Prevention, [“National ART Summary”](https://www.cdc.gov/art/php/national-summary/index.html), 2024.
 4. American Society for Reproductive Medicine, [“Mature oocyte cryopreservation”](https://www.asrm.org/practice-guidance/practice-committee-documents/mature-oocyte-cryopreservation-a-guideline-2021/), 2021.
 5. Benjamin J. Peipert and others, [“Impact of comprehensive state insurance mandates on in vitro fertilization utilization, embryo transfer practices, and outcomes in the United States”](https://pubmed.ncbi.nlm.nih.gov/35283088/), *American Journal of Obstetrics and Gynecology* 227, no. 1, 2022.
-6. American Society for Reproductive Medicine, [“Disposition of unclaimed embryos”](https://www.asrm.org/practice-guidance/ethics-opinions/disposition-of-unclaimed-embryos-an-ethics-committee-opinion-2021/), 2021.
-7. American Society for Reproductive Medicine, [“Interests, obligations, and rights in gamete and embryo donation”](https://www.asrm.org/practice-guidance/ethics-opinions/interests-obligations-and-rights-in-gamete-and-embryo-donation-an-ethics-committee-opinion-2019/), 2019.
-8. International Society for Stem Cell Research, [*Guidelines for Stem Cell Research and Clinical Translation*](https://www.isscr.org/guidelines), 2025.
-9. Emily A. Partridge and others, [“An extra-uterine system to physiologically support the extreme premature lamb”](https://www.nature.com/articles/ncomms15112), *Nature Communications* 8, 2017.
+6. International Society for Stem Cell Research, [*Guidelines for Stem Cell Research and Clinical Translation*](https://www.isscr.org/guidelines), 2025.
+7. Emily A. Partridge and others, [“An extra-uterine system to physiologically support the extreme premature lamb”](https://www.nature.com/articles/ncomms15112), *Nature Communications* 8, 2017.
 </div>

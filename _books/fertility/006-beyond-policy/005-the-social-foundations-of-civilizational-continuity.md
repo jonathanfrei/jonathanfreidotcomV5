@@ -9,8 +9,6 @@ Civilization is handed down at close range. A child learns a language because so
 
 Archives preserve information; people preserve judgment. A recipe can survive in a database, but the feel of the dough usually requires a hand beside yours. A maintenance procedure can list the correct steps while the veteran technician hears a noise and knows something is wrong before the sensor does. Modern civilization depends on both kinds of knowledge.
 
-Artificial intelligence may make stored knowledge dramatically easier to retrieve. That makes the human part easier to see, not less necessary: a model can explain how to soothe a baby, but it does not know this child well enough to notice that this cry is unusual. It can summarize a company's procedures. Responsibility for the machine, patient, student, or child still belongs to a person.
-
 Family transmission can carry vice as faithfully as skill. Cruelty and fear move between generations too. Tradition deserves attention because it may contain knowledge, not immunity from judgment. Sometimes receiving an inheritance faithfully means repairing it.
 
 The family nevertheless has a priority that schools, markets, and governments do not. It is the first community most people enter and the place where dependence is least surprising: a baby contributes nothing to the household budget and still belongs completely. Parents and kin know a child's history, habits, fears, and loyalties in a way a distant administrator cannot. They also acquire obligations that cannot be reduced to delivering a service.
@@ -36,9 +34,7 @@ Low fertility weakens transmission before it destroys information. A family busi
 
 Biological descent is only one path of transmission. Adoption creates fully real families. Immigration can bring willing successors. Teachers, friends, religious communities, workshops, and civic institutions can pass knowledge and responsibility across lines of ancestry. Every path still requires a younger person and an older one who remains long enough to teach. None eliminates the need for a generation to be born somewhere.
 
-Across one generation, a smaller cohort can inherit a great deal, especially when education and technology make each person more capable. Across five or ten generations of contraction, choices become harsher. A rare language, local craft, or small institution competes for the attention of fewer heirs. A record may survive after the living practice has not.
-
-Transmission is not merely conservation. A fruitful institution welcomes people who were not already inside, forms their judgment, corrects what has gone wrong, and gives them room to create. The apprentice should eventually improve the method. The child should be able to repair an injustice inherited with the family story. A civilization continues by handing on enough truth, skill, beauty, and trust for successors to begin work their predecessors could not imagine.
+Transmission is not merely conservation. A fruitful institution welcomes people who were not already inside, forms their judgment, corrects what has gone wrong, and gives them room to create. The apprentice should eventually improve the method. The child should be able to repair an injustice inherited with the family story. This chapter's work ends with that formation. The final act will ask what happens when repeated contraction leaves institutions selecting among too few possible successors.
 
 ## Institutions that can bear correction
 

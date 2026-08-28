@@ -20,6 +20,8 @@ The practical skill is consolidation. A water network built for 100,000 resident
 **A city that learned to shrink** Yubari, Hokkaido, 2015. A former coal city that has been losing people for decades; public services move toward the places that can still support them. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Yubari_city_center_area_Aerial_photograph.2015.jpg)*
 {: .caption}
 
+The empty school places in Lambeth and vacant houses across Japan showed the ends of this process. Yubari makes the work between them visible: officials still have to decide where residents will live, which lines and buildings remain usable, and how far people must travel after services move.
+
 ## Deciding what to keep
 
 The choices arrive locally. A library branch opens only three days a week; a water district retires its most distant line; a municipal building is sold and its offices move to the regional center. None of these decisions has to be foolish or cruel. Often the alternative is fewer people paying more to maintain a worse version of what used to be there.
@@ -34,7 +36,7 @@ That need not mean abandonment. Municipalities can share schools, clinics, trans
 
 Economic life can also remain surprisingly strong. Labor scarcity may raise wages and induce employers to automate routine work. A [2026 NBER working paper](https://www.nber.org/papers/w35401) found lower birth rates associated with faster growth in output per working-age adult and more labor-saving patents across the settings it studied. Fewer births do not automatically make the people who remain poorer.
 
-The paper also found no negative effect on aggregate output or earnings in its historical settings. That is a stronger contraction case than a simple warning about labor shortages allows. It is still not a forecast of indefinite prosperity under repeated decline: the study examines observed economies responding to changes in the supply of younger workers, not a society after five or ten successively smaller generations. Association across those settings does not settle the welfare, fiscal, care, or succession questions developed here.
+The paper also found no negative effect on aggregate output or earnings in its historical settings. It examines observed economies responding to changes in the supply of younger workers, not societies after five or ten successively smaller generations. Within that horizon, it supplies a stronger contraction case than a simple warning about labor shortages allows.
 
 A government can therefore report rising income per person while the population falls, and a company can produce more with each employee while selling into a smaller home market. Healthy older adults can retire later; AI may let a much smaller workforce maintain services that once required more people. If productivity rises quickly enough, material life could improve for decades.
 

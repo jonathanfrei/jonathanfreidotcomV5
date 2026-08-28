@@ -30,7 +30,7 @@ Every child conceived through assisted reproduction has the same dignity as ever
 
 IVF commonly creates more embryos than are transferred in one attempt. Some are frozen for possible later transfer. Others may be donated, used in research, or discarded under clinic policy and patient consent. Professional guidance on “unclaimed embryos” explicitly addresses their removal from storage and thawing without transfer. The administrative language describes a real decision about developing human lives created outside the body and placed under another person's dispositional control.
 
-I think that is a grave moral boundary. A human embryo is not raw material or a candidate product awaiting quality control. Creating several lives in order to select among them, expose them to destruction, or keep them indefinitely in storage treats generation as manufacture and the embryo as subject to the purposes of others. The couple's suffering is real. It does not make the child's earliest life disposable.
+That is a grave moral boundary. A human embryo is not raw material or a candidate product awaiting quality control. From fertilization, the embryo is a living human organism with the same kind of continuous life every adult once had at that stage. Creating several lives in order to select among them, expose them to destruction, or keep them indefinitely in storage treats generation as manufacture and the embryo as subject to the purposes of others. The couple's suffering is real. It does not make the child's earliest life disposable.
 
 ## Dividing parenthood
 
@@ -44,7 +44,7 @@ Surrogacy adds the embodied relationship of pregnancy and the possibility that f
 
 These conclusions do not decide every legal question. Prohibiting a market, regulating a clinic, resolving parentage, and protecting children already conceived require different judgments. Chapter 3's task is to identify what the technologies do and why technological success cannot be the only measure of good reproductive medicine.
 
-Assisted reproduction can add births that would not otherwise occur. It cannot make years irrelevant, and it cannot turn the origin of a child into a morally neutral production problem. Technical control leaves a cultural question underneath it: what adults have come to believe must happen before a child belongs in a good life.
+Assisted reproduction can add births that would not otherwise occur. It cannot make years irrelevant, and a wanted result cannot turn the origin of a child into a morally neutral production problem. Good medicine serves the patient and the bodily relationship through which a child is conceived; it does not place the child's origin and fate under technical command. That distinction leaves a cultural question underneath the technology: what adults have come to believe must happen before a child belongs in a good life.
 
 <div class="citation">
 
@@ -56,4 +56,5 @@ Assisted reproduction can add births that would not otherwise occur. It cannot m
 4. American Society for Reproductive Medicine, [“Disposition of Unclaimed Embryos”](https://www.asrm.org/practice-guidance/ethics-opinions/disposition-of-unclaimed-embryos-an-ethics-committee-opinion-2021/), 2021.
 5. American Society for Reproductive Medicine, [“Interests, Obligations, and Rights in Gamete and Embryo Donation”](https://www.asrm.org/practice-guidance/ethics-opinions/interests-obligations-and-rights-in-gamete-and-embryo-donation-an-ethics-committee-opinion-2019/), 2019.
 6. American Society for Reproductive Medicine, [“Guidance Regarding Gamete and Embryo Donation”](https://www.asrm.org/practice-guidance/practice-committee-documents/guidance-regarding-gamete-and-embryo-donation/), 2024.
+7. Congregation for the Doctrine of the Faith, [*Dignitas Personae*](https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20081208_dignitas-personae_en.html), nos. 4–6 and 12–18, 2008.
 </div>

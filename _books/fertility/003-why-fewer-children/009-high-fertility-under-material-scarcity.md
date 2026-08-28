@@ -36,11 +36,9 @@ Affordability is a judgment about what must be available or preserved when a chi
 
 ## Several paths to the same total
 
-The stress test returns us to the chapter's model. Low fertility is assembled through more than one life.
+The stress test does not need another tour through the opening sequence. It supplies the result the affluent cases could not: material scarcity can coexist with high fertility, so income alone cannot be the master cause. Marriage timing, reproductive control, kin support, household production, child survival, and expectations about adulthood change what the same amount of money means for births.
 
-One couple meets late after education and several moves. Another meets earlier but waits for housing and secure work. A third has a first child, then discovers that paid work and care leave no room for another. Someone never finds a partner. Another person freely wants no children. Another expects two and encounters infertility after years of delay.
-
-Surveys of desires and expectations help identify constrained lives, but no average can assign one motive to all of them. The causal claim is cumulative and branching: partnership became later and less certain; readiness became more demanding; reproductive control made postponement reliable; work and culture rewarded waiting; technology altered connection; biology eventually limited recovery. Different combinations can converge on fewer births.
+Different combinations can therefore converge on the same national total, and similar incomes can coexist with different totals. Surveys of desires and expectations identify some constrained lives, but no average assigns one motive to everyone inside it. The multicausal model explains both forms of variation without turning deprivation into a prescription.
 
 That conclusion also identifies what the chapter has not done. It has not shown that every small family is a failure, that freedom should be withdrawn, or that one cause can be reversed to restore fertility. It has shown how individually understandable choices and institutions can compose an outcome few people selected as a national future.
 

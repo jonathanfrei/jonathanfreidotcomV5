@@ -21,8 +21,6 @@ Longer working lives make sense when healthy life has lengthened, provided physi
 
 Japan's labor ministry has documented one smaller response at a care provider in Mie Prefecture. [Welfare Mie divided direct care from supporting tasks and created dedicated night-shift roles](https://www.mhlw.go.jp/stf/wp/hakusyo/roudou/24/2-2.html), opening some work to older and disabled employees while trying to retain experienced caregivers. It did not automate the relationship. It reorganized the work around the people available to do it.
 
-Immigration can add workers quickly by moving young adults from one country to another, relieving one hospital while sometimes worsening a nursing shortage in the country that trained the nurse. For an individual country this can buy substantial time. It does not enlarge the global generation.
-
 ## Automation buys capacity
 
 Demographic pressure gives firms a reason to substitute machines for scarce labor. Daron Acemoglu and Pascual Restrepo found that countries aging more rapidly [adopted industrial robots more quickly](https://www.nber.org/papers/w23077) and did not grow more slowly over the period they studied, suggesting that automation absorbed part of the shock.
@@ -36,9 +34,9 @@ That is encouraging. A warehouse with autonomous equipment can move more goods w
 
 The limits appear where responsibility cannot be reduced to a task. A robot can move a box without taking responsibility for the warehouse; care is harder still. Even a highly automated economy needs people who notice failures, make judgments, and decide what should be built next.
 
-## Maintenance and renewal
+## Productivity and the economic margin
 
-Infrastructure exposes the transition because it was built for yesterday's population. A water network keeps nearly the same reach after residents leave, so its maintenance cost is divided among fewer customers; housing can show the same split as inherited homes lose value in shrinking towns while prosperous cities remain expensive because younger workers keep concentrating there.
+Demographic change can split asset markets. In shrinking towns, inherited homes lose value as buyers disappear; in prosperous cities, housing can remain expensive because younger workers keep concentrating there. Consumer markets divide in the same way: national demand may soften while the places still attracting workers remain crowded. These are economic reallocations, distinct from the public cost of maintaining water lines or financing care taken up in the pages that follow.
 
 Innovation raises a longer and less certain question. Modern discovery often requires large teams. Research by Nicholas Bloom, Charles Jones, John Van Reenen, and Michael Webb found that the number of researchers needed to sustain Moore's Law was [more than eighteen times larger than in the early 1970s](https://www.nber.org/papers/w23782). Across their cases, rising research effort offset declining research productivity.
 

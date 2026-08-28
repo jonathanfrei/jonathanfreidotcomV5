@@ -29,7 +29,7 @@ A smaller population can remain rich, humane, and capable. It can place less agg
 
 These are substantial advantages, not objections to brush aside. The environmental case has particular force because another person consumes resources throughout a life, and affluent consumption imposes far more pressure than subsistence. A society that wastes land and energy does not become a good steward merely by adding people.
 
-The case is less complete when becoming smaller turns into becoming smaller again and again. Lower demand may ease one pressure while a reduced generation inherits the work of caring for more older people, maintaining extensive infrastructure, and forming an even smaller generation behind it. Consolidation can preserve excellent services. Automation can preserve output. Immigration can move willing people to places where they can build better lives. None of these responses, by itself, changes the number of people born in the world or the conditions that made family formation rare.
+Taken together, these responses can preserve prosperity, care, and capable institutions through decades of demographic change. Consolidation can keep excellent services within reach. Automation can preserve output and return scarce time. Immigration can move willing people to places where they can build better lives. Their limit appears when becoming smaller turns into becoming smaller again and again: none, by itself, changes the number of people born in the world or the conditions that made family formation rare.
 
 There may be a stable and humane future below today's population. I don't know its ideal size, and a fertility rate cannot reveal it. The concern is the absence of a stable direction. A society with no reason to expect one generation to succeed another is not choosing a smaller equilibrium. It is repeatedly postponing the question of where contraction stops.
 
@@ -45,7 +45,7 @@ Nor can every low birth rate be read as a clean expression of preference. Some p
 
 Helping people form the families they already desire is an obvious part of renewal. It isn't the whole of it. Desires are shaped by what children see honored, by whether adults can find and trust one another, by the costs employers and governments place on family life, and by the examples close at hand. Culture does not dictate a private choice, but it changes which choices feel imaginable and worth the sacrifice.
 
-Renewal therefore means more than reaching a national statistic. It means families able to succeed one another, institutions capable of receiving new members, and older people cared for without consuming every margin that might have gone toward the future. It includes the work of parents and also the teacher, neighbor, craftsperson, priest, scientist, aunt, and friend whose life enlarges what the next generation receives. Biological succession and the wider work of being fruitful are both necessary. They are not interchangeable.
+I will use *renewal* in a specific order. It begins with generations moving toward replacing themselves; without that demographic direction, the word can become a synonym for anything admirable. The quality of renewal is then tested by whether families can welcome children without being broken by the effort and whether institutions can receive and form successors. The teacher, neighbor, craftsperson, priest, scientist, aunt, and friend all enlarge what the next generation receives. That wider fruitfulness matters, but it cannot substitute for a generation being born.
 
 ## An open future
 

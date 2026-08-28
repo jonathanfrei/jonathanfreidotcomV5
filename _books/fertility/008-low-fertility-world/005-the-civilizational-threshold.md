@@ -4,7 +4,7 @@ deck: The danger grows as maintaining the inheritance consumes the margin needed
 eyebrow: Beyond adjustment
 ---
 
-There is no known fertility rate at which a civilization suddenly crosses from manageable decline into irreversible failure. The warning appears instead in what its people can afford to attempt: a society can keep the lights on, care for the old, repair its roads, and remain quite rich while gradually losing the spare capacity to build what comes next.
+The margin introduced at the chapter's opening is not governed by one fertility rate or crossed at one irreversible cliff. It becomes visible in what people can afford to attempt: a society can keep the lights on, care for the old, repair its roads, and remain quite rich while gradually losing the spare capacity to build what comes next.
 {: .lede}
 
 A hospital makes the idea concrete. If every nurse is needed for every scheduled shift, the staffing plan looks wonderfully efficient until two nurses get sick; the same hospital keeps a backup generator that sits idle most of the year because ordinary efficiency is not its only purpose. Some unused capacity is what lets an institution absorb surprise.
@@ -54,7 +54,7 @@ That exposes something easy to overlook while living inside an old civilization.
 
 Slow decline gives us time to change, which is one reason I remain optimistic about it. It also lets each generation leave the turn to the next one because most ordinary life still works. The threshold between the paths may never announce itself. We may notice only that adaptation has stopped buying time for renewal, leaving us excellent at preserving a smaller inheritance and less practiced at beginning anything larger.
 
-A civilization on Earth can survive for a long time by consolidating places and asking machines to do more. Renewal preserves more than population. It preserves people, knowledge, institutions, redundancy, energy, capital, and the willingness to undertake work no founder will finish.
+A civilization on Earth can survive for a long time by consolidating places and asking machines to do more. Renewal first changes the generational direction. Its household and institutional tests keep that recovery answerable to human wellbeing, while the civilizational margin names what the recovery preserves: redundancy, knowledge, energy, capital, and the freedom to undertake work no founder will finish.
 
 The next chapter takes that capacity to its farthest horizon. Expansion beyond Earth is not the reason to have children and cannot excuse neglect of this planet. It reveals the distinction between visiting and founding with unusual clarity: a mission can be completed by its crew, while a home must be received by successors.
 

@@ -28,7 +28,9 @@ That leaves an uncomfortable possibility. Coherent ways of life can sustain fami
 
 This chapter is a bounded thought experiment. Possibility, effectiveness, legality, morality, and desirability are separate questions. I will keep them separate, but not postpone judgment. Every case has to answer the same questions: what is the mechanism, what evidence supports its likely magnitude, who acts on whom, who bears the cost, whether refusal and exit remain real, what rights and goods are implicated, and what permission follows.
 
-That means looking directly at strong communities, ugly histories, status, work, wealth, reproductive law, and coercion. Inclusion on the map is not endorsement. The point of drawing the map is to mark its borders.
+One distinction will orient the tour without deciding every case in advance. Renewal may require large shared sacrifices: money transferred, institutions changed, privileges surrendered, and familiar arrangements made less convenient. It cannot require a person to be victimized as material for someone else's demographic plan. The difficult proposals lie between those poles, where support can become pressure and formally voluntary terms can make refusal ruinous.
+
+That means looking directly at strong communities, ugly histories, status, work, wealth, reproductive law, and coercion. Inclusion on the map is not endorsement. The point of drawing the map is to discover where shared sacrifice ends and victimization begins.
 
 <div class="citation">
 

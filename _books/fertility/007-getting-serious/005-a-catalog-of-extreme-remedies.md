@@ -4,7 +4,7 @@ deck: The conceivable range runs from radical generosity to direct coercion
 eyebrow: The possibility space
 ---
 
-A thought experiment becomes evasive if it considers only ideas its author already finds respectable. The serious range begins with transferring much more wealth toward families and ends with governments claiming direct authority over marriage and reproduction. The same questions apply across it: what mechanism produces births, how large might the effect be, who pays, and how much power must someone hold to carry it out?
+A thought experiment becomes evasive if it considers only ideas its author already finds respectable. The serious range begins with transferring much more wealth toward families and ends with governments claiming direct authority over marriage and reproduction. Some proposals demand a shared sacrifice while others plainly victimize a person. The same questions test the difficult middle: what mechanism produces births, how large might the effect be, who pays, whether refusal remains real, and how much power someone must hold to carry it out.
 {: .lede}
 
 ## Radical support
@@ -34,7 +34,7 @@ Law could shorten credential requirements, support apprenticeships, remove marri
 
 ## Conception, pregnancy, and parenthood
 
-Practices directly connected to conception and pregnancy offer more immediate mechanisms. Abortion ends an existing pregnancy; contraception prevents conception; sterilization aims to remove reproductive capacity; assisted reproduction can create embryos and divide genetic, gestational, and social parenthood. Governments can regulate, subsidize, or prohibit each practice. These are not interchangeable “fertility restrictions.” The moral case for protecting an existing embryonic or fetal life differs from using a woman's possible future conception to meet a population target. Medical treatment differs from punitive control. The next section has to decide these practices one by one.
+The practices defined in Chapter 3 also enter the catalog when institutions fund, regulate, restrict, or compel them. The question now is not what contraception, abortion, sterilization, or assisted reproduction does. It is what authority a government, employer, clinic, or community may claim over conception, pregnancy, embryonic life, and parenthood. Protecting a life already begun is not reproductive conscription; demanding a future conception is not protection. Restorative medicine is not embryo production. The next section tests these differences through power, proportionality, and the possibility of refusal.
 
 ## Direct command and production
 
