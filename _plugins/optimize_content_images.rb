@@ -1,15 +1,18 @@
 # frozen_string_literal: true
 
 require "cgi"
+require "json"
+require "net/http"
+require "openssl"
 require "uri"
 
 # Improve PageSpeed image audits for post/page content without visible quality loss:
 #   - width/height from intrinsic file dimensions (fixes unsized-images / CLS)
 #   - loading=lazy for below-fold images; first image gets fetchpriority=high
 #   - decoding=async
-#   - responsive srcset via wsrv.nl (resize + WebP) while data-full-src keeps full-res
+#   - responsive srcset via same-origin /img (Worker → wsrv.nl) while data-full-src keeps full-res
 #   - LCP preload uses imagesrcset/imagesizes so the browser fetches one candidate (#173)
-#   - preconnect wsrv.nl / media.jonathanfrei.com only when the page uses them
+#   - preconnect media.jonathanfrei.com only when the page will fetch originals
 #
 # Runs after Markdown → HTML (post_render). Applies to:
 #   - Archive media (S3 via media.jonathanfrei.com, or local /media/)
@@ -18,19 +21,23 @@ require "uri"
 #   - Same-origin absolute URLs for this site
 #   - Hotlinked third-party images (http/https) when optimize.hotlink is on (#116)
 #
-# Skips transform (wsrv) for: data: URLs, SVG/GIF, already-proxied wsrv.nl
+# Skips transform for: data: URLs, SVG/GIF, already-proxied /img or wsrv.nl
 # URLs, non-image schemes. GIFs still get loading=lazy (never LCP/eager).
+# Production proxy URLs are HMAC-signed (IMG_HMAC); the Worker rejects unsigned
+# requests so /img is not an open image CDN.
 #
 # Config (under archive_media.optimize in _config.yml — shared with archive CDN):
 #   enabled: auto|true|false   # auto → on in production
-#   proxy: "https://wsrv.nl"
+#   proxy: "https://jonathanfrei.com/img"
 #   quality: 85                # WebP quality (high; visually near-lossless for photos)
 #   widths: [480, 768, 1100]   # display widths for srcset (retina covered by 1100)
 #   sizes: "(max-width: 40em) 100vw, 36em"  # full-bleed mobile (#202); 36em = --measure
 #   hotlink: true              # proxy third-party hotlinked images via wsrv (#116)
 #
 # Performance: dimensions and path lookups are memoized per build so the same
-# archive image referenced across many posts is only opened once.
+# archive image referenced across many posts is only opened once. Hotlinked
+# (and S3) images without a local file get width/height from wsrv output=json
+# when optimize is on — fail-soft on timeout/429 so the build still completes.
 module Jekyll
   module OptimizeContentImages
     # Own images: S3 archive media, new post photos on S3 /assets/img/,
@@ -58,7 +65,7 @@ module Jekyll
 
     DEFAULTS = {
       "enabled" => "auto",
-      "proxy" => "https://wsrv.nl",
+      "proxy" => "https://jonathanfrei.com/img",
       "quality" => 85,
       "widths" => [480, 768, 1100],
       # Match .prose / --measure (36em). Mobile: full-bleed (#202).
@@ -67,7 +74,7 @@ module Jekyll
     }.freeze
 
     # Already going through our image CDN/proxy — do not re-proxy.
-    PROXY_HOST = %r{\Ahttps?://(?:wsrv\.nl|images\.weserv\.nl|cdn\.jsdelivr\.net)/}i.freeze
+    PROXY_HOST = %r{\Ahttps?://(?:wsrv\.nl|images\.weserv\.nl|cdn\.jsdelivr\.net|(?:www\.)?jonathanfrei\.com/img(?:/|\?|\z))}i.freeze
 
     # wsrv defaults to http when the scheme is omitted. Some origins
     # (Springer) 404 on that http fetch; force ssl: for those (#203).
@@ -75,6 +82,8 @@ module Jekyll
     PROXY_SSL_HOSTS = %r{\Ahttps://(?:[^/]+\.)?(?:springernature\.com|springer\.com)/}i.freeze
 
     # Per-build memoization: same file is referenced across many posts.
+    DIMS_TIMEOUT = 2
+
     @dims_cache = {}
     @path_cache = {}
     @enabled_cache = {}
@@ -208,6 +217,36 @@ module Jekyll
       end
     end
 
+    # Fail-soft width/height for images with no local file (hotlinks, S3-only).
+    # Uses wsrv's tiny JSON metadata endpoint; never fails the build.
+    def remote_dimensions(origin_url)
+      key = "remote:#{origin_url}"
+      return @dims_cache[key] if @dims_cache.key?(key)
+
+      inner = strip_protocol(origin_url)
+      uri = URI("https://wsrv.nl/?url=#{CGI.escape(inner)}&output=json")
+      http = Net::HTTP.new(uri.host, uri.port)
+      http.use_ssl = true
+      http.open_timeout = DIMS_TIMEOUT
+      http.read_timeout = DIMS_TIMEOUT
+      request = Net::HTTP::Get.new(
+        uri.request_uri,
+        { "User-Agent" => "jonathanfrei.com img-dims/1.0" }
+      )
+      response = http.request(request)
+      unless response.is_a?(Net::HTTPSuccess)
+        @dims_cache[key] = nil
+        return nil
+      end
+
+      data = JSON.parse(response.body)
+      width = data["width"].to_i
+      height = data["height"].to_i
+      @dims_cache[key] = width.positive? && height.positive? ? [width, height] : nil
+    rescue StandardError
+      @dims_cache[key] = nil
+    end
+
     # Map CDN, /media/, or /assets/ URL back to a local source file for dimension reads.
     # Works while archive media still exists under _posts/v*-archive/media/; returns
     # nil after those trees are removed from the repo (wsrv still optimizes via S3).
@@ -337,20 +376,32 @@ module Jekyll
       "#{base}#{path}"
     end
 
+    def hmac_secret
+      ENV["IMG_HMAC"].to_s
+    end
+
+    # Must match workers/img-proxy canonicalMessage().
+    def canonical_message(inner_url, width, format, quality)
+      "output=#{format}&q=#{quality}&url=#{inner_url}&w=#{width}&we"
+    end
+
+    def sign_query(inner_url, width, format, quality)
+      secret = hmac_secret
+      if secret.empty?
+        raise "IMG_HMAC is required when image optimize is on (Worker /img HMAC)"
+      end
+
+      OpenSSL::HMAC.hexdigest("SHA256", secret, canonical_message(inner_url, width, format, quality))
+    end
+
     def optimized_url(cfg, origin_url, width:, format: "webp")
       proxy = cfg["proxy"].to_s.chomp("/")
       q = cfg["quality"].to_i
       q = 85 if q <= 0 || q > 100
-      params = {
-        "url" => strip_protocol(origin_url),
-        "w" => width.to_s,
-        "output" => format,
-        "q" => q.to_s,
-        "we" => "" # without enlargement
-      }
-      # we= is a flag; build query carefully
-      query = "url=#{CGI.escape(params['url'])}&w=#{width}&output=#{format}&q=#{q}&we"
-      "#{proxy}/?#{query}"
+      inner = strip_protocol(origin_url)
+      sig = sign_query(inner, width, format, q)
+      query = "url=#{CGI.escape(inner)}&w=#{width}&output=#{format}&q=#{q}&we&s=#{sig}"
+      "#{proxy}?#{query}"
     end
 
     def parse_attrs(attr_str)
@@ -425,6 +476,9 @@ module Jekyll
 
       local = is_own ? local_path_for_src(site, src) : nil
       dims = local ? image_dimensions(local) : nil
+      if dims.nil? && enabled?(site) && !src.to_s.match?(/\.svg(?:\?|#|$)/i)
+        dims = remote_dimensions(origin)
+      end
       natural_w = dims && dims[0]
       natural_h = dims && dims[1]
 
@@ -439,10 +493,11 @@ module Jekyll
 
       tag_attrs["decoding"] = "async" unless tag_attrs.key?("decoding")
 
-      # Hotlinked originals (and wsrv fallbacks) should not send a
-      # site referrer; some hosts 403 otherwise (#203).
+      # Hotlinked originals: send Referer only to same-origin /img (Worker
+      # optional extra check). data-full-src fallback to Springer-class
+      # hosts stays without a referrer (#203).
       unless is_own
-        tag_attrs["referrerpolicy"] = "no-referrer" unless tag_attrs.key?("referrerpolicy")
+        tag_attrs["referrerpolicy"] = "same-origin" unless tag_attrs.key?("referrerpolicy")
       end
 
       # Animated GIFs are often multi-megabyte. Never mark them eager/LCP,
@@ -591,9 +646,6 @@ module Jekyll
       return html unless html.include?("</head>")
 
       tags = []
-      unless html.match?(%r{rel=["']preconnect["'][^>]+https://wsrv\.nl}i)
-        tags << '<link rel="preconnect" href="https://wsrv.nl" crossorigin>' if html.include?("wsrv.nl")
-      end
       unless html.match?(%r{rel=["']preconnect["'][^>]+https://media\.jonathanfrei\.com}i)
         if html.include?("media.jonathanfrei.com")
           tags << '<link rel="preconnect" href="https://media.jonathanfrei.com" crossorigin>'

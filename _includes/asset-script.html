@@ -1,7 +1,6 @@
 {%- comment -%}
-  Script with origin fallback when jsDelivr fails.
+  Script whose src is fingerprinted by asset_url (?v= content hash).
   Params: path (required), defer (optional truthy)
 {%- endcomment -%}
 {%- assign asset_href = include.path | asset_url -%}
-{%- assign asset_origin = include.path | asset_origin_url -%}
-<script src="{{ asset_href }}"{% if include.defer %} defer{% endif %}{% if asset_href != asset_origin %} data-fallback="{{ asset_origin }}" onerror="assetFallback(this)"{% endif %}></script>
+<script src="{{ asset_href }}"{% if include.defer %} defer{% endif %}></script>

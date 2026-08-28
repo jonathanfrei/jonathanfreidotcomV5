@@ -15,12 +15,13 @@ This is a personal site and blog: **Jekyll 4.x → GitHub Actions → GitHub Pag
 | Deploy | Push to `main` runs a single full `deploy.yml` (manual `workflow_dispatch` also available). Archive media stays on **S3**, not the Pages artifact. |
 | Archive media | Served from **S3** (`media.jonathanfrei.com/v{2,3}-archive/media/…`). See `archive_media` in `_config.yml` and issues #68 / #170. In-repo media trees may be removed after migration. |
 | New post photos | S3 `https://media.jonathanfrei.com/assets/img/…` via the factory upload worker. Absolute CDN URLs in Markdown. Do **not** commit binaries or use site-relative `/assets/img/` for new photos (that path is favicon/profile on Pages). |
-| Image perf | `_plugins/optimize_content_images.rb` optimizes **all own site images** (archive media + S3 `/assets/img/` + in-repo `/assets/`): dimensions, lazy/LCP hints, responsive WebP via wsrv.nl (full-res on `data-full-src`). See issue #90. |
+| Image perf | `_plugins/optimize_content_images.rb` optimizes **all own site images** (archive media + S3 `/assets/img/` + in-repo `/assets/`): dimensions (local files, else fail-soft wsrv JSON), lazy/LCP hints, responsive WebP via same-origin `/img` (Worker → wsrv.nl; HMAC `IMG_HMAC`). Full-res on `data-full-src`. See issue #90. |
 
 ### Directory map
 
 ```
 .github/workflows/deploy.yml              # Full build + deploy on push to main
+workers/img-proxy/             # Cloudflare Worker: /img → wsrv.nl (HMAC)
 _config.yml                    # Site config, plugins, permalinks, excludes
 _includes/                     # head, header, footer, main.css, code.css, editorial.css
 _layouts/                      # default, page, post, tag, editorial, book
@@ -111,7 +112,7 @@ description: "One or two sentences for SEO/social (preferred over raw excerpt)."
   Graph fetch (fail-soft, cached under `.jekyll-cache/link-cards/`).
   `card: false` hides the card and skips the fetch. A `card:` mapping
   (`title`, `description`, `image`, `image_alt`, `site_name`) supplies the
-  preview and skips the fetch. Card images are proxied through wsrv.nl like
+  preview and skips the fetch. Card images are proxied through `/img` like
   other hotlinked assets.
 - A bad `url:` is skipped for the card and logged to `_site/build-errors.log`.
   The rest of the site still builds.
@@ -190,8 +191,8 @@ _books/
 - Inline links inside paragraphs are **not** transformed.
 - Embed HTML uses `markdown="0"` and no inner indentation so Kramdown `parse_block_html` does not turn iframes into highlighter blocks (#156).
 - Imgur gallery SEO slugs (`/gallery/title-hash`) resolve to the trailing image hash (#157).
-- Hotlinked third-party images are rewritten through wsrv.nl in production (`archive_media.optimize.hotlink`, #116). HTTPS-only hosts such as Springer need `ssl:` in the wsrv `url` param (wsrv defaults to http and 404s). If the proxy still fails, `data-full-src` plus a capture-phase error listener falls back to the original (#203). Kramdown leaves `\( \)` in destinations (cmark/GitHub unescapes them); the optimizer strips those backslashes before proxying. For new markup, wrap URLs that contain parentheses in `<>`.
-- **GIFs** are never sent through wsrv. Every `<img src="…gif">` gets `loading="lazy"` and is never the LCP/eager candidate. GIF-only paragraphs are omitted from list excerpts (`list_excerpt`) so `/blog` does not download a multi-megabyte animation in the stream. The GIF still renders on the permalink.
+- Hotlinked third-party images are rewritten through same-origin `/img` in production (`archive_media.optimize.hotlink`, #116). HTTPS-only hosts such as Springer need `ssl:` in the `url` param (wsrv behind the Worker defaults to http and 404s). If the proxy still fails, `data-full-src` plus a capture-phase error listener falls back to the original (#203). Kramdown leaves `\( \)` in destinations (cmark/GitHub unescapes them); the optimizer strips those backslashes before proxying. For new markup, wrap URLs that contain parentheses in `<>`. Do not allowlist hotlink hosts — HMAC on `/img` URLs is what blocks open-proxy abuse.
+- **GIFs** are never sent through `/img`. Every `<img src="…gif">` gets `loading="lazy"` and is never the LCP/eager candidate. GIF-only paragraphs are omitted from list excerpts (`list_excerpt`) so `/blog` does not download a multi-megabyte animation in the stream. The GIF still renders on the permalink.
 - Standalone article images fill the measure; on viewports ≤40em they full-bleed past `.container` padding (#202, #203). Do not apply `width: 100%` to every `.prose img` (the typography favicon specimen must stay small).
 
 ### Static HTML pages (`editorial/`, extensible)
@@ -210,7 +211,7 @@ editorial/
 - **Do:** `editorial/<slug>.html` (and optional sibling asset folders)
 - **Do not:** put `index.html` inside an asset folder if that would steal the slug URL
 - **No YAML front matter** — HTML is not Liquid-rendered (safe to use `{{` in the page)
-- Relative image paths are absolutized and optimized via wsrv.nl in production (#88, #90)
+- Relative image paths are absolutized and optimized via `/img` in production (#88, #90)
 - Roots are listed under `static_html.roots` in `_config.yml` (add `articles`, etc. later)
 - Does not use site chrome (`_layouts`, header/footer) unless you hardcode it into the HTML
 
@@ -235,9 +236,9 @@ Dashboard rules live in README (redirects before cache). Do not regress:
 - SSL/TLS mode is **Full**, not Full (strict). GitHub Pages has no apex certificate for `jonathanfrei.com`; Full (strict) returns 526. Do not switch back to Flexible (that emits `http://` origin redirects).
 - HTML must be Cache Everything at the edge. `cf-cache-status: DYNAMIC` on documents means the rule is off; TTFB will stay a full Cloudflare → GitHub Pages hop.
 - `deploy.yml` purges Cloudflare after Pages deploy when `CLOUDFLARE_ZONE_ID` and `CLOUDFLARE_API_TOKEN` are set. Do not remove that step if HTML stays cached.
-- `_includes/head.html` always `preconnect`s `cdn.jsdelivr.net`. `wsrv.nl` and `media.jonathanfrei.com` only when the page will fetch them (`<img>` / those hosts in `content`). `optimize_content_images.rb` injects a missing host hint after image rewrite. Do not restore unconditional preconnects or redundant `dns-prefetch` for the same hosts.
+- `_includes/head.html` does **not** preconnect a font/CSS CDN or `wsrv.nl`. `media.jonathanfrei.com` only when the page will fetch originals (`<img>` / that host in `content`). `optimize_content_images.rb` injects a missing host hint after image rewrite. Do not restore `wsrv.nl` preconnects, unconditional preconnects, `cdn.jsdelivr.net`, or redundant `dns-prefetch` for the same hosts.
 - Speculation Rules in `head.html` prefetch `/`, `/about`, `/blog`, `/archive` on moderate eagerness. Prefetch only — do not prerender, and do not add `<link rel="preload" as="document">` for the current page.
-- Free-plan Redirect Rules cannot use `regex_replace` or `matches`. Use `wildcard` / `wildcard_replace` / `ends_with`. Do not put the SHA-pinned jsDelivr `main.css` URL in a Cloudflare `Link` / Early Hints rule; it changes every commit.
+- Free-plan Redirect Rules cannot use `regex_replace` or `matches`. Use `wildcard` / `wildcard_replace` / `ends_with`. Do not put the fingerprinted `core.css?v=` URL in a Cloudflare `Link` / Early Hints rule; it changes when CSS changes. Early-Hint only the two first-paint WOFF2 files (not Source Sans 3).
 
 ### 2. CSS — brand system + optional sheets
 
@@ -251,7 +252,7 @@ Dashboard rules live in README (redirects before cache). Do not regress:
 - **Books:** `_includes/book.css` + `layout: book` — linked as `/assets/css/book.css` after `core.css` (same pattern as editorial). Do **not** inline it in `optional-css.html`; that would copy the sheet into every chapter HTML.
 - **Prose marks (#223):** `{: .aside}`, `{: .pull-quote}`, `{: .caption}`, `{: .figure-wide}` live in `main.css` for ordinary posts/pages. Do not reuse editorial-grid `.aside` for blog sidenotes. `.figure-wide` must not use `100vw` and must not restyle the page via `.container:has(.figure-wide)` — that indented every `.prose` child on `/blog` and `/archive` (the Blog page is itself `article.prose`). Only the figure breaks out, using `100cqi` of `.site-main` (fallback: container padding-cancel). Images keep intrinsic size (`width: auto; max-width: 100%`); on small screens the img fills the bleed slot. Kramdown IALs (`{: .figure-wide}`) are stripped from `search.json` excerpts in `_plugins/site_index.rb`. Never `margin-inline: auto` on every prose child to fake a measure — headings shrink-wrap and the column falls apart.
 - **iOS Safari (#231):** the “desktop layout” was a locked page zoom on the site, not a CSS viewport bug. Do not restore `html.is-narrow` or a head script that rewrites the viewport meta. Do not set `overflow-x` on `html`. Hang asides only at `70em`.
-- **Delivery:** every page links the design system via `asset_url` (`_includes/site-css.html`). Production uses jsDelivr (`cdn.jsdelivr.net/gh/…@SHA/_includes/main.css`); local serve stays on `/assets/css/core.css`. Do not inline `main.css` or restore the front-of-house vs archive split from PR #197.
+- **Delivery:** every page links the design system via `asset_url` (`_includes/site-css.html`) as `/assets/css/core.css?v=<content-hash>`. Fonts are `/assets/fonts/*` with the Fontsource version in the filename. Do not load chrome CSS/JS/fonts from jsDelivr. Do not inline `main.css` or restore the front-of-house vs archive split from PR #197. Do not preload Source Sans 3 until a design change applies that family.
 - Tooling: `/assets/css/core.css` (design system), `/assets/css/main.css` (full combined), `/assets/css/editorial.css` (editorial components only), `/assets/css/book.css` (book chrome only)
 - **Never** use `{% include_relative ../... %}` — Jekyll rejects `../`
 - Prefer semantic classes over utility soup
@@ -311,11 +312,10 @@ Production depends on external services for media (configured in `_config.yml` `
 | Service | Role | Config key |
 | --- | --- | --- |
 | **S3 / media.jonathanfrei.com** | Archive binaries (`v{2,3}-archive/media/…`) and new post photos (`assets/img/…`) — not in the Pages artifact (#170) | `archive_media.cdn_base` |
-| **wsrv.nl** | On-the-fly resize + WebP for own-site images (archive + S3 `/assets/img/` + in-repo `/assets/`); full-res on `data-full-src` | `archive_media.optimize.proxy` |
-| **jsDelivr** | Fontsource fonts, plus production `/assets` (CSS/JS/favicons) pinned to the build commit | `assets_cdn` in `_config.yml`; `@font-face` in `main.css` |
+| **`/img` Worker → wsrv.nl** | On-the-fly resize + WebP; browser sees `jonathanfrei.com/img`. HMAC `IMG_HMAC`. Full-res on `data-full-src`. | `archive_media.optimize.proxy` |
 
-- Production CSS/JS/favicons load from jsDelivr and fall back to origin `/assets` if the CDN cannot fetch the commit (GitHub blip). S3/wsrv still have no chrome fallback: images break or revert to the original `src`.
-- Do **not** point `cdn_base` or the proxy at untrusted hosts or arbitrary user content.
+- CSS, JS, favicons, fonts, and transformed images are **first-party** on `jonathanfrei.com`. `asset_url` adds `?v=<content-hash>`. GIFs and `data-full-src` stay on S3/hotlink origins; the `/img` Worker 403s unsigned URLs.
+- Do **not** point `cdn_base` at untrusted hosts. Do **not** ship `/img` without HMAC (open proxy). The Worker still fetches wsrv on cache miss — do not log `IMG_HMAC` in HTML.
 - Changing `cdn_base` or the proxy host is a production-facing decision; prefer a PR and a smoke check of a few archive posts + `/assets/` images.
 - Local `jekyll serve` uses S3 in CDN mode (default once in-repo media trees are gone). `ARCHIVE_MEDIA_MODE=local` only helps while `_posts/v*-archive/media/` still exists on disk.
 
@@ -347,13 +347,14 @@ Production depends on external services for media (configured in `_config.yml` `
 | Site-wide layout | `_layouts/default.html` |
 | Post chrome (tags, comment mailto, random post) | `_layouts/post.html` tags; `_includes/post-actions.html` (Comment · Edit · Random · Blog on essays and links; random fetches `search.json`, including link posts — #221) |
 | Post metadata (last_modified, reading time) | `_plugins/post_metadata.rb` + `post_metadata` in `_config.yml` (#75) |
-| Search / tag / archive indexes | `_plugins/site_index.rb` + `site_index` in `_config.yml` (#195). `search.json` includes `date_label` and first-image `img` (`src` + `alt`) for stream results (#219). |
+| Search / tag / archive indexes | `_plugins/site_index.rb` + `site_index` in `_config.yml` (#195). `search.json` includes `date_label` and first-image `img` (`src` signed `/img` URL, `alt`, optional `full` original) for stream results (#219). |
+| Image proxy Worker | `workers/img-proxy/` — route `jonathanfrei.com/img*`. Secret `IMG_HMAC` must match Actions. 200s cache 30d; 4xx/5xx `no-store`. Redeploy the Worker after changing `src/index.js` (Pages deploy does not). |
 | Date timezone | `_config.yml` `timezone: America/New_York` (#180) |
 | Drop caps on long posts | `_plugins/drop_cap.rb` + `.prose--drop-cap` in `main.css` (#123) |
 | Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` (thin dump of `site.data.search_index`). URLs: `?q=`, `?tag=`, `?category=`, `?title=`; `?=text` aliases `?q=`. The query string is the source of truth until the user types; an inline seed fills the box on first paint (#211). `search.js` is deferred; `/search` and query URLs reserve result space so the footer does not shift (#212). Result cards reuse the `/blog` stream markup (title, long date, tag chips, excerpt, first image, Read more; link entries hide the title) (#219). Tag, category, and archive lists stay visible below results. |
 | Random-post URL list | `search.json` (`url` + `kind`; essays and link posts) |
 | Theme toggle | Boot in `_includes/head.html`; full `assets/js/theme.js` loads on first click (footer stub) |
-| Asset CDN | `_plugins/asset_cdn.rb` + `assets_cdn` in `_config.yml`. Production: jsDelivr `@SHA` with origin `/assets` `onerror` fallback (`asset_url` / `asset_origin_url`). Local: `/assets`. |
+| Asset URLs | `_plugins/asset_cdn.rb` + `asset_url`. Origin `/assets/…?v=<content-hash>` of the git source file. Fonts: versioned filenames in `assets/fonts/`. |
 | Site config | `_config.yml` |
 | Deploy / path filters | `.github/workflows/deploy.yml` |
 | Embed providers | `_plugins/url_embeds.rb` |
@@ -366,13 +367,13 @@ Production depends on external services for media (configured in `_config.yml` `
 Before finishing a change that touches build, layouts, or CSS:
 
 1. [ ] Permalinks have **no** trailing slash for HTML pages (`/about` not `/about/`). Link posts use the same `/:year/:month/:day/:title` shape as essays.
-2. [ ] Every HTML page links the design system (jsDelivr in production, `/assets/css/core.css` locally); no inlined `main.css`; `code.css` only on code pages; no `../` includes
+2. [ ] Every HTML page links the design system as `/assets/css/core.css?v=`; no `cdn.jsdelivr.net` on chrome assets; no inlined `main.css`; `code.css` only on code pages; no `../` includes
 3. [ ] Tags on `/blog` still look like chips (not oversized title links) and point at `/tags?tag=`. Category chips point at `/categories?category=`. Month lists use the same stream entries as `/blog` (#201). No `/tags/:name` or `/categories/:name` HTML files.
 4. [ ] Only intentional publications are added to `_posts/`; unfinished drafts stay outside the repository
 5. [ ] If workflow changed, confirm Actions majors and `paths-ignore` still make sense
 6. [ ] Prefer a green deploy run after merge/push to `main`
 7. [ ] Static HTML drop-ins use `editorial/<slug>.html` → `/editorial/<slug>` (no `index.html` in asset folders)
-8. [ ] Text pages (e.g. `/about`) do not `preconnect` `wsrv.nl` or `media.jonathanfrei.com`. After a production deploy with Cache Everything on, HTML `cf-cache-status` is `HIT` (or the purge secrets are documented as still missing).
+8. [ ] Text pages (e.g. `/about`) do not `preconnect` `wsrv.nl` or `media.jonathanfrei.com`, and do not mention `wsrv.nl`. After a production deploy with Cache Everything on, HTML `cf-cache-status` is `HIT` (or the purge secrets are documented as still missing). Image pages use signed `/img?url=` URLs, not `wsrv.nl`.
 
 ## What not to do
 

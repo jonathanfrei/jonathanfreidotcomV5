@@ -7,35 +7,6 @@
 {% comment %}
   Legacy /tags/:name and /categories/:name archives 404. Send them to
   search URLs before paint (#209).
-  If jsDelivr cannot fetch the pinned commit (GitHub blip), swap CSS/JS/images
-  to the origin copy still published under /assets.
-{% endcomment %}
-<script>
-window.assetFallback = function (el) {
-  var fallback = el && el.getAttribute && el.getAttribute("data-fallback");
-  if (!fallback) return;
-  el.onerror = null;
-  el.removeAttribute("data-fallback");
-  if (el.tagName === "LINK") {
-    el.href = fallback;
-    return;
-  }
-  if (el.tagName === "IMG") {
-    el.src = fallback;
-    return;
-  }
-  if (el.tagName === "SCRIPT") {
-    var next = document.createElement("script");
-    if (el.defer) next.defer = true;
-    if (el.async) next.async = true;
-    next.src = fallback;
-    (el.parentNode || document.head).insertBefore(next, el.nextSibling);
-  }
-};
-</script>
-
-{% comment %}
-  Legacy /tags/:name archives now 404. Send them to /tags?tag= before paint (#209).
 {% endcomment %}
 {% if page.url == '/404.html' %}
 <script>
@@ -74,8 +45,9 @@ window.assetFallback = function (el) {
 </script>
 
 {% comment %}
-  If wsrv.nl cannot fetch a hotlinked original (HTTPS-only hosts, 404),
-  fall back to data-full-src so the image still shows (#203).
+  If /img (or a leftover wsrv URL) cannot fetch a hotlinked original
+  (HTTPS-only hosts, 404), fall back to data-full-src so the image still
+  shows (#203).
 {% endcomment %}
 <script>
 (function () {
@@ -97,35 +69,26 @@ window.assetFallback = function (el) {
 </script>
 
 {% comment %} Favicon (#22) {% endcomment %}
-{%- assign favicon_ico = '/assets/img/favicon.ico' | asset_url -%}
-{%- assign favicon_ico_origin = '/assets/img/favicon.ico' | asset_origin_url -%}
-{%- assign favicon_png = '/assets/img/favicon.png' | asset_url -%}
-{%- assign favicon_png_origin = '/assets/img/favicon.png' | asset_origin_url -%}
-<link rel="icon" href="{{ favicon_ico }}"{% if favicon_ico != favicon_ico_origin %} data-fallback="{{ favicon_ico_origin }}" onerror="assetFallback(this)"{% endif %} type="image/png">
-<link rel="apple-touch-icon" href="{{ favicon_png }}"{% if favicon_png != favicon_png_origin %} data-fallback="{{ favicon_png_origin }}" onerror="assetFallback(this)"{% endif %}>
+<link rel="icon" href="{{ '/assets/img/favicon.ico' | asset_url }}" type="image/png">
+<link rel="apple-touch-icon" href="{{ '/assets/img/favicon.png' | asset_url }}">
 
 {% comment %}
-  jsDelivr is on every page (CSS, Fontsource, favicons). wsrv.nl and the
-  archive media host only when this page will fetch them — unused preconnects
-  open extra TLS sockets and can stall the document request.
-  post_render may add a missing host hint after image URLs are rewritten.
+  Transforms are same-origin /img (no preconnect). The archive media host
+  only when this page will fetch originals (GIF / data-full-src). post_render
+  may add a missing host hint after image URLs are rewritten.
 {% endcomment %}
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 {%- assign hint_src = content | append: page.lcp_image -%}
-{%- if hint_src contains 'wsrv.nl' or hint_src contains '<img' or hint_src contains '<IMG' or hint_src contains 'data-img-opt' -%}
-<link rel="preconnect" href="https://wsrv.nl" crossorigin>
-{%- endif -%}
 {%- if hint_src contains 'media.jonathanfrei.com' -%}
 <link rel="preconnect" href="https://media.jonathanfrei.com" crossorigin>
 {%- endif -%}
 
 {% comment %}
-  Preload the two custom faces (body serif + UI/mono code). Variable latin
-  WOFF2 from Fontsource; font-display:swap is set in @font-face. (#92, #110)
-  Source Sans 3 dropped — UI shares Source Code Pro with mono.
+  Preload the two custom faces used on first paint (body serif + UI/mono).
+  Source Sans 3 is vendored but unused — do not preload it. (#92, #110)
+  Same-origin WOFF2; font-display:swap is set in @font-face.
 {% endcomment %}
-<link rel="preload" href="https://cdn.jsdelivr.net/fontsource/fonts/source-serif-4:vf@5.2.5/latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="https://cdn.jsdelivr.net/fontsource/fonts/source-code-pro:vf@5.2.5/latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/source-serif-4-5.2.5-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2">
+<link rel="preload" href="{{ '/assets/fonts/source-code-pro-5.2.5-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2">
 
 {% comment %}
   LCP image preload. When the first content image has a responsive srcset,

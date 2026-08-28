@@ -104,36 +104,32 @@ jekyll-archives:
 # trees remain in the checkout. Override with ARCHIVE_MEDIA_MODE=cdn|local.
 # See issues #68 (offload), #170 (S3).
 #
-# Image optimization (wsrv.nl WebP + srcset) applies to:
+# Image optimization (same-origin /img → Worker → wsrv.nl) applies to:
 #   - Own site images (archive media + S3 /assets/img/ + in-repo /assets/) — issue #90
 #   - Hotlinked third-party images in post HTML — issue #116
+# Production requires IMG_HMAC (Actions secret + Worker secret). URLs are signed.
 archive_media:
   mode: auto
   cdn_base: "https://media.jonathanfrei.com"
-  # PageSpeed: resize + WebP via wsrv.nl (full-res preserved on data-full-src).
+  # PageSpeed: resize + WebP via /img (full-res preserved on data-full-src).
   # quality 85 is near-lossless for photos; widths cover 1x–2x of the 36em measure.
   # sizes must match display: 100vw when images full-bleed on small
   # screens (#202), 36em (--measure) on larger screens (#173).
   # Applies to archive media, /assets/, and hotlinked external images.
   optimize:
     enabled: auto
-    proxy: "https://wsrv.nl"
+    proxy: "https://jonathanfrei.com/img"
     quality: 85
     widths: [480, 768, 1100]
     sizes: "(max-width: 40em) 100vw, 36em"
     # When true, rewrite http(s) third-party <img> src through the proxy (#116)
     hotlink: true
 
-# Production /assets (CSS, JS, favicons) via jsDelivr's GitHub CDN.
-# Generated /assets/css/core.css maps to _includes/main.css (the file in git).
-# editorial.css / book.css map the same way (see AssetCdn::SOURCE_MAP).
-# Pinned to the build commit so deploys are not stuck on the @main cache.
-# Origin copies still write to _site/assets for local serve. ASSETS_CDN=off
-# forces origin URLs. Local `jekyll serve` stays on /assets.
-assets_cdn:
-  enabled: auto
-  host: "https://cdn.jsdelivr.net"
-  repo: "jonathanfrei/jonathanfreidotcomV5"
+# /assets (CSS, JS, favicons) stay on origin. asset_url appends ?v=<content
+# hash> so Cloudflare's long browser TTL cannot keep a stale design-system
+# file after a CSS/JS change. Generated CSS hashes the include source
+# (see AssetCdn::SOURCE_MAP in _plugins/asset_cdn.rb). Fonts are versioned
+# filenames under /assets/fonts/ and are not fingerprinted.
 
 # Static HTML drop-ins (issue #88): top-level *.html under each root publish at
 # /{root}/{slug} (no trailing slash). Sibling folders hold assets only.
@@ -160,6 +156,7 @@ exclude:
   - README.md
   - AGENTS.md
   - scripts
+  - workers
   - assets/deprecated
   - .gitignore
   # Residual local media trees (safe to delete once S3 is confirmed, #170).
