@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 require "cgi"
-require "json"
-require "net/http"
 require "openssl"
 require "uri"
 
@@ -35,9 +33,9 @@ require "uri"
 #   hotlink: true              # proxy third-party hotlinked images via wsrv (#116)
 #
 # Performance: dimensions and path lookups are memoized per build so the same
-# archive image referenced across many posts is only opened once. Hotlinked
-# (and S3) images without a local file get width/height from wsrv output=json
-# when optimize is on — fail-soft on timeout/429 so the build still completes.
+# local file referenced across many posts is only opened once. Archive media
+# lives on S3 with no in-repo copy — do not HTTP-fetch dimensions at build
+# time (wsrv output=json downloads each image and made CI take ~11 minutes).
 module Jekyll
   module OptimizeContentImages
     # Own images: S3 archive media, new post photos on S3 /assets/img/,
@@ -82,8 +80,6 @@ module Jekyll
     PROXY_SSL_HOSTS = %r{\Ahttps://(?:[^/]+\.)?(?:springernature\.com|springer\.com)/}i.freeze
 
     # Per-build memoization: same file is referenced across many posts.
-    DIMS_TIMEOUT = 2
-
     @dims_cache = {}
     @path_cache = {}
     @enabled_cache = {}
@@ -215,36 +211,6 @@ module Jekyll
         h = 1 + b.getbyte(3) + (b.getbyte(4) << 8) + (b.getbyte(5) << 16)
         [w, h]
       end
-    end
-
-    # Fail-soft width/height for images with no local file (hotlinks, S3-only).
-    # Uses wsrv's tiny JSON metadata endpoint; never fails the build.
-    def remote_dimensions(origin_url)
-      key = "remote:#{origin_url}"
-      return @dims_cache[key] if @dims_cache.key?(key)
-
-      inner = strip_protocol(origin_url)
-      uri = URI("https://wsrv.nl/?url=#{CGI.escape(inner)}&output=json")
-      http = Net::HTTP.new(uri.host, uri.port)
-      http.use_ssl = true
-      http.open_timeout = DIMS_TIMEOUT
-      http.read_timeout = DIMS_TIMEOUT
-      request = Net::HTTP::Get.new(
-        uri.request_uri,
-        { "User-Agent" => "jonathanfrei.com img-dims/1.0" }
-      )
-      response = http.request(request)
-      unless response.is_a?(Net::HTTPSuccess)
-        @dims_cache[key] = nil
-        return nil
-      end
-
-      data = JSON.parse(response.body)
-      width = data["width"].to_i
-      height = data["height"].to_i
-      @dims_cache[key] = width.positive? && height.positive? ? [width, height] : nil
-    rescue StandardError
-      @dims_cache[key] = nil
     end
 
     # Map CDN, /media/, or /assets/ URL back to a local source file for dimension reads.
@@ -474,11 +440,10 @@ module Jekyll
       # Skip transform for GIF/SVG (animation / vectors)
       transform = enabled?(site) && !animated_or_svg?(src)
 
+      # Width/height only from a local file. Archive/S3/hotlink URLs have no
+      # in-repo bytes; fetching wsrv output=json per URL hangs CI.
       local = is_own ? local_path_for_src(site, src) : nil
       dims = local ? image_dimensions(local) : nil
-      if dims.nil? && enabled?(site) && !src.to_s.match?(/\.svg(?:\?|#|$)/i)
-        dims = remote_dimensions(origin)
-      end
       natural_w = dims && dims[0]
       natural_h = dims && dims[1]
 
