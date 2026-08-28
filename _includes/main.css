@@ -108,8 +108,8 @@
   --color-surface: var(--brand-white);
 
   --font-body:  "Source Serif 4", Charter, "Iowan Old Style", "New York", "Sitka Text", Cambria, Georgia, ui-serif, serif;
-  --font-ui: "Source Code Pro", system-ui, -apple-system, BlinkMacSystemFont, monospace;
-  --font-mono: "Source Code Pro", system-ui, -apple-system, BlinkMacSystemFont, monospace;
+  --font-ui: "Source Code Pro", "Cascadia Mono", system-ui, -apple-system, BlinkMacSystemFont, monospace;
+  --font-mono: "Source Code Pro", "Cascadia Mono", system-ui, -apple-system, BlinkMacSystemFont, monospace;
 
   --type-base: clamp(1.0625rem, 1rem + 0.35vw, 1.125rem);
   --type-sm: 0.875em;
