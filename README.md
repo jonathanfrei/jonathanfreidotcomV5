@@ -250,9 +250,11 @@ If images are broken immediately after merge: the route is missing, `IMG_HMAC` d
 1. Speed → Settings → Content Optimization → **Early Hints: On**. Cloudflare 103s come from HTTP `Link` headers, not `<link>` tags. GitHub Pages cannot set headers, so add a **Response Header Transform Rule** with **stable** font URLs only (not the fingerprinted `core.css?v=` URL — it changes when CSS changes). Do **not** Early-Hint Source Sans 3 (vendored, unused).
 
    ```http
-   Link: </assets/fonts/source-serif-4-5.2.5-latin-wght-normal.woff2>; rel=preload; as=font; type=font/woff2
-   Link: </assets/fonts/source-code-pro-5.2.5-latin-wght-normal.woff2>; rel=preload; as=font; type=font/woff2
+   Link: </assets/fonts/source-serif-4-5.2.5-latin-wght-normal.woff2>; rel=preload; as=font; type=font/woff2; crossorigin
+   Link: </assets/fonts/source-code-pro-5.2.5-latin-wght-normal.woff2>; rel=preload; as=font; type=font/woff2; crossorigin
    ```
+
+   `crossorigin` is required even for same-origin fonts: `@font-face` always uses anonymous CORS. A preload without it is a second download.
 
 2. Confirm **Brotli** is On (issue #117). Leave Rocket Loader **off**. Auto Minify is optional.
 
