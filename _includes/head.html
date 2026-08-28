@@ -85,10 +85,11 @@
 {% comment %}
   Preload the two custom faces used on first paint (body serif + UI/mono).
   Source Sans 3 is vendored but unused — do not preload it. (#92, #110)
-  Same-origin WOFF2; font-display:swap is set in @font-face.
+  @font-face always uses anonymous CORS, even same-origin. Preload without
+  crossorigin is a different request mode, so the browser downloads twice.
 {% endcomment %}
-<link rel="preload" href="{{ '/assets/fonts/source-serif-4-5.2.5-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2">
-<link rel="preload" href="{{ '/assets/fonts/source-code-pro-5.2.5-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2">
+<link rel="preload" href="{{ '/assets/fonts/source-serif-4-5.2.5-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/source-code-pro-5.2.5-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 
 {% comment %}
   LCP image preload. When the first content image has a responsive srcset,
