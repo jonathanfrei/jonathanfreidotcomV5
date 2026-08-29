@@ -43,3 +43,5 @@ Look around. There are eight billion people thinking, tinkering, loving, buildin
 Life is electric.
 
 Act accordingly.
+
+[![](https://media.jonathanfrei.com/assets/img/2026-08-29-100110-71390.jpg)](https://media.jonathanfrei.com/assets/img/2026-08-29-100110-71390.jpg)
