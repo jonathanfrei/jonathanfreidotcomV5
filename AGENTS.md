@@ -1,389 +1,114 @@
 # AGENTS.md
 
-Guidance for AI coding agents working on **jonathanfrei.com (V5)**.
+Jekyll 4.x static site → GitHub Actions → GitHub Pages → Cloudflare. No app server, no DB. Prefer small focused changes.
 
-This is a personal site and blog: **Jekyll 4.x → GitHub Actions → GitHub Pages → Cloudflare**. Prefer small, focused changes. Match existing style. Do not invent a framework or redesign the design system unless asked.
-
-## Project overview
-
-| Item | Detail |
-| --- | --- |
-| Site | [jonathanfrei.com](https://jonathanfrei.com) |
-| Repo | Static Jekyll site (no app server, no database) |
-| Content | Markdown posts/pages; HTML layouts/includes |
-| Design | Brand tokens in `_includes/main.css` (Paper/Ink/Signature Blue #145); `editorial.css` for long-form (#144) |
-| Deploy | Push to `main` runs a single full `deploy.yml` (manual `workflow_dispatch` also available). Archive media stays on **S3**, not the Pages artifact. |
-| Archive media | Served from **S3** (`media.jonathanfrei.com/v{2,3}-archive/media/…`). See `archive_media` in `_config.yml` and issues #68 / #170. In-repo media trees may be removed after migration. |
-| New post photos | S3 `https://media.jonathanfrei.com/assets/img/…` via the factory upload worker. Absolute CDN URLs in Markdown. Do **not** commit binaries or use site-relative `/assets/img/` for new photos (that path is favicon/profile on Pages). |
-| Image perf | `_plugins/optimize_content_images.rb` optimizes **all own site images** (archive media + S3 `/assets/img/` + in-repo `/assets/`): width/height from local files when present, lazy/LCP hints, responsive WebP via same-origin `/img` (Worker → wsrv.nl; HMAC `IMG_HMAC`). Full-res on `data-full-src`. Do not fetch wsrv JSON at build time. See issue #90. |
-
-### Directory map
-
-```
-.github/workflows/deploy.yml              # Full build + deploy on push to main
-workers/img-proxy/             # Cloudflare Worker: /img → wsrv.nl (HMAC)
-_config.yml                    # Site config, plugins, permalinks, excludes
-_includes/                     # head, header, footer, main.css, code.css, editorial.css
-_layouts/                      # default, page, post, tag, editorial, book
-_plugins/url_embeds.rb         # Standalone media URLs → embeds
-_plugins/books.rb              # Book collection: slugs, TOC, prev/next, noindex
-_books/<book-slug>/            # Nested markdown books → /books/<book-slug>/…
-_posts/                        # Published posts and link posts (YYYY-MM-DD-slug.md)
-_posts/v1-archive/             # Historical imported posts (treat carefully)
-assets/                        # Images, JS; CSS tooling at assets/css/*.html
-editorial/                     # Handcrafted HTML drop-ins (slug.html → /editorial/slug)
-editorial/                     # HTML drop-ins + Markdown editorials (layout: editorial)
-index.md                         # Home (stays at repo root)
-_pages/                          # Site pages → root URLs (/about, /blog, …)
-_pages/**/*.md                   # Nested files → /section/page (#161)
-```
-
-
-
-
-## Setup (local, optional)
+## Commands
 
 ```bash
 bundle install
-bundle exec jekyll serve
+bundle exec jekyll serve                    # local preview
+bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"  # production (CI)
 ```
 
-Ruby **3.3** matches CI. There may be no Ruby on the agent host; still prefer valid Jekyll/Liquid that would pass `bundle exec jekyll build`.
+- Ruby **3.3** (CI). `TZ=America/New_York` required (`_config.yml:10` `timezone`).
+- Production CI sets `JEKYLL_ENV=production ARCHIVE_MEDIA_MODE=cdn TZ=America/New_York` (`deploy.yml:61-66`) and **fails closed** if `IMG_HMAC` is unset (`deploy.yml:51-54`). Omitting `ARCHIVE_MEDIA_MODE` falls back to `_config.yml` `mode: auto` and can put `_site/media` in the artifact. `fetch-depth: 0` (`deploy.yml:31`) is for `git_last_modified_map` in `post_metadata.rb`.
+- After layout/CSS/build changes: check `_site/build-errors.log`. Media `grep -Rql` guards are `deploy.yml:179`/`185`; permalink/HTML guards start at `:194`.
 
-Production build (CI):
+## Deploy
 
-```bash
-bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+- Single workflow `.github/workflows/deploy.yml` on `push: main` (plus `workflow_dispatch`). `paths-ignore: README.md, AGENTS.md, .gitignore` — docs-only pushes skip build.
+- Future-dated posts publish on next content push (no cron, `future: true` in `_config.yml:15`).
+- Artifact must not contain `_site/media` or `_posts/v*-archive/media`; HTML must contain `media.jonathanfrei.com/v{2,3}-archive/media/` (`deploy.yml:158-192`).
+- After push to `main`, confirm Actions green. Cloudflare purge runs when `CLOUDFLARE_ZONE_ID` + `CLOUDFLARE_API_TOKEN` set (`deploy.yml:569-585`); otherwise `HIT` vs `DYNAMIC` check needed.
+
+## Structure
+
+```
+_config.yml              site config, permalinks, archive_media, collections
+_posts/YYYY-MM-DD-*.md   published posts + link posts; v1/v2/v3-archive/ is historical
+_books/<slug>/           nested book collection (001- prefix = sort key, permalink = slug)
+_pages/                  site pages → root URLs via _plugins/pages_dir.rb (index.md stays at root)
+_includes/               head, header, footer, main.css / editorial.css / book.css / code.css / search.css / embeds.css
+_layouts/                default, post, page, book, link, editorial, archive
+_plugins/                books.rb, post_metadata.rb, site_index.rb, optimize_content_images.rb, url_embeds.rb, asset_cdn.rb, pages_dir.rb, static_html_pages.rb
+assets/css/*.html        generates /assets/css/core.css via asset_url (_plugins/asset_cdn.rb)
+editorial/               static HTML drop-ins + Markdown editorials → /editorial/<slug>
+workers/img-proxy/       Cloudflare Worker /img → wsrv.nl (HMAC, wrangler.toml)
 ```
 
-## How work usually lands
+Tag/category results are query views (`/tags?tag=`, `/categories?category=`), not layouts.
 
-1. Prefer a branch + PR for multi-file or behavior changes; direct `main` is fine for urgent build/content fixes when the owner asks.
-2. Push to `main` deploys via a **single** full `deploy.yml` (except documentation-only paths — see CI `paths-ignore`).
-3. Future-dated posts publish on the **next content push** (or manual **workflow_dispatch**). There is no scheduled rebuild (#142).
-4. After deploy, confirm the Actions run is green when you changed build-related files.
-5. **Media is never in the Pages artifact** — production uses `ARCHIVE_MEDIA_MODE=cdn` (S3 / `media.jonathanfrei.com`). The deploy step fails if `_site/media` appears.
+## Permalinks (do not regress #63)
 
-## Content rules
+- Desired: `/about`, `/blog`, `/:year/:month/:day/:title`, `/tags`, `/editorial/<slug>`, `/books/<slug>/…` — **no trailing slash**, written as `.html` files (GH Pages serves clean path). Never emit extensionless files (`application/octet-stream`).
+- Exception: `jekyll-archives` month pages `/archive/:year/:month/` must keep trailing slash (`_config.yml:97-98`).
+- `permalink: /:year/:month/:day/:title` uses `timezone: America/New_York` (`_config.yml:10`, #180) so Eastern evening dates don't roll to UTC.
+- Cloudflare must 301 `/path/` → `/path` excluding `/`, `/archive/*/*/`, `/…/page/*/` (Free plan: `wildcard` / `wildcard_replace` / `ends_with`, not `regex_replace`).
 
-### Posts
+## Content contracts
 
-- Path: `_posts/YYYY-MM-DD-slug.md`
-- Front matter contract (issue #75) — keep it small; optional fields stay optional:
-
+**Posts** `_posts/YYYY-MM-DD-slug.md` (#75):
 ```yaml
 ---
-title: "Post title"
-date: 2026-08-04 16:00:00 -0400   # first published (canonical); prefer datetime + TZ
-# last_modified_at: 2026-08-10 09:00:00 -0400  # optional intentional revision stamp
+title: "Title"
+date: 2026-08-04 16:00:00 -0400   # first published, never auto-overwrite; TZ-aware
 tags: [tag-one, tag-two]
-# categories: [notes]
-description: "One or two sentences for SEO/social (preferred over raw excerpt)."
-# excerpt: "Optional list blurb; falls back to auto-excerpt."
-# image: https://media.jonathanfrei.com/assets/img/2026/2026-08-15-093000-example.jpg
-# author: Jonathan Frei                  # only override site default when needed
+description: "SEO sentence (preferred over raw excerpt)"
 ---
 ```
+- Front-matter `last_modified_at` only for intentional revisions; byline shows "Updated …" when >24h later (`last_modified_explicit` in `_layouts/post.html`). If omitted, `post_metadata.rb` fills git `dateModified`/SEO/sitemap **and does not show it in the byline**.
+- `drop_cap` auto when file >5KB + first prose line >100 chars (#123); headings/images/HTML/lists never qualify.
+- Default `layout: post`. Chips → `/tags?tag=name`.
 
-- **`date`** = first publication. Never auto-overwrite on edit. Prefer `YYYY-MM-DD HH:MM:SS ±ZZZZ` for new posts. Site timezone is **`America/New_York`** (`_config.yml`, issue #180) so evening Eastern dates do not roll to the next UTC day in bylines or `/:year/:month/:day/` permalinks. There is no plugin generating HTML redirects from old UTC paths; add those later only if a real link needs one.
-- **`drop_cap`:** optional override. If omitted, longer posts get a drop cap when the **file is > 5 KB** and the **first non-empty body line is prose > 100 characters** (issue #123). Set `drop_cap: false` to opt out or `drop_cap: true` to force one. Headings, images, HTML, quotes, and lists never qualify. When on, drop caps apply to the opening paragraph (after the H1), sized to two lines (`initial-letter: 2`).
-- **`last_modified_at`**: set in front matter only for intentional revisions (shows “Updated …” in the byline when **> 24h** after `date`). If omitted, `_plugins/post_metadata.rb` fills it from **git** for Schema.org `dateModified`, `jekyll-seo-tag`, and sitemap `lastmod` — not for the visible byline (avoids archive-import noise). Deploy uses `fetch-depth: 0` for full history.
-- **Reading time / word count:** computed at build (`reading_time`, `word_count`); “N min read” shows when ≥ 2 minutes. No front matter required.
-- **`description`:** encourage on new posts for stable SEO/social; archive posts need not be backfilled.
-- Default layout is `post` (from `_config.yml`). Do not set a custom layout unless needed.
-- Tags should be simple lowercase slugs where possible; chips link to `/tags?tag=name`.
-- A malformed post or link is skipped (site still builds). Check `_site/build-errors.log` and the Actions log before the next publish (#186).
+**Link posts** `layout: link` + `url: https://…` : same `/:year/:month/:day/:title` permalink. Mixed into `/blog` (`_plugins/stream_pages.rb`, `pagination.per_page: 100` in `_config.yml:64`) and `search.json`. `/posts` and `/links` redirect to `/blog`.
+- Permalink page: no visible title/`h1`; date + outbound `→`; then tags, URL card, Comment · Edit · Random · Blog (`_layouts/link.html`). `title` is meta/RSS/`<title>` only.
+- URL cards are **site-only** (never in RSS; `deploy.yml:408` fails if `feed.xml` contains `link-card`). `card: false` skips OG fetch; `card: {title, description, image, …}` supplies it (cached `.jekyll-cache/link-cards/`). `url_embeds.rb` still runs; embeds **are** in RSS (`feed.xml` dumps `post.content`).
+- RSS: `<link>`/`<guid>` the external URL; `#` is the on-site permalink in RSS only (`feed.xml`).
 
-### Link posts (`layout: link`)
+**Books** `_books/<book-slug>/001-book.md → /books/<slug>`; nested `002-chapter/001-section.md → /books/<slug>/chapter/section`. `001-` / `002a-` are sort keys only (`books.rb`). `slug:` overrides filename. `index: false` → `noindex` + `robots.txt` Disallow + exclude from `search.json`/`sitemap`. `listed: false` hides from `/books`. Book-home `author:` copied to all chapters (#277).
 
-- A link is a normal post in `_posts/YYYY-MM-DD-slug.md` with `layout: link`
-  and a public `http(s)` `url:`. Permalink is the same as every other post:
-  `/:year/:month/:day/:title`.
-- Required front matter: `title`, `url`, `date`, `layout: link`. Optional:
-  `excerpt`, `tags`, Markdown body, `card`. Category defaults to `links`.
-- Permalink pages are minimal: date (linked to the permalink), then an
-  outbound `→` on the first line of the body, then tags and an on-site URL
-  card. No visible title/`h1`. `title` is still used for RSS and document
-  `<title>` / SEO. The ending matches essays: Comment · Edit · Random · Blog
-  (#221). Random draws from every `search.json` entry, including link posts.
-  List pages hide the title and keep `→` on the first line of the body. The
-  date is the on-site permalink; `#` appears only in RSS.
-- URL cards are **site-only** (never in RSS). Default is a build-time Open
-  Graph fetch (fail-soft, cached under `.jekyll-cache/link-cards/`).
-  `card: false` hides the card and skips the fetch. A `card:` mapping
-  (`title`, `description`, `image`, `image_alt`, `site_name`) supplies the
-  preview and skips the fetch. Card images are proxied through `/img` like
-  other hotlinked assets.
-- A bad `url:` is skipped for the card and logged to `_site/build-errors.log`.
-  The rest of the site still builds.
-- The main feed is `/blog` (essays and links mixed, 50 per page). There is
-  no separate `/posts` or `/links` index; those URLs redirect to `/blog`.
-  Essays on `/blog` show title, date, tags, reading time, a 2–3 paragraph
-  excerpt, and Read more. Link entries hide the title and keep `→` on the
-  first line. Link tags are ordinary post tags; chips go to `/tags?tag=name`.
-- **List views match `/blog`** (`_includes/stream-list.html`, #201): month
-  archives (`/archive/YYYY/MM/`) use the same post-entry / link-entry stream.
-  Tag results are `/tags?tag=name`; category results are
-  `/categories?category=name`. Those query views (and `/search?q=`) render
-  from `search.json` with the same stream elements that exist in the index:
-  title, long date, tags, excerpt, first image, Read more (#219). No
-  generated `/tags/:name` or `/categories/:name` pages. Do not regress
-  remaining list pages to title+date-only rows.
-- Feed: `/feed.xml` (mixed; link items `<link>`/`<guid>` the external URL;
-  full content). Link items use `#` for the on-site permalink in RSS only.
-- Example:
+**Pages** `_pages/about.md → /about` via `pages_dir.rb` (#161); `_pages/services/x.md → /services/x`. `permalink` no trailing slash.
 
-  ```yaml
-  ---
-  layout: link
-  title: "A useful essay"
-  url: "https://example.com/essay"
-  date: 2026-08-13 14:30:00 -0400
-  excerpt: "Optional list blurb."
-  tags: [reading]
-  # card: false
-  ---
+**Search/tags** No generated `/tags/:name` or `/categories/:name` dirs (`deploy.yml:317-321` tags, `:506` categories). Chips use `?tag=` / `?category=` query views from `search.json` (`site_index.rb`, `stream-list.html` #201/#209/#219). `search.json` schema: `kind,title,url,date,date_label,excerpt,tags,categories,img{src,alt,full}` with signed `/img` URLs; keep budgets <600KB warn / 1.5MB fail (`deploy.yml:89-90`).
 
-  Optional Markdown body.
-  ```
+**Embeds** Standalone supported URL alone on line (blank lines around) → embed via `url_embeds.rb` (YouTube, Vimeo, X, Instagram, TikTok, Spotify, CodePen, Imgur, Flickr). Opt out `url_embeds: false`. Use `markdown="0"` without indentation (#156).
 
-### Books (`_books/`)
+**Static HTML** `editorial/<slug>.html → /editorial/<slug>` per `static_html.roots: [editorial]` (`_config.yml:138-140`). No front matter. Asset sibling folders OK; don't put `index.html` inside asset folder.
 
-Long-form books are a Jekyll collection. One folder per book; nested folders are chapters.
+## Assets & images (critical)
 
-```
-_books/
-  my-book/                         # stable book slug (no numeric prefix)
-    001-my-book.md                 # book home → /books/my-book
-    002-first-chapter/
-      001-first-chapter.md         # → /books/my-book/first-chapter
-      002-a-section.md             # → /books/my-book/first-chapter/a-section
-    003-appendix.md                # leaf chapter → /books/my-book/appendix
-```
+- **Media not in artifact**: archive + new photos live on S3 `https://media.jonathanfrei.com` (`archive_media.cdn_base` #170). New post photos must be absolute CDN URLs via factory worker (`https://media.jonathanfrei.com/assets/img/...`); **don't commit binaries** or use `/assets/img/` for new photos (that's favicon/profile).
+- **Image optimize** `_plugins/optimize_content_images.rb`: own images + hotlinked → same-origin `/img?url=&w=&output=webp&q=85&we&s=` (HMAC `IMG_HMAC` must match Worker). Config `archive_media.optimize: proxy, quality 85, widths [480,768,1100], sizes "(max-width: 40em) 100vw, 36em", hotlink true`. GIF/SVG never proxied (`loading=lazy` fallback); `data-full-src` keeps original. Wrap URLs with `()` in `<>`, don't fetch `wsrv` JSON at build (would be ~11min). Hotlink uses `ssl:` for Springer hosts; `\( \)` stripped before proxy (#203).
+- **HMAC trust boundary**: `canonical_message` / `canonicalMessage()` must stay `output=&q=&url=&w=&we` (`optimize_content_images.rb`, `workers/img-proxy/src/index.js`). Do **not** log `IMG_HMAC` in HTML. Do **not** allowlist hotlink hosts — HMAC on `/img` is the open-proxy control.
+- **Worker** route `jonathanfrei.com/img*` (not `/img/*`), 200 cache 30d, 4xx/5xx `no-store`. Redeploy Worker after `src/index.js` changes (Pages deploy doesn't).
+- **CSS** Tokens in `_includes/main.css` (Paper `#FAF9F6`, Ink `#111C24`, Blue `#0077A8` #145). Feature sheets gated by `optional-css.html` via content probes: `code.css` (`<pre>`), `search.css`, `embeds.css`, `pagination.css`. `editorial.css` (`layout: editorial`), `book.css` (`layout: book`) linked as `/assets/css/<name>.css?v=<hash>` via `asset_url` (`asset_cdn.rb`). Never `{% include_relative ../... %}`. Never inline `main.css` or use `cdn.jsdelivr.net` for chrome/fonts. `kramdown.parse_block_html: true` required for editorial wrappers. Prose marks `{: .aside}`, `{: .pull-quote}`, `{: .caption}`, `{: .figure-wide}` in `main.css` — `.figure-wide` uses `100cqi` of `.site-main`, not `100vw`, no `.container:has(...)` (#223). Fonts `/assets/fonts/source-*woff2` self-hosted, versioned filenames; first-paint preloads only Serif 4 + Code Pro normal (not Source Sans 3). Don't restore `html.is-narrow` viewport hack — iOS Safari “desktop layout” was page-zoom lock (#231).
+- **Already burned us** (do not "improve"):
+  - GIF-only paragraphs stay out of `list_excerpt` (`content_filters.rb`) so `/blog` does not download multi-MB animations.
+  - Do not set `width: 100%` on every `.prose img` (typography favicon specimen). Only standalone article images fill the measure (`main.css`).
+  - Do not inline `book.css` in `optional-css.html` (copies the sheet into every chapter).
+  - Editorial multi-block components need HTML wrappers + `markdown="1"`; Kramdown `{: .class}` styles only the next block.
+  - Tag chips: `.post-list > li > a` / `.tag`, not `.post-list a`.
 
-- **`001-` prefixes (and `002a-` insertions) are sort keys only.** Permalinks use slugs. Renaming prefixes does not change URLs.
-- Insert a chapter between `002` and `003` as `002a-new-chapter/` (or `order:` in front matter). Display numbers (`1`, `1.1`) are computed at build; existing permalinks stay put.
-- `slug:` front matter is the permalink segment; if omitted, the filename minus the numeric prefix is used.
-- Titles should be **number-free**. The layout prints computed numbers in the TOC and pager.
-- Book-home front matter: `index: false` blocks crawlers (robots.txt Disallow, `noindex,nofollow`, omit from sitemap/search). `listed: false` hides the book from `/books`. Defaults: `index` true; `listed` follows `index`.
-- Optional `eyebrow` and `deck` in front matter render above/below the title, same as posts and pages (#278).
-- Optional `author` on the book home is copied to every chapter and shown with `source` **below** `articleBody` (#277). There is no collection default; a book without `author` in page-one front matter does not display “Jonathan Frei”.
-- Layout is `book` (sticky hamburger + wrapping breadcrumbs, contents overlay, prev/next). Book chrome CSS is `/assets/css/book.css`, not inlined. Hash links use `scroll-padding-top` so H2/H3 are not hidden behind the sticky toolbar (#275). The hamburger TOC is loaded from `/books/<slug>/toc.json` (same idea as `search.json`) so chapter HTML does not embed the full tree. The title page still renders an in-article HTML TOC. The overlay starts closed on every page. Do not add a header “Books” link unless asked.
-- Demo: `_books/dispelling-beauty-lies/` is borrowed content (`index: false`, `listed: false`).
-- Optional `scripts/import_beauty_book.py` rebuilds that demo tree from the Downloads conversion.
+## Cloudflare edge (README source of truth)
 
-### Pages
+- SSL/TLS **Full** (not Full-strict → 526 on apex, not Flexible → `http://` redirects) (#82).
+- **Cache Everything** for HTML (2h edge, respect `max-age=600` browser); extension-excluded assets use 1 month. `/img` Worker has own rule: host=`jonathanfrei.com` + path starts `/img`, respect origin cache, include query string in key. Exclude `.json` (`search.json`) and `/img` from HTML cache.
+- Redirects before cache: `www → apex` and trailing-slash strip. Free plan can't use `regex_replace`/`matches`.
+- `_includes/head.html` must not preconnect `wsrv.nl` / `cdn.jsdelivr.net`; `media.jonathanfrei.com` only when page has `<img>` from that host (injected by optimizer). Speculation Rules prefetch `/,/about,/blog,/archive` only (prefetch not prerender).
 
-- Site pages live under **`_pages/`** (issue #161), not the repo root.
-- Root-level URLs: `_pages/about.md` → `/about` (front-matter `permalink` or auto via `_plugins/pages_dir.rb`).
-- Nested pages: `_pages/services/service1.md` → `/services/service1`.
-- `index.md` stays at the repo root (homepage).
-- Use **no trailing slash** in permalinks (see below).
-- Long-form specimen / design reference: `_pages/typography.md` → `/typography` (includes `#223` aside / pull-quote / caption / figure-wide).
-- Tags: `/tags` lists multi-post tags (#140). Every chip (including singletons) links to `/tags?tag=name`. Individual `/tags/:name` pages are not generated (#209). Old `/tags/:name` URLs 404-redirect to the search URL.
-- Categories: `/categories` lists categories. Chips link to `/categories?category=name`. Individual `/categories/:name` pages are not generated. Old `/categories/:name` URLs 404-redirect to the search URL.
+## Verification before finishing build/layout/CSS changes
 
-### Media embeds
+- Permalinks no slash (`/about` not `/about/`); `/blog.html` exists not `/blog/index.html`; month archives keep slash.
+- Every page links `/assets/css/core.css?v=`; no `cdn.jsdelivr.net`, no inlined `main.css`, no `../` includes.
+- Tags → `/tags?tag=` chip class `.tag` not oversized; no `_site/tags/` or `_site/categories/` dirs; search UI present.
+- Only intentional `_posts/` additions; drafts stay outside repo.
+- Actions majors: `checkout@v7` (`deploy.yml:28`), `configure-pages@v6` (`:41`), `upload-pages-artifact@v5` (`:546`), `deploy-pages@v5` (`:561`) — don't downgrade without checking Node warnings.
+- After `main` push, Cloudflare `cf-cache-status: HIT` for HTML, signed `/img?url=` for images, `wsrv.nl` absent from HTML/`search.json`.
 
-- A **supported raw URL alone on a line** (blank lines around it) becomes an embed via `_plugins/url_embeds.rb`.
-- Supported: YouTube, Vimeo, X/Twitter, Instagram, TikTok, Spotify, CodePen, Imgur, Flickr.
-- Opt out per document: `url_embeds: false` in front matter.
-- Inline links inside paragraphs are **not** transformed.
-- Embed HTML uses `markdown="0"` and no inner indentation so Kramdown `parse_block_html` does not turn iframes into highlighter blocks (#156).
-- Imgur gallery SEO slugs (`/gallery/title-hash`) resolve to the trailing image hash (#157).
-- Hotlinked third-party images are rewritten through same-origin `/img` in production (`archive_media.optimize.hotlink`, #116). HTTPS-only hosts such as Springer need `ssl:` in the `url` param (wsrv behind the Worker defaults to http and 404s). If the proxy still fails, `data-full-src` plus a capture-phase error listener falls back to the original (#203). Kramdown leaves `\( \)` in destinations (cmark/GitHub unescapes them); the optimizer strips those backslashes before proxying. For new markup, wrap URLs that contain parentheses in `<>`. Do not allowlist hotlink hosts — HMAC on `/img` URLs is what blocks open-proxy abuse.
-- **GIFs** are never sent through `/img`. Every `<img src="…gif">` gets `loading="lazy"` and is never the LCP/eager candidate. GIF-only paragraphs are omitted from list excerpts (`list_excerpt`) so `/blog` does not download a multi-megabyte animation in the stream. The GIF still renders on the permalink.
-- Standalone article images fill the measure; on viewports ≤40em they full-bleed past `.container` padding (#202, #203). Do not apply `width: 100%` to every `.prose img` (the typography favicon specimen must stay small).
+## Don't
 
-### Static HTML pages (`editorial/`, extensible)
+- Add frameworks/bundlers/CMS, commit secrets, `_site/`, `vendor/`, or post photos; remove footer AI note or contact masking without ask; rewrite `_posts/v1-archive/` history; force-push `main`; invent client routers for downloads.
 
-Handcrafted full HTML pages (not Jekyll layouts). Drop a file at the root of a configured directory; it publishes at a **clean permalink** (no trailing slash).
+## Workflow
 
-```
-editorial/
-  spacex-earnings.html     # → /editorial/spacex-earnings
-  spacex-earnings/         # optional assets for that piece
-    chart.png
-  media/                   # optional shared assets under the root
-  assets/
-```
-
-- **Do:** `editorial/<slug>.html` (and optional sibling asset folders)
-- **Do not:** put `index.html` inside an asset folder if that would steal the slug URL
-- **No YAML front matter** — HTML is not Liquid-rendered (safe to use `{{` in the page)
-- Relative image paths are absolutized and optimized via `/img` in production (#88, #90)
-- Roots are listed under `static_html.roots` in `_config.yml` (add `articles`, etc. later)
-- Does not use site chrome (`_layouts`, header/footer) unless you hardcode it into the HTML
-
-## Critical constraints (do not regress)
-
-### 1. Permalinks must not use a trailing slash
-
-Desired URLs: `/about`, `/blog`, `/2026/08/05/slug`, `/tags` — **not** `/about/`, etc. (issue #63).
-
-- **Do:** `permalink: /about`, post pattern `/:year/:month/:day/:title`, tag search `/tags?tag=name`
-- Post `:year/:month/:day` uses **`timezone: America/New_York`** (issue #180), not the Actions runner’s UTC clock.
-- Jekyll then writes **`.html` files** (`about.html`). GitHub Pages serves those at the clean path.
-- **Do not** write extensionless files (no `.html`) — GH Pages may download them as `application/octet-stream`.
-- Keep internal links consistent (`/blog`, `/tags?tag=foo`, etc.).
-- After deploy, Cloudflare should 301 `/path/` → `/path` so old bookmarks still work (issue #82). Exclude `/`, `/archive/YYYY/MM/`, and `/…/page/N/`. See README “Cloudflare performance”.
-- Month archives (`/archive/YYYY/MM/`) **must** keep the trailing slash (directory + `index.html`).
-
-### 1b. Cloudflare edge
-
-Dashboard rules live in README (redirects before cache). Do not regress:
-
-- SSL/TLS mode is **Full**, not Full (strict). GitHub Pages has no apex certificate for `jonathanfrei.com`; Full (strict) returns 526. Do not switch back to Flexible (that emits `http://` origin redirects).
-- HTML must be Cache Everything at the edge. `cf-cache-status: DYNAMIC` on documents means the rule is off; TTFB will stay a full Cloudflare → GitHub Pages hop.
-- `deploy.yml` purges Cloudflare after Pages deploy when `CLOUDFLARE_ZONE_ID` and `CLOUDFLARE_API_TOKEN` are set. Do not remove that step if HTML stays cached.
-- `_includes/head.html` does **not** preconnect a font/CSS CDN or `wsrv.nl`. `media.jonathanfrei.com` only when the page will fetch originals (`<img>` / that host in `content`). `optimize_content_images.rb` injects a missing host hint after image rewrite. Do not restore `wsrv.nl` preconnects, unconditional preconnects, `cdn.jsdelivr.net`, or redundant `dns-prefetch` for the same hosts.
-- Speculation Rules in `head.html` prefetch `/`, `/about`, `/blog`, `/archive` on moderate eagerness. Prefetch only — do not prerender, and do not add `<link rel="preload" as="document">` for the current page.
-- Free-plan Redirect Rules cannot use `regex_replace` or `matches`. Use `wildcard` / `wildcard_replace` / `ends_with`. Do not put the fingerprinted `core.css?v=` URL in a Cloudflare `Link` / Early Hints rule; it changes when CSS changes. Early-Hint only the two first-paint WOFF2 files (not Source Sans 3).
-
-### 2. CSS — brand system + optional sheets
-
-- **Brand (#145):** `_includes/main.css` — Paper `#FAF9F6`, Ink `#111C24`, Signature Blue `#0077A8` (use blue sparingly). Full token table in that file (blue scale + editorial accents + UI semantics).
-- **Feature sheets (#165):** gated by `_includes/optional-css.html` (content probes; no PurgeCSS/Node build):
-  - `_includes/code.css` — fenced code / Rouge (`<pre`); wrap by default, line numbers follow wrapped lines (#222)
-  - `_includes/search.css` — search box (`search-ui` / `search-input`)
-  - `_includes/embeds.css` — media embeds (`class="embed` / `data-embed=`)
-  - `_includes/pagination.css` — paginated lists (`pagination-list`)
-- **Editorial (#144):** `_includes/editorial.css` + `layout: editorial` — Kramdown semantic components (`.lead`, `.figure`, `.stat-grid`, …). Linked as `/assets/css/editorial.css` after `core.css`.
-- **Books:** `_includes/book.css` + `layout: book` — linked as `/assets/css/book.css` after `core.css` (same pattern as editorial). Do **not** inline it in `optional-css.html`; that would copy the sheet into every chapter HTML.
-- **Prose marks (#223):** `{: .aside}`, `{: .pull-quote}`, `{: .caption}`, `{: .figure-wide}` live in `main.css` for ordinary posts/pages. Do not reuse editorial-grid `.aside` for blog sidenotes. `.figure-wide` must not use `100vw` and must not restyle the page via `.container:has(.figure-wide)` — that indented every `.prose` child on `/blog` and `/archive` (the Blog page is itself `article.prose`). Only the figure breaks out, using `100cqi` of `.site-main` (fallback: container padding-cancel). Images keep intrinsic size (`width: auto; max-width: 100%`); on small screens the img fills the bleed slot. Kramdown IALs (`{: .figure-wide}`) are stripped from `search.json` excerpts in `_plugins/site_index.rb`. Never `margin-inline: auto` on every prose child to fake a measure — headings shrink-wrap and the column falls apart.
-- **iOS Safari (#231):** the “desktop layout” was a locked page zoom on the site, not a CSS viewport bug. Do not restore `html.is-narrow` or a head script that rewrites the viewport meta. Do not set `overflow-x` on `html`. Hang asides only at `70em`.
-- **Delivery:** every page links the design system via `asset_url` (`_includes/site-css.html`) as `/assets/css/core.css?v=<content-hash>`. Fonts are `/assets/fonts/*` with the Fontsource version in the filename. Do not load chrome CSS/JS/fonts from jsDelivr. Do not inline `main.css` or restore the front-of-house vs archive split from PR #197. Do not preload Source Sans 3 until a design change applies that family.
-- Tooling: `/assets/css/core.css` (design system), `/assets/css/main.css` (full combined), `/assets/css/editorial.css` (editorial components only), `/assets/css/book.css` (book chrome only)
-- **Never** use `{% include_relative ../... %}` — Jekyll rejects `../`
-- Prefer semantic classes over utility soup
-- Kramdown: `parse_block_html: true` (Markdown inside HTML blocks for editorial components)
-
-### 2b. Editorial content (`editorial/`)
-
-- **One directory** for both formats:
-  - Handcrafted HTML: `editorial/<slug>.html` → `/editorial/<slug>` (`static_html` plugin)
-  - Markdown design system: `editorial/<slug>.md` + `layout: editorial` + `permalink: /editorial/<slug>`
-- Authoring (MD): multi-block components **must** use HTML wrappers so lists/paragraphs stay inside the component:
-  ```html
-  <div class="takeaways" markdown="1">
-
-  ### Key Takeaways
-
-  - Bullet stays in the component
-
-  </div>
-  ```
-  Kramdown `{: .class}` alone only styles the **next single block** (not following lists).
-- Requires `kramdown.parse_block_html: true` (already set).
-- **Layout:** CSS Grid (not multi-column fragmentation). Prose spans full width with `max-width: ~38rem` measure. Compact cards (definition, callouts, event/entity) sit 1–3 across on wide screens; wide components (header, figures, tables, composition grids) always span full width.
-- **Dark mode:** brand tokens remap in `main.css` so `--ed-deep` / `--ed-ice` stay readable on dark surfaces.
-- Component reference: `/editorial/design-system`
-- Sample article: `/editorial/invisible-engine`
-- Plugin only manages top-level `.html` files; `.md` pages are normal Jekyll pages
-
-### 3. Tag / list CSS specificity
-
-- Post titles in lists: `.post-list > li > a` (not `.post-list a`)
-- Tag chips use `.tag`; they must not inherit large title-link styles inside `.post-list`
-
-### 4. Jekyll excludes
-
-Keep these out of the site build (see `_config.yml` `exclude`):
-
-- `Gemfile`, `Gemfile.lock`, `vendor`, `node_modules`, `.github`, `README.md`, `AGENTS.md`, `assets/deprecated`, `.gitignore`
-
-### 5. Actions / Node runtime
-
-Deploy workflow pins current major Pages actions (Node 24-capable majors):
-
-- `actions/checkout@v5`
-- `actions/configure-pages@v6`
-- `actions/upload-pages-artifact@v5`
-- `actions/deploy-pages@v5`
-
-Do not downgrade these without checking Node deprecation warnings on GH Actions.
-
-Dependabot and scheduled deploys were removed (#142). Bump Actions majors and gems intentionally in PRs when needed.
-
-### 6. Third-party image / CDN trust boundary
-
-Production depends on external services for media (configured in `_config.yml` `archive_media`):
-
-| Service | Role | Config key |
-| --- | --- | --- |
-| **S3 / media.jonathanfrei.com** | Archive binaries (`v{2,3}-archive/media/…`) and new post photos (`assets/img/…`) — not in the Pages artifact (#170) | `archive_media.cdn_base` |
-| **`/img` Worker → wsrv.nl** | On-the-fly resize + WebP; browser sees `jonathanfrei.com/img`. HMAC `IMG_HMAC`. Full-res on `data-full-src`. | `archive_media.optimize.proxy` |
-
-- CSS, JS, favicons, fonts, and transformed images are **first-party** on `jonathanfrei.com`. `asset_url` adds `?v=<content-hash>`. GIFs and `data-full-src` stay on S3/hotlink origins; the `/img` Worker 403s unsigned URLs.
-- Do **not** point `cdn_base` at untrusted hosts. Do **not** ship `/img` without HMAC (open proxy). The Worker still fetches wsrv on cache miss — do not log `IMG_HMAC` in HTML.
-- Changing `cdn_base` or the proxy host is a production-facing decision; prefer a PR and a smoke check of a few archive posts + `/assets/` images.
-- Local `jekyll serve` uses S3 in CDN mode (default once in-repo media trees are gone). `ARCHIVE_MEDIA_MODE=local` only helps while `_posts/v*-archive/media/` still exists on disk.
-
-## Design system (short)
-
-- Tokens/components: `_includes/main.css` (see §2); feature sheets via `optional-css.html`
-- Principles: readable measure, simple type scale, two custom faces, restrained accent, light default + dark
-- Prefer semantic classes (`.prose`, `.post-meta`, `.tag`, `.post-list`, `.post-header`) over one-off or utility CSS
-- Accessibility: keep skip link, focus styles, semantic HTML, sensible contrast
-- Specimen page: `/typography` (`typography.md`) — use when adding HTML patterns or checking type
-
-## Git & PR preferences
-
-- Commit messages: complete sentences; mention issue numbers when relevant (`#21`)
-- PR body: what changed, why, how to verify; use `Closes #N` when fully resolving an issue
-- Do not commit secrets, local `_site/`, or `vendor/`
-- Do not force-push `main`
-- Avoid rewriting historical posts under `_posts/v1-archive/` unless explicitly asked
-
-## Common tasks
-
-| Task | Where |
-| --- | --- |
-| New post | `_posts/YYYY-MM-DD-slug.md` |
-| New link post | `_posts/YYYY-MM-DD-slug.md` with `layout: link` and `url:` |
-| Nav / header | `_includes/header.html` |
-| Footer / disclaimer | `_includes/footer.html` |
-| `<head>`, favicon, meta | `_includes/head.html` |
-| Site-wide layout | `_layouts/default.html` |
-| Post chrome (tags, comment mailto, random post) | `_layouts/post.html` tags; `_includes/post-actions.html` (Comment · Edit · Random · Blog on essays and links; random fetches `search.json`, including link posts — #221) |
-| Post metadata (last_modified, reading time) | `_plugins/post_metadata.rb` + `post_metadata` in `_config.yml` (#75) |
-| Search / tag / archive indexes | `_plugins/site_index.rb` + `site_index` in `_config.yml` (#195). `search.json` includes `date_label` and first-image `img` (`src` signed `/img` URL, `alt`, optional `full` original) for stream results (#219). |
-| Image proxy Worker | `workers/img-proxy/` — route `jonathanfrei.com/img*`. Secret `IMG_HMAC` must match Actions. 200s cache 30d; 4xx/5xx `no-store`. Redeploy the Worker after changing `src/index.js` (Pages deploy does not). |
-| Date timezone | `_config.yml` `timezone: America/New_York` (#180) |
-| Drop caps on long posts | `_plugins/drop_cap.rb` + `.prose--drop-cap` in `main.css` (#123) |
-| Search UI / index | `_includes/search-ui.html`, `assets/js/search.js`, `search.json` (thin dump of `site.data.search_index`). URLs: `?q=`, `?tag=`, `?category=`, `?title=`; `?=text` aliases `?q=`. The query string is the source of truth until the user types; an inline seed fills the box on first paint (#211). `search.js` is deferred; `/search` and query URLs reserve result space so the footer does not shift (#212). Result cards reuse the `/blog` stream markup (title, long date, tag chips, excerpt, first image, Read more; link entries hide the title) (#219). Tag, category, and archive lists stay visible below results. |
-| Random-post URL list | `search.json` (`url` + `kind`; essays and link posts) |
-| Theme toggle | Boot in `_includes/head.html`; full `assets/js/theme.js` loads on first click (footer stub) |
-| Asset URLs | `_plugins/asset_cdn.rb` + `asset_url`. Origin `/assets/…?v=<content-hash>` of the git source file. Fonts: versioned filenames in `assets/fonts/`. |
-| Site config | `_config.yml` |
-| Deploy / path filters | `.github/workflows/deploy.yml` |
-| Embed providers | `_plugins/url_embeds.rb` |
-| Static HTML page | `editorial/<slug>.html` → `/editorial/<slug>` (see `static_html.roots`) |
-| Editorial Markdown | `editorial/<slug>.md` + `layout: editorial` → `/editorial/<slug>` (#144) |
-| Brand colors | `_includes/main.css` tokens (#145) |
-
-## Verification checklist
-
-Before finishing a change that touches build, layouts, or CSS:
-
-1. [ ] Permalinks have **no** trailing slash for HTML pages (`/about` not `/about/`). Link posts use the same `/:year/:month/:day/:title` shape as essays.
-2. [ ] Every HTML page links the design system as `/assets/css/core.css?v=`; no `cdn.jsdelivr.net` on chrome assets; no inlined `main.css`; `code.css` only on code pages; no `../` includes
-3. [ ] Tags on `/blog` still look like chips (not oversized title links) and point at `/tags?tag=`. Category chips point at `/categories?category=`. Month lists use the same stream entries as `/blog` (#201). No `/tags/:name` or `/categories/:name` HTML files.
-4. [ ] Only intentional publications are added to `_posts/`; unfinished drafts stay outside the repository
-5. [ ] If workflow changed, confirm Actions majors and `paths-ignore` still make sense
-6. [ ] Prefer a green deploy run after merge/push to `main`
-7. [ ] Static HTML drop-ins use `editorial/<slug>.html` → `/editorial/<slug>` (no `index.html` in asset folders)
-8. [ ] Text pages (e.g. `/about`) do not `preconnect` `wsrv.nl` or `media.jonathanfrei.com`, and do not mention `wsrv.nl`. After a production deploy with Cache Everything on, HTML `cf-cache-status` is `HIT` (or the purge secrets are documented as still missing). Image pages use signed `/img?url=` URLs, not `wsrv.nl`.
-
-## What not to do
-
-- Do not add heavy front-end frameworks, bundlers, or CMS layers unless requested
-- Do not put secrets or personal tokens in the repo
-- Do not commit new post photographs; they live on S3 under `assets/img/`
-- Do not “fix” downloads by inventing client-side routers; fix output paths (`.html` under clean URLs)
-- Do not expand scope into unrelated redesigns when asked for a small fix
-- Do not remove the AI/content footer note or contact masking patterns without being asked
-
-## Owner intent
-
-Ship a calm, readable personal site. Agents should be careful with production deploys, preserve typography/accessibility choices, and keep the content workflow (posts → Actions) simple.
+- Prefer branch+PR for multi-file/behavior; direct `main` only for urgent fix when owner asks. Commit: complete sentences + issue `#N`; PR: what/why/how to verify, `Closes #N`. Ensure green deploy after merge.
