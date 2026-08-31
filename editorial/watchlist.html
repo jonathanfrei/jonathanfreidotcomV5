@@ -93,35 +93,29 @@
     ['SPCX','SPAC and New Issue ETF','NASDAQ','USD'], ['IBIT','iShares Bitcoin Trust ETF','NASDAQ','USD']
   ].map(([symbol,name,exchange,currency],i)=>({symbol,name,exchange,currency,seed:i+11}));
   const RANGES = { '1D':['1d','5m'], '1W':['5d','30m'], '1M':['1mo','1d'], '3M':['3mo','1d'], '6M':['6mo','1d'], '1Y':['1y','1d'], '5Y':['5y','1wk'] };
-  const BASE = {'BTC-USD':108500,'0992.HK':10.4,VOO:590,VTI:325,IAU:71,VGT:760,SPCX:23.8,IBIT:67};
-  const $=s=>document.querySelector(s), state={selected:'BTC-USD',range:'1Y',data:new Map(),demo:false};
+  const MARKET_ENDPOINT='https://jonathanfrei.com/market-data';
+  const $=s=>document.querySelector(s), state={selected:'BTC-USD',range:'1Y',data:new Map()};
   const money=(n,c='USD')=>new Intl.NumberFormat('en-US',{style:'currency',currency:c,minimumFractionDigits:n>=1000?0:2,maximumFractionDigits:n>=1000?0:2}).format(n);
   const compact=n=>new Intl.NumberFormat('en-US',{notation:'compact',maximumFractionDigits:2}).format(n);
   const pct=n=>`${n>=0?'+':''}${n.toFixed(2)}%`;
   const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   $('#today').textContent=new Intl.DateTimeFormat('en-US',{weekday:'long',month:'long',day:'numeric'}).format(new Date());
 
-  function demoSeries(item,days=365){
-    const intraday=days===1, count=intraday?78:Math.max(2,days), step=intraday?300000:864e5;
-    let x=item.seed*982451653, price=BASE[item.symbol], out=[], start=Date.now()-(count-1)*step, drift=item.symbol.includes('BTC')?.0011:.00035;
-    const rand=()=>{x=(x*1664525+1013904223)>>>0;return x/4294967296};
-    for(let i=0;i<count;i++){ price*=Math.exp((intraday?drift/78:drift)+(rand()-.49)*(item.symbol.includes('BTC')?(intraday?.006:.045):(intraday?.0025:.018))); out.push({t:start+i*step,c:price,v:price*(2e5+rand()*8e5)}) }
-    return {points:out,price:out.at(-1).c,previous:out.at(-2).c,open:out.at(-1).c*.997,high:Math.max(...out.slice(-2).map(p=>p.c))*1.004,low:Math.min(...out.slice(-2).map(p=>p.c))*.996,volume:out.at(-1).v,marketCap:item.symbol==='BTC-USD'?out.at(-1).c*19700000:null,currency:item.currency,exchange:item.exchange,demo:true};
-  }
-
-  async function yahoo(item,label='1Y'){
-    const [range,interval]=RANGES[label], url=`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(item.symbol)}?range=${range}&interval=${interval}&includePrePost=false&events=div%2Csplits`;
-    const key=`watch:${item.symbol}:${label}`, cached=localStorage.getItem(key);
+  async function marketData(item,label='1Y'){
+    const [range,interval]=RANGES[label], url=`${MARKET_ENDPOINT}?symbol=${encodeURIComponent(item.symbol)}&range=${range}&interval=${interval}`;
+    const key=`watch:v2:${item.symbol}:${label}`, cached=localStorage.getItem(key);
     if(cached){try{const c=JSON.parse(cached);if(Date.now()-c.saved<300000)return c.data}catch(_){}}
-    const candidates=[url,`https://corsproxy.io/?url=${encodeURIComponent(url)}`]; let last;
-    for(const endpoint of candidates){try{
-      const res=await fetch(endpoint,{headers:{Accept:'application/json'}}); if(!res.ok)throw Error(res.status);
+    try{
+      const res=await fetch(url,{headers:{Accept:'application/json'}}); if(!res.ok)throw Error(`Market data request failed (${res.status})`);
       const json=await res.json(), r=json.chart.result[0], q=r.indicators.quote[0], meta=r.meta;
       const points=r.timestamp.map((t,i)=>({t:t*1000,c:r.indicators.adjclose?.[0]?.adjclose?.[i]??q.close[i],v:q.volume[i]})).filter(p=>Number.isFinite(p.c));
-      const data={points,price:meta.regularMarketPrice??points.at(-1).c,previous:meta.chartPreviousClose??meta.previousClose??points[0].c,open:meta.regularMarketOpen,high:meta.regularMarketDayHigh,low:meta.regularMarketDayLow,volume:meta.regularMarketVolume,marketCap:null,currency:meta.currency||item.currency,exchange:meta.fullExchangeName||item.exchange,demo:false};
+      if(points.length<2)throw Error('Market data response was incomplete');
+      const data={points,price:meta.regularMarketPrice??points.at(-1).c,previous:meta.chartPreviousClose??meta.previousClose??points.at(-2).c,open:meta.regularMarketOpen??q.open?.at(-1),high:meta.regularMarketDayHigh??q.high?.at(-1),low:meta.regularMarketDayLow??q.low?.at(-1),volume:meta.regularMarketVolume??q.volume?.at(-1),currency:meta.currency||item.currency,exchange:meta.fullExchangeName||item.exchange,source:res.headers.get('X-Market-Source')||'Market data',updated:res.headers.get('X-Market-Time')||new Date().toISOString()};
       localStorage.setItem(key,JSON.stringify({saved:Date.now(),data})); return data;
-    }catch(e){last=e}}
-    throw last;
+    }catch(error){
+      if(cached){try{const c=JSON.parse(cached);if(c.data){c.data.stale=true;return c.data}}catch(_){}}
+      throw error;
+    }
   }
 
   function rowMarkup(item){return `<li><button class="quote-row" data-symbol="${item.symbol}" aria-current="${item.symbol===state.selected}"><span><b class="symbol">${item.symbol}</b><small class="company">${item.name}</small></span><canvas class="spark" width="164" height="68"></canvas><span class="quote"><b class="price loading">000.00</b><i class="change loading">0.00%</i></span></button></li>`}
@@ -129,11 +123,13 @@
   $('#ranges').innerHTML=Object.keys(RANGES).map(r=>`<button class="range ${r==='1Y'?'active':''}" data-range="${r}">${r}</button>`).join('');
 
   async function loadOverview(){
-    let failures=0;
-    await Promise.all(ITEMS.map(async item=>{let d;try{d=await yahoo(item)}catch(_){d=demoSeries(item);failures++}state.data.set(item.symbol,d);paintRow(item,d)}));
-    state.demo=failures>0; $('#dataStatus').textContent=failures?`${failures===ITEMS.length?'Demo data':'Some demo data'} · tap to explore`:'Updated just now';
-    if(failures)$('#dataStatus').classList.add('offline'); showDetail();
+    let failures=0, stale=0;
+    await Promise.all(ITEMS.map(async item=>{try{const d=await marketData(item);state.data.set(item.symbol,d);if(d.stale)stale++;paintRow(item,d)}catch(_){failures++;paintError(item)}}));
+    $('#dataStatus').textContent=failures?`${ITEMS.length-failures} of ${ITEMS.length} quotes available`:stale?`Cached data · reconnecting`:'Live market data · 5 min refresh';
+    $('#dataStatus').classList.toggle('offline',failures>0||stale>0); showDetail();
   }
+
+  function paintError(item){const row=document.querySelector(`[data-symbol="${item.symbol}"]`);row.querySelector('.price').className='price';row.querySelector('.price').textContent='Unavailable';const change=row.querySelector('.change');change.className='change';change.textContent='Retry later'}
 
   function paintRow(item,d){
     const row=document.querySelector(`[data-symbol="${item.symbol}"]`), move=(d.price-d.previous)/d.previous*100;
@@ -153,7 +149,8 @@
     const first=d.points[0].c, period=(d.points.at(-1).c-first)/first*100; $('#periodSummary').innerHTML=`${pct(period)} <span>over ${state.range}</span>`;
     const stats=[['Open',d.open],['High',d.high],['Low',d.low],['Volume',d.volume?compact(d.volume):'—'],['Previous close',d.previous],['Currency',d.currency]];
     $('#stats').innerHTML=stats.map(([k,v])=>`<div class="stat"><span class="stat-label">${k}</span><span class="stat-value">${typeof v==='number'?money(v,d.currency):v??'—'}</span></div>`).join('');
-    $('#footnote').textContent=(d.demo?'Live quotes are unavailable in this browser, so representative demo data is shown. ':'')+'Quotes may be delayed. For informational purposes only.'; drawMain(d.points,period>=0,d.currency);
+    const updated=d.updated?new Date(d.updated).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'}):'recently';
+    $('#footnote').textContent=`Source: ${d.source}${d.stale?' (cached)':''} · Updated ${updated}. Quotes may be delayed up to 15 minutes. For informational purposes only.`; drawMain(d.points,period>=0,d.currency);
   }
 
   let chartPoints=[],chartCurrency='USD';
@@ -169,12 +166,14 @@
 
   $('#watchlist').addEventListener('click',e=>{const row=e.target.closest('.quote-row');if(!row)return;state.selected=row.dataset.symbol;state.range='1Y';document.querySelectorAll('.range').forEach(x=>x.classList.toggle('active',x.dataset.range==='1Y'));showDetail();$('#app').classList.add('show-detail');history.replaceState(null,'',`#${encodeURIComponent(state.selected)}`)});
   $('#back').onclick=()=>{$('#app').classList.remove('show-detail');history.replaceState(null,'',location.pathname+location.search)};
-  $('#ranges').addEventListener('click',async e=>{const b=e.target.closest('.range');if(!b)return;state.range=b.dataset.range;document.querySelectorAll('.range').forEach(x=>x.classList.toggle('active',x===b));const item=ITEMS.find(x=>x.symbol===state.selected);let d;try{d=await yahoo(item,state.range)}catch(_){d=demoSeries(item,{ '1D':1,'1W':5,'1M':30,'3M':90,'6M':180,'1Y':365,'5Y':1825}[state.range])}state.data.set(item.symbol,d);showDetail()});
+  $('#ranges').addEventListener('click',async e=>{const b=e.target.closest('.range');if(!b)return;state.range=b.dataset.range;document.querySelectorAll('.range').forEach(x=>x.classList.toggle('active',x===b));const item=ITEMS.find(x=>x.symbol===state.selected);try{const d=await marketData(item,state.range);state.data.set(item.symbol,d);showDetail()}catch(_){$('#periodSummary').innerHTML='<span>Chart temporarily unavailable</span>'}});
   $('#chartWrap').addEventListener('pointermove',e=>{if(!chartPoints.length)return;const r=e.currentTarget.getBoundingClientRect(),i=Math.max(0,Math.min(chartPoints.length-1,Math.round((e.clientX-r.left)/r.width*(chartPoints.length-1)))),p=chartPoints[i],tip=$('#chartTip');tip.innerHTML=`<b>${money(p.c,chartCurrency)}</b><br>${new Date(p.t).toLocaleString('en-US',{month:'short',day:'numeric',year:'numeric',hour:state.range==='1D'?'numeric':undefined,minute:state.range==='1D'?'2-digit':undefined})}`;tip.style.left=`${i/(chartPoints.length-1)*100}%`;tip.style.top=`${Math.max(55,e.clientY-r.top)}px`;tip.style.opacity=1});
   $('#chartWrap').addEventListener('pointerleave',()=>$('#chartTip').style.opacity=0);
   addEventListener('resize',()=>{clearTimeout(window.__chartTimer);window.__chartTimer=setTimeout(showDetail,120)});
   const hash=decodeURIComponent(location.hash.slice(1));if(ITEMS.some(x=>x.symbol===hash)){state.selected=hash;if(innerWidth<=760)$('#app').classList.add('show-detail')}
   loadOverview();
+  setInterval(loadOverview,300000);
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)loadOverview()});
 })();
 </script>
 </body>
