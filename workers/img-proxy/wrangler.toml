@@ -7,5 +7,10 @@ compatibility_date = "2026-08-27"
 pattern = "jonathanfrei.com/img*"
 zone_name = "jonathanfrei.com"
 
+[[routes]]
+pattern = "jonathanfrei.com/market-data*"
+zone_name = "jonathanfrei.com"
+
 # Set with: npx wrangler secret put IMG_HMAC
 # Must match the Jekyll/Actions secret IMG_HMAC.
+# Optional market-data fallback: npx wrangler secret put TWELVE_DATA_API_KEY
