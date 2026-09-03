@@ -28,6 +28,10 @@ Exploration selects narrow crews because every seat is costly. A settlement beco
 
 A crew of six can operate under a commander and a detailed flight plan; a town cannot remain healthy on those terms forever. People need room to disagree, change jobs, choose bad hobbies, join different churches, start competing businesses, and make mistakes that do not threaten the whole settlement. Population depth creates that margin.
 
+Ordinary competence changes the design as well. A mission can schedule every meal and assign every repair because its duration is bounded. A town needs someone to notice that a child is struggling, replace a public official who has become untrustworthy, keep a shop open after its founder retires, and care for a neighbor whose illness was not in the plan. These jobs cannot all be anticipated by the launch architecture. They emerge as residents acquire obligations to one another that no mission charter can fully specify.
+
+This is one reason specialization and redundancy belong together. The first surgeon, electrician, or teacher makes settlement possible; the second gives the first one permission to become sick, dissent, leave office, or train a successor without placing everyone else in danger. A larger population does not guarantee freedom, but a community with no substitutes can turn every necessary skill into a form of confinement.
+
 Headcount, then, is neither irrelevant nor sufficient. The foundation is a civilization able to form free people, sustain many kinds of competence, permit costly specialization, survive the loss of experts, and renew its institutions. Spaceflight will use only a small share of its people. The depth beneath that small share gives them somewhere to stand—and someone to carry the work after them.
 
 <div class="citation">

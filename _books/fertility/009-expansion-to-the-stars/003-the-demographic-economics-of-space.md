@@ -22,6 +22,8 @@ Self-sufficiency recedes as one approaches it. A settlement that prints a pipe m
 
 That buildout is easier for a terrestrial civilization with economic slack. A large economy can absorb failed experiments and support suppliers long enough for a new technology to mature, whereas a shrinking economy may remain wealthy per person while an older population and tighter public budgets create understandable pressure to spend the margin close to home. A hospital today has a stronger constituency than a lunar machine shop whose payoff belongs to grandchildren.
 
+Local capacity also changes who can act. When every filter, circuit board, medical kit, and software update comes from one sponsor on Earth, economic dependence becomes political dependence. A workshop that can repair several systems gives residents more than cheaper maintenance. It gives them choices among suppliers, occupations, and uses of scarce material. The step from cargo to capital is therefore also a step from administration toward self-government.
+
 The present has real claims. Elder care and repairing damage on Earth are necessary work, which is why expansion becomes more credible when it grows from abundance rather than competing with ordinary flourishing for the last available dollar.
 
 ## What machines change
@@ -31,6 +33,8 @@ Robots should go first. They can prepare a landing site before people arrive, wo
 That changes the minimum labor force. It does less to change the minimum human society. Machines still have supply chains and designers, and an AI that diagnoses a failed pump cannot bear political responsibility for deciding whether scarce power goes to the repair or the hospital. A community still needs people capable of judgment, trust, dissent, and care.
 
 Over time the economics changes again: cargo becomes local production, local production becomes capital, and capital becomes something one generation maintains for another. A settlement has crossed an important line when its residents invest in things they do not expect to use themselves because they expect their children to remain.
+
+That investment need not be grand. A second clinic, an apprenticeship that slows today's best mechanic, a reservoir larger than the present population requires, or a room set aside for a school all consume resources now for people who may arrive later. An outpost optimizes for the assigned crew. A settlement begins carrying costs for residents it cannot yet name.
 
 <div class="citation">
 

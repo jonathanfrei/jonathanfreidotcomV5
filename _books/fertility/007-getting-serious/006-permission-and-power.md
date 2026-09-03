@@ -52,7 +52,7 @@ Even very large subsidies deserve attention. A benefit can become so necessary t
 
 ## Reproductive judgment and public authority
 
-Chapter 3 established the moral distinctions among contraception, sterilization, abortion, restorative medicine, IVF, embryo disposition, donor conception, and surrogacy. Chapter 5 showed that access, funding, restriction, and force change births through different policy mechanisms. The remaining question is what those judgments authorize.
+The [causal account of reproductive control](/books/fertility/why-fewer-children/reproductive-control) established the distinctions among contraception, sterilization, abortion, restorative medicine, IVF, embryo disposition, donor conception, and surrogacy. The [policy record](/books/fertility/reverse-fertility-decline/technology-as-adaptation) then showed that access, funding, restriction, and force change births through different mechanisms. The remaining question is what those judgments authorize.
 
 Public authority may protect unborn human life because abortion concerns a life already begun, not a demand that a woman conceive for the state. That protection must distinguish elective abortion from miscarriage care, ectopic pregnancy, and treatment directed toward saving a pregnant woman's life. It must also provide material protection for mother and child. Legal precision is part of justice, not a retreat from the conclusion that intentionally ending innocent life is wrong.
 

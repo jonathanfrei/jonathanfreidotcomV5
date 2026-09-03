@@ -18,7 +18,7 @@ In 2024, 13 percent of countries and areas still had total fertility of four or 
 
 Marriage and childbearing often begin earlier, leaving more reproductive years exposed to pregnancy. Contraceptive use has risen substantially, but access and use remain lower than in wealthy regions. Among women in sub-Saharan Africa who wanted to avoid pregnancy, the share using a modern method rose from 29 percent in 1994 to 57 percent in 2024. Some women want large families; others are unable to avoid or delay births they do not want. A fertility rate cannot tell those lives apart.
 
-Child survival changes decisions too. Where parents cannot assume that every child will live to adulthood, more births can be both a response to experienced loss and an adaptation to risk. As mortality falls, families can reach a desired number of surviving children with fewer births, one part of the demographic transition explained in Chapter 2.
+Child survival changes decisions too. Where parents cannot assume that every child will live to adulthood, more births can be both a response to experienced loss and an adaptation to risk. As mortality falls, families can reach a desired number of surviving children with fewer births, one part of the [demographic transition explained earlier](/books/fertility/demographic-turn/the-demographic-transition).
 
 Children may also contribute work in agricultural or informal households and support parents where pensions, savings, and formal care are weak. That does not make a child an economic asset in any complete account of his worth. It changes the household consequences attached to family size.
 
@@ -42,7 +42,7 @@ Different combinations can therefore converge on the same national total, and si
 
 That conclusion also identifies what the chapter has not done. It has not shown that every small family is a failure, that freedom should be withdrawn, or that one cause can be reversed to restore fertility. It has shown how individually understandable choices and institutions can compose an outcome few people selected as a national future.
 
-Chapter 2 ended with a demographic mechanism looking for its causes. Those causes now return us to the aggregate. Smaller families become smaller cohorts. The next chapter follows those cohorts into homes, schools, workplaces, public budgets, political power, and the institutions they will inherit.
+The previous chapter ended with a demographic mechanism looking for its causes. Those causes now return us to the aggregate. Smaller families become smaller cohorts. The next chapter follows those cohorts into homes, schools, workplaces, public budgets, political power, and the institutions they will inherit.
 
 <div class="citation">
 
