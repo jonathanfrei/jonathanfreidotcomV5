@@ -16,7 +16,7 @@ The **total fertility rate**, or TFR, removes much of that age-structure problem
 **A period rate, not a completed family** South Korea's total fertility rate from 1925 to 2020. The final value describes that year's age-specific rates, not the family size of every woman then alive. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Total_Fertility_Rate_(TFR)_in_Korea.svg)*
 {: .caption}
 
-The **completed fertility rate** looks backward instead. It counts the children actually born to a group of women by the time that cohort has largely finished childbearing. It tells us more about lifetime family size but arrives too late to provide an early reading of change.
+**Completed cohort fertility** looks backward instead. It counts the children actually born to a group of women by the time that cohort has largely finished childbearing. It tells us more about lifetime family size but arrives too late to provide an early reading of change.
 
 The distance between the period and cohort measures is partly about timing. When many women postpone births from their twenties into their thirties, the current TFR falls because fewer births occur at the earlier ages. It can later rise when some postponed births take place. Demographers call this a **tempo effect**. Delay can depress a period measure without reducing completed fertility by the same amount, though births postponed long enough may never occur.
 

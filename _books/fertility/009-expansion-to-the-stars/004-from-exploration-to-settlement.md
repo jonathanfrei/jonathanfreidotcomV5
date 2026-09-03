@@ -34,9 +34,13 @@ Researchers have not established a minimum population for a self-sustaining sett
 
 A population could remain genetically healthy and still be too small to sustain specialties, absorb an accident, care for dependents, or let people escape a coercive community. Viability is plural: biological, medical, technical, economic, institutional, and political. Scale can buy redundancy. It can also buy freedom.
 
+The dimensions can fail separately. A technically resilient settlement might keep air and water flowing while depending on one exhausted physician. A medically competent one might remain an economic company town. A wealthy settlement might lack a lawful way to remove its governor. Calling any of them self-sustaining would hide the precise dependence that still makes ordinary life fragile.
+
+The thresholds also interact. More local industry can support a second clinic; a second clinic can make it safer for families to remain; more families can support a school; a school can form the people who eventually maintain the industry. The circle can run backward just as easily. The important point is not that one population figure starts it, but that a home requires enough overlapping capacity for loss in one part not to end the whole project.
+
 Governance will grow from practical control. Whoever allocates oxygen, medical care, communications, and return seats possesses unusual power. Mission command may be necessary during construction, but children born under it cannot remain permanent crew. Consent given by founders cannot bind their descendants, and a nominal right to leave means little if transport is unaffordable or controlled by the same authority. A settlement becomes a polity when the people living there can inherit its rules, contest them, and build alternatives.
 
-A visitor looks back at Earth. A settler buries a parent and teaches a child the names of places neither of them intends to leave.
+A visitor looks back at Earth. A resident begins to call the landscape home when the place contains graves, schools, arguments, repairs, and promises whose meaning no longer comes entirely from mission control.
 
 <div class="citation">
 

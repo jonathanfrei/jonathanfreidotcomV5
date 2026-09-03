@@ -9,7 +9,7 @@ The two paths do not offer a choice between caring for the present and caring fo
 
 The nearer task is personal and observable: make it easier for men and women to form durable families early enough to have the children they hope for. Closing the gap between desired and achieved family size is a decent first measure. The [United Nations Population Fund's 2025 report](https://www.unfpa.org/swp2025) emphasizes the barriers that keep people from realizing their fertility intentions. Removing those barriers respects the person rather than treating a birth as an input to a pension model, though it may not by itself produce replacement fertility. Desires also change with the lives people think are available to them.
 
-Chapter 7 established the boundary: no population target authorizes reproductive conscription or the use of persons as demographic material. Within that boundary, households, employers, communities, and governments make choices that either enlarge or consume the margin for family formation and succession.
+The [previous chapter's permission analysis](/books/fertility/getting-serious/permission-and-power) established the boundary: no population target authorizes reproductive conscription or the use of persons as demographic material. Within that boundary, households, employers, communities, and governments make choices that either enlarge or consume the margin for family formation and succession.
 
 ![A young child climbing a backyard playset, 2020](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Preschool_child_climbing_colorful_playset_in_backyard_during_sunny_day%2C_enjoying_playful_outdoor_activity.jpg/960px-Preschool_child_climbing_colorful_playset_in_backyard_during_sunny_day%2C_enjoying_playful_outdoor_activity.jpg)
 

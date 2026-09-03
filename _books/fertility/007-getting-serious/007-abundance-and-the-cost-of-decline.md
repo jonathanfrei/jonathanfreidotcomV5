@@ -7,7 +7,7 @@ eyebrow: After the tour
 Many extreme proposals begin from a real constraint and answer it badly. Housing is scarce, care consumes time, careers punish interruption, and raising children competes with the income required to support them. Abundance can change which tradeoffs remain necessary. Managed decline carries costs of its own.
 {: .lede}
 
-The previous chapters developed the ordinary version of abundance: more homes near work and kin, time returned to households, medicine that heals, and institutions capable of sharing care. Chapter 7 adds a more demanding point. A free society may have to transfer far more money, time, space, and institutional privilege toward families than current politics finds comfortable.
+The previous chapters developed the ordinary version of abundance: more homes near work and kin, time returned to households, medicine that heals, and institutions capable of sharing care. The more demanding point here is that a free society may have to transfer far more money, time, space, and institutional privilege toward families than current politics finds comfortable.
 
 ![Kyle and Erica Dosedo and their children at their self-built home, Zuni Pueblo, 2019](https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Hard_Work_%3D_Home_Ownership_at_Zuni_Pueblo%2C_NM_%2820190909-OPPE-LSC-1380%29.jpg/960px-Hard_Work_%3D_Home_Ownership_at_Zuni_Pueblo%2C_NM_%2820190909-OPPE-LSC-1380%29.jpg)
 
