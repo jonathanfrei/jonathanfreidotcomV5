@@ -4,7 +4,7 @@ deck: People copy the lives they are taught to envy
 eyebrow: What a culture puts on the poster
 ---
 
-Chapter 6 made the positive case for honoring marriage, motherhood, fatherhood, and family life without assigning human worth by family status. The harder question begins when admiration becomes a policy of lowering someone else.
+The [previous chapter's positive case](/books/fertility/beyond-policy/culture-and-the-future) honored marriage, motherhood, fatherhood, and family life without assigning human worth by family status. The harder question begins when admiration becomes a policy of lowering someone else.
 {: .lede}
 
 A baby seen at a friend's house may make parenthood imaginable in a way a government advertisement cannot. A [2026 Institute for Family Studies survey](https://ifstudies.org/report-brief/the-demographic-dead-end-2026-state-of-fertility-report) of roughly 4,700 Americans reported differences in desired family size among young adults according to whether their friends supported having children. It also reported an association between the number of children born to an admired public figure and the number respondents said they wanted. The survey describes self-reported desire and social context, not a causal effect on completed fertility.

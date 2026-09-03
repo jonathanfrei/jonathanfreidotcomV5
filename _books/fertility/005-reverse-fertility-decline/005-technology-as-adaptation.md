@@ -26,7 +26,7 @@ These tools could carry a large share of the adjustment for decades. Technology 
 
 Reproductive medicine reaches a different problem. Surgery can repair an obstruction; medication can restore ovulation; treatment can address infection, endometriosis, or another disease that interferes with conception. These interventions assist the reproductive system in doing what illness prevented it from doing.
 
-Chapter 3 distinguished restorative treatment from in vitro fertilization and gave the moral account of embryo creation, selection, donor conception, and surrogacy. The policy question here is narrower: what can access to reproductive medicine recover, for whom, and with what limits?
+The [earlier account of assisted reproduction](/books/fertility/why-fewer-children/assisted-reproduction) distinguished restorative treatment from in vitro fertilization and gave the moral account of embryo creation, selection, donor conception, and surrogacy. The policy question here is narrower: what can access to reproductive medicine recover, for whom, and with what limits?
 
 The desire behind either treatment deserves respect. Infertility is not a failure to contribute to a population target; it can be a grief inside a particular marriage or life. Public policy can improve diagnosis, protect time for treatment, reduce financial barriers, and ensure that patients receive honest information about probabilities and burdens.
 
@@ -48,7 +48,7 @@ The relevant outcomes include restored function, live births, treatment burden, 
 
 In-vitro gametogenesis aims to derive eggs or sperm from other cells. No human child has been born through the technique, and current stem-cell guidelines prohibit reproductive use while safety and ethical questions remain unresolved. Artificial-gestation research has so far focused on sustaining extremely premature animals at the edge of viability. It is not evidence that full human pregnancy can soon be moved outside a woman's body.
 
-These frontiers may eventually alter infertility treatment, pregnancy, and parenthood. For now they do not belong in a policy balance sheet as available routes to demographic recovery. Chapter 7 will ask who could be entrusted with such power and what no demographic emergency can authorize.
+These frontiers may eventually alter infertility treatment, pregnancy, and parenthood. For now they do not belong in a policy balance sheet as available routes to demographic recovery. The [later permission analysis](/books/fertility/getting-serious/permission-and-power) asks who could be entrusted with such power and what no demographic emergency can authorize.
 
 The record across this chapter is less discouraging than a verdict of failure and less comforting than a policy formula. Governments can make family life easier and recover births at the margin. Immigration can add people quickly. Automation can extend what a smaller generation can carry. Medicine can heal infertility or help produce births that would not otherwise occur.
 

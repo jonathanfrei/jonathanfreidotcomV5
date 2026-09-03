@@ -4,7 +4,7 @@ deck: Renewal does not choose the destination; it preserves the freedom to under
 eyebrow: Back to the near future
 ---
 
-A rocket can carry explorers, and a base can survive for years on cargo and instructions from Earth. A civilization begins when people expect the place to remain after they are gone and raise children who inherit it.
+A rocket can carry explorers, and a base can survive for years on cargo and instructions from Earth. The harder change begins when residents build institutions they expect to remain after the founding crew is gone.
 {: .lede}
 
 ![Apollo 11 launching from Kennedy Space Center, July 16, 1969](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Apollo_11_Launch2.jpg/960px-Apollo_11_Launch2.jpg)
@@ -22,7 +22,7 @@ The stars can become an easy symbol of confidence, which is exactly why they nee
 
 A permanent settlement makes the connection harder to ignore. A child born there is not a symbol or a labor input. If she grows up and chooses a vocation the planners did not expect, that is evidence the settlement has become more human, not less efficient.
 
-Space exploration can return something to the culture that supports it. It gives young people a visible reminder that difficult work remains unfinished and that some projects are worth beginning without expecting to see the end. The story becomes false if the rockets are impressive while the society underneath them cannot form homes or sustain the people who will inherit the work.
+Space exploration can return something to the culture that supports it. It gives young people a visible reminder that difficult work remains unfinished and that some projects are worth beginning without expecting to see the end. The symbol remains honest only while the society underneath it can form homes and sustain the people who inherit the work.
 
 ## An open horizon
 

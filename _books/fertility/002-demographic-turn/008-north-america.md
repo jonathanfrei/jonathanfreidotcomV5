@@ -19,11 +19,6 @@ The old continental gradient has largely disappeared. The three countries now di
 
 Immigration changes national demography quickly because migrants are often young adults. The United Nations projects it to become the main driver of population growth in the United States, Canada, and dozens of other countries by the middle of the century.
 
-![U.S. population projections under alternative immigration assumptions](https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/U.S._Population_1900%E2%80%932016%2C_Population_Projections_2017%E2%80%932060_by_Immigration_Scenario_%28cropped%29.jpg/960px-U.S._Population_1900%E2%80%932016%2C_Population_Projections_2017%E2%80%932060_by_Immigration_Scenario_%28cropped%29.jpg)
-
-**A national path altered by migration** Older U.S. Census Bureau projections under several immigration assumptions. The values are superseded, but the comparison illustrates how migration can change a national trajectory without changing global population. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:U.S._Population_1900%E2%80%932016,_Population_Projections_2017%E2%80%932060_by_Immigration_Scenario_(cropped).jpg)*
-{: .caption}
-
 The people moving are not entries shifted between ledgers. They leave one home and build another, changing both places. The narrower demographic point is that migration can alter a national population quickly without adding a person to the world total.
 
 North America can therefore postpone visible contraction longer than places with older populations and less migration. The growth is real. It also keeps the fertility turn hidden beneath a rising national head count.
