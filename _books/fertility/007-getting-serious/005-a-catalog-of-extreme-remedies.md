@@ -34,7 +34,7 @@ Law could shorten credential requirements, support apprenticeships, remove marri
 
 ## Conception, pregnancy, and parenthood
 
-The practices defined in Chapter 3 also enter the catalog when institutions fund, regulate, restrict, or compel them. The question now is not what contraception, abortion, sterilization, or assisted reproduction does. It is what authority a government, employer, clinic, or community may claim over conception, pregnancy, embryonic life, and parenthood. Protecting a life already begun is not reproductive conscription; demanding a future conception is not protection. Restorative medicine is not embryo production. The next section tests these differences through power, proportionality, and the possibility of refusal.
+The [earlier practice-by-practice account](/books/fertility/why-fewer-children/reproductive-control) also enters the catalog when institutions fund, regulate, restrict, or compel those practices. The question now is not what contraception, abortion, sterilization, or assisted reproduction does. It is what authority a government, employer, clinic, or community may claim over conception, pregnancy, embryonic life, and parenthood. Protecting a life already begun is not reproductive conscription; demanding a future conception is not protection. Restorative medicine is not embryo production. The next section tests these differences through power, proportionality, and the possibility of refusal.
 
 ## Direct command and production
 

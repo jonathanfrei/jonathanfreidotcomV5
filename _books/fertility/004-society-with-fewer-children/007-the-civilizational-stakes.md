@@ -13,7 +13,7 @@ Low fertility removes links from those chains unevenly. A large country can carr
 
 Modern knowledge is cumulative. Each generation begins with more to learn before it can reach the frontier. Benjamin Jones found that inventors have responded to this [growing burden of knowledge](https://www.nber.org/papers/w11360) through narrower specialization and larger teams. Better tools can keep those teams productive. The consequence at this stage is succession: more specialized systems create more positions in which losing the only person prepared to take responsibility can break a chain.
 
-Cultural practices expose the same shortage without requiring the same scale. A recorded language or documented craft may remain available after the community that practiced it has lost enough possible heirs. Chapter 6 will take up the close work by which a person becomes capable of receiving such an inheritance. The consequence here is simpler: fewer successors leave more practices competing for each one.
+Cultural practices expose the same shortage without requiring the same scale. A recorded language or documented craft may remain available after the community that practiced it has lost enough possible heirs. The [institutional account two chapters ahead](/books/fertility/beyond-policy/the-social-foundations-of-civilizational-continuity) takes up the close work by which a person becomes capable of receiving such an inheritance. The consequence here is simpler: fewer successors leave more practices competing for each one.
 
 ## Resilience requires spare capacity
 

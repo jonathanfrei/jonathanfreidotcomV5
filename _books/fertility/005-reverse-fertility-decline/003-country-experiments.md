@@ -4,7 +4,7 @@ deck: The countries that tried hardest show several kinds of success and no reli
 eyebrow: The record in practice
 ---
 
-Pronatalist policy has run long enough to leave a record. Governments have reduced costs, protected parents, and sometimes moved births. None of the wealthy countries most committed to the effort has demonstrated a durable policy-led return from very low fertility to replacement.
+Pronatalist policy—public action intended to encourage births—has run long enough to leave a record. Governments have reduced costs, protected parents, and sometimes moved births. None of the wealthy countries most committed to the effort has demonstrated a durable policy-led return from very low fertility to replacement.
 {: .lede}
 
 ![Fertility rates in France, Hungary, Finland, Japan, and South Korea, 1950–2023](https://ourworldindata.org/grapher/children-per-woman.png?tab=chart&time=1950..latest&country=FRA~HUN~KOR~FIN~JPN)
