@@ -1,0 +1,6 @@
+Three.js r180 (MIT License)
+https://github.com/mrdoob/three.js
+
+Vendored for this static editorial page so the live site does not load a JS CDN.
+
+Keep three.module.min.js and three.core.min.js in the same folder — the module imports the core build by relative path.

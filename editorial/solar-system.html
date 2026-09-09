@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Our Solar System · Jonathan Frei</title>
+  <meta name="description" content="A classroom model of the solar system. Click a world to read a short lesson. Sizes and distances are not to scale.">
+  <link rel="icon" href="/assets/img/favicon.ico" type="image/png">
+  <script>
+  (function () {
+    try {
+      var stored = localStorage.getItem("theme");
+      var theme = (stored === "light" || stored === "dark")
+        ? stored
+        : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) { /* private mode */ }
+  })();
+  </script>
+  <link rel="stylesheet" href="/assets/css/core.css">
+  <style>
+    @font-face {
+      font-family: "Source Serif 4";
+      font-style: normal;
+      font-display: swap;
+      font-weight: 200 900;
+      src: url("/assets/fonts/source-serif-4-5.2.5-latin-wght-normal.woff2") format("woff2-variations");
+    }
+    @font-face {
+      font-family: "Source Code Pro";
+      font-style: normal;
+      font-display: swap;
+      font-weight: 200 900;
+      src: url("/assets/fonts/source-code-pro-5.2.5-latin-wght-normal.woff2") format("woff2-variations");
+    }
+
+    :root {
+      --brand-ink: #111C24;
+      --brand-paper: #FAF9F6;
+      --brand-primary-80: #0077A8;
+      --color-bg: var(--brand-paper);
+      --color-fg: var(--brand-ink);
+      --color-muted: #4A5560;
+      --color-border: #E8E6E1;
+      --color-accent: #0077A8;
+      --color-accent-hover: #00334D;
+      --color-header-bg: var(--brand-paper);
+      --color-surface: #FFFFFF;
+      --font-body: "Source Serif 4", Charter, Georgia, ui-serif, serif;
+      --font-ui: "Source Code Pro", ui-monospace, monospace;
+      --radius: 0.25rem;
+      --space-4: 1.4rem;
+    }
+
+    html[data-theme="dark"] {
+      --brand-ink: #F4F3EF;
+      --brand-paper: #0B1115;
+      --color-bg: #0B1115;
+      --color-fg: #F4F3EF;
+      --color-muted: #A8B3B9;
+      --color-border: #2A373E;
+      --color-accent: #4AA8D4;
+      --color-accent-hover: #7AD0EC;
+      --color-header-bg: #0B1115;
+      --color-surface: #18262E;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100%;
+    }
+    html, body.solar-system-page {
+      height: 100%;
+    }
+
+    body.solar-system-page {
+      min-height: 100dvh;
+    }
+
+    .solar-stage {
+      position: relative;
+      flex: 1 1 auto;
+      min-height: 0;
+      background: #05070d;
+      overflow: hidden;
+    }
+
+    body.solar-system-page .site-header .container,
+    body.solar-system-page .site-footer .container {
+      max-width: 72rem;
+    }
+
+    #scene {
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: grab;
+    }
+
+    #scene:active { cursor: grabbing; }
+
+    #labels {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .label-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .world-label {
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #f4f3ef;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.85);
+      white-space: nowrap;
+      opacity: 0.88;
+      transform: translate(-50%, -100%);
+      pointer-events: auto;
+      cursor: pointer;
+    }
+
+    .world-label.is-hidden { visibility: hidden; }
+
+    .world-label.is-selected {
+      opacity: 1;
+      color: #fff;
+    }
+
+    .mast {
+      position: absolute;
+      top: var(--space-4);
+      left: var(--space-4);
+      z-index: 4;
+      color: #f4f3ef;
+      max-width: 22ch;
+      pointer-events: none;
+    }
+
+    .mast .eyebrow {
+      margin: 0 0 0.35rem;
+      font-family: var(--font-ui);
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #a8b3b9;
+    }
+
+    .mast h1 {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: #f4f3ef;
+    }
+
+    .mast .sub {
+      margin: 0.4rem 0 0;
+      color: #c5ced3;
+      font-size: 0.95rem;
+    }
+
+    .lesson {
+      position: absolute;
+      top: var(--space-4);
+      right: var(--space-4);
+      z-index: 4;
+      width: min(20.5rem, calc(100vw - 2.5rem));
+      max-height: calc(100% - 11rem);
+      overflow: auto;
+      background: var(--color-surface);
+      color: var(--color-fg);
+      padding: 1.15rem 1.2rem 1.05rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+    }
+
+    .lesson .kicker {
+      margin: 0 0 0.4rem;
+      font-family: var(--font-ui);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+    }
+
+    .lesson h2 {
+      margin: 0;
+      font-size: 1.65rem;
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .lesson .lede {
+      margin: 0.55rem 0 0;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    .lesson .hint {
+      margin: 1rem 0 0;
+      color: var(--color-muted);
+      font-size: 0.9rem;
+    }
+
+    .lesson .facts {
+      margin: 0.9rem 0 0;
+      padding: 0 0 0 1.15rem;
+      display: grid;
+      gap: 0.55rem;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .lesson .facts li::marker {
+      color: var(--color-accent);
+    }
+
+    .dock {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 4;
+      padding: 0.75rem 1rem 1rem;
+      background: linear-gradient(to top, rgba(11, 17, 21, 0.92), rgba(11, 17, 21, 0));
+      color: #f4f3ef;
+    }
+
+    .scale-note {
+      margin: 0 0 0.6rem;
+      font-size: 0.85rem;
+      color: #c5ced3;
+      max-width: 46rem;
+    }
+
+    .roster-wrap {
+      overflow-x: auto;
+      margin-bottom: 0.6rem;
+    }
+
+    .roster {
+      display: flex;
+      gap: 0.4rem;
+      min-width: max-content;
+      padding-bottom: 0.2rem;
+    }
+
+    .world-chip {
+      appearance: none;
+      border: 1px solid var(--color-border);
+      background: #18262e;
+      color: #f4f3ef;
+      font-family: var(--font-ui);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 0.55rem 0.7rem;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      cursor: pointer;
+      border-radius: var(--radius);
+    }
+
+    .world-chip:hover,
+    .world-chip:focus-visible {
+      border-color: var(--color-accent);
+      outline: none;
+    }
+
+    .world-chip.is-active {
+      background: var(--color-surface);
+      color: var(--color-fg);
+      border-color: var(--color-accent);
+    }
+
+    .swatch {
+      width: 0.65rem;
+      height: 0.65rem;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25);
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.8rem;
+      align-items: center;
+    }
+
+    .ctrl {
+      appearance: none;
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+      color: var(--color-fg);
+      font-family: var(--font-ui);
+      font-size: 0.8rem;
+      font-weight: 600;
+      min-height: 44px;
+      padding: 0 0.85rem;
+      cursor: pointer;
+      border-radius: var(--radius);
+    }
+
+    .ctrl:hover,
+    .ctrl:focus-visible {
+      border-color: var(--color-accent);
+      outline: 2px solid var(--color-accent);
+      outline-offset: 2px;
+    }
+
+    .speed {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+      color: #c5ced3;
+    }
+
+    .speed input {
+      width: 7.5rem;
+      accent-color: var(--color-accent);
+    }
+
+    @media (max-width: 50em) {
+      .mast { max-width: 55vw; }
+      .lesson {
+        top: auto;
+        bottom: 10.5rem;
+        right: 0.75rem;
+        left: 0.75rem;
+        width: auto;
+        max-height: 32vh;
+      }
+    }
+  </style>
+</head>
+<body class="solar-system-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-logo">Jonathan Frei</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/blog">Blog</a>
+        <a href="/archive">Archive</a>
+        <a href="/about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="solar-stage">
+    <canvas id="scene"></canvas>
+    <div id="labels" aria-hidden="true"></div>
+
+    <header class="mast">
+      <p class="eyebrow">Classroom sky</p>
+      <h1 id="title">Our Solar System</h1>
+      <p id="subtitle" class="sub">Click a world. Learn what it is like.</p>
+    </header>
+
+    <aside id="lesson" class="lesson" aria-live="polite"></aside>
+
+    <div class="dock">
+      <p id="scale-note" class="scale-note"></p>
+      <div class="roster-wrap">
+        <div id="roster" class="roster" role="list"></div>
+      </div>
+      <div class="controls">
+        <button id="play" type="button" class="ctrl">Pause</button>
+        <label class="speed">
+          Speed
+          <input id="speed" type="range" min="0.2" max="8" step="0.2" value="1">
+          <span id="speed-value">1.0×</span>
+        </label>
+        <button id="labels-toggle" type="button" class="ctrl">Hide names</button>
+        <button id="reset" type="button" class="ctrl">Show all</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p class="footer-copy">
+        &copy; 2026 Jonathan Frei.
+        <span class="sr-only">Contact:</span>
+        <a href="javascript:location='mailto:\u0068\u0069\u0040\u006a\u006f\u006e\u0061\u0074\u0068\u0061\u006e\u0066\u0072\u0065\u0069\u002e\u0063\u006f\u006d';void 0">hi&#64;jonathanfrei&#46;com</a>
+      </p>
+      <div class="footer-end">
+        <p class="footer-links">
+          <a href="/sitemap">Sitemap</a>
+          <span class="footer-links-sep" aria-hidden="true">·</span>
+          <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer">XML</a>
+          <span class="footer-links-sep" aria-hidden="true">·</span>
+          <a href="/feed.xml" target="_blank" rel="noopener noreferrer">RSS</a>
+        </p>
+        <button type="button" class="theme-toggle" aria-label="Toggle color theme" aria-pressed="false" data-theme-src="/assets/js/theme.js">
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 14.3A9 9 0 1 1 9.7 3a7 7 0 0 0 11.3 11.3z"/>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <p class="footer-note">
+        Parts of this site’s code and content were generated or assisted by AI tools. Review and verify anything important yourself.
+      </p>
+    </div>
+  </footer>
+  <script>
+  (function () {
+    var btn = document.querySelector(".theme-toggle");
+    if (!btn) return;
+    var src = btn.getAttribute("data-theme-src") || "/assets/js/theme.js";
+    var loading = false;
+    function onFirstClick(e) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      if (loading) return;
+      loading = true;
+      window.__themeToggleNow = true;
+      btn.removeEventListener("click", onFirstClick, true);
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = src;
+      s.onerror = function () {
+        loading = false;
+        window.__themeToggleNow = false;
+        btn.addEventListener("click", onFirstClick, true);
+      };
+      document.head.appendChild(s);
+    }
+    btn.addEventListener("click", onFirstClick, true);
+  })();
+  </script>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "/editorial/solar-system/lib/three.module.min.js"
+    }
+  }
+  </script>
+  <script type="module" src="/editorial/solar-system/app.js"></script>
+</body>
+</html>
