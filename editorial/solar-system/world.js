@@ -163,12 +163,12 @@ export class World {
     if (def.tilt) spin.rotation.z = THREE.MathUtils.degToRad(def.tilt);
 
     const geo = new THREE.SphereGeometry(def.radius, 64, 48);
-    const map = new THREE.CanvasTexture(makeBodyTexture(def));
+    const map = new THREE.CanvasTexture(makeBodyTexture(def, def.kind === "star" ? 1024 : 512));
     map.colorSpace = THREE.SRGBColorSpace;
     map.anisotropy = 8;
 
     const mat = def.emissive
-      ? new THREE.MeshBasicMaterial({ map, color: def.color })
+      ? new THREE.MeshBasicMaterial({ map })
       : new THREE.MeshStandardMaterial({
           map,
           roughness: def.kind === "gas" || def.kind === "ice" || def.kind === "cloud" ? 0.55 : 0.82,

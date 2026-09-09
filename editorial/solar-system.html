@@ -3,92 +3,70 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="dark">
   <title>Our Solar System · Jonathan Frei</title>
   <meta name="description" content="A classroom model of the solar system. Click a world to read a short lesson. Sizes and distances are not to scale.">
   <link rel="icon" href="/assets/img/favicon.ico" type="image/png">
-  <script>
-  (function () {
-    try {
-      var stored = localStorage.getItem("theme");
-      var theme = (stored === "light" || stored === "dark")
-        ? stored
-        : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-      document.documentElement.setAttribute("data-theme", theme);
-    } catch (e) { /* private mode */ }
-  })();
-  </script>
-  <link rel="stylesheet" href="/assets/css/core.css">
+  <link rel="preload" href="/assets/fonts/source-serif-4-5.2.5-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/source-code-pro-5.2.5-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <style>
     @font-face {
       font-family: "Source Serif 4";
       font-style: normal;
       font-display: swap;
       font-weight: 200 900;
-      src: url("/assets/fonts/source-serif-4-5.2.5-latin-wght-normal.woff2") format("woff2-variations");
+      src: url("/assets/fonts/source-serif-4-5.2.5-latin-wght-normal.woff2") format("woff2");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
     }
     @font-face {
       font-family: "Source Code Pro";
       font-style: normal;
       font-display: swap;
       font-weight: 200 900;
-      src: url("/assets/fonts/source-code-pro-5.2.5-latin-wght-normal.woff2") format("woff2-variations");
+      src: url("/assets/fonts/source-code-pro-5.2.5-latin-wght-normal.woff2") format("woff2");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
     }
 
     :root {
-      --brand-ink: #111C24;
-      --brand-paper: #FAF9F6;
-      --brand-primary-80: #0077A8;
-      --color-bg: var(--brand-paper);
-      --color-fg: var(--brand-ink);
-      --color-muted: #4A5560;
-      --color-border: #E8E6E1;
-      --color-accent: #0077A8;
-      --color-accent-hover: #00334D;
-      --color-header-bg: var(--brand-paper);
-      --color-surface: #FFFFFF;
-      --font-body: "Source Serif 4", Charter, Georgia, ui-serif, serif;
-      --font-ui: "Source Code Pro", ui-monospace, monospace;
-      --radius: 0.25rem;
-      --space-4: 1.4rem;
-    }
-
-    html[data-theme="dark"] {
-      --brand-ink: #F4F3EF;
-      --brand-paper: #0B1115;
-      --color-bg: #0B1115;
       --color-fg: #F4F3EF;
       --color-muted: #A8B3B9;
       --color-border: #2A373E;
       --color-accent: #4AA8D4;
-      --color-accent-hover: #7AD0EC;
-      --color-header-bg: #0B1115;
       --color-surface: #18262E;
+      --font-body: "Source Serif 4", Charter, "Iowan Old Style", Georgia, ui-serif, serif;
+      --font-ui: "Source Code Pro", "Cascadia Mono", ui-monospace, monospace;
+      --radius: 0.25rem;
+      --space-4: 1.4rem;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      min-height: 100dvh;
+      background: #05070d;
+      color: var(--color-fg);
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 1.0625rem;
+      line-height: 1.4;
+      -webkit-font-smoothing: antialiased;
     }
 
     .skip-link {
       position: absolute;
       top: -100%;
     }
-    html, body.solar-system-page {
-      height: 100%;
-    }
-
-    body.solar-system-page {
-      min-height: 100dvh;
-    }
 
     .solar-stage {
       position: relative;
-      flex: 1 1 auto;
-      min-height: 0;
+      height: 100dvh;
       background: #05070d;
       overflow: hidden;
-    }
-
-    body.solar-system-page .site-header .container,
-    body.solar-system-page .site-footer .container {
-      max-width: 72rem;
     }
 
     #scene {
@@ -178,9 +156,14 @@
       overflow: auto;
       background: var(--color-surface);
       color: var(--color-fg);
+      font-family: var(--font-body);
       padding: 1.15rem 1.2rem 1.05rem;
       border: 1px solid var(--color-border);
       border-radius: var(--radius);
+    }
+
+    body.is-immersed .lesson {
+      display: none;
     }
 
     .lesson .kicker {
@@ -194,6 +177,7 @@
 
     .lesson h2 {
       margin: 0;
+      font-family: var(--font-body);
       font-size: 1.65rem;
       font-weight: 400;
       line-height: 1.15;
@@ -279,8 +263,8 @@
     }
 
     .world-chip.is-active {
-      background: var(--color-surface);
-      color: var(--color-fg);
+      background: #f4f3ef;
+      color: #111C24;
       border-color: var(--color-accent);
     }
 
@@ -310,6 +294,24 @@
       padding: 0 0.85rem;
       cursor: pointer;
       border-radius: var(--radius);
+      text-decoration: none;
+    }
+
+    a.ctrl {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ctrl-home {
+      width: 44px;
+      padding: 0;
+    }
+
+    .ctrl-home svg {
+      display: block;
+      width: 1.15rem;
+      height: 1.15rem;
     }
 
     .ctrl:hover,
@@ -317,6 +319,7 @@
       border-color: var(--color-accent);
       outline: 2px solid var(--color-accent);
       outline-offset: 2px;
+      color: var(--color-fg);
     }
 
     .speed {
@@ -335,31 +338,29 @@
 
     @media (max-width: 50em) {
       .mast { max-width: 55vw; }
+      .mast h1 { font-size: 1.25rem; }
+      .mast .sub { font-size: 0.8rem; }
+      .scale-note { display: none; }
       .lesson {
         top: auto;
-        bottom: 10.5rem;
+        bottom: 11.25rem;
         right: 0.75rem;
         left: 0.75rem;
         width: auto;
-        max-height: 32vh;
+        max-height: 22vh;
+        padding: 0.7rem 0.8rem 0.65rem;
+        z-index: 5;
       }
+      .lesson .kicker { font-size: 0.58rem; margin-bottom: 0.2rem; }
+      .lesson h2 { font-size: 1.05rem; }
+      .lesson .lede { font-size: 0.8rem; margin-top: 0.3rem; }
+      .lesson .hint { font-size: 0.75rem; margin-top: 0.45rem; }
+      .lesson .facts { font-size: 0.78rem; gap: 0.3rem; margin-top: 0.45rem; }
     }
   </style>
 </head>
-<body class="solar-system-page">
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <div class="container">
-      <a href="/" class="site-logo">Jonathan Frei</a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="/">Home</a>
-        <a href="/blog">Blog</a>
-        <a href="/archive">Archive</a>
-        <a href="/about">About</a>
-      </nav>
-    </div>
-  </header>
 
   <main id="main" class="solar-stage">
     <canvas id="scene"></canvas>
@@ -387,68 +388,16 @@
         </label>
         <button id="labels-toggle" type="button" class="ctrl">Hide names</button>
         <button id="reset" type="button" class="ctrl">Show all</button>
+        <a class="ctrl ctrl-home" href="/" aria-label="Home">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 11.5 12 4l9 7.5"/>
+            <path d="M5.5 10.5V20h13v-9.5"/>
+          </svg>
+        </a>
       </div>
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <p class="footer-copy">
-        &copy; 2026 Jonathan Frei.
-        <span class="sr-only">Contact:</span>
-        <a href="javascript:location='mailto:\u0068\u0069\u0040\u006a\u006f\u006e\u0061\u0074\u0068\u0061\u006e\u0066\u0072\u0065\u0069\u002e\u0063\u006f\u006d';void 0">hi&#64;jonathanfrei&#46;com</a>
-      </p>
-      <div class="footer-end">
-        <p class="footer-links">
-          <a href="/sitemap">Sitemap</a>
-          <span class="footer-links-sep" aria-hidden="true">·</span>
-          <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer">XML</a>
-          <span class="footer-links-sep" aria-hidden="true">·</span>
-          <a href="/feed.xml" target="_blank" rel="noopener noreferrer">RSS</a>
-        </p>
-        <button type="button" class="theme-toggle" aria-label="Toggle color theme" aria-pressed="false" data-theme-src="/assets/js/theme.js">
-          <svg class="theme-toggle__icon theme-toggle__icon--moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 14.3A9 9 0 1 1 9.7 3a7 7 0 0 0 11.3 11.3z"/>
-          </svg>
-          <svg class="theme-toggle__icon theme-toggle__icon--sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="4"/>
-            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div class="container">
-      <p class="footer-note">
-        Parts of this site’s code and content were generated or assisted by AI tools. Review and verify anything important yourself.
-      </p>
-    </div>
-  </footer>
-  <script>
-  (function () {
-    var btn = document.querySelector(".theme-toggle");
-    if (!btn) return;
-    var src = btn.getAttribute("data-theme-src") || "/assets/js/theme.js";
-    var loading = false;
-    function onFirstClick(e) {
-      e.preventDefault();
-      e.stopImmediatePropagation();
-      if (loading) return;
-      loading = true;
-      window.__themeToggleNow = true;
-      btn.removeEventListener("click", onFirstClick, true);
-      var s = document.createElement("script");
-      s.async = true;
-      s.src = src;
-      s.onerror = function () {
-        loading = false;
-        window.__themeToggleNow = false;
-        btn.addEventListener("click", onFirstClick, true);
-      };
-      document.head.appendChild(s);
-    }
-    btn.addEventListener("click", onFirstClick, true);
-  })();
-  </script>
   <script type="importmap">
   {
     "imports": {
