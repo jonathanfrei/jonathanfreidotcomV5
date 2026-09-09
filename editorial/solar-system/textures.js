@@ -67,10 +67,24 @@ export function makeBodyTexture(body, size = 512) {
       let b = base[2];
 
       if (kind === "star") {
-        const glow = 0.55 + n * 0.45;
-        r = mix(255, 255, glow);
-        g = mix(170, 230, glow);
-        b = mix(70, 140, n);
+        const cells = fbm(u * 28 + seed, v * 28, 4);
+        const spots = fbm(u * 5 + 9, v * 5 + 3, 3);
+        const belt = 0.12 * Math.sin(v * Math.PI * 6 + n * 2);
+        const limb = Math.pow(Math.sin(v * Math.PI), 0.35);
+        const hot = 0.55 + cells * 0.45 + belt;
+        r = mix(255, 255, hot);
+        g = mix(90, 210, hot * limb);
+        b = mix(12, 70, cells * 0.5);
+        if (spots < 0.32 && cells < 0.42) {
+          const dark = (0.32 - spots) * 2.2;
+          r = mix(r, 70, dark);
+          g = mix(g, 28, dark);
+          b = mix(b, 8, dark);
+        } else if (cells > 0.72) {
+          r = 255;
+          g = mix(g, 245, 0.55);
+          b = mix(b, 160, 0.35);
+        }
       } else if (kind === "earth") {
         const land = fbm(u * 6 + 2, v * 4 + 4);
         const polar = Math.abs(v - 0.5) > 0.42 + n * 0.04;

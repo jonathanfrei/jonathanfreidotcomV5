@@ -116,9 +116,15 @@ speed.addEventListener("input", () => {
   speedValue.textContent = `${world.speed.toFixed(1)}×`;
 });
 
+function setImmersed(immersed) {
+  world.setLabelsVisible(!immersed);
+  document.body.classList.toggle("is-immersed", immersed);
+  labelsToggle.textContent = immersed ? "Show names" : "Hide names";
+  labelsToggle.setAttribute("aria-pressed", String(immersed));
+}
+
 labelsToggle.addEventListener("click", () => {
-  world.setLabelsVisible(!world.showLabels);
-  labelsToggle.textContent = world.showLabels ? "Hide names" : "Show names";
+  setImmersed(world.showLabels);
 });
 
 resetBtn.addEventListener("click", () => {
