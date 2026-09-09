@@ -24,6 +24,7 @@
       "emissive": "#ffb347",
       "emissiveIntensity": 1.4,
       "light": { "color": "#fff4d6", "intensity": 4.2, "distance": 420 },
+      "texture": "star",
       "spinPeriod": 25,
       "labelOffset": 8.2,
       "pronounce": "the sun",
