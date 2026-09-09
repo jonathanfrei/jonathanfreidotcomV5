@@ -1,0 +1,283 @@
+{
+  "id": "solar-system",
+  "title": "Our Solar System",
+  "subtitle": "Click a world. Learn what it is like.",
+  "audience": "elementary",
+  "note": "Planets are shown bigger and closer together so you can see them. In real space they are much farther apart.",
+  "background": "#05070d",
+  "ambient": 0.07,
+  "starCount": 2800,
+  "camera": {
+    "position": [0, 50, 132],
+    "target": [0, 0, 0],
+    "fov": 42,
+    "near": 0.1,
+    "far": 4000
+  },
+  "bodies": [
+    {
+      "id": "sun",
+      "name": "The Sun",
+      "kind": "star",
+      "radius": 6.4,
+      "color": "#ffd27a",
+      "emissive": "#ffb347",
+      "emissiveIntensity": 1.4,
+      "light": { "color": "#fff4d6", "intensity": 4.2, "distance": 420 },
+      "spinPeriod": 25,
+      "labelOffset": 8.2,
+      "pronounce": "the sun",
+      "headline": "A star at the center of everything we know nearby.",
+      "facts": [
+        "The Sun is a star — a giant ball of glowing hot gas.",
+        "It is so big that about one million Earths could fit inside it.",
+        "Almost every planet, moon, and space rock in our solar system goes around the Sun.",
+        "The Sun's light takes about 8 minutes to reach Earth. That light keeps us warm."
+      ]
+    },
+    {
+      "id": "mercury",
+      "name": "Mercury",
+      "kind": "planet",
+      "parent": "sun",
+      "radius": 0.62,
+      "color": "#b7a48a",
+      "orbitRadius": 12.5,
+      "orbitPhase": 18,
+      "orbitPeriod": 0.24,
+      "spinPeriod": 58.6,
+      "texture": "rocky",
+      "pronounce": "MER-kyuh-ree",
+      "headline": "The smallest planet, and the closest to the Sun.",
+      "facts": [
+        "Mercury is the closest planet to the Sun and the smallest of the eight planets.",
+        "It has almost no air, so days are scorching hot and nights are freezing cold.",
+        "A year on Mercury (one trip around the Sun) takes only 88 Earth days.",
+        "A day on Mercury is longer than its year! It spins very slowly."
+      ]
+    },
+    {
+      "id": "venus",
+      "name": "Venus",
+      "kind": "planet",
+      "parent": "sun",
+      "radius": 0.96,
+      "color": "#e8c988",
+      "orbitRadius": 16.8,
+      "orbitPhase": 312,
+      "orbitPeriod": 0.62,
+      "spinPeriod": -243,
+      "texture": "cloud",
+      "atmosphere": "#f3d9a4",
+      "pronounce": "VEE-nus",
+      "headline": "Earth's twin in size — but a much hotter neighbor.",
+      "facts": [
+        "Venus is almost the same size as Earth, so people call them twins.",
+        "It is the hottest planet. Thick clouds trap heat like a heavy blanket.",
+        "Venus spins the other way from most planets, and it spins very slowly.",
+        "A day on Venus is longer than its year."
+      ]
+    },
+    {
+      "id": "earth",
+      "name": "Earth",
+      "kind": "planet",
+      "parent": "sun",
+      "radius": 1,
+      "color": "#3d7ec9",
+      "orbitRadius": 22.4,
+      "orbitPhase": 148,
+      "orbitPeriod": 1,
+      "spinPeriod": 1,
+      "tilt": 23.4,
+      "texture": "earth",
+      "atmosphere": "#89c4ff",
+      "pronounce": "earth",
+      "headline": "Our home — the only world we know with life.",
+      "facts": [
+        "Earth is the third planet from the Sun and the only one we know has living things.",
+        "Most of Earth's surface is covered by oceans of liquid water.",
+        "Earth has one moon. The Moon's pull helps make ocean tides.",
+        "One trip around the Sun is one year: about 365 days."
+      ]
+    },
+    {
+      "id": "moon",
+      "name": "The Moon",
+      "kind": "moon",
+      "parent": "earth",
+      "radius": 0.27,
+      "color": "#cfc8bc",
+      "orbitRadius": 3.15,
+      "orbitPhase": 55,
+      "orbitPeriod": 0.0748,
+      "labelOffset": 1.15,
+      "spinPeriod": 27.3,
+      "texture": "rocky",
+      "hideOrbit": false,
+      "pronounce": "the moon",
+      "headline": "Earth's closest neighbor in space.",
+      "facts": [
+        "The Moon is Earth's only natural satellite. It goes around Earth, not the Sun by itself.",
+        "We always see the same face of the Moon from Earth because it spins at the same pace it orbits.",
+        "The Moon has no air to breathe and no liquid water on its surface.",
+        "Its gravity pulls on Earth's oceans and helps make high and low tides."
+      ]
+    },
+    {
+      "id": "mars",
+      "name": "Mars",
+      "kind": "planet",
+      "parent": "sun",
+      "radius": 0.72,
+      "color": "#c46a48",
+      "orbitRadius": 28.6,
+      "orbitPhase": 210,
+      "orbitPeriod": 1.88,
+      "spinPeriod": 1.03,
+      "tilt": 25,
+      "texture": "rocky",
+      "pronounce": "marz",
+      "headline": "The red planet, with ice at its poles.",
+      "facts": [
+        "Mars looks rusty red because its soil has a lot of iron oxide — the same stuff as rust.",
+        "It is colder and drier than Earth, with a very thin atmosphere.",
+        "Mars has ice caps at its north and south poles.",
+        "A day on Mars is about 24 and a half hours — almost like ours."
+      ]
+    },
+    {
+      "id": "jupiter",
+      "name": "Jupiter",
+      "kind": "planet",
+      "parent": "sun",
+      "radius": 2.85,
+      "color": "#d9b48a",
+      "orbitRadius": 40.5,
+      "orbitPhase": 255,
+      "orbitPeriod": 11.86,
+      "spinPeriod": 0.41,
+      "texture": "gas",
+      "bands": ["#e6c9a0", "#c49a6c", "#efe0c4", "#a8754a", "#d7b07c"],
+      "pronounce": "JOO-pi-ter",
+      "headline": "The giant of the solar system.",
+      "facts": [
+        "Jupiter is the biggest planet. All the other planets could fit inside it with room to spare.",
+        "It is a gas giant — mostly hydrogen and helium, with no solid ground like Earth's.",
+        "The Great Red Spot is a huge storm that has lasted for hundreds of years.",
+        "Jupiter has dozens of moons. Four big ones were first seen by Galileo in 1610."
+      ]
+    },
+    {
+      "id": "saturn",
+      "name": "Saturn",
+      "kind": "planet",
+      "parent": "sun",
+      "radius": 2.4,
+      "color": "#e6d3a3",
+      "orbitRadius": 52.8,
+      "orbitPhase": 108,
+      "orbitPeriod": 29.46,
+      "spinPeriod": 0.45,
+      "tilt": 26.7,
+      "texture": "gas",
+      "bands": ["#f0e0b8", "#d9c48c", "#efe6c8", "#cbb57a"],
+      "rings": { "inner": 3.1, "outer": 5.4, "color": "#d9c9a0" },
+      "pronounce": "SAT-urn",
+      "headline": "The planet with the brightest rings.",
+      "facts": [
+        "Saturn is a gas giant, a little smaller than Jupiter, famous for its rings.",
+        "The rings are made of countless bits of ice and rock, from tiny grains to house-sized chunks.",
+        "Saturn is so light for its size that it would float in a giant bathtub of water.",
+        "It also has many moons. Titan, the largest, has a thick atmosphere."
+      ]
+    },
+    {
+      "id": "uranus",
+      "name": "Uranus",
+      "kind": "planet",
+      "parent": "sun",
+      "radius": 1.62,
+      "color": "#9ad7d4",
+      "orbitRadius": 64.5,
+      "orbitPhase": 78,
+      "orbitPeriod": 84.0,
+      "spinPeriod": -0.72,
+      "tilt": 97.8,
+      "texture": "ice",
+      "atmosphere": "#b7ece8",
+      "rings": { "inner": 2.1, "outer": 2.55, "color": "#8aa8a8", "opacity": 0.35 },
+      "pronounce": "YOOR-uh-nus",
+      "headline": "An ice giant that rolls on its side.",
+      "facts": [
+        "Uranus is an ice giant, farther out and much colder than Jupiter or Saturn.",
+        "It spins almost on its side, like a ball rolling around the Sun.",
+        "Its blue-green color comes from methane gas in its air.",
+        "A year on Uranus lasts 84 Earth years."
+      ]
+    },
+    {
+      "id": "neptune",
+      "name": "Neptune",
+      "kind": "planet",
+      "parent": "sun",
+      "radius": 1.55,
+      "color": "#4167d9",
+      "orbitRadius": 76.2,
+      "orbitPhase": 28,
+      "orbitPeriod": 164.8,
+      "spinPeriod": 0.67,
+      "tilt": 28.3,
+      "texture": "ice",
+      "atmosphere": "#6f8cff",
+      "pronounce": "NEP-toon",
+      "headline": "The farthest planet, with the fastest winds.",
+      "facts": [
+        "Neptune is the farthest of the eight planets from the Sun.",
+        "It is an ice giant, deep blue, and very cold.",
+        "Even so far from the Sun, Neptune has the fastest winds of any planet.",
+        "A year on Neptune lasts about 165 Earth years. One Neptune year is longer than a human life."
+      ]
+    },
+    {
+      "id": "pluto",
+      "name": "Pluto",
+      "kind": "dwarf-planet",
+      "parent": "sun",
+      "radius": 0.42,
+      "color": "#c9b09a",
+      "orbitRadius": 88.5,
+      "orbitPhase": 168,
+      "orbitPeriod": 248,
+      "spinPeriod": -6.4,
+      "tilt": 122.5,
+      "texture": "rocky",
+      "pronounce": "PLOO-toh",
+      "headline": "A dwarf planet at the edge of the neighborhood.",
+      "facts": [
+        "Pluto used to be called the ninth planet. Today it is a dwarf planet.",
+        "It is smaller than Earth's Moon and very far from the Sun.",
+        "Pluto has a heart-shaped icy region and five known moons. The biggest moon is Charon.",
+        "Scientists still study Pluto. Being a dwarf planet does not make it less interesting!"
+      ]
+    }
+  ],
+  "belts": [
+    {
+      "id": "asteroid-belt",
+      "name": "Asteroid Belt",
+      "inner": 32.4,
+      "outer": 36.8,
+      "count": 420,
+      "color": "#8a8174",
+      "size": 0.045,
+      "headline": "A ring of space rocks between Mars and Jupiter.",
+      "facts": [
+        "The asteroid belt is a region of leftover rocks between Mars and Jupiter.",
+        "Asteroids are leftover pieces from when the solar system formed.",
+        "They are far apart. Spaceships can fly through the belt without bumping into them.",
+        "Ceres, the largest object there, is also a dwarf planet."
+      ]
+    }
+  ]
+}
