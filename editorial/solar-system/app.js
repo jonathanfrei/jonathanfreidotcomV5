@@ -119,6 +119,9 @@ speed.addEventListener("input", () => {
 function setImmersed(immersed) {
   world.setLabelsVisible(!immersed);
   document.body.classList.toggle("is-immersed", immersed);
+  document.documentElement.classList.toggle("is-immersed", immersed);
+  lesson.hidden = immersed;
+  lesson.setAttribute("aria-hidden", immersed ? "true" : "false");
   labelsToggle.textContent = immersed ? "Show names" : "Hide names";
   labelsToggle.setAttribute("aria-pressed", String(immersed));
 }

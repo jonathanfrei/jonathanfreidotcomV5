@@ -162,8 +162,9 @@
       border-radius: var(--radius);
     }
 
-    body.is-immersed .lesson {
-      display: none;
+    body.is-immersed .lesson,
+    .lesson[hidden] {
+      display: none !important;
     }
 
     .lesson .kicker {
