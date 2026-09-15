@@ -19,7 +19,7 @@ A navigable reference for the semantic components used on long-form editorial pa
 
 **Updated:** August 10, 2026  
 **Category:** Design System  
-**Use:** Copy shells into `editorial/*.md` pages with `layout: editorial`
+**Use:** Copy shells into `_pages/editorial/*.md` pages with `layout: editorial`
 
 </div>
 
@@ -33,7 +33,7 @@ This page is the working library for composition: jump to a component, preview i
 
 **How to use these shells**
 
-1. Create `editorial/your-slug.md` with `layout: editorial` and `permalink: /editorial/your-slug`.
+1. Create `_pages/editorial/your-slug.md` with `layout: editorial` and `permalink: /editorial/your-slug`.
 2. Paste shells from this page. Keep `markdown="1"` on multi-block wrappers.
 3. Prefer semantic class names (what the content *is*) over presentation names.
 4. Kramdown `{: .class}` alone only styles the **next single block** — use a wrapping `<div class="…" markdown="1">` when a component holds more than one block.

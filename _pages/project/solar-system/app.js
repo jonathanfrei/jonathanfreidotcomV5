@@ -1,6 +1,6 @@
 import { World } from "./world.js";
 
-const DATA_URL = "/editorial/solar-system/solar-system.json";
+const DATA_URL = "/project/solar-system/solar-system.json";
 
 const canvas = document.querySelector("#scene");
 const labelLayer = document.querySelector("#labels");

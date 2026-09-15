@@ -8,7 +8,7 @@ description: "I wanted to try Hermes and make something for my younger kids. A b
 
 I wanted to try [Hermes](https://hermes-agent.nousresearch.com/) and thought it would be fun to make something for my younger kids while I was at it. A small solar system seemed like a good project: they could move around the planets, tap one that looked interesting, and read a little about it. I wanted it to work in a browser, including on a phone, so they could open a page and start exploring.
 
-The result is [Our Solar System](https://jonathanfrei.com/editorial/solar-system), a 3D model here on the site. It has the Sun, the eight planets, Earth's Moon, and Pluto. You can move the view around, zoom in, and select a world to bring up a short lesson. There's also a row of names along the bottom, which makes Mercury easier to reach when it's a small dot on a small screen.
+The result is [Our Solar System](https://jonathanfrei.com/project/solar-system), a 3D model here on the site. It has the Sun, the eight planets, Earth's Moon, and Pluto. You can move the view around, zoom in, and select a world to bring up a short lesson. There's also a row of names along the bottom, which makes Mercury easier to reach when it's a small dot on a small screen.
 
 I kept the lessons brief so there would still be room to look around. Each world has a few facts to give a child somewhere to begin, without asking them to read a whole page before choosing another planet. Hiding the names also hides the lesson card, leaving more of the screen for the model itself.
 

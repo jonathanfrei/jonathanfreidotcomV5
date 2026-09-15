@@ -32,7 +32,8 @@ _includes/               head, header, footer, main.css / editorial.css / book.c
 _layouts/                default, post, page, book, link, editorial, archive
 _plugins/                books.rb, post_metadata.rb, site_index.rb, optimize_content_images.rb, url_embeds.rb, asset_cdn.rb, pages_dir.rb, static_html_pages.rb
 assets/css/*.html        generates /assets/css/core.css via asset_url (_plugins/asset_cdn.rb)
-editorial/               static HTML drop-ins + Markdown editorials → /editorial/<slug>
+_pages/editorial/        static HTML drop-ins + Markdown editorials → /editorial/<slug>
+_pages/project/          standalone project pages and assets → /project/<slug>
 workers/img-proxy/       Cloudflare Worker /img → wsrv.nl (HMAC, wrangler.toml)
 ```
 
@@ -73,7 +74,7 @@ description: "SEO sentence (preferred over raw excerpt)"
 
 **Embeds** Standalone supported URL alone on line (blank lines around) → embed via `url_embeds.rb` (YouTube, Vimeo, X, Instagram, TikTok, Spotify, CodePen, Imgur, Flickr). Opt out `url_embeds: false`. Use `markdown="0"` without indentation (#156).
 
-**Static HTML** `editorial/<slug>.html → /editorial/<slug>` per `static_html.roots: [editorial]` (`_config.yml:138-140`). No front matter. Asset sibling folders OK; don't put `index.html` inside asset folder.
+**Static HTML** `_pages/<root>/<slug>.html → /<root>/<slug>` for roots listed in `static_html.roots` (`editorial`, `project`). No front matter. Asset sibling folders OK; don't put `index.html` inside asset folder.
 
 ## Assets & images (critical)
 

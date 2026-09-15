@@ -5,16 +5,16 @@ require "cgi"
 # Publish top-level HTML drop-ins under configured roots as clean permalinks.
 #
 # Workflow (issue #88):
-#   editorial/spacex-earnings.html  →  /editorial/spacex-earnings
+#   _pages/editorial/spacex-earnings.html  →  /editorial/spacex-earnings
+#   _pages/project/example.html             →  /project/example
 #
 # Critical (GH Pages + #63): the file on disk MUST keep a .html extension.
 # Jekyll::StaticFile#destination is derived from #url; writing an extensionless
 # path makes GitHub Pages serve application/octet-stream (browser downloads).
 # Output: _site/editorial/slug.html — Pages maps /editorial/slug → that file.
 #
-# Sibling asset folders stay as normal static files:
-#   editorial/spacex-earnings/*.png
-#   editorial/media/*, editorial/assets/*
+# Sibling asset folders are copied to the matching public root:
+#   _pages/project/example/app.js → /project/example/app.js
 #
 # Relative <img src> under the root are absolutized and, in production, passed
 # through the same wsrv.nl WebP/srcset pipeline as post content.
@@ -23,8 +23,7 @@ require "cgi"
 #   static_html:
 #     roots:
 #       - editorial
-#       # - articles
-#       # - long-form-writing
+#       - project
 #
 # HTML is never Liquid-rendered (safe to embed {{ }} in the page).
 # Do not place index.html inside an asset subfolder if you want the bare
@@ -73,10 +72,30 @@ module Jekyll
       return if roots.empty?
 
       managed = []
+      page_count = 0
 
       roots.each do |root|
-        abs_root = File.join(site.source, root)
+        source_root = File.join("_pages", root)
+        abs_root = File.join(site.source, source_root)
         next unless File.directory?(abs_root)
+
+        # Rebase ordinary static assets out of the underscore-prefixed source
+        # directory. Markdown files are Pages and are handled by pages_dir.rb.
+        Dir.glob(File.join(abs_root, "**", "*"), File::FNM_DOTMATCH).each do |full|
+          next unless File.file?(full)
+
+          rel = full.delete_prefix("#{abs_root}/")
+          next if !rel.include?("/") && rel.match?(/\.html?\z/i)
+          next if rel.match?(/\.md\z/i)
+
+          managed << File.join(source_root, rel).tr("\\", "/")
+          site.static_files << StaticFile.new(
+            site,
+            File.join(site.source, "_pages"),
+            File.join(root, File.dirname(rel)).sub(%r{/\.\z}, ""),
+            File.basename(rel)
+          )
+        end
 
         Dir.children(abs_root).each do |entry|
           next unless entry.match?(/\.html?\z/i)
@@ -85,13 +104,14 @@ module Jekyll
           full = File.join(abs_root, entry)
           next unless File.file?(full)
 
-          managed << File.join(root, entry).tr("\\", "/")
+          managed << File.join(source_root, entry).tr("\\", "/")
+          page_count += 1
           content = File.read(full, encoding: "UTF-8")
           content = rewrite_images(site, content, root)
 
           site.static_files << StaticHtmlFile.new(
             site,
-            site.source,
+            File.join(site.source, "_pages"),
             root,
             entry,
             content
@@ -110,7 +130,7 @@ module Jekyll
 
       Jekyll.logger.info(
         "StaticHtml:",
-        "permalink pages for #{managed.size} file(s) under #{roots.join(', ')}"
+        "permalink pages for #{page_count} file(s) under #{roots.join(', ')}"
       )
     end
 

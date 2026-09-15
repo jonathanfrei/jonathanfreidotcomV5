@@ -133,11 +133,12 @@ archive_media:
 
 # Static HTML drop-ins (issue #88): top-level *.html under each root publish at
 # /{root}/{slug} (no trailing slash). Sibling folders hold assets only.
-# Example: editorial/spacex-earnings.html → /editorial/spacex-earnings
-# Future roots (articles, long-form-writing) can be added here.
+# Example: _pages/editorial/spacex-earnings.html → /editorial/spacex-earnings
+# Each name maps a directory below _pages to the same public URL root.
 static_html:
   roots:
     - editorial
+    - project
 
 # Root-level pages live under _pages/ (issue #161). Underscore dirs are
 # excluded by default; include forces Jekyll to read them as pages.

@@ -57,7 +57,7 @@ module Jekyll
           next if root.empty?
           if (m = src.match(%r{(?:\A|/)#{Regexp.escape(root)}/(.+?)(?:\?|$)}i))
             rel = CGI.unescape(m[1]).tr("\\", "/")
-            full = File.join(site.source, root, rel)
+            full = File.join(site.source, "_pages", root, rel)
             return full if File.file?(full)
           end
         end
