@@ -9,6 +9,11 @@ A baby changes a household immediately and a population slowly. The conclusion b
 
 In 2024, more than half of the world's countries and areas were below replacement fertility, and nearly one fifth were below 1.4 births per woman. The people who will be old in the 2040s are already alive, as are most of the adults who will provide their care. A fertility recovery can change the generation being born. It cannot insert missing adults into the age structure.
 
+![World population pyramid by age and sex in 2024](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/World_Population_Pyramid_%282024%29.png/960px-World_Population_Pyramid_%282024%29.png)
+
+**The inheritance already alive** The world's population by age and sex in 2024. Future births can widen the base, but they cannot redraw the cohorts already moving through adulthood and old age. *[U.S. Census Bureau International Database, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:World_Population_Pyramid_(2024).png)*
+{: .caption}
+
 That lag has two practical consequences. The first is that recovery will look disappointing if it is judged by the total population alone. A country can welcome more children and continue aging for years because the large cohorts moving into retirement were born long before the change. Schools may reopen in one district while hospitals and pension systems still face the older national structure. Renewal begins as a change in direction, not an instant return to a former population pyramid.
 
 The second consequence is distributive. The same adults are often being asked to support older relatives, sustain public transfers, establish themselves at work, find a home, and raise children. Those duties are not interchangeable, and none becomes unreal because another is urgent. A settlement that protects one generation by exhausting the next can keep its promises for a while and still weaken the people who must carry them forward.

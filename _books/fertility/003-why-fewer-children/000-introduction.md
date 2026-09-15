@@ -9,6 +9,11 @@ A woman can finish professional training at twenty-seven, establish herself at w
 
 That is a composite timeline, not a reported biography. Each transition is familiar in the demographic evidence; no one invented person should be made to carry the experience of millions of women and men.
 
+![Young people lined up at a commencement ceremony](https://upload.wikimedia.org/wikipedia/commons/2/26/Line_of_young_people_at_a_commencement_ceremony.jpg)
+
+**One threshold among many** Young people line up for a commencement ceremony in Houston sometime between 1910 and 1940. Education enlarges freedom and opportunity; when training lasts longer, it can also move partnership, stable work, and family formation further into adulthood. *[Courtesy of Special Collections, University of Houston Libraries, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Line_of_young_people_at_a_commencement_ceremony.jpg)*
+{: .caption}
+
 Another route begins with a man whose work remains unstable. He puts off commitment until he can offer the kind of household he thinks marriage requires. A third couple begins earlier, has one child, and discovers that housing, care, and two jobs fit together only because one parent absorbs every disruption. The second child remains wanted in the abstract and never becomes possible in practice.
 
 Low fertility is made from all of these lives and others unlike them. Some people want no children. Some want one. Some revise what they hoped for and are content. Some never meet the right partner, encounter infertility, or reach the end of their reproductive years with a family smaller than they expected. A national rate places them in one number without making their reasons the same.

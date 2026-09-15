@@ -7,6 +7,11 @@ eyebrow: The fertility decline
 A couple may be the only people who can decide whether to welcome another child. Other people have already helped shape the decision: the employer who sets the schedule, the city that permits or prevents a nearby home, the grandparents who move closer or farther away, the neighbors who become friends or remain strangers, and the government that decides how much of care belongs to a household alone.
 {: .lede}
 
+![Two parents lying beside their baby](https://upload.wikimedia.org/wikipedia/commons/6/6b/Parents_and_their_baby.jpg)
+
+**The decision is intimate; its setting is social** Two parents lie beside their baby. No institution can make this family's decision for them, but work, housing, kin, public policy, and neighbors all help determine whether the life around that decision is sustainable. *[Sheldonl, CC0, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Parents_and_their_baby.jpg)*
+{: .caption}
+
 No one of them controls the fertility rate. Each holds some part of the world in which a family forms.
 
 That is where the book's longest horizon returns to the present. The choice between contraction and renewal will not be made once, by one legislature or one generation. It will emerge from decisions made by people with unequal powers, different duties, and boundaries they should not cross.

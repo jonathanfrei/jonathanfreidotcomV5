@@ -7,6 +7,11 @@ eyebrow: What changed
 In 1968, Paul and Anne Ehrlich published *The Population Bomb* into a world that had good reason to be frightened by population growth. The number of people alive had doubled in less than fifty years, the annual growth rate was near its historical peak, and the book opened by declaring that the struggle to feed humanity had already been lost.
 {: .lede}
 
+![Cartogram of the world population in 2018](https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Global_population_cartogram.png/960px-Global_population_cartogram.png)
+
+**One world, unevenly inhabited** In this 2018 cartogram, each square represents half a million people. The demographic turn does not arrive everywhere at once: countries still growing and countries already below replacement share the same world. *[Max Roser and Our World in Data, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Global_population_cartogram.png)*
+{: .caption}
+
 The population kept growing. The explosion did not.
 
 The United Nations now projects that world population will peak during this century. More than half of countries and areas are already below replacement fertility, while a smaller group—concentrated in sub-Saharan Africa—will supply much of the growth that remains. The world has not moved neatly from growth to decline. It has entered a long overlap in which old momentum and new fertility patterns point in different directions.

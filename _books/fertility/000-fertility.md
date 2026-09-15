@@ -2,7 +2,7 @@
 title: The Fertility Decline
 eyebrow: Present and Future
 deck: What shrinking generations mean for the human future
-description: "The human population is still growing. Beneath that total, something has changed: in much of the world, each generation is smaller than the one before. The difference appears slowly—an empty desk, a missing worker, an aging parent with fewer children to call. For two centuries, the great population fear was that humanity would become too numerous. We may be entering the opposite problem before we have fully noticed the turn. A society can become smaller once and remain capable. When every generation is smaller, the adjustment begins again from a narrower base. This book follows that change from a school with too few pupils to the possibility that people might one day build a home beyond Earth. It asks why people are having fewer children, what the decline changes, what governments and institutions can do, and whether renewal can remain compatible with human dignity and modern freedom."
+description: "The human population is still growing. Beneath that total, something has changed: in much of the world, each generation is smaller than the one before. For two centuries, the great population fear was that humanity would become too numerous. We may be entering the opposite problem before we have fully noticed the turn."
 ---
 
 The human population is still growing. Beneath that total, something has changed: in much of the world, each generation is smaller than the one before. The difference appears slowly—an empty desk, a missing worker, an aging parent with fewer children to call.

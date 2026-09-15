@@ -7,6 +7,11 @@ eyebrow: Growth without replacement
 The United States and Canada still grow, and Mexico remains younger than either. North America shows how migration and an inherited age structure can keep a population rising after fertility falls below replacement.
 {: .lede}
 
+![Satellite view of North America](https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/North_America_topic_image_Satellite_image.jpg/960px-North_America_topic_image_Satellite_image.jpg)
+
+**One continent, three demographic histories** A NASA satellite composite shows North America without political borders. The United States, Canada, and Mexico share a landmass, but inherited age structure and migration give below-replacement fertility different near-term consequences in each country. *[NASA Earth Observatory, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:North_America_topic_image_Satellite_image.jpg)*
+{: .caption}
+
 The United States has remained below replacement since 2007. Final federal data recorded 3.63 million births in 2024. The general fertility rate fell slightly even as the number of births rose, because counts and rates use different denominators. The total fertility rate remained around 1.6 births per woman.
 
 Canada has moved further. Its TFR reached 1.25 in 2024, entering the range the United Nations describes as ultra-low. Yet Canada had recently experienced rapid population growth because immigration added large numbers of people, many of them young adults. A national population can become larger while the family pattern beneath it moves further below replacement.

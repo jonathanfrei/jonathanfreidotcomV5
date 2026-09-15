@@ -7,6 +7,11 @@ eyebrow: Who can do what
 A couple decides whether to welcome a child, but they do not decide the price of a nearby home, the hours their employers expect, the train schedule to the grandparents, or whether anyone will bring dinner when the baby is ill. The choice is intimate. The conditions around it have many authors.
 {: .lede}
 
+![Community volunteers sitting with preschool children during a morning lesson](https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/USMC-120717-M-XR064-002.jpg/960px-USMC-120717-M-XR064-002.jpg)
+
+**A wider circle of care** Volunteers sit with preschool children during a community visit in Japan in 2012. Families do irreplaceable work, but teachers, neighbors, associations, employers, and governments each hold forms of help that a household cannot manufacture alone. *[U.S. Marine Corps, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:USMC-120717-M-XR064-002.jpg)*
+{: .caption}
+
 Responsibility must be distributed without becoming vague. Spouses make the decision no government or employer may make for them. Parents and relatives perform much of the daily work. Those obligations are real, but a family should not absorb every cost society can push downward. Public support is not charity to a private hobby, and support does not give the public ownership of the family.
 
 The boundaries become clearer when a week goes badly. Parents owe the child care, but an employer controls whether an unexpected absence costs a job. A grandparent may freely take a shift, but no family policy can assume that an older woman will supply unpaid care on demand. A city does not raise the child, but it decides whether homes for young families can be built near work and kin. Each actor should bear the costs created by powers it actually holds.

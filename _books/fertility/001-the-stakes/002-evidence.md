@@ -7,6 +7,11 @@ eyebrow: The evidence contract
 A fertility rate can summarize millions of lives in one decimal place. It can reveal a change that no one household could see, but it cannot tell us why the change happened or what anyone ought to do about it. This book will move among demographic evidence, causal arguments, possible futures, and moral judgments. They need to remain different kinds of claims.
 {: .lede}
 
+![A census superintendent and enumerators making their report in India in 1911](https://upload.wikimedia.org/wikipedia/commons/1/1f/1911Census.jpg)
+
+**A count begins with particular people** A census superintendent and enumerators make their report in the Madras Presidency in 1911. Every aggregate depends on definitions, collection, and records made close to individual lives. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:1911Census.jpg)*
+{: .caption}
+
 The next chapter will explain the demographic measures in full. For now, one distinction does most of the work. A period fertility rate describes the pattern of births in a particular year. Completed fertility describes how many children a group of women actually had by the end of their reproductive years. The first gives an early reading and can move when births are delayed; the second arrives later and records the outcome. Neither is simply “the number of children women want.”
 
 Replacement fertility is a population benchmark rather than an instruction to a household. In a low-mortality society it is often around 2.1 births per woman, though the exact level varies. A country can remain above or below that benchmark while its total population moves in the opposite direction for years because age structure, mortality, and migration also matter.

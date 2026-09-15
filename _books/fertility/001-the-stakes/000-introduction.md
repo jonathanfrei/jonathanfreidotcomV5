@@ -20,15 +20,15 @@ The lag is what makes the problem easy to miss. A child who was not born in 2020
 
 Once those births are absent, no policy can add those particular five-year-olds to a classroom. Time runs in one direction. It also leaves room to respond before the same pattern has repeated through another generation.
 
-Scott Adams calls this the Law of Slow-Moving Disasters: when people can see a serious problem coming far enough in advance, they often find ways around it. He has applied the idea to problems as different as climate adaptation and supply chains. I wouldn't treat it as a law of history. People can recognize a slow danger and waste the warning. Still, the basic posture is right for fertility decline. A problem that unfolds over decades gives millions of families, employers, communities, and governments time to try different responses and learn from failure.
+The late Scott Adams called this the [Adams Law of Slow-Moving Disasters](https://x.com/ScottAdamsSays/status/1724498064684302832): “we always solve problems we can see coming”. He has applied the idea to problems as different as climate adaptation and supply chains. It’s not a law of history, but humanity has a track record of successes to build upon. People can recognize a slow danger and waste the warning. But still, the basic posture is right for fertility decline: A problem that unfolds over decades gives millions of families, employers, communities, and governments time to try different responses and learn from failure.
 
-Some responses help us adapt to the generations already born. Schools can merge, older people can remain healthy and independent longer, and machines can help fewer workers do more. Those are real solutions to immediate problems. Renewal asks a different question: whether family formation can become common and durable enough that contraction does not repeat automatically.
+Some responses help us adapt to the smaller generations already born. Schools can merge, older people can work longer if they remain healthy and independent, and machines can help fewer workers do more. Those are real solutions to immediate problems. Renewal asks a different question: whether family formation can become common and durable enough that contraction does not repeat automatically.
 
-The distinction matters because a society can become smaller once and remain capable. It may even gain from lower housing pressure or a lighter claim on land and energy. A society that becomes smaller every generation has accepted an adjustment with no natural stopping point. Each reduced cohort becomes the pool of possible parents for the next one.
+A society can become smaller once and remain capable. It may even gain from lower housing pressure or a lighter claim on land and energy. However, a society that becomes smaller every generation has accepted an adjustment with no natural stopping point. Each reduced cohort becomes the smaller pool of possible parents in the next one.
 
 That is the question at the beginning of this book. Can a free society continue to flourish when each generation is smaller than the one before it, and what would renewal require without turning anyone into an instrument of a demographic goal?
 
-Lambeth's schools do not answer it. They show what the question looks like when a slow change finally reaches a building, a budget, and a community that had been organized around the expectation that another class would arrive.
+Lambeth's schools do not answer it. They show what the question looks like when a slow change finally reaches a building, a budget, and a community that had been organized around the expectation that a similar class would arrive next year.
 
 <div class="citation">
 

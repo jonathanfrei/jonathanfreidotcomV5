@@ -15,4 +15,9 @@ Renewal also remains answerable to the world children receive. More people consu
 
 The distant horizon remains open in the same way. Humanity may build homes beyond Earth, or free people may decide the cost is too high. Preserving that possibility is not a reason to produce children for a mission. It is one measure of a civilization still capable of work whose beneficiaries are not yet alive.
 
+![A grandfather teaching his grandson to read while the child's grandmother watches](https://upload.wikimedia.org/wikipedia/commons/e/ea/Jew_teaches_his_grandson_to_read.jpg)
+
+**A future received person by person** Wolf Nachowicz teaches his grandson to read while the child's grandmother watches in Biała Podlaska in 1926. Generational renewal becomes civilization through acts of attention in which knowledge, memory, and judgment pass to someone free to carry them differently. *[Alter Kacyzne, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Jew_teaches_his_grandson_to_read.jpg)*
+{: .caption}
+
 Most renewal will never look so dramatic. A child arrives in one household, needing more than she can give. Someone repeats a word until she can say it, shows her where the cups belong, and tells her why an old photograph matters. Years later she will find that some of what she received was broken. Some of it was beautiful. It will be hers to decide what happens next.

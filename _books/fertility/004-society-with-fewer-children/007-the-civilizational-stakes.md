@@ -7,6 +7,11 @@ eyebrow: What can still be attempted
 Civilization is easier to inherit than to notice. The power stays on; a surgeon learns a procedure from someone who learned it before her; a technician knows why an old machine makes that sound. What looks like a service delivered in the present is usually a chain of people accepting responsibility from people before them.
 {: .lede}
 
+![An instructor guiding technical students at workshop machinery in 1944](https://upload.wikimedia.org/wikipedia/commons/8/81/Technical_School-_Training_at_Tottenham_Polytechnic%2C_Middlesex%2C_England%2C_UK%2C_1944_D21378.jpg)
+
+**Knowledge needs another pair of hands** An instructor guides students at workshop machinery in Tottenham Polytechnic in 1944. Tools preserve capability only when another person learns enough to operate, repair, and improve them. *[Imperial War Museum, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Technical_School-_Training_at_Tottenham_Polytechnic,_Middlesex,_England,_UK,_1944_D21378.jpg)*
+{: .caption}
+
 Low fertility removes links from those chains unevenly. A large country can carry electrical engineering through one small cohort, while a rare craft may disappear when its last practitioner has no apprentice. The question is not whether a smaller population can be civilized or prosperous—it can—but how repeated contraction changes the redundancy and succession on which complicated work depends.
 
 ## Knowledge needs successors
@@ -31,7 +36,7 @@ A country may balance its pension system and automate its factories while each g
 
 The consequence chain has distinct stages. Scarce labor tests productivity; public promises become questions of transfers and care; politics allocates costs and power; a lighter environmental footprint supplies a real countervailing good. Succession determines what happens when all of them operate together. Wealth, migration, automation, healthy aging, consolidation, and careful reform can buffer the pressures, sometimes for a long time. The remaining question is how much margin survives after they do.
 
-The remaining question is whether governments can do more than manage the consequences. They have changed fertility before, often through means no humane society should repeat. Modern family support is different in both purpose and method, though much of it begins after the first meeting, commitment, home, or hope from which a child might come. The next chapter examines that record.
+The next question is whether governments can do more than manage the consequences. They have changed fertility before, often through means no humane society should repeat. Modern family support is different in both purpose and method, though much of it begins after the first meeting, commitment, home, or hope from which a child might come. The next chapter examines that record.
 
 <div class="citation">
 
