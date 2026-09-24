@@ -21,6 +21,22 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+
+      - name: Run plugin tests
+        run: |
+          set -euo pipefail
+          ruby -Itest -e 'Dir.glob("test/test_*.rb") { |f| require File.expand_path(f) }'
+
   build:
     runs-on: ubuntu-latest
     steps:
