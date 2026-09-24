@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "cgi"
+require_relative "html_util"
 
 # Publish top-level HTML drop-ins under configured roots as clean permalinks.
 #
@@ -189,22 +190,14 @@ module Jekyll
       nil
     end
 
+    # Shared via Jekyll::HtmlUtil (behavior-preserving dedup). Thin wrappers
+    # remain so existing callers keep working.
     def parse_attrs(attr_str)
-      attrs = {}
-      attr_str.to_s.scan(/([^\s=]+)(?:=(?:"([^"]*)"|'([^']*)'|([^\s"'>]+)))?/i) do |name, dq, sq, bare|
-        attrs[name.downcase] = dq || sq || bare || ""
-      end
-      attrs
+      Jekyll::HtmlUtil.parse_attrs(attr_str)
     end
 
     def serialize_attrs(attrs)
-      attrs.map do |key, val|
-        if val.nil? || val == ""
-          key
-        else
-          %(#{key}="#{val.to_s.gsub('&', '&amp;').gsub('"', '&quot;')}")
-        end
-      end.join(" ")
+      Jekyll::HtmlUtil.serialize_attrs(attrs)
     end
   end
 end

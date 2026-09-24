@@ -3,6 +3,7 @@
 require "cgi"
 require "openssl"
 require "uri"
+require_relative "html_util"
 
 # Improve PageSpeed image audits for post/page content without visible quality loss:
 #   - width/height from intrinsic file dimensions (fixes unsized-images / CLS)
@@ -216,6 +217,9 @@ module Jekyll
     # Map CDN, /media/, or /assets/ URL back to a local source file for dimension reads.
     # Works while archive media still exists under _posts/v*-archive/media/; returns
     # nil after those trees are removed from the repo (wsrv still optimizes via S3).
+    # Also resolves files under static_html roots (editorial, project, …) from
+    # _pages/<root>/… for dimension reads (issue #88 + #90; folded in from the
+    # former static_html_image_roots.rb).
     def local_path_for_src(site, src)
       return nil if src.nil? || src.empty?
 
@@ -249,11 +253,33 @@ module Jekyll
         result = full if File.file?(full)
       end
 
+      # static_html roots fallback (original implementation above takes precedence)
+      if result.nil?
+        roots = Array((site.config["static_html"] || {})["roots"] || %w[editorial])
+        roots.each do |root|
+          root = root.to_s.strip.sub(%r{\A/+}, "").sub(%r{/+\z}, "")
+          next if root.empty?
+          if (m = path.match(%r{(?:\A|/)#{Regexp.escape(root)}/(.+?)(?:\?|$)}i))
+            rel = CGI.unescape(m[1]).tr("\\", "/")
+            full = File.join(site.source, "_pages", root, rel)
+            if File.file?(full)
+              result = full
+              break
+            end
+          end
+        end
+      end
+
       @path_cache[cache_key] = result
       result
     end
 
-    def own_media?(src)
+    # Own images include static_html roots (editorial, project, … — issue #88 + #90;
+    # folded in from the former static_html_image_roots.rb). The original
+    # implementation below takes precedence; roots are checked after it.
+    # site is optional so existing single-arg callers keep working; when given,
+    # roots come from site.config["static_html"]["roots"] (default: editorial).
+    def own_media?(src, site = nil)
       return false if src.nil? || src.empty?
       return false if src.start_with?("data:")
 
@@ -261,11 +287,20 @@ module Jekyll
 
       # Same-origin absolute URL for this site (any path with an image extension)
       if (m = src.match(%r{\Ahttps?://(?:www\.)?jonathanfrei\.com(/[^"'>\s]+)}i))
-        return m[1].match?(/\.(jpe?g|png|gif|webp|avif)(?:\?|$)/i)
+        return true if m[1].match?(/\.(jpe?g|png|gif|webp|avif)(?:\?|$)/i)
       end
 
       # Explicit S3 host forms already covered by OWN_MEDIA; keep path fallbacks
-      src.match?(%r{/v[123]-archive/media/}i)
+      return true if src.match?(%r{/v[123]-archive/media/}i)
+
+      roots = Array(((site && site.config["static_html"]) || {})["roots"] || %w[editorial])
+      roots.each do |root|
+        root = root.to_s.strip.sub(%r{\A/+}, "").sub(%r{/+\z}, "")
+        next if root.empty?
+        return true if src.include?("/#{root}/") || src.match?(%r{\A/?#{Regexp.escape(root)}/}i)
+      end
+
+      false
     end
 
     # Third-party hotlinked image eligible for CDN proxy (#116)
@@ -327,8 +362,9 @@ module Jekyll
     # Kramdown keeps CommonMark \( \) escapes in the destination; cmark/GitHub
     # unescapes them. Those leftover backslashes 404 on origin and wsrv.nl
     # (e.g. file_\(1957\).jpg vs file_(1957).jpg).
+    # Shared via Jekyll::HtmlUtil (behavior-preserving dedup).
     def unescape_markdown_dest(src)
-      src.to_s.gsub(/\\([()\\])/, '\1')
+      Jekyll::HtmlUtil.unescape_markdown_dest(src)
     end
 
     # Ensure origin is an absolute https URL so wsrv.nl can fetch it.
@@ -370,47 +406,22 @@ module Jekyll
       "#{proxy}?#{query}"
     end
 
+    # Shared via Jekyll::HtmlUtil (behavior-preserving dedup). Thin wrappers
+    # remain so existing callers keep working; internal call sites use HtmlUtil.
     def parse_attrs(attr_str)
-      attrs = {}
-      attr_str.to_s.scan(/([^\s=]+)(?:=(?:"([^"]*)"|'([^']*)'|([^\s"'>]+)))?/i) do |name, dq, sq, bare|
-        key = name.downcase
-        val = dq || sq || bare || ""
-        attrs[key] = val
-      end
-      attrs
+      Jekyll::HtmlUtil.parse_attrs(attr_str)
     end
 
-    def serialize_attrs(attrs, order)
-      parts = []
-      seen = {}
-      order.each do |key|
-        next unless attrs.key?(key)
-
-        parts << format_attr(key, attrs[key])
-        seen[key] = true
-      end
-      attrs.each do |key, val|
-        next if seen[key]
-
-        parts << format_attr(key, val)
-      end
-      parts.join(" ")
+    def serialize_attrs(attrs, order = [])
+      Jekyll::HtmlUtil.serialize_attrs(attrs, order)
     end
 
     def format_attr(key, val)
-      if val.nil? || val == true || val == ""
-        # boolean / empty flags: only emit bare name for known empties
-        return key if val == true || val == ""
-
-        return %(#{key}="#{escape_attr(val)}")
-      end
-      %(#{key}="#{escape_attr(val)}")
+      Jekyll::HtmlUtil.format_attr(key, val)
     end
 
     def escape_attr(val)
-      # Adjacent string literals build entities without embedding entity sequences
-      # in source (those can be decoded accidentally when transferred via HTML-aware APIs).
-      val.to_s.gsub("&", "&" "amp;").gsub('"', "&" "quot;")
+      Jekyll::HtmlUtil.escape_attr(val)
     end
 
     def build_srcset(cfg, origin, widths, format: "webp")
@@ -426,7 +437,7 @@ module Jekyll
     end
 
     def enhance_img_tag(site, cfg, tag_attrs, index, wide: false)
-      src = unescape_markdown_dest(tag_attrs["src"])
+      src = Jekyll::HtmlUtil.unescape_markdown_dest(tag_attrs["src"])
       tag_attrs["src"] = src
       return nil unless optimizable?(site, src, tag_attrs)
       return nil if tag_attrs["data-img-opt"] == "1"
@@ -513,7 +524,7 @@ module Jekyll
         src srcset sizes width height alt title class loading decoding
         fetchpriority referrerpolicy data-full-src data-img-opt
       ]
-      ["<img #{serialize_attrs(tag_attrs, order)}>", lcp_candidate]
+      ["<img #{Jekyll::HtmlUtil.serialize_attrs(tag_attrs, order)}>", lcp_candidate]
     end
 
     # LCP preload payload: href plus optional imagesrcset/imagesizes.
@@ -556,7 +567,7 @@ module Jekyll
         original = Regexp.last_match(0)
         pos = Regexp.last_match.begin(0)
         # Skip self-closing slash noise
-        attrs = parse_attrs(raw_attrs.sub(%r{/\s*\z}, ""))
+        attrs = Jekyll::HtmlUtil.parse_attrs(raw_attrs.sub(%r{/\s*\z}, ""))
         wide = figure_wide?(html, pos, attrs)
         enhanced = enhance_img_tag(site, cfg, attrs, index, wide: wide)
         if enhanced
@@ -579,7 +590,7 @@ module Jekyll
       href, imagesrcset, imagesizes = normalize_lcp(lcp)
       return html if href.empty?
 
-      href_attr = escape_attr(href)
+      href_attr = Jekyll::HtmlUtil.escape_attr(href)
       # Already injected (or Liquid path rendered a matching preload).
       # Match both raw and entity-escaped href (& → &amp; in attributes).
       if html.match?(/rel=["']preload["']/i) && html.match?(/as=["']image["']/i) &&
@@ -593,8 +604,8 @@ module Jekyll
         %(href="#{href_attr}")
       ]
       unless imagesrcset.empty?
-        parts << %(imagesrcset="#{escape_attr(imagesrcset)}")
-        parts << %(imagesizes="#{escape_attr(imagesizes)}") unless imagesizes.empty?
+        parts << %(imagesrcset="#{Jekyll::HtmlUtil.escape_attr(imagesrcset)}")
+        parts << %(imagesizes="#{Jekyll::HtmlUtil.escape_attr(imagesizes)}") unless imagesizes.empty?
       end
       parts << 'fetchpriority="high"'
       tag = "<link #{parts.join(' ')}>\n"

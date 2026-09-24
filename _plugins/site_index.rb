@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative "html_util"
+
 # One-pass derived indexes for search, tags, categories, and archives (#195).
 #
 # Templates used to walk site.posts / site.tags repeatedly (search.json,
@@ -87,20 +89,10 @@ module Jekyll
       truncate(text, max)
     end
 
+    # Shared Markdown→plain-text core (see Jekyll::HtmlUtil). This flavor
+    # collapses whitespace and strips Kramdown IALs — word_count does neither.
     def plain_text(input)
-      text = input.to_s.dup
-      text.gsub!(/```.*?```/m, " ")
-      text.gsub!(/`[^`]*`/, " ")
-      text.gsub!(/!\[[^\]]*\]\([^)]*\)/, " ")
-      text.gsub!(/\[([^\]]*)\]\([^)]*\)/, '\1')
-      text.gsub!(/<[^>]+>/, " ")
-      # Kramdown IALs / ALDs ({: .figure-wide}, {: .caption}, {::comment}).
-      # Strip before hyphen collapsing or `{:.figure-wide}` becomes
-      # `{: .figure wide}` in search.json excerpts.
-      text.gsub!(/\{::?[^}]*\}/, " ")
-      text.gsub!(/[#>*_\-|]+/, " ")
-      text.gsub!(/\s+/, " ")
-      text.strip
+      Jekyll::HtmlUtil.strip_markdown_text(input, collapse_whitespace: true, strip_ials: true)
     end
 
     def truncate(text, max)
@@ -212,8 +204,9 @@ module Jekyll
       relative_url(site, "/media/#{rel.sub(%r{\A/+}, "")}")
     end
 
+    # Shared via Jekyll::HtmlUtil (behavior-preserving dedup).
     def unescape_markdown_dest(src)
-      src.to_s.gsub(/\\([()\\])/, '\1')
+      Jekyll::HtmlUtil.unescape_markdown_dest(src)
     end
 
     def usable_img_src?(src)
