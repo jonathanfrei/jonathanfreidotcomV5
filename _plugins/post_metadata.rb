@@ -2,6 +2,7 @@
 
 require "open3"
 require "time"
+require_relative "html_util"
 
 # Richer post metadata (issue #75) — automation-first, no archive front-matter edits.
 #
@@ -69,15 +70,10 @@ module Jekyll
       post.data["reading_time"] = minutes
     end
 
+    # Shared Markdown→plain-text core (see Jekyll::HtmlUtil). This flavor does
+    # NOT collapse whitespace or strip IALs — it splits on \s+ (plain_text does both).
     def word_count(markdown)
-      text = markdown.to_s.dup
-      # Fenced code, inline code, images, HTML tags — keep link labels
-      text.gsub!(/```.*?```/m, " ")
-      text.gsub!(/`[^`]*`/, " ")
-      text.gsub!(/!\[[^\]]*\]\([^)]*\)/, " ")
-      text.gsub!(/\[([^\]]*)\]\([^)]*\)/, '\1')
-      text.gsub!(/<[^>]+>/, " ")
-      text.gsub!(/[#>*_\-|]+/, " ")
+      text = Jekyll::HtmlUtil.strip_markdown_text(markdown)
       text.split(/\s+/).reject(&:empty?).size
     end
 

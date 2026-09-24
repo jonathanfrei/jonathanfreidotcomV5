@@ -10,6 +10,7 @@ require "json"
 require "net/http"
 require "socket"
 require "uri"
+require_relative "html_util"
 
 module Jekyll
   module LinkPosts
@@ -179,10 +180,18 @@ module Jekyll
       )
     end
 
+    # Shared via Jekyll::HtmlUtil.parse_attrs. Same return contract as the
+    # former triple-regex: attribute value ("" for empty quoted), nil when
+    # absent or a bare boolean with no `=`.
     def attribute(tag, name)
-      tag[/\b#{Regexp.escape(name)}\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i, 1] ||
-        tag[/\b#{Regexp.escape(name)}\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i, 2] ||
-        tag[/\b#{Regexp.escape(name)}\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i, 3]
+      key = name.to_s.downcase
+      attrs = Jekyll::HtmlUtil.parse_attrs(tag.to_s)
+      return nil unless attrs.key?(key)
+
+      val = attrs[key]
+      return val unless val == ""
+
+      tag.to_s.match?(/\b#{Regexp.escape(name.to_s)}\s*=/i) ? "" : nil
     end
 
     def public_url!(raw, label)
