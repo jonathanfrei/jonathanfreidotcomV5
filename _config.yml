@@ -39,7 +39,6 @@ permalink: /:year/:month/:day/:title
 
 # Plugins
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-archives
@@ -212,8 +211,4 @@ defaults:
 twitter:
   username: jonathanfrei
 
-# Feed settings. jekyll-feed writes an unused file; /feed.xml is authored below.
-# jekyll-feed writes an unused file; /feed.xml is the authored mixed feed.
-feed:
-  path: jekyll-feed-unused.xml
-  excerpt_only: false
+# /feed.xml is an authored file in the repo root (not plugin-generated).
