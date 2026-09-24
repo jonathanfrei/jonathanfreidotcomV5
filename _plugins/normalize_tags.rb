@@ -201,10 +201,6 @@ module Jekyll
   end
 end
 
-Jekyll::Hooks.register :posts, :post_init do |post|
-  Jekyll::NormalizeTags.coerce!(post)
-end
-
 Jekyll::Hooks.register :site, :post_read do |site|
   site.posts.docs.each { |post| Jekyll::NormalizeTags.coerce!(post) }
   Jekyll::NormalizeTags.reset_caches!(site)

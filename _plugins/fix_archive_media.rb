@@ -255,10 +255,9 @@ module Jekyll
     def register_media_static_files!(site)
       mode_name = mode(site)
       if mode_name == "cdn"
-        needed = referenced_media_paths(site)
         Jekyll.logger.info(
           "FixArchiveMedia:",
-          "cdn mode — #{needed.size} media reference(s) → #{cdn_base(site)} " \
+          "cdn mode — media references → #{cdn_base(site)} " \
           "(not bundled in _site)"
         )
         return

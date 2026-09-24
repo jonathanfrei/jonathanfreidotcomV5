@@ -112,3 +112,7 @@ module Jekyll
 end
 
 Liquid::Template.register_filter(Jekyll::AssetCdnFilter)
+
+Jekyll::Hooks.register :site, :after_init do |_site|
+  Jekyll::AssetCdn.reset_caches!
+end
