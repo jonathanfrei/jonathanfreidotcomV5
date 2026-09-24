@@ -282,7 +282,7 @@ module Jekyll
   end
 end
 
-Jekyll::Hooks.register [:posts, :pages, :documents], :pre_render do |doc|
+Jekyll::Hooks.register [:documents, :pages], :pre_render do |doc|
   next unless doc.respond_to?(:content) && doc.content.is_a?(String)
   next if doc.data["url_embeds"] == false
 
