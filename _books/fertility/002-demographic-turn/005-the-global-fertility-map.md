@@ -7,20 +7,22 @@ eyebrow: One trend, many stages
 The old demographic map was easy to picture: small families in rich countries, large families in poor ones. Income and development still matter, but the division no longer describes the world.
 {: .lede}
 
-The United Nations estimates that 55 percent of countries and areas, containing more than two thirds of the global population, had fertility below 2.1 births per woman in 2024. Thirty years earlier, fewer than one third of countries and areas were below that benchmark. Low fertility now crosses regions and income categories.
+[The United Nations estimates](https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2025_wfr_2024_final.pdf) that 131 of 237 countries and areas, containing 68 percent of the global population, had a total fertility rate below 2.1 births per woman in 2024. In 1994, 31 percent of countries and areas were below that benchmark. The comparison uses one UN series and one reference year at each end; it shows that low period fertility now crosses regions and income groups.
 
 ![World map of total fertility rates by country, 2024](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Total_Fertility_Rate_Map_by_Country.svg/960px-Total_Fertility_Rate_Map_by_Country.svg.png)
 
 **A common direction, not a common condition** Estimated total fertility rates by country in 2024. National estimates conceal substantial variation within countries, and values near a category boundary should not be read as exact. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Total_Fertility_Rate_Map_by_Country.svg)*
 {: .caption}
 
-The map contains societies that have lived below replacement for decades, societies at the outer edge of ultra-low fertility, countries still growing through migration or a young age structure, and places where the transition remains incomplete. The regional pages that follow examine those different conditions. They are comparisons, not ranks. A lower rate is not evidence that one society is more developed, nor does a higher rate show that another has failed to modernize.
+The map contains societies that have lived below replacement for decades, societies at the outer edge of ultra-low fertility, countries still growing through migration or a young age structure, and places where the transition remains incomplete. The UN's 2024 comparison calls rates below 1.4 *ultra-low*; some national statistical agencies use the term only below 1.3, so the threshold should remain attached to its source rather than treated as a universal category.
+
+The regional pages that follow each isolate a different part of the turn: persistence in Europe, extreme cohort narrowing in East Asia, growth sustained by migration and age structure in North America, and continued growth during falling fertility in younger regions. They are comparisons, not ranks. A lower rate is not evidence that one society is more developed, nor does a higher rate show that another has failed to modernize.
 
 ## Averages hide the transition inside countries
 
 India's 2019–21 National Family Health Survey estimated a national TFR of 2.0. That single value joined Bihar at 3.0 and Sikkim at 1.1, with most states between them. City and countryside, education, income, religion, and local marriage patterns can produce different timing within one national border.
 
-The same warning applies elsewhere. A growing capital can attract young adults from shrinking regions. A national population may rise through immigration while births remain below deaths. A national TFR can also hide differences in timing: one group may be postponing births that partly occur later while another is reaching the end of childbearing with smaller families.
+The same warning applies elsewhere. A growing capital can attract young adults from shrinking regions. A national population may rise through immigration while births remain below deaths. A national TFR can also hide differences in timing and parity: one group may be postponing first births that partly occur later, while another has more people who never become parents or fewer families moving from a first child to a second or third.
 
 The direction is increasingly shared. The route and the remaining room to change are not.
 

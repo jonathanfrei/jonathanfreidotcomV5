@@ -4,12 +4,12 @@ deck: What demographic decline looks like before it becomes a headline
 eyebrow: The fertility decline
 ---
 
-In the London borough of Lambeth, the missing children first appeared as empty school places. Births had fallen by roughly a third after 2009. Families were also leaving the borough. By 2024, almost one in five reception places stood vacant, and the council had already removed capacity equal to about 33 classes from its primary schools.
+In the London borough of Lambeth, the missing children first appeared as empty school places. [Births had fallen by roughly a third after 2009](https://www.lambeth.gov.uk/consultations/have-your-say-primary-school-places). Families were also leaving the borough. By 2024, almost one in five reception places stood vacant, and the council had already removed capacity equal to about 33 classes from its primary schools.
 {: .lede}
 
-The adjustment reached particular schools slowly. Admission limits came down. Budgets tightened because funding followed pupils. In June 2025, Lambeth approved the merger of St Bede's Catholic Infant School and St Bernadette Catholic Junior School after their governors concluded that falling enrollment made two separate schools harder to sustain. St Bernadette's would close, with an all-through primary remaining at St Bede's.
+The adjustment reached particular schools slowly. Admission limits came down. Budgets tightened because funding followed pupils. In June 2025, [Lambeth approved the merger](https://love.lambeth.gov.uk/lambeth-schools-merge-to-tackle-challenge-of-falling-pupil-numbers/) of St Bede's Catholic Infant School and St Bernadette Catholic Junior School after their governors concluded that falling enrollment made two separate schools harder to sustain. St Bernadette's would close, with an all-through primary remaining at St Bede's.
 
-No single cause explains the change. Lambeth's own account includes lower births, outward migration after Brexit and the pandemic, housing and living costs, and the way English schools are funded. That mixture is part of the story rather than an inconvenience to it. Demographic change reaches a school through actual families deciding where they can live, whether they will stay, and how many children they have. The empty places arrive before anyone can separate those lives into tidy categories.
+No single cause explains the change. [Lambeth's own account](https://www.lambeth.gov.uk/consultations/have-your-say-lambeths-statutory-proposals-primary-school-places) includes lower births, outward migration after Brexit and the pandemic, housing and living costs, and the way English schools are funded. That mixture is part of the story rather than an inconvenience to it. Demographic change reaches a school through actual families deciding where they can live, whether they will stay, and how many children they have. The empty places arrive before anyone can separate those lives into tidy categories.
 
 ![Children working at tables in a classroom](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/USMC-04295.jpg/960px-USMC-04295.jpg)
 
@@ -20,13 +20,13 @@ The lag is what makes the problem easy to miss. A child who was not born in 2020
 
 Once those births are absent, no policy can add those particular five-year-olds to a classroom. Time runs in one direction. It also leaves room to respond before the same pattern has repeated through another generation.
 
-The late Scott Adams called this the [Adams Law of Slow-Moving Disasters](https://x.com/ScottAdamsSays/status/1724498064684302832): “we always solve problems we can see coming”. He has applied the idea to problems as different as climate adaptation and supply chains. It’s not a law of history, but humanity has a track record of successes to build upon. People can recognize a slow danger and waste the warning. But still, the basic posture is right for fertility decline: A problem that unfolds over decades gives millions of families, employers, communities, and governments time to try different responses and learn from failure.
+The late Scott Adams called this the [Adams Law of Slow-Moving Disasters](https://www.scottadamsphilosophy.com/episodes/468): “we always solve problems we can see coming.” He applied the idea to problems as different as climate adaptation and [supply chains](https://www.scottadamsphilosophy.com/episodes/1712). It's not a law of history, but humanity has a track record of successes to build upon. People can recognize a slow danger and waste the warning. But still, the basic posture is right for fertility decline: a problem that unfolds over decades gives millions of families, employers, communities, and governments time to try different responses and learn from failure.
 
 Some responses help us adapt to the smaller generations already born. Schools can merge, older people can work longer if they remain healthy and independent, and machines can help fewer workers do more. Those are real solutions to immediate problems. Renewal asks a different question: whether family formation can become common and durable enough that contraction does not repeat automatically.
 
-A society can become smaller once and remain capable. It may even gain from lower housing pressure or a lighter claim on land and energy. However, a society that becomes smaller every generation has accepted an adjustment with no natural stopping point. Each reduced cohort becomes the smaller pool of possible parents in the next one.
+A society can become smaller once and remain capable. It may even gain from lower housing pressure or a lighter claim on land and energy. Persistent nonreplacement is a different pattern. When a smaller cohort becomes the pool of possible parents for the next, contraction can begin again from the narrower base.
 
-That is the question at the beginning of this book. Can a free society continue to flourish when each generation is smaller than the one before it, and what would renewal require without turning anyone into an instrument of a demographic goal?
+That is the question at the beginning of this book. Can a free society preserve what it has received, enlarge it, and leave it to successors if below-replacement fertility becomes its lasting direction? And what would renewal require?
 
 Lambeth's schools do not answer it. They show what the question looks like when a slow change finally reaches a building, a budget, and a community that had been organized around the expectation that a similar class would arrive next year.
 

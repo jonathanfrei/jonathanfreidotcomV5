@@ -4,7 +4,7 @@ deck: Machines can extend a smaller generation's capacity, while medicine can re
 eyebrow: Tools and generation
 ---
 
-A robot can cover a shift. Reproductive medicine can sometimes help a couple have the child they could not conceive without treatment. Both are technological responses to low fertility, though only one works near the beginning of a new life.
+A robot can cover a shift. Reproductive medicine can sometimes help a couple have a wanted child they could not conceive without treatment. Both are technological responses to low fertility, but they serve different goods: automation and artificial intelligence multiply tasks and capacity; care technology supports safety and reduces burdens; restorative treatment heals impaired reproductive function; and assisted reproduction can recover some wanted births. None creates an independent successor generation.
 {: .lede}
 
 That difference gets lost when every invention is placed under the heading of adaptation. Industrial automation changes how much work a smaller labor force can perform. Care technology changes how people carry obligations to older or disabled family members. Medicine may restore reproductive function or replace part of conception with a laboratory process. These tools act on different problems and should be judged by different goods.
@@ -20,7 +20,7 @@ Care gives the claim a more human scale. A lift can protect a nurse's back. A mo
 **A tool used in dementia care** PARO, a therapeutic robot developed in Japan. A machine may soothe a patient or lighten a caregiver's work; responsibility for the person remains human. *[Via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:PARO_seal_robot_for_dementia,_2018_Ryman_prize_explanation.jpg)*
 {: .caption}
 
-These tools could carry a large share of the adjustment for decades. Technology can help a smaller working generation sustain high living standards, protect caregivers' bodies, extend independent life, and return adults time for family. It is adaptation when it preserves capacity despite an age structure already in place. Its success should be measured in time, health, output, and care—not described as a fertility increase it did not produce.
+These tools could carry part of the adjustment for decades, depending on adoption, complementarity, reliability, distribution, and institutions. Technology can help a smaller working generation sustain living standards, protect caregivers' bodies, extend independent life, and return adults time for family. It is adaptation when it preserves capacity despite an age structure already in place. Its success should be measured in time, health, output, and care—not described as a fertility increase it did not produce.
 
 ## Medicine and recovery
 
@@ -32,7 +32,7 @@ The desire behind either treatment deserves respect. Infertility is not a failur
 
 ## What assisted reproduction can recover
 
-In 2022, U.S. clinics reported 435,426 assisted-reproduction cycles and 94,039 live-birth deliveries. Those totals cannot be read as a success rate for a patient. They include banking cycles, repeated attempts, donor and patient eggs, different diagnoses, and outcomes that may occur in the following year. The CDC reports that 37.5 percent of cycles resulted in a live-birth delivery overall, while outcomes vary substantially with age and treatment type.
+The CDC's National ART Summary reports 435,426 assisted-reproduction cycles among 251,542 unique patients in 2022, resulting in 94,039 live-birth deliveries and 98,289 live-born infants. The total included 184,423 cycles in which eggs or embryos were stored rather than transferred. These are different denominators and cannot be read as one success rate for a patient. They include repeated attempts, donor and patient eggs, different diagnoses, and outcomes that may occur in the following year. Outcomes vary substantially with age and treatment type.
 
 Age remains central when a patient uses her own eggs. Egg freezing preserves eggs collected at a younger age; it does not guarantee a later child. A 2018 comparison found that states with comprehensive IVF insurance mandates had substantially greater use of treatment and more live births per cycle than states without comprehensive mandates, though differences between their patients and clinics complicate causal interpretation. Coverage can make treatment less dependent on wealth. It cannot make forty biologically equivalent to twenty-five or return years after the fact.
 
@@ -40,17 +40,17 @@ Technology can also change expectations before treatment begins. The availabilit
 
 ## Access and regulation
 
-Coverage can relieve a heavy financial burden and make treatment less dependent on wealth. It can also direct public money toward practices that differ morally and medically. A policy therefore needs more than an undifferentiated promise to cover “fertility treatment.” Diagnosis, surgery, medication, IVF, embryo storage and disposition, donor arrangements, and surrogacy require separate rules and separate measures of outcome.
+Coverage can relieve a heavy financial burden and make treatment less dependent on wealth. It can also direct public money toward practices that differ morally and medically. A policy therefore needs more than an undifferentiated promise to cover “fertility treatment.” Diagnosis, surgery, medication, IVF, embryo storage and disposition, donor arrangements, and surrogacy require separate rules and separate measures of outcome. Each measure must identify its denominator, whether it concerns restored function, live birth, embryo disposition, treatment burden, unequal access, or multiple gestation.
 
 The relevant outcomes include restored function, live births, treatment burden, unequal access, multiple births, the number and disposition of embryos created, and the interests of children, donors, and gestational mothers. A higher clinic success rate does not answer all of those questions. Regulation should protect every person involved rather than treating the production of a birth as the sole result that matters.
 
 ## Speculative frontiers
 
-In-vitro gametogenesis aims to derive eggs or sperm from other cells. No human child has been born through the technique, and current stem-cell guidelines prohibit reproductive use while safety and ethical questions remain unresolved. Artificial-gestation research has so far focused on sustaining extremely premature animals at the edge of viability. It is not evidence that full human pregnancy can soon be moved outside a woman's body.
+As of the cited 2025 guidance, in-vitro gametogenesis (IVG) aims to derive eggs or sperm from other cells. No human child has been born through the technique in the cited material, and current stem-cell guidance does not permit reproductive use while safety and ethical questions remain unresolved; that guidance should not be confused with a statutory prohibition. Artificial-gestation research has focused on sustaining extremely premature animals at the edge of viability. It is not evidence that full human pregnancy can soon be moved outside a woman's body.
 
 These frontiers may eventually alter infertility treatment, pregnancy, and parenthood. For now they do not belong in a policy balance sheet as available routes to demographic recovery. The [later permission analysis](/books/fertility/getting-serious/permission-and-power) asks who could be entrusted with such power and what no demographic emergency can authorize.
 
-The record across this chapter is less discouraging than a verdict of failure and less comforting than a policy formula. Governments can make family life easier and recover births at the margin. Immigration can add people quickly. Automation can extend what a smaller generation can carry. Medicine can heal infertility or help produce births that would not otherwise occur.
+The record across this chapter is less discouraging than a verdict of failure and less comforting than a policy formula. Governments can make family life easier and recover births at the margin. Immigration can add people quickly. Automation can extend what a smaller generation can carry. Medicine can heal infertility or help recover some wanted births that might not occur without treatment. None of these is population replacement or a successor generation.
 
 Ordinary benefits generally begin once a household exists or a pregnancy is being sought. What comes before them is harder to purchase: people meeting, choosing obligations, remaining near enough to help, and believing a shared future is possible. The next chapter asks how those conditions are formed.
 

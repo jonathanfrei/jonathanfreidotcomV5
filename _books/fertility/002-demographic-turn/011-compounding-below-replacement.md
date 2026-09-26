@@ -4,26 +4,30 @@ deck: A temporary fall and a permanent low-fertility regime are different demogr
 eyebrow: The generational arithmetic
 ---
 
-Below-replacement fertility is usually described as a gap from 2.1. The more revealing comparison is between generations. A modest gap repeated many times becomes a very different condition from a short-lived decline.
+Below-replacement fertility is usually described as a gap from about 2.1. The direct daughter-replacement measure is the net reproduction rate (NRR), but the familiar total fertility rate (TFR) benchmark can support a simpler illustration. A modest gap repeated many times becomes a very different condition from a short-lived decline.
 {: .lede}
 
-Consider a stripped-down illustration. Assume no migration, unchanged mortality, an even sex balance, and a constant fertility rate. Divide each rate by a replacement benchmark of 2.1 to approximate the size of a daughter generation relative to the one before it. Real populations are more complicated. The exercise isolates repetition.
+Consider a normalized, nonoverlapping-generation stress test. Start with a daughter generation whose size is set to 100. Hold the period TFR constant, divide it by a fixed replacement benchmark of 2.1, and apply that ratio once per generation:
 
-| Constant TFR | One generation | After 10 generations | After 100 generations |
+`normalized generation n = (TFR / 2.1)ⁿ`
+
+The assumptions are intentionally stark: no migration; a constant TFR; fixed low mortality and the typical male-heavy sex ratio already embedded in the 2.1 benchmark; generations treated as nonoverlapping and lasting 25 to 30 years; and no change in the timing of births. This is a normalized replacement-ratio proxy, not an exact calculation of NRR and not a population projection.
+
+| Constant period TFR | Ratio after one generation | After 10 generations | After 100 generations |
 |---:|---:|---:|---:|
-| 1.8 | About 86 percent | About 21 percent | About one part in five million |
-| 1.5 | About 71 percent | About 3.5 percent | About one part in 410 trillion |
-| 1.2 | About 57 percent | About 0.37 percent | About one part in two septillion |
+| 1.8 | 85.7 percent | 21.4 percent | 2.0 × 10⁻⁷ of the starting size |
+| 1.5 | 71.4 percent | 3.46 percent | 2.4 × 10⁻¹⁵ of the starting size |
+| 1.2 | 57.1 percent | 0.371 percent | 5.0 × 10⁻²⁵ of the starting size |
 
-Ten generations is roughly 250 to 300 years. The first column is already enough to show why small differences matter: at 1.8, the tenth descendant generation in the illustration remains about 21 percent as large as the first; at 1.5, it is about 3.5 percent; at 1.2, about 0.37 percent.
+Ten generations is roughly 250 to 300 years. At 1.8, the tenth descendant generation in the illustration remains about 21 percent as large as the starting generation; at 1.5, it is about 3.5 percent; at 1.2, about 0.37 percent.
 
-One hundred generations is roughly 2,500 to 3,000 years. I don't expect any fertility rate, mortality regime, political order, or migration pattern to remain fixed for that long. The figures are not predictions and soon stop resembling any plausible society. The scenario has one restrained purpose: a permanently low rate cannot produce a stable, permanently smaller population. It must eventually change, be offset, or keep compounding.
+One hundred generations is roughly 2,500 to 3,000 years. The three ratios are then lower than the starting value by roughly seven, 15, and 24 orders of magnitude. I don't expect any fertility rate, mortality regime, political order, or migration pattern to remain fixed for that long. The numbers are not forecasts and soon stop resembling any plausible society. The stress test has one purpose: a permanently low replacement ratio cannot produce a stable, permanently smaller population. It must eventually change, be offset, or keep compounding.
 
 That conclusion does not tell us when fertility will change. It does not tell us the right population for a country, and it cannot measure the worth of any family. It separates two ideas that are often blurred together. A population can shrink once and stabilize. A population cannot stabilize while every generation remains smaller than the one before it.
 
-## From illustration to projection
+## From stress test to projection
 
-Demographic projections do not use the simple ratio above. They begin with the population by age and sex and apply assumptions about future fertility, mortality, and migration. The United Nations uses probabilistic methods to express uncertainty around future fertility and mortality, then publishes scenarios and intervals rather than one guaranteed result.
+The stress test asks what repeated multiplication contains under fixed assumptions. A demographic projection asks a different question. It begins with the population by age and sex, ages each cohort forward, and applies assumptions about age-specific fertility, mortality, and migration. The United Nations uses probabilistic methods to express uncertainty around future fertility and mortality, then publishes scenarios and intervals rather than one guaranteed result.
 
 The starting population gives near-term projections unusual structure. Most people who will be age fifty in 2050 are already alive. The size of the cohort that could become parents in the early 2030s is largely known. Farther out, each assumption passes through children who have not yet been born, and uncertainty widens.
 
@@ -32,7 +36,7 @@ The starting population gives near-term projections unusual structure. Most peop
 **A population remade by successive cohorts** Japan's population by age group, with later values projected. The shape reflects decades of births, deaths, and migration rather than one year's fertility rate. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Population_Trends_in_Japan,_by_Age.svg)*
 {: .caption}
 
-Projections are therefore conditional statements. A central path is not a promise or prophecy. Migration can shift national totals quickly. Longevity can improve faster or slower than expected. Period fertility can rebound as births move to later ages, or a recovery can persist and enlarge later cohorts.
+Projections are conditional statements, not promises or prophecies. Migration can shift national totals quickly. Longevity can improve faster or slower than expected. Period fertility can rebound as births move to later ages, or a recovery can persist and enlarge later cohorts. None of those moving parts appears in the normalized stress test above.
 
 Uncertainty does not make every path equally plausible. Age structure constrains the next few decades, and arithmetic constrains any scenario that holds fertility below replacement indefinitely. The lower the rate and the longer it lasts, the more a later recovery must work through the missing cohorts left by earlier years.
 

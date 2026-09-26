@@ -12,11 +12,11 @@ The United States and Canada still grow, and Mexico remains younger than either.
 **One continent, three demographic histories** A NASA satellite composite shows North America without political borders. The United States, Canada, and Mexico share a landmass, but inherited age structure and migration give below-replacement fertility different near-term consequences in each country. *[NASA Earth Observatory, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:North_America_topic_image_Satellite_image.jpg)*
 {: .caption}
 
-The United States has remained below replacement since 2007. Final federal data recorded 3.63 million births in 2024. The general fertility rate fell slightly even as the number of births rose, because counts and rates use different denominators. The total fertility rate remained around 1.6 births per woman.
+The United States has remained below replacement since 2007. Final federal data recorded 3.63 million births in 2024. The general fertility rate fell slightly even as the number of births rose, because counts and rates use different denominators. The period total fertility rate remained around 1.6 births per woman.
 
-Canada has moved further. Its TFR reached 1.25 in 2024, entering the range the United Nations describes as ultra-low. Yet Canada had recently experienced rapid population growth because immigration added large numbers of people, many of them young adults. A national population can become larger while the family pattern beneath it moves further below replacement.
+Canada has moved further. Its period TFR reached 1.25 births per woman in 2024, entering the range the United Nations describes as ultra-low. Yet Canada had recently experienced rapid population growth because immigration added large numbers of people, many of them young adults. A national population can become larger while the family pattern beneath it moves further below replacement.
 
-Mexico completes the continental reversal. Its 2023 demographic survey estimated TFR at 1.6, down from 2.07 in the comparable 2018 survey. Mexico retains a younger age structure, so births can remain numerous and population can grow after the period rate falls below replacement.
+Mexico completes the continental reversal. Its 2023 demographic survey estimated a period TFR of 1.6 births per woman, down from 2.07 in the comparable 2018 survey. Mexico retains a younger age structure, so births can remain numerous and population can grow after the period rate falls below replacement.
 
 The old continental gradient has largely disappeared. The three countries now differ less in whether fertility is below replacement than in the age structures they inherited and the scale and direction of migration across their borders.
 

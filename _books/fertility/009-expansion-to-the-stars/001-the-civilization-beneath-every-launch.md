@@ -16,11 +16,15 @@ NASA's [account of the Apollo workforce](https://www.nasa.gov/specials/apollo50t
 
 A larger population does not automatically produce more capable people. Education, freedom, health, and good institutions determine whether ability can emerge. Population supplies persons; formation develops their powers; institutions coordinate them; trust lets them depend on work they cannot personally inspect. Division of labor lets one engineer spend years thinking about propulsion because somebody else knows how to keep the water clean.
 
+The same is true of artificial intelligence. It can be a force multiplier: helping a small team search design options, monitor equipment, translate records, or rehearse decisions that once required more hours from more specialists. But it does not form a child, accept responsibility for a judgment, or create the trust that lets strangers live under a common rule. A tool can extend a civilization's reach; it cannot supply the people and institutions that make the reach worth having.
+
 ## The relay between generations
 
 Space development is already multigenerational. Engineers who began on Apollo trained people who worked on the shuttle and the International Space Station. Some knowledge moved through drawings. Some moved when a senior worker stood beside a younger one after a test failed and explained what the paperwork could not.
 
 A short project can recruit heavily from one cohort; a century of building cannot. It needs apprentices arriving as older experts retire, records that survive their authors, and institutions able to distinguish inherited wisdom from inherited error. It also needs enough depth that a space program does not solve its labor shortage by stripping hospitals or power plants of the same scarce technical people. Machines can extend each worker, and better education can uncover ability older institutions missed. Eventually the number of possible apprentices still counts.
+
+Succession is more than replacing a job title. A formed person has to learn why a system exists, when its rules may be challenged, and how to repair it without mistaking inherited procedure for wisdom. Institutions make that learning repeatable: a school prepares more than one teacher, a workshop documents more than one technique, and a government can transfer authority without making every transition a crisis. Without such formation, a growing headcount can reproduce confusion as efficiently as competence.
 
 ## A settlement needs ordinary people
 

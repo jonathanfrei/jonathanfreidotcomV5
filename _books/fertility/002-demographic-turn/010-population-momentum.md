@@ -4,7 +4,7 @@ deck: Today's growth and decline are propelled by the age structure inherited fr
 eyebrow: The demographic echo
 ---
 
-If every country moved to replacement fertility tomorrow, world population would not immediately become stable. Some places would keep growing for decades. Others would continue shrinking. Fertility describes a rate; momentum comes from the number of people living at each age when that rate begins.
+If every country moved to replacement fertility tomorrow, world population would not immediately become stable. Some places would keep growing for decades. Others would continue shrinking. A period total fertility rate (TFR) describes a schedule of childbearing, and a net reproduction rate (NRR) of 1 describes daughter-generation replacement under that schedule and its mortality conditions. Momentum comes from the number of people already living at each age when the schedule begins.
 {: .lede}
 
 Imagine two countries with identical fertility and mortality. In the first, the largest cohorts are young and entering the childbearing years. In the second, the largest cohorts are old. The first can record many births and relatively few deaths while the second records fewer births and more deaths. The rates are the same. The number of people exposed to them is different.
@@ -14,9 +14,9 @@ Imagine two countries with identical fertility and mortality. In the first, the 
 **An inherited age structure** The world's population by age and sex from 1950 through a UN projection to 2100. Projected values depend on future fertility, mortality, and migration assumptions. *[via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Global_Population-Pyramid-1950-to-2100.jpg)*
 {: .caption}
 
-Positive momentum is the afterlife of earlier high fertility. A large generation can produce many births even when each woman has a smaller family than the generation before. This is why India and much of sub-Saharan Africa can keep growing as fertility falls. In a UN exercise based on the 2015 age structure, an immediate move to replacement fertility with constant mortality and no migration still produced decades of global growth.
+Positive momentum is the afterlife of earlier high fertility. A large generation can produce many births even when each woman has a smaller family than the generation before. This is why India and much of sub-Saharan Africa can keep growing as fertility falls. In a UN exercise based on the 2015 age structure, fertility moved immediately to the level required for an NRR of 1 while mortality remained constant and migration was set to zero. The world population still grew for decades.
 
-Negative momentum is the mirror image. After a long period of low fertility, the cohort of potential parents is small. A higher TFR applied to that cohort may produce fewer births than a lower rate produced from a larger cohort years earlier. At the same time, large older cohorts move into ages of higher mortality.
+Negative momentum is the mirror image. After a long period of low fertility, the cohort of potential parents is small. A higher period TFR applied to that cohort may produce fewer births than a lower rate produced from a larger cohort years earlier. At the same time, large older cohorts move into ages of higher mortality.
 
 Japan illustrates the result. Even an immediate return to replacement fertility would not restore population growth at once. The births missing from earlier decades are now adults who are absent from the potential-parent population. A recovery can improve the eventual path without erasing the inherited starting point.
 
@@ -26,7 +26,7 @@ Population decline often begins quietly. Growth slows, the total flattens, and i
 
 Fertility, mortality, and migration can all alter the speed. Longer life initially keeps more people in the population. Immigration can add young adults quickly and change a national path for decades. A fertility recovery changes the number of births immediately, though it takes roughly a generation before the larger birth cohort itself becomes a larger cohort of potential parents.
 
-This makes demographic forecasts unusually mixed. Near-term age structure is relatively visible because most people who will be middle-aged twenty or thirty years from now are already alive. Future migration remains political and volatile, and births beyond the current generation depend on behavior that has not happened. Confidence should therefore narrow as the horizon lengthens.
+This gives demographic projections different kinds of uncertainty at different horizons. Near-term age structure is relatively visible because most people who will be middle-aged twenty or thirty years from now are already alive. Future migration remains political and volatile, and births beyond the current generation depend on behavior that has not happened. Confidence should therefore narrow as the horizon lengthens.
 
 Momentum creates two common errors. Continued growth after fertility falls does not show that the fall is harmless. A small initial population loss does not mean the rate of decline will remain small. Both conclusions mistake the current total for the cohorts that will produce future births and deaths.
 

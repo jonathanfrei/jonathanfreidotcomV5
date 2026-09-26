@@ -11,7 +11,9 @@ The desire behind treatment deserves respect. Infertility can be a profound grie
 
 ## What treatment can and cannot do
 
-In vitro fertilization retrieves eggs, combines them with sperm outside the body, and transfers an embryo to a uterus. In 2022, U.S. clinics reported 435,426 assisted-reproduction cycles and 94,039 live-birth deliveries. Those totals include different patients, sources of eggs or embryos, treatment purposes, and repeated cycles. A cycle is not the same as a patient, pregnancy, or child.
+Infertility treatment is not one procedure. Medication or surgery may restore ovulation or repair an obstruction; intrauterine insemination places prepared sperm in the uterus; in vitro fertilization retrieves eggs, combines them with sperm outside the body, and transfers an embryo; intracytoplasmic sperm injection places one sperm inside an egg when fertilization itself is difficult. Donor eggs or sperm change the biological relationship again. In 2022, U.S. clinics reported 435,426 assisted-reproduction cycles, 251,542 unique patients, 94,039 live-birth deliveries, and 98,289 live-born infants. The total included 184,423 cycles in which embryos or eggs were stored rather than transferred. These are different denominators: a cycle is not a patient, a transfer, a pregnancy, a delivery, or a child.
+
+Success claims need the same discipline. A per-started-cycle result answers a different question from a per-embryo-transfer result, and neither is a cumulative chance across several attempts. Own-egg and donor-egg treatment, fresh and frozen transfers, patient age, diagnosis, and whether banking cycles are included can all change the number. The national summary reports activity and outcomes by these categories; it should not be compressed into one universal IVF success rate.
 
 Age remains central when patients use their own eggs. Clinical guidance recommends beginning an infertility evaluation after twelve months of trying for women below thirty-five, after six months at thirty-five or older, and more immediately above forty. Egg freezing can preserve eggs collected at a younger age, but the relevant age is largely the age at freezing, and stored eggs provide a possibility rather than a guaranteed future birth.
 
@@ -24,7 +26,7 @@ Technology can therefore create a second postponement effect. The existence of I
 
 ## Treatment and replacement
 
-Not every infertility intervention presents the same moral problem. Surgery that repairs an obstructed reproductive system, medication that restores ovulation, or treatment of infection assists the body in performing its reproductive function. IVF replaces the act of conception with laboratory production and transfer. The distinction is morally consequential even when both are called treatment.
+Not every infertility intervention presents the same moral problem. Surgery that repairs an obstructed reproductive system, medication that restores ovulation, treatment of infection, or treatment directed at a male-factor cause assists the body in performing its reproductive function. IVF replaces the act of conception with laboratory production and transfer. The distinction is morally consequential even when both are called treatment.
 
 Every child conceived through assisted reproduction has the same dignity as every other child. The goodness of the child does not settle the morality of the method. We routinely distinguish a person from the circumstances of his origin; no criticism of a practice should be heard as criticism of the child who exists because of it.
 

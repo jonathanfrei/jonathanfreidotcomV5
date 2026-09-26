@@ -4,10 +4,10 @@ deck: Ultra-low fertility shows how yesterday's missing births narrow today's re
 eyebrow: The outer edge
 ---
 
-South Korea recorded a total fertility rate of 0.75 in 2024. The number is so far below replacement that even its meaning can be hard to feel. It describes one year's childbearing pattern, not a permanent national fate, but years near that level have already made the youngest cohorts far smaller than the generations ahead of them.
+South Korea's period total fertility rate (TFR) was 0.75 births per woman in 2024. The number is so far below replacement that even its meaning can be hard to feel. It describes one year's childbearing pattern, not a permanent national fate, but years near that level have already made the youngest cohorts far smaller than the generations ahead of them.
 {: .lede}
 
-The 2024 result was an improvement. TFR rose from 0.72, and births increased for the first time in nine years. That is genuinely encouraging. It also shows why a rate and a count must be read together: a recovery now works through a smaller number of potential parents than the country had before the long decline.
+The 2024 result was an improvement. The period TFR rose from 0.72 in 2023, and the annual birth count increased for the first time in nine years. That is genuinely encouraging. It also shows why a rate and a count must be read together: a recovery now works through a smaller number of potential parents than the country had before the long decline.
 
 ![South Korea population pyramid, mid-2024](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/South_Korea_Population_Pyramid.svg/960px-South_Korea_Population_Pyramid.svg.png)
 
@@ -18,7 +18,7 @@ Japan reached this stage earlier. Its population fell by 550,000 in the year end
 
 China brings the same turn to a different scale and history. The one-child policy accelerated fertility decline through coercion and left injuries that cannot be reduced to a population chart. Ending the policy did not restore large families. In 2024, mainland China recorded 9.54 million births and 10.93 million deaths; its population fell by 1.39 million even though births rose from the previous year.
 
-Hong Kong and Taiwan have also recorded fertility near the lowest levels in the world. Singapore's resident TFR was 0.97 in 2024 after decades of family policy. Different governments and histories have reached the same outer range, making any simple explanation harder to sustain.
+Recent UN estimates place Hong Kong and Taiwan near the lowest fertility levels in the world. Singapore's resident period TFR was 0.97 in 2024 after decades of family policy. Different governments and histories have reached the same outer range, making any simple explanation harder to sustain.
 
 ## The range of near-term outcomes narrows
 

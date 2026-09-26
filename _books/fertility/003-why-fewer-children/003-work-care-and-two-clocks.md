@@ -24,6 +24,8 @@ The conflict becomes visible after a birth. In the 2024 American Time Use Survey
 
 Henrik Kleven's estimates for the United States show women's employment falling about 25 percent and earnings about 33 percent relative to men's after children arrive, even though their earnings paths are much closer beforehand. The estimate describes an average penalty, not one motive. It contains mothers who want to devote more time to children, mothers who would prefer more paid work, and mothers who find that the household and workplace leave no neutral option.
 
+Pregnancy and birth add a clock that a time-use table cannot capture. Pregnancy occupies most of a year, birth can require a difficult recovery, and a miscarriage can consume months of hope, treatment, and physical healing without adding a child to the family. A prior cesarean, severe complication, traumatic birth, or postpartum illness can make another pregnancy feel medically or emotionally costly. The American College of Obstetricians and Gynecologists advises avoiding an interpregnancy interval shorter than six months and counseling about the risks and benefits of intervals shorter than eighteen months. The guidance does not turn a spacing recommendation into a universal rule; it shows why the years available for a second or third child are not simply free time on a calendar.
+
 The first child can therefore alter the decision about the second. One composite timeline is enough to show the mechanism. Both parents remain employed after leave. Childcare covers most work hours but not illness, appointments, commuting delays, or evening demands. The mother has the more flexible job, so she uses that flexibility first. Her earnings growth slows, making it increasingly rational for her to absorb the next disruption too. A third child would intensify an arrangement neither spouse deliberately designed.
 
 ## Equality is not identical minutes
@@ -36,7 +38,7 @@ Status matters alongside hours. A résumé records a promotion more easily than 
 
 The answer is not one household model imposed on everyone. It is genuine room for families to choose among work and care without every option being punished: careers that survive uneven years, predictable schedules, fathers expected to be present, wages capable of supporting households, and respect for care performed inside them.
 
-The two clocks will never become identical. Reproductive biology places pregnancy and birth within a bounded period while modern careers often reward deferral. Employers, professions, households, and law still shape whether those clocks collide or whether work bends enough for family life to begin before time has done the deciding.
+The two clocks will never become identical. Reproductive biology places pregnancy, birth, recovery, and spacing within a bounded period while modern careers often reward deferral. Employers, professions, households, and law still shape whether those clocks collide or whether work bends enough for family life to begin before time has done the deciding. Better leave, reliable care, humane clinical follow-up, and fathers who carry the unpredictable work cannot remove biology, but they can keep one difficult birth from silently deciding the size of a family.
 
 <div class="citation">
 
@@ -45,4 +47,5 @@ The two clocks will never become identical. Reproductive biology places pregnanc
 1. Organisation for Economic Co-operation and Development, [“Fertility Trends Across the OECD: Underlying Drivers and the Role for Policy”](https://www.oecd.org/en/publications/society-at-a-glance-2024_918d8db3-en/full-report/fertility-trends-across-the-oecd-underlying-drivers-and-the-role-for-policy_770679b8.html), in *Society at a Glance 2024*, 2024.
 2. U.S. Bureau of Labor Statistics, [*American Time Use Survey—2024 Results*](https://www.bls.gov/news.release/archives/atus_06262025.htm), June 26, 2025.
 3. Henrik Kleven, [“Child Penalties and Gender Inequality”](https://www.nber.org/reporter/2022number4/child-penalties-and-gender-inequality), *NBER Reporter*, 2022.
+4. American College of Obstetricians and Gynecologists, [“Interpregnancy Care”](https://www.acog.org/clinical/clinical-guidance/obstetric-care-consensus-series/articles/2019/01/interpregnancy-care), 2019.
 </div>

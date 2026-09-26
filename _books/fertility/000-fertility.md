@@ -1,16 +1,16 @@
 ---
 title: The Fertility Decline
 eyebrow: Present and Future
-deck: What shrinking generations mean for the human future
-description: "The human population is still growing. Beneath that total, something has changed: in much of the world, each generation is smaller than the one before. For two centuries, the great population fear was that humanity would become too numerous. We may be entering the opposite problem before we have fully noticed the turn."
+deck: Why generational renewal matters for humanity's future
+description: "A living web book about falling fertility, attainable family life, civilizational renewal, and the generations humanity will need to build a larger future."
 ---
 
-The human population is still growing. Beneath that total, something has changed: in much of the world, each generation is smaller than the one before. The difference appears slowly—an empty desk, a missing worker, an aging parent with fewer children to call.
+The human population is still growing. Beneath that total, fertility has fallen below replacement across much of the world. Where that pattern persists, smaller cohorts eventually become the parents of smaller cohorts in turn. The change appears slowly—an empty desk, a missing worker, an aging parent with fewer children to call.
 {: .lede}
 
-For two centuries, the great population fear was that humanity would become too numerous. We may be entering the opposite problem before we have fully noticed the turn. A society can become smaller once and remain capable. When every generation is smaller, the adjustment begins again from a narrower base.
+For two centuries, the great population fear was that humanity would become too numerous. We may be entering the opposite problem before we have fully noticed the turn. A society can become smaller once and remain capable. Repeated nonreplacement leaves no comparable stopping point of its own.
 
-This book follows that change from a school with too few pupils to the possibility that people might one day build a home beyond Earth. It asks why people are having fewer children, what the decline changes, what governments and institutions can do, and whether renewal can remain compatible with human dignity and modern freedom.
+This book follows that change from a school with too few pupils to humanity's ultimate horizon among the stars. It asks why people are having fewer children, what repeated contraction changes, and how marriage and family life might become attainable and aspirational again. Its larger question is whether civilization will learn to manage permanent decline or renew the generations capable of receiving our inheritance, enlarging it, and building homes beyond Earth.
 
 The first chapter begins where demographic change usually becomes visible: not in a distant forecast, but in a building that expected another class to arrive.
 
@@ -18,49 +18,23 @@ The first chapter begins where demographic change usually becomes visible: not i
 
 ![](https://media.jonathanfrei.com/assets/img/2026-08-24-20260824104149-74759.jpg)
 
-## The path through the book
+## Three ways into the question
 
-The book is meant to be read in order. Each chapter answers one question and leaves the next one open.
+The argument is meant to be read in order, beginning with [the stakes](/books/fertility/the-stakes/introduction). If you already have a particular question in mind, these are useful places to enter:
 
-### [1. The Stakes](/books/fertility/the-stakes/introduction)
+- **[What is actually happening?](/books/fertility/demographic-turn/introduction)** Start with the measures, regional evidence, population momentum, and the compounding effect of persistent below-replacement fertility.
 
-Why should falling fertility matter while the world population is still growing?
+- **[Why are people having fewer children?](/books/fertility/why-fewer-children/introduction)** Follow the path through partnership, work, housing, culture, reproductive control, and biology.
 
-### [2. The Demographic Turn](/books/fertility/demographic-turn/introduction)
+- **[What could renewal require?](/books/fertility/beyond-policy/introduction)** Begin with the institutions around family life, then continue through the harder questions of seriousness, power, and civilizational direction.
 
-How did the age of population explosion become an age of shrinking generations?
+## The arc of the book
 
-### [3. Why Are People Having Fewer Children?](/books/fertility/why-fewer-children/introduction)
+The ten chapters move in three stages. [The Stakes](/books/fertility/the-stakes/introduction), [The Demographic Turn](/books/fertility/demographic-turn/introduction), and [Why Are People Having Fewer Children?](/books/fertility/why-fewer-children/introduction) establish the problem, evidence, and causes.
 
-How do partnership, work, housing, culture, reproductive control, and biology combine into smaller families?
+[What Happens When Societies Have Fewer Children?](/books/fertility/society-with-fewer-children/introduction), [Can Fertility Decline Be Reversed?](/books/fertility/reverse-fertility-decline/introduction), [Beyond Policy](/books/fertility/beyond-policy/introduction), and [Getting Serious](/books/fertility/getting-serious/introduction) follow the consequences, test ordinary responses, build a positive program, and ask what forms of action remain wise and permissible.
 
-### [4. What Happens When Societies Have Fewer Children?](/books/fertility/society-with-fewer-children/introduction)
-
-What does a smaller generation inherit from a larger one?
-
-### [5. Can Fertility Decline Be Reversed?](/books/fertility/reverse-fertility-decline/introduction)
-
-What have governments tried, and how should their successes and failures be judged?
-
-### [6. Beyond Policy](/books/fertility/beyond-policy/introduction)
-
-What has to exist before a benefit, childcare place, or housing subsidy can help a family begin?
-
-### [7. Getting Serious](/books/fertility/getting-serious/introduction)
-
-What might a society consider when ordinary measures are too small—and what must remain beyond permission?
-
-### [8. Contraction or Renewal](/books/fertility/low-fertility-world/introduction)
-
-Will adaptation preserve room for another generation, or become a permanent way of managing decline?
-
-### [9. From Outpost to Home](/books/fertility/expansion-to-the-stars/introduction)
-
-What would let human exploration become a place that successors can inherit?
-
-### [10. Choosing to Grow](/books/fertility/choosing-to-grow/introduction)
-
-What would renewal ask of families, employers, communities, and governments now?
+[Contraction or Renewal](/books/fertility/low-fertility-world/introduction), [From Outpost to Home](/books/fertility/expansion-to-the-stars/introduction), and [Choosing to Grow](/books/fertility/choosing-to-grow/introduction) widen the horizon. They compare managed decline with renewal, trace the path from visiting another world to founding a home there, and return that distant future to the choices surrounding family life now.
 
 ## Author's note
 

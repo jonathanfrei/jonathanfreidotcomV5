@@ -11,6 +11,8 @@ The script is powerful because every step can contain a real good. Education enl
 
 Culture is not a residue left after measurable causes run out. It lives in schedules, stories, institutions, status, peer groups, and the examples visible in ordinary life. It helps decide which costs appear normal, which commitments look admirable, and what adults believe must be completed before a child may arrive.
 
+Status makes that influence concrete. A young adult can receive more praise for mobility, credentials, income, or an uncluttered life than for becoming a reliable spouse or parent. Employers may reward the worker who can relocate at short notice, while peers treat intensive parenting as admirable but exhausting. Those signals do not force a decision, and they do not make autonomy unreal. They change which future looks like progress and which looks like a costly departure from the expected path.
+
 ## The option-preserving life
 
 Children close options. They require care at inconvenient times and create obligations that cannot be paused when another opportunity appears. A culture organized around self-direction therefore needs a persuasive account of why someone should accept dependence that cannot be optimized away.
@@ -30,6 +32,8 @@ A desired number can express an ideal abstracted from circumstances. An intentio
 The United Nations Population Fund's 2025 survey asked adults in fourteen countries about their reproductive aspirations and whether they expected to realize them. Nearly one in five reproductive-age respondents expected not to have the number of children they desired. The countries together contained more than a third of the world's population, but the result is still a survey of those countries and questions, not a global census of thwarted hopes.
 
 The gap remains important when kept within those bounds. Low fertility includes people who want no children, people who want one, people whose intentions change, and people who reach the end of their reproductive years with fewer children than they expected. A society committed to freedom should care about all of them. Freedom is not measured only by the ability to prevent a birth; it includes the practical capacity to welcome a wanted child.
+
+Norms can be observed in the expectations people bring to one another. The 2021 Japanese survey found declining support for the idea that marriage should entail children and declining desired child numbers among never-married respondents; it also found that women placed greater importance on a prospective partner's attitudes toward housework and childrearing. The survey does not prove that those opinions caused lower fertility. It shows how the meaning of a suitable partner, and the work expected inside a household, can alter the threshold before parenthood.
 
 ## Communities where children remain ordinary
 
@@ -55,4 +59,5 @@ Money can lower a barrier. Culture helps decide whether crossing it looks like l
 1. Organisation for Economic Co-operation and Development, [“Fertility Trends Across the OECD: Underlying Drivers and the Role for Policy”](https://www.oecd.org/en/publications/society-at-a-glance-2024_918d8db3-en/full-report/fertility-trends-across-the-oecd-underlying-drivers-and-the-role-for-policy_770679b8.html), in *Society at a Glance 2024*, 2024.
 2. United Nations Population Fund, [*State of World Population 2025: The Real Fertility Crisis*](https://www.unfpa.org/swp2025), 2025.
 3. Gregory Smith and others, [“Religion, Fertility and Child-Rearing”](https://www.pewresearch.org/religion/2025/02/26/religion-fertility-and-child-rearing/), Pew Research Center, 2025.
+4. National Institute of Population and Social Security Research, [*The Sixteenth Japanese National Fertility Survey: Summary of Results*](https://www.ipss.go.jp/ps-doukou/e/doukou16/Nfs16R_summary_eng.pdf), 2021 survey / 2023 English report.
 </div>

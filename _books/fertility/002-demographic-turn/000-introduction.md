@@ -18,7 +18,7 @@ The United Nations now projects that world population will peak during this cent
 
 That reversal is the subject of this chapter. It begins with the inherited fear of too many people, follows the demographic transition across regions, and ends with the slow arithmetic through which smaller families become smaller generations. The history is not a victory lap over failed forecasts. Falling child mortality, longer lives, greater agency, and an expanded food supply were real achievements. They also changed the population problem itself.
 
-The question at the end is no longer how the turn happened. It is why fertility kept falling after mortality and birth rates had both moved much lower.
+By the end, the question will have changed. We will know how mortality fell, fertility followed, and age structure hid the reversal for a time. The next chapter then asks why fertility kept falling after mortality and birth rates had both moved much lower.
 
 <div class="citation">
 

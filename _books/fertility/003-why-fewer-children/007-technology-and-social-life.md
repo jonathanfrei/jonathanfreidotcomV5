@@ -17,6 +17,8 @@ Social isolation and sexual inactivity are also observed, although neither can b
 
 Japan offers a different window into the same early threshold. In the 2021 National Fertility Survey sample of never-married adults ages eighteen to thirty-four, 72.2 percent of men and 64.2 percent of women reported no current opposite-sex dating partner. The result describes that population and moment without assigning a cause or later outcome.
 
+The same survey found that 11.9 percent of men and 17.9 percent of women who had a dating partner or fiancé(e) had met that person through the Internet. That is an observed change in how some relationships begin, not evidence that online dating lowers marriage or fertility. It belongs in the technology story because it shows digital tools entering the partnership threshold; the demographic effect remains an open question.
+
 Many young adults are reaching family-forming ages without a partner or sexual relationship. The evidence does not assign that condition to a platform or screen.
 
 ## What is plausible
@@ -38,7 +40,7 @@ Pornography separates sexual stimulation from courtship more directly. Evidence 
 
 Artificial companions move still further from measured evidence. A simulated partner can be attentive, available, and tailored without requiring mutual sacrifice. It may relieve loneliness for some people or train others toward a relationship no human being can satisfy. We do not yet know whether such systems will materially alter marriage or fertility.
 
-For now, artificial companions are an emerging scenario rather than an established cause. They still deserve notice because they are built to replace some functions of intimate companionship.
+For now, artificial companions are an emerging scenario rather than an established cause. They still deserve notice because they are built to replace some functions of intimate companionship, but a designed possibility should not be written as an observed demographic trend.
 
 Technology can create connection and make isolation more tolerable. It can introduce a spouse or keep the field open. Its demographic importance lies less in one device than in how it changes the early years of the life-course sequence. Another year without commitment remains comfortable and reversible—until later pages of the sequence make it neither.
 

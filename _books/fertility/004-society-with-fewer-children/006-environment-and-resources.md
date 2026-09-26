@@ -4,7 +4,7 @@ deck: Fewer people can reduce aggregate pressure without making permanent contra
 eyebrow: A lighter footprint
 ---
 
-A smaller population can consume less than a larger version of the same population. That is a real benefit of fertility decline: fewer households need less land, and fewer consumers produce less waste.
+A smaller population can consume less than a larger version of the same population. At equal consumption, fewer people can mean lower aggregate emissions, material use, land pressure, congestion, and waste. That is a real benefit of fertility decline: fewer households need less land, and fewer consumers produce less waste.
 {: .lede}
 
 The environmental case deserves to be taken seriously because population is part of the pressure humans place on the natural world. The Intergovernmental Panel on Climate Change identifies both population and income growth as persistent drivers of greenhouse-gas emissions, while finding [large differences in emissions per person across regions and income groups](https://www.ipcc.ch/report/ar6/wg3/chapter/chapter-2/). A wealthy household may use many times the resources of a poor one, while a clean electrical grid can support more people with fewer emissions than a smaller population burning coal. The child of a poor family is not the ecological equivalent of another mansion, flight, or disposable product in a rich one.
@@ -22,7 +22,7 @@ When farming or settlement retreats, forest may return and wildlife may recover;
 
 Abandonment is not the same as restoration. Some open habitats depend on grazing; when it ends, scrub can replace species-rich grassland and unmanaged fuel can raise fire risk. The [European Environment Agency counts land abandonment](https://www.eea.europa.eu/en/topics/at-a-glance/nature/state-of-nature-in-europe-a-health-check) among the pressures on habitats and species.
 
-Population can also decline while development keeps spreading. Smaller households may consume more land per person around prosperous cities even as remote towns empty, and the European Environment Agency has found that [urban area grew faster than population](https://www.eea.europa.eu/en/analysis/publications/environmental-indicator-report-2012/environmental-indicator-report-2012-ecosystem/part3.xhtml). A national population total does not decide whether a particular meadow becomes forest, suburb, or restored habitat. People do.
+Population can also decline while development keeps spreading. Smaller households may consume more land per person around prosperous cities even as remote towns empty, and the European Environment Agency has found that [urban area grew faster than population](https://www.eea.europa.eu/en/analysis/publications/environmental-indicator-report-2012/environmental-indicator-report-2012-ecosystem/part3.xhtml). Concentration can therefore increase per-person land take and congestion near prosperous centers while remote land reverts. A national population total does not decide whether a particular meadow becomes forest, suburb, or restored habitat; consumption, technology, trade, infrastructure, and land-use decisions do.
 
 ## The infrastructure left behind
 
@@ -30,7 +30,7 @@ A city cannot shrink a sewer pipe each time a resident leaves. Water quality can
 
 Consumption can move abroad as well. An aging rich country may close a polluting factory and import the same goods from a younger one. Its territorial emissions fall while the global environmental burden changes much less.
 
-Lower population therefore makes some environmental goals easier without guaranteeing them. The United Nations Environment Programme reports that high-income countries [use six times as many materials and generate ten times the climate impacts](https://www.unep.org/news-and-stories/press-release/rich-countries-use-six-times-more-resources-generate-10-times) of low-income countries. Reducing extravagant consumption and cleaning production can matter more than a modest difference in headcount.
+Lower population therefore makes some environmental goals easier without guaranteeing them. The United Nations Environment Programme reports that high-income countries [use six times as many materials and generate ten times the climate impacts](https://www.unep.org/news-and-stories/press-release/rich-countries-use-six-times-more-resources-generate-10-times) of low-income countries. Reducing extravagant consumption and cleaning production can matter more than a modest difference in headcount. Distribution matters too: a lower national total does not ensure that the people who remain can afford efficient homes, public transport, or well-maintained systems.
 
 Stewardship still requires people who manage forests, restore wetlands, maintain clean infrastructure, and build better energy systems. That work is not evidence that environmental limits disappear. It shows why abandonment and care are different conditions.
 
@@ -38,7 +38,7 @@ Stewardship still requires people who manage forests, restore wetlands, maintain
 
 There is no reason to deny the appeal of a somewhat smaller human footprint. A population that stabilizes at a lower level could ease pressure on land and resources while remaining large enough to sustain complex societies. Permanent contraction is a different proposition.
 
-If each generation is smaller than the one before it, the environmental gain keeps arriving through the disappearance of future people, while over time there are also fewer people available to care for the places left behind. That is a costly and unreliable conservation policy.
+If each generation is smaller than the one before it, the environmental gain keeps arriving through the absence of future people, while over time there may also be fewer people available to care for the places left behind. That is a costly and unreliable conservation policy. A lower stable population can be environmentally beneficial; perpetual contraction has no natural stopping rule and can trade away stewardship capacity along with pressure on ecosystems.
 
 The better aim is a flourishing natural world inhabited by people capable of restraint. Technology can reduce damage, and population stabilization can help. None of that makes more people environmentally free. It treats human beings as possible stewards as well as consumers, then judges them by what they actually do to the places entrusted to them.
 

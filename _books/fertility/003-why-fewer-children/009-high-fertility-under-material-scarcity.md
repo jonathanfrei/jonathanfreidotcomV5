@@ -30,7 +30,7 @@ Nothing in high-fertility deprivation is a model to import. Early marriage witho
 
 Development should reduce mortality, educate girls and boys, protect consent, expand dignified work, and give families security that does not depend on child labor. The humane goal is not a fertility rate preserved by preventable death, limited agency, or fear of abandonment in old age.
 
-The comparison instead clarifies the affluent claim. A couple in Boston is not poorer than a family in Niger. The American household may need two incomes to afford housing near work, then purchase childcare because both adults work, while also believing that good parenting requires years of intensive investment. “We cannot afford another child” can be completely sincere without meaning that the household lacks food or shelter.
+The comparison is a counterexample to an income-only theory, not an alternative policy model. A couple in Boston is not poorer than a family in Niger. The American household may need two incomes to afford housing near work, then purchase childcare because both adults work, while also believing that good parenting requires years of intensive investment. “We cannot afford another child” can be completely sincere without meaning that the household lacks food or shelter.
 
 Affordability is a judgment about what must be available or preserved when a child arrives. Sometimes the threshold reflects genuine danger. Sometimes it reflects institutions designed around childless workers. Sometimes it reflects a culture in which every child must receive more private investment than the last. High fertility under scarcity does not refute those pressures. It prevents us from mistaking them for a natural law that wealth should solve automatically.
 
@@ -38,7 +38,7 @@ Affordability is a judgment about what must be available or preserved when a chi
 
 The stress test does not need another tour through the opening sequence. It supplies the result the affluent cases could not: material scarcity can coexist with high fertility, so income alone cannot be the master cause. Marriage timing, reproductive control, kin support, household production, child survival, and expectations about adulthood change what the same amount of money means for births.
 
-Different combinations can therefore converge on the same national total, and similar incomes can coexist with different totals. Surveys of desires and expectations identify some constrained lives, but no average assigns one motive to everyone inside it. The multicausal model explains both forms of variation without turning deprivation into a prescription.
+Different combinations can therefore converge on the same national total, and similar incomes can coexist with different totals. Surveys of desires and expectations identify some constrained lives, but no average assigns one motive to everyone inside it. The comparison has done its limited work: it blocks the claim that income alone explains fertility, while leaving the affluent mechanisms to be tested on their own evidence.
 
 That conclusion also identifies what the chapter has not done. It has not shown that every small family is a failure, that freedom should be withdrawn, or that one cause can be reversed to restore fertility. It has shown how individually understandable choices and institutions can compose an outcome few people selected as a national future.
 

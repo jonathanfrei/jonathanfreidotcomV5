@@ -19,7 +19,7 @@ The third is **opportunity cost**. Time devoted to care cannot simultaneously be
 
 The fourth is **risk**. A couple may be able to pay today's bills and still doubt that it could survive a layoff, medical problem, rent increase, or unavailable childcare. Fertility decisions concern years of obligation, so confidence about the future matters alongside current income.
 
-The OECD's 2024 review found a negative association across member countries between fertility and housing costs and unemployment, while employment for both women and men was positively associated with fertility. Those cross-country regressions do not give one household's decision a numerical cause. They fit the more modest claim that stable work and attainable housing help adults cross into family life.
+The OECD's 2024 review found a negative association across member countries between fertility and housing costs and unemployment, while employment for both women and men was positively associated with fertility. Those cross-country regressions do not give one household's decision a numerical cause, and they cannot establish that a housing price or a job change produced a birth. They are consistent with a more modest readiness channel: stable work and attainable housing may lower a threshold for partnership or an additional child, while housing wealth can provide security in some settings.
 
 ![Dense apartment towers in Quarry Bay, Hong Kong](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Quarry_Bay_apartments_%28Unsplash%29.jpg/960px-Quarry_Bay_apartments_%28Unsplash%29.jpg)
 
@@ -32,7 +32,7 @@ The opening timeline showed how thresholds can delay a first child. Economics ad
 
 The first child does not merely add another line to a budget. The birth rearranges work, transport, sleep, household labor, and the margin available for anything to go wrong. A family that once expected two children can become a one-child family because the first birth revealed the full price of the second.
 
-Childcare demonstrates why cash and opportunity costs cannot be separated cleanly. Formal care allows both parents to remain employed; its price then makes both incomes more necessary. If a place is unavailable or its hours do not cover work, one parent must reduce hours or improvise care. Countries that make leave and childcare easier to combine with employment generally reduce that conflict, though recent low fertility in many high-support countries shows that removing one barrier does not settle every threshold.
+Childcare demonstrates why cash and opportunity costs cannot be separated cleanly. Formal care allows both parents to remain employed; its price then makes both incomes more necessary. If a place is unavailable or its hours do not cover work, one parent must reduce hours or improvise care. Policies and workplace arrangements that make leave and childcare easier to combine with employment are designed to reduce that conflict, though recent low fertility in many high-support countries shows that removing one barrier does not settle every threshold.
 
 ## When enough keeps moving
 

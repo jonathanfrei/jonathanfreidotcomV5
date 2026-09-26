@@ -1,10 +1,10 @@
 ---
-title: From cargo to capacity
-deck: A project becomes durable when cargo gives way to capacity and one generation builds for another
-eyebrow: From supply chain to inheritance
+title: From population scale to industrial depth
+deck: A project becomes durable when population supports specialization, cargo becomes local capacity, and one generation builds for another
+eyebrow: From population to capability
 ---
 
-Space is expensive because almost every necessity must first escape Earth's gravity. A permanent settlement adds a harder requirement: imported equipment has to become local capacity. Sending a water processor is a mission expense; building the workshop that can make its failed valve is the beginning of an economy.
+Space is expensive because almost every necessity must first escape Earth's gravity. A permanent settlement adds a harder requirement: imported equipment has to become local capacity. The sequence begins with population scale. More people do not guarantee progress, but a larger community can support more specialization: one person can maintain power while another learns medicine, and neither has to be the only person who knows the work. Specialization then creates a demand for tools, suppliers, standards, and training—the industrial depth that lets a community do more than keep a crew alive.
 {: .lede}
 
 ![Artemis I launching from Kennedy Space Center, November 16, 2022](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Artemis_I_Launch_%28NHQ202211160017%29.jpg/960px-Artemis_I_Launch_%28NHQ202211160017%29.jpg)
@@ -13,6 +13,8 @@ Space is expensive because almost every necessity must first escape Earth's grav
 {: .caption}
 
 The scale is already substantial before settlement begins. Launch prices may fall and vehicles may become more reusable, but transport is only the first layer. A settlement also requires power, shelter, communications, medicine, food, maintenance, governance, and reserves for failures that cannot wait for the next favorable launch window. The question is not the price of one rocket. It is whether a whole system can keep converting shipments into durable local capability.
+
+This distinguishes an Earth-supported mission from a capability-reproducing branch. A mission can operate with a narrow crew because Earth supplies specialists, software, replacement parts, and new residents. A branch of civilization must reproduce capabilities locally: it must teach the next generation, maintain the tools that make its tools, and add new knowledge rather than merely consume a stock of imported expertise. It need not manufacture everything at once, and no sensible threshold requires total autarky. The difference is whether dependence is a managed support relationship or a permanent condition that would end the project when support stopped.
 
 ## From cargo to capacity
 
@@ -30,9 +32,9 @@ The present has real claims. Elder care and repairing damage on Earth are necess
 
 Robots should go first. They can prepare a landing site before people arrive, work through conditions that would limit a human crew, and inspect a leak while the nearest instruction from Earth is minutes away. AI may let a small settlement operate machinery that once required many specialists.
 
-That changes the minimum labor force. It does less to change the minimum human society. Machines still have supply chains and designers, and an AI that diagnoses a failed pump cannot bear political responsibility for deciding whether scarce power goes to the repair or the hospital. A community still needs people capable of judgment, trust, dissent, and care.
+That can reduce the number of people needed for particular tasks. It does less to change the human society those tasks serve. Machines still have supply chains and designers, and an AI that diagnoses a failed pump cannot bear political responsibility for deciding whether scarce power goes to the repair or the hospital. A community still needs people capable of judgment, trust, dissent, and care.
 
-Over time the economics changes again: cargo becomes local production, local production becomes capital, and capital becomes something one generation maintains for another. A settlement has crossed an important line when its residents invest in things they do not expect to use themselves because they expect their children to remain.
+Over time the economics changes again: cargo becomes local production, local production becomes capital, and capital becomes something one generation maintains for another. Deep resilience is not the fantasy that every connection to Earth disappears. It is the ability to absorb interruption, find substitutes, repair what fails, and keep teaching the people who will extend the system. A settlement has crossed an important line when its residents invest in things they do not expect to use themselves because they expect their children to remain.
 
 That investment need not be grand. A second clinic, an apprenticeship that slows today's best mechanic, a reservoir larger than the present population requires, or a room set aside for a school all consume resources now for people who may arrive later. An outpost optimizes for the assigned crew. A settlement begins carrying costs for residents it cannot yet name.
 

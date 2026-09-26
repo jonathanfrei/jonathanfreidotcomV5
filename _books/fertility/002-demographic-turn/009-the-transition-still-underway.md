@@ -7,13 +7,13 @@ eyebrow: Different clocks
 India and Niger do not belong in one demographic category simply because both are less affluent than Western Europe. The phrase “developing world” conceals places that have already moved below replacement, places close to it, and places where families still average four or more children.
 {: .lede}
 
-India shows how quickly the old map can change. Its 2019–21 National Family Health Survey estimated a national TFR of 2.0. The country can continue growing because it has a vast young population, not because current fertility remains high everywhere. The same survey found a range from 3.0 in Bihar to 1.1 in Sikkim. India's demographic future is the sum of transitions already at different stages within one country.
+India shows how quickly the old map can change. Its 2019–21 National Family Health Survey estimated a national period TFR of 2.0 births per woman. The country can continue growing because it has a vast young population, not because current fertility remains high everywhere. The same survey found a range from 3.0 in Bihar to 1.1 in Sikkim. India's demographic future is the sum of transitions already at different stages within one country.
 
-Latin America moved from high fertility to low fertility in a few generations. Mexico, Brazil, Chile, Colombia, and Uruguay now sit below replacement in recent national or UN estimates even though the region remains younger than Europe. Northern Africa and Western Asia contain another wide range: fertility has fallen sharply in Iran and Turkey, while Yemen remained above four in 2024. No income group, religion, or regional label fixes one family size.
+Latin America moved from high fertility to low fertility in a few generations. Recent national or UN period estimates place Mexico, Brazil, Chile, Colombia, and Uruguay below replacement even though the region remains younger than Europe. Northern Africa and Western Asia contain another wide range: fertility has fallen sharply in Iran and Turkey, while the UN estimated Yemen's period TFR above four in 2024. No income group, religion, or regional label fixes one family size.
 
 ## Where high fertility remains
 
-The largest concentration of high fertility is now in sub-Saharan Africa. Of the 63 countries and areas the United Nations expects to reach low fertility only after 2054, 42 are in that region. Together, the full group contained about 1.8 billion people in 2024. Their average TFR fell from 5.9 in 1994 to 4.1 in 2024, so continued growth and fertility decline are occurring at the same time.
+The largest concentration of high fertility is now in sub-Saharan Africa. Of the 63 countries and areas the United Nations expects to reach low fertility only after 2054, 42 are in that region. Together, the full group contained about 1.8 billion people in 2024. Their average period TFR fell from 5.9 births per woman in 1994 to 4.1 in 2024, so continued growth and fertility decline are occurring at the same time.
 
 ![Population pyramid of Niger, 2020](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Niger_single_age_population_pyramid_2020.png/960px-Niger_single_age_population_pyramid_2020.png)
 
