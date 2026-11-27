@@ -102,6 +102,8 @@ When: Hostname equals `jonathanfrei.com`, file extension is not `css` / `js` / `
 
 Exclude **`.json`**. `/search.json` changes every publish; if Cache Everything holds it for 2 hours, `/categories?category=` and `/tags?tag=` show “No matching posts” until the edge expires or you purge.
 
+`/.well-known/search` (Search for Agents) is served by Cloudflare and currently returns no `cf-cache-status`, so it is not stored by this rule. See [Search for Agents](#search-for-agents-ai-search) if that changes.
+
 | Setting | Value |
 | --- | --- |
 | Eligible for cache | On |
@@ -257,6 +259,24 @@ If images are broken immediately after merge: the route is missing, `IMG_HMAC` d
    `crossorigin` is required even for same-origin fonts: `@font-face` always uses anonymous CORS. A preload without it is a second download.
 
 2. Confirm **Brotli** is On (issue #117). Leave Rocket Loader **off**. Auto Minify is optional.
+
+### Search for Agents (AI Search)
+
+Zone-level toggle: **Overview → Quick Actions → Search for Agents** (beta, all plans). Cloudflare creates an AI Search instance for `https://jonathanfrei.com` (Discover crawl, 5 hops, 24h sync, hybrid search) and serves `https://jonathanfrei.com/.well-known/search` (`GET ?q=…`, `QUERY`, Markdown results). **Nothing in this repo changes:** the `agent:*` discovery meta tags are injected into `<head>` at the edge, and the endpoint is served by Cloudflare, not GitHub Pages. Do **not** add those meta tags to `_includes/head.html`; they would be duplicated.
+
+- **Cache:** the endpoint is not edge-cached in practice (no `cf-cache-status`, `no-store` on errors, `retry-after` while indexing). If a successful response ever shows `cf-cache-status: HIT`, add a bypass rule **above** the HTML Cache Everything rule for `starts_with(http.request.uri.path, "/.well-known/")` — otherwise each unique query becomes a 2-hour cache object.
+- **Path filtering** (instance → Parser options) should exclude taxonomy and pagination duplicates: `**/tags**`, `**/categories**`, `**/archive/**`, `**/blog/page/**`, `**/.well-known/**`, `**/search.json`, `**/404**`, `**/robots.txt`, `**/sitemap*.xml`, `**/feed.xml`, and the `index: false` book (`**/books/dispelling-beauty-lies/**`). Content selector `article.prose` drops header/nav/footer from chunks.
+- **Limits:** Workers Free crawls **500 pages/day**, so the first index of ~1,936 built pages takes ~4 days, and a new post can lag up to the 24h sync. Included usage is 5M ingestion tokens, 10 GB-month storage, 1,000 semantic + 1,000 full-text queries/month. Billing starts **2026-12-01**; hybrid queries beyond the allowance are $0.75 per 1,000.
+- **Security:** WAF, Bot Fight Mode, and AI Crawl Control apply to both the crawler and the endpoint. If you add rules, allowlist the AI Search crawler (Bot Detection ID `122933950`) and rate-limit `/.well-known/search` rather than blocking it.
+
+Verify:
+
+```bash
+curl -s https://jonathanfrei.com/about | grep 'agent:endpoint'
+curl --get https://jonathanfrei.com/.well-known/search --data-urlencode 'q=image proxy'
+```
+
+A `503` with `Search index is being built` and `retry-after: 3600` is expected until the first crawl finishes. Responses are `text/markdown`; `HEAD` answers `200` with `Allow: GET, HEAD, QUERY`.
 
 ### How to re-measure
 

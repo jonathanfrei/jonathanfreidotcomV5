@@ -96,6 +96,7 @@ description: "SEO sentence (preferred over raw excerpt)"
 - **Cache Everything** for HTML (2h edge, respect `max-age=600` browser); extension-excluded assets use 1 month. `/img` Worker has own rule: host=`jonathanfrei.com` + path starts `/img`, respect origin cache, include query string in key. Exclude `.json` (`search.json`) and `/img` from HTML cache.
 - Redirects before cache: `www → apex` and trailing-slash strip. Free plan can't use `regex_replace`/`matches`.
 - `_includes/head.html` must not preconnect `wsrv.nl` / `cdn.jsdelivr.net`; `media.jonathanfrei.com` only when page has `<img>` from that host (injected by optimizer). Speculation Rules prefetch `/,/about,/blog,/archive` only (prefetch not prerender).
+- **Search for Agents** (`/.well-known/search`, AI Search) is edge-only: Cloudflare injects `agent:*` meta tags into `<head>` and serves the endpoint, so no repo code. Don't add those tags to `_includes/head.html` and don't `Disallow` the path in `robots.txt`. Endpoint returns no `cf-cache-status` today; if a 200 ever shows `HIT`, bypass `/.well-known/` above the HTML cache rule. Crawl scope, limits, and verification are in README → Search for Agents.
 
 ## Verification before finishing build/layout/CSS changes
 
